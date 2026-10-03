@@ -1,11 +1,37 @@
 body {
     margin:0;
     font-family: 'Baloo 2', sans-serif;
-    background: linear-gradient(180deg, rgb(14, 73, 56), rgb(8, 52, 38));
+    background: linear-gradient(180deg, rgb(13, 122, 91), rgb(6, 49, 36));
     min-height: 100vh;
+    color: rgb(255,255,255);
+}
+
+.StartPage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
+    margin: 0;
     color: rgb(255,255,255);
-    font-size: 80px;
+    font-size: 90px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255,255,255);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+ 
+}
+
+p {
+    color: rgb(255,255,255);
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+
 }
