@@ -4,3 +4,18 @@
 const allFormulaButton = document.getElementById("allFormulaButton"); // the formula page button (all formulas)
 const startPage = document.querySelector(".StartPage");// starting page 
 const formulaPage = document.querySelector(".formulaPage");// formula page 
+const backButton = document.getElementById("backButton");// back button on the all formula page 
+
+// making the buttons work
+
+// this is the all formulas button on the start page 
+allFormulaButton.addEventListener("click", function(){
+    startPage.style.display = "none";// the start page diss apears 
+    formulaPage.style.display = "flex";// the formula page apears 
+})
+
+// this is the back button on the all formula page 
+backButton.addEventListener("click", function() {
+    formulaPage.style.display = "none";// the formula page dissapears 
+    startPage.style.display = "flex";// the starte page becomes visible 
+})
