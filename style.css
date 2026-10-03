@@ -232,11 +232,7 @@ p {
     transition: 0.2s ease;
 
 }
-#physicsBackButton {
-    border:none;
-    border-radius:15px;
-    background:
-}
+
 #mathBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
@@ -267,4 +263,29 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11,61,46,0.718);
     font-family: 'Baloo 2', sans-serif;
+}
+
+#physicsBackButton {
+    border:none;
+    border-radius:15px;
+    background:rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    width: 80px;
+    height: 35px;
+    position:absolute;
+    top: 35px;
+    left: 35px;
+    box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
+
+    cursor:pointer;
+    transition: 0.2s ease;
+}
+
+#physicsBackButton:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
 }
