@@ -119,3 +119,21 @@ body::before {
     transform:scale(1.2);
 
 }
+
+.mathSection, .physicsSection{
+    width: 90%;
+}
+
+.mathSection h2, .physicsSection h2 {
+    width:100%;
+    font-size: 40px;
+    margin: 30px 0 20px;
+    padding: 15px 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: left;
+    text-shadow: 3px 3px 0px rgba(11, 61, 46, 0.718);
+    font-family: 'Baloo 2', sans-serif;
+    border-top: 3px solid rgb(128, 170, 144);
+    border-bottom: 3px solid rgb(128, 170, 144);
+}
