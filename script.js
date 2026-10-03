@@ -8,9 +8,9 @@ const backButton = document.getElementById("backButton");// back button on the a
 const mathButton = document.getElementById("mathButton"); // this is the math formula button 
 const mathFormulaPage = document.querySelector(".mathFormulaPage"); // the formula page, math only
 const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
-
-
-
+const physicsFormulaPage = document.querySelector(".physicsFormulaPage")// this is the physics formula page 
+const physicsBackButton = document.getElementById("physicsBackButton")// this is the back button on the physics page 
+const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
 // making the buttons work
 
 // this is the all formulas button on the start page 
@@ -38,3 +38,14 @@ mathBackButton.addEventListener("click", function() {
     mathFormulaPage.style.display = "none";// the math only formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
 })
+
+physicsBackButton.addEventListener("click", function() {
+    physicsFormulaPage.style.display = "none";// the math only formula page dissapears 
+    startPage.style.display = "flex";// the starte page becomes visible 
+})
+
+physicsButton.addEventListener("click", function() {
+    startPage.style.display = "none";
+    physicsFormulaPage.style.display = "flex";
+
+});
