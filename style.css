@@ -137,3 +137,13 @@ body::before {
     border-top: 3px solid rgb(128, 170, 144);
     border-bottom: 3px solid rgb(128, 170, 144);
 }
+
+.formulaContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40 px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.
