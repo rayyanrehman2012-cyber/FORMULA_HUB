@@ -1,7 +1,7 @@
 body {
     margin:0;
     font-family: 'Baloo 2', sans-serif;
-    background: linear-gradient(180deg, rgb(30, 163, 125), rgb(0, 98, 54));
+    background:rgb(0, 98, 54);
     min-height: 100vh;
     color: rgb(255,255,255);
 }
@@ -12,6 +12,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position:relative;
+}
+
+.StartPage::before {
+    content:"";
+    position:absolute;
+    inset: 12px;
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events: none;
 }
 
 .StartPage h1{
@@ -68,20 +78,24 @@ p {
     cursor:pointer;
 }
 
-body::before {
-    content:"";
-    position:fixed;
-    inset: 12px;
-    border: 8px solid rgb(255,255,255);
-    border-radius: 35px 60px 45px 70px;
-    pointer-events: none;
-}
+
 
 .formulaPage {
     min-height: 100vh;
     flex-direction: column;
     align-items: center;
     display: none;
+    position: relative;
+}
+
+.formulaPage::before{
+    content:"";
+    position:absolute;
+    inset: 12px;
+    min-height: calc(100% - 24px);
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events:none;
 }
 
 .formulaPage h1 {
@@ -141,9 +155,30 @@ body::before {
 .formulaContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40 px;
+    column-gap: 50px;
+    row-gap: 35px;
     width: 90%;
-    margin: 0 auto;
+    margin: 20px;
 }
 
-.
+.formulaButton {
+    border:none;
+    border-radius: 18px;
+    background: rgb(247, 249, 248);
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 20px;
+    font-weight:800;
+    letter-spacing: 1px;
+    min-height: 80px;
+    padding: 15px 20px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    cursor:pointer;
+    transition: 0.5s ease;
+}
+
+.formulaButton:hover {
+    background: rgb(128,170,144);
+    color: rgb(6, 42, 31);
+    transform: scale(1.2);
+}
