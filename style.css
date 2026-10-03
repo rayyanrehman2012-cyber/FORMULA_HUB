@@ -1,0 +1,11 @@
+body {
+    margin:0;
+    font-family: 'Baloo 2', sans-serif;
+    background: linear-gradient(180deg, rgb(14, 73, 56), rgb(8, 52, 38));
+    min-height: 100vh;
+}
+
+h1 {
+    color: rgb(255,255,255);
+    font-size: 80px;
+}
