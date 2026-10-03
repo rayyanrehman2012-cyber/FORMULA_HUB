@@ -26,7 +26,7 @@
             <section class="mathSection">
                 <h2>MATHEMATICS</h2>
                 <div class="formulaContainer">
-                    <button class="formulaButton">RECTANGLE AREA</button>
+                    <button id = "rectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
                     <button class="formulaButton">RECTANGLE PERIMETER</button>
                     <button class="formulaButton">SQUARE AREA</button>
                     <button class="formulaButton">SQUARE PERIMETER</button>
@@ -72,7 +72,7 @@
         <main class="mathFormulaPage">
             <h1>MATH FORMULAS</h1>
             <div class="formulaContainer">
-                <button class="formulaButton">RECTANGLE AREA</button>
+                <button id = "rectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
                 <button class="formulaButton">RECTANGLE PERIMETER</button>
                 <button class="formulaButton">SQUARE AREA</button>
                 <button class="formulaButton">SQUARE PERIMETER</button>
@@ -115,6 +115,16 @@
                 </div>
             <button id="physicsBackButton">BACK</button>
 
+        </main>
+        <main class = "rectangleAreaPage">
+            <h1>RECTANGLE AREA</h1>
+            <div class = calculatorBox>
+                <label for="length">Length</label>
+                <input id="length" type="number">
+                <label for="width">Width</label>
+                <input id="width" type="number">
+                <button id = "calculateRectangleArea">CALCULATE</button>
+            </div>
         </main>
         <script src="./script.js"></script>
     </body>

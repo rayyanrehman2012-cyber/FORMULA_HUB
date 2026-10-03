@@ -11,6 +11,9 @@ const mathBackButton = document.getElementById("mathBackButton");// back button 
 const physicsFormulaPage = document.querySelector(".physicsFormulaPage")// this is the physics formula page 
 const physicsBackButton = document.getElementById("physicsBackButton")// this is the back button on the physics page 
 const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
+const rectangleAreaPage = document.querySelector(".rectangleAreaPage");// this is the rectangles area page 
+const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button 
+
 // making the buttons work
 
 // this is the all formulas button on the start page 
@@ -45,7 +48,15 @@ physicsBackButton.addEventListener("click", function() {
 })
 
 physicsButton.addEventListener("click", function() {
-    startPage.style.display = "none";
-    physicsFormulaPage.style.display = "flex";
+    startPage.style.display = "none";// the start page is not visible 
+    physicsFormulaPage.style.display = "flex";// the physics page isvisible 
+
+});
+
+rectangleAreaButton.addEventListener("click", function() {
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    rectangleAreaPage.style.display = "flex"// the rectangle area screen is visible 
 
 });
