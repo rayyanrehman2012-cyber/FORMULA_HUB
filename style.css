@@ -67,3 +67,12 @@ p {
     transform: scale(1.2);
     cursor:pointer;
 }
+
+body::before {
+    content:"";
+    position:fixed;
+    inset: 12px;
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events: none;
+}
