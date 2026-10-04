@@ -28,8 +28,8 @@ const squareAreaButton = document.getElementById("squareAreaButton");// this is 
 const squareAreaBackButton = document.getElementById("squareAreaBackButton")// this is the back button on the physics page 
 
 const squarePerimeterPage = document.querySelector(".squarePerimeterPage")// square perimeter pages 
-const allsquarePerimeterButton = document.querySelector(".allsquarePerimeterButton")// square perimeter pages 
-const squarePerimeterButton = document.querySelector(".squarePerimeterButton")// square perimeter pages 
+const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton")// square perimeter pages 
+const squarePerimeterButton = document.getElementById("squarePerimeterButton")// square perimeter pages 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton")// this is the back button on the physics page 
 
 
@@ -98,7 +98,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
     
     const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;
     
-    squarePerimeterResult.textContent = "Perimeter =" + SquarePerimeter + " Units";// displays the perimeter 
+    squarePerimeterResult.textContent = "Perimeter = " + SquarePerimeter + " Units";// displays the perimeter 
 })
 
 
