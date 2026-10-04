@@ -31,7 +31,7 @@
                     <button id = "allsquareAreaButton" class="formulaButton">SQUARE AREA</button>
                     <button id = "allsquarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
                     <button id = "alltriangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
-                    <button class="formulaButton">TRIANGLE PERIMETER</button>
+                    <button id = "alltrianglePerimeterButton" class="formulaButton">TRIANGLE PERIMETER</button>
                     <button class="formulaButton">CIRCLE AREA</button>
                     <button class="formulaButton">CIRCLE CIRCUMFERENCE</button>
                     <button class="formulaButton">TRAPEZOID AREA</button>
@@ -77,7 +77,7 @@
                 <button id = "squareAreaButton" class="formulaButton">SQUARE AREA</button>
                 <button id = "squarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
                 <button id = "triangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
-                <button class="formulaButton">TRIANGLE PERIMETER</button>
+                <button id = "trianglePerimeterButton"class="formulaButton">TRIANGLE PERIMETER</button>
                 <button class="formulaButton">CIRCLE AREA</button>
                 <button class="formulaButton">CIRCLE CIRCUMFERENCE</button>
                 <button class="formulaButton">TRAPEZOID AREA</button>
@@ -180,7 +180,21 @@
          </main>
 
          <main class = "trianglePerimeterPage">
-            <h1
+            <h1>TRIANGLE PERIMETER</h1>
+            <div class ="calculatorBox">
+                <label for="trianglePerimeterSideA">SIZE A</label>
+                <input id="trianglePerimeterSideA" type="number">
+
+                <label for="trianglePerimeterSideB">SIZE B</label>
+                <input id="trianglePerimeterSideB" type="number">
+
+                <label for="trianglePerimeterSideC">SIZE C</label>
+                <input id="trianglePerimeterSideC" type="number">
+
+                <button id = "calculateTrianglePerimeter">CALCULATE</button>
+                <p id="trianglePerimeterResult"></p>
+            </div>
+            <button id="trianglePerimeterBackButton">BACK</button>
          </main>
 
         <script src="./script.js"></script>

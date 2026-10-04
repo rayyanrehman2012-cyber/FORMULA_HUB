@@ -1,3 +1,11 @@
+// THESE ARE THE MAIN MENU SCREEN BUTTONS 
+const allFormulaButton = document.getElementById("allFormulaButton"); // the formula page button (all formulas)
+const mathButton = document.getElementById("mathButton"); // this is the math formula button 
+const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
+
+
+
+
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton")// this is the back button on the physics page 
@@ -7,7 +15,7 @@ const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton
 const physicsBackButton = document.getElementById("physicsBackButton")// this is the back button on the physics page 
 const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
 const triangleAreaBackButton = document.getElementById("triangleAreaBackButton")// the back button on the triangle are calculator backed 
-
+const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton")// this is the back buton on the triangle perimeter page 
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -20,13 +28,7 @@ const mathFormulaPage = document.querySelector(".mathFormulaPage"); // the formu
 const formulaPage = document.querySelector(".formulaPage");// formula page 
 const startPage = document.querySelector(".StartPage");// starting page 
 const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is the  triangles area calculator page 
-
-
-
-// THESE ARE THE MAIN MENU SCREEN BUTTONS 
-const allFormulaButton = document.getElementById("allFormulaButton"); // the formula page button (all formulas)
-const mathButton = document.getElementById("mathButton"); // this is the math formula button 
-const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
+const trianglePerimeterPage = document.querySelector("trianglePerimeterPage");//this is the triangle perimeter page 
 
 
 
@@ -36,7 +38,7 @@ const allrectanglePerimeterButton = document.getElementById("allrectanglePerimet
 const allsquareAreaButton = document.getElementById("allsquareAreaButton");// this is the rectangle area formula button all formula page
 const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton")// square perimeter pages 
 const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");// this is the button on the all formula screen 
-
+const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeterButton")// this is the triangle perimeter button on the all formula page 
 
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
@@ -45,9 +47,7 @@ const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButt
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
 const squarePerimeterButton = document.getElementById("squarePerimeterButton")// square perimeter pages 
 const triangleAreaButton = document.getElementById("triangleAreaButton"); // this si the trangle are button on the math formulas screen 
-
-
-
+const trianglePerimeterButton = document.getElementById("trianglePerimeterButton")// this is the trianlge perimeter buton on the math formula page 
 
 
 
@@ -88,7 +88,12 @@ const calculateTriangleArea = document.getElementById("calculateTriangleArea")//
 const triangleAreaResult = document.getElementById("triangleAreaResult")// displays score 
 
 
-
+// THESE ARE FOR THE TRIANGLE PERIMETER CALCULSTOR
+const trianglePerimeterSideA = document.getElementById("trianglePerimeterSideA");// side a input 
+const trianglePerimeterSideB = document.getElementById("trianglePerimeterSideB")// ide b input 
+const trianglePerimeterSideC = document.getElementById("trianglePerimeterSideC");// side c input 
+const calculateTrianglePerimeter = document.getElementById("calculateTrianglePerimeter")// the calculate button
+const trianglePerimeterResult = document.getElementById("trianglePerimeterResult")//this is the result line
 
 
 
@@ -139,11 +144,18 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
     
     const baseTriangleArea = Number(triangleAreaBase.value);
 
-    const triangleArea = ((heightTriangleArea * baseTriangleArea)/2)// base times height divided by 2 is te area 
+    const triangleArea = ((heightTriangleArea * baseTriangleArea)/2);// base times height divided by 2 is te area 
 
     triangleAreaResult.textContent = "Area = " + triangleArea + " Units Squared"
 })
 
+calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
+    const trianglePerimeterA = Number(trianglePerimeterSideA.value);// stors the side of the triangle 
+    const trianglePerimeterB = Number(trianglePerimeterSideB.value);// stors the side of the triangle 
+    const trianglePerimeterC = Number(trianglePerimeterSideC.value);// stors the side of the triangles 
+
+    const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;
+})
 
 
 
