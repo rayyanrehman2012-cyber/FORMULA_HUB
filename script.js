@@ -19,6 +19,9 @@ const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBa
 const circleAreaBackButton = document.getElementById("circleAreaBackButton");// this is the backk button on the circle are page 
 const circleCircumferenceBackButton = document.getElementById("circleCircumferenceBackButton");// this is the back button on the circumference pages 
 const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton");// the back button o the trapezoid page 
+const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralPerimeterBackButton");// the quadrilateral perimeterbutton 
+
+
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -35,6 +38,9 @@ const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");/
 const circleAreaPage = document.querySelector(".circleAreaPage");// thsis is the circle are pages 
 const circleCircumferencePage = document.querySelector(".circleCircumferencePage");// thi is the circumperance page 
 const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage")// this is the trapizode page
+const quadrilateralPerimeterpage = document.querySelector(".quadrilateralPerimeterpage")// this is the cuadrilatral perimeter page 
+
+
 
 
 
@@ -48,6 +54,11 @@ const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeter
 const allcircleAreaButton = document.getElementById("allcircleAreaButton");// this is the circle area button 
 const allcircleCircumferenceButton = document.getElementById("allcircleCircumferenceButton");// the circumference button on the formula screent 
 const alltrapezoidAreaButton = document.getElementById("alltrapezoidAreaButton")// the trapizode are page 
+const allquadrilateralPerimeterButton = document.getElementById("allquadrilateralPerimeterButton")// button on main formula pge 
+
+
+
+
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
@@ -59,6 +70,11 @@ const trianglePerimeterButton = document.getElementById("trianglePerimeterButton
 const circleAreaButton = document.getElementById("circleAreaButton");// this is the circle are button 
 const circleCircumferenceButton = document.getElementById("circleCircumferenceButton");// the circumference button on the formula screent 
 const trapezoidAreaButton = document.getElementById("trapezoidAreaButton")// the trapizode are page 
+const quadrilateralPerimeterButton = document.getElementById("quadrilateralPerimeterButton")// buton on math bage 
+
+
+
+
 
 
 
