@@ -168,7 +168,7 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
     trianglePerimeterResult.textContent = "Perimeter = " + trianglePerimeter + " Units"// this will displat the calculation 
 })
 
-calculateCircleArea.addEventListener("click", function() {
+calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
     const circleRadius = Number(circleAreaRadius.value);// stores the radius of the circle 
     const circleArea = pi * (circleRadius * circleRadius);// this calculates the area of the circle 
 
@@ -275,7 +275,7 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
     triangleAreaResult.textContent = "";// the result line rests 
 })
 
-trianglePerimeterBackButton.addEventListener("click", function() {
+trianglePerimeterBackButton.addEventListener("click", function() { // if the back button is pressed 
     startPage.style.display = "flex";//show the start page 
     mathFormulaPage.style.display = "none";//hide 
     formulaPage.style.display = "none";//hide
@@ -287,6 +287,18 @@ trianglePerimeterBackButton.addEventListener("click", function() {
     trianglePerimeterSideC.value = "";// the valuse rests 
 
     trianglePerimeterResult.textContent = "";// the result line resets 
+})
+
+circleAreaBackButton.addEventListener("click", function() {// if the back button is presed 
+    startPage.style.display = "flex";//show the start page
+     mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+    circleAreaPage.style.display = "none";//hide
+
+    circleAreaRadius.value = "";// the value of the radius restsn 
+    circleAreaResult.textContent = "";// the result line resets 
 })
 
 
@@ -341,8 +353,8 @@ alltriangleAreaButton.addEventListener("click", function() {/// triangle are but
 
 })
 
-alltrianglePerimeterButton.addEventListener("click", function() {
-    startPage.style.display = "none";
+alltrianglePerimeterButton.addEventListener("click", function() {// if the button is clicked then 
+    startPage.style.display = "none";// hid this page 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -351,6 +363,20 @@ alltrianglePerimeterButton.addEventListener("click", function() {
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "none";// shows this age 
     trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
+})
+
+allcircleAreaButton.addEventListener("click", function() {// if the bitton is clicked 
+    startPage.style.display = "none";// hid this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "flex";// show the circle are page 
+
 })
 
 
@@ -412,4 +438,18 @@ trianglePerimeterButton.addEventListener("click", function() {
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "none";// shows this age 
     trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
+})
+
+circleAreaButton.addEventListener("click", function() {// if the bitton is clicked 
+    startPage.style.display = "none";// hid this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "flex";// show the circle are page 
+
 })
