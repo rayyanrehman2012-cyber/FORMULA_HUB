@@ -1,5 +1,3 @@
-
-
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton")// this is the back button on the physics page 
@@ -9,6 +7,7 @@ const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton
 const physicsBackButton = document.getElementById("physicsBackButton")// this is the back button on the physics page 
 const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
 const triangleAreaBackButton = document.getElementById("triangleAreaBackButton")// the back button on the triangle are calculator backed 
+
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -23,10 +22,12 @@ const startPage = document.querySelector(".StartPage");// starting page
 const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is the  triangles area calculator page 
 
 
+
 // THESE ARE THE MAIN MENU SCREEN BUTTONS 
 const allFormulaButton = document.getElementById("allFormulaButton"); // the formula page button (all formulas)
 const mathButton = document.getElementById("mathButton"); // this is the math formula button 
 const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
+
 
 
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
@@ -35,6 +36,7 @@ const allrectanglePerimeterButton = document.getElementById("allrectanglePerimet
 const allsquareAreaButton = document.getElementById("allsquareAreaButton");// this is the rectangle area formula button all formula page
 const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton")// square perimeter pages 
 const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");// this is the button on the all formula screen 
+
 
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
@@ -49,17 +51,12 @@ const triangleAreaButton = document.getElementById("triangleAreaButton"); // thi
 
 
 
-
-
-
-
-
-
 // THESE ARE FOR THE RECTANGLE AREA CALCULATOR
 const lengthInput = document.getElementById("length"); // you length input 
 const widthInput = document.getElementById("width");// your width input 
 const calculateRectangleArea = document.getElementById("calculateRectangleArea");// the calculate button 
 const rectangleAreaResult = document.getElementById("rectangleAreaResult");// the line that gives u the answer
+
 
 
 // THESE ARE FOR THE RECTANGLE PERIMETER CALCULATOR
@@ -69,10 +66,12 @@ const calculateRectanglePerimeter = document.getElementById("calculateRectangleP
 const rectanglePerimeterResult = document.getElementById("rectanglePerimeterResult");// the line that gives u the answer
 
 
+
 // THESE ARE FOR THE SQUARE AREA CALCULATOR 
 const SquareAreaDimenstion = document.getElementById("SquareAreaDimenstion"); // you dimentsion input 
 const calculateSquareArea = document.getElementById("calculateSquareArea");// the calculate button 
 const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
+
 
 
 //THESE ARE FOR THE  SQUARE PERIMETER CALCULATOR 
@@ -81,14 +80,12 @@ const calculateSquarePerimeter = document.getElementById("calculateSquarePerimet
 const squarePerimeterResult = document.getElementById("squarePerimeterResult");// the line that gives u the answer
 
 
+
 //THESE ARE FOR THE TRIANGLE ARE CALCULATOR
 const triangleAreaHeight = document.getElementById("triangleAreaHeight")// height dimentions for triangle are
 const triangleAreaBase = document.getElementById("triangleAreaBase") //  the base measurement ofr the triangle 
 const calculateTriangleArea = document.getElementById("calculateTriangleArea")// the calculate btton
 const triangleAreaResult = document.getElementById("triangleAreaResult")// displays score 
-
-
-
 
 
 
@@ -153,7 +150,6 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 
 
 
-
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
@@ -170,7 +166,6 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
-
 
 
 
@@ -257,7 +252,6 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
 
 //THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
 
-
 allrectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
@@ -302,6 +296,7 @@ alltriangleAreaButton.addEventListener("click", function() {
     triangleAreaPage.style.display = "flex";// shows this age 
 
 })
+
 
 
 
