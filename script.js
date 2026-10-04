@@ -27,9 +27,9 @@ const allsquareAreaButton = document.getElementById("allsquareAreaButton");// th
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
 const squareAreaBackButton = document.getElementById("squareAreaBackButton")// this is the back button on the physics page 
 
-const squarePerimeterPage = document.querrySelector(".squarePerimeterPage")// square perimeter pages 
-const allsquarePerimeterButton = document.querrySelector(".allsquarePerimeterButton")// square perimeter pages 
-const squarePerimeterButton = document.querrySelector(".squarePerimeterButton")// square perimeter pages 
+const squarePerimeterPage = document.querySelector(".squarePerimeterPage")// square perimeter pages 
+const allsquarePerimeterButton = document.querySelector(".allsquarePerimeterButton")// square perimeter pages 
+const squarePerimeterButton = document.querySelector(".squarePerimeterButton")// square perimeter pages 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton")// this is the back button on the physics page 
 
 
@@ -100,6 +100,16 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
     
     squarePerimeterResult.textContent = "Perimeter =" + SquarePerimeter + " Units";// displays the perimeter 
 })
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -211,20 +221,26 @@ allsquareAreaButton.addEventListener("click", function() {// takes you tot he sq
 
 });
 
-allsquarePerimeterButton.addEventListener("click", function() {
-    startPage.style.display = "none"; // start page is hiddern
-    mathFormulaPage.style.display = "none";
-    formulaPage.style.display + "none";
-    squareAreaPage.style.display = "none";
-    rectangleAreaPage.style.display = "none";
-    rectanglePerimeterPage.style.display = "none"
-    squarePerimeterPage.style.display = "flex";
+allsquarePerimeterButton.addEventListener("click", function() {// what to do if the square perimeter formul button is pressed on the all frmula screen 
+    startPage.style.display = "none"; // start page is hiddern 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "flex";// shows the perimeter pages 
 })
 
-squarePerimeterPage.addEventListener("click", function() {
-    startPage.style.display = "none";
-    mathFormulaPage.style.display
+squarePerimeterButton.addEventListener("click", function() {// what to do if the square perimiter formul button is pressed 
+    startPage.style.display = "none";// hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none";// hides this page 
+    squarePerimeterPage.style.display = "flex";// shows this page 
 })
+
 squareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
     startPage.style.display = "none";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
@@ -244,3 +260,14 @@ squareAreaBackButton.addEventListener("click", function() { // area bck button r
    squareAreaResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
 
 });
+
+
+squarePerimeterBackButton.addEventListener("click", function() {
+    startPage.style.display = "flex";// shows the start screen 
+    mathFormulaPage.style.display = "none";// hides it 
+    formulaPage.style.display = "none";// hides it 
+    squarePerimeterPage.style.display = "none";//hides it
+
+    SquarePerimeterDimenstion.value = "";// removes the value 
+    squarePerimeterResult.textContent = ""; // removes the line of text 
+})
