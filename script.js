@@ -170,12 +170,22 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 })
 
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
-    const trianglePerimeterA = Number(trianglePerimeterSideA.value);// stors the side of the triangle 
-    const trianglePerimeterB = Number(trianglePerimeterSideB.value);// stors the side of the triangle 
-    const trianglePerimeterC = Number(trianglePerimeterSideC.value);// stors the side of the triangles 
+    
+    if (trianglePerimeterSideA.value === "" || trianglePerimeterSideB.value === "" || trianglePerimeterSideC.value === "" || trianglePerimeterSideA.value === "0"|| trianglePerimeterSideB.value === "0"|| trianglePerimeterSideC.value === "0"){// if any of the sides are empty
+        trianglePerimeterResult.textContent = "ERROR!!! PLEASE ENTER 3 VALUES"// this si the error message 
+        trianglePerimeterResult.style.color = "rgb(102,21,7)"// changes the colour to a red 
+    }
 
-    const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;// this si the what calculatesthe perimeter 
-    trianglePerimeterResult.textContent = "Perimeter = " + trianglePerimeter + " Units"// this will displat the calculation 
+    else{// if there are 3 falues then 
+        const trianglePerimeterA = Number(trianglePerimeterSideA.value);// stors the side of the triangle 
+        const trianglePerimeterB = Number(trianglePerimeterSideB.value);// stors the side of the triangle 
+        const trianglePerimeterC = Number(trianglePerimeterSideC.value);// stors the side of the triangles 
+
+        const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;// this si the what calculatesthe perimeter 
+        trianglePerimeterResult.textContent = "Perimeter = " + trianglePerimeter + " Units"// this will displat the calculation 
+        trianglePerimeterResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
+    }
+
 })
 
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
