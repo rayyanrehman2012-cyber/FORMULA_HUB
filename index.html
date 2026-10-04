@@ -27,7 +27,7 @@
                 <h2>MATHEMATICS</h2>
                 <div class="formulaContainer">
                     <button id = "allrectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
-                    <button class="formulaButton">RECTANGLE PERIMETER</button>
+                    <button id = "allrectanglePerimeterButton" class="formulaButton">RECTANGLE PERIMETER</button>
                     <button class="formulaButton">SQUARE AREA</button>
                     <button class="formulaButton">SQUARE PERIMETER</button>
                     <button class="formulaButton">TRIANGLE AREA</button>
@@ -73,7 +73,7 @@
             <h1>MATH FORMULAS</h1>
             <div class="formulaContainer">
                 <button id = "rectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
-                <button class="formulaButton">RECTANGLE PERIMETER</button>
+                <button id = "rectanglePerimeterButton"  class="formulaButton">RECTANGLE PERIMETER</button>
                 <button class="formulaButton">SQUARE AREA</button>
                 <button class="formulaButton">SQUARE PERIMETER</button>
                 <button class="formulaButton">TRIANGLE AREA</button>
@@ -118,7 +118,7 @@
         </main>
         <main class = "rectangleAreaPage">
             <h1>RECTANGLE AREA</h1>
-            <div class = calculatorBox>
+            <div class = "calculatorBox">
                 <label for="length">Length</label>
                 <input id="length" type="number">
                 <label for="width">Width</label>
@@ -127,6 +127,18 @@
                 <p id="rectangleAreaResult"></p>
             </div>
             <button id="rectangleAreaBackButton">BACK</button>
+        </main>
+        <main class = "rectanglePerimeterPage">
+            <h1>RECTANGLE PERIMETER</h1>
+            <div class = "calculatorBox">
+                <label for="Perimeterlength">Length</label>
+                <input id="Perimeterlength" type="number">
+                <label for="Perimeterwidth">Width</label>
+                <input id="Perimeterwidth" type="number">
+                <button id = "calculateRectanglePerimeter">CALCULATE</button>
+                <p id="rectanglePerimeterResult"></p>
+            </div>
+            <button id="rectanglePerimeterBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
