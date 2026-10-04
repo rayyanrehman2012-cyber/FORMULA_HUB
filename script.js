@@ -38,7 +38,7 @@ const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");/
 const circleAreaPage = document.querySelector(".circleAreaPage");// thsis is the circle are pages 
 const circleCircumferencePage = document.querySelector(".circleCircumferencePage");// thi is the circumperance page 
 const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage")// this is the trapizode page
-const quadrilateralPerimeterpage = document.querySelector(".quadrilateralPerimeterpage")// this is the cuadrilatral perimeter page 
+const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage")// this is the cuadrilatral perimeter page 
 
 
 
@@ -530,7 +530,7 @@ quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the
     circleAreaPage.style.display = "none";//hide
     circleCircumferencePage.style.display = "none";//hide
     trapezoidAreaPage.style.display = "none"//hide
-    quadrilateralPerimeterpage.style.display = "none"// hide tis bage
+    quadrilateralPerimeterPage.style.display = "none"// hide tis bage
 
     quadSideA.value = "";// rests the value 
     quadSideB.value = "";// rests the value 
@@ -645,9 +645,23 @@ alltrapezoidAreaButton.addEventListener("click", function() {// if the button is
 })
 
 allquadrilateralPerimeterButton.addEventListener("click", function() {// if this button is presed
-
-
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// show the circle are page 
+    circleCircumferencePage.style.display = "none";// show the circle are page
+    trapezoidAreaPage.style.display = "none";// show the  trapizode page
+    quadrilateralPerimeterPage.style.display = "flex";
 })
+
+
+
 
 
 
@@ -750,4 +764,20 @@ trapezoidAreaButton.addEventListener("click", function() {// if the button is cl
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "none";// show the circle are page
     trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
+})
+
+quadrilateralPerimeterButton.addEventListener("click", function() {// if this button is presed
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// show the circle are page 
+    circleCircumferencePage.style.display = "none";// show the circle are page
+    trapezoidAreaPage.style.display = "none";// show the  trapizode page
+    quadrilateralPerimeterPage.style.display = "flex";
 })

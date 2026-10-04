@@ -1149,3 +1149,97 @@ p {
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
+
+
+
+.quadrilateralPerimeterPage{
+    min-height:100vh;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    position:relative
+}
+
+
+.quadrilateralPerimeterPage::before{
+    content: "";
+    position:absolute;
+    inset: 12px;
+    min-height: calc(100% - 24px);
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events:none;
+}
+
+.quadrilateralPerimeterPage h1 {
+    margin-top:80px;
+    font-size:65px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
+    font-family: 'Baloo 2', sans-serif;
+
+}
+
+#quadrilateralPerimeterBackButton {
+    border:none;
+    border-radius:15px;
+    background:rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    width: 80px;
+    height: 35px;
+    position:absolute;
+    top: 35px;
+    left: 35px;
+    box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
+
+    cursor:pointer;
+    transition: 0.2s ease;
+}
+
+#quadrilateralPerimeterBackButton:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+
+#quadrilateralPerimeterResult {
+    color: rgb(11,61,46);
+    font-size:24px;
+    font-weight:800;
+    margin:15px 0 0;
+}
+
+#calculateQuadrilateralPerimeter {
+    border: none;
+    border-radius:15px;
+    background: rgb(11,61,46);
+    color: rgb(247,249,248);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 30px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top:5px;
+}
+
+#calculateQuadrilateralPerimeter:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+.quadrilateralPerimeterPage .calculatorBox {
+    top: 10px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
