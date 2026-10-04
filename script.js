@@ -144,19 +144,34 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
 
 calculateSquareArea.addEventListener("click", function() {// calculate button is pressed on square area screen 
 
+
+    else{
     const DimenstionSquareArea = Number(SquareAreaDimenstion.value);// stores the Dimenstions of the square 
 
     const SquareArea  = DimenstionSquareArea * DimenstionSquareArea;// calculates the area (L x W)
 
     squareAreaResult.textContent = "Area = " + SquareArea + " Units Squared";// displays the area on the screen 
+    squareAreaResult.style.color = "rgb(11,61,46)"// changes the color to green
+
+    }
 });
 
 calculateSquarePerimeter.addEventListener("click", function() {// calculate button ispressed, then solve the perimiter of the square
+    
+    if (SquarePerimeterDimenstion.value === "" || SquarePerimeterDimenstion.value === "0"){// if the input is empty or 0
+        squarePerimeterResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// this is the error message 
+        squarePerimeterResult.style.color = "rgb(102,21,7)"// changer the color to red 
+    }
+    
+    else{ // if there is a valid value in the inputs 
     const DimenstionSquarePerimeter = Number(SquarePerimeterDimenstion.value);// stores the perimiter dimetion of the square 
     
     const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;// this shows the operation L + L + L + L + PERIMETER
     
     squarePerimeterResult.textContent = "Perimeter = " + SquarePerimeter + " Units";// displays the perimeter  of the square 
+    squarePerimeterResult.style.color = "rgb(11,61,46)"// adds a green color
+
+    }
 })
 
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
@@ -181,7 +196,7 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
     
     if (trianglePerimeterSideA.value === "" || trianglePerimeterSideB.value === "" || trianglePerimeterSideC.value === "" || trianglePerimeterSideA.value === "0"|| trianglePerimeterSideB.value === "0"|| trianglePerimeterSideC.value === "0"){// if any of the sides are empty
-        trianglePerimeterResult.textContent = "ERROR!!! PLEASE ENTER 3 VALUES"// this si the error message 
+        trianglePerimeterResult.textContent = "ERROR!!! PLEASE ENTER 3 VALID VALUES"// this si the error message 
         trianglePerimeterResult.style.color = "rgb(102,21,7)"// changes the colour to a red 
     }
 
@@ -200,7 +215,7 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
      
     if (circleAreaRadius.value === "" || circleAreaRadius.value === "0"){// if the radius is empty or 0
-        circleAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALUE"// error message 
+        circleAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// error message 
         circleAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
     }
 
