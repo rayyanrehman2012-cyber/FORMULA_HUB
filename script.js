@@ -141,12 +141,30 @@ const calculateCircleCircumference = document.getElementById("calculateCircleCir
 
 
 
-// THESE ARE FOR THE TRAPEZOID AREA BUTTON
+// THESE ARE FOR THE TRAPEZOID AREA CALCULATOR
 const trapezoidAreaBaseA = document.getElementById("trapezoidAreaBaseA");// this is the trabozoid base a value 
 const trapezoidAreaBaseB = document.getElementById("trapezoidAreaBaseB");// this is the trapizode base b value 
 const trapezoidAreaHeight = document.getElementById("trapezoidAreaHeight");// the trapizoid hight value 
 const calculateTrapezoidArea = document.getElementById("calculateTrapezoidArea");// the calculate butto 
 const trapezoidAreaResult = document.getElementById("trapezoidAreaResult");// the trapezod result 
+
+
+// THESE ARE FOR THE QUADILATERAL PERIMETER CALCULATORS
+const quadSideA = document.getElementById("quadSideA");// this is the side on 
+const quadSideB = document.getElementById("quadSideB");// this is the side on 
+const quadSideC = document.getElementById("quadSideC");// this is the side on 
+const quadSideD = document.getElementById("quadSideD");// this is the side on 
+const calculateQuadrilateralPerimeter = document.getElementById("calculateQuadrilateralPerimeter");// calculate button 
+const quadrilateralPerimeterResult = document.getElementById("quadrilateralPerimeterResult");// result line 
+
+
+
+
+
+
+
+
+
 
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
 
@@ -326,7 +344,24 @@ calculateTrapezoidArea.addEventListener ("click", function() {// when u click ca
     }
 })
 
+calculateQuadrilateralPerimeter.addEventListener ("click", function (){
+    
+    if(quadSideA.value === ""|| quadSideA.value === "0"|| quadSideB.value === ""|| quadSideB.value === "0"|| quadSideC.value === ""|| quadSideC.value === "0"|| quadSideD.value === ""|| quadSideD.value === "0" ) { // if all the values are not present, or are  zeros 
+        quadrilateralPerimeterResult.textContent
+    }
+    
+    else{ 
+        const SideA = Number(quadSideA.value);// stores the first side 
+        const SideB = Number(quadSideB.value);// stores the second side 
+        const SideC = Number(quadSideC.value);// stores the third side 
+        const SideD = Number(quadSideD.value);// stores the forht side 
 
+        const QuadPerimeter = SideA + SideB + SideC + SideD;// the perimiter of the quadilateral 
+
+        quadrilateralPerimeterResult.textContent = "Perimeter = " + QuadPerimeter + " Units";// this is what is shos
+        quadrilateralPerimeterResult.style.color = "rgb(11,61,46)"// change the color to green 
+    }
+})
 
 
 
