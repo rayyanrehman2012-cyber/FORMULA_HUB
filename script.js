@@ -186,8 +186,23 @@ calculateCircleArea.addEventListener("click", function() {// calculates the area
     circleAreaResult.textContent = "Area = " + circleAreaRounded  + " Units Squared"// this will display the circles area 
 })
 
-calculateCircleCircumference.addEventListener ("click", function(){
-    co
+calculateCircleCircumference.addEventListener ("click", function(){// if the circumference calculate button is used 
+    const circleDiameter = Number(circleCircumferenceDiameter.value)// stores the value of the diameter
+    const circleRadius2 = Number (circleCircumferenceRadius.value)// stores the value of the radius 
+    let CircleCircumference = 0;
+    if ( circleDiameter !=="" && circleRadius2 !=="" ){// if both numbers are entered 
+        circleCircumferenceResult.textContent = "ERROR! ONLY ENTER ONE VALUE, THEN TRY AGAIN" // show this message 
+    }
+
+    else if ( circleDiameter !==""){//if diameter is entered 
+        CircleCircumference = (pi * circleDiameter); // pie Diameter is equal to circumpference 
+        circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units" // display 
+    }
+
+    else if (circleRadius2 !=="" ){// if the radius is entered 
+        CircleCircumference = 2*(pi * circleRadius2); // 2 times pie time r
+        circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units"//display 
+    }
 })
 
 
