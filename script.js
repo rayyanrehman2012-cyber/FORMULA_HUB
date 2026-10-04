@@ -18,6 +18,7 @@ const triangleAreaBackButton = document.getElementById("triangleAreaBackButton")
 const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton");// this is the back buton on the triangle perimeter page 
 const circleAreaBackButton = document.getElementById("circleAreaBackButton");// this is the backk button on the circle are page 
 const circleCircumferenceBackButton = document.getElementById("circleCircumferenceBackButton");// this is the back button on the circumference pages 
+const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton");// the back button o the trapezoid page 
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -33,6 +34,8 @@ const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is 
 const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");//this is the triangle perimeter page 
 const circleAreaPage = document.querySelector(".circleAreaPage");// thsis is the circle are pages 
 const circleCircumferencePage = document.querySelector(".circleCircumferencePage");// thi is the circumperance page 
+const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage")// this is the trapizode page
+
 
 
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
@@ -44,7 +47,7 @@ const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");/
 const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeterButton");// this is the triangle perimeter button on the all formula page 
 const allcircleAreaButton = document.getElementById("allcircleAreaButton");// this is the circle area button 
 const allcircleCircumferenceButton = document.getElementById("allcircleCircumferenceButton");// the circumference button on the formula screent 
-
+const alltrapezoidAreaButton = document.getElementById("alltrapezoidAreaButton")// the trapizode are page 
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
@@ -55,6 +58,7 @@ const triangleAreaButton = document.getElementById("triangleAreaButton"); // thi
 const trianglePerimeterButton = document.getElementById("trianglePerimeterButton");// this is the trianlge perimeter buton on the math formula page 
 const circleAreaButton = document.getElementById("circleAreaButton");// this is the circle are button 
 const circleCircumferenceButton = document.getElementById("circleCircumferenceButton");// the circumference button on the formula screent 
+const trapezoidAreaButton = document.getElementById("trapezoidAreaButton")// the trapizode are page 
 
 
 
@@ -95,6 +99,7 @@ const calculateTriangleArea = document.getElementById("calculateTriangleArea");/
 const triangleAreaResult = document.getElementById("triangleAreaResult");// displays score 
 
 
+
 // THESE ARE FOR THE TRIANGLE PERIMETER CALCULSTOR
 const trianglePerimeterSideA = document.getElementById("trianglePerimeterSideA");// side a input 
 const trianglePerimeterSideB = document.getElementById("trianglePerimeterSideB")// ide b input 
@@ -102,11 +107,15 @@ const trianglePerimeterSideC = document.getElementById("trianglePerimeterSideC")
 const calculateTrianglePerimeter = document.getElementById("calculateTrianglePerimeter");// the calculate button
 const trianglePerimeterResult = document.getElementById("trianglePerimeterResult");//this is the result line
 
+
+
 //THESE ARE FOR THE CIRCLE  AREA  CALCULATOR
 const circleAreaRadius = document.getElementById("circleAreaRadius");// radius input 
 const calculateCircleArea = document.getElementById("calculateCircleArea");// the calculat button 
 const circleAreaResult = document.getElementById("circleAreaResult");// this is the result line
 const pi = 3.14159265358979323846; // this si the value of pi that will be used in the calculaotre 
+
+
 
 // THESE ARE FOR THE CIRCLE CIRCUMPERFERENCE CALCULATOR 
 const circleCircumferenceDiameter = document.getElementById("circleCircumferenceDiameter");// gets the Diameter
@@ -116,7 +125,12 @@ const calculateCircleCircumference = document.getElementById("calculateCircleCir
 
 
 
-
+// THESE ARE FOR THE TRAPEZOID AREA BUTTON
+const trapezoidAreaBaseA = document.getElementById("trapezoidAreaBaseA");// this is the trabozoid base a value 
+const trapezoidAreaBaseB = document.getElementById("trapezoidAreaBaseB");// this is the trapizode base b value 
+const trapezoidAreaHeight = document.getElementById("trapezoidAreaHeight");// the trapizoid hight value 
+const calculateTrapezoidArea = document.getElementById("calculateTrapezoidArea");// the calculate butto 
+const trapezoidAreaResult = document.getElementById("trapezoidAreaResult");// the trapezod result 
 
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
 
@@ -275,6 +289,11 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
         circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// changes the text colour to a red 
     }
 });
+
+calculateTrapezoidArea.addEventListener ("click", function() {// when u click calculate area for trapizoid 
+
+
+})
 
 
 

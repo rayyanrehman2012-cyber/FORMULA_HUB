@@ -34,7 +34,7 @@
                     <button id = "alltrianglePerimeterButton" class="formulaButton">TRIANGLE PERIMETER</button>
                     <button id = "allcircleAreaButton" class="formulaButton">CIRCLE AREA</button>
                     <button id = "allcircleCircumferenceButton" class="formulaButton">CIRCLE CIRCUMFERENCE</button>
-                    <button class="formulaButton">TRAPEZOID AREA</button>
+                    <button id = "alltrapezoidAreaButton"class="formulaButton">TRAPEZOID AREA</button>
                     <button class="formulaButton">PARALLELOGRAM AREA</button>
                     <button class="formulaButton">SLOPE</button>
                     <button class="formulaButton">DISTANCE FORMULA</button>
@@ -80,7 +80,7 @@
                 <button id = "trianglePerimeterButton"class="formulaButton">TRIANGLE PERIMETER</button>
                 <button id = "circleAreaButton" class="formulaButton">CIRCLE AREA</button>
                 <button id = "circleCircumferenceButton" class="formulaButton">CIRCLE CIRCUMFERENCE</button>
-                <button class="formulaButton">TRAPEZOID AREA</button>
+                <button id = "trapezoidAreaButton" class="formulaButton">TRAPEZOID AREA</button>
                 <button class="formulaButton">PARALLELOGRAM AREA</button>
                 <button class="formulaButton">SLOPE</button>
                 <button class="formulaButton">DISTANCE FORMULA</button>
@@ -223,6 +223,24 @@
 
             </div>
             <button id="circleCircumferenceBackButton">BACK</button>
+         </main>
+
+         <main class = "trapezoidAreaPage">
+            <h1>TRAPEZOID AREA</h1>
+            <div class = "calculatorBox">
+                <label for = "trapezoidAreaBaseA">BASE A</label>
+                <input id = "trapezoidAreaBaseA" type="number">
+
+                <label for = "trapezoidAreaBaseB">BASE B</label>
+                <input id = "trapezoidAreaBaseB" type="number">
+
+                <label for = "trapezoidAreaHeight">HEIGHT</label>
+                <input id = "trapezoidAreaHeight" type="number">
+
+                <button id = "calculateTrapezoidArea">CALCULATE</button>
+                <p id="trapezoidAreaResult"></p>
+            </div>
+            <button id="trapezoidAreaBackButton">BACK</button>
          </main>
 
         <script src="./script.js"></script>
