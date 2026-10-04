@@ -27,6 +27,11 @@ const allsquareAreaButton = document.getElementById("allsquareAreaButton");// th
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
 const squareAreaBackButton = document.getElementById("squareAreaBackButton")// this is the back button on the physics page 
 
+const squarePerimeterPage = document.querrySelector(".squarePerimeterPage")// square perimeter pages 
+const allsquarePerimeterButton = document.querrySelector(".allsquarePerimeterButton")// square perimeter pages 
+const squarePerimeterButton = document.querrySelector(".squarePerimeterButton")// square perimeter pages 
+const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton")// this is the back button on the physics page 
+
 
 // for  rectangle area calculator 
 const lengthInput = document.getElementById("length"); // you length input 
@@ -47,8 +52,10 @@ const SquareAreaDimenstion = document.getElementById("SquareAreaDimenstion"); //
 const calculateSquareArea = document.getElementById("calculateSquareArea");// the calculate button 
 const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
 
-
-
+// for square perimeter calculator 
+const SquarePerimeterDimenstion = document.getElementById("SquarePerimeterDimenstion");// square dimentions for area 
+const calculateSquarePerimeter = document.getElementById("calculateSquarePerimeter");// square perimiter calculate button 
+const squarePerimeterResult = document.getElementById("squarePerimeterResult");// the line that gives u the answer
 
 
 
@@ -86,8 +93,13 @@ calculateSquareArea.addEventListener("click", function() {// calculate putton is
 });
 
 
-
-
+calculateSquarePerimeter.addEventListener("click", function() {// calculate button ispressed, then solve the perimiter of the square
+    const DimenstionSquarePerimeter = Number(SquarePerimeterDimenstion.value)// stores the perimiter dimetion of the square 
+    
+    const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;
+    
+    squarePerimeterResult.textContent = "Perimeter =" + SquarePerimeter + " Units";// displays the perimeter 
+})
 
 
 
@@ -199,6 +211,20 @@ allsquareAreaButton.addEventListener("click", function() {// takes you tot he sq
 
 });
 
+allsquarePerimeterButton.addEventListener("click", function() {
+    startPage.style.display = "none"; // start page is hiddern
+    mathFormulaPage.style.display = "none";
+    formulaPage.style.display + "none";
+    squareAreaPage.style.display = "none";
+    rectangleAreaPage.style.display = "none";
+    rectanglePerimeterPage.style.display = "none"
+    squarePerimeterPage.style.display = "flex";
+})
+
+squarePerimeterPage.addEventListener("click", function() {
+    startPage.style.display = "none";
+    mathFormulaPage.style.display
+})
 squareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
     startPage.style.display = "none";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
