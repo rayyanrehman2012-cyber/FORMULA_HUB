@@ -8,8 +8,7 @@ const rectanglePerimeterBackButton = document.getElementById("rectanglePerimeter
 const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton")// this is the back button on the physics page 
 const physicsBackButton = document.getElementById("physicsBackButton")// this is the back button on the physics page 
 const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
-
-
+const triangleAreaBackButton = document.getElementById("triangleAreaBackButton")// the back button on the triangle are calculator backed 
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -21,8 +20,7 @@ const physicsFormulaPage = document.querySelector(".physicsFormulaPage")// this 
 const mathFormulaPage = document.querySelector(".mathFormulaPage"); // the formula page, math only
 const formulaPage = document.querySelector(".formulaPage");// formula page 
 const startPage = document.querySelector(".StartPage");// starting page 
-
-
+const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is the  triangles area calculator page 
 
 
 // THESE ARE THE MAIN MENU SCREEN BUTTONS 
@@ -31,13 +29,12 @@ const mathButton = document.getElementById("mathButton"); // this is the math fo
 const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
 
 
-
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const allrectanglePerimeterButton = document.getElementById("allrectanglePerimeterButton");// this is the rectangle area formula button all formula page
 const allsquareAreaButton = document.getElementById("allsquareAreaButton");// this is the rectangle area formula button all formula page
 const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton")// square perimeter pages 
-
+const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");// this is the button on the all formula screen 
 
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
@@ -45,6 +42,16 @@ const rectangleAreaButton = document.getElementById("rectangleAreaButton");// th
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
 const squarePerimeterButton = document.getElementById("squarePerimeterButton")// square perimeter pages 
+const triangleAreaButton = document.getElementById("triangleAreaButton"); // this si the trangle are button on the math formulas screen 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,13 +62,11 @@ const calculateRectangleArea = document.getElementById("calculateRectangleArea")
 const rectangleAreaResult = document.getElementById("rectangleAreaResult");// the line that gives u the answer
 
 
-
 // THESE ARE FOR THE RECTANGLE PERIMETER CALCULATOR
 const PerimeterlengthInput = document.getElementById("Perimeterlength"); // you length input 
 const PerimeterwidthInput = document.getElementById("Perimeterwidth");// your width input 
 const calculateRectanglePerimeter = document.getElementById("calculateRectanglePerimeter");// the calculate button 
 const rectanglePerimeterResult = document.getElementById("rectanglePerimeterResult");// the line that gives u the answer
-
 
 
 // THESE ARE FOR THE SQUARE AREA CALCULATOR 
@@ -70,11 +75,22 @@ const calculateSquareArea = document.getElementById("calculateSquareArea");// th
 const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
 
 
-
 //THESE ARE FOR THE  SQUARE PERIMETER CALCULATOR 
 const SquarePerimeterDimenstion = document.getElementById("SquarePerimeterDimenstion");// square dimentions for area 
 const calculateSquarePerimeter = document.getElementById("calculateSquarePerimeter");// square perimiter calculate button 
 const squarePerimeterResult = document.getElementById("squarePerimeterResult");// the line that gives u the answer
+
+
+//THESE ARE FOR THE TRIANGLE ARE CALCULATOR
+const triangleAreaHeight = document.getElementById("triangleAreaHeight")// height dimentions for triangle are
+const triangleAreaBase = document.getElementById("triangleAreaBase") //  the base measurement ofr the triangle 
+const calculateTriangleArea = document.getElementById("calculateTriangleArea")// the calculate btton
+const triangleAreaResult = document.getElementById("triangleAreaResult")// displays score 
+
+
+
+
+
 
 
 
@@ -114,28 +130,28 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
 });
 
 calculateSquarePerimeter.addEventListener("click", function() {// calculate button ispressed, then solve the perimiter of the square
-    const DimenstionSquarePerimeter = Number(SquarePerimeterDimenstion.value)// stores the perimiter dimetion of the square 
+    const DimenstionSquarePerimeter = Number(SquarePerimeterDimenstion.value);// stores the perimiter dimetion of the square 
     
     const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;// this shows the operation L + L + L + L + PERIMETER
     
     squarePerimeterResult.textContent = "Perimeter = " + SquarePerimeter + " Units";// displays the perimeter  of the square 
 })
 
+calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
+    const heightTriangleArea = Number(triangleAreaHeight.value); // stores the height of the triangle
+    
+    const baseTriangleArea = Number(triangleAreaBase.value);
+
+    const triangleArea = ((heightTriangleArea * baseTriangleArea)/2)// base times height divided by 2 is te area 
+
+    triangleAreaResult.textContent = "Area = " + triangleArea + "Units Squared"
+})
 
 
-
-
-
-// TTHIS IS WHERE ALL OF THE BUTTONS ARE AND WHERE ALL OF THE NAVIGATION IS HAPPENING (YOU TEL WHAT TO SHOW WHEN A BUTTON IS CLICKED)
-
+// THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
     formulaPage.style.display = "flex";// the formula page apears 
-})
-
-backButton.addEventListener("click", function() {// back button all formulas bage 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    startPage.style.display = "flex";// the starte page becomes visible 
 })
 
 mathButton.addEventListener("click", function() {// math menu button 
@@ -143,6 +159,20 @@ mathButton.addEventListener("click", function() {// math menu button
     mathFormulaPage.style.display = "flex";// show the math formula page 
 
 });
+
+physicsButton.addEventListener("click", function() {// physics formula menue 
+    startPage.style.display = "none";// the start page is not visible 
+    physicsFormulaPage.style.display = "flex";// the physics page isvisible 
+});
+
+
+
+// THESE ARE ALL THE BACK BUTTON EVENT FUNCTIONS IN THIS PROJECT
+
+backButton.addEventListener("click", function() {// back button all formulas bage 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    startPage.style.display = "flex";// the starte page becomes visible 
+})
 
 mathBackButton.addEventListener("click", function() {// back button math menu 
     mathFormulaPage.style.display = "none";// the math only formula page dissapears 
@@ -153,39 +183,6 @@ physicsBackButton.addEventListener("click", function() {// back button physics f
     physicsFormulaPage.style.display = "none";// the math only formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
 })
-
-physicsButton.addEventListener("click", function() {// physics formula menue 
-    startPage.style.display = "none";// the start page is not visible 
-    physicsFormulaPage.style.display = "flex";// the physics page isvisible 
-});
-
-allrectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
-    startPage.style.display = "none";// the start page is not visibe
-    mathFormulaPage.style.display = "none";// the math formula page dissapears 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    rectangleAreaPage.style.display = "flex"// the rectangle area screen is visible 
-});
-
-rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
-    startPage.style.display = "none";// the start page is not visibe
-    mathFormulaPage.style.display = "none";// the math formula page dissapears 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    rectangleAreaPage.style.display = "flex"// the rectangle area screen is visible 
-});
-
-rectanglePerimeterButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
-    startPage.style.display = "none";// the start page is not visibe
-    mathFormulaPage.style.display = "none";// the math formula page dissapears 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    rectanglePerimeterPage.style.display = "flex"// the rectangle area screen is visible 
-});
-
-allrectanglePerimeterButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
-    startPage.style.display = "none";// the start page is not visibe
-    mathFormulaPage.style.display = "none";// the math formula page dissapears 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    rectanglePerimeterPage.style.display = "flex"// the rectangle area screen is visible 
-});
 
 rectangleAreaBackButton.addEventListener("click", function() { // area bck button rectangle
     startPage.style.display = "flex";// the start page is not visibe
@@ -210,44 +207,6 @@ rectanglePerimeterBackButton.addEventListener("click", function() {// back butto
     rectanglePerimeterResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
 });
 
-allsquareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
-    startPage.style.display = "none";// the start page is not visibe
-    mathFormulaPage.style.display = "none";// the math formula page dissapears 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    squareAreaPage.style.display = "flex"// the square area screen is visible 
-    rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
-    rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
-});
-
-allsquarePerimeterButton.addEventListener("click", function() {// what to do if the square perimeter formul button is pressed on the all frmula screen 
-    startPage.style.display = "none"; // start page is hiddern 
-    mathFormulaPage.style.display = "none";// hides this page 
-    formulaPage.style.display = "none"; // hides this page 
-    squareAreaPage.style.display = "none";// hides this page 
-    rectangleAreaPage.style.display = "none";// hides this page 
-    rectanglePerimeterPage.style.display = "none"// hides this page 
-    squarePerimeterPage.style.display = "flex";// shows the perimeter pages 
-})
-
-squarePerimeterButton.addEventListener("click", function() {// what to do if the square perimiter formul button is pressed 
-    startPage.style.display = "none";// hides this page 
-    mathFormulaPage.style.display = "none";// hides this page 
-    formulaPage.style.display = "none";// hides this page 
-    squareAreaPage.style.display = "none";// hides this page 
-    rectangleAreaPage.style.display = "none";// hides this page 
-    rectanglePerimeterPage.style.display = "none";// hides this page 
-    squarePerimeterPage.style.display = "flex";// shows this page 
-})
-
-squareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
-    startPage.style.display = "none";// the start page is not visibe
-    mathFormulaPage.style.display = "none";// the math formula page dissapears 
-    formulaPage.style.display = "none";// the formula page dissapears 
-    squareAreaPage.style.display = "flex"// the square area screen is visible
-    rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
-    rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
-});
-
 squareAreaBackButton.addEventListener("click", function() { // area bck button rectangle
     startPage.style.display = "flex";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
@@ -268,3 +227,88 @@ squarePerimeterBackButton.addEventListener("click", function() {// back button o
     SquarePerimeterDimenstion.value = "";// removes the value 
     squarePerimeterResult.textContent = ""; // removes the line of text 
 })
+
+
+
+
+
+//THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
+
+
+allrectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    rectangleAreaPage.style.display = "flex"// the rectangle area screen is visible 
+});
+
+allrectanglePerimeterButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    rectanglePerimeterPage.style.display = "flex"// the rectangle area screen is visible 
+});
+
+allsquareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    squareAreaPage.style.display = "flex"// the square area screen is visible 
+    rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
+    rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
+});
+
+allsquarePerimeterButton.addEventListener("click", function() {// what to do if the square perimeter formul button is pressed on the all frmula screen 
+    startPage.style.display = "none"; // start page is hiddern 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "flex";// shows the perimeter pages 
+})
+
+
+
+
+// TTHIS IS WHERE ALL OF THE BUTTONS ARE AND WHERE ALL OF THE NAVIGATION IS HAPPENING (YOU TEL WHAT TO SHOW WHEN A BUTTON IS CLICKED)
+
+
+
+
+
+
+
+rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    rectangleAreaPage.style.display = "flex"// the rectangle area screen is visible 
+});
+
+rectanglePerimeterButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    rectanglePerimeterPage.style.display = "flex"// the rectangle area screen is visible 
+});
+
+squarePerimeterButton.addEventListener("click", function() {// what to do if the square perimiter formul button is pressed 
+    startPage.style.display = "none";// hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none";// hides this page 
+    squarePerimeterPage.style.display = "flex";// shows this page 
+})
+
+squareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    squareAreaPage.style.display = "flex"// the square area screen is visible
+    rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
+    rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
+});
+
