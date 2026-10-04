@@ -1,3 +1,13 @@
+.formulaPage,
+.mathFormulaPage,
+.physicsFormulaPage,
+.rectangleAreaPage,
+.rectanglePerimeterPage,
+.squareAreaPage {
+    display: none;
+}
+
+
 body {
     margin:0;
     font-family: 'Baloo 2', sans-serif;
@@ -326,6 +336,11 @@ p {
     width:600px;
     height:270px;
     padding:35px;
+
+
+
+
+
     border-radius:25px;
     background: rgba(247, 249, 248, 0.163);
     box-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
@@ -436,6 +451,7 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
+
 }
 
 #squareAreaBackButton {
@@ -492,4 +508,8 @@ p {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
+}
+
+.squareAreaPage .calculatorBox {
+    height: 200px;
 }

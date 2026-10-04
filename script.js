@@ -148,7 +148,6 @@ rectangleAreaButton.addEventListener("click", function() {// takes you tot he re
 
 });
 
-
 rectanglePerimeterButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
@@ -195,6 +194,8 @@ allsquareAreaButton.addEventListener("click", function() {// takes you tot he sq
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
     formulaPage.style.display = "none";// the formula page dissapears 
     squareAreaPage.style.display = "flex"// the square area screen is visible 
+    rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
+    rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
 
 });
 
@@ -203,6 +204,8 @@ squareAreaButton.addEventListener("click", function() {// takes you tot he squar
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
     formulaPage.style.display = "none";// the formula page dissapears 
     squareAreaPage.style.display = "flex"// the square area screen is visible
+    rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
+    rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
 });
 
 squareAreaBackButton.addEventListener("click", function() { // area bck button rectangle
