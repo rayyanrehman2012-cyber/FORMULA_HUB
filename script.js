@@ -14,6 +14,9 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 const rectangleAreaPage = document.querySelector(".rectangleAreaPage");// this is the rectangles area page 
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
+const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton")// this is the back button on the physics page 
+
+
 
 // making the buttons work
 
@@ -69,3 +72,12 @@ rectangleAreaButton.addEventListener("click", function() {
     rectangleAreaPage.style.display = "flex"// the rectangle area screen is visible 
 
 });
+
+rectangleAreaBackButton.addEventListener("click", function() {
+    startPage.style.display = "flex";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    rectangleAreaPage.style.display = "none"// the rectangle area screen is visible 
+
+});
+
