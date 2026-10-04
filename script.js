@@ -154,7 +154,8 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
     const trianglePerimeterB = Number(trianglePerimeterSideB.value);// stors the side of the triangle 
     const trianglePerimeterC = Number(trianglePerimeterSideC.value);// stors the side of the triangles 
 
-    const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;
+    const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;// this si the what calculatesthe perimeter 
+    trianglePerimeterResult.textContent = "Perimeter = " + trianglePerimeter + " Units"// this will displat the calculation 
 })
 
 
@@ -257,6 +258,17 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
     triangleAreaHeight.value = "";// the height value of the triangle resets 
 })
 
+trianglePerimeterBackButton.addEventListener("click", function() {
+    startPage.style.display = "flex";//show the start page 
+    mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+
+    trianglePerimeterSideA.value = "";// the value resets 
+    trianglePerimeterSideB.value = "";// the value rests 
+    trianglePerimeterSideC.value = "";// the valuse rests 
+})
 
 
 
@@ -298,7 +310,7 @@ allsquarePerimeterButton.addEventListener("click", function() {// what to do if 
     squarePerimeterPage.style.display = "flex";// shows the perimeter pages 
 })
 
-alltriangleAreaButton.addEventListener("click", function() {
+alltriangleAreaButton.addEventListener("click", function() {/// triangle are button 
     startPage.style.display = "none";// hied this page 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -308,6 +320,18 @@ alltriangleAreaButton.addEventListener("click", function() {
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "flex";// shows this age 
 
+})
+
+alltrianglePerimeterButton.addEventListener("click", function() {
+    startPage.style.display = "none";
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
+    triangleAreaPage.style.display = "none";// shows this age 
+    trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
 })
 
 
@@ -362,3 +386,14 @@ triangleAreaButton.addEventListener("click", function() {
 
 })
 
+trianglePerimeterButton.addEventListener("click", function() {
+    startPage.style.display = "none";
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
+    triangleAreaPage.style.display = "none";// shows this age 
+    trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
+})
