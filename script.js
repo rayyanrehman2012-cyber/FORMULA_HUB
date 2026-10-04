@@ -344,10 +344,12 @@ calculateTrapezoidArea.addEventListener ("click", function() {// when u click ca
     }
 })
 
-calculateQuadrilateralPerimeter.addEventListener ("click", function (){
+calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the calculate button is pressed then 
     
     if(quadSideA.value === ""|| quadSideA.value === "0"|| quadSideB.value === ""|| quadSideB.value === "0"|| quadSideC.value === ""|| quadSideC.value === "0"|| quadSideD.value === ""|| quadSideD.value === "0" ) { // if all the values are not present, or are  zeros 
-        quadrilateralPerimeterResult.textContent
+        quadrilateralPerimeterResult.textContent = "ERROR PLEASE ENTER 4 VALID VALUES"//error mesage 
+        quadrilateralPerimeterResult.style.color = "rgb(102,21,7)"// change the color to green 
+
     }
     
     else{ 
@@ -362,6 +364,8 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){
         quadrilateralPerimeterResult.style.color = "rgb(11,61,46)"// change the color to green 
     }
 })
+
+
 
 
 
@@ -517,7 +521,23 @@ trapezoidAreaBackButton.addEventListener("click", function(){// if the back butt
     trapezoidAreaResult.textContent = "";// removes the text
 
 })
+quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the button is pressed
+    startPage.style.display = "flex";//show the start page
+    mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+    circleAreaPage.style.display = "none";//hide
+    circleCircumferencePage.style.display = "none";//hide
+    trapezoidAreaPage.style.display = "none"//hide
+    quadrilateralPerimeterpage.style.display = "none"// hide tis bage
 
+    quadSideA.value = "";// rests the value 
+    quadSideB.value = "";// rests the value 
+    quadSideC.value = "";// rests the value 
+    quadSideD.value = "";// rests the value 
+    quadrilateralPerimeterResult.textContent = "";// resets the text 
+})
 
 
 
@@ -624,6 +644,10 @@ alltrapezoidAreaButton.addEventListener("click", function() {// if the button is
     trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
 })
 
+allquadrilateralPerimeterButton.addEventListener("click", function() {// if this button is presed
+
+
+})
 
 
 
