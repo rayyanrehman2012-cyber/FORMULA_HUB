@@ -192,18 +192,26 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
     let CircleCircumference = 0;
 
 
-    if ( circleDiameter !==""  && circleRadius2 !==""){// if both numbers are entered 
-        circleCircumferenceResult.textContent = "ERROR! ONLY ENTER ONE VALUE, THEN TRY AGAIN" // show this message 
+    if ( circleDiameter !==""  && circleRadius2 !=="" && circleDiameter !== "0" && circleRadius2 !== "0"){// if both numbers are entered 
+        circleCircumferenceResult.textContent = "ERROR!!! ONLY ENTER ONE VALUE, THEN TRY AGAIN, YOU MAY YOU 0 AS A PLACEHOLDER" // show this message 
+        circleCircumferenceResult.style.color = "red"
     }
 
-    else if ( circleDiameter !=="" && ( circleRadius2 === "" || circleRadius2 === 0)){//if diameter is entered 
+    else if ( circleDiameter !=="" && circleDiameter !== "0"){//if diameter is entered 
         CircleCircumference = (pi * Number(circleDiameter)); // pie Diameter is equal to circumpference 
+        circleCircumferenceResult.style.color = "rgb(11,61,46)"
         circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units" // display 
     }
 
-    else if (circleRadius2 !=="" && ( circleDiameter === "" || circleDiameter === 0)){// if the radius is entered 
+    else if (circleRadius2 !=="" && circleRadius2 !== "0"){// if the radius is entered 
         CircleCircumference = 2*(pi * Number(circleRadius2)); // 2 times pie time r
+        circleCircumferenceResult.style.color = "rgb(11,61,46)"
         circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units"//display 
+    }
+
+    else {
+        circleCircumferenceResult.textContent = "ERROR!!! PLEASE ENTER A VALUE"
+        circleCircumferenceResult.style.color = "red"
     }
 });
 
