@@ -160,13 +160,22 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
 })
 
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
+    
+    if (triangleAreaHeight.value === "" || triangleAreaBase.valeu === "" || triangleAreaHeight.value === "0"|| triangleAreaBase.value === "0") {// if the height or base is empty or 0
+        triangleAreaResult.textContent = "ERROR!!! PLEASE ENTER 2 VALID VALUES"// this is the error message 
+        triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red 
+    }
+    
+    else{ // if there are 2 values then
     const heightTriangleArea = Number(triangleAreaHeight.value); // stores the height of the triangle
     
-    const baseTriangleArea = Number(triangleAreaBase.value);
+    const baseTriangleArea = Number(triangleAreaBase.value);// stores the base of the triangle
 
     const triangleArea = ((heightTriangleArea * baseTriangleArea)/2);// base times height divided by 2 is te area 
 
-    triangleAreaResult.textContent = "Area = " + triangleArea + " Units Squared"
+    triangleAreaResult.textContent = "Area = " + triangleArea + " Units Squared"// displays the area of the tringal 
+    triangleAreaResult.style.color = "rgb(11,61,46)" // changes the colour to green for the text 
+    }
 })
 
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
