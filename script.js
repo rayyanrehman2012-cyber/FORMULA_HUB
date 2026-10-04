@@ -179,39 +179,49 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
 })
 
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
-    const circleRadius = Number(circleAreaRadius.value);// stores the radius of the circle 
-    const circleArea = pi * (circleRadius * circleRadius);// this calculates the area of the circle 
+     
+    if (circleAreaRadius.value === "" || circleAreaRadius.value === "0"){// if the radius is empty or 0
+        circleAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALUE"// error message 
+        circleAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
+    }
 
-    const circleAreaRounded = circleArea.toFixed(3)// this rounds the answer to 3 decimal places
-    circleAreaResult.textContent = "Area = " + circleAreaRounded  + " Units Squared"// this will display the circles area 
+    else {// if there is a value 
+        const circleRadius = Number(circleAreaRadius.value);// stores the radius of the circle 
+        const circleArea = pi * (circleRadius * circleRadius);// this calculates the area of the circle 
+
+        const circleAreaRounded = circleArea.toFixed(3)// this rounds the answer to 3 decimal places
+        circleAreaResult.textContent = "Area = " + circleAreaRounded  + " Units Squared"// this will display the circles area 
+        circleAreaResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
+
+    }
 })
 
 calculateCircleCircumference.addEventListener ("click", function(){// if the circumference calculate button is used 
     const circleDiameter = circleCircumferenceDiameter.value;// stores the value of the diameter
     const circleRadius2 = circleCircumferenceRadius.value;// stores the value of the radius 
-    let CircleCircumference = 0;
+    let CircleCircumference = 0;// holds the value of the circumference
 
 
-    if ( circleDiameter !==""  && circleRadius2 !=="" && circleDiameter !== "0" && circleRadius2 !== "0"){// if both numbers are entered 
+    if ( circleDiameter !==""  && circleRadius2 !=="" && circleDiameter !== "0" && circleRadius2 !== "0"){// if both numbers are entered and they are not 0
         circleCircumferenceResult.textContent = "ERROR!!! ONLY ENTER ONE VALUE, THEN TRY AGAIN, YOU MAY YOU 0 AS A PLACEHOLDER" // show this message 
-        circleCircumferenceResult.style.color = "red"
+        circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// change the color to red 
     }
 
-    else if ( circleDiameter !=="" && circleDiameter !== "0"){//if diameter is entered 
+    else if ( circleDiameter !=="" && circleDiameter !== "0"){//if diameter is entered and the radius is not 0
         CircleCircumference = (pi * Number(circleDiameter)); // pie Diameter is equal to circumpference 
-        circleCircumferenceResult.style.color = "rgb(11,61,46)"
+        circleCircumferenceResult.style.color = "rgb(11,61,46)"// change the color to green 
         circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units" // display 
     }
 
-    else if (circleRadius2 !=="" && circleRadius2 !== "0"){// if the radius is entered 
+    else if (circleRadius2 !=="" && circleRadius2 !== "0"){// if the radius is entered  and the radius is not 0
         CircleCircumference = 2*(pi * Number(circleRadius2)); // 2 times pie time r
-        circleCircumferenceResult.style.color = "rgb(11,61,46)"
+        circleCircumferenceResult.style.color = "rgb(11,61,46)"// change the color to green 
         circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units"//display 
     }
 
     else {
-        circleCircumferenceResult.textContent = "ERROR!!! PLEASE ENTER A VALUE"
-        circleCircumferenceResult.style.color = "red"
+        circleCircumferenceResult.textContent = "ERROR!!! PLEASE ENTER A VALUE"// error mesage 
+        circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// changes the text colour to a red 
     }
 });
 
