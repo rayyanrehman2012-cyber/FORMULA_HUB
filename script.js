@@ -8,52 +8,53 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
-const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton")// this is the back button on the physics page 
-const squareAreaBackButton = document.getElementById("squareAreaBackButton")// this is the back button on the physics page 
-const rectanglePerimeterBackButton = document.getElementById("rectanglePerimeterBackButton")// this is the
-const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton")// this is the back button on the physics page 
-const physicsBackButton = document.getElementById("physicsBackButton")// this is the back button on the physics page 
+const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
+const squareAreaBackButton = document.getElementById("squareAreaBackButton");// this is the back button on the physics page 
+const rectanglePerimeterBackButton = document.getElementById("rectanglePerimeterBackButton");// this is the
+const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton");// this is the back button on the physics page 
+const physicsBackButton = document.getElementById("physicsBackButton");// this is the back button on the physics page 
 const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
-const triangleAreaBackButton = document.getElementById("triangleAreaBackButton")// the back button on the triangle are calculator backed 
-const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton")// this is the back buton on the triangle perimeter page 
-const circleAreaBackButton = document.getElementById("circleAreaBackButton")// this is the backk button on the circle are page 
-
+const triangleAreaBackButton = document.getElementById("triangleAreaBackButton");// the back button on the triangle are calculator backed 
+const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton");// this is the back buton on the triangle perimeter page 
+const circleAreaBackButton = document.getElementById("circleAreaBackButton");// this is the backk button on the circle are page 
+const circleCircumferenceBackButton = document.getElementById("circleCircumferenceBackButton");// this is the back button on the circumference pages 
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
-const squarePerimeterPage = document.querySelector(".squarePerimeterPage")// square perimeter pages 
+const squarePerimeterPage = document.querySelector(".squarePerimeterPage");// square perimeter pages 
 const squareAreaPage = document.querySelector(".squareAreaPage");// this is the rectangles area page 
 const rectanglePerimeterPage = document.querySelector(".rectanglePerimeterPage");// this is the rectangles area page 
 const rectangleAreaPage = document.querySelector(".rectangleAreaPage");// this is the rectangles area page 
-const physicsFormulaPage = document.querySelector(".physicsFormulaPage")// this is the physics formula page 
+const physicsFormulaPage = document.querySelector(".physicsFormulaPage");// this is the physics formula page 
 const mathFormulaPage = document.querySelector(".mathFormulaPage"); // the formula page, math only
 const formulaPage = document.querySelector(".formulaPage");// formula page 
 const startPage = document.querySelector(".StartPage");// starting page 
 const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is the  triangles area calculator page 
 const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");//this is the triangle perimeter page 
-const circleAreaPage = document.querySelector(".circleAreaPage")// thsis is the circle are pages 
-
+const circleAreaPage = document.querySelector(".circleAreaPage");// thsis is the circle are pages 
+const circleCircumferencePage = document.querySelector(".circleCircumferencePage");// thi is the circumperance page 
 
 
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const allrectanglePerimeterButton = document.getElementById("allrectanglePerimeterButton");// this is the rectangle area formula button all formula page
 const allsquareAreaButton = document.getElementById("allsquareAreaButton");// this is the rectangle area formula button all formula page
-const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton")// square perimeter pages 
+const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton");// square perimeter pages 
 const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");// this is the button on the all formula screen 
-const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeterButton")// this is the triangle perimeter button on the all formula page 
-const allcircleAreaButton = document.getElementById("allcircleAreaButton")// this is the circle area button 
-
+const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeterButton");// this is the triangle perimeter button on the all formula page 
+const allcircleAreaButton = document.getElementById("allcircleAreaButton");// this is the circle area button 
+const allcircleCircumferenceButton = document.getElementById("allcircleCircumferenceButton");// the circumference button on the formula screent 
 
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
-const squarePerimeterButton = document.getElementById("squarePerimeterButton")// square perimeter pages 
+const squarePerimeterButton = document.getElementById("squarePerimeterButton");// square perimeter pages 
 const triangleAreaButton = document.getElementById("triangleAreaButton"); // this si the trangle are button on the math formulas screen 
-const trianglePerimeterButton = document.getElementById("trianglePerimeterButton")// this is the trianlge perimeter buton on the math formula page 
-const circleAreaButton = document.getElementById("circleAreaButton")// this is the circle are button 
+const trianglePerimeterButton = document.getElementById("trianglePerimeterButton");// this is the trianlge perimeter buton on the math formula page 
+const circleAreaButton = document.getElementById("circleAreaButton");// this is the circle are button 
+const circleCircumferenceButton = document.getElementById("circleCircumferenceButton");// the circumference button on the formula screent 
 
 
 
@@ -88,24 +89,33 @@ const squarePerimeterResult = document.getElementById("squarePerimeterResult");/
 
 
 //THESE ARE FOR THE TRIANGLE ARE CALCULATOR
-const triangleAreaHeight = document.getElementById("triangleAreaHeight")// height dimentions for triangle are
-const triangleAreaBase = document.getElementById("triangleAreaBase") //  the base measurement ofr the triangle 
-const calculateTriangleArea = document.getElementById("calculateTriangleArea")// the calculate btton
-const triangleAreaResult = document.getElementById("triangleAreaResult")// displays score 
+const triangleAreaHeight = document.getElementById("triangleAreaHeight");// height dimentions for triangle are
+const triangleAreaBase = document.getElementById("triangleAreaBase"); //  the base measurement ofr the triangle 
+const calculateTriangleArea = document.getElementById("calculateTriangleArea");// the calculate btton
+const triangleAreaResult = document.getElementById("triangleAreaResult");// displays score 
 
 
 // THESE ARE FOR THE TRIANGLE PERIMETER CALCULSTOR
 const trianglePerimeterSideA = document.getElementById("trianglePerimeterSideA");// side a input 
 const trianglePerimeterSideB = document.getElementById("trianglePerimeterSideB")// ide b input 
 const trianglePerimeterSideC = document.getElementById("trianglePerimeterSideC");// side c input 
-const calculateTrianglePerimeter = document.getElementById("calculateTrianglePerimeter")// the calculate button
-const trianglePerimeterResult = document.getElementById("trianglePerimeterResult")//this is the result line
+const calculateTrianglePerimeter = document.getElementById("calculateTrianglePerimeter");// the calculate button
+const trianglePerimeterResult = document.getElementById("trianglePerimeterResult");//this is the result line
 
-//THESE ARE FOR THE TRIANGLE PERIMETER CALCULATOR
-const circleAreaRadius = document.getElementById("circleAreaRadius")// radius input 
-const calculateCircleArea = document.getElementById("calculateCircleArea")// the calculat button 
-const circleAreaResult = document.getElementById("circleAreaResult")// this is the result line
-const pi = 3.14159265358979323846 // this si the value of pi that will be used in the calculaotre 
+//THESE ARE FOR THE CIRCLE  AREA  CALCULATOR
+const circleAreaRadius = document.getElementById("circleAreaRadius");// radius input 
+const calculateCircleArea = document.getElementById("calculateCircleArea");// the calculat button 
+const circleAreaResult = document.getElementById("circleAreaResult");// this is the result line
+const pi = 3.14159265358979323846; // this si the value of pi that will be used in the calculaotre 
+
+// THESE ARE FOR THE CIRCLE CIRCUMPERFERENCE CALCULATOR 
+const circleCircumferenceDiameter = document.getElementById("circleCircumferenceDiameter");// gets the Diameter
+const circleCircumferenceRadius = document.getElementById("circleCircumferenceRadius");
+const circleCircumferenceResult = document.getElementById("circleCircumferenceResult");// this is the result line
+const calculateCircleCircumference = document.getElementById("calculateCircleCircumference");// the calculat button 
+
+
+
 
 
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
@@ -175,6 +185,11 @@ calculateCircleArea.addEventListener("click", function() {// calculates the area
     const circleAreaRounded = circleArea.toFixed(3)// this rounds the answer to 3 decimal places
     circleAreaResult.textContent = "Area = " + circleAreaRounded  + " Units Squared"// this will display the circles area 
 })
+
+calculateCircleCircumference.addEventListener ("click", function(){
+    co
+})
+
 
 
 
@@ -306,6 +321,8 @@ circleAreaBackButton.addEventListener("click", function() {// if the back button
 
 
 
+
+
 //THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
 
 allrectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
@@ -378,6 +395,8 @@ allcircleAreaButton.addEventListener("click", function() {// if the bitton is cl
     circleAreaPage.style.display = "flex";// show the circle are page 
 
 })
+
+
 
 
 
