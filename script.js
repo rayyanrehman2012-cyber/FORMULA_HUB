@@ -141,7 +141,7 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 
     const triangleArea = ((heightTriangleArea * baseTriangleArea)/2)// base times height divided by 2 is te area 
 
-    triangleAreaResult.textContent = "Area = " + triangleArea + "Units Squared"
+    triangleAreaResult.textContent = "Area = " + triangleArea + " Units Squared"
 })
 
 
@@ -239,6 +239,7 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
     mathFormulaPage.style.display = "none";// hides tis screen 
     formulaPage.style.display = "none";//hides this servfec 
     squarePerimeterPage.style.display = "none";// hiedes this screen 
+    triangleAreaPage.style.display = "none";
 
     triangleAreaBase.value = "";// the base value of the triangle resets 
     triangleAreaHeight.value = "";// the height value of the triangle resets 
