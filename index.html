@@ -30,7 +30,7 @@
                     <button id = "allrectanglePerimeterButton" class="formulaButton">RECTANGLE PERIMETER</button>
                     <button id = "allsquareAreaButton" class="formulaButton">SQUARE AREA</button>
                     <button id = "allsquarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
-                    <button class="formulaButton">TRIANGLE AREA</button>
+                    <button id = "alltriangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
                     <button class="formulaButton">TRIANGLE PERIMETER</button>
                     <button class="formulaButton">CIRCLE AREA</button>
                     <button class="formulaButton">CIRCLE CIRCUMFERENCE</button>
@@ -76,7 +76,7 @@
                 <button id = "rectanglePerimeterButton"  class="formulaButton">RECTANGLE PERIMETER</button>
                 <button id = "squareAreaButton" class="formulaButton">SQUARE AREA</button>
                 <button id = "squarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
-                <button class="formulaButton">TRIANGLE AREA</button>
+                <button id = "triangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
                 <button class="formulaButton">TRIANGLE PERIMETER</button>
                 <button class="formulaButton">CIRCLE AREA</button>
                 <button class="formulaButton">CIRCLE CIRCUMFERENCE</button>
@@ -117,7 +117,7 @@
 
         </main>
         <main class = "rectangleAreaPage">
-            <h1>RECTANGLE AREA</h1>
+            <h1>RECTANGLE AREA CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for="length">Length</label>
                 <input id="length" type="number">
@@ -129,7 +129,7 @@
             <button id="rectangleAreaBackButton">BACK</button>
         </main>
         <main class = "rectanglePerimeterPage">
-            <h1>RECTANGLE PERIMETER</h1>
+            <h1>RECTANGLE PERIMETER CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for="Perimeterlength">Length</label>
                 <input id="Perimeterlength" type="number">
@@ -142,7 +142,7 @@
         </main>
 
         <main class = "squareAreaPage">
-            <h1>SQUARE AREA</h1>
+            <h1>SQUARE AREA CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for="SquareAreaDimenstion">Dimenstion</label>
                 <input id="SquareAreaDimenstion" type="number">
@@ -154,7 +154,7 @@
         </main>
 
         <main class = "squarePerimeterPage">
-            <h1>SQUARE PERIMETER</h1>
+            <h1>SQUARE PERIMETER CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for="SquarePerimeterDimenstion">Dimenstion</label>
                 <input id="SquarePerimeterDimenstion" type="number">
@@ -164,6 +164,17 @@
             </div>
             <button id="squarePerimeterBackButton">BACK</button>
         </main>
+        <main class = "triangleAreaPage">
+            <h1>TRIANGLE AREA CALCULATOR</h1>
+            <div class ="calculatorBox">
+                <label for="triangleAreaHeight">HEIGHT</label>
+                <input id="triangleAreaHeight" type="number">
+
+                <label for="triangleAreaBase">BASE</label>
+                <input id="triangleAreaBase" type="number">
+            </div>
+            <button id="triangleAreaBackButton">BACK</button>
+         </main>
 
         <script src="./script.js"></script>
     </body>
