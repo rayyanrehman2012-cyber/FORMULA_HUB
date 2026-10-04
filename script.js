@@ -187,23 +187,25 @@ calculateCircleArea.addEventListener("click", function() {// calculates the area
 })
 
 calculateCircleCircumference.addEventListener ("click", function(){// if the circumference calculate button is used 
-    const circleDiameter = Number(circleCircumferenceDiameter.value)// stores the value of the diameter
-    const circleRadius2 = Number (circleCircumferenceRadius.value)// stores the value of the radius 
+    const circleDiameter = circleCircumferenceDiameter.value;// stores the value of the diameter
+    const circleRadius2 = circleCircumferenceRadius.value;// stores the value of the radius 
     let CircleCircumference = 0;
-    if ( circleDiameter !=="" && circleRadius2 !=="" ){// if both numbers are entered 
+
+
+    if ( circleDiameter !==""  && circleRadius2 !==""){// if both numbers are entered 
         circleCircumferenceResult.textContent = "ERROR! ONLY ENTER ONE VALUE, THEN TRY AGAIN" // show this message 
     }
 
-    else if ( circleDiameter !==""){//if diameter is entered 
-        CircleCircumference = (pi * circleDiameter); // pie Diameter is equal to circumpference 
+    else if ( circleDiameter !=="" && ( circleRadius2 === "" || circleRadius2 === 0)){//if diameter is entered 
+        CircleCircumference = (pi * Number(circleDiameter)); // pie Diameter is equal to circumpference 
         circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units" // display 
     }
 
-    else if (circleRadius2 !=="" ){// if the radius is entered 
-        CircleCircumference = 2*(pi * circleRadius2); // 2 times pie time r
+    else if (circleRadius2 !=="" && ( circleDiameter === "" || circleDiameter === 0)){// if the radius is entered 
+        CircleCircumference = 2*(pi * Number(circleRadius2)); // 2 times pie time r
         circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units"//display 
     }
-})
+});
 
 
 
@@ -213,7 +215,7 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
     formulaPage.style.display = "flex";// the formula page apears 
-})
+});
 
 mathButton.addEventListener("click", function() {// math menu button 
     startPage.style.display = "none";// hide the start screen 
@@ -237,17 +239,17 @@ physicsButton.addEventListener("click", function() {// physics formula menue
 backButton.addEventListener("click", function() {// back button all formulas bage 
     formulaPage.style.display = "none";// the formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
-})
+});
 
 mathBackButton.addEventListener("click", function() {// back button math menu 
     mathFormulaPage.style.display = "none";// the math only formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
-})
+});
 
 physicsBackButton.addEventListener("click", function() {// back button physics formula mneue 
     physicsFormulaPage.style.display = "none";// the math only formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
-})
+});
 
 rectangleAreaBackButton.addEventListener("click", function() { // area bck button rectangle
     startPage.style.display = "flex";// the start page is not visibe
@@ -291,7 +293,7 @@ squarePerimeterBackButton.addEventListener("click", function() {// back button o
 
     SquarePerimeterDimenstion.value = "";// removes the value 
     squarePerimeterResult.textContent = ""; // removes the line of text 
-})
+});
 
 triangleAreaBackButton.addEventListener("click", function() {// if the triangle area back button is pressed what tot do 
     startPage.style.display = "flex"; // show the start page 
@@ -303,7 +305,7 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
     triangleAreaBase.value = "";// the base value of the triangle resets 
     triangleAreaHeight.value = "";// the height value of the triangle resets 
     triangleAreaResult.textContent = "";// the result line rests 
-})
+});
 
 trianglePerimeterBackButton.addEventListener("click", function() { // if the back button is pressed 
     startPage.style.display = "flex";//show the start page 
@@ -317,7 +319,7 @@ trianglePerimeterBackButton.addEventListener("click", function() { // if the bac
     trianglePerimeterSideC.value = "";// the valuse rests 
 
     trianglePerimeterResult.textContent = "";// the result line resets 
-})
+});
 
 circleAreaBackButton.addEventListener("click", function() {// if the back button is presed 
     startPage.style.display = "flex";//show the start page
@@ -329,7 +331,7 @@ circleAreaBackButton.addEventListener("click", function() {// if the back button
 
     circleAreaRadius.value = "";// the value of the radius restsn 
     circleAreaResult.textContent = "";// the result line resets 
-})
+});
 
 circleCircumferenceBackButton.addEventListener("click", function() {// if the back button is presed 
     startPage.style.display = "flex";//show the start page
@@ -343,7 +345,7 @@ circleCircumferenceBackButton.addEventListener("click", function() {// if the ba
     circleCircumferenceDiameter.value = "";// the value of the dia restsn 
     circleCircumferenceRadius.value = "";// the value of the radius restsn 
     circleCircumferenceResult.textContent = "";// the result line resets 
-})
+});
 
 
 

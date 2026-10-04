@@ -968,13 +968,7 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-.circleAreaPage{
+.circleCircumferencePage{
     min-height:100vh;
     display:none;
     flex-direction:column;
@@ -983,7 +977,7 @@ p {
 }
 
 
-.circleAreaPage::before{
+.circleCircumferencePage::before{
     content: "";
     position:absolute;
     inset: 12px;
@@ -993,7 +987,7 @@ p {
     pointer-events:none;
 }
 
-.circleAreaPage h1 {
+.circleCircumferencePage h1 {
     margin-top:80px;
     font-size:65px;
     font-weight:800;
@@ -1003,7 +997,7 @@ p {
 
 }
 
-#circleAreaBackButton {
+#circleCircumferenceBackButton {
     border:none;
     border-radius:15px;
     background:rgb(247, 249, 248);
@@ -1022,21 +1016,21 @@ p {
     transition: 0.2s ease;
 }
 
-#circleAreaBackButton:hover {
+#circleCircumferenceBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
 
 
-#circleAreaResult {
+#circleCircumferenceResult {
     color: rgb(11,61,46);
     font-size:24px;
     font-weight:800;
     margin:15px 0 0;
 }
 
-#calculateCircleArea {
+#calculateCircleCircumference {
     border: none;
     border-radius:15px;
     background: rgb(11,61,46);
@@ -1052,13 +1046,13 @@ p {
     margin-top:5px;
 }
 
-#calculateCircleArea:hover {
+#calculateCircleCircumference:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
 
-.circleAreaPage .calculatorBox {
+.circleCircumferencePage .calculatorBox {
     top: 10px;
     height: auto;
     padding-bottom: 20px;
