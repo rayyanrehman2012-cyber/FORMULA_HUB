@@ -16,6 +16,8 @@ const physicsBackButton = document.getElementById("physicsBackButton")// this is
 const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
 const triangleAreaBackButton = document.getElementById("triangleAreaBackButton")// the back button on the triangle are calculator backed 
 const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton")// this is the back buton on the triangle perimeter page 
+const circleAreaBackButton = document.getElementById("circleAreaBackButton")// this is the backk button on the circle are page 
+
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -29,6 +31,7 @@ const formulaPage = document.querySelector(".formulaPage");// formula page
 const startPage = document.querySelector(".StartPage");// starting page 
 const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is the  triangles area calculator page 
 const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");//this is the triangle perimeter page 
+const circleAreaPage = document.querySelector(".circleAreaPage")// thsis is the circle are pages 
 
 
 
@@ -39,6 +42,8 @@ const allsquareAreaButton = document.getElementById("allsquareAreaButton");// th
 const allsquarePerimeterButton = document.getElementById("allsquarePerimeterButton")// square perimeter pages 
 const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");// this is the button on the all formula screen 
 const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeterButton")// this is the triangle perimeter button on the all formula page 
+const allcircleAreaButton = document.getElementById("allcircleAreaButton")// this is the circle area button 
+
 
 
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
@@ -48,6 +53,7 @@ const squareAreaButton = document.getElementById("squareAreaButton");// this is 
 const squarePerimeterButton = document.getElementById("squarePerimeterButton")// square perimeter pages 
 const triangleAreaButton = document.getElementById("triangleAreaButton"); // this si the trangle are button on the math formulas screen 
 const trianglePerimeterButton = document.getElementById("trianglePerimeterButton")// this is the trianlge perimeter buton on the math formula page 
+const circleAreaButton = document.getElementById("circleAreaButton")// this is the circle are button 
 
 
 
@@ -95,7 +101,11 @@ const trianglePerimeterSideC = document.getElementById("trianglePerimeterSideC")
 const calculateTrianglePerimeter = document.getElementById("calculateTrianglePerimeter")// the calculate button
 const trianglePerimeterResult = document.getElementById("trianglePerimeterResult")//this is the result line
 
-
+//THESE ARE FOR THE TRIANGLE PERIMETER CALCULATOR
+const circleAreaRadius = document.getElementById("circleAreaRadius")// radius input 
+const calculateCircleArea = document.getElementById("calculateCircleArea")// the calculat button 
+const circleAreaResult = document.getElementById("circleAreaResult")// this is the result line
+const pi = 3.14159265358979323846 // this si the value of pi that will be used in the calculaotre 
 
 
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
@@ -158,7 +168,13 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
     trianglePerimeterResult.textContent = "Perimeter = " + trianglePerimeter + " Units"// this will displat the calculation 
 })
 
+calculateCircleArea.addEventListener("click", function() {
+    const circleRadius = Number(circleAreaRadius.value);// stores the radius of the circle 
+    const circleArea = pi * (circleRadius * circleRadius);// this calculates the area of the circle 
 
+    const circleAreaRounded = circleArea.toFixed(3)// this rounds the answer to 3 decimal places
+    circleAreaResult.textContent = "Area = " + circleAreaRounded  + " Units Squared"// this will display the circles area 
+})
 
 
 
@@ -256,6 +272,7 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
 
     triangleAreaBase.value = "";// the base value of the triangle resets 
     triangleAreaHeight.value = "";// the height value of the triangle resets 
+    triangleAreaResult.textContent = "";// the result line rests 
 })
 
 trianglePerimeterBackButton.addEventListener("click", function() {
@@ -268,6 +285,8 @@ trianglePerimeterBackButton.addEventListener("click", function() {
     trianglePerimeterSideA.value = "";// the value resets 
     trianglePerimeterSideB.value = "";// the value rests 
     trianglePerimeterSideC.value = "";// the valuse rests 
+
+    trianglePerimeterResult.textContent = "";// the result line resets 
 })
 
 

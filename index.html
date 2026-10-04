@@ -32,7 +32,7 @@
                     <button id = "allsquarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
                     <button id = "alltriangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
                     <button id = "alltrianglePerimeterButton" class="formulaButton">TRIANGLE PERIMETER</button>
-                    <button class="formulaButton">CIRCLE AREA</button>
+                    <button id = "allcircleAreaButton" class="formulaButton">CIRCLE AREA</button>
                     <button class="formulaButton">CIRCLE CIRCUMFERENCE</button>
                     <button class="formulaButton">TRAPEZOID AREA</button>
                     <button class="formulaButton">PARALLELOGRAM AREA</button>
@@ -78,7 +78,7 @@
                 <button id = "squarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
                 <button id = "triangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
                 <button id = "trianglePerimeterButton"class="formulaButton">TRIANGLE PERIMETER</button>
-                <button class="formulaButton">CIRCLE AREA</button>
+                <button id = "circleAreaButton" class="formulaButton">CIRCLE AREA</button>
                 <button class="formulaButton">CIRCLE CIRCUMFERENCE</button>
                 <button class="formulaButton">TRAPEZOID AREA</button>
                 <button class="formulaButton">PARALLELOGRAM AREA</button>
@@ -195,6 +195,18 @@
                 <p id="trianglePerimeterResult"></p>
             </div>
             <button id="trianglePerimeterBackButton">BACK</button>
+         </main>
+
+         <main class = "circleAreaPage">
+            <h1>CIRCLE AREA</h1>
+            <div class = "calculatorBox">
+                <label for ="circleAreaRadius">RADIUS</label>
+                <input id="circleAreaRadius" type="number">
+
+                <button id = "calculateCircleArea">CALCULATE</button>
+                <p id="circleAreaResult"></p>
+            </div>
+            <button id="circleAreaBackButton">BACK</button>
          </main>
 
         <script src="./script.js"></script>
