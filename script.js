@@ -132,14 +132,21 @@ calculateRectangleArea.addEventListener("click", function() {// calculate putton
 });
 
 calculateRectanglePerimeter.addEventListener("click", function() {// calculate button is presses (rectangles perimeter screen )
+    if (PerimeterlengthInput.value === "" || PerimeterwidthInput.value === "" || PerimeterlengthInput.value === "0" || PerimeterwidthInput.value === "0"){// if the inputs are empty or 0
+        rectanglePerimeterResult.textContent = "ERROR!!! PLEASE ENTER 2 VALID VALUES" // this is the error message 
+        rectanglePerimeterResult.style.color = "rgb(102,21,7" // the color becomes red 
+        }
 
-    const perimeterlength = Number(PerimeterlengthInput.value);// stores the lenght of the rectangle 
+    else{// if there is a valid value in the inputs 
+        const perimeterlength = Number(PerimeterlengthInput.value);// stores the lenght of the rectangle 
 
-    const perimeterwidth = Number(PerimeterwidthInput.value);// stores the width of the rectangle 
+        const perimeterwidth = Number(PerimeterwidthInput.value);// stores the width of the rectangle 
 
-    const perimeter  = 2*(perimeterlength + perimeterwidth);// calculates the perimeter ( 2 times the lenght and width combained)
+        const perimeter  = 2*(perimeterlength + perimeterwidth);// calculates the perimeter ( 2 times the lenght and width combained)
 
-    rectanglePerimeterResult.textContent = "Perimeter = " + perimeter + " Units";// displays the perimeter of the rectangle on the screen
+        rectanglePerimeterResult.textContent = "Perimeter = " + perimeter + " Units";// displays the perimeter of the rectangle on the screen
+        rectanglePerimeterResult.style.color = "rgb(11,61,46)"// changes the color to green 
+    }
 });
 
 calculateSquareArea.addEventListener("click", function() {// calculate button is pressed on square area screen 
@@ -148,7 +155,7 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
         squareAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// ERROR MSG
         squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red 
     }
-    else{
+    else{// if there is a valid value in the input
     const DimenstionSquareArea = Number(SquareAreaDimenstion.value);// stores the Dimenstions of the square 
 
     const SquareArea  = DimenstionSquareArea * DimenstionSquareArea;// calculates the area (L x W)
