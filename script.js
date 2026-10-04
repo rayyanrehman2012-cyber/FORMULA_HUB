@@ -144,7 +144,10 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
 
 calculateSquareArea.addEventListener("click", function() {// calculate button is pressed on square area screen 
 
-
+    if (SquareAreaDimenstion.value === "" || SquareAreaDimenstion.value === "0"){// if the input is empty or 0
+        squareAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// ERROR MSG
+        squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red 
+    }
     else{
     const DimenstionSquareArea = Number(SquareAreaDimenstion.value);// stores the Dimenstions of the square 
 
