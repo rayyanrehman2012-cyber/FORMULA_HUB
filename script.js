@@ -331,6 +331,19 @@ circleAreaBackButton.addEventListener("click", function() {// if the back button
     circleAreaResult.textContent = "";// the result line resets 
 })
 
+circleCircumferenceBackButton.addEventListener("click", function() {// if the back button is presed 
+    startPage.style.display = "flex";//show the start page
+     mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+    circleAreaPage.style.display = "none";//hide
+    circleCircumferencePage.style.display = "none";//hide
+
+    circleCircumferenceDiameter.value = "";// the value of the dia restsn 
+    circleCircumferenceRadius.value = "";// the value of the radius restsn 
+    circleCircumferenceResult.textContent = "";// the result line resets 
+})
 
 
 
@@ -408,10 +421,21 @@ allcircleAreaButton.addEventListener("click", function() {// if the bitton is cl
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "flex";// show the circle are page 
-
 })
 
-
+allcircleCircumferenceButton.addEventListener("click", function() {// if the bitton is clicked 
+    startPage.style.display = "none";// hid this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// show the circle are page 
+    circleCircumferencePage.style.display = "flex";// show the circle are page 
+})
 
 
 
@@ -486,4 +510,18 @@ circleAreaButton.addEventListener("click", function() {// if the bitton is click
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "flex";// show the circle are page 
 
+})
+
+circleCircumferenceButton.addEventListener("click", function() {// if the bitton is clicked 
+    startPage.style.display = "none";// hid this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// show the circle are page 
+    circleCircumferencePage.style.display = "flex";// show the circle are page 
 })
