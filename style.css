@@ -412,15 +412,6 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
 .rectanglePerimeterPage {
     min-height:100vh;
     display:none;
@@ -449,37 +440,6 @@ p {
     font-family: 'Baloo 2', sans-serif;
 }
 
-.calculatorBox {
-    display: flex;
-    flex-direction:column;
-    border:none;
-    align-items:center;
-    width:600px;
-    height:270px;
-    padding:35px;
-    border-radius:25px;
-    background: rgba(247, 249, 248, 0.163);
-    box-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
-}
-
-
-.calculatorBox label {
-    color: rgb(11,61,46);
-    font-size:22px;
-    font-weight:800;
-    margin-bottom:8px;
-}
-
-.calculatorBox input {
-    width:250px;
-    height:40px;
-    border: 3px solid rgb(11,61,46);
-    border-radius: 10px;
-    font-family:'baloo 2', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 .calculatorBox input:focus {
     outline: none;
