@@ -148,6 +148,12 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 })
 
 
+
+
+
+
+
+
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
@@ -164,6 +170,11 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
+
+
+
+
+
 
 
 
@@ -228,6 +239,18 @@ squarePerimeterBackButton.addEventListener("click", function() {// back button o
     squarePerimeterResult.textContent = ""; // removes the line of text 
 })
 
+triangleAreaBackButton.addEventListener("click", function() {// if the triangle area back button is pressed what tot do 
+    startPage.style.display = "flex"; // show the start page 
+    mathFormulaPage.style.display = "none";// hides tis screen 
+    formulaPage.style.display = "none";//hides this servfec 
+    squarePerimeterPage.style.display = "none";// hiedes this screen 
+
+    triangleAreaBase.value = "";// the base value of the triangle resets 
+    triangleAreaHeight.value = "";// the height value of the triangle resets 
+})
+
+
+
 
 
 
@@ -268,17 +291,24 @@ allsquarePerimeterButton.addEventListener("click", function() {// what to do if 
     squarePerimeterPage.style.display = "flex";// shows the perimeter pages 
 })
 
+alltriangleAreaButton.addEventListener("click", function() {
+    startPage.style.display = "none";// hied this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
+    triangleAreaPage.style.display = "flex";// shows this age 
+
+})
 
 
 
-// TTHIS IS WHERE ALL OF THE BUTTONS ARE AND WHERE ALL OF THE NAVIGATION IS HAPPENING (YOU TEL WHAT TO SHOW WHEN A BUTTON IS CLICKED)
 
 
 
-
-
-
-
+//THESE ARE ALL OF THE BUTONS ON THE MATH FORMULA PAGE
 rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
@@ -311,4 +341,16 @@ squareAreaButton.addEventListener("click", function() {// takes you tot he squar
     rectangleAreaPage.style.display = "none"// dont show the rectangle are page 
     rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
 });
+
+triangleAreaButton.addEventListener("click", function() {
+    startPage.style.display = "none";// hied this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
+    triangleAreaPage.style.display = "flex";// shows this age 
+
+})
 
