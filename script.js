@@ -91,15 +91,19 @@ rectangleAreaBackButton.addEventListener("click", function() {
     startPage.style.display = "flex";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
     formulaPage.style.display = "none";// the formula page dissapears 
-    rectangleAreaPage.style.display = "none"// the rectangle area screen is visible 
+    rectangleAreaPage.style.display = "none"// the rectangle area screen is visible
+    
+    lengthInput.value = "";// rests the inpus value 
+    widthInput.value = "";// restes the input value 
+    rectangleAreaResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
 
 });
 
 calculateRectangleArea.addEventListener("click", function() {
-    const lenght = Number(lengthInput.value);// stores the lenght 
+    const length = Number(lengthInput.value);// stores the lenght 
     const width = Number(widthInput.value);// stores the width 
 
-    const area  = lenght*width;// calculates the area 
+    const area  = length*width;// calculates the area 
 
     rectangleAreaResult.textContent = "Area = " + area + " Units Squared";// displays the area 
 });
