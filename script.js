@@ -20,7 +20,7 @@ const circleAreaBackButton = document.getElementById("circleAreaBackButton");// 
 const circleCircumferenceBackButton = document.getElementById("circleCircumferenceBackButton");// this is the back button on the circumference pages 
 const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton");// the back button o the trapezoid page 
 const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralPerimeterBackButton");// the quadrilateral perimeterbutton 
-
+const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
 
 
 
@@ -37,9 +37,9 @@ const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is 
 const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");//this is the triangle perimeter page 
 const circleAreaPage = document.querySelector(".circleAreaPage");// thsis is the circle are pages 
 const circleCircumferencePage = document.querySelector(".circleCircumferencePage");// thi is the circumperance page 
-const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage")// this is the trapizode page
-const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage")// this is the cuadrilatral perimeter page 
-
+const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage");// this is the trapizode page
+const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage");// this is the cuadrilatral perimeter page 
+const parallelogramAreaPage = document.querySelector("parallelogramAreaPage");//  this sis the parallelogram page 
 
 
 
@@ -53,9 +53,9 @@ const alltriangleAreaButton = document.getElementById("alltriangleAreaButton");/
 const alltrianglePerimeterButton = document.getElementById("alltrianglePerimeterButton");// this is the triangle perimeter button on the all formula page 
 const allcircleAreaButton = document.getElementById("allcircleAreaButton");// this is the circle area button 
 const allcircleCircumferenceButton = document.getElementById("allcircleCircumferenceButton");// the circumference button on the formula screent 
-const alltrapezoidAreaButton = document.getElementById("alltrapezoidAreaButton")// the trapizode are page 
-const allquadrilateralPerimeterButton = document.getElementById("allquadrilateralPerimeterButton")// button on main formula pge 
-
+const alltrapezoidAreaButton = document.getElementById("alltrapezoidAreaButton");// the trapizode are page 
+const allquadrilateralPerimeterButton = document.getElementById("allquadrilateralPerimeterButton");// button on main formula pge 
+const allparallelogramAreaButton = document.getElementById("allparallelogramAreaButton");// button fon all formula page 
 
 
 
@@ -71,6 +71,7 @@ const circleAreaButton = document.getElementById("circleAreaButton");// this is 
 const circleCircumferenceButton = document.getElementById("circleCircumferenceButton");// the circumference button on the formula screent 
 const trapezoidAreaButton = document.getElementById("trapezoidAreaButton")// the trapizode are page 
 const quadrilateralPerimeterButton = document.getElementById("quadrilateralPerimeterButton")// buton on math bage 
+const parallelogramAreaButton = document.getElementById("parallelogramAreaButton");// button fon all formula page 
 
 
 
@@ -158,7 +159,8 @@ const calculateQuadrilateralPerimeter = document.getElementById("calculateQuadri
 const quadrilateralPerimeterResult = document.getElementById("quadrilateralPerimeterResult");// result line 
 
 
-
+//THES ARE FOR THE PERALLELOGRAM ARE CALCULATOR
+const parallelogramBase = document.getElementById("parallelogramBase")// base of the parallelograph
 
 
 

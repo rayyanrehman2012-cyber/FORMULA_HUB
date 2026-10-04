@@ -36,7 +36,7 @@
                     <button id = "allcircleCircumferenceButton" class="formulaButton">CIRCLE CIRCUMFERENCE</button>
                     <button id = "alltrapezoidAreaButton"class="formulaButton">TRAPEZOID AREA</button>
                     <button id = "allquadrilateralPerimeterButton" class="formulaButton">QUADRILATERAL PERIMETER</button>
-                    <button class="formulaButton">PARALLELOGRAM AREA</button>
+                    <button id = "allparallelogramAreaButton" class="formulaButton">PARALLELOGRAM AREA</button>
                     <button class="formulaButton">SLOPE</button>
                     <button class="formulaButton">DISTANCE FORMULA</button>
                     <button class="formulaButton">MIDPOINT FORMULA</button>
@@ -83,7 +83,7 @@
                 <button id = "circleCircumferenceButton" class="formulaButton">CIRCLE CIRCUMFERENCE</button>
                 <button id = "trapezoidAreaButton" class="formulaButton">TRAPEZOID AREA</button>
                 <button id = "quadrilateralPerimeterButton" class="formulaButton">QUADRILATERAL PERIMETER</button>
-                <button class="formulaButton">PARALLELOGRAM AREA</button>
+                <button id = "parallelogramAreaButton"  class="formulaButton">PARALLELOGRAM AREA</button>
                 <button class="formulaButton">SLOPE</button>
                 <button class="formulaButton">DISTANCE FORMULA</button>
                 <button class="formulaButton">MIDPOINT FORMULA</button>
@@ -264,6 +264,22 @@
                 <p id="quadrilateralPerimeterResult"></p>
             </div>
             <button id="quadrilateralPerimeterBackButton">BACK</button>
+         </main>
+
+         <main class = "parallelogramAreaPage">
+            <h1>PARALLELOGRAM AREA</h1>
+            <div class = "calculatorBox">
+                <label for = "parallelogramBase">BASE</label>
+                <input id = "parallelogramBase" type="number">
+
+                <label for = "parallelogramHeight">HEIGHT</label>
+                <input id = "parallelogramHeight" type="number">
+
+                <button id = "calculateParallelogramArea">CALCULATE</button>
+                <p id="parallelogramAreaResult"></p>
+            </div>
+            <button id="parallelogramAreaBackButton">BACK</button>
+
          </main>
 
         <script src="./script.js"></script>
