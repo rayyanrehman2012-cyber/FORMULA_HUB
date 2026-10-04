@@ -291,8 +291,23 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
 });
 
 calculateTrapezoidArea.addEventListener ("click", function() {// when u click calculate area for trapizoid 
+    
+    if (trapezoidAreaBaseA.value === ""||trapezoidAreaBaseA.value === "0"|| trapezoidAreaBaseB.value === ""||trapezoidAreaBaseB.value === "0"|| trapezoidAreaHeight.value === ""|| trapezoidAreaHeight.value === "0"){
+        trapezoidAreaResult.textContent = "ERROR!!! PLEASE ENTER 3 VALID VALUES"// error message 
+        trapezoidAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
+    }
 
+    else { 
+        const trapezoidBase1 = Number(trapezoidAreaBaseA.value);// stores the base 1 of the circle 
+        const trapezoidBase2 = Number(trapezoidAreaBaseB.value);// stores the base 2 of the circle 
+        const trapezoidHeight = Number(trapezoidAreaHeight.value);// stores the height of the trap 
 
+        const trapezoidArea = (((trapezoidBase1 + trapezoidBase2 ) /2 ) * trapezoidHeight) // base1 plus base 2 /2 times height
+
+        trapezoidAreaResult.textContent = "Area = " + trapezoidArea + " Units Squared"// what to display
+        trapezoidAreaResult.style.color = "rgb(11,61,46)"// change the color to green 
+
+    }
 })
 
 
@@ -435,6 +450,22 @@ circleCircumferenceBackButton.addEventListener("click", function() {// if the ba
     circleCircumferenceResult.textContent = "";// the result line resets 
 });
 
+trapezoidAreaBackButton.addEventListener("click", function(){// if the back button is pressed 
+    startPage.style.display = "flex";//show the start page
+     mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+    circleAreaPage.style.display = "none";//hide
+    circleCircumferencePage.style.display = "none";//hide
+    trapezoidAreaPage.style.display = "none"//hide
+
+    trapezoidAreaBaseA.value = "";//restes value 
+    trapezoidAreaBaseB.value = "";//restes value 
+    trapezoidAreaHeight.value = "";//restes value //restes value 
+    trapezoidAreaResult.textContent = "";// removes the text
+
+})
 
 
 
@@ -527,6 +558,21 @@ allcircleCircumferenceButton.addEventListener("click", function() {// if the bit
     circleCircumferencePage.style.display = "flex";// show the circle are page 
 })
 
+alltrapezoidAreaButton.addEventListener("click", function() {// if the button is clicked 
+    startPage.style.display = "none";// hid this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// show the circle are page 
+    circleCircumferencePage.style.display = "none";// show the circle are page
+    trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
+})
+
 
 
 
@@ -614,4 +660,19 @@ circleCircumferenceButton.addEventListener("click", function() {// if the bitton
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "flex";// show the circle are page 
+})
+
+trapezoidAreaButton.addEventListener("click", function() {// if the button is clicked 
+    startPage.style.display = "none";// hid this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// show the circle are page 
+    circleCircumferencePage.style.display = "none";// show the circle are page
+    trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
 })

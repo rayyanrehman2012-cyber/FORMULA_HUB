@@ -8,7 +8,8 @@
 .triangleAreaPage,
 .trianglePerimeterPage,
 .circleAreaPage,
-.circleCircumferencePage {
+.circleCircumferencePage,
+.trapezoidAreaPage {
     display: none;
 }
 
