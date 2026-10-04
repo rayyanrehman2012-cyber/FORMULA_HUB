@@ -16,6 +16,20 @@ const allrectangleAreaButton = document.getElementById("allrectangleAreaButton")
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
 const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton")// this is the back button on the physics page 
 
+// for  rectangle area calculator 
+const lengthInput = document.getElementById("length"); // you length input 
+const widthInput = document.getElementById("width");// your width input 
+const calculateRectangleArea = document.getElementById("calculateRectangleArea");// the calculate button 
+const rectangleAreaResult = document.getElementById("rectangleAreaResult");// the line that gives u the answer
+
+
+
+
+
+
+
+
+
 
 
 // making the buttons work
@@ -79,5 +93,14 @@ rectangleAreaBackButton.addEventListener("click", function() {
     formulaPage.style.display = "none";// the formula page dissapears 
     rectangleAreaPage.style.display = "none"// the rectangle area screen is visible 
 
+});
+
+calculateRectangleArea.addEventListener("click", function() {
+    const lenght = Number(lengthInput.value);// stores the lenght 
+    const width = Number(widthInput.value);// stores the width 
+
+    const area  = lenght*width;// calculates the area 
+
+    rectangleAreaResult.textContent = "Area = " + area + " Units Squared";// displays the area 
 });
 
