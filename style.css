@@ -410,28 +410,26 @@ p {
 }
 
 
-
-
-.rectanglePerimeterPage {
+.squareAreaPage{
     min-height:100vh;
     display:none;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
-    position: relative;
+    position:relative
 }
 
-.rectanglePerimeterPage::before{
-    content:"";
+
+.squareAreaPage::before{
+    content: "";
     position:absolute;
     inset: 12px;
     min-height: calc(100% - 24px);
     border: 8px solid rgb(255,255,255);
     border-radius: 35px 60px 45px 70px;
     pointer-events:none;
-
 }
 
-.rectanglePerimeterPage h1 {
+.squareAreaPage h1 {
     margin-top:80px;
     font-size:65px;
     font-weight:800;
@@ -440,13 +438,7 @@ p {
     font-family: 'Baloo 2', sans-serif;
 }
 
-
-.calculatorBox input:focus {
-    outline: none;
-    border-color: rgb(128, 170, 144);
-}
-
-#rectanglePerimeterBackButton {
+#squareAreaBackButton {
     border:none;
     border-radius:15px;
     background:rgb(247, 249, 248);
@@ -465,20 +457,22 @@ p {
     transition: 0.2s ease;
 }
 
-#rectanglePerimeterBackButton:hover {
+#squareAreaBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
 
-#rectanglePerimeterResult {
+
+
+#squareAreaResult {
     color: rgb(11,61,46);
     font-size:24px;
     font-weight:800;
     margin:15px 0 0;
 }
 
-#calculateRectanglePerimeter {
+#calculateSquareArea {
     border: none;
     border-radius:15px;
     background: rgb(11,61,46);
@@ -494,7 +488,7 @@ p {
     margin-top:5px;
 }
 
-#calculateRectanglePerimeter:hover {
+#calculateSquareArea:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);

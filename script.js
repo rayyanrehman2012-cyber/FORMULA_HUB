@@ -22,6 +22,12 @@ const allrectanglePerimeterButton = document.getElementById("allrectanglePerimet
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
 const rectanglePerimeterBackButton = document.getElementById("rectanglePerimeterBackButton")// this is the
 
+const squareAreaPage = document.querySelector(".squareAreaPage");// this is the rectangles area page 
+const allsquareAreaButton = document.getElementById("allsquareAreaButton");// this is the rectangle area formula button all formula page
+const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
+const squareAreaBackButton = document.getElementById("squareAreaBackButton")// this is the back button on the physics page 
+
+
 // for  rectangle area calculator 
 const lengthInput = document.getElementById("length"); // you length input 
 const widthInput = document.getElementById("width");// your width input 
@@ -36,7 +42,10 @@ const PerimeterwidthInput = document.getElementById("Perimeterwidth");// your wi
 const calculateRectanglePerimeter = document.getElementById("calculateRectanglePerimeter");// the calculate button 
 const rectanglePerimeterResult = document.getElementById("rectanglePerimeterResult");// the line that gives u the answer
 
-
+// for  square area calculator 
+const SquareAreaDimenstion = document.getElementById("SquareAreaDimenstion"); // you dimentsion input 
+const calculateSquareArea = document.getElementById("calculateSquareArea");// the calculate button 
+const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
 
 
 
@@ -67,7 +76,14 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate p
 });
 
 
+calculateSquareArea.addEventListener("click", function() {// calculate putton is pressed on area square screen 
 
+    const DimenstionSquareArea = Number(SquareAreaDimenstion.value);// stores the Dimenstion 
+
+    const SquareArea  = DimenstionSquareArea * DimenstionSquareArea;// calculates the area 
+
+    squareAreaResult.textContent = "Area = " + SquareArea + " Units Squared";// displays the area 
+});
 
 
 
@@ -161,7 +177,6 @@ rectangleAreaBackButton.addEventListener("click", function() { // area bck butto
 
 });
 
-
 rectanglePerimeterBackButton.addEventListener("click", function() {// back button rectangle perimiter pages 
 
     startPage.style.display = "flex";// the start page is not visibe
@@ -172,5 +187,31 @@ rectanglePerimeterBackButton.addEventListener("click", function() {// back butto
     PerimeterlengthInput.value = "";// rests the inpus value 
     PerimeterwidthInput.value = "";// restes the input value 
     rectanglePerimeterResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
+
+});
+
+allsquareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    squareAreaPage.style.display = "flex"// the square area screen is visible 
+
+});
+
+squareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
+    startPage.style.display = "none";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    squareAreaPage.style.display = "flex"// the square area screen is visible
+});
+
+squareAreaBackButton.addEventListener("click", function() { // area bck button rectangle
+    startPage.style.display = "flex";// the start page is not visibe
+    mathFormulaPage.style.display = "none";// the math formula page dissapears 
+    formulaPage.style.display = "none";// the formula page dissapears 
+    squareAreaPage.style.display = "none"// the rectangle area screen is visible
+    
+   SquareAreaDimenstion.value = "";// rests the inpus value 
+   squareAreaResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
 
 });
