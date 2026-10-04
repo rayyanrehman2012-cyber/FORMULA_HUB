@@ -867,5 +867,8 @@ p {
 }
 
 .trianglePerimeterPage .calculatorBox {
-    height: 290px;
+    top: 10px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }

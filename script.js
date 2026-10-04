@@ -28,7 +28,7 @@ const mathFormulaPage = document.querySelector(".mathFormulaPage"); // the formu
 const formulaPage = document.querySelector(".formulaPage");// formula page 
 const startPage = document.querySelector(".StartPage");// starting page 
 const triangleAreaPage = document.querySelector(".triangleAreaPage");// this is the  triangles area calculator page 
-const trianglePerimeterPage = document.querySelector("trianglePerimeterPage");//this is the triangle perimeter page 
+const trianglePerimeterPage = document.querySelector(".trianglePerimeterPage");//this is the triangle perimeter page 
 
 
 
@@ -333,9 +333,6 @@ alltrianglePerimeterButton.addEventListener("click", function() {
     triangleAreaPage.style.display = "none";// shows this age 
     trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
 })
-
-
-
 
 
 
