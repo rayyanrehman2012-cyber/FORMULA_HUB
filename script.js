@@ -21,6 +21,8 @@ const circleCircumferenceBackButton = document.getElementById("circleCircumferen
 const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton");// the back button o the trapezoid page 
 const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralPerimeterBackButton");// the quadrilateral perimeterbutton 
 const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
+const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
+
 
 
 
@@ -40,7 +42,7 @@ const circleCircumferencePage = document.querySelector(".circleCircumferencePage
 const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage");// this is the trapizode page
 const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage");// this is the cuadrilatral perimeter page 
 const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");//  this sis the parallelogram page 
-
+const slopePage = document.querySelector("slopePage");// this is the slope page 
 
 
 
@@ -56,7 +58,7 @@ const allcircleCircumferenceButton = document.getElementById("allcircleCircumfer
 const alltrapezoidAreaButton = document.getElementById("alltrapezoidAreaButton");// the trapizode are page 
 const allquadrilateralPerimeterButton = document.getElementById("allquadrilateralPerimeterButton");// button on main formula pge 
 const allparallelogramAreaButton = document.getElementById("allparallelogramAreaButton");// button fon all formula page 
-
+const allslopeButton = document.getElementById("allslopeButton")// slope calculator  button on all formula pages 
 
 
 
@@ -72,6 +74,7 @@ const circleCircumferenceButton = document.getElementById("circleCircumferenceBu
 const trapezoidAreaButton = document.getElementById("trapezoidAreaButton")// the trapizode are page 
 const quadrilateralPerimeterButton = document.getElementById("quadrilateralPerimeterButton")// buton on math bage 
 const parallelogramAreaButton = document.getElementById("parallelogramAreaButton");// button fon all formula page 
+const slopeButton = document.getElementById("slopeButton")// slope calculator  button on all formula pages 
 
 
 
@@ -166,7 +169,13 @@ const calculateParallelogramArea = document.getElementById("calculateParallelogr
 const parallelogramAreaResult = document.getElementById("parallelogramAreaResult");// the calculating result 
 
 
-
+//THESE ARE FOR THE SLOPE CALCULATOR 
+const slopeY1 = document.getElementsById("slopeY1"); // y value of the 1 cordinate 
+const slopeY2 = document.getElementsById("slopeY2"); // y value of the 2 cordinate 
+const slopeX1 = document.getElementsById("slopeX1"); // x value of the 1 cordinate 
+const slopeX2 = document.getElementsById("slopeX2"); // x value of the 2 cordinate 
+const caluclateSlope = document.getElementById("caluclateSlope");; //calculate button 
+const slopeResult = document.getElementById("slopeResult");; //result
 
 
 
@@ -399,7 +408,28 @@ calculateParallelogramArea.addEventListener ("click", function () {
     }
 })
 
+caluclateSlope.addEventListener ("click", function () { // if the calculate slipe button is pressed 
 
+    if (slopeY1.value === "" || slopeY1.value === "0" || slopeY2.value === "" || slopeY2.value === "0" || slopeX1.value === "" || slopeX1.value === "0" || slopeX2.value === "" || slopeX2.value === "0"){
+       slopeResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
+        slopeResult.style.color = "rgb(102,21,7)"// change the color to green
+    }
+
+    else {// if the values are propper 
+    const slopey1 = Number(slopeY1.value);// slope y 1
+    const slopey2 = Number(slopeY2.value);// slope y 2
+    const slopex1 = Number(slopeX1.value);// slope x 1
+    const slopex2 = Number(slopeX2.value);// slope x 2
+
+    const rise = slopey2 - slopey1; // calculates the change in y
+    const run = slopex2 - slopex1; // calculates the change in x
+
+
+    slopeResult.textContent = " Slope = " + rise + " /" + run; // this is the line that will be shown 
+    slopeResult.style.color = "rgb(11,61,46)"// change the color to green
+    }
+
+})
 
 
 
@@ -603,6 +633,26 @@ parallelogramAreaBackButton.addEventListener("click", function() {// back button
     parallelogramAreaResult.textContent = "";// removes everything 
 });
 
+slopeBackButton.addEventListener("click", function() { // this is the slope back button 
+    startPage.style.display = "flex";//show the start page
+    mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+    circleAreaPage.style.display = "none";//hide
+    circleCircumferencePage.style.display = "none";//hide
+    trapezoidAreaPage.style.display = "none";//hide
+    quadrilateralPerimeterPage.style.display = "none";// hide tis bage
+    parallelogramAreaPage.style.display = "none";//hides this
+    slopePage.style.display = "none";// hieds this pages 
+
+
+    slopeX1.value = ""; //resetn everything 
+    slopeX2.value = ""; //resetn everything 
+    slopeY1.value = ""; //resetn everything 
+    slopeY2.value = ""; //resetn everything 
+    slopeResult.textContent = "";// removes everything 
+});
 
 
 
