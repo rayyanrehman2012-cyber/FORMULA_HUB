@@ -39,7 +39,7 @@ const circleAreaPage = document.querySelector(".circleAreaPage");// thsis is the
 const circleCircumferencePage = document.querySelector(".circleCircumferencePage");// thi is the circumperance page 
 const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage");// this is the trapizode page
 const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage");// this is the cuadrilatral perimeter page 
-const parallelogramAreaPage = document.querySelector("parallelogramAreaPage");//  this sis the parallelogram page 
+const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");//  this sis the parallelogram page 
 
 
 
@@ -163,7 +163,18 @@ const quadrilateralPerimeterResult = document.getElementById("quadrilateralPerim
 const parallelogramBase = document.getElementById("parallelogramBase");// base of the parallelograph
 const parallelogramHeight = document.getElementById("parallelogramHeight");// height of the parallelopgram 
 const calculateParallelogramArea = document.getElementById("calculateParallelogramArea");// the calculate button 
-const parallelogramAreaResult = document.getElementById("calculateParallelogramArea");// the calculating result 
+const parallelogramAreaResult = document.getElementById("parallelogramAreaResult");// the calculating result 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -393,6 +404,13 @@ calculateParallelogramArea.addEventListentener ("click", function () {
 
 
 
+
+
+
+
+
+
+
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
@@ -409,6 +427,11 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
+
+
+
+
+
 
 
 
@@ -544,7 +567,7 @@ trapezoidAreaBackButton.addEventListener("click", function(){// if the back butt
     trapezoidAreaHeight.value = "";//restes value //restes value 
     trapezoidAreaResult.textContent = "";// removes the text
 
-})
+});
 quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the button is pressed
     startPage.style.display = "flex";//show the start page
     mathFormulaPage.style.display = "none";//hide 
@@ -561,7 +584,7 @@ quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the
     quadSideC.value = "";// rests the value 
     quadSideD.value = "";// rests the value 
     quadrilateralPerimeterResult.textContent = "";// resets the text 
-})
+});
 parallelogramAreaBackButton.addEventListener("click", function() {// back button on the parallelogram screent 
     startPage.style.display = "flex";//show the start page
     mathFormulaPage.style.display = "none";//hide 
@@ -578,7 +601,16 @@ parallelogramAreaBackButton.addEventListener("click", function() {// back button
     parallelogramBase.value = ""; //resetn everything 
     parallelogramHeight.value = ""; //resetn everything 
     parallelogramAreaResult.textContent = "";// removes everything 
-})
+});
+
+
+
+
+
+
+
+
+
 
 
 
@@ -616,7 +648,7 @@ allsquarePerimeterButton.addEventListener("click", function() {// what to do if 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
     squarePerimeterPage.style.display = "flex";// shows the perimeter pages 
-})
+});
 
 alltriangleAreaButton.addEventListener("click", function() {/// triangle are button 
     startPage.style.display = "none";// hied this page 
@@ -628,7 +660,7 @@ alltriangleAreaButton.addEventListener("click", function() {/// triangle are but
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "flex";// shows this age 
 
-})
+});
 
 alltrianglePerimeterButton.addEventListener("click", function() {// if the button is clicked then 
     startPage.style.display = "none";// hid this page 
@@ -640,7 +672,7 @@ alltrianglePerimeterButton.addEventListener("click", function() {// if the butto
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "none";// shows this age 
     trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
-})
+});
 
 allcircleAreaButton.addEventListener("click", function() {// if the bitton is clicked 
     startPage.style.display = "none";// hid this page 
@@ -653,7 +685,7 @@ allcircleAreaButton.addEventListener("click", function() {// if the bitton is cl
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "flex";// show the circle are page 
-})
+});
 
 allcircleCircumferenceButton.addEventListener("click", function() {// if the bitton is clicked 
     startPage.style.display = "none";// hid this page 
@@ -667,7 +699,7 @@ allcircleCircumferenceButton.addEventListener("click", function() {// if the bit
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "flex";// show the circle are page 
-})
+});
 
 alltrapezoidAreaButton.addEventListener("click", function() {// if the button is clicked 
     startPage.style.display = "none";// hid this page 
@@ -682,7 +714,7 @@ alltrapezoidAreaButton.addEventListener("click", function() {// if the button is
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "none";// show the circle are page
     trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
-})
+});
 
 allquadrilateralPerimeterButton.addEventListener("click", function() {// if this button is presed
     startPage.style.display = "none"; // hides the pages 
@@ -697,10 +729,37 @@ allquadrilateralPerimeterButton.addEventListener("click", function() {// if this
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "none";// show the circle are page
     trapezoidAreaPage.style.display = "none";// show the  trapizode page
-    quadrilateralPerimeterPage.style.display = "flex";
-})
+    quadrilateralPerimeterPage.style.display = "flex";//shows the pages 
+});
 
-allparallelogramAreaButton
+allparallelogramAreaButton.addEventListener("Click", function(){// the parallelogram area button 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "flex";// shows this page 
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -739,7 +798,7 @@ squareAreaButton.addEventListener("click", function() {// takes you tot he squar
     rectanglePerimeterPage.style.display = "none"// dont show the perimiter page 
 });
 
-triangleAreaButton.addEventListener("click", function() {
+triangleAreaButton.addEventListener("click", function() {// the triangle area button 
     startPage.style.display = "none";// hied this page 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -751,7 +810,7 @@ triangleAreaButton.addEventListener("click", function() {
 
 })
 
-trianglePerimeterButton.addEventListener("click", function() {
+trianglePerimeterButton.addEventListener("click", function() {// the triangle perameter button 
     startPage.style.display = "none";
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -821,3 +880,20 @@ quadrilateralPerimeterButton.addEventListener("click", function() {// if this bu
     trapezoidAreaPage.style.display = "none";// show the  trapizode page
     quadrilateralPerimeterPage.style.display = "flex";
 })
+
+parallelogramAreaButton.addEventListener("Click", function(){// the parallelogram button 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "flex";// shows this page 
+});
