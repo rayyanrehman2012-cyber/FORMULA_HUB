@@ -160,7 +160,10 @@ const quadrilateralPerimeterResult = document.getElementById("quadrilateralPerim
 
 
 //THES ARE FOR THE PERALLELOGRAM ARE CALCULATOR
-const parallelogramBase = document.getElementById("parallelogramBase")// base of the parallelograph
+const parallelogramBase = document.getElementById("parallelogramBase");// base of the parallelograph
+const parallelogramHeight = document.getElementById("parallelogramHeight");// height of the parallelopgram 
+const calculateParallelogramArea = document.getElementById("calculateParallelogramArea");// the calculate button 
+const parallelogramAreaResult = document.getElementById("calculateParallelogramArea");// the calculating result 
 
 
 
@@ -367,6 +370,25 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
     }
 })
 
+calculateParallelogramArea.addEventListentener ("click", function () {
+
+    if (parallelogramBase.value === "" || parallelogramBase.value === "0" || parallelogramHeight.value === "" || parallelogramHeight.value === "0"){
+        parallelogramAreaResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // the error mesages
+        parallelogramAreaResult.style.color = "rgb(102,21,7)"// change the color to green
+    }
+
+    else {// if the values are propper 
+    const Base = Number(parallelogramBase.value);// base of the paralelogram 
+    const Height = Number(parallelogramHeight.value);// height of the paralelogram 
+
+    const parallelogramArea = Base * Height // calculates and stores the value of the area 
+
+    parallelogramAreaResult.textContent = " Area = " + parallelogramArea + " Units Squared"; // this is the line that will be shown 
+    parallelogramAreaResult.style.color = "rgb(11,61,46)"// change the color to green
+    }
+})
+
+
 
 
 
@@ -540,7 +562,23 @@ quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the
     quadSideD.value = "";// rests the value 
     quadrilateralPerimeterResult.textContent = "";// resets the text 
 })
+parallelogramAreaBackButton.addEventListener("click", function() {// back button on the parallelogram screent 
+    startPage.style.display = "flex";//show the start page
+    mathFormulaPage.style.display = "none";//hide 
+    formulaPage.style.display = "none";//hide
+    squarePerimeterPage.style.display = "none";//hid 
+    trianglePerimeterPage.style.display = "none";//hid 
+    circleAreaPage.style.display = "none";//hide
+    circleCircumferencePage.style.display = "none";//hide
+    trapezoidAreaPage.style.display = "none";//hide
+    quadrilateralPerimeterPage.style.display = "none";// hide tis bage
+    parallelogramAreaPage.style.display = "none";//hides this 
 
+
+    parallelogramBase.value = ""; //resetn everything 
+    parallelogramHeight.value = ""; //resetn everything 
+    parallelogramAreaResult.textContent = "";// removes everything 
+})
 
 
 
@@ -662,7 +700,7 @@ allquadrilateralPerimeterButton.addEventListener("click", function() {// if this
     quadrilateralPerimeterPage.style.display = "flex";
 })
 
-
+allparallelogramAreaButton
 
 
 
