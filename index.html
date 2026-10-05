@@ -37,7 +37,7 @@
                     <button id = "alltrapezoidAreaButton"class="formulaButton">TRAPEZOID AREA</button>
                     <button id = "allquadrilateralPerimeterButton" class="formulaButton">QUADRILATERAL PERIMETER</button>
                     <button id = "allparallelogramAreaButton" class="formulaButton">PARALLELOGRAM AREA</button>
-                    <button class="formulaButton">SLOPE</button>
+                    <button id = "allslopeButton" class="formulaButton">SLOPE</button>
                     <button class="formulaButton">DISTANCE FORMULA</button>
                     <button class="formulaButton">MIDPOINT FORMULA</button>
                     <button class="formulaButton">PYTHAGOREAN THEOREM</button>
@@ -84,7 +84,7 @@
                 <button id = "trapezoidAreaButton" class="formulaButton">TRAPEZOID AREA</button>
                 <button id = "quadrilateralPerimeterButton" class="formulaButton">QUADRILATERAL PERIMETER</button>
                 <button id = "parallelogramAreaButton"  class="formulaButton">PARALLELOGRAM AREA</button>
-                <button class="formulaButton">SLOPE</button>
+                <button id = "slopeButton" class="formulaButton">SLOPE</button>
                 <button class="formulaButton">DISTANCE FORMULA</button>
                 <button class="formulaButton">MIDPOINT FORMULA</button>
                 <button class="formulaButton">PYTHAGOREAN THEOREM</button>
@@ -280,6 +280,28 @@
             </div>
             <button id="parallelogramAreaBackButton">BACK</button>
 
+         </main>
+
+         <main class = "slopePage"> 
+            <h1>SLOPE CALCULATOR</h1>
+            <div class = "calculatorBox">
+                <label for = "slopeY1"> Y1</label>
+                <input id = "slopeY1" type = "number">
+
+                <label for = "slopeY2"> Y2</label>
+                <input id = "slopeY2" type = "number">
+
+                <label for = "slopeX1"> X1</label>
+                <input id = "slopeX1" type = "number">
+
+                <label for = "slopeX2"> X2</label>
+                <input id = "slopeX2" type = "number">
+
+                <button id = "caluclateSlope">CALCULATE</button>
+                <p id = "slopeResult"></p>
+
+            </div>
+            <button id = "SlopeBackButton">BACK</button>
          </main>
 
         <script src="./script.js"></script>
