@@ -24,9 +24,19 @@ The website starts of on the front page. The front page contains a short descrip
 -  made sure all values reset in the calculators 
 - made all the buttons have hover effect so that they look nice and weel designed 
 -  made the calculator screens look good so that they look like a part of the website 
+- made the triangle area page  
+- made the triangle perimeter page  
+- made the circle area page  
+- made the circle circumference page  
+- made the tramezoid  area page  
+- made the paralelogram area page  
+- made the quadlateral page 
+- made the slope page 
+- made the error signs, so that if the values are missing or are 0 then an arror shows up 
 
 
-@ZAYAN - ADD WHAT EVER YOU DO HERE SO THAT THEY KNOW
+
+
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 2)
 - sound effects when you click on buttons so that it feels premium ish 
