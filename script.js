@@ -42,7 +42,7 @@ const circleCircumferencePage = document.querySelector(".circleCircumferencePage
 const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage");// this is the trapizode page
 const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage");// this is the cuadrilatral perimeter page 
 const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");//  this sis the parallelogram page 
-const slopePage = document.querySelector("slopePage");// this is the slope page 
+const slopePage = document.querySelector(".slopePage");// this is the slope page 
 
 
 
@@ -170,10 +170,10 @@ const parallelogramAreaResult = document.getElementById("parallelogramAreaResult
 
 
 //THESE ARE FOR THE SLOPE CALCULATOR 
-const slopeY1 = document.getElementsById("slopeY1"); // y value of the 1 cordinate 
-const slopeY2 = document.getElementsById("slopeY2"); // y value of the 2 cordinate 
-const slopeX1 = document.getElementsById("slopeX1"); // x value of the 1 cordinate 
-const slopeX2 = document.getElementsById("slopeX2"); // x value of the 2 cordinate 
+const slopeY1 = document.getElementById("slopeY1"); // y value of the 1 cordinate 
+const slopeY2 = document.getElementById("slopeY2"); // y value of the 2 cordinate 
+const slopeX1 = document.getElementById("slopeX1"); // x value of the 1 cordinate 
+const slopeX2 = document.getElementById("slopeX2"); // x value of the 2 cordinate 
 const caluclateSlope = document.getElementById("caluclateSlope");; //calculate button 
 const slopeResult = document.getElementById("slopeResult");; //result
 
@@ -410,7 +410,7 @@ calculateParallelogramArea.addEventListener ("click", function () {
 
 caluclateSlope.addEventListener ("click", function () { // if the calculate slipe button is pressed 
 
-    if (slopeY1.value === "" || slopeY1.value === "0" || slopeY2.value === "" || slopeY2.value === "0" || slopeX1.value === "" || slopeX1.value === "0" || slopeX2.value === "" || slopeX2.value === "0"){
+    if (slopeY1.value === "" || slopeY2.value === "" ||  slopeX1.value === ""  || slopeX2.value === ""){
        slopeResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
         slopeResult.style.color = "rgb(102,21,7)"// change the color to green
     }
@@ -421,11 +421,13 @@ caluclateSlope.addEventListener ("click", function () { // if the calculate slip
     const slopex1 = Number(slopeX1.value);// slope x 1
     const slopex2 = Number(slopeX2.value);// slope x 2
 
-    const rise = slopey2 - slopey1; // calculates the change in y
-    const run = slopex2 - slopex1; // calculates the change in x
+    const rise = slopey2 - slopey1;// change in y
+    const run = slopex2 - slopex1;// chang in x 
 
+    const slope = rise / run;// the slope 
 
-    slopeResult.textContent = " Slope = " + rise + " /" + run; // this is the line that will be shown 
+    slopeResult.textContent = "Slope = " + slope;// shows the slope 
+    
     slopeResult.style.color = "rgb(11,61,46)"// change the color to green
     }
 
@@ -799,6 +801,23 @@ allparallelogramAreaButton.addEventListener("click", function(){// the parallelo
     parallelogramAreaPage.style.display = "flex";// shows this page 
 });
 
+allslopeButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "flex"; //Shoes this pages 
+})
 
 
 
@@ -947,3 +966,21 @@ parallelogramAreaButton.addEventListener("Click", function(){// the parallelogra
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "flex";// shows this page 
 });
+
+slopeButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "flex"; //Shoes this pages 
+})
