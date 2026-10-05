@@ -257,7 +257,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
 
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
     
-    if (triangleAreaHeight.value === "" || triangleAreaBase.valeu === "" || triangleAreaHeight.value === "0"|| triangleAreaBase.value === "0") {// if the height or base is empty or 0
+    if (triangleAreaHeight.value === "" || triangleAreaBase.value === "" || triangleAreaHeight.value === "0"|| triangleAreaBase.value === "0") {// if the height or base is empty or 0
         triangleAreaResult.textContent = "ERROR!!! PLEASE ENTER 2 VALID VALUES"// this is the error message 
         triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red 
     }
@@ -381,7 +381,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
     }
 })
 
-calculateParallelogramArea.addEventListentener ("click", function () {
+calculateParallelogramArea.addEventListener ("click", function () {
 
     if (parallelogramBase.value === "" || parallelogramBase.value === "0" || parallelogramHeight.value === "" || parallelogramHeight.value === "0"){
         parallelogramAreaResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // the error mesages
@@ -732,7 +732,7 @@ allquadrilateralPerimeterButton.addEventListener("click", function() {// if this
     quadrilateralPerimeterPage.style.display = "flex";//shows the pages 
 });
 
-allparallelogramAreaButton.addEventListener("Click", function(){// the parallelogram area button 
+allparallelogramAreaButton.addEventListener("click", function(){// the parallelogram area button 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
