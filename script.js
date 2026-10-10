@@ -174,7 +174,7 @@ const slopeY1 = document.getElementById("slopeY1"); // y value of the 1 cordinat
 const slopeY2 = document.getElementById("slopeY2"); // y value of the 2 cordinate 
 const slopeX1 = document.getElementById("slopeX1"); // x value of the 1 cordinate 
 const slopeX2 = document.getElementById("slopeX2"); // x value of the 2 cordinate 
-const caluclateSlope = document.getElementById("caluclateSlope");; //calculate button 
+const calculateSlope = document.getElementById("caluclateSlope");; //calculate button 
 const slopeResult = document.getElementById("slopeResult");; //result
 
 
@@ -408,7 +408,7 @@ calculateParallelogramArea.addEventListener ("click", function () {
     }
 })
 
-caluclateSlope.addEventListener ("click", function () { // if the calculate slipe button is pressed 
+calculateSlope.addEventListener ("click", function () { // if the calculate slipe button is pressed 
 
     if (slopeY1.value === "" || slopeY2.value === "" ||  slopeX1.value === ""  || slopeX2.value === ""){
        slopeResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
@@ -424,14 +424,19 @@ caluclateSlope.addEventListener ("click", function () { // if the calculate slip
     const rise = slopey2 - slopey1;// change in y
     const run = slopex2 - slopex1;// chang in x 
 
-    if (run === 0){
+    if (run === 0 && rise !== 0){// if the run is zero 
         slopeResult.textContent = "VERTICAL LINE, SLOPE IS UNDIFINED";// its a verticle line 
         slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
     }
 
-    if (rise === 0){
-        slopeResult.textContent = "HORIZONTAL LINE, SLOPE IS 0";// its a verticle line 
+    else if (rise === 0 && run !== 0){// if the rise is 0 then 
+        slopeResult.textContent = "HORIZONTAL LINE, SLOPE IS 0";// its a horizontal  line 
         slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
+    }
+
+    else if (rise === 0 && run === 0){// if bot rise and run are the same 
+        slopeResult.textContent = "YOU ENTERED THE SAME POINT TWICE!";// its the same point, no slope 
+        slopeResult.style.color = "rgb(102, 21, 7)"// changes the color to red
     }
 
     else {
@@ -448,12 +453,8 @@ caluclateSlope.addEventListener ("click", function () { // if the calculate slip
         slopeResult.style.color = "rgb(11,61,46)"// changes the color to greent 
     }
 
-    slopeResult.textContent = "Slope = " + slope;// shows the slope 
-    
-    slopeResult.style.color = "rgb(11,61,46)"// change the color to green
-    }
 
-})
+}})
 
 
 
