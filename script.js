@@ -72,9 +72,9 @@ const allparallelogramAreaButton = document.getElementById("allparallelogramArea
 const allslopeButton = document.getElementById("allslopeButton")// slope calculator  button on all formula pages 
 const alldistanceButton = document.getElementById("alldistanceButton")/// this is the distance button on the button page 
 const allmidpointButton = document.getElementById("allmidpointButton")/// this is the midpoint button on the button page
-const allpythagoreanA = document.getElementById("allpythagoreanA")// button on all formula page 
-const allpythagoreanB = document.getElementById("allpythagoreanB")// button on all formula page 
-const allpythagoreanC = document.getElementById("allpythagoreanC")// button on all formula page 
+const allpythagoreanAButton = document.getElementById("allpythagoreanAButton")// button on all formula page 
+const allpythagoreanBButton = document.getElementById("allpythagoreanBButton")// button on all formula page 
+const allpythagoreanCButton = document.getElementById("allpythagoreanCButton")// button on all formula page 
 
 
 
@@ -94,9 +94,9 @@ const parallelogramAreaButton = document.getElementById("parallelogramAreaButton
 const slopeButton = document.getElementById("slopeButton")// slope calculator  button on all formula pages 
 const distanceButton = document.getElementById("distanceButton")/// this is the distance button on the button page
 const midpointButton = document.getElementById("midpointButton")/// this is the midpoint button on the button page
-const pythagoreanA = document.getElementById("pythagoreanA")// button on all formula page 
-const pythagoreanB = document.getElementById("pythagoreanB")// button on all formula page 
-const pythagoreanC = document.getElementById("pythagoreanC")// button on all formula page 
+const pythagoreanAButton = document.getElementById("pythagoreanAButton")// button on all formula page 
+const pythagoreanBButton = document.getElementById("pythagoreanBButton")// button on all formula page 
+const pythagoreanCButton = document.getElementById("pythagoreanCButton")// button on all formula page 
 
 
 
@@ -215,7 +215,6 @@ const calculateMidpoint = document.getElementById("calculateMidpoint");// this i
 const midpointResult = document.getElementById("midpointResult");// this is the midpoint result display 
 
 
-
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE C CALCULATOR 
 const pythagoreanCA = document.getElementById("pythagoreanCA");// side a for pythagorean theorm 
 const pythagoreanCB = document.getElementById("pythagoreanCB");// side b 
@@ -223,13 +222,11 @@ const calculatePythagoreanC = document.getElementById("calculatePythagoreanC");/
 const pythagoreanCResult = document.getElementById("pythagoreanCResult");// result 
 
 
-
 // THESE ARE FOR THE PYTHAGOREAN THEOREM DIS B CALCULATOR
 const pythagoreanBA = document.getElementById("pythagoreanBA");// side a 
 const pythagoreanBC = document.getElementById("pythagoreanBC");// side C
 const calculatePythagoreanB = documentElementById("calculatePythagoreanB");// calculate button 
 const pythagoreanBResult = document.getElementById("pythagoreanBResult");// resut 
-
 
 
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE A CALCULATOR
@@ -813,8 +810,34 @@ midpointBackButton.addEventListener("click", function(){// the midpoint back put
 
     midpointResult.textContent = ""; // removes everything 
 
-})
+});
 
+pythagoreanABackButton.addEventListener("click", function(){ // back button on pythagorean therom page a
+    startPage.style.display = "flex";// shows this screen 
+    pythagoreanPageA.style.display = "none";// hides this page 
+
+    pythagoreanAB.value = "";//resets 
+    pythagoreanAC.value = "";//resets 
+    pythagoreanAResult.textContent = "";// removes everything
+});
+
+pythagoreanBBackButton.addEventListener("click", function(){ // back button on pythagorean therom page b
+    startPage.style.display = "flex";// shows this screen 
+    pythagoreanPageB.style.display = "none";// hides this page 
+
+    pythagoreanBA.value = "";//resets 
+    pythagoreanBC.value = "";//resets 
+    pythagoreanBResult.textContent = "";// removes everything
+});
+
+pythagoreanCBackButton.addEventListener("click", function(){ // back button on pythagorean therom page b
+    startPage.style.display = "flex";// shows this screen 
+    pythagoreanPageC.style.display = "none";// hides this page 
+
+    pythagoreanCA.value = "";//resets 
+    pythagoreanCB.value = "";//resets 
+    pythagoreanCResult.textContent = "";// removes everything
+});
 
 
 
@@ -972,7 +995,7 @@ allslopeButton.addEventListener("click", function() {// the slopw buton on the f
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "flex"; //Shoes this pages 
-})
+});
 
 alldistanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
@@ -991,7 +1014,7 @@ alldistanceButton.addEventListener("click", function() {// the slopw buton on th
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "none"; //Shoes this pages 
     distancePage.style.display = "flex";// shows this page
-})
+});
 
 allmidpointButton.addEventListener("click", function() {// the slopw buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
@@ -1011,11 +1034,70 @@ allmidpointButton.addEventListener("click", function() {// the slopw buton on th
     slopePage.style.display = "none"; //Shoes this pages 
     distancePage.style.display = "none";// shows this page
     midpointPage.style.display = "flex";// shows rhis page
-})
+});
 
+allpythagoreanAButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageA.style.display = "flex";// show this 
+});
 
+allpythagoreanBButton.addEventListener("click", function() {// on formula bage, pythagorean b 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageB.style.display = "flex";// show this 
+});
 
-
+allpythagoreanCButton.addEventListener("click", function() {// on formula bage, pythagorean c
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "flex";// show this 
+});
 
 
 
@@ -1046,7 +1128,7 @@ squarePerimeterButton.addEventListener("click", function() {// what to do if the
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none";// hides this page 
     squarePerimeterPage.style.display = "flex";// shows this page 
-})
+});
 
 squareAreaButton.addEventListener("click", function() {// takes you tot he square area screen 
     startPage.style.display = "none";// the start page is not visibe
@@ -1067,7 +1149,7 @@ triangleAreaButton.addEventListener("click", function() {// the triangle area bu
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "flex";// shows this age 
 
-})
+});
 
 trianglePerimeterButton.addEventListener("click", function() {// the triangle perameter button 
     startPage.style.display = "none";
@@ -1079,7 +1161,7 @@ trianglePerimeterButton.addEventListener("click", function() {// the triangle pe
     squarePerimeterPage.style.display = "none";// shows the perimeter pages 
     triangleAreaPage.style.display = "none";// shows this age 
     trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
-})
+});
 
 circleAreaButton.addEventListener("click", function() {// if the bitton is clicked 
     startPage.style.display = "none";// hid this page 
@@ -1093,7 +1175,7 @@ circleAreaButton.addEventListener("click", function() {// if the bitton is click
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "flex";// show the circle are page 
 
-})
+});
 
 circleCircumferenceButton.addEventListener("click", function() {// if the bitton is clicked 
     startPage.style.display = "none";// hid this page 
@@ -1107,7 +1189,7 @@ circleCircumferenceButton.addEventListener("click", function() {// if the bitton
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "flex";// show the circle are page 
-})
+});
 
 trapezoidAreaButton.addEventListener("click", function() {// if the button is clicked 
     startPage.style.display = "none";// hid this page 
@@ -1122,7 +1204,7 @@ trapezoidAreaButton.addEventListener("click", function() {// if the button is cl
     circleAreaPage.style.display = "none";// show the circle are page 
     circleCircumferencePage.style.display = "none";// show the circle are page
     trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
-})
+});
 
 quadrilateralPerimeterButton.addEventListener("click", function() {// if this button is presed
     startPage.style.display = "none"; // hides the pages 
@@ -1138,7 +1220,7 @@ quadrilateralPerimeterButton.addEventListener("click", function() {// if this bu
     circleCircumferencePage.style.display = "none";// show the circle are page
     trapezoidAreaPage.style.display = "none";// show the  trapizode page
     quadrilateralPerimeterPage.style.display = "flex";
-})
+});
 
 parallelogramAreaButton.addEventListener("Click", function(){// the parallelogram button 
     startPage.style.display = "none"; // hides the pages 
@@ -1173,7 +1255,7 @@ slopeButton.addEventListener("click", function() {// the slopw buton on the form
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "flex"; //Shoes this pages 
-})
+});
 
 distanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
@@ -1192,7 +1274,7 @@ distanceButton.addEventListener("click", function() {// the slopw buton on the f
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "none"; //Shoes this pages 
     distancePage.style.display = "flex";// shows this page
-})
+});
 
 midpointButton.addEventListener("click", function() {// the slopw buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
@@ -1212,5 +1294,67 @@ midpointButton.addEventListener("click", function() {// the slopw buton on the f
     slopePage.style.display = "none"; //Shoes this pages 
     distancePage.style.display = "none";// shows this page
     midpointPage.style.display = "flex";// shows rhis page
-})
+});
 
+pythagoreanAButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageA.style.display = "flex";// show this 
+});
+
+pythagoreanBButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageB.style.display = "flex";// show this 
+});
+
+pythagoreanCButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "flex";// show this 
+});
