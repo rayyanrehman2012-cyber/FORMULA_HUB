@@ -174,7 +174,7 @@ const slopeY1 = document.getElementById("slopeY1"); // y value of the 1 cordinat
 const slopeY2 = document.getElementById("slopeY2"); // y value of the 2 cordinate 
 const slopeX1 = document.getElementById("slopeX1"); // x value of the 1 cordinate 
 const slopeX2 = document.getElementById("slopeX2"); // x value of the 2 cordinate 
-const calculateSlope = document.getElementById("caluclateSlope");; //calculate button 
+const calculateSlope = document.getElementById("calculateSlope");; //calculate button 
 const slopeResult = document.getElementById("slopeResult");; //result
 
 
