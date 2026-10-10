@@ -23,10 +23,11 @@ const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralP
 const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
 const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
 const distanceBackButton = document.getElementById("distanceBackButton");// back button distance page
-const midpointBackButton = document.getElementById("midpointBackButton");// this is the midpoint page
-const pythagoreanCBackButton = document.getElementById("pythagoreanCBackButton")// back button 
-const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton")// back button
-const pythagoreanABackButton = document.getElementById("pythagoreanABackButton")// back button
+const midpointBackButton = document.getElementById("midpointBackButton");// this is the midpoint page back button 
+const pythagoreanCBackButton = document.getElementById("pythagoreanCBackButton");// back button on the pythagorean side c/hypotenuse pages 
+const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton");// back button on the pythagorean side b pages 
+const pythagoreanABackButton = document.getElementById("pythagoreanABackButton");// back button on the pythagorean side a pages 
+const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// back button on the volume pages 
 
 
 
@@ -50,9 +51,11 @@ const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");/
 const slopePage = document.querySelector(".slopePage");// this is the slope page 
 const distancePage = document.querySelector(".distancePage");// this is the distance formula page 
 const midpointPage = document.querySelector(".midpointPage");// this is the midpoint formula page
-const pythagoreanPageC = document.querySelector(".pythagoreanPageC");// pythagorean page c
-const pythagoreanPageB = document.querySelector(".pythagoreanPageB");// pythagorean page c
-const pythagoreanPageA = document.querySelector(".pythagoreanPageA");// pythagorean page c
+const pythagoreanPageC = document.querySelector(".pythagoreanPageC");// pythagorean page side c
+const pythagoreanPageB = document.querySelector(".pythagoreanPageB");// pythagorean page side b
+const pythagoreanPageA = document.querySelector(".pythagoreanPageA");// pythagorean page side a
+const cubeVolumePage = document.querySelector(".cubeVolumePage");// the volume page for the cube 
+
 
 
 
@@ -72,9 +75,10 @@ const allparallelogramAreaButton = document.getElementById("allparallelogramArea
 const allslopeButton = document.getElementById("allslopeButton")// slope calculator  button on all formula pages 
 const alldistanceButton = document.getElementById("alldistanceButton")/// this is the distance button on the button page 
 const allmidpointButton = document.getElementById("allmidpointButton")/// this is the midpoint button on the button page
-const allpythagoreanAButton = document.getElementById("allpythagoreanAButton")// button on all formula page 
-const allpythagoreanBButton = document.getElementById("allpythagoreanBButton")// button on all formula page 
-const allpythagoreanCButton = document.getElementById("allpythagoreanCButton")// button on all formula page 
+const allpythagoreanAButton = document.getElementById("allpythagoreanAButton");// pythagorean page a button on all formula page 
+const allpythagoreanBButton = document.getElementById("allpythagoreanBButton");// pythagorean page b button on all formula page 
+const allpythagoreanCButton = document.getElementById("allpythagoreanCButton");// pythagorean page c button on all formula page 
+const allcubeVolumeButton = document.getElementById("allcubeVolumeButton");// cube volume button on the all formula page 
 
 
 
@@ -84,20 +88,20 @@ const rectangleAreaButton = document.getElementById("rectangleAreaButton");// th
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
 const squarePerimeterButton = document.getElementById("squarePerimeterButton");// square perimeter pages 
-const triangleAreaButton = document.getElementById("triangleAreaButton"); // this si the trangle are button on the math formulas screen 
+const triangleAreaButton = document.getElementById("triangleAreaButton");// this si the trangle are button on the math formulas screen 
 const trianglePerimeterButton = document.getElementById("trianglePerimeterButton");// this is the trianlge perimeter buton on the math formula page 
 const circleAreaButton = document.getElementById("circleAreaButton");// this is the circle are button 
 const circleCircumferenceButton = document.getElementById("circleCircumferenceButton");// the circumference button on the formula screent 
-const trapezoidAreaButton = document.getElementById("trapezoidAreaButton")// the trapizode are page 
+const trapezoidAreaButton = document.getElementById("trapezoidAreaButton");// the trapizode are page 
 const quadrilateralPerimeterButton = document.getElementById("quadrilateralPerimeterButton")// buton on math bage 
-const parallelogramAreaButton = document.getElementById("parallelogramAreaButton");// button fon all formula page 
-const slopeButton = document.getElementById("slopeButton")// slope calculator  button on all formula pages 
-const distanceButton = document.getElementById("distanceButton")/// this is the distance button on the button page
-const midpointButton = document.getElementById("midpointButton")/// this is the midpoint button on the button page
-const pythagoreanAButton = document.getElementById("pythagoreanAButton")// button on all formula page 
-const pythagoreanBButton = document.getElementById("pythagoreanBButton")// button on all formula page 
-const pythagoreanCButton = document.getElementById("pythagoreanCButton")// button on all formula page 
-
+const parallelogramAreaButton = document.getElementById("parallelogramAreaButton");// button fon math formula page 
+const slopeButton = document.getElementById("slopeButton");// slope calculator  button on math formula pages 
+const distanceButton = document.getElementById("distanceButton");// this is the distance button on the button page
+const midpointButton = document.getElementById("midpointButton");// this is the midpoint button on the button page
+const pythagoreanAButton = document.getElementById("pythagoreanAButton");// pythagorean page a button on math formula page 
+const pythagoreanBButton = document.getElementById("pythagoreanBButton");// pythagorean page b  button on math formula page 
+const pythagoreanCButton = document.getElementById("pythagoreanCButton");// pythagorean page cbutton on math formula page 
+const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube volume button on the math onlth formula pages 
 
 
 
@@ -912,7 +916,7 @@ pythagoreanCBackButton.addEventListener("click", function(){ // back button on p
     pythagoreanCResult.textContent = "";// removes everything
 });
 
-
+cubeVolumeBackButton.addEventListener("click")
 
 
 

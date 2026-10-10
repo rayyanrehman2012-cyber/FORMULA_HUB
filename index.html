@@ -43,16 +43,14 @@
                     <button id = "allpythagoreanCButton" class="formulaButton">PYTHAGOREAN THEOREM (HYPOTENUSE)</button>
                     <button id = "allpythagoreanBButton" class="formulaButton">PYTHAGOREAN THEOREM (SIDE B)</button>
                     <button id = "allpythagoreanAButton" class="formulaButton">PYTHAGOREAN THEOREM (SIDE A)</button>
-                    <button class="formulaButton">CUBE VOLUME</button>
+                    <button id = "allcubeVolumeButton" class="formulaButton">CUBE VOLUME</button>
                     <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                     <button class="formulaButton">CYLINDER VOLUME</button>
                     <button class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
-                    
                 </div>
             </section>
-
             <section class="physicsSection">
                 <h2>PHYSICS</h2>
                 <div class="formulaContainer">
@@ -69,9 +67,9 @@
                     <button class="formulaButton">KINAMATICS EQUATION - DISPLACEMENT </button>
                 </div>
             </section>
-
             <button id="backButton">BACK</button>
         </main>
+        
         <main class="mathFormulaPage">
             <h1>MATH FORMULAS</h1>
             <div class="formulaContainer">
@@ -92,7 +90,7 @@
                 <button id = "pythagoreanCButton" class="formulaButton">PYTHAGOREAN THEOREM (HYPOTENUSE)</button>
                 <button id = "pythagoreanBButton" class="formulaButton">PYTHAGOREAN THEOREM (SIDE B)</button>
                 <button id = "pythagoreanAButton" class="formulaButton">PYTHAGOREAN THEOREM (SIDE A)</button>
-                <button class="formulaButton">CUBE VOLUME</button>
+                <button id = "cubeVolumeButton" class="formulaButton">CUBE VOLUME</button>
                 <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                 <button class="formulaButton">CYLINDER VOLUME</button>
                 <button class="formulaButton">CONE VOLUME</button>
@@ -101,7 +99,6 @@
                     
                 </div>
             <button id="mathBackButton">BACK</button>
-
         </main>
 
         <main class = "physicsFormulaPage">
@@ -120,8 +117,8 @@
                     <button class="formulaButton">KINAMATICS EQUATION - DISPLACEMENT </button>
                 </div>
             <button id="physicsBackButton">BACK</button>
-
         </main>
+
         <main class = "rectangleAreaPage">
             <h1>RECTANGLE AREA</h1>
             <div class = "calculatorBox">
@@ -134,6 +131,7 @@
             </div>
             <button id="rectangleAreaBackButton">BACK</button>
         </main>
+    
         <main class = "rectanglePerimeterPage">
             <h1>RECTANGLE PERIMETER</h1>
             <div class = "calculatorBox">
@@ -170,6 +168,7 @@
             </div>
             <button id="squarePerimeterBackButton">BACK</button>
         </main>
+    
         <main class = "triangleAreaPage">
             <h1>TRIANGLE AREA</h1>
             <div class ="calculatorBox">
@@ -283,7 +282,6 @@
                 <p id="parallelogramAreaResult"></p>
             </div>
             <button id="parallelogramAreaBackButton">BACK</button>
-
         </main>
 
         <main class = "slopePage"> 
@@ -394,6 +392,18 @@
                 <p id = "pythagoreanAResult"></p>
             </div>
             <button id = "pythagoreanABackButton">BACK</button>
+        </main>
+
+        <main class = "cubeVolumePage">
+            <h1>CUBE VOLUME</h1>
+            <div class = calculatorBox>
+                <label for="cubeSide">SIDE LENGTH</label>
+                <input id = "cubeSide" type = "number">
+
+                <button id = "calculateCubeVolume">CALCULATE</button>
+                <p id = "cubeVolumeResult"></p>
+            </div>
+            <button id = "cubeVolumeBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
