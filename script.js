@@ -285,7 +285,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
     squarePerimeterResult.style.color = "rgb(11,61,46)"// adds a green color
 
     }
-})
+});
 
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
     
@@ -304,7 +304,7 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
     triangleAreaResult.textContent = "Area = " + triangleArea + " Units Squared"// displays the area of the tringal 
     triangleAreaResult.style.color = "rgb(11,61,46)" // changes the colour to green for the text 
     }
-})
+});
 
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
     
@@ -323,7 +323,7 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
         trianglePerimeterResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
     }
 
-})
+});
 
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
      
@@ -341,7 +341,7 @@ calculateCircleArea.addEventListener("click", function() {// calculates the area
         circleAreaResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
 
     }
-})
+});
 
 calculateCircleCircumference.addEventListener ("click", function(){// if the circumference calculate button is used 
     const circleDiameter = circleCircumferenceDiameter.value;// stores the value of the diameter
@@ -390,7 +390,7 @@ calculateTrapezoidArea.addEventListener ("click", function() {// when u click ca
         trapezoidAreaResult.style.color = "rgb(11,61,46)"// change the color to green 
 
     }
-})
+});
 
 calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the calculate button is pressed then 
     
@@ -411,7 +411,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
         quadrilateralPerimeterResult.textContent = "Perimeter = " + QuadPerimeter + " Units";// this is what is shos
         quadrilateralPerimeterResult.style.color = "rgb(11,61,46)"// change the color to green 
     }
-})
+});
 
 calculateParallelogramArea.addEventListener ("click", function () {
 
@@ -429,7 +429,7 @@ calculateParallelogramArea.addEventListener ("click", function () {
     parallelogramAreaResult.textContent = " Area = " + parallelogramArea + " Units Squared"; // this is the line that will be shown 
     parallelogramAreaResult.style.color = "rgb(11,61,46)"// change the color to green
     }
-})
+});
 
 calculateSlope.addEventListener ("click", function () { // if the calculate slipe button is pressed 
 
@@ -477,7 +477,7 @@ calculateSlope.addEventListener ("click", function () { // if the calculate slip
     }
 
 
-}})
+}});
 
 
 calculateDistance.addEventListener ("click", function () { // if the calculate distance button is pressed
