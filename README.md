@@ -34,8 +34,14 @@ The website starts of on the front page. The front page contains a short descrip
 - made the slope page 
 - made the error signs, so that if the values are missing or are 0 then an arror shows up 
 
-
-
+## WHAT WE MADE (WEEK 2)
+- fixed the slope function so that it can tell you if its verticle or horizontal too 
+- the Pythagorean page gets divided into 3 for 3 versions 
+- the side a function for the putagorean page 
+- the side b function for the pytagorean page 
+- the side c(hypotenuse) function 
+- the distance formul page and functions 
+- the midpoint function and page 
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 2)

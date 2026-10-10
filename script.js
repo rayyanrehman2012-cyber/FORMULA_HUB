@@ -578,7 +578,7 @@ calculatePythagoreanA.addEventListener ("click", function(){// calculate side a 
         else{// if the values are fines
             const a = Math.sqrt(c ** 2 - b ** 2);; //formula 
 
-            pythagoreanAResult.textContent = "SIDE A = " + a + " UNITS"; // show this 
+            pythagoreanAResult.textContent = "SIDE A = " + a.toFixed(3) + " UNITS"; // show this 
             pythagoreanAResult.style.color = "rgb(11,61,46)";// red colr
 
         }
@@ -605,7 +605,7 @@ calculatePythagoreanB.addEventListener ("click", function(){
         else{// if the values are fines
             const b = Math.sqrt(c ** 2 - a ** 2);; //formula 
 
-            pythagoreanBResult.textContent = "SIDE b = " + b + " UNITS"; // show this 
+            pythagoreanBResult.textContent = "SIDE b = " + b.toFixed(3) + " UNITS"; // show this 
             pythagoreanBResult.style.color = "rgb(11,61,46)";// red colr
 
         }
@@ -626,7 +626,7 @@ calculatePythagoreanC.addEventListener ("click", function(){
         // if the values are fines
         const c = Math.sqrt(b ** 2 + a ** 2);; //formula 
 
-        pythagoreanCResult.textContent = "SIDE C = " + c + " UNITS"; // show this 
+        pythagoreanCResult.textContent = "SIDE C = " + c.toFixed(3) + " UNITS"; // show this 
         pythagoreanCResult.style.color = "rgb(11,61,46)";// red colr
 
     }
