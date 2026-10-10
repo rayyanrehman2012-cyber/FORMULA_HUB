@@ -732,11 +732,29 @@ slopeBackButton.addEventListener("click", function() { // this is the slope back
     slopeResult.textContent = "";// removes everything 
 });
 
-distanceBackButton.addEventListener("click", function() {
+distanceBackButton.addEventListener("click", function() {// the distance back button 
     startPage.style.display = "flex";// shows the screen 
     distancePage.style.display = "none";// hides the distance page
+
+    distanceX1.value = "";// reset
+    distanceX2.value = "";//restet
+    distanceY1.value = "";//reset
+    distanceY2.value = "";//reset 
+    distanceResult.textContent = ""; // removes everything
 });
 
+midpointBackButton.addEventListener("click", function(){// the midpoint back putton 
+    startPage.style.display = "flex"; // shows the screen 
+    midpointPage.style.display = "none"; // hides rhis screen 
+
+    midpointX1.value = "";// reset
+    midpointX2.value = "";// reset
+    midpointY1.value = "";// reset
+    midpointY2.value = "";// reset
+
+    midpointResult.textContent = ""; // removes everything 
+
+})
 
 
 
@@ -916,6 +934,25 @@ alldistanceButton.addEventListener("click", function() {// the slopw buton on th
     distancePage.style.display = "flex";// shows this page
 })
 
+allmidpointButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //Shoes this pages 
+    distancePage.style.display = "none";// shows this page
+    midpointPage.style.display = "flex";// shows rhis page
+})
 
 
 
@@ -1096,5 +1133,25 @@ distanceButton.addEventListener("click", function() {// the slopw buton on the f
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "none"; //Shoes this pages 
     distancePage.style.display = "flex";// shows this page
+})
+
+midpointButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //Shoes this pages 
+    distancePage.style.display = "none";// shows this page
+    midpointPage.style.display = "flex";// shows rhis page
 })
 
