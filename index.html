@@ -40,7 +40,9 @@
                     <button id = "allslopeButton" class="formulaButton">SLOPE</button>
                     <button id = "alldistanceButton" class="formulaButton">DISTANCE FORMULA</button>
                     <button id = "allmidpointButton" class="formulaButton">MIDPOINT FORMULA</button>
-                    <button class="formulaButton">PYTHAGOREAN THEOREM</button>
+                    <button id = "allpythagoreanC" class="formulaButton">PYTHAGOREAN THEOREM HYPOTENUSE</button>
+                    <button id = "allpythagoreanB" class="formulaButton">PYTHAGOREAN THEOREM SIDE B</button>
+                    <button id = "allpythagoreanA" class="formulaButton">PYTHAGOREAN THEOREM SIDE A</button>
                     <button class="formulaButton">CUBE VOLUME</button>
                     <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                     <button class="formulaButton">CYLINDER VOLUME</button>
@@ -87,7 +89,9 @@
                 <button id = "slopeButton" class="formulaButton">SLOPE</button>
                 <button id = "distanceButton" class="formulaButton">DISTANCE FORMULA</button>
                 <button id = "midpointButton" class="formulaButton">MIDPOINT FORMULA</button>
-                <button class="formulaButton">PYTHAGOREAN THEOREM</button>
+                <button id = "pythagoreanC" class="formulaButton">PYTHAGOREAN THEOREM HYPOTENUSE</button>
+                <button id = "pythagoreanB" class="formulaButton">PYTHAGOREAN THEOREM SIDE B</button>
+                <button id = "pythagoreanA" class="formulaButton">PYTHAGOREAN THEOREM SIDE A</button>
                 <button class="formulaButton">CUBE VOLUME</button>
                 <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                 <button class="formulaButton">CYLINDER VOLUME</button>
@@ -179,9 +183,9 @@
                 <p id="triangleAreaResult"></p>
             </div>
             <button id="triangleAreaBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "trianglePerimeterPage">
+        <main class = "trianglePerimeterPage">
             <h1>TRIANGLE PERIMETER</h1>
             <div class ="calculatorBox">
                 <label for="trianglePerimeterSideA">SIZE A</label>
@@ -197,9 +201,9 @@
                 <p id="trianglePerimeterResult"></p>
             </div>
             <button id="trianglePerimeterBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "circleAreaPage">
+        <main class = "circleAreaPage">
             <h1>CIRCLE AREA</h1>
             <div class = "calculatorBox">
                 <label for ="circleAreaRadius">RADIUS</label>
@@ -209,9 +213,9 @@
                 <p id="circleAreaResult"></p>
             </div>
             <button id="circleAreaBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "circleCircumferencePage">
+        <main class = "circleCircumferencePage">
             <h1>CIRCLE CIRCUMFERENCE</h1>
             <div class = "calculatorBox">
                 <label for = "circleCircumferenceDiameter">DIAMETER</label>
@@ -225,9 +229,9 @@
 
             </div>
             <button id="circleCircumferenceBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "trapezoidAreaPage">
+        <main class = "trapezoidAreaPage">
             <h1>TRAPEZOID AREA</h1>
             <div class = "calculatorBox">
                 <label for = "trapezoidAreaBaseA">BASE A</label>
@@ -243,9 +247,9 @@
                 <p id="trapezoidAreaResult"></p>
             </div>
             <button id="trapezoidAreaBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "quadrilateralPerimeterPage">
+        <main class = "quadrilateralPerimeterPage">
             <h1>QUADRILATERAL PERIMETER</h1>
             <div class = "calculatorBox">
                 <label for = "quadSideA">SIDE A</label>
@@ -264,9 +268,9 @@
                 <p id="quadrilateralPerimeterResult"></p>
             </div>
             <button id="quadrilateralPerimeterBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "parallelogramAreaPage">
+        <main class = "parallelogramAreaPage">
             <h1>PARALLELOGRAM AREA</h1>
             <div class = "calculatorBox">
                 <label for = "parallelogramBase">BASE</label>
@@ -280,9 +284,9 @@
             </div>
             <button id="parallelogramAreaBackButton">BACK</button>
 
-         </main>
+        </main>
 
-         <main class = "slopePage"> 
+        <main class = "slopePage"> 
             <h1>SLOPE CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for = "slopeY1"> Y1</label>
@@ -303,9 +307,9 @@
 
             </div>
             <button id = "slopeBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "distancePage">
+        <main class = "distancePage">
             <h1>DISTANCE CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for = "distanceX1"> X1</label>
@@ -324,9 +328,9 @@
                 <p id = "distanceResult"></p>
             </div>
             <button id = "distanceBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "midpointPage">
+        <main class = "midpointPage">
             <h1>MIDPOINT CALCULATOR</h1>
             <div class = "calculatorBox">
                 <label for = "midpointX1"> X1</label>
@@ -345,9 +349,9 @@
                 <p id = "midpointResult"></p>
             </div>
             <button id = "midpointBackButton">BACK</button>
-         </main>
+        </main>
 
-         <main class = "pythagoreanTheoremPageC">
+        <main class = "pythagoreanPageC">
             <h1>PYTHAGOREAN THEOREM FOR SIDE C</h1>
             <div class = "calculatorBox">
                 <label for = "pythagoreanCA">SIDE A</label>
@@ -361,7 +365,40 @@
                 <p id = "pythagoreanCResut"></p>
             </div>
             <button id = "pythagoreanCBackButton">BACK</button>
-         </main>
+        </main>
+
+        <main class = "pythagoreanPageB">
+            <h1>PYTHAGOREAN THEOREM FOR SIDE B</h1>
+            <div class = "calculatorBox">
+                <label for = "pythagoreanBA">SIDE A</label>
+                <input id = "pythagoreanBTriangleA" type = "number">
+
+                <label for = "pythagoreanBTriangleC">SIDE C</label>
+                <input id = "pythagoreanBTriangleC" type = "number">
+
+
+                <button id = "calculatePythagoreanB">CALCULATE</button>
+                <p id = "pythagoreanBResut"></p>
+            </div>
+            <button id = "pythagoreanBBackButton">BACK</button>
+        </main>
+
+        <main class = "pythagoreanPageA">
+            <h1>PYTHAGOREAN THEOREM FOR SIDE A</h1>
+            <div class = "calculatorBox">
+                <label for = "pythagoreanAB">SIDE B</label>
+                <input id = "pythagoreanATriangleB" type = "number">
+
+                <label for = "pythagoreanATriangleC">SIDE C</label>
+                <input id = "pythagoreanATriangleC" type = "number">
+
+
+                <button id = "calculatePythagoreanA">CALCULATE</button>
+                <p id = "pythagoreanAResut"></p>
+            </div>
+            <button id = "pythagoreanABackButton">BACK</button>
+        </main>
+
         <script src="./script.js"></script>
     </body>
     </html>

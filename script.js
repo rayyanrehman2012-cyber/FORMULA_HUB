@@ -24,6 +24,9 @@ const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBa
 const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
 const distanceBackButton = document.getElementById("distanceBackButton");// back button distance page
 const midpointBackButton = document.getElementById("midpointBackButton");// this is the midpoint page
+const pythagoreanCBackButton = document.getElementById("pythagoreanCBackButton")// back button 
+const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton")// back button
+const pythagoreanABackButton = document.getElementById("pythagoreanABackButton")// back button
 
 
 
@@ -47,6 +50,9 @@ const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");/
 const slopePage = document.querySelector(".slopePage");// this is the slope page 
 const distancePage = document.querySelector(".distancePage");// this is the distance formula page 
 const midpointPage = document.querySelector(".midpointPage");// this is the midpoint formula page
+const pythagoreanPageC = document.querySelector(".pythagoreanPageC");// pythagorean page c
+const pythagoreanPageB = document.querySelector(".pythagoreanPageB");// pythagorean page c
+const pythagoreanPageA = document.querySelector(".pythagoreanPageA");// pythagorean page c
 
 
 
@@ -66,7 +72,9 @@ const allparallelogramAreaButton = document.getElementById("allparallelogramArea
 const allslopeButton = document.getElementById("allslopeButton")// slope calculator  button on all formula pages 
 const alldistanceButton = document.getElementById("alldistanceButton")/// this is the distance button on the button page 
 const allmidpointButton = document.getElementById("allmidpointButton")/// this is the midpoint button on the button page
-
+const allpythagoreanA = document.getElementById("allpythagoreanA")// button on all formula page 
+const allpythagoreanB = document.getElementById("allpythagoreanB")// button on all formula page 
+const allpythagoreanC = document.getElementById("allpythagoreanC")// button on all formula page 
 
 
 
