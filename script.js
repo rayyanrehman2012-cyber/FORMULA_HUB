@@ -82,6 +82,12 @@ const slopeButton = document.getElementById("slopeButton")// slope calculator  b
 
 
 
+
+
+
+
+
+
 // THESE ARE FOR THE RECTANGLE AREA CALCULATOR
 const lengthInput = document.getElementById("length"); // you length input 
 const widthInput = document.getElementById("width");// your width input 
@@ -176,6 +182,15 @@ const slopeX1 = document.getElementById("slopeX1"); // x value of the 1 cordinat
 const slopeX2 = document.getElementById("slopeX2"); // x value of the 2 cordinate 
 const calculateSlope = document.getElementById("calculateSlope");; //calculate button 
 const slopeResult = document.getElementById("slopeResult");; //result
+
+
+
+
+
+
+
+
+
 
 
 
@@ -482,6 +497,9 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
+
+
+
 
 
 
