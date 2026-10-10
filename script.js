@@ -643,7 +643,19 @@ calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate 
 });
 
 calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
-    if(cubeSide.value ===""||)
+    if(cubeSide.value ===""|| cubeSide.value ==="0"){// if the values are not value or dont exist then 
+        cubeVolumeResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"// error message 
+        cubeVolumeResult.textContent = "rgb(102,21,7)";// this changes the colour of the message to red 
+    }
+
+    else{// if the values are fined 
+        const side = Number(cubeSide.value);// the variable stores the value of the cubes side 
+        
+        const volume = side * side * side; // calculates the volume 
+
+        cubeVolumeResult.textConte = "VOLUME = " + volume +" UNITS CUBED"// this is the display 
+        cubeVolumeResult.textContent = "rgb(11,61,46)"; // // changes the color to green 
+    }
 })
 
 
@@ -923,14 +935,14 @@ pythagoreanCBackButton.addEventListener("click", function(){ // back button on p
     pythagoreanCResult.textContent = "";// removes everything
 });
 
-cubeVolumeBackButton.addEventListener("click"), function(){// back button on the cube volume pages 
+cubeVolumeBackButton.addEventListener("click", function(){// back button on the cube volume pages 
     startPage.style.display = "flex";// shows this screen to everytone 
     cubeVolumePage.style.display = "none"// hides this pages 
 
     cubeSide.value = "";// resets the cube value 
     cubeVolumeResult.textContent = ""; // rests the text you see to a blank 
     
-}
+});
 
 
 
