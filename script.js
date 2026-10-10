@@ -225,15 +225,15 @@ const pythagoreanCResult = document.getElementById("pythagoreanCResult");// resu
 // THESE ARE FOR THE PYTHAGOREAN THEOREM DIS B CALCULATOR
 const pythagoreanBA = document.getElementById("pythagoreanBA");// side a 
 const pythagoreanBC = document.getElementById("pythagoreanBC");// side C
-const calculatePythagoreanB = documentElementById("calculatePythagoreanB");// calculate button 
+const calculatePythagoreanB = document.getElementById("calculatePythagoreanB");// calculate button 
 const pythagoreanBResult = document.getElementById("pythagoreanBResult");// resut 
 
 
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE A CALCULATOR
 const pythagoreanAB = document.getElementById("pythagoreanAB");// side b
 const pythagoreanAC = document.getElementById("pythagoreanAC");// side c
-const calculatePythagoreanA = documentElementById("calculatePythagoreanA");// calculate button 
-const pythagoreanAResult = documentElementById("pythagoreanAResult");// result 
+const calculatePythagoreanA = document.getElementById("calculatePythagoreanA");// calculate button 
+const pythagoreanAResult = document.getElementById("pythagoreanAResult");// result 
 
 
 
@@ -534,7 +534,7 @@ calculateDistance.addEventListener ("click", function() { // if the calculate di
 
 });
 
-calculateMidpoint.addEventListener ("click", function() {
+calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclate button is presses 
     if (midpointX1.value === "" ||midpointY1.value === "" || midpointX2.value === "" || midpointY2.value === "" ){
         midpointResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"// error mesage 
         midpointResult.style.color = "rgb(102,21,7)"// red color 
@@ -560,10 +560,9 @@ calculateMidpoint.addEventListener ("click", function() {
     }
 });
 
-calculatePythagoreanA.addEventListener ("click", function(){
-
-    if(pythagoreanAB === ""|| pythagoreanAB === "0"|| pythagoreanAC === ""|| pythagoreanAC === "0"){// if the values are blacnk or zero s
-        pythagoreanAResult.textContent = "ERROR, PLEASE ENTER 2 VALUES"; // show this 
+calculatePythagoreanA.addEventListener ("click", function(){// calculate side a is pressed 
+    if(pythagoreanAB.value === ""|| pythagoreanAB.value === "0"|| pythagoreanAC.value === ""|| pythagoreanAC.value === "0"){// if the values are blacnk or zero s
+        pythagoreanAResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
         pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
     }   
 
@@ -577,7 +576,7 @@ calculatePythagoreanA.addEventListener ("click", function(){
         }
 
         else{// if the values are fines
-            const a = Math.sqrt(c ** 2 - b ** 2);; formula 
+            const a = Math.sqrt(c ** 2 - b ** 2);; //formula 
 
             pythagoreanAResult.textContent = "SIDE A = " + a + " UNITS"; // show this 
             pythagoreanAResult.style.color = "rgb(11,61,46)";// red colr
@@ -587,7 +586,52 @@ calculatePythagoreanA.addEventListener ("click", function(){
 
 });
 
+calculatePythagoreanB.addEventListener ("click", function(){
 
+    if(pythagoreanBA.value === ""|| pythagoreanBA.value === "0"|| pythagoreanBC.value === ""|| pythagoreanBC.value === "0"){// if the values are blacnk or zero s
+        pythagoreanBResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
+        pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
+    }   
+
+    else{// if the values are fine 
+        const a = Number(pythagoreanBA.value);// cold side a value 
+        const c = Number(pythagoreanBC.value);// holds side c value 
+
+        if ( c<= a ){// if the hyponeuse is smaller then side b 
+            pythagoreanBResult.textContent = "ERROR, C MUST BE GREATER THAN A"; // show this 
+            pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
+        }
+
+        else{// if the values are fines
+            const b = Math.sqrt(c ** 2 - a ** 2);; //formula 
+
+            pythagoreanBResult.textContent = "SIDE b = " + b + " UNITS"; // show this 
+            pythagoreanBResult.style.color = "rgb(11,61,46)";// red colr
+
+        }
+    }
+
+});
+
+calculatePythagoreanC.addEventListener ("click", function(){
+
+    if(pythagoreanCA.value === ""|| pythagoreanCA.value === "0"|| pythagoreanCB.value === ""|| pythagoreanCB.value === "0"){// if the values are blacnk or zero s
+        pythagoreanCResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
+        pythagoreanCResult.style.color = "rgb(102,21,7)";// red colr 
+    }   
+
+    else{// if the values are fine 
+        const a = Number(pythagoreanCA.value);// cold side a value 
+        const b = Number(pythagoreanCB.value);// holds side c value 
+        // if the values are fines
+        const c = Math.sqrt(b ** 2 + a ** 2);; //formula 
+
+        pythagoreanCResult.textContent = "SIDE C = " + c + " UNITS"; // show this 
+        pythagoreanCResult.style.color = "rgb(11,61,46)";// red colr
+
+    }
+
+});
 
 
 

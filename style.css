@@ -12,7 +12,10 @@
 .trapezoidAreaPage, 
 .slopePage,
 .distancePage,
-.midpointPage {
+.midpointPage,
+.pythagoreanPageA,
+.pythagoreanPageB,
+.pythagoreanPageC {
     display: none;
 }
 
