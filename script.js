@@ -424,7 +424,29 @@ caluclateSlope.addEventListener ("click", function () { // if the calculate slip
     const rise = slopey2 - slopey1;// change in y
     const run = slopex2 - slopex1;// chang in x 
 
-    const slope = rise / run;// the slope 
+    if (run === 0){
+        slopeResult.textContent = "VERTICAL LINE, SLOPE IS UNDIFINED";// its a verticle line 
+        slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
+    }
+
+    if (rise === 0){
+        slopeResult.textContent = "HORIZONTAL LINE, SLOPE IS 0";// its a verticle line 
+        slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
+    }
+
+    else {
+        const slope = rise / run;// the slope 
+
+        if (Number.isInteger(slope)) {// if the intreger is a whole number 
+            slopeResult.textContent = "Slope = " + slope; // // show the whole number 
+        }
+
+        else {// if its not a whole number
+            slopeResult.textContent = "Slope = " + rise + "/" + run; // shows the slope as a fraction 
+        }
+
+        slopeResult.style.color = "rgb(11,61,46)"// changes the color to greent 
+    }
 
     slopeResult.textContent = "Slope = " + slope;// shows the slope 
     
