@@ -480,10 +480,29 @@ calculateSlope.addEventListener ("click", function () { // if the calculate slip
 }})
 
 
+calculateDistance.addEventListener ("click", function () { // if the calculate distance button is pressed
 
+    if (distanceY1.value === "" || distanceY2.value === "" ||  distanceX1.value === ""  || distanceX2.value === ""){
+        distanceResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
+        distanceResult.style.color = "rgb(102,21,7)"// change the color to green
+    }
 
+    else {// if the values are propper
+        const y1 = Number(distanceY1.value);// y1
+        const x1 = Number(distanceX1.value);// x1
+        const y2 = Number(distanceY2.value);// y2
+        const x2 = Number(distanceX2.value);//y2
 
+        const changeX = x2 - x1;// change in x
+        const changeY = y2 - y1;// change in y
 
+        const distance = Math.sqrt (changeX ** 2 + changeY ** 2)// the distance formula
+
+        distanceResult.textContent = "Distance = " + distance.toFixed(3) + " Units";
+        distanceResult.style.color = "rgb(11,61,46)"// changes the color to green 
+    }
+
+});
 
 
 
