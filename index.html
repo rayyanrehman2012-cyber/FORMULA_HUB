@@ -39,7 +39,7 @@
                     <button id = "allparallelogramAreaButton" class="formulaButton">PARALLELOGRAM AREA</button>
                     <button id = "allslopeButton" class="formulaButton">SLOPE</button>
                     <button id = "alldistanceButton" class="formulaButton">DISTANCE FORMULA</button>
-                    <button class="formulaButton">MIDPOINT FORMULA</button>
+                    <button id = "allmidpointButton" class="formulaButton">MIDPOINT FORMULA</button>
                     <button class="formulaButton">PYTHAGOREAN THEOREM</button>
                     <button class="formulaButton">CUBE VOLUME</button>
                     <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
@@ -86,7 +86,7 @@
                 <button id = "parallelogramAreaButton"  class="formulaButton">PARALLELOGRAM AREA</button>
                 <button id = "slopeButton" class="formulaButton">SLOPE</button>
                 <button id = "distanceButton" class="formulaButton">DISTANCE FORMULA</button>
-                <button class="formulaButton">MIDPOINT FORMULA</button>
+                <button id = "midpointButton" class="formulaButton">MIDPOINT FORMULA</button>
                 <button class="formulaButton">PYTHAGOREAN THEOREM</button>
                 <button class="formulaButton">CUBE VOLUME</button>
                 <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
@@ -324,6 +324,27 @@
                 <p id = "distanceResult"></p>
             </div>
             <button id = "distanceBackButton">BACK</button>
+         </main>
+
+         <main class = "midpointPage">
+            <h1>MIDPOINT CALCULATOR</h1>
+            <div class = "calculatorBox">
+                <label for = "midpointX1"> X1</label>
+                <input id = "midpointX1" type = "number">
+
+                <label for = "midpointY1"> Y1</label>
+                <input id = "midpointY1" type = "number">
+
+                <label for = "midpointX2"> X2</label>
+                <input id = "midpointX2" type = "number">
+
+                <label for = "midpointY2"> Y2</label>
+                <input id = "midpointY2" type = "number">
+
+                <button id = "calculateMidpoint">CALCULATE</button>
+                <p id = "midpointResult"></p>
+            </div>
+            <button id = "midpointBackButton">BACK</button>
          </main>
 
         <script src="./script.js"></script>

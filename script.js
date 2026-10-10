@@ -23,6 +23,7 @@ const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralP
 const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
 const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
 const distanceBackButton = document.getElementById("distanceBackButton");// back button distance page
+const midpointBackButton = document.getElementById("midpointBackButton");// this is the midpoint page
 
 
 
@@ -45,6 +46,7 @@ const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimet
 const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");//  this sis the parallelogram page 
 const slopePage = document.querySelector(".slopePage");// this is the slope page 
 const distancePage = document.querySelector(".distancePage");// this is the distance formula page 
+const midpointPage = document.querySelector(".midpointPage");// this is the midpoint formula page
 
 
 
@@ -63,6 +65,7 @@ const allquadrilateralPerimeterButton = document.getElementById("allquadrilatera
 const allparallelogramAreaButton = document.getElementById("allparallelogramAreaButton");// button fon all formula page 
 const allslopeButton = document.getElementById("allslopeButton")// slope calculator  button on all formula pages 
 const alldistanceButton = document.getElementById("alldistanceButton")/// this is the distance button on the button page 
+const allmidpointButton = document.getElementById("allmidpointButton")/// this is the midpoint button on the button page
 
 
 
@@ -81,6 +84,8 @@ const quadrilateralPerimeterButton = document.getElementById("quadrilateralPerim
 const parallelogramAreaButton = document.getElementById("parallelogramAreaButton");// button fon all formula page 
 const slopeButton = document.getElementById("slopeButton")// slope calculator  button on all formula pages 
 const distanceButton = document.getElementById("distanceButton")/// this is the distance button on the button page
+const midpointButton = document.getElementById("midpointButton")/// this is the midpoint button on the button page
+
 
 
 
@@ -100,13 +105,11 @@ const calculateRectangleArea = document.getElementById("calculateRectangleArea")
 const rectangleAreaResult = document.getElementById("rectangleAreaResult");// the line that gives u the answer
 
 
-
 // THESE ARE FOR THE RECTANGLE PERIMETER CALCULATOR
 const PerimeterlengthInput = document.getElementById("Perimeterlength"); // you length input 
 const PerimeterwidthInput = document.getElementById("Perimeterwidth");// your width input 
 const calculateRectanglePerimeter = document.getElementById("calculateRectanglePerimeter");// the calculate button 
 const rectanglePerimeterResult = document.getElementById("rectanglePerimeterResult");// the line that gives u the answer
-
 
 
 // THESE ARE FOR THE SQUARE AREA CALCULATOR 
@@ -115,12 +118,10 @@ const calculateSquareArea = document.getElementById("calculateSquareArea");// th
 const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
 
 
-
 //THESE ARE FOR THE  SQUARE PERIMETER CALCULATOR 
 const SquarePerimeterDimenstion = document.getElementById("SquarePerimeterDimenstion");// square dimentions for area 
 const calculateSquarePerimeter = document.getElementById("calculateSquarePerimeter");// square perimiter calculate button 
 const squarePerimeterResult = document.getElementById("squarePerimeterResult");// the line that gives u the answer
-
 
 
 //THESE ARE FOR THE TRIANGLE ARE CALCULATOR
@@ -128,7 +129,6 @@ const triangleAreaHeight = document.getElementById("triangleAreaHeight");// heig
 const triangleAreaBase = document.getElementById("triangleAreaBase"); //  the base measurement ofr the triangle 
 const calculateTriangleArea = document.getElementById("calculateTriangleArea");// the calculate btton
 const triangleAreaResult = document.getElementById("triangleAreaResult");// displays score 
-
 
 
 // THESE ARE FOR THE TRIANGLE PERIMETER CALCULSTOR
@@ -139,7 +139,6 @@ const calculateTrianglePerimeter = document.getElementById("calculateTrianglePer
 const trianglePerimeterResult = document.getElementById("trianglePerimeterResult");//this is the result line
 
 
-
 //THESE ARE FOR THE CIRCLE  AREA  CALCULATOR
 const circleAreaRadius = document.getElementById("circleAreaRadius");// radius input 
 const calculateCircleArea = document.getElementById("calculateCircleArea");// the calculat button 
@@ -147,13 +146,11 @@ const circleAreaResult = document.getElementById("circleAreaResult");// this is 
 const pi = 3.14159265358979323846; // this si the value of pi that will be used in the calculaotre 
 
 
-
 // THESE ARE FOR THE CIRCLE CIRCUMPERFERENCE CALCULATOR 
 const circleCircumferenceDiameter = document.getElementById("circleCircumferenceDiameter");// gets the Diameter
 const circleCircumferenceRadius = document.getElementById("circleCircumferenceRadius");
 const circleCircumferenceResult = document.getElementById("circleCircumferenceResult");// this is the result line
 const calculateCircleCircumference = document.getElementById("calculateCircleCircumference");// the calculat button 
-
 
 
 // THESE ARE FOR THE TRAPEZOID AREA CALCULATOR
@@ -196,6 +193,15 @@ const distanceX1 = document.getElementById("distanceX1");// this is the x
 const distanceX2 = document.getElementById("distanceX2");// this is the X
 const calculateDistance = document.getElementById("calculateDistance");// this is the calculate button 
 const distanceResult = document.getElementById("distanceResult"); // this is this resut of the distance formula 
+
+
+// THESE ARE FOR THR MIDPOINT FORMULA CALCULATOR
+const midpointY1 = document.getElementById("midpointY1");// this i the midpoint y1
+const midpointY2 = document.getElementById("midpointY2");// this i the midpoint y2
+const midpointX1 = document.getElementById("midpointX1");// this i the midpoint x1
+const midpointX2 = document.getElementById("midpointX2");// this i the midpoint x2
+const calculateMidpoint = document.getElementById("calculateMidpoint");// this is the calculate putton on this page 
+const midpointResult = document.getElementById("midpointResult");// this is the midpoint result display 
 
 
 
@@ -668,6 +674,7 @@ trapezoidAreaBackButton.addEventListener("click", function(){// if the back butt
     trapezoidAreaResult.textContent = "";// removes the text
 
 });
+
 quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the button is pressed
     startPage.style.display = "flex";//show the start page
     mathFormulaPage.style.display = "none";//hide 
@@ -685,6 +692,7 @@ quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the
     quadSideD.value = "";// rests the value 
     quadrilateralPerimeterResult.textContent = "";// resets the text 
 });
+
 parallelogramAreaBackButton.addEventListener("click", function() {// back button on the parallelogram screent 
     startPage.style.display = "flex";//show the start page
     mathFormulaPage.style.display = "none";//hide 
