@@ -22,6 +22,7 @@ const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton
 const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralPerimeterBackButton");// the quadrilateral perimeterbutton 
 const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
 const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
+const distanceBackButton = document.getElementById("distanceBackButton");// back button distance page
 
 
 
@@ -43,6 +44,8 @@ const trapezoidAreaPage = document.querySelector(".trapezoidAreaPage");// this i
 const quadrilateralPerimeterPage = document.querySelector(".quadrilateralPerimeterPage");// this is the cuadrilatral perimeter page 
 const parallelogramAreaPage = document.querySelector(".parallelogramAreaPage");//  this sis the parallelogram page 
 const slopePage = document.querySelector(".slopePage");// this is the slope page 
+const distancePage = document.querySelector(".distancePage");// this is the distance formula page 
+
 
 
 
@@ -59,6 +62,8 @@ const alltrapezoidAreaButton = document.getElementById("alltrapezoidAreaButton")
 const allquadrilateralPerimeterButton = document.getElementById("allquadrilateralPerimeterButton");// button on main formula pge 
 const allparallelogramAreaButton = document.getElementById("allparallelogramAreaButton");// button fon all formula page 
 const allslopeButton = document.getElementById("allslopeButton")// slope calculator  button on all formula pages 
+const alldistanceButton = document.getElementById("alldistanceButton")/// this is the distance button on the button page 
+
 
 
 
@@ -75,7 +80,7 @@ const trapezoidAreaButton = document.getElementById("trapezoidAreaButton")// the
 const quadrilateralPerimeterButton = document.getElementById("quadrilateralPerimeterButton")// buton on math bage 
 const parallelogramAreaButton = document.getElementById("parallelogramAreaButton");// button fon all formula page 
 const slopeButton = document.getElementById("slopeButton")// slope calculator  button on all formula pages 
-
+const distanceButton = document.getElementById("distanceButton")/// this is the distance button on the button page
 
 
 
@@ -184,10 +189,13 @@ const calculateSlope = document.getElementById("calculateSlope");; //calculate b
 const slopeResult = document.getElementById("slopeResult");; //result
 
 
-
-
-
-
+//THESE ARE FOR THE DISTANCE CALCULATOR
+const distanceY1 = document.getElementById("distanceY1");// this is the y
+const distanceY2 = document.getElementById("distanceY2");// this is the y
+const distanceX1 = document.getElementById("distanceX1");// this is the x
+const distanceX2 = document.getElementById("distanceX2");// this is the X
+const calculateDistance = document.getElementById("calculateDistance");// this is the calculate button 
+const distanceResult = document.getElementById("distanceResult"); // this is this resut of the distance formula 
 
 
 
@@ -697,8 +705,10 @@ slopeBackButton.addEventListener("click", function() { // this is the slope back
     slopeResult.textContent = "";// removes everything 
 });
 
-
-
+distanceBackButton.addEventListener("click", function() {
+    startPage.style.display = "flex";// shows the screen 
+    distancePage.style.display = "none";// hides the distance page
+});
 
 
 
@@ -860,8 +870,24 @@ allslopeButton.addEventListener("click", function() {// the slopw buton on the f
     slopePage.style.display = "flex"; //Shoes this pages 
 })
 
-
-
+alldistanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //Shoes this pages 
+    distancePage.style.display = "flex";// shows this page
+})
 
 
 
@@ -1025,3 +1051,23 @@ slopeButton.addEventListener("click", function() {// the slopw buton on the form
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "flex"; //Shoes this pages 
 })
+
+distanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+    startPage.style.display = "none"; // hides the pages 
+    mathFormulaPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //Shoes this pages 
+    distancePage.style.display = "flex";// shows this page
+})
+

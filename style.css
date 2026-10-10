@@ -9,7 +9,9 @@
 .trianglePerimeterPage,
 .circleAreaPage,
 .circleCircumferencePage,
-.trapezoidAreaPage {
+.trapezoidAreaPage, 
+.slopePage,
+.distancePage {
     display: none;
 }
 
