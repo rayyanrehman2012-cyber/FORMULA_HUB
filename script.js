@@ -484,7 +484,6 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
     }
 });
 
-
 calculateDistance.addEventListener ("click", function() { // if the calculate distance button is pressed
 
     if (distanceY1.value === "" || distanceY2.value === "" ||  distanceX1.value === ""  || distanceX2.value === ""){
