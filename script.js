@@ -240,6 +240,11 @@ const calculatePythagoreanA = document.getElementById("calculatePythagoreanA");/
 const pythagoreanAResult = document.getElementById("pythagoreanAResult");// result 
 
 
+// THESE ARE FOR THE CUBE VOLUME PAGE
+const cubeSide = document.getElementById("cubeSide");// the side value of the cubve 
+const calculateCubeVolume = document.getElementById("calculateCubeVolume"); // the calculate button
+const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the result message/line in the calculator 
+
 
 
 
@@ -907,7 +912,7 @@ pythagoreanBBackButton.addEventListener("click", function(){ // back button on p
     pythagoreanBResult.textContent = "";// removes everything
 });
 
-pythagoreanCBackButton.addEventListener("click", function(){ // back button on pythagorean therom page b
+pythagoreanCBackButton.addEventListener("click", function(){ // back button on pythagorean therom page c
     startPage.style.display = "flex";// shows this screen 
     pythagoreanPageC.style.display = "none";// hides this page 
 
@@ -916,7 +921,16 @@ pythagoreanCBackButton.addEventListener("click", function(){ // back button on p
     pythagoreanCResult.textContent = "";// removes everything
 });
 
-cubeVolumeBackButton.addEventListener("click")
+cubeVolumeBackButton.addEventListener("click"), function(){// back button on the cube volume pages 
+    startPage.style.display = "flex";// shows this screen to everytone 
+    cubeVolumePage.style.display = "none"// hides this pages 
+
+    cubeSide.value = "";// resets the cube value 
+    cubeVolumeResult.textContent = ""; // rests the text you see to a blank 
+    
+}
+
+
 
 
 
@@ -1176,6 +1190,26 @@ allpythagoreanCButton.addEventListener("click", function() {// on formula bage, 
     pythagoreanPageC.style.display = "flex";// show this 
 });
 
+allcubeVolumeButton.addEventListener("click", function() {// if the cube volume button is clicked o the all pages 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "flex";// show this page 
+})
 
 
 
@@ -1435,3 +1469,24 @@ pythagoreanCButton.addEventListener("click", function() {// on formula bage, pyt
     midpointPage.style.display = "none";// hide rhis page
     pythagoreanPageC.style.display = "flex";// show this 
 });
+
+cubeVolumeButton.addEventListener("click", function() {// if the cube volume button is clicked o the math pages 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "flex";// show this page 
+})
