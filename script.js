@@ -78,6 +78,7 @@ const allpythagoreanC = document.getElementById("allpythagoreanC")// button on a
 
 
 
+
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
@@ -93,7 +94,9 @@ const parallelogramAreaButton = document.getElementById("parallelogramAreaButton
 const slopeButton = document.getElementById("slopeButton")// slope calculator  button on all formula pages 
 const distanceButton = document.getElementById("distanceButton")/// this is the distance button on the button page
 const midpointButton = document.getElementById("midpointButton")/// this is the midpoint button on the button page
-
+const pythagoreanA = document.getElementById("pythagoreanA")// button on all formula page 
+const pythagoreanB = document.getElementById("pythagoreanB")// button on all formula page 
+const pythagoreanC = document.getElementById("pythagoreanC")// button on all formula page 
 
 
 
@@ -213,9 +216,27 @@ const midpointResult = document.getElementById("midpointResult");// this is the 
 
 
 
+// THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE C CALCULATOR 
+const pythagoreanCA = document.getElementById("pythagoreanCA");// side a for pythagorean theorm 
+const pythagoreanCB = document.getElementById("pythagoreanCB");// side b 
+const calculatePythagoreanC = document.getElementById("calculatePythagoreanC");// calulate button 
+const pythagoreanCResult = document.getElementById("pythagoreanCResult");// result 
 
 
 
+// THESE ARE FOR THE PYTHAGOREAN THEOREM DIS B CALCULATOR
+const pythagoreanBA = document.getElementById("pythagoreanBA");// side a 
+const pythagoreanBC = document.getElementById("pythagoreanBC");// side C
+const calculatePythagoreanB = documentElementById("calculatePythagoreanB");// calculate button 
+const pythagoreanBResult = document.getElementById("pythagoreanBResult");// resut 
+
+
+
+// THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE A CALCULATOR
+const pythagoreanAB = document.getElementById("pythagoreanAB");// side b
+const pythagoreanAC = document.getElementById("pythagoreanAC");// side c
+const calculatePythagoreanA = documentElementById("calculatePythagoreanA");// calculate button 
+const pythagoreanAResult = documentElementById("pythagoreanAResult");// result 
 
 
 
