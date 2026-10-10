@@ -595,7 +595,7 @@ calculatePythagoreanA.addEventListener ("click", function(){// calculate side a 
 
 });
 
-calculatePythagoreanB.addEventListener ("click", function(){
+calculatePythagoreanB.addEventListener ("click", function(){// if the calculate button is clicked in the pythagorean b pages 
 
     if(pythagoreanBA.value === ""|| pythagoreanBA.value === "0"|| pythagoreanBC.value === ""|| pythagoreanBC.value === "0"){// if the values are blacnk or zero s
         pythagoreanBResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
@@ -622,7 +622,7 @@ calculatePythagoreanB.addEventListener ("click", function(){
 
 });
 
-calculatePythagoreanC.addEventListener ("click", function(){
+calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate button is clicked on the pythagorean c pages
 
     if(pythagoreanCA.value === ""|| pythagoreanCA.value === "0"|| pythagoreanCB.value === ""|| pythagoreanCB.value === "0"){// if the values are blacnk or zero s
         pythagoreanCResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
@@ -642,7 +642,9 @@ calculatePythagoreanC.addEventListener ("click", function(){
 
 });
 
-
+calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
+    if(cubeSide.value ===""||)
+})
 
 
 
