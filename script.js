@@ -261,7 +261,7 @@ calculateRectangleArea.addEventListener("click", function() {// calculate putton
 
         const area  = length*width;// calculates the area of the rectangle (LENGH TIMES WIDHT)
 
-        rectangleAreaResult.textContent = "Area = " + area + " Units Squared";// displays the area of the rectangle on the screen 
+        rectangleAreaResult.textContent = "AREA = " + area + " UNITS SQUARED";// displays the area of the rectangle on the screen 
         rectangleAreaResult.style.color = "rgb(11,61,46)"// changes the colour of the text to geen
     }
 });
@@ -279,7 +279,7 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
 
         const perimeter  = 2*(perimeterlength + perimeterwidth);// calculates the perimeter ( 2 times the lenght and width combained)
 
-        rectanglePerimeterResult.textContent = "Perimeter = " + perimeter + " Units";// displays the perimeter of the rectangle on the screen
+        rectanglePerimeterResult.textContent = "PERIMETER = " + perimeter + " UNITS";// displays the perimeter of the rectangle on the screen
         rectanglePerimeterResult.style.color = "rgb(11,61,46)"// changes the color to green 
     }
 });
@@ -295,7 +295,7 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
 
     const SquareArea  = DimenstionSquareArea * DimenstionSquareArea;// calculates the area (L x W)
 
-    squareAreaResult.textContent = "Area = " + SquareArea + " Units Squared";// displays the area on the screen 
+    squareAreaResult.textContent = "AREA = " + SquareArea + " UNITS SQUARED";// displays the area on the screen 
     squareAreaResult.style.color = "rgb(11,61,46)"// changes the color to green
 
     }
@@ -313,7 +313,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
     
     const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;// this shows the operation L + L + L + L + PERIMETER
     
-    squarePerimeterResult.textContent = "Perimeter = " + SquarePerimeter + " Units";// displays the perimeter  of the square 
+    squarePerimeterResult.textContent = "PERIMETER = " + SquarePerimeter + " UNITS";// displays the perimeter  of the square 
     squarePerimeterResult.style.color = "rgb(11,61,46)"// adds a green color
 
     }
@@ -333,7 +333,7 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 
     const triangleArea = ((heightTriangleArea * baseTriangleArea)/2);// base times height divided by 2 is te area 
 
-    triangleAreaResult.textContent = "Area = " + triangleArea + " Units Squared"// displays the area of the tringal 
+    triangleAreaResult.textContent = "AREA = " + triangleArea + " UNITS SQUARED"// displays the area of the tringal 
     triangleAreaResult.style.color = "rgb(11,61,46)" // changes the colour to green for the text 
     }
 });
@@ -351,7 +351,7 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
         const trianglePerimeterC = Number(trianglePerimeterSideC.value);// stors the side of the triangles 
 
         const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;// this si the what calculatesthe perimeter 
-        trianglePerimeterResult.textContent = "Perimeter = " + trianglePerimeter + " Units"// this will displat the calculation 
+        trianglePerimeterResult.textContent = "PERIMETER = " + trianglePerimeter + " UNITS"// this will displat the calculation 
         trianglePerimeterResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
     }
 
@@ -369,7 +369,7 @@ calculateCircleArea.addEventListener("click", function() {// calculates the area
         const circleArea = pi * (circleRadius * circleRadius);// this calculates the area of the circle 
 
         const circleAreaRounded = circleArea.toFixed(3)// this rounds the answer to 3 decimal places
-        circleAreaResult.textContent = "Area = " + circleAreaRounded  + " Units Squared"// this will display the circles area 
+        circleAreaResult.textContent = "AREA = " + circleAreaRounded  + " UNITS SQUARED"// this will display the circles area 
         circleAreaResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
 
     }
@@ -389,13 +389,13 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
     else if ( circleDiameter !=="" && circleDiameter !== "0"){//if diameter is entered and the radius is not 0
         CircleCircumference = (pi * Number(circleDiameter)); // pie Diameter is equal to circumpference 
         circleCircumferenceResult.style.color = "rgb(11,61,46)"// change the color to green 
-        circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units" // display 
+        circleCircumferenceResult.textContent = "CIRCUMFERENCE = " + CircleCircumference + " UNITS" // display 
     }
 
     else if (circleRadius2 !=="" && circleRadius2 !== "0"){// if the radius is entered  and the radius is not 0
         CircleCircumference = 2*(pi * Number(circleRadius2)); // 2 times pie time r
         circleCircumferenceResult.style.color = "rgb(11,61,46)"// change the color to green 
-        circleCircumferenceResult.textContent = "Circumference = " + CircleCircumference + " Units"//display 
+        circleCircumferenceResult.textContent = "CIRCUMFERENCE = " + CircleCircumference + " UNITS"//display 
     }
 
     else {
@@ -418,7 +418,7 @@ calculateTrapezoidArea.addEventListener ("click", function() {// when u click ca
 
         const trapezoidArea = (((trapezoidBase1 + trapezoidBase2 ) /2 ) * trapezoidHeight) // base1 plus base 2 /2 times height
 
-        trapezoidAreaResult.textContent = "Area = " + trapezoidArea + " Units Squared"// what to display
+        trapezoidAreaResult.textContent = "AREA = " + trapezoidArea + " UNITS SQUARED"// what to display
         trapezoidAreaResult.style.color = "rgb(11,61,46)"// change the color to green 
 
     }
@@ -440,7 +440,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
 
         const QuadPerimeter = SideA + SideB + SideC + SideD;// the perimiter of the quadilateral 
 
-        quadrilateralPerimeterResult.textContent = "Perimeter = " + QuadPerimeter + " Units";// this is what is shos
+        quadrilateralPerimeterResult.textContent = "PERIMETER = " + QuadPerimeter + " UNITS";// this is what is shos
         quadrilateralPerimeterResult.style.color = "rgb(11,61,46)"// change the color to green 
     }
 });
@@ -458,7 +458,7 @@ calculateParallelogramArea.addEventListener ("click", function() {
 
     const parallelogramArea = Base * Height // calculates and stores the value of the area 
 
-    parallelogramAreaResult.textContent = " Area = " + parallelogramArea + " Units Squared"; // this is the line that will be shown 
+    parallelogramAreaResult.textContent = " AREA = " + parallelogramArea + " UNITS SQUARED"; // this is the line that will be shown 
     parallelogramAreaResult.style.color = "rgb(11,61,46)"// change the color to green
     }
 });
@@ -498,11 +498,11 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
             const slope = rise / run;// the slope 
 
             if (Number.isInteger(slope)) {// if the intreger is a whole number 
-                slopeResult.textContent = "Slope = " + slope; // // show the whole number 
+                slopeResult.textContent = "SLOPE = " + slope; // // show the whole number 
             }
 
             else {// if its not a whole number
-                slopeResult.textContent = "Slope = " + rise + "/" + run; // shows the slope as a fraction 
+                slopeResult.textContent = "SLOPE = " + rise + "/" + run; // shows the slope as a fraction 
             }
 
             slopeResult.style.color = "rgb(11,61,46)"// changes the color to greent 
@@ -528,7 +528,7 @@ calculateDistance.addEventListener ("click", function() { // if the calculate di
 
         const distance = Math.sqrt (changeX ** 2 + changeY ** 2)// the distance formula
 
-        distanceResult.textContent = "Distance = " + distance.toFixed(3) + " Units";
+        distanceResult.textContent = "DISTANCE = " + distance.toFixed(3) + " UNITS";
         distanceResult.style.color = "rgb(11,61,46)"// changes the color to green 
     }
 
@@ -554,13 +554,38 @@ calculateMidpoint.addEventListener ("click", function() {
             const midpointX = (x1 + x2)/2// midpoint calculations for x 
             const midpointY = (y1 + y2)/2// midpoint calculation for why 
 
-            midpointResult.textContent = "Midpoint = (" + midpointX + ", " + midpointY + ")"; // shows this 
+            midpointResult.textContent = "MIDPOINT = (" + midpointX + ", " + midpointY + ")"; // shows this 
             midpointResult.style.color = "rgb(11,61,46)";// shows this in green 
         }
     }
-})
+});
 
+calculatePythagoreanA.addEventListener ("click", function(){
 
+    if(pythagoreanAB === ""|| pythagoreanAB === "0"|| pythagoreanAC === ""|| pythagoreanAC === "0"){// if the values are blacnk or zero s
+        pythagoreanAResult.textContent = "ERROR, PLEASE ENTER 2 VALUES"; // show this 
+        pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
+    }   
+
+    else{// if the values are fine 
+        const b = Number(pythagoreanAB.value);// cold side b value 
+        const c = Number(pythagoreanAC.value);// holds side c value 
+
+        if ( c<= b ){// if the hyponeuse is smaller then side b 
+            pythagoreanAResult.textContent = "ERROR, C MUST BE GREATER THAN B"; // show this 
+            pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
+        }
+
+        else{// if the values are fines
+            const a = Math.sqrt(c ** 2 - b ** 2);; formula 
+
+            pythagoreanAResult.textContent = "SIDE A = " + a + " UNITS"; // show this 
+            pythagoreanAResult.style.color = "rgb(11,61,46)";// red colr
+
+        }
+    }
+
+});
 
 
 
