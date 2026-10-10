@@ -419,7 +419,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
     }
 });
 
-calculateParallelogramArea.addEventListener ("click", function () {
+calculateParallelogramArea.addEventListener ("click", function() {
 
     if (parallelogramBase.value === "" || parallelogramBase.value === "0" || parallelogramHeight.value === "" || parallelogramHeight.value === "0"){
         parallelogramAreaResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // the error mesages
@@ -437,7 +437,7 @@ calculateParallelogramArea.addEventListener ("click", function () {
     }
 });
 
-calculateSlope.addEventListener ("click", function () { // if the calculate slipe button is pressed 
+calculateSlope.addEventListener ("click", function() { // if the calculate slipe button is pressed 
 
     if (slopeY1.value === "" || slopeY2.value === "" ||  slopeX1.value === ""  || slopeX2.value === ""){
        slopeResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
@@ -453,40 +453,39 @@ calculateSlope.addEventListener ("click", function () { // if the calculate slip
     const rise = slopey2 - slopey1;// change in y
     const run = slopex2 - slopex1;// chang in x 
 
-    if (run === 0 && rise !== 0){// if the run is zero 
-        slopeResult.textContent = "VERTICAL LINE, SLOPE IS UNDIFINED";// its a verticle line 
-        slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
-    }
-
-    else if (rise === 0 && run !== 0){// if the rise is 0 then 
-        slopeResult.textContent = "HORIZONTAL LINE, SLOPE IS 0";// its a horizontal  line 
-        slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
-    }
-
-    else if (rise === 0 && run === 0){// if bot rise and run are the same 
-        slopeResult.textContent = "YOU ENTERED THE SAME POINT TWICE!";// its the same point, no slope 
-        slopeResult.style.color = "rgb(102, 21, 7)"// changes the color to red
-    }
-
-    else {
-        const slope = rise / run;// the slope 
-
-        if (Number.isInteger(slope)) {// if the intreger is a whole number 
-            slopeResult.textContent = "Slope = " + slope; // // show the whole number 
+        if (run === 0 && rise !== 0){// if the run is zero 
+            slopeResult.textContent = "VERTICAL LINE, SLOPE IS UNDIFINED";// its a verticle line 
+            slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
         }
 
-        else {// if its not a whole number
-            slopeResult.textContent = "Slope = " + rise + "/" + run; // shows the slope as a fraction 
+        else if (rise === 0 && run !== 0){// if the rise is 0 then 
+            slopeResult.textContent = "HORIZONTAL LINE, SLOPE IS 0";// its a horizontal  line 
+            slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
         }
 
-        slopeResult.style.color = "rgb(11,61,46)"// changes the color to greent 
+        else if (rise === 0 && run === 0){// if bot rise and run are the same 
+            slopeResult.textContent = "YOU ENTERED THE SAME POINT TWICE!";// its the same point, no slope 
+            slopeResult.style.color = "rgb(102, 21, 7)"// changes the color to red
+        }
+
+        else {
+            const slope = rise / run;// the slope 
+
+            if (Number.isInteger(slope)) {// if the intreger is a whole number 
+                slopeResult.textContent = "Slope = " + slope; // // show the whole number 
+            }
+
+            else {// if its not a whole number
+                slopeResult.textContent = "Slope = " + rise + "/" + run; // shows the slope as a fraction 
+            }
+
+            slopeResult.style.color = "rgb(11,61,46)"// changes the color to greent 
+        }
     }
+});
 
 
-}});
-
-
-calculateDistance.addEventListener ("click", function () { // if the calculate distance button is pressed
+calculateDistance.addEventListener ("click", function() { // if the calculate distance button is pressed
 
     if (distanceY1.value === "" || distanceY2.value === "" ||  distanceX1.value === ""  || distanceX2.value === ""){
         distanceResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
@@ -509,6 +508,38 @@ calculateDistance.addEventListener ("click", function () { // if the calculate d
     }
 
 });
+
+calculateMidpoint.addEventListener ("click", function() {
+    if (midpointX1.value === "" ||midpointY1.value === "" || midpointX2.value === "" || midpointY2.value === "" ){
+        midpointResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"// error mesage 
+        midpointResult.style.color = "rgb(102,21,7)"// red color 
+    }
+
+    else {
+        const x1 = Number(midpointX1.value);
+        const x2 = Number(midpointX2.value);
+        const y1 = Number(midpointY1.value);
+        const y2 = Number(midpointY2.value);
+
+        if (x1 === x2 && y1 === y2){// if the points are the same 
+            midpointResult.textContent = "ERROR, PLEASE USE 2 DIFFERENT POINTS"; // shows this 
+            midpointResult.style.color = "rgb(102,21,7)";// shows this in green
+        }
+        else  {//if there not the  same 
+            const midpointX = (x1 + x2)/2// midpoint calculations for x 
+            const midpointY = (y1 + y2)/2// midpoint calculation for why 
+
+            midpointResult.textContent = "Midpoint = (" + midpointX + ", " + midpointY + ")"; // shows this 
+            midpointResult.style.color = "rgb(11,61,46)";// shows this in green 
+        }
+    }
+})
+
+
+
+
+
+
 
 
 
