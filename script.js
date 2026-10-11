@@ -719,7 +719,7 @@ calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calcula
 calculateRectanglePrismVolume.addEventListener ("click", function(){// if the calculate button is clicked 
 
     if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeBase.value === "0"|| rectanglePrismVolumeBase.value === "" ||rectanglePrismVolumeWidth.value === "0"|| rectanglePrismVolumeWidth.value === ""){//if the values are not valide
-        rectanglePrismVolumeResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
+        rectanglePrismVolumeResult.textContent = "ERROR, PLEASE ENTER 3 VALID VALUE"; //shows this error message 
         rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
@@ -1393,6 +1393,7 @@ allrectanglePrismVolumeButton.addEventListener("click", function(){// if the cub
     cubeVolumePage.style.display = "none";// hid this page 
     rectanglePrismVolumePage.style.display = "flex"// shows this page
 })
+
 
 
 
