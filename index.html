@@ -50,6 +50,7 @@
                     <button id = "allrectanglePrismPerimeterButton" class="formulaButton">RECTANGULAR PRISM PERIMETER</button>
                     <button id = "allrectanglePrismSurfaceAreaButton" class="formulaButton">RECTANGULAR PRISM SURFACE AREA</button>
                     <button id = "allcylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
+                    <button id = "allcylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                     <button class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
@@ -100,7 +101,8 @@
                 <button id = "rectanglePrismVolumeButton" class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                 <button id = "rectanglePrismPerimeterButton" class="formulaButton">RECTANGULAR PRISM PERIMETER</button>
                 <button id = "rectanglePrismSurfaceAreaButton" class="formulaButton">RECTANGULAR PRISM SURFACE AREA</button>
-                <button id ="allcylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
+                <button id = "cylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
+                <button id = "cylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                 <button class="formulaButton">CONE VOLUME</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
@@ -506,6 +508,22 @@
                 <P id = "cylinderVolumeResult"></P>
             </div>
             <button id = "cylinderVolumeBackButton">BACK</button>
+        </main>
+
+        <main class = "cylinderSurfaceAreaPage">
+            <h1>CYLINDER SURFACE AREA</h1>
+            <div class = "calculatorBox">
+
+                <label for="cylinderSurfaceAreaHeight"> HEIGHT</label>
+                <input id = "cylinderSurfaceAreaHeight" type = "number">
+
+                <label for= "cylinderSurfaceAreaRadius"> RADIUS</label>
+                <input id = "cylinderSurfaceAreaRadius" type = "number">
+
+                <button id = "calculateCylinderSurfaceArea">CALCULATE</button>
+                <P id = "cylinderSurfaceAreaResult"></P>
+            </div>
+            <button id = "cylinderSurfaceAreaBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
