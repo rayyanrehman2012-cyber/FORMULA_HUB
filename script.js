@@ -35,7 +35,7 @@ const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackBu
 const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
 const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
 const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
-
+const cylinderVolumeBackButton = document.getElementById("cylinderVolumePage");// this is the the back button on the cilinder volume page 
 
 
 
@@ -69,7 +69,7 @@ const cubeSurfaceAreaPage = document.querySelector(".cubeSurfaceAreaPage");// th
 const rectanglePrismVolumePage = document.querySelector(".rectanglePrismVolumePage");// this is the rectangle prims volume pages 
 const rectanglePrismPerimeterPage = document.querySelector(".rectanglePrismPerimeterPage");// this is the the rectangle prisim perimeter page 
 const rectanglePrismSurfaceAreaPage = document.querySelector(".rectanglePrismSurfaceAreaPage");// this is the the rectangle prisim perimeter page 
-
+const cylinderVolumePage = document.querySelector(".cylinderVolumePage");// this is the cylinder volume page
 
 
 
@@ -100,6 +100,7 @@ const allcubeSurfaceAreaButton = document.getElementById("allcubeSurfaceAreaButt
 const allrectanglePrismVolumeButton = document.getElementById("allrectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
 const allrectanglePrismPerimeterButton = document.getElementById("allrectanglePrismPerimeterButton");//This is the perimeter for the rectangl prisim on the all formula page 
 const allrectanglePrismSurfaceAreaButton = document.getElementById("allrectanglePrismSurfaceAreaButton");//This is the perimeter for the rectangl prisim on the all formula page 
+const allcylinderVolumeButton = document.getElementById("allcylinderVolumeButton");// this is the button on the all formula page 
 
 
 
@@ -130,6 +131,7 @@ const cubeSurfaceAreaButton = document.getElementById("cubeSurfaceAreaButton");/
 const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolumeButton");// this si the rectangle prism volume button on the math formula page
 const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPerimeterButon");//this is the math page button 
 const rectanglePrismSurfaceAreaButton = document.getElementById("rectanglePrismSurfaceAreaButton")// this is the rectanglular prisim surfac3 area button on the math page 
+const cylinderVolumeButton = document.getElementById("cylinderVolumeButton");// this is the button on the math formula page 
 
 
 
@@ -308,6 +310,11 @@ const calculateRectanglePrismSurfaceArea = document.getElementById("calculateRec
 const rectanglePrismSurfaceAreaResult = document.getElementById("rectanglePrismSurfaceAreaResult")// this is the result line 
 
 
+// THESE ARE FOR THE CYLINDER VOLUM CALCULATOR
+const cylinderVolumeHeight = document.getElementById("cylinderVolumeHeight");// this is the height of the cilynder 
+const cylinderVolumeRadius = document.getElementById("cylinderVolumeRadius");// this is the radius  of the cilynder 
+const calculateCylinderVolume = document.getElementById("calculateCylinderVolume");// this is the caluclate buton 
+const cylinderVolumeResult = document.getElementById("cylinderVolumeResult")// this is the result line 
 
 
 
@@ -810,6 +817,25 @@ calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){
 
 })
 
+calculateCylinderVolume.addEventListener ("click", function(){
+
+    if(cylinderVolumeHeight.value === "0"||cylinderVolumeHeight.value === ""||cylinderVolumeRadius.value === "0"||cylinderVolumeRadius.value === ""){ // if no values were entered or they are invalid 
+        rectanglePrismSurfaceAreaResult.textContent = "ERROR,PLEASE ENTER 3 VALID VALUES"; //the error message
+        rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    
+    }
+
+    else {//if everything is fine 
+        const Radius = Number(cylinderVolumeRadius.value);//the cariable stores the calue of the rectangle  lenght
+        const Height = Number(cylinderVolumeHeight.value);//the cariable stores the calue of the rectangle base
+
+        const Volume = pi * Radius * Radius * Height ; //this is the formula 
+        cylinderVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// displays this 
+        cylinderVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+})
+
 
 
 
@@ -1141,7 +1167,14 @@ rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){
     rectanglePrismSurfaceAreaResult.textContent = "";// restets the text contents 
 })
 
+cylinderVolumeBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    cylinderVolumePage.style.display = "none";// hides this screen 
 
+    cylinderVolumeHeight.value = "";// rests the input value 
+    cylinderVolumeRadius.value = "";// rests the input value 
+    cylinderVolumeResult.textContent = "";// restets the text contents 
+})
 
 
 
@@ -1536,6 +1569,28 @@ allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if th
     rectanglePrismSurfaceAreaPage.style.display = "flex"// shows this page
 })
 
+allcylinderVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    cylinderVolumePage.style.display = "flex"// shows this page
+})
+
 
 
 
@@ -1926,4 +1981,27 @@ rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the c
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     rectanglePrismSurfaceAreaPage.style.display = "flex"// shows this page
+})
+
+
+cylinderVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    cylinderVolumePage.style.display = "flex"// shows this page
 })
