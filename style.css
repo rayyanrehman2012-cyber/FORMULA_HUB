@@ -27,7 +27,6 @@
     display: none;
 }
 
-
 body {
     margin:0;
     font-family: 'Baloo 2', sans-serif;
@@ -62,8 +61,6 @@ body {
     letter-spacing: 3px;
     text-align: center;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
-
- 
 }
 
 p {
@@ -75,7 +72,6 @@ p {
     text-decoration-color: rgba(11, 61, 46, 0.89);
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
-
 }
 
 .categoryButtons{
@@ -107,8 +103,6 @@ p {
     transform: scale(1.2);
     cursor:pointer;
 }
-
-
 
 .formulaPage {
     min-height: 100vh;
@@ -154,14 +148,12 @@ p {
 
     cursor:pointer;
     transition: 0.2s ease;
-
 }
 
 #backButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
-
 }
 
 .mathSection, .physicsSection{
@@ -229,7 +221,6 @@ p {
     border: 8px solid rgb(255,255,255);
     border-radius: 35px 60px 45px 70px;
     pointer-events:none;
-
 }
 
 .mathFormulaPage h1{
@@ -239,9 +230,7 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
-
 
 #mathBackButton {
     border:none;
@@ -260,7 +249,6 @@ p {
 
     cursor:pointer;
     transition: 0.2s ease;
-
 }
 
 #mathBackButton:hover {
@@ -286,6 +274,7 @@ p {
     border-radius: 35px 60px 45px 70px;
     pointer-events: none;
 }
+
 .physicsFormulaPage h1 {
     margin-top: 80px;
     font-size:65px;
@@ -336,7 +325,6 @@ p {
     border: 8px solid rgb(255,255,255);
     border-radius: 35px 60px 45px 70px;
     pointer-events:none;
-
 }
 
 .rectangleAreaPage h1 {
@@ -356,16 +344,10 @@ p {
     width:600px;
     height:270px;
     padding:35px;
-
-
-
-
-
     border-radius:25px;
     background: rgba(247, 249, 248, 0.163);
     box-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
 }
-
 
 .calculatorBox label {
     color: rgb(11,61,46);
@@ -444,7 +426,6 @@ p {
     transform:scale(1.2);
 }
 
-
 .squareAreaPage{
     min-height:100vh;
     display:none;
@@ -452,7 +433,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .squareAreaPage::before{
     content: "";
@@ -471,7 +451,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #squareAreaBackButton {
@@ -488,7 +467,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -498,7 +476,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #squareAreaResult {
     color: rgb(11,61,46);
@@ -533,8 +510,6 @@ p {
     height: 200px;
 }
 
-
-
 .rectanglePerimeterPage {
     min-height:100vh;
     display:none;
@@ -551,7 +526,6 @@ p {
     border: 8px solid rgb(255,255,255);
     border-radius: 35px 60px 45px 70px;
     pointer-events:none;
-
 }
 
 .rectanglePerimeterPage h1 {
@@ -562,7 +536,6 @@ p {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 .calculatorBox input:focus {
     outline: none;
@@ -583,7 +556,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -623,8 +595,6 @@ p {
     transform:scale(1.2);
 }
 
-
-
 .squarePerimeterPage{
     min-height:100vh;
     display:none;
@@ -632,7 +602,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .squarePerimeterPage::before{
     content: "";
@@ -668,7 +637,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -678,7 +646,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #squarePerimeterResult {
     color: rgb(11,61,46);
@@ -740,7 +707,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #triangleAreaBackButton {
@@ -757,7 +723,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -824,7 +789,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #trianglePerimeterBackButton {
@@ -889,7 +853,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 .circleAreaPage{
     min-height:100vh;
     display:none;
@@ -897,7 +860,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .circleAreaPage::before{
     content: "";
@@ -916,7 +878,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #circleAreaBackButton {
@@ -933,7 +894,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -943,7 +903,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #circleAreaResult {
     color: rgb(11,61,46);
@@ -989,7 +948,6 @@ p {
     position:relative
 }
 
-
 .circleCircumferencePage::before{
     content: "";
     position:absolute;
@@ -1007,7 +965,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #circleCircumferenceBackButton {
@@ -1024,7 +981,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1034,7 +990,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #circleCircumferenceResult {
     color: rgb(11,61,46);
@@ -1072,7 +1027,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 .trapezoidAreaPage{
     min-height:100vh;
     display:none;
@@ -1080,7 +1034,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .trapezoidAreaPage::before{
     content: "";
@@ -1099,7 +1052,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #trapezoidAreaBackButton {
@@ -1116,7 +1068,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1164,9 +1115,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
 .quadrilateralPerimeterPage{
     min-height:100vh;
     display:none;
@@ -1174,7 +1122,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .quadrilateralPerimeterPage::before{
     content: "";
@@ -1193,7 +1140,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #quadrilateralPerimeterBackButton {
@@ -1210,7 +1156,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1220,7 +1165,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #quadrilateralPerimeterResult {
     color: rgb(11,61,46);
@@ -1258,13 +1202,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
 .parallelogramAreaPage{
     min-height:100vh;
     display:none;
@@ -1272,7 +1209,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .parallelogramAreaPage::before{
     content: "";
@@ -1308,7 +1244,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1318,7 +1253,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #parallelogramAreaResult {
     color: rgb(11,61,46);
@@ -1356,9 +1290,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
 .slopePage{
     min-height:100vh;
     display:none;
@@ -1366,7 +1297,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .slopePage::before{
     content: "";
@@ -1385,7 +1315,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #slopeBackButton {
@@ -1402,7 +1331,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1412,7 +1340,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #slopeResult {
     color: rgb(11,61,46);
@@ -1450,11 +1377,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
-
 .distancePage{
     min-height:100vh;
     display:none;
@@ -1462,7 +1384,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .distancePage::before{
     content: "";
@@ -1481,7 +1402,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #distanceBackButton {
@@ -1498,7 +1418,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1508,7 +1427,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #distanceResult {
     color: rgb(11,61,46);
@@ -1546,9 +1464,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
 .midpointPage{
     min-height:100vh;
     display:none;
@@ -1556,7 +1471,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .midpointPage::before{
     content: "";
@@ -1575,7 +1489,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #midpointBackButton {
@@ -1592,7 +1505,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1602,7 +1514,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #midpointResult {
     color: rgb(11,61,46);
@@ -1640,7 +1551,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 .pythagoreanPageA{
     min-height:100vh;
     display:none;
@@ -1648,7 +1558,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .pythagoreanPageA::before{
     content: "";
@@ -1668,7 +1577,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #pythagoreanABackButton {
@@ -1685,7 +1593,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1695,7 +1602,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #pythagoreanAResult {
     color: rgb(11,61,46);
@@ -1733,7 +1639,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 .pythagoreanPageB{
     min-height:100vh;
     display:none;
@@ -1741,7 +1646,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .pythagoreanPageB::before{
     content: "";
@@ -1778,7 +1682,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1788,7 +1691,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #pythagoreanBResult {
     color: rgb(11,61,46);
@@ -1826,10 +1728,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
 .pythagoreanPageC{
     min-height:100vh;
     display:none;
@@ -1837,7 +1735,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .pythagoreanPageC::before{
     content: "";
@@ -1857,7 +1754,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #pythagoreanCBackButton {
@@ -1874,7 +1770,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -1884,7 +1779,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #pythagoreanCResult {
     color: rgb(11,61,46);
@@ -1922,7 +1816,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 .cubeVolumePage{
     min-height:100vh;
     display:none;
@@ -1930,7 +1823,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .cubeVolumePage::before{
     content: "";
@@ -1950,7 +1842,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #cubeVolumeBackButton {
@@ -1967,7 +1858,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2016,7 +1906,6 @@ p {
 }
 
 
-
 .cubePerimeterPage{
     min-height:100vh;
     display:none;
@@ -2044,7 +1933,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #cubePerimeterBackButton {
@@ -2061,7 +1949,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2110,10 +1997,6 @@ p {
 }
 
 
-
-
-
-
 .cubeSurfaceAreaPage{
     min-height:100vh;
     display:none;
@@ -2141,7 +2024,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #cubeSurfaceAreaBackButton {
@@ -2158,7 +2040,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2206,10 +2087,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
 .rectanglePrismVolumePage{
     min-height:100vh;
     display:none;
@@ -2217,7 +2094,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .rectanglePrismVolumePage::before{
     content: "";
@@ -2237,7 +2113,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #rectanglePrismVolumeBackButton {
@@ -2254,7 +2129,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2264,7 +2138,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #rectanglePrismVolumeResult {
     color: rgb(11,61,46);
@@ -2302,9 +2175,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
 .rectanglePrismPerimeterPage{
     min-height:100vh;
     display:none;
@@ -2312,7 +2182,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .rectanglePrismPerimeterPage::before{
     content: "";
@@ -2332,7 +2201,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #rectanglePrismPerimeterBackButton {
@@ -2349,7 +2217,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2359,7 +2226,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #rectanglePrismPerimeterResult {
     color: rgb(11,61,46);
@@ -2397,11 +2263,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
-
 .rectanglePrismSurfaceAreaPage{
     min-height:100vh;
     display:none;
@@ -2409,7 +2270,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .rectanglePrismSurfaceAreaPage::before{
     content: "";
@@ -2446,7 +2306,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2456,7 +2315,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #rectanglePrismSurfaceAreaResult {
     color: rgb(11,61,46);
@@ -2494,8 +2352,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
 .cylinderVolumePage{
     min-height:100vh;
     display:none;
@@ -2503,7 +2359,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .cylinderVolumePage::before{
     content: "";
@@ -2523,7 +2378,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #cylinderVolumeBackButton {
@@ -2540,7 +2394,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2550,7 +2403,6 @@ p {
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #cylinderVolumeResult {
     color: rgb(11,61,46);
@@ -2588,10 +2440,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-
-
-
 .cylinderSurfaceAreaPage{
     min-height:100vh;
     display:none;
@@ -2599,7 +2447,6 @@ p {
     align-items: center;
     position:relative
 }
-
 
 .cylinderSurfaceAreaPage::before{
     content: "";
@@ -2619,7 +2466,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #cylinderSurfaceAreaBackButton {
@@ -2636,7 +2482,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2685,7 +2530,6 @@ p {
 }
 
 
-
 .cylinderPerimeterPage{
     min-height:100vh;
     display:none;
@@ -2713,7 +2557,6 @@ p {
     letter-spacing:3px;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
-
 }
 
 #cylinderPerimeterBackButton {
@@ -2730,7 +2573,6 @@ p {
     top: 35px;
     left: 35px;
     box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
-
     cursor:pointer;
     transition: 0.2s ease;
 }
@@ -2772,6 +2614,94 @@ p {
 }
 
 .cylinderPerimeterPage .calculatorBox {
+    top: 10px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.radiusPage{
+    min-height:100vh;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    position:relative
+}
+
+.radiusPage::before{
+    content: "";
+    position:absolute;
+    inset: 12px;
+    min-height: calc(100% - 24px);
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events:none;
+}
+
+.radiusPage h1 {
+    margin-top:80px;
+    font-size:65px;
+    text-align: center;
+    font-weight:800;
+    letter-spacing:3px;
+    text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
+    font-family: 'Baloo 2', sans-serif;
+}
+
+#radiusBackButton {
+    border:none;
+    border-radius:15px;
+    background:rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    width: 80px;
+    height: 35px;
+    position:absolute;
+    top: 35px;
+    left: 35px;
+    box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
+    cursor:pointer;
+    transition: 0.2s ease;
+}
+
+#radiusBackButton:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+#radiusResult {
+    color: rgb(11,61,46);
+    font-size:24px;
+    font-weight:800;
+    margin:15px 0 0;
+}
+
+#calculateRadius{
+    border: none;
+    border-radius:15px;
+    background: rgb(11,61,46);
+    color: rgb(247,249,248);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 30px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top:5px;
+}
+
+#calculateRadius:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+.radiusPage .calculatorBox {
     top: 10px;
     height: auto;
     padding-bottom: 20px;
