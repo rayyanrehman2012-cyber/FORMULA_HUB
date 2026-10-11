@@ -52,6 +52,8 @@
                     <button id = "allcylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                     <button id = "allcylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                     <button id = "allcylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
+                    <button id = "allradiusButton" class="formulaButton">RADIUS CALCULATOR</button>
+                    <button id = "alldiameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
                     <button class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
@@ -105,6 +107,8 @@
                 <button id = "cylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                 <button id = "cylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                 <button id = "cylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
+                <button id = "radiusButton" class="formulaButton">RADIUS CALCULATOR</button>
+                <button id = "diameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
                 <button class="formulaButton">CONE VOLUME</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
@@ -539,6 +543,19 @@
                 <P id = "cylinderPerimeterResult"></P>
             </div>
             <button id = "cylinderPerimeterBackButton">BACK</button>
+        </main>
+
+        <main class = "radiusPage">
+            <h1>CYLINDER PERIMITER</h1>
+            <div class = "calculatorBox">
+
+                <label for= "radiusDiameter"> RADIUS</label>
+                <input id = "radiusDiameter" type = "number">
+
+                <button id = "calculateRadius">CALCULATE</button>
+                <P id = "radiusResult"></P>
+            </div>
+            <button id = "radiusBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
