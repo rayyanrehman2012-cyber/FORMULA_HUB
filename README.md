@@ -52,17 +52,19 @@ The website starts of on the front page. The front page contains a short descrip
 - cylinder surface area page 
 - cylinger perimeter pages 
 - more error messages for each caluclator 
+- cone volume function and page 
+- radius function and page calculator 
+- diameter calculater, function and page 
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 3)
 - sound effects when you click on buttons so that it feels premium ish 
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
-- some more physics formulas 
+- doing the physics formulas 
 - some more math formulas 
-- finish all the remaining formulas 
-- possable a serch function that lets you serch and scrol to you desired formula 
+- possable a search function that lets you search and scroll to you desired formula 
 - a earase button in each calculator that erases / clears the operation othimes 
--  a basic calculator tap, that lets a person yous a calculatore if they want to 
+-  a basic calculator tab, that lets a person yous a calculatore if they want to 
 - some more formulas that arnt from math or physics,
 
 @Zayan TELL ME MORE IDEAS HERE SO THAT WE HAVE A BETTER LIST AND IDE OF WHAT TO DO NECT !!!
