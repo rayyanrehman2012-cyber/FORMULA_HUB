@@ -45,6 +45,8 @@ const radiusBackButton = document.getElementById("radiusBackButton");// this is 
 const diameterBackButton = document.getElementById("diameterBackButton");// this is the dimeter back button 
 const coneVolumeBackButton = document.getElementById("coneVolumeBackButton");// this is the cone volume back button 
 const conePerimeterBackButton = document.getElementById("conePerimeterBackButton");// this is the come perimiter page back buttons 
+const coneSurfaceAreaBackButton = document.getElementById("coneSurfaceAreaBackButton");// this is the cone surface are back button 
+
 
 
 
@@ -87,6 +89,7 @@ const radiusPage = document.querySelector(".radiusPage");// this is the radius p
 const diameterPage = document.querySelector(".diameterPage");// this is the diameter calculator pages 
 const coneVolumePage = document.querySelector(".coneVolumePage")// this is the cone volume page 
 const conePerimeterPage = document.querySelector(".conePerimeterPage");// this is the cone perimeter page 
+const coneSurfaceAreaPage = document.querySelector(".coneSurfaceAreaPage");// this is the cos surface area page
 
 
 
@@ -123,6 +126,7 @@ const allradiusButton = document.getElementById("allradiusButton");// this is th
 const alldiameterButton = document.getElementById("alldiameterButton");// this is the redius button on the all formula page 
 const allconeVolumeButton = document.getElementById("allconeVolumeButton");// this is the cone volume button on the all formula button 
 const allconePerimeterButton = document.getElementById("allconePerimeterButton");// this is the cone perimeter button on the all formula screen 
+const allconeSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");// this is the cone Surface are page 
 
 
 
@@ -159,9 +163,7 @@ const radiusButton = document.getElementById("radiusButton");// this is the radi
 const diameterButton = document.getElementById("diameterButton");// this is the diameter button on the math formula pages
 const coneVolumeButton = document.getElementById("coneVolumeButton");// this is the cone volume button on the all formula button 
 const conePerimeterButton = document.getElementById("conePerimeterButton");// this is the cone perimeter button located on the math formula page 
-
-
-
+const coneSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");// this is the cone surface area button on the math only page 
 
 
 
@@ -328,14 +330,12 @@ const calculateRectanglePrismPerimeter = document.getElementById("calculateRecta
 const rectanglePrismPerimeterResult = document.getElementById("rectanglePrismPerimeterResult")// this is the result line 
 
 
-
 // THESE ARE FOR THE RECTANGLE PRISIM SURFACE ARE CALCULATOR
 const rectanglePrismSurfaceAreaLength = document.getElementById("rectanglePrismSurfaceAreaLength");// this is the lenght imput for the rectangle surface are 
 const rectanglePrismSurfaceAreaWidth = document.getElementById("rectanglePrismSurfaceAreaWidth");// this is the Widht imput for the rectangle surface are 
 const rectanglePrismSurfaceAreaHeight = document.getElementById("rectanglePrismSurfaceAreaHeight");// this is the height imput for the rectangle surface are 
 const calculateRectanglePrismSurfaceArea = document.getElementById("calculateRectanglePrismSurfaceArea");// this is the caluclate buton 
 const rectanglePrismSurfaceAreaResult = document.getElementById("rectanglePrismSurfaceAreaResult")// this is the result line 
-
 
 
 // THESE ARE FOR THE CYLINDER VOLUM CALCULATOR
@@ -345,7 +345,6 @@ const calculateCylinderVolume = document.getElementById("calculateCylinderVolume
 const cylinderVolumeResult = document.getElementById("cylinderVolumeResult")// this is the result line 
 
 
-
 // THESE ARE FOR THE CYLINDER VOLUME CALCULATOR 
 const cylinderSurfaceAreaHeight = document.getElementById("cylinderSurfaceAreaHeight");// this is the cylinder surface are height holder
 const cylinderSurfaceAreaRadius =  document.getElementById("cylinderSurfaceAreaRadius");// holds the radius 
@@ -353,13 +352,11 @@ const calculateCylinderSurfaceArea = document.getElementById("calculateCylinderS
 const cylinderSurfaceAreaResult = document.getElementById("cylinderSurfaceAreaResult")// this is the result line 
 
 
-
 // THESE ARE FOR TH CYLINDER VOLUME CALCULATOR 
 const cylinderPerimeterRadius = document.getElementById("cylinderPerimeterRadius");//the radius of the cylinder 
 const calculateCylinderPerimeter = document.getElementById("calculateCylinderPerimeter");// this is the caluclate button  on the screan 
 const cylinderPerimeterResult = document.getElementById("cylinderPerimeterResult");// the result line 
 
- 
 
 //THESE ARE FOR THE RADIUS CALCULATOR
 const radiusDiameter = document.getElementById("radiusDiameter");// gets the radius diameter input 
@@ -385,6 +382,12 @@ const conePerimeterRadius = document.getElementById("conePerimeterRadius");// th
 const calculateConePerimeter = document.getElementById("calculateConePerimeter");// this is the calculate button
 const conePerimeterResult = document.getElementById("conePerimeterResult");/// this si the result line
 
+
+//THESE ARE FOR THE CONE SURFACE AREA PAGE
+const coneSurfaceAreaRadius = document.getElementById("coneSurfaceAreaRadius");// this is the cone readius 
+const calculateConeSurfaceArea = document.getElementById("calculateConeSurfaceArea");// this is the calculate button
+const coneSurfaceAreaResult = document.getElementById("coneSurfaceAreaResult");/// this si the result line
+const coneSurfaceAreaLenght = document.getElementById("coneSurfaceAreaLenght");// this is the cone readius 
 
 
 
@@ -1021,6 +1024,23 @@ calculateConePerimeter.addEventListener ("click", function(){// if the circumfer
 
 });
 
+calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumference calculate button is used 
+     
+    if(coneSurfaceAreaLenght.value === "0"||coneSurfaceAreaLenght.value === ""||coneSurfaceAreaRadius.value === ""||coneSurfaceAreaRadius.value === "0"){ // if no values were entered or they are invalid 
+        coneSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+        coneSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    
+    }
+
+    else {//if everything is fine 
+        const Radius = Number(conePerimeterRadius.value);//the cariable stores the calue of the rectangle  lenght
+        const SurfaceArea = 2 * pi * Radius; //this is the formula
+
+        coneSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea.toFixed(3) + " UNITS Squared";// displays this 
+        coneSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+});
 
 
 
