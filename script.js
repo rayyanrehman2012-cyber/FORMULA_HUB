@@ -250,8 +250,8 @@ const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the resu
 // THESE ARE FOR THE CUBE PERIMETER PAGE
 
 const cubePerimeterSide = document.getElementById("cubePerimeterSide");//This is the cube perimeter side vale 
-const calculateCubePerimeter = document.getElementByID
-
+const calculateCubePerimeter = document.getElementById("calculateCubePerimeter")//the caluclate button
+const cubePerimeterResult = document.getElementById("cubePerimeterResult"); // cthe resultline 
 
 
 
@@ -647,7 +647,7 @@ calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate 
 calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
     if(cubeSide.value ===""|| cubeSide.value ==="0"){// if the values are not value or dont exist then 
         cubeVolumeResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"// error message 
-        cubeVolumeResult.textContent = "rgb(102,21,7)";// this changes the colour of the message to red 
+        cubeVolumeResult.style.color = "rgb(102,21,7)";// this changes the colour of the message to red 
     }
 
     else{// if the values are fined 
@@ -660,6 +660,20 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
     }
 })
 
+calculateCubeVolume.addEventListener ("click", function(){
+    if(cubePerimeterSide.value === "0"|| cubePerimeterSide.value === ""){//if the values are not valide
+        cubePerimeterResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
+        cubePerimeterResult.style.colr = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else{// if the falues are fine 
+        const Side = Number(cubePerimeterSide.value);//the cariable stores the calue of the cubes side
+        const Perimeter = Side *12;// this is the formula 
+
+        cubePerimeterResult.textContent = "PERIMETER = " + Perimeter + " UNITS";// displays this 
+        cubePerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green 
+    }
+})
 
 
 
@@ -939,14 +953,21 @@ pythagoreanCBackButton.addEventListener("click", function(){ // back button on p
 
 cubeVolumeBackButton.addEventListener("click", function(){// back button on the cube volume pages 
     startPage.style.display = "flex";// shows this screen to everytone 
-    cubeVolumePage.style.display = "none"// hides this pages 
+    cubeVolumePage.style.display = "none";// hides this pages 
 
     cubeSide.value = "";// resets the cube value 
     cubeVolumeResult.textContent = ""; // rests the text you see to a blank 
     
 });
 
+cubePerimeterBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    cubePerimeterPage.style.display = "none";// hides this screen 
 
+    cubePerimeterSide.value = "";// rests the input value 
+    cubePerimeterResult.textContent - "";// restets the text contents 
+
+})
 
 
 
@@ -1227,6 +1248,28 @@ allcubeVolumeButton.addEventListener("click", function() {// if the cube volume 
     cubeVolumePage.style.display = "flex";// show this page 
 })
 
+allcubePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    cubePerimeterPage.style.display = "flex"// shows this page
+})
+
 
 
 
@@ -1505,4 +1548,26 @@ cubeVolumeButton.addEventListener("click", function() {// if the cube volume but
     midpointPage.style.display = "none";// hide rhis page
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "flex";// show this page 
+})
+
+cubePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    cubePerimeterPage.style.display = "flex"// shows this page
 })
