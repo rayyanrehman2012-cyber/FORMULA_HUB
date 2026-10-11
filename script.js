@@ -35,7 +35,7 @@ const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackBu
 const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
 const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
 const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
-const cylinderVolumeBackButton = document.getElementById("cylinderVolumePage");// this is the the back button on the cilinder volume page 
+const cylinderVolumeBackButton = document.getElementById("cylinderVolumeBackButton");// this is the the back button on the cilinder volume page 
 
 
 
@@ -320,6 +320,7 @@ const cylinderVolumeResult = document.getElementById("cylinderVolumeResult")// t
 
 
 
+ 
 
 
 
@@ -820,8 +821,8 @@ calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){
 calculateCylinderVolume.addEventListener ("click", function(){
 
     if(cylinderVolumeHeight.value === "0"||cylinderVolumeHeight.value === ""||cylinderVolumeRadius.value === "0"||cylinderVolumeRadius.value === ""){ // if no values were entered or they are invalid 
-        rectanglePrismSurfaceAreaResult.textContent = "ERROR,PLEASE ENTER 3 VALID VALUES"; //the error message
-        rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+        cylinderVolumeResult.textContent = "ERROR,PLEASE ENTER 2 VALID VALUES"; //the error message
+        cylinderVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
 
@@ -830,7 +831,7 @@ calculateCylinderVolume.addEventListener ("click", function(){
         const Height = Number(cylinderVolumeHeight.value);//the cariable stores the calue of the rectangle base
 
         const Volume = pi * Radius * Radius * Height ; //this is the formula 
-        cylinderVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// displays this 
+        cylinderVolumeResult.textContent = "VOLUME = " + Volume.toFixed(3) + " UNITS CUBED";// displays this 
         cylinderVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 
