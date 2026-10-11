@@ -1046,8 +1046,6 @@ rectanglePrismVolumeBackButton.addEventListener("click", function(){
     rectanglePrismVolumeLength.value = "";// rests the input value 
     rectanglePrismVolumeWidth.value = "";// rests the input value 
     rectanglePrismVolumeResult.textContent = "";// restets the text contents 
-
-
 })
 
 
@@ -1095,7 +1093,7 @@ alltriangleAreaButton.addEventListener("click", function() {/// triangle are but
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
-    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "flex";// shows this age 
 
 });
@@ -1107,9 +1105,9 @@ alltrianglePerimeterButton.addEventListener("click", function() {// if the butto
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
-    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
-    triangleAreaPage.style.display = "none";// shows this age 
-    trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hides this age 
+    trianglePerimeterPage.style.display = "flex";// shows the triangle perimeter page 
 });
 
 allcircleAreaButton.addEventListener("click", function() {// if the bitton is clicked 
@@ -1135,7 +1133,7 @@ allcircleCircumferenceButton.addEventListener("click", function() {// if the bit
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
-    circleAreaPage.style.display = "none";// show the circle are page 
+    circleAreaPage.style.display = "none";// hide the circle are page 
     circleCircumferencePage.style.display = "flex";// show the circle are page 
 });
 
@@ -1149,8 +1147,8 @@ alltrapezoidAreaButton.addEventListener("click", function() {// if the button is
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
-    circleAreaPage.style.display = "none";// show the circle are page 
-    circleCircumferencePage.style.display = "none";// show the circle are page
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hide the circle are page
     trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
 });
 
@@ -1164,9 +1162,9 @@ allquadrilateralPerimeterButton.addEventListener("click", function() {// if this
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
-    circleAreaPage.style.display = "none";// show the circle are page 
-    circleCircumferencePage.style.display = "none";// show the circle are page
-    trapezoidAreaPage.style.display = "none";// show the  trapizode page
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
     quadrilateralPerimeterPage.style.display = "flex";//shows the pages 
 });
 
@@ -1202,7 +1200,7 @@ allslopeButton.addEventListener("click", function() {// the slopw buton on the f
     trapezoidAreaPage.style.display = "none";// hides the  trapizode page
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
-    slopePage.style.display = "flex"; //Shoes this pages 
+    slopePage.style.display = "flex"; //show this pages 
 });
 
 alldistanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
@@ -1220,7 +1218,7 @@ alldistanceButton.addEventListener("click", function() {// the slopw buton on th
     trapezoidAreaPage.style.display = "none";// hides the  trapizode page
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
-    slopePage.style.display = "none"; //Shoes this pages 
+    slopePage.style.display = "none"; //hides this pages 
     distancePage.style.display = "flex";// shows this page
 });
 
@@ -1240,7 +1238,7 @@ allmidpointButton.addEventListener("click", function() {// the slopw buton on th
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "none"; //Shoes this pages 
-    distancePage.style.display = "none";// shows this page
+    distancePage.style.display = "none";// hides this page
     midpointPage.style.display = "flex";// shows rhis page
 });
 
@@ -1308,8 +1306,8 @@ allpythagoreanCButton.addEventListener("click", function() {// on formula bage, 
 });
 
 allcubeVolumeButton.addEventListener("click", function() {// if the cube volume button is clicked o the all pages 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1329,8 +1327,8 @@ allcubeVolumeButton.addEventListener("click", function() {// if the cube volume 
 })
 
 allcubePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1351,8 +1349,8 @@ allcubePerimeterButton.addEventListener("click", function(){// if the cube perim
 })
 
 allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1443,7 +1441,7 @@ triangleAreaButton.addEventListener("click", function() {// the triangle area bu
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
-    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "flex";// shows this age 
 
 });
@@ -1455,9 +1453,9 @@ trianglePerimeterButton.addEventListener("click", function() {// the triangle pe
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
-    squarePerimeterPage.style.display = "none";// shows the perimeter pages 
-    triangleAreaPage.style.display = "none";// shows this age 
-    trianglePerimeterPage.style.display = "flex";// hides the triangle perimeter page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hides this age 
+    trianglePerimeterPage.style.display = "flex";// shoes the triangle perimeter page 
 });
 
 circleAreaButton.addEventListener("click", function() {// if the bitton is clicked 
@@ -1484,7 +1482,7 @@ circleCircumferenceButton.addEventListener("click", function() {// if the bitton
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
-    circleAreaPage.style.display = "none";// show the circle are page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
     circleCircumferencePage.style.display = "flex";// show the circle are page 
 });
 
@@ -1498,8 +1496,8 @@ trapezoidAreaButton.addEventListener("click", function() {// if the button is cl
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
-    circleAreaPage.style.display = "none";// show the circle are page 
-    circleCircumferencePage.style.display = "none";// show the circle are page
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides the circle are page
     trapezoidAreaPage.style.display = "flex";// show the  trapizode page 
 });
 
@@ -1513,10 +1511,10 @@ quadrilateralPerimeterButton.addEventListener("click", function() {// if this bu
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
     triangleAreaPage.style.display = "none";// hies this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
-    circleAreaPage.style.display = "none";// show the circle are page 
-    circleCircumferencePage.style.display = "none";// show the circle are page
-    trapezoidAreaPage.style.display = "none";// show the  trapizode page
-    quadrilateralPerimeterPage.style.display = "flex";
+    circleAreaPage.style.display = "none";// hides  the circle are page 
+    circleCircumferencePage.style.display = "none";// hides the circle are page
+    trapezoidAreaPage.style.display = "none";// hide the  trapizode page
+    quadrilateralPerimeterPage.style.display = "flex";// shows this page 
 });
 
 parallelogramAreaButton.addEventListener("click", function(){// the parallelogram button 
@@ -1551,7 +1549,7 @@ slopeButton.addEventListener("click", function() {// the slopw buton on the form
     trapezoidAreaPage.style.display = "none";// hides the  trapizode page
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
-    slopePage.style.display = "flex"; //Shoes this pages 
+    slopePage.style.display = "flex"; //shows this pages 
 });
 
 distanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
@@ -1569,7 +1567,7 @@ distanceButton.addEventListener("click", function() {// the slopw buton on the f
     trapezoidAreaPage.style.display = "none";// hides the  trapizode page
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
-    slopePage.style.display = "none"; //Shoes this pages 
+    slopePage.style.display = "none"; //hides this pages 
     distancePage.style.display = "flex";// shows this page
 });
 
@@ -1589,7 +1587,7 @@ midpointButton.addEventListener("click", function() {// the slopw buton on the f
     quadrilateralPerimeterPage.style.display = "none";//hides this page 
     parallelogramAreaPage.style.display = "none";// hides  this page 
     slopePage.style.display = "none"; //Shoes this pages 
-    distancePage.style.display = "none";// shows this page
+    distancePage.style.display = "none";// hides this page this page
     midpointPage.style.display = "flex";// shows rhis page
 });
 
@@ -1657,8 +1655,8 @@ pythagoreanCButton.addEventListener("click", function() {// on formula bage, pyt
 });
 
 cubeVolumeButton.addEventListener("click", function() {// if the cube volume button is clicked o the math pages 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1678,8 +1676,8 @@ cubeVolumeButton.addEventListener("click", function() {// if the cube volume but
 })
 
 cubePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1700,8 +1698,8 @@ cubePerimeterButton.addEventListener("click", function(){// if the cube perimete
 })
 
 cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this pages
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1722,13 +1720,13 @@ cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perime
 })
 
 rectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// this hides the screen 
+    formulaPage.style.display = "none";// this hides the screen 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
     squarePerimeterPage.style.display = "none";// hides the perimeter pages 
-    triangleAreaPage.style.display = "none";// hies this age 
+    triangleAreaPage.style.display = "none";// hidess this age 
     trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
     circleAreaPage.style.display = "none";// hides the circle are page 
     circleCircumferencePage.style.display = "none";// hides  the circle are page
