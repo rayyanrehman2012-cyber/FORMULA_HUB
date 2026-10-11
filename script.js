@@ -272,7 +272,7 @@ const cubeSurfaceAreaResult = document.getElementById("cubeSurfaceAreaResult"); 
 
 const rectanglePrismVolumeLength = document.getElementById("rectanglePrismVolumeLength");//This is the rectangle  folume  base  vale 
 const rectanglePrismVolumeWidth = document.getElementById("rectanglePrismVolumeWidth");//This is the rectangle  volume  height vale 
-const rectanglePrismVolumeBase = document.getElementById("rectanglePrismVolumeBase");//This is the rectangle  volume  lenght vale 
+const rectanglePrismVolumeHeight = document.getElementById("rectanglePrismVolumeHeight");//This is the rectangle  volume  lenght vale 
 const calculateRectanglePrismVolume = document.getElementById("calculateRectanglePrismVolume");//This is the rectangle  volume  calculate button 
 const rectanglePrismVolumeResult = document.getElementById("rectanglePrismVolumeResult");//This is the result line 
 
@@ -718,7 +718,7 @@ calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calcula
 
 calculateRectanglePrismVolume.addEventListener ("click", function(){// if the calculate button is clicked 
 
-    if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeBase.value === "0"|| rectanglePrismVolumeBase.value === "" ||rectanglePrismVolumeWidth.value === "0"|| rectanglePrismVolumeWidth.value === ""){//if the values are not valide
+    if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeHeight.value === "0"|| rectanglePrismVolumeHeight.value === "" ||rectanglePrismVolumeWidth.value === "0"|| rectanglePrismVolumeWidth.value === ""){//if the values are not valide
         rectanglePrismVolumeResult.textContent = "ERROR, PLEASE ENTER 3 VALID VALUE"; //shows this error message 
         rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
@@ -726,7 +726,7 @@ calculateRectanglePrismVolume.addEventListener ("click", function(){// if the ca
     else{// if the falues are fine 
         const Length = Number(rectanglePrismVolumeLength.value);//the cariable stores the calue of the rectangle  lenght
         const Width = Number(rectanglePrismVolumeWidth.value);//the cariable stores the calue of the rectangles  width 
-        const Base = Number(rectanglePrismVolumeBase.value);//the cariable stores the calue of the rectangle base
+        const Base = Number(rectanglePrismVolumeHeight.value);//the cariable stores the calue of the rectangle base
 
         const Volume = Length * Width * Base;// this is the formula 
 
@@ -1042,7 +1042,7 @@ rectanglePrismVolumeBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismVolumePage.style.display = "none";// hides this screen 
 
-    rectanglePrismVolumeBase.value = "";// rests the input value 
+    rectanglePrismVolumeHeight.value = "";// rests the input value 
     rectanglePrismVolumeLength.value = "";// rests the input value 
     rectanglePrismVolumeWidth.value = "";// rests the input value 
     rectanglePrismVolumeResult.textContent = "";// restets the text contents 

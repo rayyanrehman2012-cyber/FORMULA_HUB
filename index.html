@@ -47,6 +47,7 @@
                     <button id = "allcubePerimeterButton" class="formulaButton">CUBE PERIMETER</button>
                     <button id = "allcubeSurfaceAreaButton" class="formulaButton">CUBE SURFACE AREA</button>
                     <button id = "allrectanglePrismVolumeButton" class="formulaButton">RECTANGULAR PRISM VOLUME</button>
+                    <button id = "allrectanglePrismPerimeterButton" class="formulaButton">RECTANGULAR PRISM PERIMETER</button>
                     <button class="formulaButton">CYLINDER VOLUME</button>
                     <button class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
@@ -96,6 +97,7 @@
                 <button id = "cubePerimeterButton" class="formulaButton">CUBE PERIMETER</button>
                 <button id = "cubeSurfaceAreaButton" class="formulaButton">CUBE SURFACE AREA</button>
                 <button id = "rectanglePrismVolumeButton" class="formulaButton">RECTANGULAR PRISM VOLUME</button>
+                <button id = "rectanglePrismPerimeterButton" class="formulaButton">RECTANGULAR PRISM PERIMETER</button>
                 <button class="formulaButton">CYLINDER VOLUME</button>
                 <button class="formulaButton">CONE VOLUME</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
@@ -443,13 +445,31 @@
                 <label for="rectanglePrismVolumeWidth"> WIDTH</label>
                 <input id = "rectanglePrismVolumeWidth" type = "number">
 
-                <label for="rectanglePrismVolumeBase"> BASE</label>
-                <input id = "rectanglePrismVolumeBase" type = "number">
+                <label for="rectanglePrismVolumeHeight"> HEIGHT</label>
+                <input id = "rectanglePrismVolumeHeight" type = "number">
 
                 <button id = "calculateRectanglePrismVolume">CALCULATE</button>
                 <p id = "rectanglePrismVolumeResult"></p>
             </div>
             <button id = "rectanglePrismVolumeBackButton">BACK</button>
+        </main>
+
+        <main class = "rectanglePrismPerimeterPage">
+            <h1>RECTANGLE PRISM PERIMETER</h1>
+            <div class = calculatorBox>
+                <label for="rectanglePrismPerimeterLength"> LENGTH</label>
+                <input id = "rectanglePrismPerimeterLength" type = "number">
+
+                <label for="rectanglePrismPerimeterWidth"> WIDTH</label>
+                <input id = "rectanglePrismPerimeterWidth" type = "number">
+
+                <label for="rectanglePrismPerimeterHeight"> HEIGHT</label>
+                <input id = "rectanglePrismPerimeterHeight" type = "number">
+
+                <button id = "calculateRectanglePrismPerimeter">CALCULATE</button>
+                <p id = "rectanglePrismPerimeterResult"></p>
+            </div>
+            <button id = "rectanglePrismPerimeterBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
