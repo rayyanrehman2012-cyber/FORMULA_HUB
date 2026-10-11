@@ -364,6 +364,11 @@ const calculateRadius = document.getElementById("calculateRadius");// this is th
 const radiusResult = document.getElementById("radiusResult");/// this si the result line
 
 
+//THESE ARE FOR THE DIAMETER CALCULATOR
+const diameterRadius = document.getElementById("diameterRadius");// gets the radius diameter input 
+const calculateDiameter = document.getElementById("calculateDiameter");// this is the calculate button
+const diameterResult = document.getElementById("diameterResult");/// this si the result line
+
 
 
 
@@ -375,7 +380,7 @@ const radiusResult = document.getElementById("radiusResult");/// this si the res
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
 
     if (lengthInput.value === "" || widthInput.value === "" || lengthInput.value === "0" || widthInput.value === "0"){// if the inputs are empty or 0
-        rectangleAreaResult.textContent = "ERROR!!! PLEASE ENTER 2 VALID VALUES" // this is the error message 
+        rectangleAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES" // this is the error message 
         rectangleAreaResult.style.color = "rgb(102,21,7)";// the color becomes red
     }
     else {// if there is a valid value in the inputs
@@ -392,7 +397,7 @@ calculateRectangleArea.addEventListener("click", function() {// calculate putton
 
 calculateRectanglePerimeter.addEventListener("click", function() {// calculate button is presses (rectangles perimeter screen )
     if (PerimeterlengthInput.value === "" || PerimeterwidthInput.value === "" || PerimeterlengthInput.value === "0" || PerimeterwidthInput.value === "0"){// if the inputs are empty or 0
-        rectanglePerimeterResult.textContent = "ERROR!!! PLEASE ENTER 2 VALID VALUES" // this is the error message 
+        rectanglePerimeterResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES" // this is the error message 
         rectanglePerimeterResult.style.color = "rgb(102,21,7" // the color becomes red 
         }
 
@@ -411,7 +416,7 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
 calculateSquareArea.addEventListener("click", function() {// calculate button is pressed on square area screen 
 
     if (SquareAreaDimenstion.value === "" || SquareAreaDimenstion.value === "0"){// if the input is empty or 0
-        squareAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// ERROR MSG
+        squareAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// ERROR MSG
         squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red 
     }
     else{// if there is a valid value in the input
@@ -428,7 +433,7 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
 calculateSquarePerimeter.addEventListener("click", function() {// calculate button ispressed, then solve the perimiter of the square
     
     if (SquarePerimeterDimenstion.value === "" || SquarePerimeterDimenstion.value === "0"){// if the input is empty or 0
-        squarePerimeterResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// this is the error message 
+        squarePerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// this is the error message 
         squarePerimeterResult.style.color = "rgb(102,21,7)"// changer the color to red 
     }
     
@@ -446,7 +451,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
     
     if (triangleAreaHeight.value === "" || triangleAreaBase.value === "" || triangleAreaHeight.value === "0"|| triangleAreaBase.value === "0") {// if the height or base is empty or 0
-        triangleAreaResult.textContent = "ERROR!!! PLEASE ENTER 2 VALID VALUES"// this is the error message 
+        triangleAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"// this is the error message 
         triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red 
     }
     
@@ -465,7 +470,7 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
     
     if (trianglePerimeterSideA.value === "" || trianglePerimeterSideB.value === "" || trianglePerimeterSideC.value === "" || trianglePerimeterSideA.value === "0"|| trianglePerimeterSideB.value === "0"|| trianglePerimeterSideC.value === "0"){// if any of the sides are empty
-        trianglePerimeterResult.textContent = "ERROR!!! PLEASE ENTER 3 VALID VALUES"// this si the error message 
+        trianglePerimeterResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"// this si the error message 
         trianglePerimeterResult.style.color = "rgb(102,21,7)"// changes the colour to a red 
     }
 
@@ -484,7 +489,7 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
      
     if (circleAreaRadius.value === "" || circleAreaRadius.value === "0"){// if the radius is empty or 0
-        circleAreaResult.textContent = "ERROR!!! PLEASE ENTER A VALID VALUE"// error message 
+        circleAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// error message 
         circleAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
     }
 
@@ -506,7 +511,7 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
 
 
     if ( circleDiameter !==""  && circleRadius2 !=="" && circleDiameter !== "0" && circleRadius2 !== "0"){// if both numbers are entered and they are not 0
-        circleCircumferenceResult.textContent = "ERROR!!! ONLY ENTER ONE VALUE, THEN TRY AGAIN, YOU MAY YOU 0 AS A PLACEHOLDER" // show this message 
+        circleCircumferenceResult.textContent = "ERROR: ONLY ENTER ONE VALUE, THEN TRY AGAIN, YOU MAY YOU 0 AS A PLACEHOLDER" // show this message 
         circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// change the color to red 
     }
 
@@ -531,7 +536,7 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
 calculateTrapezoidArea.addEventListener ("click", function() {// when u click calculate area for trapizoid 
     
     if (trapezoidAreaBaseA.value === ""||trapezoidAreaBaseA.value === "0"|| trapezoidAreaBaseB.value === ""||trapezoidAreaBaseB.value === "0"|| trapezoidAreaHeight.value === ""|| trapezoidAreaHeight.value === "0"){
-        trapezoidAreaResult.textContent = "ERROR!!! PLEASE ENTER 3 VALID VALUES"// error message 
+        trapezoidAreaResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"// error message 
         trapezoidAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
     }
 
@@ -551,7 +556,7 @@ calculateTrapezoidArea.addEventListener ("click", function() {// when u click ca
 calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the calculate button is pressed then 
     
     if(quadSideA.value === ""|| quadSideA.value === "0"|| quadSideB.value === ""|| quadSideB.value === "0"|| quadSideC.value === ""|| quadSideC.value === "0"|| quadSideD.value === ""|| quadSideD.value === "0" ) { // if all the values are not present, or are  zeros 
-        quadrilateralPerimeterResult.textContent = "ERROR PLEASE ENTER 4 VALID VALUES"//error mesage 
+        quadrilateralPerimeterResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"//error mesage 
         quadrilateralPerimeterResult.style.color = "rgb(102,21,7)"// change the color to green 
 
     }
@@ -572,7 +577,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
 calculateParallelogramArea.addEventListener ("click", function() {
 
     if (parallelogramBase.value === "" || parallelogramBase.value === "0" || parallelogramHeight.value === "" || parallelogramHeight.value === "0"){
-        parallelogramAreaResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // the error mesages
+        parallelogramAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // the error mesages
         parallelogramAreaResult.style.color = "rgb(102,21,7)"// change the color to green
     }
 
@@ -590,7 +595,7 @@ calculateParallelogramArea.addEventListener ("click", function() {
 calculateSlope.addEventListener ("click", function() { // if the calculate slipe button is pressed 
 
     if (slopeY1.value === "" || slopeY2.value === "" ||  slopeX1.value === ""  || slopeX2.value === ""){
-       slopeResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
+       slopeResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"; // the error mesages
         slopeResult.style.color = "rgb(102,21,7)"// change the color to green
     }
 
@@ -604,17 +609,17 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
     const run = slopex2 - slopex1;// chang in x 
 
         if (run === 0 && rise !== 0){// if the run is zero 
-            slopeResult.textContent = "VERTICAL LINE, SLOPE IS UNDIFINED";// its a verticle line 
+            slopeResult.textContent = "VERTICAL LINE: SLOPE IS UNDIFINED";// its a verticle line 
             slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
         }
 
         else if (rise === 0 && run !== 0){// if the rise is 0 then 
-            slopeResult.textContent = "HORIZONTAL LINE, SLOPE IS 0";// its a horizontal  line 
+            slopeResult.textContent = "HORIZONTAL LINE: SLOPE IS 0";// its a horizontal  line 
             slopeResult.style.color = "rgb(140, 140, 9)"// changes the cor to yellow
         }
 
         else if (rise === 0 && run === 0){// if bot rise and run are the same 
-            slopeResult.textContent = "YOU ENTERED THE SAME POINT TWICE!";// its the same point, no slope 
+            slopeResult.textContent = "ERROR: YOU ENTERED THE SAME POINT TWICE!";// its the same point, no slope 
             slopeResult.style.color = "rgb(102, 21, 7)"// changes the color to red
         }
 
@@ -637,7 +642,7 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
 calculateDistance.addEventListener ("click", function() { // if the calculate distance button is pressed
 
     if (distanceY1.value === "" || distanceY2.value === "" ||  distanceX1.value === ""  || distanceX2.value === ""){
-        distanceResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"; // the error mesages
+        distanceResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"; // the error mesages
         distanceResult.style.color = "rgb(102,21,7)"// change the color to green
     }
 
@@ -660,7 +665,7 @@ calculateDistance.addEventListener ("click", function() { // if the calculate di
 
 calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclate button is presses 
     if (midpointX1.value === "" ||midpointY1.value === "" || midpointX2.value === "" || midpointY2.value === "" ){
-        midpointResult.textContent = "ERROR, PLEASE ENTER 4 VALID VALUES"// error mesage 
+        midpointResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"// error mesage 
         midpointResult.style.color = "rgb(102,21,7)"// red color 
     }
 
@@ -671,7 +676,7 @@ calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclat
         const y2 = Number(midpointY2.value);
 
         if (x1 === x2 && y1 === y2){// if the points are the same 
-            midpointResult.textContent = "ERROR, PLEASE USE 2 DIFFERENT POINTS"; // shows this 
+            midpointResult.textContent = "ERROR: PLEASE USE 2 DIFFERENT POINTS"; // shows this 
             midpointResult.style.color = "rgb(102,21,7)";// shows this in green
         }
         else  {//if there not the  same 
@@ -686,7 +691,7 @@ calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclat
 
 calculatePythagoreanA.addEventListener ("click", function(){// calculate side a is pressed 
     if(pythagoreanAB.value === ""|| pythagoreanAB.value === "0"|| pythagoreanAC.value === ""|| pythagoreanAC.value === "0"){// if the values are blacnk or zero s
-        pythagoreanAResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
+        pythagoreanAResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // show this 
         pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
     }   
 
@@ -695,7 +700,7 @@ calculatePythagoreanA.addEventListener ("click", function(){// calculate side a 
         const c = Number(pythagoreanAC.value);// holds side c value 
 
         if ( c<= b ){// if the hyponeuse is smaller then side b 
-            pythagoreanAResult.textContent = "ERROR, C MUST BE GREATER THAN B"; // show this 
+            pythagoreanAResult.textContent = "ERROR: C MUST BE GREATER THAN B"; // show this 
             pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
         }
 
@@ -713,7 +718,7 @@ calculatePythagoreanA.addEventListener ("click", function(){// calculate side a 
 calculatePythagoreanB.addEventListener ("click", function(){// if the calculate button is clicked in the pythagorean b pages 
 
     if(pythagoreanBA.value === ""|| pythagoreanBA.value === "0"|| pythagoreanBC.value === ""|| pythagoreanBC.value === "0"){// if the values are blacnk or zero s
-        pythagoreanBResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
+        pythagoreanBResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // show this 
         pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
     }   
 
@@ -722,7 +727,7 @@ calculatePythagoreanB.addEventListener ("click", function(){// if the calculate 
         const c = Number(pythagoreanBC.value);// holds side c value 
 
         if ( c<= a ){// if the hyponeuse is smaller then side b 
-            pythagoreanBResult.textContent = "ERROR, C MUST BE GREATER THAN A"; // show this 
+            pythagoreanBResult.textContent = "ERROR: C MUST BE GREATER THAN A"; // show this 
             pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
         }
 
@@ -740,7 +745,7 @@ calculatePythagoreanB.addEventListener ("click", function(){// if the calculate 
 calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate button is clicked on the pythagorean c pages
 
     if(pythagoreanCA.value === ""|| pythagoreanCA.value === "0"|| pythagoreanCB.value === ""|| pythagoreanCB.value === "0"){// if the values are blacnk or zero s
-        pythagoreanCResult.textContent = "ERROR, PLEASE ENTER 2 VALID VALUES"; // show this 
+        pythagoreanCResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // show this 
         pythagoreanCResult.style.color = "rgb(102,21,7)";// red colr 
     }   
 
@@ -759,7 +764,7 @@ calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate 
 
 calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
     if(cubeSide.value ===""|| cubeSide.value ==="0"){// if the values are not value or dont exist then 
-        cubeVolumeResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"// error message 
+        cubeVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// error message 
         cubeVolumeResult.style.color = "rgb(102,21,7)";// this changes the colour of the message to red 
     }
 
@@ -776,7 +781,7 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
 calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate button is clicked 
 
     if(cubePerimeterSide.value === "0"|| cubePerimeterSide.value === ""){//if the values are not valide
-        cubePerimeterResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
+        cubePerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //shows this error message 
         cubePerimeterResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
@@ -792,7 +797,7 @@ calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate
 calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calculate button is clicked 
 
     if(cubeSurfaceAreaSide.value === "0"|| cubeSurfaceAreaSide.value === ""){//if the values are not valide
-        cubeSurfaceAreaResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
+        cubeSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //shows this error message 
         cubeSurfaceAreaResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
@@ -808,7 +813,7 @@ calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calcula
 calculateRectanglePrismVolume.addEventListener ("click", function(){// if the calculate button is clicked 
 
     if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeHeight.value === "0"|| rectanglePrismVolumeHeight.value === "" ||rectanglePrismVolumeWidth.value === "0"|| rectanglePrismVolumeWidth.value === ""){//if the values are not valide
-        rectanglePrismVolumeResult.textContent = "ERROR, PLEASE ENTER 3 VALID VALUE"; //shows this error message 
+        rectanglePrismVolumeResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUE"; //shows this error message 
         rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
@@ -824,12 +829,11 @@ calculateRectanglePrismVolume.addEventListener ("click", function(){// if the ca
     }
 })
 
-calculateRectanglePrismPerimeter.addEventListener ("click", function(){
+calculateRectanglePrismPerimeter.addEventListener ("click", function(){//  if the calculate button was pressed on the rectangular prisim perimiter pages 
 
     if(rectanglePrismPerimeterHeight.value === "0"||rectanglePrismPerimeterHeight.value === ""||rectanglePrismPerimeterWidth.value === "0"||rectanglePrismPerimeterWidth.value === ""||rectanglePrismPerimeterLength.value === "0"||rectanglePrismPerimeterLength.value === ""){ // if no values were entered or they are invalid 
-        rectanglePrismPerimeterResult.textContent = "ERROR,PLEASE ENTER 3 VALID VALUES"; //the error message
+        rectanglePrismPerimeterResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"; //the error message
         rectanglePrismPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
     }
 
     else {//if everything is fine 
@@ -844,10 +848,10 @@ calculateRectanglePrismPerimeter.addEventListener ("click", function(){
 
 })  
 
-calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){
+calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){// this is the calculate button on the rectangular prism surface are pages 
 
     if(rectanglePrismSurfaceAreaHeight.value === "0"||rectanglePrismSurfaceAreaHeight.value === ""||rectanglePrismSurfaceAreaWidth.value === "0"||rectanglePrismSurfaceAreaWidth.value === ""||rectanglePrismSurfaceAreaLength.value === "0"||rectanglePrismSurfaceAreaLength.value === ""){ // if no values were entered or they are invalid 
-        rectanglePrismSurfaceAreaResult.textContent = "ERROR,PLEASE ENTER 3 VALID VALUES"; //the error message
+        rectanglePrismSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"; //the error message
         rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -864,10 +868,10 @@ calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){
 
 })
 
-calculateCylinderVolume.addEventListener ("click", function(){
+calculateCylinderVolume.addEventListener ("click", function(){ // calculate button on the cylindr volume screent 
 
     if(cylinderVolumeHeight.value === "0"||cylinderVolumeHeight.value === ""||cylinderVolumeRadius.value === "0"||cylinderVolumeRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderVolumeResult.textContent = "ERROR,PLEASE ENTER 2 VALID VALUES"; //the error message
+        cylinderVolumeResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
         cylinderVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -883,10 +887,10 @@ calculateCylinderVolume.addEventListener ("click", function(){
 
 })
 
-calculateCylinderSurfaceArea.addEventListener ("click", function(){
+calculateCylinderSurfaceArea.addEventListener ("click", function(){// calculate button on the cylinderSurface area
 
     if(cylinderSurfaceAreaHeight.value === "0"||cylinderSurfaceAreaHeight.value === ""||cylinderSurfaceAreaRadius.value === "0"||cylinderSurfaceAreaRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderSurfaceAreaResult.textContent = "ERROR,PLEASE ENTER 2 VALID VALUES"; //the error message
+        cylinderSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
         cylinderSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -905,7 +909,7 @@ calculateCylinderSurfaceArea.addEventListener ("click", function(){
 calculateCylinderPerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(cylinderPerimeterRadius.value === "0"||cylinderPerimeterRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderPerimeterResult.textContent = "ERROR:PLEASE ENTER A VALID VALUES"; //the error message
+        cylinderPerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
         cylinderPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -920,11 +924,10 @@ calculateCylinderPerimeter.addEventListener ("click", function(){// if the circu
 
 });
 
-
 calculateRadius.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(radiusDiameter.value === "0"||radiusDiameter.value === ""){ // if no values were entered or they are invalid 
-        radiusResult.textContent = "ERROR:PLEASE ENTER A VALID VALUES"; //the error message
+        radiusResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
         radiusResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -939,6 +942,23 @@ calculateRadius.addEventListener ("click", function(){// if the circumference ca
 
 });
 
+calculateDiameter.addEventListener ("click", function(){// if the circumference calculate button is used 
+     
+    if(diameterRadius.value === "0"||diameterRadius.value === ""){ // if no values were entered or they are invalid 
+        diameterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
+        diameterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    
+    }
+
+    else {//if everything is fine 
+        const Radius = Number(diameterRadius.value);//the cariable stores the calue of the rectangle  lenght
+        const Diameter = Radius*2; //this is the formula
+
+        diameterResult.textContent = "DIAMETER = " + Diameter.toFixed(3) + " UNITS";// displays this 
+        diameterResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+});
 
 
 
@@ -1300,9 +1320,18 @@ radiusBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows this creen to everyone 
     radiusPage.style.display = "none";// hides this screen 
 
-    calculateRadius.value = "";// rests the input value 
+    radiusDiameter.value = "";// rests the input value 
     radiusResult.textContent = "";// restets the text contents 
 })
+
+diameterBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    diameterPage.style.display = "none";// hides this screen 
+
+    diameterRadius.value = "";// rests the input value 
+    diameterResult.textContent = "";// restets the text contents 
+})
+
 
 
 
@@ -1784,6 +1813,30 @@ allradiusButton.addEventListener("click", function(){// if the cube perimeter is
     cubeVolumePage.style.display = "none";// hid this page 
     radiusPage.style.display = "flex"// shows this page
 })
+
+alldiameterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    diameterPage.style.display = "flex"// shows this page
+})
+
+
 
 
 
@@ -2270,4 +2323,27 @@ radiusButton.addEventListener("click", function(){// if the cube perimeter is cl
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     radiusPage.style.display = "flex"// shows this page
+})
+
+diameterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    diameterPage.style.display = "flex"// shows this page
 })
