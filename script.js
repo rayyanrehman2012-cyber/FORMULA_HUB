@@ -111,6 +111,7 @@ const pythagoreanCButton = document.getElementById("pythagoreanCButton");// pyth
 const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube volume button on the math onlth formula pages 
 const cubePerimeterButton = document.getElementById("cubePerimeterButton");//the cube perimeter button on the mathformula page 
 const cubeSurfaceAreaButton = document.getElementById("cubeSurfaceAreaButton");//the cube surface area button on the math onthl pages 
+const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
 
 
 
@@ -266,6 +267,14 @@ const cubeSurfaceAreaSide = document.getElementById("cubeSurfaceAreaSide");//Thi
 const calculateCubeSurfaceArea = document.getElementById("calculateCubeSurfaceArea")//the caluclate button
 const cubeSurfaceAreaResult = document.getElementById("cubeSurfaceAreaResult"); // cthe resultline 
 
+
+// THESE ARE FOR THE RECTANGLE PRISM VOLUME
+
+const rectanglePrismVolumeLength = document.getElementById("rectanglePrismVolumeLength");//This is the rectangle  folume  base  vale 
+const rectanglePrismVolumeWidth = document.getElementById("rectanglePrismVolumeWidth");//This is the rectangle  volume  height vale 
+const rectanglePrismVolumeBase = document.getElementById("rectanglePrismVolumeBase");//This is the rectangle  volume  lenght vale 
+const calculateRectanglePrismVolume = document.getElementById("calculateRectanglePrismVolume");//This is the rectangle  volume  calculate button 
+const rectanglePrismVolumeResult = document.getElementById("rectanglePrismVolumeResult");//This is the result line 
 
 
 
@@ -707,6 +716,26 @@ calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calcula
     }
 })
 
+calculateRectanglePrismVolume.addEventListener ("click", function(){// if the calculate button is clicked 
+
+    if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeBase.value === "0"|| rectanglePrismVolumeBase.value === "" ||rectanglePrismVolumeWidth.value === "0"|| rectanglePrismVolumeWidth.value === ""){//if the values are not valide
+        rectanglePrismVolumeResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
+        rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else{// if the falues are fine 
+        const Length = Number(rectanglePrismVolumeLength.value);//the cariable stores the calue of the rectangle  lenght
+        const Width = Number(rectanglePrismVolumeWidth.value);//the cariable stores the calue of the rectangles  width 
+        const Base = Number(rectanglePrismVolumeBase.value);//the cariable stores the calue of the rectangle base
+
+        const Volume = Length * Width * Base;// this is the formula 
+
+        rectanglePrismVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// displays this 
+        rectanglePrismVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green 
+    }
+})
+
+
 
 
 
@@ -996,7 +1025,7 @@ cubePerimeterBackButton.addEventListener("click", function(){
     cubePerimeterPage.style.display = "none";// hides this screen 
 
     cubePerimeterSide.value = "";// rests the input value 
-    cubePerimeterResult.textContent - "";// restets the text contents 
+    cubePerimeterResult.textContent = "";// restets the text contents 
 
 })
 
@@ -1005,11 +1034,21 @@ cubeSurfaceAreaBackButton.addEventListener("click", function(){
     cubeSurfaceAreaPage.style.display = "none";// hides this screen 
 
     cubeSurfaceAreaSide.value = "";// rests the input value 
-    cubeSurfaceAreaResult.textContent - "";// restets the text contents 
+    cubeSurfaceAreaResult.textContent = "";// restets the text contents 
 
 })
 
+rectanglePrismVolumeBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    rectanglePrismVolumePage.style.display = "none";// hides this screen 
 
+    rectanglePrismVolumeBase.value = "";// rests the input value 
+    rectanglePrismVolumeLength.value = "";// rests the input value 
+    rectanglePrismVolumeWidth.value = "";// rests the input value 
+    rectanglePrismVolumeResult.textContent = "";// restets the text contents 
+
+
+})
 
 
 
@@ -1333,6 +1372,27 @@ allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube per
     cubeSurfaceAreaPage.style.display = "flex"// shows this page
 })
 
+allrectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    rectanglePrismVolumePage.style.display = "flex"// shows this page
+})
 
 
 
@@ -1659,3 +1719,26 @@ cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perime
     cubeVolumePage.style.display = "none";// hid this page 
     cubeSurfaceAreaPage.style.display = "flex"// shows this page
 })
+
+rectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    rectanglePrismVolumePage.style.display = "flex"// shows this page
+})
+
