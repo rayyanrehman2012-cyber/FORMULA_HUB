@@ -42,9 +42,19 @@ The website starts of on the front page. The front page contains a short descrip
 - the side c(hypotenuse) function 
 - the distance formul page and functions 
 - the midpoint function and page 
+- cube volume page and function 
+- cube parimiter page and function 
+- cube surface are page and function
+-  rectanglular prism perimiter page and function 
+- rectangular prisim volume page and function 
+- rectangular prism surface are page 
+- cylinder volume page and function 
+- cylinder surface area page 
+- cylinger perimeter pages 
+- more error messages for each caluclator 
 
 
-## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 2)
+## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 3)
 - sound effects when you click on buttons so that it feels premium ish 
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - some more physics formulas 
