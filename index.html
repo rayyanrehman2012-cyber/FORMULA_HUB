@@ -26,6 +26,8 @@
             <section class="mathSection">
                 <h2>MATHEMATICS</h2>
                 <div class="formulaContainer">
+                    <button id = "allradiusButton" class="formulaButton">RADIUS CALCULATOR</button>
+                    <button id = "alldiameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
                     <button id = "allrectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
                     <button id = "allrectanglePerimeterButton" class="formulaButton">RECTANGLE PERIMETER</button>
                     <button id = "allsquareAreaButton" class="formulaButton">SQUARE AREA</button>
@@ -52,9 +54,7 @@
                     <button id = "allcylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                     <button id = "allcylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                     <button id = "allcylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
-                    <button id = "allradiusButton" class="formulaButton">RADIUS CALCULATOR</button>
-                    <button id = "alldiameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
-                    <button class="formulaButton">CONE VOLUME</button>
+                    <button id = "allconeVolumeButton" class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                 </div>
@@ -81,6 +81,8 @@
         <main class="mathFormulaPage">
             <h1>MATH FORMULAS</h1>
             <div class="formulaContainer">
+                <button id = "radiusButton" class="formulaButton">RADIUS CALCULATOR</button>
+                <button id = "diameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
                 <button id = "rectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
                 <button id = "rectanglePerimeterButton"  class="formulaButton">RECTANGLE PERIMETER</button>
                 <button id = "squareAreaButton" class="formulaButton">SQUARE AREA</button>
@@ -107,9 +109,7 @@
                 <button id = "cylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                 <button id = "cylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                 <button id = "cylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
-                <button id = "radiusButton" class="formulaButton">RADIUS CALCULATOR</button>
-                <button id = "diameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
-                <button class="formulaButton">CONE VOLUME</button>
+                <button id = "allconeVolumeButton" class="formulaButton">CONE VOLUME</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                     
@@ -569,6 +569,22 @@
                 <P id = "diameterResult"></P>
             </div>
             <button id = "diameterBackButton">BACK</button>
+        </main>
+
+        <main class = "coneVolumePage">
+            <h1>CONE VOLUME CALCULATOR</h1>
+            <div class= "calculatorBox">
+
+                <label for= "coneVolumeRadius">RADIUS</label>
+                <input id = "coneVolumeRadius" type = "number">
+
+                <label for= "coneVolumeHeight">PERPENDICULAR HEIGHT</label>
+                <input id = "coneVolumeHeight" type = "number">
+
+                <button id = "calculateConeVolume">CALCULATE</button>
+                <P id = "coneVolumeResult"></P>
+            </div>
+            <button id = "coneVolumeBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>

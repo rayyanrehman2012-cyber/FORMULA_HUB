@@ -43,7 +43,7 @@ const cylinderSurfaceAreaBackButton = document.getElementById("cylinderSurfaceAr
 const cylinderPerimeterBackButton = document.getElementById("cylinderPerimeterBackButton");// this is the cylinder surface are button, 
 const radiusBackButton = document.getElementById("radiusBackButton");// this is the radius page back button
 const diameterBackButton = document.getElementById("diameterBackButton");// this is the dimeter back button 
-
+const coneVolumeBackButton = document.getElementById("coneVolumeBackButton");// this is the cone volume back button 
 
 
 
@@ -83,7 +83,7 @@ const cylinderSurfaceAreaPage = document.querySelector(".cylinderSurfaceAreaPage
 const cylinderPerimeterPage = document.querySelector(".cylinderPerimeterPage");// this is the cylinder surface area page 
 const radiusPage = document.querySelector(".radiusPage");// this is the radius page 
 const diameterPage = document.querySelector(".diameterPage");// this is the diameter calculator pages 
-
+const coneVolumePage = document.querySelector(".coneVolumePage")// this is the cone volume page 
 
 
 
@@ -119,7 +119,7 @@ const allcylinderSurfaceAreaButton = document.getElementById("allcylinderSurface
 const allcylinderPerimeterButton = document.getElementById("allcylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
 const allradiusButton = document.getElementById("allradiusButton");// this is the radius button on the all formula screen 
 const alldiameterButton = document.getElementById("alldiameterButton");// this is the redius button on the all formula page 
-
+const allconeVolumeButton = document.getElementById("allconeVolumeButton");// this is the cone volume button on the all formula button 
 
 
 
@@ -155,6 +155,7 @@ const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaBu
 const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
 const radiusButton = document.getElementById("radiusButton");// this is the radius button on the math formula screen 
 const diameterButton = document.getElementById("diameterButton");// this is the diameter button on the math formula pages
+const coneVolumeButton = document.getElementById("coneVolumeButton");// this is the cone volume button on the all formula button 
 
 
 
@@ -368,6 +369,13 @@ const radiusResult = document.getElementById("radiusResult");/// this si the res
 const diameterRadius = document.getElementById("diameterRadius");// gets the radius diameter input 
 const calculateDiameter = document.getElementById("calculateDiameter");// this is the calculate button
 const diameterResult = document.getElementById("diameterResult");/// this si the result line
+
+
+//THESE ARE FOR THE CONE VOLUME CALCULATOR
+const coneVolumeRadius = document.getElementById("coneVolumeRadius");// this is the cone readius 
+const coneVolumeHeight = document.getElementById("coneVolumeHeight");// this is the cone readius 
+const calculateConeVolume = document.getElementById("calculateConeVolume");// this is the calculate button
+const coneVolumeResult = document.getElementById("coneVolumeResult");/// this si the result line
 
 
 
@@ -960,7 +968,23 @@ calculateDiameter.addEventListener ("click", function(){// if the circumference 
 
 });
 
+calculateConeVolume.addEventListener ("click", function(){// if the circumference calculate button is used 
+     
+    if(coneVolumeHeight.value === "0"||coneVolumeHeight.value === ""||coneVolumeRadius.value === "0"||coneVolumeRadius.value === ""){ // if no values were entered or they are invalid 
+        coneVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
+        coneVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    
+    }
 
+    else {//if everything is fine 
+        const Radius = Number(diameterRadius.value);//the cariable stores the calue of the rectangle  lenght
+        const Diameter = Radius*2; //this is the formula
+
+        diameterResult.textContent = "DIAMETER = " + Diameter.toFixed(3) + " UNITS";// displays this 
+        diameterResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+});
 
 
 
