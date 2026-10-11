@@ -46,7 +46,7 @@
                     <button id = "allcubeVolumeButton" class="formulaButton">CUBE VOLUME</button>
                     <button id = "allcubePerimeterButton" class="formulaButton">CUBE PERIMETER</button>
                     <button id = "allcubeSurfaceAreaButton" class="formulaButton">CUBE SURFACE AREA</button>
-                    <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
+                    <button id = "allrectanglePrismVolumeButton" class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                     <button class="formulaButton">CYLINDER VOLUME</button>
                     <button class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
@@ -95,8 +95,7 @@
                 <button id = "cubeVolumeButton" class="formulaButton">CUBE VOLUME</button>
                 <button id = "cubePerimeterButton" class="formulaButton">CUBE PERIMETER</button>
                 <button id = "cubeSurfaceAreaButton" class="formulaButton">CUBE SURFACE AREA</button>
-
-                <button class="formulaButton">RECTANGULAR PRISM VOLUME</button>
+                <button id = "rectanglePrismVolumeButton" class="formulaButton">RECTANGULAR PRISM VOLUME</button>
                 <button class="formulaButton">CYLINDER VOLUME</button>
                 <button class="formulaButton">CONE VOLUME</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
@@ -424,7 +423,7 @@
         </main>
 
         <main class = "cubeSurfaceAreaPage">
-            <h1>CUBE PERIMETER</h1>
+            <h1>CUBE SURFACE AREA</h1>
             <div class = calculatorBox>
                 <label for="cubeSurfaceAreaSide">SIDE LENGTH</label>
                 <input id = "cubeSurfaceAreaSide" type = "number">
@@ -435,6 +434,23 @@
             <button id = "cubeSurfaceAreaBackButton">BACK</button>
         </main>
 
+        <main class = "rectanglePrismVolumePage">
+            <h1>RECTANGLE PRISM VOLUME</h1>
+            <div class = calculatorBox>
+                <label for="rectanglePrismVolumeLength"> LENGTH</label>
+                <input id = "rectanglePrismVolumeLength" type = "number">
+
+                <label for="rectanglePrismVolumeWidth"> WIDTH</label>
+                <input id = "rectanglePrismVolumeWidth" type = "number">
+
+                <label for="rectanglePrismVolumeBase"> BASE</label>
+                <input id = "rectanglePrismVolumeBase" type = "number">
+
+                <button id = "calculateRectanglePrismVolume">CALCULATE</button>
+                <p id = "rectanglePrismVolumeResult"></p>
+            </div>
+            <button id = "rectanglePrismVolumeBackButton">BACK</button>
+        </main>
 
         <script src="./script.js"></script>
     </body>

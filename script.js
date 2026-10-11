@@ -30,6 +30,9 @@ const pythagoreanABackButton = document.getElementById("pythagoreanABackButton")
 const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// back button on the volume pages 
 const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton");// cube perimeter page back button 
 const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackButton");// cube survae are back button 
+const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
+
+
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -57,7 +60,7 @@ const pythagoreanPageA = document.querySelector(".pythagoreanPageA");// pythagor
 const cubeVolumePage = document.querySelector(".cubeVolumePage");// the volume page for the cube 
 const cubePerimeterPage = document.querySelector(".cubePerimeterPage");// this is the cube perimeter page 
 const cubeSurfaceAreaPage = document.querySelector(".cubeSurfaceAreaPage");// this is the cube surface area pages 
-
+const rectanglePrismVolumePage = document.querySelector(".rectanglePrismVolumePage");// this is the rectangle prims volume pages 
 
 
 
@@ -82,7 +85,7 @@ const allpythagoreanCButton = document.getElementById("allpythagoreanCButton");/
 const allcubeVolumeButton = document.getElementById("allcubeVolumeButton");// cube volume button on the all formula page 
 const allcubePerimeterButton = document.getElementById("allcubePerimeterButton");// cube perimeter button on all formula page 
 const allcubeSurfaceAreaButton = document.getElementById("allcubeSurfaceAreaButton");// this is thje surface area for cube button on the all fromula pages 
-
+const allrectanglePrismVolumeButton = document.getElementById("allrectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
 
 
 
