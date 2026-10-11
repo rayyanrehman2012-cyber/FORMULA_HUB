@@ -28,7 +28,7 @@ const pythagoreanCBackButton = document.getElementById("pythagoreanCBackButton")
 const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton");// back button on the pythagorean side b pages 
 const pythagoreanABackButton = document.getElementById("pythagoreanABackButton");// back button on the pythagorean side a pages 
 const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// back button on the volume pages 
-
+const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton");// cube perimeter page back button 
 
 
 
@@ -55,7 +55,7 @@ const pythagoreanPageC = document.querySelector(".pythagoreanPageC");// pythagor
 const pythagoreanPageB = document.querySelector(".pythagoreanPageB");// pythagorean page side b
 const pythagoreanPageA = document.querySelector(".pythagoreanPageA");// pythagorean page side a
 const cubeVolumePage = document.querySelector(".cubeVolumePage");// the volume page for the cube 
-
+const cubePerimeterPage = document.querySelector(".cubePerimeterPage");// this is the cube perimeter page 
 
 
 
@@ -79,6 +79,7 @@ const allpythagoreanAButton = document.getElementById("allpythagoreanAButton");/
 const allpythagoreanBButton = document.getElementById("allpythagoreanBButton");// pythagorean page b button on all formula page 
 const allpythagoreanCButton = document.getElementById("allpythagoreanCButton");// pythagorean page c button on all formula page 
 const allcubeVolumeButton = document.getElementById("allcubeVolumeButton");// cube volume button on the all formula page 
+const allcubePerimeterButton = document.getElementById("allcubePerimeterButton");// cube perimeter button on all formula page 
 
 
 
@@ -102,7 +103,7 @@ const pythagoreanAButton = document.getElementById("pythagoreanAButton");// pyth
 const pythagoreanBButton = document.getElementById("pythagoreanBButton");// pythagorean page b  button on math formula page 
 const pythagoreanCButton = document.getElementById("pythagoreanCButton");// pythagorean page cbutton on math formula page 
 const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube volume button on the math onlth formula pages 
-
+const cubePerimeterButton = document.getElementById("cubePerimeterButton");//the cube perimeter button on the mathformula page 
 
 
 
@@ -246,9 +247,10 @@ const calculateCubeVolume = document.getElementById("calculateCubeVolume"); // t
 const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the result message/line in the calculator 
 
 
+// THESE ARE FOR THE CUBE PERIMETER PAGE
 
-
-
+const cubePerimeterSide = document.getElementById("cubePerimeterSide");//This is the cube perimeter side vale 
+const calculateCubePerimeter = document.getElementByID
 
 
 
@@ -653,8 +655,8 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
         
         const volume = side * side * side; // calculates the volume 
 
-        cubeVolumeResult.textConte = "VOLUME = " + volume +" UNITS CUBED"// this is the display 
-        cubeVolumeResult.textContent = "rgb(11,61,46)"; // // changes the color to green 
+        cubeVolumeResult.textContent = "VOLUME = " + volume +" UNITS CUBED"// this is the display 
+        cubeVolumeResult.style.color = "rgb(11,61,46)"; // // changes the color to green 
     }
 })
 
