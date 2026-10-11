@@ -44,6 +44,8 @@ const cylinderPerimeterBackButton = document.getElementById("cylinderPerimeterBa
 const radiusBackButton = document.getElementById("radiusBackButton");// this is the radius page back button
 const diameterBackButton = document.getElementById("diameterBackButton");// this is the dimeter back button 
 const coneVolumeBackButton = document.getElementById("coneVolumeBackButton");// this is the cone volume back button 
+const conePerimeterBackButton = document.getElementById("conePerimeterBackButton");// this is the come perimiter page back buttons 
+
 
 
 
@@ -84,7 +86,7 @@ const cylinderPerimeterPage = document.querySelector(".cylinderPerimeterPage");/
 const radiusPage = document.querySelector(".radiusPage");// this is the radius page 
 const diameterPage = document.querySelector(".diameterPage");// this is the diameter calculator pages 
 const coneVolumePage = document.querySelector(".coneVolumePage")// this is the cone volume page 
-
+const conePerimeterPage = document.querySelector(".conePerimeterPage");// this is the cone perimeter page 
 
 
 
@@ -120,7 +122,7 @@ const allcylinderPerimeterButton = document.getElementById("allcylinderPerimeter
 const allradiusButton = document.getElementById("allradiusButton");// this is the radius button on the all formula screen 
 const alldiameterButton = document.getElementById("alldiameterButton");// this is the redius button on the all formula page 
 const allconeVolumeButton = document.getElementById("allconeVolumeButton");// this is the cone volume button on the all formula button 
-
+const allconePerimeterButton = document.getElementById("allconePerimeterButton");// this is the cone perimeter button on the all formula screen 
 
 
 
@@ -156,7 +158,7 @@ const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton
 const radiusButton = document.getElementById("radiusButton");// this is the radius button on the math formula screen 
 const diameterButton = document.getElementById("diameterButton");// this is the diameter button on the math formula pages
 const coneVolumeButton = document.getElementById("coneVolumeButton");// this is the cone volume button on the all formula button 
-
+const conePerimeterButton = document.getElementById("conePerimeterButton");// this is the cone perimeter button located on the math formula page 
 
 
 
@@ -377,6 +379,11 @@ const coneVolumeHeight = document.getElementById("coneVolumeHeight");// this is 
 const calculateConeVolume = document.getElementById("calculateConeVolume");// this is the calculate button
 const coneVolumeResult = document.getElementById("coneVolumeResult");/// this si the result line
 
+
+//THESE ARE FOR THE CONE VOLUME CALCULATOR
+const conePerimeterRadius = document.getElementById("conePerimeterRadius");// this is the cone readius 
+const calculateConePerimeter = document.getElementById("calculateConePerimeter");// this is the calculate button
+const conePerimeterResult = document.getElementById("conePerimeterResult");/// this si the result line
 
 
 
@@ -971,7 +978,7 @@ calculateDiameter.addEventListener ("click", function(){// if the circumference 
 calculateConeVolume.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(coneVolumeHeight.value === "0"||coneVolumeHeight.value === ""||coneVolumeRadius.value === "0"||coneVolumeRadius.value === ""){ // if no values were entered or they are invalid 
-        coneVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
+        coneVolumeResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
         coneVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }

@@ -55,6 +55,7 @@
                     <button id = "allcylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                     <button id = "allcylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
                     <button id = "allconeVolumeButton" class="formulaButton">CONE VOLUME</button>
+                    <button id = "allconePerimeterButton" class="formulaButton">CONE PERIMETER</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                 </div>
@@ -109,7 +110,8 @@
                 <button id = "cylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                 <button id = "cylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
                 <button id = "cylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
-                <button id = "allconeVolumeButton" class="formulaButton">CONE VOLUME</button>
+                <button id = "coneVolumeButton" class="formulaButton">CONE VOLUME</button>
+                <button id = "conePerimeterButton" class="formulaButton">CONE PERIMETER</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                     
@@ -572,7 +574,7 @@
         </main>
 
         <main class = "coneVolumePage">
-            <h1>CONE VOLUME CALCULATOR</h1>
+            <h1>CONE VOLUME </h1>
             <div class= "calculatorBox">
 
                 <label for= "coneVolumeRadius">RADIUS</label>
@@ -585,6 +587,19 @@
                 <P id = "coneVolumeResult"></P>
             </div>
             <button id = "coneVolumeBackButton">BACK</button>
+        </main>
+
+        <main class = "conePerimeterPage">
+            <h1>CONE PERIMETER </h1>
+            <div class= "calculatorBox">
+
+                <label for= "conePerimeterRadius">RADIUS</label>
+                <input id = "conePerimeterRadius" type = "number">
+
+                <button id = "calculateConePerimeter">CALCULATE</button>
+                <P id = "conePerimeterResult"></P>
+            </div>
+            <button id = "conePerimeterBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
