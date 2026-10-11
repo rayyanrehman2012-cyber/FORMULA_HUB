@@ -31,7 +31,7 @@ const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// 
 const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton");// cube perimeter page back button 
 const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackButton");// cube survae are back button 
 const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
-
+const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
 
 
 
@@ -61,7 +61,7 @@ const cubeVolumePage = document.querySelector(".cubeVolumePage");// the volume p
 const cubePerimeterPage = document.querySelector(".cubePerimeterPage");// this is the cube perimeter page 
 const cubeSurfaceAreaPage = document.querySelector(".cubeSurfaceAreaPage");// this is the cube surface area pages 
 const rectanglePrismVolumePage = document.querySelector(".rectanglePrismVolumePage");// this is the rectangle prims volume pages 
-
+const rectanglePrismPerimeterPage = document.querySelector(".rectanglePrismPerimeterPage");// this is the the rectangle prisim perimeter page 
 
 
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
@@ -86,7 +86,7 @@ const allcubeVolumeButton = document.getElementById("allcubeVolumeButton");// cu
 const allcubePerimeterButton = document.getElementById("allcubePerimeterButton");// cube perimeter button on all formula page 
 const allcubeSurfaceAreaButton = document.getElementById("allcubeSurfaceAreaButton");// this is thje surface area for cube button on the all fromula pages 
 const allrectanglePrismVolumeButton = document.getElementById("allrectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
-
+const allrectanglePrismPerimeterButton = document.getElementById("allrectanglePrismPerimeterButton");//This is the perimeter for the rectangl prisim on the all formula page 
 
 
 
@@ -112,6 +112,7 @@ const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube
 const cubePerimeterButton = document.getElementById("cubePerimeterButton");//the cube perimeter button on the mathformula page 
 const cubeSurfaceAreaButton = document.getElementById("cubeSurfaceAreaButton");//the cube surface area button on the math onthl pages 
 const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
+const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPerimeterButon");//this is the math page button 
 
 
 
@@ -255,21 +256,18 @@ const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the resu
 
 
 // THESE ARE FOR THE CUBE PERIMETER PAGE
-
 const cubePerimeterSide = document.getElementById("cubePerimeterSide");//This is the cube perimeter side vale 
 const calculateCubePerimeter = document.getElementById("calculateCubePerimeter")//the caluclate button
 const cubePerimeterResult = document.getElementById("cubePerimeterResult"); // cthe resultline 
 
 
 // THESE ARE FOR THE CUBE SURFACE ARE PAGE 
-
 const cubeSurfaceAreaSide = document.getElementById("cubeSurfaceAreaSide");//This is the cube perimeter side vale 
 const calculateCubeSurfaceArea = document.getElementById("calculateCubeSurfaceArea")//the caluclate button
 const cubeSurfaceAreaResult = document.getElementById("cubeSurfaceAreaResult"); // cthe resultline 
 
 
 // THESE ARE FOR THE RECTANGLE PRISM VOLUME
-
 const rectanglePrismVolumeLength = document.getElementById("rectanglePrismVolumeLength");//This is the rectangle  folume  base  vale 
 const rectanglePrismVolumeWidth = document.getElementById("rectanglePrismVolumeWidth");//This is the rectangle  volume  height vale 
 const rectanglePrismVolumeHeight = document.getElementById("rectanglePrismVolumeHeight");//This is the rectangle  volume  lenght vale 
@@ -277,6 +275,12 @@ const calculateRectanglePrismVolume = document.getElementById("calculateRectangl
 const rectanglePrismVolumeResult = document.getElementById("rectanglePrismVolumeResult");//This is the result line 
 
 
+// THESE ARE FOR THE RECTANGLE PRISM VOLUME
+const rectanglePrismPerimeterLength = document.getElementById("rectanglePrismPerimeterLength");//this is the lenght input for the the rectangle prisim perimeter 
+const rectanglePrismPerimeterWidth = document.getElementById("rectanglePrismPerimeterWidth");// this is the width input
+const rectanglePrismPerimeterHeight = document.getElementById("rectanglePrismPerimeterHeight");// this is the height input 
+const calculateRectanglePrismPerimeter = document.getElementById("calculateRectanglePrismPerimeter");// this is the caluclate buton 
+const rectanglePrismPerimeterResult = document.getElementById("rectanglePrismPerimeterResult")// this is the result line 
 
 
 
