@@ -6,6 +6,8 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 
 
 
+
+
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
@@ -33,6 +35,8 @@ const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackBu
 const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
 const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
 const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
+
+
 
 
 
@@ -70,6 +74,8 @@ const rectanglePrismSurfaceAreaPage = document.querySelector(".rectanglePrismSur
 
 
 
+
+
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const allrectanglePerimeterButton = document.getElementById("allrectanglePerimeterButton");// this is the rectangle area formula button all formula page
@@ -94,6 +100,8 @@ const allcubeSurfaceAreaButton = document.getElementById("allcubeSurfaceAreaButt
 const allrectanglePrismVolumeButton = document.getElementById("allrectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
 const allrectanglePrismPerimeterButton = document.getElementById("allrectanglePrismPerimeterButton");//This is the perimeter for the rectangl prisim on the all formula page 
 const allrectanglePrismSurfaceAreaButton = document.getElementById("allrectanglePrismSurfaceAreaButton");//This is the perimeter for the rectangl prisim on the all formula page 
+
+
 
 
 
@@ -298,6 +306,12 @@ const rectanglePrismSurfaceAreaWidth = document.getElementById("rectanglePrismSu
 const rectanglePrismSurfaceAreaHeight = document.getElementById("rectanglePrismSurfaceAreaHeight");// this is the height imput for the rectangle surface are 
 const calculateRectanglePrismSurfaceArea = document.getElementById("calculateRectanglePrismSurfaceArea");// this is the caluclate buton 
 const rectanglePrismSurfaceAreaResult = document.getElementById("rectanglePrismSurfaceAreaResult")// this is the result line 
+
+
+
+
+
+
 
 
 
@@ -776,7 +790,25 @@ calculateRectanglePrismPerimeter.addEventListener ("click", function(){
 
 })  
 
+calculateRectanglePrismPerimeter.addEventListener ("click", function(){
 
+    if(rectanglePrismSurfaceAreaHeight.value === "0"||rectanglePrismSurfaceAreaHeight.value === ""||rectanglePrismSurfaceAreaWidth.value === "0"||rectanglePrismSurfaceAreaWidth.value === ""||rectanglePrismSurfaceAreaLength.value === "0"||rectanglePrismSurfaceAreaLength.value === ""){ // if no values were entered or they are invalid 
+        rectanglePrismSurfaceAreaResult.textContent = "ERROR,PLEASE ENTER 3 VALID VALUES"; //the error message
+        rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    
+    }
+
+    else {//if everything is fine 
+        const Length = Number(rectanglePrismSurfaceAreaLength.value);//the cariable stores the calue of the rectangle  lenght
+        const Width = Number(rectanglePrismSurfaceAreaWidth.value);//the cariable stores the calue of the rectangles  width 
+        const Height = Number(rectanglePrismSurfaceAreaHeight.value);//the cariable stores the calue of the rectangle base
+
+        const SurfaceArea = (2*(Length*Height)) + (2*(Length*Width)) + (2*(Height*Width)); //this is the formula 
+        rectanglePrismSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea + " UNITS SQUARED";// displays this 
+        rectanglePrismSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+})
 
 
 
@@ -1108,6 +1140,15 @@ rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){
     rectanglePrismSurfaceAreaWidth.value = "";// rests the input value 
     rectanglePrismSurfaceAreaResult.textContent = "";// restets the text contents 
 })
+
+
+
+
+
+
+
+
+
 
 
 //THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
