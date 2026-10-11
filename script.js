@@ -42,7 +42,7 @@ const cylinderVolumeBackButton = document.getElementById("cylinderVolumeBackButt
 const cylinderSurfaceAreaBackButton = document.getElementById("cylinderSurfaceAreaBackButton");// this is the cylinder surface are button, 
 const cylinderPerimeterBackButton = document.getElementById("cylinderPerimeterBackButton");// this is the cylinder surface are button, 
 const radiusBackButton = document.getElementById("radiusBackButton");// this is the radius page back button
-
+const diameterBackButton = document.getElementById("diameterBackButton");// this is the dimeter back button 
 
 
 
@@ -82,7 +82,7 @@ const cylinderVolumePage = document.querySelector(".cylinderVolumePage");// this
 const cylinderSurfaceAreaPage = document.querySelector(".cylinderSurfaceAreaPage");// this is the cylinder surface area page 
 const cylinderPerimeterPage = document.querySelector(".cylinderPerimeterPage");// this is the cylinder surface area page 
 const radiusPage = document.querySelector(".radiusPage");// this is the radius page 
-
+const diameterPage = document.querySelector(".diameterPage");// this is the diameter calculator pages 
 
 
 
@@ -118,7 +118,7 @@ const allcylinderVolumeButton = document.getElementById("allcylinderVolumeButton
 const allcylinderSurfaceAreaButton = document.getElementById("allcylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
 const allcylinderPerimeterButton = document.getElementById("allcylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
 const allradiusButton = document.getElementById("allradiusButton");// this is the radius button on the all formula screen 
-
+const alldiameterButton = document.getElementById("alldiameterButton");// this is the redius button on the all formula page 
 
 
 
@@ -154,7 +154,7 @@ const cylinderVolumeButton = document.getElementById("cylinderVolumeButton");// 
 const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
 const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
 const radiusButton = document.getElementById("radiusButton");// this is the radius button on the math formula screen 
-
+const diameterButton = document.getElementById("diameterButton");// this is the diameter button on the math formula pages
 
 
 
