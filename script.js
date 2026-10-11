@@ -8,6 +8,9 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 
 
 
+
+
+
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
@@ -38,6 +41,9 @@ const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePr
 const cylinderVolumeBackButton = document.getElementById("cylinderVolumeBackButton");// this is the the back button on the cilinder volume page 
 const cylinderSurfaceAreaBackButton = document.getElementById("cylinderSurfaceAreaBackButton");// this is the cylinder surface are button, 
 const cylinderPerimeterBackButton = document.getElementById("cylinderPerimeterBackButton");// this is the cylinder surface are button, 
+
+
+
 
 
 
@@ -81,6 +87,9 @@ const cylinderPerimeterPage = document.querySelector(".cylinderPerimeterPage");/
 
 
 
+
+
+
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const allrectanglePerimeterButton = document.getElementById("allrectanglePerimeterButton");// this is the rectangle area formula button all formula page
@@ -113,6 +122,10 @@ const allcylinderPerimeterButton = document.getElementById("allcylinderPerimeter
 
 
 
+
+
+
+
 //THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
@@ -140,6 +153,8 @@ const rectanglePrismSurfaceAreaButton = document.getElementById("rectanglePrismS
 const cylinderVolumeButton = document.getElementById("cylinderVolumeButton");// this is the button on the math formula page 
 const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
 const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
+
+
 
 
 
@@ -906,6 +921,12 @@ calculateCylinderPerimeter.addEventListener ("click", function(){// if the circu
 
 
 
+
+
+
+
+
+
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
@@ -1254,6 +1275,8 @@ cylinderPerimeterBackButton.addEventListener("click", function(){
     cylinderPerimeterRadius.value = "";// rests the input value 
     cylinderPerimeterResult.textContent = "";// restets the text contents 
 })
+
+
 
 
 
@@ -2159,6 +2182,7 @@ cylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube pe
 cylinderPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
     startPage.style.display = "none";
     formulaPage.style.display = "none";
+    mathFormulaPage.style.display = "none";
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
