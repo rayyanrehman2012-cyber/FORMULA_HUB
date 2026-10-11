@@ -32,6 +32,8 @@ const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton
 const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackButton");// cube survae are back button 
 const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
 const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
+const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
+
 
 
 
@@ -62,6 +64,10 @@ const cubePerimeterPage = document.querySelector(".cubePerimeterPage");// this i
 const cubeSurfaceAreaPage = document.querySelector(".cubeSurfaceAreaPage");// this is the cube surface area pages 
 const rectanglePrismVolumePage = document.querySelector(".rectanglePrismVolumePage");// this is the rectangle prims volume pages 
 const rectanglePrismPerimeterPage = document.querySelector(".rectanglePrismPerimeterPage");// this is the the rectangle prisim perimeter page 
+const rectanglePrismSurfaceAreaPage = document.querySelector(".rectanglePrismSurfaceAreaPage");// this is the the rectangle prisim perimeter page 
+
+
+
 
 
 //THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
@@ -87,6 +93,8 @@ const allcubePerimeterButton = document.getElementById("allcubePerimeterButton")
 const allcubeSurfaceAreaButton = document.getElementById("allcubeSurfaceAreaButton");// this is thje surface area for cube button on the all fromula pages 
 const allrectanglePrismVolumeButton = document.getElementById("allrectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
 const allrectanglePrismPerimeterButton = document.getElementById("allrectanglePrismPerimeterButton");//This is the perimeter for the rectangl prisim on the all formula page 
+const allrectanglePrismSurfaceAreaButton = document.getElementById("allrectanglePrismSurfaceAreaButton");//This is the perimeter for the rectangl prisim on the all formula page 
+
 
 
 
@@ -111,9 +119,9 @@ const pythagoreanCButton = document.getElementById("pythagoreanCButton");// pyth
 const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube volume button on the math onlth formula pages 
 const cubePerimeterButton = document.getElementById("cubePerimeterButton");//the cube perimeter button on the mathformula page 
 const cubeSurfaceAreaButton = document.getElementById("cubeSurfaceAreaButton");//the cube surface area button on the math onthl pages 
-const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolumeButton");// this si the rectangle prism volume button on the all formula page
+const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolumeButton");// this si the rectangle prism volume button on the math formula page
 const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPerimeterButon");//this is the math page button 
-
+const rectanglePrismSurfaceAreaButton = document.getElementById("rectanglePrismSurfaceAreaButton")// this is the rectanglular prisim surfac3 area button on the math page 
 
 
 
@@ -281,6 +289,15 @@ const rectanglePrismPerimeterWidth = document.getElementById("rectanglePrismPeri
 const rectanglePrismPerimeterHeight = document.getElementById("rectanglePrismPerimeterHeight");// this is the height input 
 const calculateRectanglePrismPerimeter = document.getElementById("calculateRectanglePrismPerimeter");// this is the caluclate buton 
 const rectanglePrismPerimeterResult = document.getElementById("rectanglePrismPerimeterResult")// this is the result line 
+
+
+
+// THESE ARE FOR THE RECTANGLE PRISIM SURFACE ARE CALCULATOR
+const rectanglePrismSurfaceAreaLength = document.getElementById("rectanglePrismSurfaceAreaLength");// this is the lenght imput for the rectangle surface are 
+const rectanglePrismSurfaceAreaWidth = document.getElementById("rectanglePrismSurfaceAreaWidth");// this is the Widht imput for the rectangle surface are 
+const rectanglePrismSurfaceAreaHeight = document.getElementById("rectanglePrismSurfaceAreaHeight");// this is the height imput for the rectangle surface are 
+const calculateRectanglePrismSurfaceArea = document.getElementById("calculateRectanglePrismSurfaceArea");// this is the caluclate buton 
+const rectanglePrismSurfaceAreaResult = document.getElementById("rectanglePrismSurfaceAreaResult")// this is the result line 
 
 
 
@@ -1071,6 +1088,7 @@ rectanglePrismVolumeBackButton.addEventListener("click", function(){
     rectanglePrismVolumeWidth.value = "";// rests the input value 
     rectanglePrismVolumeResult.textContent = "";// restets the text contents 
 })
+
 rectanglePrismPerimeterBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismPerimeterPage.style.display = "none";// hides this screen 
@@ -1081,7 +1099,15 @@ rectanglePrismPerimeterBackButton.addEventListener("click", function(){
     rectanglePrismPerimeterResult.textContent = "";// restets the text contents 
 })
 
+rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    rectanglePrismSurfaceAreaPage.style.display = "none";// hides this screen 
 
+    rectanglePrismSurfaceAreaHeight.value = "";// rests the input value 
+    rectanglePrismSurfaceAreaLength.value = "";// rests the input value 
+    rectanglePrismSurfaceAreaWidth.value = "";// rests the input value 
+    rectanglePrismSurfaceAreaResult.textContent = "";// restets the text contents 
+})
 
 
 //THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
@@ -1447,6 +1473,27 @@ allrectanglePrismPerimeterButton.addEventListener("click", function(){// if the 
     rectanglePrismPerimeterPage.style.display = "flex"// shows this page
 })
 
+allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    rectanglePrismSurfaceAreaPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -1816,4 +1863,26 @@ rectanglePrismPerimeterButton.addEventListener("click", function(){// if the cub
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     rectanglePrismPerimeterPage.style.display = "flex"// shows this page
+})
+
+rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    rectanglePrismSurfaceAreaPage.style.display = "flex"// shows this page
 })
