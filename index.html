@@ -51,6 +51,7 @@
                     <button id = "allrectanglePrismSurfaceAreaButton" class="formulaButton">RECTANGULAR PRISM SURFACE AREA</button>
                     <button id = "allcylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                     <button id = "allcylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
+                    <button id = "allcylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
                     <button class="formulaButton">CONE VOLUME</button>
                     <button class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
@@ -103,6 +104,7 @@
                 <button id = "rectanglePrismSurfaceAreaButton" class="formulaButton">RECTANGULAR PRISM SURFACE AREA</button>
                 <button id = "cylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
                 <button id = "cylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
+                <button id = "cylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
                 <button class="formulaButton">CONE VOLUME</button>
                 <button class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
@@ -524,6 +526,22 @@
                 <P id = "cylinderSurfaceAreaResult"></P>
             </div>
             <button id = "cylinderSurfaceAreaBackButton">BACK</button>
+        </main>
+
+        <main class = "cylinderPerimeterPage">
+            <h1>CYLINDER PERIMITER</h1>
+            <div class = "calculatorBox">
+
+                <label for="cylinderPerimeterHeight"> HEIGHT</label>
+                <input id = "cylinderPerimeterHeight" type = "number">
+
+                <label for= "cylinderPerimeterRadius"> RADIUS</label>
+                <input id = "cylinderPerimeterRadius" type = "number">
+
+                <button id = "calculateCylinderPerimeter">CALCULATE</button>
+                <P id = "cylindePerimeterResult"></P>
+            </div>
+            <button id = "cylinderPerimeterBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>

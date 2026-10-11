@@ -37,6 +37,7 @@ const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePris
 const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
 const cylinderVolumeBackButton = document.getElementById("cylinderVolumeBackButton");// this is the the back button on the cilinder volume page 
 const cylinderSurfaceAreaBackButton = document.getElementById("cylinderSurfaceAreaBackButton");// this is the cylinder surface are button, 
+const cylinderPerimeterAreaBackButton = document.getElementById("cylinderPerimeterBackButton");// this is the cylinder surface are button, 
 
 
 
@@ -73,6 +74,7 @@ const rectanglePrismPerimeterPage = document.querySelector(".rectanglePrismPerim
 const rectanglePrismSurfaceAreaPage = document.querySelector(".rectanglePrismSurfaceAreaPage");// this is the the rectangle prisim perimeter page 
 const cylinderVolumePage = document.querySelector(".cylinderVolumePage");// this is the cylinder volume page
 const cylinderSurfaceAreaPage = document.querySelector(".cylinderSurfaceAreaPage");// this is the cylinder surface area page 
+const cylinderPerimeterPage = document.querySelector(".cylinderPerimeterPage");// this is the cylinder surface area page 
 
 
 
@@ -105,6 +107,7 @@ const allrectanglePrismPerimeterButton = document.getElementById("allrectanglePr
 const allrectanglePrismSurfaceAreaButton = document.getElementById("allrectanglePrismSurfaceAreaButton");//This is the perimeter for the rectangl prisim on the all formula page 
 const allcylinderVolumeButton = document.getElementById("allcylinderVolumeButton");// this is the button on the all formula page 
 const allcylinderSurfaceAreaButton = document.getElementById("allcylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
+const allcylinderPerimeterButton = document.getElementById("allcylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
 
 
 
@@ -136,6 +139,7 @@ const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPer
 const rectanglePrismSurfaceAreaButton = document.getElementById("rectanglePrismSurfaceAreaButton")// this is the rectanglular prisim surfac3 area button on the math page 
 const cylinderVolumeButton = document.getElementById("cylinderVolumeButton");// this is the button on the math formula page 
 const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
+const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
 
 
 
@@ -858,7 +862,7 @@ calculateCylinderSurfaceArea.addEventListener ("click", function(){
         const Radius = Number(cylinderSurfaceAreaRadius.value);//the cariable stores the calue of the rectangle  lenght
         const Height = Number(cylinderSurfaceAreaHeight.value);//the cariable stores the calue of the rectangle base
 
-        const SurfaceArea = pi * Radius * Radius * Height ; //this is the formula 
+        const SurfaceArea = (2*pi * Radius * Radius) + (2* pi * Radius * Height); //this is the formula 
         cylinderSurfaceAreaResult.textContent = "VOLUME = " + SurfaceArea.toFixed(3) + " UNITS SQUARED";// displays this 
         cylinderSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
