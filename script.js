@@ -660,10 +660,11 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
     }
 })
 
-calculateCubeVolume.addEventListener ("click", function(){
+calculateCubePerimeter.addEventListener ("click", function(){
+
     if(cubePerimeterSide.value === "0"|| cubePerimeterSide.value === ""){//if the values are not valide
         cubePerimeterResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
-        cubePerimeterResult.style.colr = "rgb(102,21,7)"// shows the text in red 
+        cubePerimeterResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
     else{// if the falues are fine 
@@ -1392,7 +1393,7 @@ quadrilateralPerimeterButton.addEventListener("click", function() {// if this bu
     quadrilateralPerimeterPage.style.display = "flex";
 });
 
-parallelogramAreaButton.addEventListener("Click", function(){// the parallelogram button 
+parallelogramAreaButton.addEventListener("click", function(){// the parallelogram button 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
