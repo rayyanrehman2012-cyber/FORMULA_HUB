@@ -29,7 +29,7 @@ const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton")
 const pythagoreanABackButton = document.getElementById("pythagoreanABackButton");// back button on the pythagorean side a pages 
 const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// back button on the volume pages 
 const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton");// cube perimeter page back button 
-
+const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackButton");// cube survae are back button 
 
 
 // THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
@@ -56,6 +56,7 @@ const pythagoreanPageB = document.querySelector(".pythagoreanPageB");// pythagor
 const pythagoreanPageA = document.querySelector(".pythagoreanPageA");// pythagorean page side a
 const cubeVolumePage = document.querySelector(".cubeVolumePage");// the volume page for the cube 
 const cubePerimeterPage = document.querySelector(".cubePerimeterPage");// this is the cube perimeter page 
+const cubeSurfaceAreaPage = document.querySelector(".cubeSurfaceAreaPage");// this is the cube surface area pages 
 
 
 
@@ -80,6 +81,8 @@ const allpythagoreanBButton = document.getElementById("allpythagoreanBButton");/
 const allpythagoreanCButton = document.getElementById("allpythagoreanCButton");// pythagorean page c button on all formula page 
 const allcubeVolumeButton = document.getElementById("allcubeVolumeButton");// cube volume button on the all formula page 
 const allcubePerimeterButton = document.getElementById("allcubePerimeterButton");// cube perimeter button on all formula page 
+const allcubeSurfaceAreaButton = document.getElementById("allcubeSurfaceAreaButton");// this is thje surface area for cube button on the all fromula pages 
+
 
 
 
@@ -104,7 +107,7 @@ const pythagoreanBButton = document.getElementById("pythagoreanBButton");// pyth
 const pythagoreanCButton = document.getElementById("pythagoreanCButton");// pythagorean page cbutton on math formula page 
 const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube volume button on the math onlth formula pages 
 const cubePerimeterButton = document.getElementById("cubePerimeterButton");//the cube perimeter button on the mathformula page 
-
+const cubeSurfaceAreaButton = document.getElementById("cubeSurfaceAreaButton");//the cube surface area button on the math onthl pages 
 
 
 
@@ -252,6 +255,15 @@ const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the resu
 const cubePerimeterSide = document.getElementById("cubePerimeterSide");//This is the cube perimeter side vale 
 const calculateCubePerimeter = document.getElementById("calculateCubePerimeter")//the caluclate button
 const cubePerimeterResult = document.getElementById("cubePerimeterResult"); // cthe resultline 
+
+
+// THESE ARE FOR THE CUBE SURFACE ARE PAGE 
+
+const cubeSurfaceAreaSide = document.getElementById("cubeSurfaceAreaSide");//This is the cube perimeter side vale 
+const calculateCubeSurfaceArea = document.getElementById("calculateCubeSurfaceArea")//the caluclate button
+const cubeSurfaceAreaResult = document.getElementById("cubeSurfaceAreaResult"); // cthe resultline 
+
+
 
 
 
@@ -660,7 +672,7 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
     }
 })
 
-calculateCubePerimeter.addEventListener ("click", function(){
+calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate button is clicked 
 
     if(cubePerimeterSide.value === "0"|| cubePerimeterSide.value === ""){//if the values are not valide
         cubePerimeterResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
@@ -675,6 +687,24 @@ calculateCubePerimeter.addEventListener ("click", function(){
         cubePerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green 
     }
 })
+
+calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calculate button is clicked 
+
+    if(cubeSurfaceAreaSide.value === "0"|| cubeSurfaceAreaSide.value === ""){//if the values are not valide
+        cubeSurfaceAreaResult.textContent = "ERROR, PLEASE ENTER A VALID VALUE"; //shows this error message 
+        cubeSurfaceAreaResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else{// if the falues are fine 
+        const Side = Number(cubeSurfaceAreaSide.value);//the cariable stores the calue of the cubes side
+        const SurfaceArea = (Side *Side)*6;// this is the formula 
+
+        cubeSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea + " UNITS SQUARED";// displays this 
+        cubeSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green 
+    }
+})
+
+
 
 
 
@@ -699,9 +729,6 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
-
-
-
 
 
 
@@ -969,6 +996,16 @@ cubePerimeterBackButton.addEventListener("click", function(){
     cubePerimeterResult.textContent - "";// restets the text contents 
 
 })
+
+cubeSurfaceAreaBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    cubeSurfaceAreaPage.style.display = "none";// hides this screen 
+
+    cubeSurfaceAreaSide.value = "";// rests the input value 
+    cubeSurfaceAreaResult.textContent - "";// restets the text contents 
+
+})
+
 
 
 
@@ -1271,6 +1308,31 @@ allcubePerimeterButton.addEventListener("click", function(){// if the cube perim
     cubePerimeterPage.style.display = "flex"// shows this page
 })
 
+allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    cubeSurfaceAreaPage.style.display = "flex"// shows this page
+})
+
+
+
+
 
 
 
@@ -1571,4 +1633,26 @@ cubePerimeterButton.addEventListener("click", function(){// if the cube perimete
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     cubePerimeterPage.style.display = "flex"// shows this page
+})
+
+cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    cubeSurfaceAreaPage.style.display = "flex"// shows this page
 })
