@@ -790,7 +790,7 @@ calculateRectanglePrismPerimeter.addEventListener ("click", function(){
 
 })  
 
-calculateRectanglePrismPerimeter.addEventListener ("click", function(){
+calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){
 
     if(rectanglePrismSurfaceAreaHeight.value === "0"||rectanglePrismSurfaceAreaHeight.value === ""||rectanglePrismSurfaceAreaWidth.value === "0"||rectanglePrismSurfaceAreaWidth.value === ""||rectanglePrismSurfaceAreaLength.value === "0"||rectanglePrismSurfaceAreaLength.value === ""){ // if no values were entered or they are invalid 
         rectanglePrismSurfaceAreaResult.textContent = "ERROR,PLEASE ENTER 3 VALID VALUES"; //the error message
