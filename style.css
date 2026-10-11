@@ -21,7 +21,8 @@
 .rectanglePrismPerimeterPage,
 .rectanglePrismVolumePage,
 .rectanglePrismSurfaceAreaPage,
-.cylinder{
+.cylinderSurfaceAreaPage,
+.cylinderVolumePage{
     display: none;
 }
 

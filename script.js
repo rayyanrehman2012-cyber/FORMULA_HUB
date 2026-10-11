@@ -132,7 +132,7 @@ const cubeVolumeButton = document.getElementById("cubeVolumeButton");// the vube
 const cubePerimeterButton = document.getElementById("cubePerimeterButton");//the cube perimeter button on the mathformula page 
 const cubeSurfaceAreaButton = document.getElementById("cubeSurfaceAreaButton");//the cube surface area button on the math onthl pages 
 const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolumeButton");// this si the rectangle prism volume button on the math formula page
-const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPerimeterButon");//this is the math page button 
+const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPerimeterButton");//this is the math page button 
 const rectanglePrismSurfaceAreaButton = document.getElementById("rectanglePrismSurfaceAreaButton")// this is the rectanglular prisim surfac3 area button on the math page 
 const cylinderVolumeButton = document.getElementById("cylinderVolumeButton");// this is the button on the math formula page 
 const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
@@ -1913,6 +1913,7 @@ pythagoreanCButton.addEventListener("click", function() {// on formula bage, pyt
 cubeVolumeButton.addEventListener("click", function() {// if the cube volume button is clicked o the math pages 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page
+    mathFormulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1934,6 +1935,7 @@ cubeVolumeButton.addEventListener("click", function() {// if the cube volume but
 cubePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
+    mathFormulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1956,6 +1958,7 @@ cubePerimeterButton.addEventListener("click", function(){// if the cube perimete
 cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this pages
+    mathFormulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1977,6 +1980,7 @@ cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perime
 
 rectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
     startPage.style.display = "none";// this hides the screen 
+    mathFormulaPage.style.display = "none"; // hides this page 
     formulaPage.style.display = "none";// this hides the screen 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
@@ -1998,8 +2002,9 @@ rectanglePrismVolumeButton.addEventListener("click", function(){// if the cube p
 })
 
 rectanglePrismPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
+    mathFormulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -2020,8 +2025,9 @@ rectanglePrismPerimeterButton.addEventListener("click", function(){// if the cub
 })
 
 rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none"; // hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    mathFormulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -2042,8 +2048,9 @@ rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the c
 })
 
 cylinderVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none"; // hides this page 
+    formulaPage.style.display = "none"; // hides this page 
+    mathFormulaPage.style.display = "none"; // hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -2064,8 +2071,9 @@ cylinderVolumeButton.addEventListener("click", function(){// if the cube perimet
 })
 
 cylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    mathFormulaPage.style.display = "none"; // hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
