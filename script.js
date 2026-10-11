@@ -380,10 +380,18 @@ const calculateConeVolume = document.getElementById("calculateConeVolume");// th
 const coneVolumeResult = document.getElementById("coneVolumeResult");/// this si the result line
 
 
-//THESE ARE FOR THE CONE VOLUME CALCULATOR
+//THESE ARE FOR THE CONE PERIMETER CALCULATOR
 const conePerimeterRadius = document.getElementById("conePerimeterRadius");// this is the cone readius 
 const calculateConePerimeter = document.getElementById("calculateConePerimeter");// this is the calculate button
 const conePerimeterResult = document.getElementById("conePerimeterResult");/// this si the result line
+
+
+
+
+
+
+
+
 
 
 
@@ -924,7 +932,7 @@ calculateCylinderSurfaceArea.addEventListener ("click", function(){// calculate 
 calculateCylinderPerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(cylinderPerimeterRadius.value === "0"||cylinderPerimeterRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderPerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
+        cylinderPerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
         cylinderPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -942,7 +950,7 @@ calculateCylinderPerimeter.addEventListener ("click", function(){// if the circu
 calculateRadius.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(radiusDiameter.value === "0"||radiusDiameter.value === ""){ // if no values were entered or they are invalid 
-        radiusResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
+        radiusResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
         radiusResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -960,7 +968,7 @@ calculateRadius.addEventListener ("click", function(){// if the circumference ca
 calculateDiameter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(diameterRadius.value === "0"||diameterRadius.value === ""){ // if no values were entered or they are invalid 
-        diameterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUES"; //the error message
+        diameterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
         diameterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
@@ -989,13 +997,29 @@ calculateConeVolume.addEventListener ("click", function(){// if the circumferenc
 
         const Volume = (pi * Radius * Radius * Height)/3 ; //this is the formula
 
-        coneVolumeResult.textContent = "DIAMETER = " + Volume.toFixed(3) + " UNITS";// displays this 
+        coneVolumeResult.textContent = "DIAMETER = " + Volume.toFixed(3) + " UNITS CUBED";// displays this 
         coneVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 
 });
 
+calculateConePerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
+     
+    if(conePerimeterRadius.value === "0"||conePerimeterRadius.value === ""){ // if no values were entered or they are invalid 
+        conePerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+        conePerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    
+    }
 
+    else {//if everything is fine 
+        const Radius = Number(conePerimeterRadius.value);//the cariable stores the calue of the rectangle  lenght
+        const Perimeter = 2 * pi * Radius; //this is the formula
+
+        conePerimeterResult.textContent = "PERIMETER = " + Perimeter.toFixed(3) + " UNITS";// displays this 
+        conePerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+});
 
 
 
@@ -1365,7 +1389,6 @@ diameterBackButton.addEventListener("click", function(){
     diameterResult.textContent = "";// restets the text contents 
 })
 
-
 coneVolumeBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows this creen to everyone 
     coneVolumePage.style.display = "none";// hides this screen 
@@ -1374,6 +1397,15 @@ coneVolumeBackButton.addEventListener("click", function(){
     coneVolumeHeight.value = "";// rests the input value 
     coneVolumeResult.textContent = "";// restets the text contents 
 })
+
+conePerimeterBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    conePerimeterPage.style.display = "none";// hides this screen 
+
+    conePerimeterRadius.value = "";// rests the input value 
+    conePerimeterResult.textContent = "";// restets the text contents 
+})
+
 
 
 
@@ -1898,6 +1930,27 @@ allconeVolumeButton.addEventListener("click", function(){// if the cube perimete
     coneVolumePage.style.display = "flex"// shows this page
 })
 
+allconePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    conePerimeterPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -2429,4 +2482,27 @@ coneVolumeButton.addEventListener("click", function(){// if the cube perimeter i
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     coneVolumePage.style.display = "flex"// shows this page
+})
+
+conePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";//hide this page 
+    mathFormulaPage.style.display = "none"; // hides this screent 
+    formulaPage.style.display = "none";// hide this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    conePerimeterPage.style.display = "flex"// shows this page
 })
