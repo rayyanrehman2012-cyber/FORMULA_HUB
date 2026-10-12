@@ -58,6 +58,7 @@ The website starts of on the front page. The front page contains a short descrip
 - cone surface area : page and functio 
 - cone perimeter page and function 
 - cone volume page and function
+- Sphere volume page and functionns 
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 3)

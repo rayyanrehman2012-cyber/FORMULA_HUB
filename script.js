@@ -46,6 +46,7 @@ const diameterBackButton = document.getElementById("diameterBackButton");// this
 const coneVolumeBackButton = document.getElementById("coneVolumeBackButton");// this is the cone volume back button 
 const conePerimeterBackButton = document.getElementById("conePerimeterBackButton");// this is the come perimiter page back buttons 
 const coneSurfaceAreaBackButton = document.getElementById("coneSurfaceAreaBackButton");// this is the cone surface are back button 
+const sphereVolumeBackButton = document.getElementById("sphereVolumeBackButton");// this is the back button on the sphere volume page 
 
 
 
@@ -90,7 +91,7 @@ const diameterPage = document.querySelector(".diameterPage");// this is the diam
 const coneVolumePage = document.querySelector(".coneVolumePage")// this is the cone volume page 
 const conePerimeterPage = document.querySelector(".conePerimeterPage");// this is the cone perimeter page 
 const coneSurfaceAreaPage = document.querySelector(".coneSurfaceAreaPage");// this is the cos surface area page
-
+const sphereVolumePage = document.querySelector(".sphereVolumePage");// This is the shpere volume page itself 
 
 
 
@@ -127,6 +128,7 @@ const alldiameterButton = document.getElementById("alldiameterButton");// this i
 const allconeVolumeButton = document.getElementById("allconeVolumeButton");// this is the cone volume button on the all formula button 
 const allconePerimeterButton = document.getElementById("allconePerimeterButton");// this is the cone perimeter button on the all formula screen 
 const allconeSurfaceAreaButton = document.getElementById("allconeSurfaceAreaButton");// this is the cone Surface are page 
+const allsphereVolumeButton = document.getElementById("allsphereVolumeButton");// this is the sphere volume button on the all formula button screen 
 
 
 
@@ -164,7 +166,7 @@ const diameterButton = document.getElementById("diameterButton");// this is the 
 const coneVolumeButton = document.getElementById("coneVolumeButton");// this is the cone volume button on the all formula button 
 const conePerimeterButton = document.getElementById("conePerimeterButton");// this is the cone perimeter button located on the math formula page 
 const coneSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");// this is the cone surface area button on the math only page 
-
+const sphereVolumeButton = document.getElementById("sphereVolumeButton");// this is the shpere volume button on the math only formula page 
 
 
 
@@ -175,32 +177,27 @@ const widthInput = document.getElementById("width");// your width input
 const calculateRectangleArea = document.getElementById("calculateRectangleArea");// the calculate button 
 const rectangleAreaResult = document.getElementById("rectangleAreaResult");// the line that gives u the answer
 
-
 // THESE ARE FOR THE RECTANGLE PERIMETER CALCULATOR
 const PerimeterlengthInput = document.getElementById("Perimeterlength"); // you length input 
 const PerimeterwidthInput = document.getElementById("Perimeterwidth");// your width input 
 const calculateRectanglePerimeter = document.getElementById("calculateRectanglePerimeter");// the calculate button 
 const rectanglePerimeterResult = document.getElementById("rectanglePerimeterResult");// the line that gives u the answer
 
-
 // THESE ARE FOR THE SQUARE AREA CALCULATOR 
 const SquareAreaDimenstion = document.getElementById("SquareAreaDimenstion"); // you dimentsion input 
 const calculateSquareArea = document.getElementById("calculateSquareArea");// the calculate button 
 const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
-
 
 //THESE ARE FOR THE  SQUARE PERIMETER CALCULATOR 
 const SquarePerimeterDimenstion = document.getElementById("SquarePerimeterDimenstion");// square dimentions for area 
 const calculateSquarePerimeter = document.getElementById("calculateSquarePerimeter");// square perimiter calculate button 
 const squarePerimeterResult = document.getElementById("squarePerimeterResult");// the line that gives u the answer
 
-
 //THESE ARE FOR THE TRIANGLE ARE CALCULATOR
 const triangleAreaHeight = document.getElementById("triangleAreaHeight");// height dimentions for triangle are
 const triangleAreaBase = document.getElementById("triangleAreaBase"); //  the base measurement ofr the triangle 
 const calculateTriangleArea = document.getElementById("calculateTriangleArea");// the calculate btton
 const triangleAreaResult = document.getElementById("triangleAreaResult");// displays score 
-
 
 // THESE ARE FOR THE TRIANGLE PERIMETER CALCULSTOR
 const trianglePerimeterSideA = document.getElementById("trianglePerimeterSideA");// side a input 
@@ -209,13 +206,11 @@ const trianglePerimeterSideC = document.getElementById("trianglePerimeterSideC")
 const calculateTrianglePerimeter = document.getElementById("calculateTrianglePerimeter");// the calculate button
 const trianglePerimeterResult = document.getElementById("trianglePerimeterResult");//this is the result line
 
-
 //THESE ARE FOR THE CIRCLE  AREA  CALCULATOR
 const circleAreaRadius = document.getElementById("circleAreaRadius");// radius input 
 const calculateCircleArea = document.getElementById("calculateCircleArea");// the calculat button 
 const circleAreaResult = document.getElementById("circleAreaResult");// this is the result line
 const pi = 3.14159265358979323846; // this si the value of pi that will be used in the calculaotre 
-
 
 // THESE ARE FOR THE CIRCLE CIRCUMPERFERENCE CALCULATOR 
 const circleCircumferenceDiameter = document.getElementById("circleCircumferenceDiameter");// gets the Diameter
@@ -223,14 +218,12 @@ const circleCircumferenceRadius = document.getElementById("circleCircumferenceRa
 const circleCircumferenceResult = document.getElementById("circleCircumferenceResult");// this is the result line
 const calculateCircleCircumference = document.getElementById("calculateCircleCircumference");// the calculat button 
 
-
 // THESE ARE FOR THE TRAPEZOID AREA CALCULATOR
 const trapezoidAreaBaseA = document.getElementById("trapezoidAreaBaseA");// this is the trabozoid base a value 
 const trapezoidAreaBaseB = document.getElementById("trapezoidAreaBaseB");// this is the trapizode base b value 
 const trapezoidAreaHeight = document.getElementById("trapezoidAreaHeight");// the trapizoid hight value 
 const calculateTrapezoidArea = document.getElementById("calculateTrapezoidArea");// the calculate butto 
 const trapezoidAreaResult = document.getElementById("trapezoidAreaResult");// the trapezod result 
-
 
 // THESE ARE FOR THE QUADILATERAL PERIMETER CALCULATORS
 const quadSideA = document.getElementById("quadSideA");// this is the side on 
@@ -240,13 +233,11 @@ const quadSideD = document.getElementById("quadSideD");// this is the side on
 const calculateQuadrilateralPerimeter = document.getElementById("calculateQuadrilateralPerimeter");// calculate button 
 const quadrilateralPerimeterResult = document.getElementById("quadrilateralPerimeterResult");// result line 
 
-
 //THES ARE FOR THE PERALLELOGRAM ARE CALCULATOR
 const parallelogramBase = document.getElementById("parallelogramBase");// base of the parallelograph
 const parallelogramHeight = document.getElementById("parallelogramHeight");// height of the parallelopgram 
 const calculateParallelogramArea = document.getElementById("calculateParallelogramArea");// the calculate button 
 const parallelogramAreaResult = document.getElementById("parallelogramAreaResult");// the calculating result 
-
 
 //THESE ARE FOR THE SLOPE CALCULATOR 
 const slopeY1 = document.getElementById("slopeY1"); // y value of the 1 cordinate 
@@ -256,7 +247,6 @@ const slopeX2 = document.getElementById("slopeX2"); // x value of the 2 cordinat
 const calculateSlope = document.getElementById("calculateSlope");; //calculate button 
 const slopeResult = document.getElementById("slopeResult");; //result
 
-
 //THESE ARE FOR THE DISTANCE CALCULATOR
 const distanceY1 = document.getElementById("distanceY1");// this is the y
 const distanceY2 = document.getElementById("distanceY2");// this is the y
@@ -264,7 +254,6 @@ const distanceX1 = document.getElementById("distanceX1");// this is the x
 const distanceX2 = document.getElementById("distanceX2");// this is the X
 const calculateDistance = document.getElementById("calculateDistance");// this is the calculate button 
 const distanceResult = document.getElementById("distanceResult"); // this is this resut of the distance formula 
-
 
 // THESE ARE FOR THR MIDPOINT FORMULA CALCULATOR
 const midpointY1 = document.getElementById("midpointY1");// this i the midpoint y1
@@ -274,13 +263,11 @@ const midpointX2 = document.getElementById("midpointX2");// this i the midpoint 
 const calculateMidpoint = document.getElementById("calculateMidpoint");// this is the calculate putton on this page 
 const midpointResult = document.getElementById("midpointResult");// this is the midpoint result display 
 
-
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE C CALCULATOR 
 const pythagoreanCA = document.getElementById("pythagoreanCA");// side a for pythagorean theorm 
 const pythagoreanCB = document.getElementById("pythagoreanCB");// side b 
 const calculatePythagoreanC = document.getElementById("calculatePythagoreanC");// calulate button 
 const pythagoreanCResult = document.getElementById("pythagoreanCResult");// result 
-
 
 // THESE ARE FOR THE PYTHAGOREAN THEOREM DIS B CALCULATOR
 const pythagoreanBA = document.getElementById("pythagoreanBA");// side a 
@@ -288,31 +275,26 @@ const pythagoreanBC = document.getElementById("pythagoreanBC");// side C
 const calculatePythagoreanB = document.getElementById("calculatePythagoreanB");// calculate button 
 const pythagoreanBResult = document.getElementById("pythagoreanBResult");// resut 
 
-
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE A CALCULATOR
 const pythagoreanAB = document.getElementById("pythagoreanAB");// side b
 const pythagoreanAC = document.getElementById("pythagoreanAC");// side c
 const calculatePythagoreanA = document.getElementById("calculatePythagoreanA");// calculate button 
 const pythagoreanAResult = document.getElementById("pythagoreanAResult");// result 
 
-
 // THESE ARE FOR THE CUBE VOLUME PAGE
 const cubeSide = document.getElementById("cubeSide");// the side value of the cubve 
 const calculateCubeVolume = document.getElementById("calculateCubeVolume"); // the calculate button
 const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the result message/line in the calculator 
-
 
 // THESE ARE FOR THE CUBE PERIMETER PAGE
 const cubePerimeterSide = document.getElementById("cubePerimeterSide");//This is the cube perimeter side vale 
 const calculateCubePerimeter = document.getElementById("calculateCubePerimeter")//the caluclate button
 const cubePerimeterResult = document.getElementById("cubePerimeterResult"); // cthe resultline 
 
-
 // THESE ARE FOR THE CUBE SURFACE ARE PAGE 
 const cubeSurfaceAreaSide = document.getElementById("cubeSurfaceAreaSide");//This is the cube perimeter side vale 
 const calculateCubeSurfaceArea = document.getElementById("calculateCubeSurfaceArea")//the caluclate button
 const cubeSurfaceAreaResult = document.getElementById("cubeSurfaceAreaResult"); // cthe resultline 
-
 
 // THESE ARE FOR THE RECTANGLE PRISM VOLUME
 const rectanglePrismVolumeLength = document.getElementById("rectanglePrismVolumeLength");//This is the rectangle  folume  base  vale 
@@ -321,14 +303,12 @@ const rectanglePrismVolumeHeight = document.getElementById("rectanglePrismVolume
 const calculateRectanglePrismVolume = document.getElementById("calculateRectanglePrismVolume");//This is the rectangle  volume  calculate button 
 const rectanglePrismVolumeResult = document.getElementById("rectanglePrismVolumeResult");//This is the result line 
 
-
 // THESE ARE FOR THE RECTANGLE PRISM VOLUME
 const rectanglePrismPerimeterLength = document.getElementById("rectanglePrismPerimeterLength");//this is the lenght input for the the rectangle prisim perimeter 
 const rectanglePrismPerimeterWidth = document.getElementById("rectanglePrismPerimeterWidth");// this is the width input
 const rectanglePrismPerimeterHeight = document.getElementById("rectanglePrismPerimeterHeight");// this is the height input 
 const calculateRectanglePrismPerimeter = document.getElementById("calculateRectanglePrismPerimeter");// this is the caluclate buton 
 const rectanglePrismPerimeterResult = document.getElementById("rectanglePrismPerimeterResult")// this is the result line 
-
 
 // THESE ARE FOR THE RECTANGLE PRISIM SURFACE ARE CALCULATOR
 const rectanglePrismSurfaceAreaLength = document.getElementById("rectanglePrismSurfaceAreaLength");// this is the lenght imput for the rectangle surface are 
@@ -337,13 +317,11 @@ const rectanglePrismSurfaceAreaHeight = document.getElementById("rectanglePrismS
 const calculateRectanglePrismSurfaceArea = document.getElementById("calculateRectanglePrismSurfaceArea");// this is the caluclate buton 
 const rectanglePrismSurfaceAreaResult = document.getElementById("rectanglePrismSurfaceAreaResult")// this is the result line 
 
-
 // THESE ARE FOR THE CYLINDER VOLUM CALCULATOR
 const cylinderVolumeHeight = document.getElementById("cylinderVolumeHeight");// this is the height of the cilynder 
 const cylinderVolumeRadius = document.getElementById("cylinderVolumeRadius");// this is the radius  of the cilynder 
 const calculateCylinderVolume = document.getElementById("calculateCylinderVolume");// this is the caluclate buton 
 const cylinderVolumeResult = document.getElementById("cylinderVolumeResult")// this is the result line 
-
 
 // THESE ARE FOR THE CYLINDER VOLUME CALCULATOR 
 const cylinderSurfaceAreaHeight = document.getElementById("cylinderSurfaceAreaHeight");// this is the cylinder surface are height holder
@@ -351,24 +329,20 @@ const cylinderSurfaceAreaRadius =  document.getElementById("cylinderSurfaceAreaR
 const calculateCylinderSurfaceArea = document.getElementById("calculateCylinderSurfaceArea");// this is the calculate button 
 const cylinderSurfaceAreaResult = document.getElementById("cylinderSurfaceAreaResult")// this is the result line 
 
-
 // THESE ARE FOR TH CYLINDER VOLUME CALCULATOR 
 const cylinderPerimeterRadius = document.getElementById("cylinderPerimeterRadius");//the radius of the cylinder 
 const calculateCylinderPerimeter = document.getElementById("calculateCylinderPerimeter");// this is the caluclate button  on the screan 
 const cylinderPerimeterResult = document.getElementById("cylinderPerimeterResult");// the result line 
-
 
 //THESE ARE FOR THE RADIUS CALCULATOR
 const radiusDiameter = document.getElementById("radiusDiameter");// gets the radius diameter input 
 const calculateRadius = document.getElementById("calculateRadius");// this is the calculate button
 const radiusResult = document.getElementById("radiusResult");/// this si the result line
 
-
 //THESE ARE FOR THE DIAMETER CALCULATOR
 const diameterRadius = document.getElementById("diameterRadius");// gets the radius diameter input 
 const calculateDiameter = document.getElementById("calculateDiameter");// this is the calculate button
 const diameterResult = document.getElementById("diameterResult");/// this si the result line
-
 
 //THESE ARE FOR THE CONE VOLUME CALCULATOR
 const coneVolumeRadius = document.getElementById("coneVolumeRadius");// this is the cone readius 
@@ -376,12 +350,10 @@ const coneVolumeHeight = document.getElementById("coneVolumeHeight");// this is 
 const calculateConeVolume = document.getElementById("calculateConeVolume");// this is the calculate button
 const coneVolumeResult = document.getElementById("coneVolumeResult");/// this si the result line
 
-
 //THESE ARE FOR THE CONE PERIMETER CALCULATOR
 const conePerimeterRadius = document.getElementById("conePerimeterRadius");// this is the cone readius 
 const calculateConePerimeter = document.getElementById("calculateConePerimeter");// this is the calculate button
 const conePerimeterResult = document.getElementById("conePerimeterResult");/// this si the result line
-
 
 //THESE ARE FOR THE CONE SURFACE AREA PAGE
 const coneSurfaceAreaRadius = document.getElementById("coneSurfaceAreaRadius");// this is the cone readius 
@@ -389,9 +361,10 @@ const calculateConeSurfaceArea = document.getElementById("calculateConeSurfaceAr
 const coneSurfaceAreaResult = document.getElementById("coneSurfaceAreaResult");/// this si the result line
 const coneSurfaceAreaLenght = document.getElementById("coneSurfaceAreaLenght");// this is the cone readius 
 
-
-
-
+//THESE ARE FOR THE SHPHERE VOLUME BUTTON
+const sphereVolumeRadius = document.getElementById("sphereVolumeRadius");// this si the shpere volume radius value 
+const calculatesphereVolume = document.getElementById("calculatesphereVolume");// this is the calculat button on the shpere volume page 
+const sphereVolumeResult = document.getElementById("sphereVolumeResult");// this is the result line ins the spherevolume pages
 
 
 
@@ -1042,8 +1015,6 @@ calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumf
     }
 
 });
-
-
 
 
 
