@@ -57,7 +57,7 @@
                     <button id = "allconeVolumeButton" class="formulaButton">CONE VOLUME</button>
                     <button id = "allconePerimeterButton" class="formulaButton">CONE PERIMETER</button>
                     <button id = "allconeSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
-                    <button class="formulaButton">SPHERE VOLUME</button>
+                    <button id = "allsphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                 </div>
             </section>
@@ -114,7 +114,7 @@
                 <button id = "coneVolumeButton" class="formulaButton">CONE VOLUME</button>
                 <button id = "conePerimeterButton" class="formulaButton">CONE PERIMETER</button>
                 <button id = "coneSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
-                <button class="formulaButton">SPHERE VOLUME</button>
+                <button id = "sphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                     
                 </div>
@@ -619,6 +619,20 @@
 
             </div>
             <button id = "coneSurfaceAreaBackButton">BACK</button>
+        </main>
+
+        <main class = "sphereVolumePage">
+            <h1>SPHERE VOLUME</h1>
+            <div class = "calculatorBox">
+
+                <label for= "sphereVolumeRadius">RADIUS</label>
+                <input id = "sphereVolumeRadius" type = "number">
+
+                <button id = "calculatesphereVolume">CALCULATE</button>
+                <P id = "sphereVolumeResult"></P>
+
+            </div>
+            <button id = "sphereVolumeBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>

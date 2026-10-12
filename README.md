@@ -51,10 +51,13 @@ The website starts of on the front page. The front page contains a short descrip
 - cylinder volume page and function 
 - cylinder surface area page 
 - cylinger perimeter pages 
-- more error messages for each caluclator 
+- more error messages 
 - cone volume function and page 
-- radius function and page calculator 
-- diameter calculater, function and page 
+- radius function and page  
+- diameter, function and page  
+- cone surface area : page and functio 
+- cone perimeter page and function 
+- cone volume page and function
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 3)
