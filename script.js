@@ -126,7 +126,7 @@ const allradiusButton = document.getElementById("allradiusButton");// this is th
 const alldiameterButton = document.getElementById("alldiameterButton");// this is the redius button on the all formula page 
 const allconeVolumeButton = document.getElementById("allconeVolumeButton");// this is the cone volume button on the all formula button 
 const allconePerimeterButton = document.getElementById("allconePerimeterButton");// this is the cone perimeter button on the all formula screen 
-const allconeSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");// this is the cone Surface are page 
+const allconeSurfaceAreaButton = document.getElementById("allconeSurfaceAreaButton");// this is the cone Surface are page 
 
 
 
@@ -1027,20 +1027,30 @@ calculateConePerimeter.addEventListener ("click", function(){// if the circumfer
 calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(coneSurfaceAreaLenght.value === "0"||coneSurfaceAreaLenght.value === ""||coneSurfaceAreaRadius.value === ""||coneSurfaceAreaRadius.value === "0"){ // if no values were entered or they are invalid 
-        coneSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+        coneSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
         coneSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     
     }
 
     else {//if everything is fine 
-        const Radius = Number(conePerimeterRadius.value);//the cariable stores the calue of the rectangle  lenght
-        const SurfaceArea = 2 * pi * Radius; //this is the formula
+        const Lenght = Number(coneSurfaceAreaLenght.value);//the cariable stores the calue of the cone  lenght
+        const Radius = Number(coneSurfaceAreaRadius.value);//the cariable stores the calue of the cone  radius 
+        const SurfaceArea = ((pi * Radius * Radius) + (pi* Radius * Lenght)); //this is the formula
 
         coneSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea.toFixed(3) + " UNITS Squared";// displays this 
         coneSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 
 });
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1426,7 +1436,14 @@ conePerimeterBackButton.addEventListener("click", function(){
     conePerimeterResult.textContent = "";// restets the text contents 
 })
 
+coneSurfaceAreaBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows this creen to everyone 
+    coneSurfaceAreaPage.style.display = "none";// hides this screen 
 
+    coneSurfaceAreaLenght.value = "";// rests the input value 
+    coneSurfaceAreaRadius.value = "";// rests the input value 
+    coneSurfaceAreaResult.textContent = "";// restets the text contents 
+})
 
 
 
@@ -1971,6 +1988,33 @@ allconePerimeterButton.addEventListener("click", function(){// if the cube perim
     cubeVolumePage.style.display = "none";// hid this page 
     conePerimeterPage.style.display = "flex"// shows this page
 })
+
+allconeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";
+    formulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    coneSurfaceAreaPage.style.display = "flex"// shows this page
+})
+
+
+
+
+
 
 
 
@@ -2525,4 +2569,27 @@ conePerimeterButton.addEventListener("click", function(){// if the cube perimete
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     conePerimeterPage.style.display = "flex"// shows this page
+})
+
+coneSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// this hides this page from the screen 
+    formulaPage.style.display = "none";// this hides this page
+    mathFormulaPage.style.display = "none"// this hides the math formula page after the button is cilced  
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    coneSurfaceAreaPage.style.display = "flex"// shows this page
 })
