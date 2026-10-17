@@ -520,7 +520,7 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
     }
 
     else if (PerimeterlengthInput.value <= -1||PerimeterwidthInput.value <= -1){// if the values are negative 
-        rectanglePerimeterResult.textContent = "NO NEGATIVE VALUES!" // this is the error message 
+        rectanglePerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!" // this is the error message 
         rectanglePerimeterResult.style.color = "rgb(102,21,7)" // the color becomes red 
     }
 
@@ -547,7 +547,7 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
     }
 
     else if (SquareAreaDimenstion.value <= -1){// if the input is a negative value 
-        squareAreaResult.textContent = "NO NEGATIVE VALUES!"// ERROR Message
+        squareAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"// ERROR Message
         squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red
     }
 
@@ -562,38 +562,54 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
 
 calculateSquarePerimeter.addEventListener("click", function() {// calculate button ispressed, then solve the perimiter of the square
     
-    if (SquarePerimeterDimenstion.value === "" || SquarePerimeterDimenstion.value === "0"){// if the input is empty or 0
-        squarePerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// this is the error message 
+    if (SquarePerimeterDimenstion.value === ""){// if the input is empty
+        squarePerimeterResult.textContent = "ERROR: ENTER A VALUE!"// this is the error message 
         squarePerimeterResult.style.color = "rgb(102,21,7)"// changer the color to red 
     }
     
-    else{ // if there is a valid value in the inputs 
-    const DimenstionSquarePerimeter = Number(SquarePerimeterDimenstion.value);// stores the perimiter dimetion of the square 
-    
-    const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;// this shows the operation L + L + L + L + PERIMETER
-    
-    squarePerimeterResult.textContent = "PERIMETER = " + SquarePerimeter + " UNITS";// displays the perimeter  of the square 
-    squarePerimeterResult.style.color = "rgb(11,61,46)"// adds a green color
+    else if (SquarePerimeterDimenstion.value === "0"){// if the value is a zero
+        squarePerimeterResult.textContent = "ERROR: 0 DETECTED!"// this is the error message 
+        squarePerimeterResult.style.color = "rgb(102,21,7)"// changer the color to red 
+    }
 
+    else if (SquarePerimeterDimenstion.value <= -1){// if the values are negative
+        squarePerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"// this is the error message 
+        squarePerimeterResult.style.color = "rgb(102,21,7)"// changer the color to red 
+    }
+
+    else{ // if there is a valid value in the inputs 
+        const DimenstionSquarePerimeter = Number(SquarePerimeterDimenstion.value);// stores the perimiter dimetion of the square 
+        const SquarePerimeter = DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter + DimenstionSquarePerimeter;// this shows the operation L + L + L + L + PERIMETER
+    
+        squarePerimeterResult.textContent = "PERIMETER = " + SquarePerimeter + " UNITS";// displays the perimeter  of the square 
+        squarePerimeterResult.style.color = "rgb(11,61,46)"// adds a green color
     }
 });
 
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
     
-    if (triangleAreaHeight.value === "" || triangleAreaBase.value === "" || triangleAreaHeight.value === "0"|| triangleAreaBase.value === "0") {// if the height or base is empty or 0
-        triangleAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"// this is the error message 
+    if (triangleAreaHeight.value === "" || triangleAreaBase.value === "") {// if the values are empty 
+        triangleAreaResult.textContent = "ERROR: ENTER A VALUE!"// this is the error message 
         triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red 
     }
     
+    else if (triangleAreaHeight.value === "0"|| triangleAreaBase.value === "0"){// if the values are 0s 
+        triangleAreaResult.textContent = "ERROR: 0 DETECTED!"// this is the error message 
+        triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red    
+    }
+
+    else if (triangleAreaHeight.value <= -1 || triangleAreaBase.value <= -1){
+        triangleAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"// this is the error message 
+        triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red
+    }
+
     else{ // if there are 2 values then
-    const heightTriangleArea = Number(triangleAreaHeight.value); // stores the height of the triangle
-    
-    const baseTriangleArea = Number(triangleAreaBase.value);// stores the base of the triangle
+        const heightTriangleArea = Number(triangleAreaHeight.value); // stores the height of the triangle   
+        const baseTriangleArea = Number(triangleAreaBase.value);// stores the base of the triangle
+        const triangleArea = ((heightTriangleArea * baseTriangleArea)/2);// base times height divided by 2 is te area 
 
-    const triangleArea = ((heightTriangleArea * baseTriangleArea)/2);// base times height divided by 2 is te area 
-
-    triangleAreaResult.textContent = "AREA = " + triangleArea + " UNITS SQUARED"// displays the area of the tringal 
-    triangleAreaResult.style.color = "rgb(11,61,46)" // changes the colour to green for the text 
+        triangleAreaResult.textContent = "AREA = " + triangleArea + " UNITS SQUARED"// displays the area of the tringal 
+        triangleAreaResult.style.color = "rgb(11,61,46)" // changes the colour to green for the text 
     }
 });
 
