@@ -704,30 +704,47 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
 
 calculateTrapezoidArea.addEventListener ("click", function() {// when u click calculate area for trapizoid 
     
-    if (trapezoidAreaBaseA.value === ""||trapezoidAreaBaseA.value === "0"|| trapezoidAreaBaseB.value === ""||trapezoidAreaBaseB.value === "0"|| trapezoidAreaHeight.value === ""|| trapezoidAreaHeight.value === "0"){
-        trapezoidAreaResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"// error message 
+    if (trapezoidAreaBaseA.value === ""|| trapezoidAreaBaseB.value === ""|| trapezoidAreaHeight.value === ""){// if the value is emty 
+        trapezoidAreaResult.textContent = "ERROR: ENTER 3 VALUES!"// error message 
         trapezoidAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
     }
 
-    else { 
+    else if(trapezoidAreaBaseA.value === "0"||trapezoidAreaBaseB.value === "0"|| trapezoidAreaHeight.value === "0"){// if the  the value is zero 
+        trapezoidAreaResult.textContent = "ERROR: 0 DETECTED!"// error message 
+        trapezoidAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
+    }
+
+    else if(trapezoidAreaBaseA.value <= -1||trapezoidAreaBaseB.value <= -1|| trapezoidAreaHeight.value <= -1){// if the  the value is negate  
+        trapezoidAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"// error message 
+        trapezoidAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
+    }
+
+    else { // if everything is fine then 
         const trapezoidBase1 = Number(trapezoidAreaBaseA.value);// stores the base 1 of the circle 
         const trapezoidBase2 = Number(trapezoidAreaBaseB.value);// stores the base 2 of the circle 
         const trapezoidHeight = Number(trapezoidAreaHeight.value);// stores the height of the trap 
-
         const trapezoidArea = (((trapezoidBase1 + trapezoidBase2 ) /2 ) * trapezoidHeight) // base1 plus base 2 /2 times height
 
         trapezoidAreaResult.textContent = "AREA = " + trapezoidArea + " UNITS SQUARED"// what to display
         trapezoidAreaResult.style.color = "rgb(11,61,46)"// change the color to green 
-
     }
 });
 
 calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the calculate button is pressed then 
     
-    if(quadSideA.value === ""|| quadSideA.value === "0"|| quadSideB.value === ""|| quadSideB.value === "0"|| quadSideC.value === ""|| quadSideC.value === "0"|| quadSideD.value === ""|| quadSideD.value === "0" ) { // if all the values are not present, or are  zeros 
-        quadrilateralPerimeterResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"//error mesage 
+    if(quadSideA.value === ""|| quadSideB.value === ""||  quadSideC.value === ""||  quadSideD.value === "" ) { // if all the values are not present
+        quadrilateralPerimeterResult.textContent = "ERROR: ENTER 4 VALUES!"//error mesage 
         quadrilateralPerimeterResult.style.color = "rgb(102,21,7)"// change the color to green 
+    }
 
+    else if (quadSideA.value === "0"|| quadSideB.value === "0"|| quadSideC.value === "0"||quadSideD.value === "0"){// if the values are zero 
+        quadrilateralPerimeterResult.textContent = "ERROR: 0 DETECTED!"//error mesage 
+        quadrilateralPerimeterResult.style.color = "rgb(102,21,7)"// change the color to green 
+    }
+
+    else if (quadSideA.value <= -1|| quadSideB.value <= -1|| quadSideC.value <= -1||quadSideD.value <= -1){// if the values are zero 
+        quadrilateralPerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"//error mesage 
+        quadrilateralPerimeterResult.style.color = "rgb(102,21,7)"// change the color to green 
     }
     
     else{ 
@@ -735,7 +752,6 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
         const SideB = Number(quadSideB.value);// stores the second side 
         const SideC = Number(quadSideC.value);// stores the third side 
         const SideD = Number(quadSideD.value);// stores the forht side 
-
         const QuadPerimeter = SideA + SideB + SideC + SideD;// the perimiter of the quadilateral 
 
         quadrilateralPerimeterResult.textContent = "PERIMETER = " + QuadPerimeter + " UNITS";// this is what is shos
