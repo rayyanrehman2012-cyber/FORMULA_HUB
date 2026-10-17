@@ -59,7 +59,10 @@
                     <button id = "allconeSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
                     <button id = "allsphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
                     <button id = "allsphereSurfaceAreaButton" class="formulaButton">SPHERE SURFACE AREA</button>
-                    <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
+                    <button id = "alltrianglePrismVolume" class="formulaButton">TRIANGULAR PRISM VOLUME</button>
+                    <button id = "alltrianglePrismSurfaceArea" class="formulaButton">TRIANGULAR PRISM SURFACE AREA</button>
+                    <button id = "alltrianglePrismPerimeter" class="formulaButton">TRIANGULAR PRISM PERIMETER</button>
+
                 </div>
             </section>
             <section class="physicsSection">
@@ -117,7 +120,9 @@
                 <button id = "coneSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
                 <button id = "sphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
                 <button id = "sphereSurfaceAreaButton" class="formulaButton">SPHERE VOLUME</button>
-                <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
+                <button id = "trianglePrismVolume" class="formulaButton">TRIANGULAR PRISM VOLUME</button>
+                <button id = "trianglePrismSurfaceArea" class="formulaButton">TRIANGULAR PRISM SURFACE AREA</button>
+                <button id = "trianglePrismPerimeter" class="formulaButton">TRIANGULAR PRISM PERIMETER</button>
                     
                 </div>
             <button id="mathBackButton">BACK</button>
@@ -651,6 +656,25 @@
             <button id = "sphereSurfaceAreaBackButton">BACK</button>
         </main>
         
+        <main class = "trianglePrismVolumePage">
+            <h1>TRIANGLE PRISIM VOLUME PAGE</h1>
+            <div class = "calculatorBox">
+
+                <label for = "trianglePrismVolumeBase">BASE</label>   
+                <input id = "trianglePrismVolumeBase" type = "number">
+
+                <label for = "trianglePrismVolumeHeight">HEIGHT</label>   
+                <input id = "trianglePrismVolumeHeight" type = "number">
+
+                <label for = "trianglePrismVolumeLength">LENGTH</label>   
+                <input id = "trianglePrismVolumeLength" type = "number">
+
+                <button id = "calculateTrianglePrismVolume">CALCULATE</button>
+                <p id = "trianglePrismVolumeResult"></p>
+            </div>
+            <button id = "trianglePrismVolumeBackButton">BACK</button>
+        </main>
+
         <script src="./script.js"></script>
     </body>
     </html>
