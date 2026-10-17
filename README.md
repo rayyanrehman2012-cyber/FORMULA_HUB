@@ -37,37 +37,35 @@ The website starts of on the front page. The front page contains a short descrip
 
 ## WHAT WE MADE (WEEK 2)
 - Improved the Slope Calculator - it tells you if the line is verticle or horizontal too now
-- Divided the Pythagorean Theorem page into 3 for 3 versions 
-- Designed and built the Pythagorean Theorem (Side A) page 
-- Designed and built the Pythagorean Theorem (Side B) page 
-- Designed and built the Pythagorean Theorem (Side C) page 
-- Designed and built the Distance formula page
-- the midpoint function and page 
-- cube volume page and function 
-- cube parimiter page and function 
-- cube surface are page and function
--  rectanglular prism perimiter page and function 
-- rectangular prisim volume page and function 
-- rectangular prism surface are page 
-- cylinder volume page and function 
-- cylinder surface area page 
-- cylinger perimeter pages 
-- more error messages 
-- cone volume function and page 
-- radius function and page  
-- diameter, function and page  
-- cone surface area : page and functio 
-- cone perimeter page and function 
-- cone volume page and function
-- Sphere volume page and functionns 
+- Divided the Pythagorean Theorem Calculator into 3 for 3 versions 
+- Designed and built the Pythagorean Theorem (Side A) Calculator 
+- Designed and built the Pythagorean Theorem (Side B) Calculator
+- Designed and built the Pythagorean Theorem (Side C) Calculator
+- Designed and built the Distance formula Calculator
+- Designed and built the Midpoint Calculator
+- Designed and built the Cube Volume formula Calculator 
+- Designed and built the Cube Perimiter Calculator
+- Designed and built the Cube Surface Are Calculator
+- Designed and built the Rectangular Prism Perimiter Calculator
+- Designed and built the Rectangular Prisim Volume Calculator
+- Designed and built the Rectangular Prisim Surface Area Calculator
+- Designed and built the Cylinder Volume Calculator 
+- Designed and built the Cylinder Surface Area Calculator
+- Designed and built the Cylinder Perimeter Calculator
+- Added More Error Messages 
+- Designed and built the Cone Volume Calculator
+- Designed and built the Radius Calculator  
+- Designed and built the Diameter Calculator  
+- Designed and built the Cone Surface Area Calculator
+- Designed and built the Cone Perimeter Calculator
+- Designed and built the Sphere Volume Calculator
 
 ## WHAT WE MADE (WEEK 3)
-- did the sphere volume page functions finised it 
-- did the sphere Surface are page and functions
-- triangle prism volume   page  and function 
-- triangle prism Surface are page 
-- triangle prism Perimeter page and function 
-- Improved the Error messages for each calculatore so that they are specific and detailed 
+- Finished the Sphere Volume Calculator
+- Designed and built the Sphere Surface Area Calculator
+- Designed and built the Triangle Prism Volume Calculator
+- Designed and built the Triangle Prism Surface Area Calculator 
+- Designed and built the Triangle Prism Perimeter Calculator
 - FINISHED Math formula page(WE MIGHT ADD MORE MATH FORMULAS IOF WE DECIDE TO EXTEND THE PROJECT)
 
 
