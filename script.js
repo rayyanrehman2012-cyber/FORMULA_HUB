@@ -884,10 +884,20 @@ calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclat
 });
 
 calculatePythagoreanA.addEventListener ("click", function(){// calculate side a is pressed 
-    if(pythagoreanAB.value === ""|| pythagoreanAB.value === "0"|| pythagoreanAC.value === ""|| pythagoreanAC.value === "0"){// if the values are blacnk or zero s
-        pythagoreanAResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // show this 
+    if(pythagoreanAB.value === ""|| pythagoreanAC.value === ""){// if the values are blacnk
+        pythagoreanAResult.textContent = "ERROR: ENTER 2 VALUES!"; // show this 
         pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
-    }   
+    }  
+    
+    else if(pythagoreanAB.value === "0"|| pythagoreanAC.value === "0"){// if the values are zero 
+        pythagoreanAResult.textContent = "ERROR: 0 DETECTED!"; // show this 
+        pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
+    }  
+
+    else if(pythagoreanAB.value <= -1|| pythagoreanAC.value <= -1){// if the values are blacnk or zero s
+        pythagoreanAResult.textContent = "ERROR: NO NEGATIVE VALUES!"; // show this 
+        pythagoreanAResult.style.color = "rgb(102,21,7)";// red colr 
+    }  
 
     else{// if the values are fine 
         const b = Number(pythagoreanAB.value);// cold side b value 
@@ -903,18 +913,26 @@ calculatePythagoreanA.addEventListener ("click", function(){// calculate side a 
 
             pythagoreanAResult.textContent = "SIDE A = " + a.toFixed(3) + " UNITS"; // show this 
             pythagoreanAResult.style.color = "rgb(11,61,46)";// red colr
-
         }
     }
-
 });
 
 calculatePythagoreanB.addEventListener ("click", function(){// if the calculate button is clicked in the pythagorean b pages 
 
-    if(pythagoreanBA.value === ""|| pythagoreanBA.value === "0"|| pythagoreanBC.value === ""|| pythagoreanBC.value === "0"){// if the values are blacnk or zero s
-        pythagoreanBResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // show this 
+    if(pythagoreanBA.value === ""|| pythagoreanBC.value === ""){// if the values are blacnk
+        pythagoreanBResult.textContent = "ERROR: ENTER 2 VALUES!"; // show this 
         pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
     }   
+
+    else if(pythagoreanBA.value === "0"|| pythagoreanBC.value === "0"){// if the values are zero 
+        pythagoreanBResult.textContent = "ERROR: 0 DETECTED!"; // show this 
+        pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
+    } 
+
+    else if(pythagoreanBA.value <= -1|| pythagoreanBC.value <= -1){// if the values are negative 
+        pythagoreanBResult.textContent = "ERROR: NO NEGATIVE VALUES!"; // show this 
+        pythagoreanBResult.style.color = "rgb(102,21,7)";// red colr 
+    } 
 
     else{// if the values are fine 
         const a = Number(pythagoreanBA.value);// cold side a value 
@@ -930,30 +948,35 @@ calculatePythagoreanB.addEventListener ("click", function(){// if the calculate 
 
             pythagoreanBResult.textContent = "SIDE b = " + b.toFixed(3) + " UNITS"; // show this 
             pythagoreanBResult.style.color = "rgb(11,61,46)";// red colr
-
         }
     }
-
 });
 
 calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate button is clicked on the pythagorean c pages
 
-    if(pythagoreanCA.value === ""|| pythagoreanCA.value === "0"|| pythagoreanCB.value === ""|| pythagoreanCB.value === "0"){// if the values are blacnk or zero s
-        pythagoreanCResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // show this 
-        pythagoreanCResult.style.color = "rgb(102,21,7)";// red colr 
-    }   
+    if(pythagoreanCA.value === ""|| pythagoreanCB.value === ""){// if the values are blacnk
+        pythagoreanCResult.textContent = "ERROR: ENTER 2 VALUES!"; // show this 
+        pythagoreanCResult.style.color = "rgb(102,21,7)";// red color 
+    } 
+    
+    else if(pythagoreanCA.value === "0"||pythagoreanCB.value === "0"){// if the values are zeros
+        pythagoreanCResult.textContent = "ERROR: 0 DETECTED!"; // show this 
+        pythagoreanCResult.style.color = "rgb(102,21,7)";// red color 
+    }
+
+    else if(pythagoreanCA.value <= -1|| pythagoreanCB.value <= -1){// if the values ae negative 
+        pythagoreanCResult.textContent = "ERROR: NO NEGATIVE VALUES!"; // show this 
+        pythagoreanCResult.style.color = "rgb(102,21,7)";// red color 
+    }
 
     else{// if the values are fine 
         const a = Number(pythagoreanCA.value);// cold side a value 
         const b = Number(pythagoreanCB.value);// holds side c value 
-        // if the values are fines
         const c = Math.sqrt(b ** 2 + a ** 2);; //formula 
 
         pythagoreanCResult.textContent = "SIDE C = " + c.toFixed(3) + " UNITS"; // show this 
         pythagoreanCResult.style.color = "rgb(11,61,46)";// red colr
-
     }
-
 });
 
 calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
