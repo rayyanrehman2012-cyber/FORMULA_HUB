@@ -49,6 +49,7 @@ const coneSurfaceAreaBackButton = document.getElementById("coneSurfaceAreaBackBu
 const sphereVolumeBackButton = document.getElementById("sphereVolumeBackButton");// this is the back button on the sphere volume page 
 const sphereSurfaceAreaBackButton = document.getElementById("sphereSurfaceAreaBackButton");// this is the back button on the spere surface area calculator page 
 const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolumeBackButton");// this is the back bitton on the triangle prism voulume calculatpr page 
+const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePrismSurfaceAreaBackButton");// this is the surface area back button for the triangle 
 
 
 
@@ -95,6 +96,7 @@ const coneSurfaceAreaPage = document.querySelector(".coneSurfaceAreaPage");// th
 const sphereVolumePage = document.querySelector(".sphereVolumePage");// This is the shpere volume page itself 
 const sphereSurfaceAreaPage = document.querySelector(".sphereSurfaceAreaPage");// this is the sphere surface area page 
 const trianglePrismVolumePage = document.querySelector(".trianglePrismVolumePage");// this is the triangle prisim volume page 
+const trianglePrismSurfaceAreaPage = document.querySelector(".trianglePrismSurfaceAreaPage")// this is the triangle surface area page 
 
 
 
@@ -140,7 +142,7 @@ const allconeSurfaceAreaButton = document.getElementById("allconeSurfaceAreaButt
 const allsphereVolumeButton = document.getElementById("allsphereVolumeButton");// this is the sphere volume button on the all formula button screen 
 const allsphereSurfaceAreaButton = document.getElementById("allsphereSurfaceAreaButton");// this is the spher Surface Area button on the all formula page 
 const alltrianglePrismVolumeButton = document.getElementById("alltrianglePrismVolumeButton");// this is the triangle prism volume button  on the all formula page 
-
+const alltrianglePrismSurfaceAreaButton = document.getElementById("alltrianglePrismSurfaceAreaButton");// this is the traiangle prism surface area button on the all formmula page 
 
 
 
@@ -185,7 +187,7 @@ const coneSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");/
 const sphereVolumeButton = document.getElementById("sphereVolumeButton");// this is the shpere volume button on the math only formula page 
 const sphereSurfaceAreaButton = document.getElementById("sphereSurfaceAreaButton");// this is the spher Surface Area button on the math only page 
 const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeButton");// this is the triangle prism volume button on the math only page 
-
+const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSurfaceAreaButton");// this is the triangle prism Surface area button on the math only formula page 
 
 
 
@@ -438,6 +440,15 @@ const trianglePrismVolumeHeight = document.getElementById("trianglePrismVolumeHe
 const calculateTrianglePrismVolume = document.getElementById("calculateTrianglePrismVolume");// this is the triangle prisim volume calculate button 
 const trianglePrismVolumeResult = document.getElementById("trianglePrismVolumeResult");// this is the result line 
 
+
+//THESE ARE FOR THE TRIANGLE PRISM SURFACE AREA CALCULATOR 
+const trianglePrismSurfaceAreaSideA = document.getElementById("trianglePrismSurfaceAreaSideA");// this is the trianghle rpism vbolume base input holder 
+const trianglePrismSurfaceAreaSideB = document.getElementById("trianglePrismSurfaceAreaSideB");// this is the triangle prism volume lenght input holfer 
+const trianglePrismSurfaceAreaSideC = document.getElementById("trianglePrismSurfaceAreaSideC");// this is the triangle prism volume hright input holder 
+const trianglePrismSurfaceAreaLength = document.getElementById("trianglePrismSurfaceAreaLength");// this is the triangle prism volume hright input holder 
+const calculateTrianglePrismSurfaceArea = document.getElementById("calculateTrianglePrismSurfaceArea");// this is the triangle prisim volume calculate button 
+const trianglePrismSurfaceAreaResult = document.getElementById("trianglePrismSurfaceAreaResult");// this is the result line 
+ 
 
 
 
