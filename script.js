@@ -761,15 +761,24 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
 
 calculateParallelogramArea.addEventListener ("click", function() {// this is the parallelogram are caluclat button 
 
-    if (parallelogramBase.value === "" || parallelogramBase.value === "0" || parallelogramHeight.value === "" || parallelogramHeight.value === "0"){
-        parallelogramAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // the error mesages
+    if (parallelogramBase.value === "" || parallelogramHeight.value === ""){// if the values enteret are balnck 
+        parallelogramAreaResult.textContent = "ERROR: ENTER 2 VALUES!"; // the error mesages
+        parallelogramAreaResult.style.color = "rgb(102,21,7)"// change the color to green
+    }
+
+    else if (parallelogramBase.value === "0" || parallelogramHeight.value === "0"){// if the value entered is a zer 
+        parallelogramAreaResult.textContent = "ERROR: 0 DETECTED!"; // the error mesages
+        parallelogramAreaResult.style.color = "rgb(102,21,7)"// change the color to green
+    }
+
+    else if (parallelogramBase.value <= -1|| parallelogramHeight.value <= -1){// if the values are in negative 
+        parallelogramAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"; // the error mesages
         parallelogramAreaResult.style.color = "rgb(102,21,7)"// change the color to green
     }
 
     else {// if the values are propper 
     const Base = Number(parallelogramBase.value);// base of the paralelogram 
     const Height = Number(parallelogramHeight.value);// height of the paralelogram 
-
     const parallelogramArea = Base * Height // calculates and stores the value of the area 
 
     parallelogramAreaResult.textContent = " AREA = " + parallelogramArea + " UNITS SQUARED"; // this is the line that will be shown 
@@ -780,7 +789,7 @@ calculateParallelogramArea.addEventListener ("click", function() {// this is the
 calculateSlope.addEventListener ("click", function() { // if the calculate slipe button is pressed 
 
     if (slopeY1.value === "" || slopeY2.value === "" ||  slopeX1.value === ""  || slopeX2.value === ""){
-       slopeResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"; // the error mesages
+       slopeResult.textContent = "ERROR: ENTER 4 VALUES!"; // the error mesages
         slopeResult.style.color = "rgb(102,21,7)"// change the color to green
     }
 
@@ -804,7 +813,7 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
         }
 
         else if (rise === 0 && run === 0){// if bot rise and run are the same 
-            slopeResult.textContent = "ERROR: YOU ENTERED THE SAME POINT TWICE!";// its the same point, no slope 
+            slopeResult.textContent = "ERROR: SAME POINT!";// its the same point, no slope 
             slopeResult.style.color = "rgb(102, 21, 7)"// changes the color to red
         }
 
@@ -827,7 +836,7 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
 calculateDistance.addEventListener ("click", function() { // if the calculate distance button is pressed
 
     if (distanceY1.value === "" || distanceY2.value === "" ||  distanceX1.value === ""  || distanceX2.value === ""){
-        distanceResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"; // the error mesages
+        distanceResult.textContent = "ERROR: ENTER 4 VALUES!"; // the error mesages
         distanceResult.style.color = "rgb(102,21,7)"// change the color to green
     }
 
@@ -850,18 +859,18 @@ calculateDistance.addEventListener ("click", function() { // if the calculate di
 
 calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclate button is presses 
     if (midpointX1.value === "" ||midpointY1.value === "" || midpointX2.value === "" || midpointY2.value === "" ){
-        midpointResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"// error mesage 
+        midpointResult.textContent = "ERROR: ENTER 4 VALUES!"// error mesage 
         midpointResult.style.color = "rgb(102,21,7)"// red color 
     }
 
     else {
-        const x1 = Number(midpointX1.value);
-        const x2 = Number(midpointX2.value);
-        const y1 = Number(midpointY1.value);
-        const y2 = Number(midpointY2.value);
+        const x1 = Number(midpointX1.value);// the x1 value 
+        const x2 = Number(midpointX2.value);// the x 2 value 
+        const y1 = Number(midpointY1.value);// the y 1 value 
+        const y2 = Number(midpointY2.value);// the y2 values 
 
         if (x1 === x2 && y1 === y2){// if the points are the same 
-            midpointResult.textContent = "ERROR: PLEASE USE 2 DIFFERENT POINTS"; // shows this 
+            midpointResult.textContent = "ERROR: USE 2 DIFFERENT POINTS"; // shows this 
             midpointResult.style.color = "rgb(102,21,7)";// shows this in green
         }
         else  {//if there not the  same 
