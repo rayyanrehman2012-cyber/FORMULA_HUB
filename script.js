@@ -1096,7 +1096,7 @@ calculateSphereVolume.addEventListener ("click", function(){// if the calculate 
         const Radius = Number(sphereVolumeRadius.value);//this is the radius vale holder 
         const Volume = (4 / 3 * pi * Radius * Radius * Radius);// this is the volume formula for a spher
 
-        sphereVolumeResult.textContent = "VOLUME = " + Volume + "UNITS CUBED";// this is the           result display
+        sphereVolumeResult.textContent = "VOLUME = " + Volume.toFixed(3) + " UNITS CUBED";// this is the           result display
         sphereVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 
@@ -1114,7 +1114,7 @@ calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calcu
         const Radius = Number(sphereSurfaceAreaRadius.value);// this is the radius input holder 
         const SurfaceArea = (4 * pi * Radius * Radius);//this is the surface area formula for a sphere 
 
-        sphereSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea + "UNITS SQUARED";//thiis is the result message 
+        sphereSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea.toFixed(3) + " UNITS SQUARED";//thiis is the result message 
         sphereSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 

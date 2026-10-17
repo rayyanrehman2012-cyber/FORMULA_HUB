@@ -60,6 +60,29 @@ The website starts of on the front page. The front page contains a short descrip
 - cone volume page and function
 - Sphere volume page and functionns 
 
+## WHAT WE MADE (WEEK 3)
+- did the sphere volume page functions finised it 
+- did the sphere Surface are page and functions
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 3)
 - sound effects when you click on buttons so that it feels premium ish 
