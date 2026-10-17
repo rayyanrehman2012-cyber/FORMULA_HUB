@@ -1158,24 +1158,25 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
 
 
 calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if the calculate button is pressed then
-    if(trianglePrismSurfaceAreaSideA.value ===""|| trianglePrismSurfaceAreaSideA.value  === "0"|| trianglePrismSurfaceAreaSideB.value === ""|| trianglePrismSurfaceAreaSideB.value === "0"|| trianglePrismSurfaceAreaSideC.value === ""|| trianglePrismSurfaceAreaSideC.value ==="0" || trianglePrismSurfaceAreaLength.value === "" || trianglePrismSurfaceAreaLength.value === "0"){// if the 4 values arent there or are invalid then 
-        trianglePrismSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"// shows this error message 
+    if(trianglePrismSurfaceAreaSideA.value ===""|| trianglePrismSurfaceAreaSideA.value  === "0"|| trianglePrismSurfaceAreaSideB.value === ""|| trianglePrismSurfaceAreaSideB.value === "0"|| trianglePrismSurfaceAreaSideC.value === ""|| trianglePrismSurfaceAreaSideC.value ==="0" || trianglePrismSurfaceAreaLength.value === "" || trianglePrismSurfaceAreaLength.value === "0"|| trianglePrismSurfaceAreaHeight.value === ""|| trianglePrismSurfaceAreaHeight.value ==="0"){// if the 4 values arent there or are invalid then 
+        trianglePrismSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 5 VALID VALUES"// shows this error message 
         trianglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red
 
     }
 
-    const SideA = Number(trianglePrismSurfaceAreaSideA);// holds the side a value 
-    const SideB = Number(trianglePrismSurfaceAreaSideB);// holds the side a value 
-    const SideC = Number(trianglePrismSurfaceAreaSideC);// holds the side a value 
-    const Length = Number(trianglePrismSurfaceAreaLength);// holds the side a value 
-    const Height = Number(trianglePrismSurfaceAreaHeight);// holds the side a value 
-    const SurfaceArea = (SideC * Height) + (SideA *Length) + (SideB *Length) + (SideC *Length)// this is the formula 
+    else {// if the values are fine 
+        const SideA = Number(trianglePrismSurfaceAreaSideA.value);// holds the side a value 
+        const SideB = Number(trianglePrismSurfaceAreaSideB.value);// holds the side a value 
+        const SideC = Number(trianglePrismSurfaceAreaSideC.value);// holds the side a value 
+        const Length = Number(trianglePrismSurfaceAreaLength.value);// holds the side a value 
+        const Height = Number(trianglePrismSurfaceAreaHeight.value);// holds the side a value 
+        const SurfaceArea = (SideC * Height) + (SideA * Length) + (SideB * Length) + (SideC * Length);
 
-    trianglePrismSurfaceAreaResult.textContent = "SURFACE ARE = " + SurfaceArea + " UNITS SQUARED";// this is the error message for th
-    trianglePrismSurfaceAreaResult.style.color = "rgb(11,61,46)";// changes the color to red 
+        trianglePrismSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea + " UNITS SQUARED";// this is the error message for th
+        trianglePrismSurfaceAreaResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    };
 
-
-})
+});
 
 
 
@@ -1602,7 +1603,7 @@ trianglePrismVolumeBackButton.addEventListener("click", function(){
     trianglePrismVolumeLength.value = "";// resets 
     trianglePrismVolumeBase.value = "";// resets 
 
-    calculateTrianglePrismVolume.textContent = "";// resets 
+    trianglePrismVolumeResult.textContent = "";// resets 
 
 })
 
@@ -1614,7 +1615,7 @@ trianglePrismSurfaceAreaBackButton.addEventListener("click", function(){
     trianglePrismSurfaceAreaSideC.value = "";// resets 
     trianglePrismSurfaceAreaHeight.value = "";// resets 
     trianglePrismSurfaceAreaLength.value = "";// resets 
-    calculateTrianglePrismSurfaceArea.textContent = "";// resets 
+    trianglePrismSurfaceAreaResult.textContent = "";// resets 
 
 })
 
