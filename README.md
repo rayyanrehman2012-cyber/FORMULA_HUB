@@ -63,8 +63,8 @@ The website starts of on the front page. The front page contains a short descrip
 ## WHAT WE MADE (WEEK 3)
 - did the sphere volume page functions finised it 
 - did the sphere Surface are page and functions
-- 
-- 
+- triangle prism volume   page  and function 
+- triangle prism Surface are page 
 - 
 - 
 - 
@@ -84,7 +84,7 @@ The website starts of on the front page. The front page contains a short descrip
 - 
 
 
-## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 3)
+## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 4)
 - sound effects when you click on buttons so that it feels premium ish 
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - doing the physics formulas 
@@ -93,5 +93,6 @@ The website starts of on the front page. The front page contains a short descrip
 - a earase button in each calculator that erases / clears the operation othimes 
 -  a basic calculator tab, that lets a person yous a calculatore if they want to 
 - some more formulas that arnt from math or physics,
+- Splitting the error messages up so that they are more specifc, for example right now if you enter a zer0 as a value or leave it blank, it gives you the same error message, instead we can split it up and makit so that its, if you entered a zer then it says no zeros allow, and if you left it blank it says add 4 values , that way its mor euser freindly 
 
 @Zayan TELL ME MORE IDEAS HERE SO THAT WE HAVE A BETTER LIST AND IDE OF WHAT TO DO NECT !!!
