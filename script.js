@@ -1018,7 +1018,7 @@ calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumf
 
 calculateSphereVolume.addEventListener ("click", function(){// if the calculate sphere folume is clicked then
 
-    if(sphereVolumeRadius.value === "0"|| sphereVolumeRadius.value === "0"){// and the values are blank or zer
+    if(sphereVolumeRadius.value === ""|| sphereVolumeRadius.value === "0"){// and the values are blank or zer
         sphereVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE";// this is the error message
         sphereVolumeResult.style.color = "rgb(102,21,7)";//t his changes the warnin message to red
 
