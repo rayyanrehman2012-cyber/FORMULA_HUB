@@ -634,8 +634,8 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
         const trianglePerimeterA = Number(trianglePerimeterSideA.value);// stors the side of the triangle 
         const trianglePerimeterB = Number(trianglePerimeterSideB.value);// stors the side of the triangle 
         const trianglePerimeterC = Number(trianglePerimeterSideC.value);// stors the side of the triangles 
-
         const trianglePerimeter = trianglePerimeterA + trianglePerimeterB + trianglePerimeterC;// this si the what calculatesthe perimeter 
+        
         trianglePerimeterResult.textContent = "PERIMETER = " + trianglePerimeter + " UNITS"// this will displat the calculation 
         trianglePerimeterResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
     }
@@ -643,19 +643,28 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
 
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
      
-    if (circleAreaRadius.value === "" || circleAreaRadius.value === "0"){// if the radius is empty or 0
-        circleAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// error message 
+    if (circleAreaRadius.value === ""){// if the radius is empty 
+        circleAreaResult.textContent = "ERROR: ENTER A VALUE!"// error message 
+        circleAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
+    }
+
+    else if (circleAreaRadius.value === "0"){// if the value is a zero 
+        circleAreaResult.textContent = "ERROR: 0 DETECTED!"// error message 
+        circleAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
+    }
+
+    else if (circleAreaRadius.value <= -1){// if the value is a negative value 
+        circleAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"// error message 
         circleAreaResult.style.color = "rgb(102,21,7)"// changes the colore to red so that it posp our 
     }
 
     else {// if there is a value 
         const circleRadius = Number(circleAreaRadius.value);// stores the radius of the circle 
         const circleArea = pi * (circleRadius * circleRadius);// this calculates the area of the circle 
-
         const circleAreaRounded = circleArea.toFixed(3)// this rounds the answer to 3 decimal places
+        
         circleAreaResult.textContent = "AREA = " + circleAreaRounded  + " UNITS SQUARED"// this will display the circles area 
         circleAreaResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
-
     }
 });
 
@@ -666,7 +675,12 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
 
 
     if ( circleDiameter !==""  && circleRadius2 !=="" && circleDiameter !== "0" && circleRadius2 !== "0"){// if both numbers are entered and they are not 0
-        circleCircumferenceResult.textContent = "ERROR: ONLY ENTER ONE VALUE, THEN TRY AGAIN, YOU MAY YOU 0 AS A PLACEHOLDER" // show this message 
+        circleCircumferenceResult.textContent = "ERROR: ENTER 1 VALUE ONLY!, YOU MAY USE 0 AS A PLACEHOLDER" // show this message 
+        circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// change the color to red 
+    }
+
+    else if ( circleDiameter <= -1 || circleRadius2 <= -1){// if the value enter is a negative 
+        circleCircumferenceResult.textContent = "ERROR: NO NEGATIVE VALUES!" // show this message 
         circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// change the color to red 
     }
 
@@ -683,7 +697,7 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
     }
 
     else {
-        circleCircumferenceResult.textContent = "ERROR!!! PLEASE ENTER A VALUE"// error mesage 
+        circleCircumferenceResult.textContent = "ERROR: ENTER A VALUE!"// error mesage 
         circleCircumferenceResult.style.color = "rgb(102, 21, 7)"// changes the text colour to a red 
     }
 });
