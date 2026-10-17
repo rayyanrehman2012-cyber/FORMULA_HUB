@@ -48,6 +48,7 @@ const conePerimeterBackButton = document.getElementById("conePerimeterBackButton
 const coneSurfaceAreaBackButton = document.getElementById("coneSurfaceAreaBackButton");// this is the cone surface are back button 
 const sphereVolumeBackButton = document.getElementById("sphereVolumeBackButton");// this is the back button on the sphere volume page 
 const sphereSurfaceAreaBackButton = document.getElementById("sphereSurfaceAreaBackButton");// this is the back button on the spere surface area calculator page 
+const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolumeBackButton");// this is the back bitton on the triangle prism voulume calculatpr page 
 
 
 
@@ -92,8 +93,8 @@ const coneVolumePage = document.querySelector(".coneVolumePage")// this is the c
 const conePerimeterPage = document.querySelector(".conePerimeterPage");// this is the cone perimeter page 
 const coneSurfaceAreaPage = document.querySelector(".coneSurfaceAreaPage");// this is the cos surface area page
 const sphereVolumePage = document.querySelector(".sphereVolumePage");// This is the shpere volume page itself 
-const sphereSurfaceAreaPage = document.querySelector(".sphereSurfaceAreaPage")// this is the sphere surface area page 
-
+const sphereSurfaceAreaPage = document.querySelector(".sphereSurfaceAreaPage");// this is the sphere surface area page 
+const trianglePrismVolumePage = document.querySelector(".trianglePrismVolumePage");// this is the triangle prisim volume page 
 
 
 
@@ -137,8 +138,8 @@ const allconeVolumeButton = document.getElementById("allconeVolumeButton");// th
 const allconePerimeterButton = document.getElementById("allconePerimeterButton");// this is the cone perimeter button on the all formula screen 
 const allconeSurfaceAreaButton = document.getElementById("allconeSurfaceAreaButton");// this is the cone Surface are page 
 const allsphereVolumeButton = document.getElementById("allsphereVolumeButton");// this is the sphere volume button on the all formula button screen 
-const allsphereSurfaceAreaButton = document.getElementById("allsphereSurfaceAreaButton");// this is the spher Surface Area button on the math only page 
-
+const allsphereSurfaceAreaButton = document.getElementById("allsphereSurfaceAreaButton");// this is the spher Surface Area button on the all formula page 
+const alltrianglePrismVolumeButton = document.getElementById("alltrianglePrismVolumeButton");// this is the triangle prism volume button  on the all formula page 
 
 
 
@@ -183,7 +184,7 @@ const conePerimeterButton = document.getElementById("conePerimeterButton");// th
 const coneSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");// this is the cone surface area button on the math only page 
 const sphereVolumeButton = document.getElementById("sphereVolumeButton");// this is the shpere volume button on the math only formula page 
 const sphereSurfaceAreaButton = document.getElementById("sphereSurfaceAreaButton");// this is the spher Surface Area button on the math only page 
-
+const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeButton");// this is the triangle prism volume button on the math only page 
 
 
 
@@ -411,29 +412,31 @@ const calculateConePerimeter = document.getElementById("calculateConePerimeter")
 const conePerimeterResult = document.getElementById("conePerimeterResult");/// this si the result line
 
 
-//THESE ARE FOR THE CONE SURFACE AREA PAGE
+//THESE ARE FOR THE CONE SURFACE AREA PAGE CALCULATOR
 const coneSurfaceAreaRadius = document.getElementById("coneSurfaceAreaRadius");// this is the cone readius 
 const calculateConeSurfaceArea = document.getElementById("calculateConeSurfaceArea");// this is the calculate button
 const coneSurfaceAreaResult = document.getElementById("coneSurfaceAreaResult");/// this si the result line
 const coneSurfaceAreaLenght = document.getElementById("coneSurfaceAreaLenght");// this is the cone readius 
 
 
-//THESE ARE FOR THE SHPHERE VOLUME BUTTON
+//THESE ARE FOR THE SHPHERE VOLUME BUTTON CALCULATOR
 const sphereVolumeRadius = document.getElementById("sphereVolumeRadius");// this si the shpere volume radius value 
 const calculateSphereVolume = document.getElementById("calculateSphereVolume");// this is the calculat button on the shpere volume page 
 const sphereVolumeResult = document.getElementById("sphereVolumeResult");// this is the result line ins the spherevolume pages
 
 
-//THESE ARE FOR THE SPHERE SURFACE AREA 
+//THESE ARE FOR THE SPHERE SURFACE AREA CALCULATOR
 const sphereSurfaceAreaRadius = document.getElementById("sphereSurfaceAreaRadius");// thisis the surface area radius inpu vale 
 const sphereSurfaceAreaResult = document.getElementById("sphereSurfaceAreaResult");// this is the result line for the surface area 
 const calculateSphereSurfaceArea = document.getElementById("calculateSphereSurfaceArea");// this is the calculate button
 
 
-
-
-
-
+// THESE ARE FOR THE TRIANGLE PRISIM VOLUME CALCULATOR
+const trianglePrismVolumeBase = document.getElementById("trianglePrismVolumeBase");// this is the trianghle rpism vbolume base input holder 
+const trianglePrismVolumeLength = document.getElementById("trianglePrismVolumeLength");// this is the triangle prism volume lenght input holfer 
+const trianglePrismVolumeHeight = document.getElementById("trianglePrismVolumeHeight");// this is the triangle prism volume hright input holder 
+const calculateTrianglePrismVolume = document.getElementById("calculateTrianglePrismVolume");// this is the triangle prisim volume calculate button 
+const trianglePrismVolumeResult = document.getElementById("trianglePrismVolumeResult");// this is the result line 
 
 
 
@@ -641,7 +644,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
     }
 });
 
-calculateParallelogramArea.addEventListener ("click", function() {
+calculateParallelogramArea.addEventListener ("click", function() {// this is the parallelogram are caluclat button 
 
     if (parallelogramBase.value === "" || parallelogramBase.value === "0" || parallelogramHeight.value === "" || parallelogramHeight.value === "0"){
         parallelogramAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; // the error mesages
