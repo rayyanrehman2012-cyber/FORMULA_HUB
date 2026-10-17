@@ -10,37 +10,38 @@ The website starts of on the front page. The front page contains a short descrip
 ## WHAT WE MADE (WEEK 1)
 
 - Designed the starting page 
-- Came up with the theme (GREEN)
-- Added the buttons on the start screen and linked them to the respective pages 
+- Came up with the theme (GREEN & WHITE)
+- Added the 3 buttons on the start screen & Linked them to their respective pages 
 - Made and designed  the "ALL FORMULAS MENU"
 - Made and designed the "MATH FORMULAS MENU"
 - Made and designed the "PHYSICS FORMULAS MENU"
-- Added a variety(30-40) different formula buttons 
-- made the navigation possiple through pages using back buttons 
-- made the Rectangle area calculator / and page 
-- made the Rectangle Perimeter calculator / and page 
-- made the Square perimiter calculator/ and page
-- made the square area calculator/ and page
--  made sure all values reset in the calculators 
-- made all the buttons have hover effect so that they look nice and weel designed 
--  made the calculator screens look good so that they look like a part of the website 
-- made the triangle area page  
-- made the triangle perimeter page  
-- made the circle area page  
-- made the circle circumference page  
-- made the tramezoid  area page  
-- made the paralelogram area page  
-- made the quadlateral page 
-- made the slope page 
-- made the error signs, so that if the values are missing or are 0 then an arror shows up 
+- Added different formula buttons  ( THEY DONT WORK YET)
+- Added back buttons to the all the formula pages and menues we built till now 
+- Designed and built the Rectangle area calculator
+- Designed and built the Rectangle Perimeter calculator
+- Designed and built the Square Perimeter calculator
+- Designed and built the Square Area calculator
+- Made sure all values reset in the calculators 
+- Added hover effects to all buttons
+- Made the calculator screens follow the theme
+- Designed and built the Triangle Area calculator
+- Designed and built the Triangle Perimeter calculator
+- Designed and built the Circle Area calculator
+- Designed and built the Circle Circumference calculator
+- Designed and built the Trapizoid Area calculator
+- Designed and built the Parrallelogram Area calculator
+- Designed and built the quadralatteral Perimeter calculator
+- Designed and built the Slope calculator
+- Designed and built the Error Messagees, gives error if the value is missing or zero
+
 
 ## WHAT WE MADE (WEEK 2)
-- fixed the slope function so that it can tell you if its verticle or horizontal too 
-- the Pythagorean page gets divided into 3 for 3 versions 
-- the side a function for the putagorean page 
-- the side b function for the pytagorean page 
-- the side c(hypotenuse) function 
-- the distance formul page and functions 
+- Improved the Slope Calculator - it tells you if the line is verticle or horizontal too now
+- Divided the Pythagorean Theorem page into 3 for 3 versions 
+- Designed and built the Pythagorean Theorem (Side A) page 
+- Designed and built the Pythagorean Theorem (Side B) page 
+- Designed and built the Pythagorean Theorem (Side C) page 
+- Designed and built the Distance formula page
 - the midpoint function and page 
 - cube volume page and function 
 - cube parimiter page and function 
@@ -65,23 +66,9 @@ The website starts of on the front page. The front page contains a short descrip
 - did the sphere Surface are page and functions
 - triangle prism volume   page  and function 
 - triangle prism Surface are page 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- triangle prism Perimeter page and function 
+- Improved the Error messages for each calculatore so that they are specific and detailed 
+- FINISHED Math formula page(WE MIGHT ADD MORE MATH FORMULAS IOF WE DECIDE TO EXTEND THE PROJECT)
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 4)
