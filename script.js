@@ -589,7 +589,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
     
     if (triangleAreaHeight.value === "" || triangleAreaBase.value === "") {// if the values are empty 
-        triangleAreaResult.textContent = "ERROR: ENTER A VALUE!"// this is the error message 
+        triangleAreaResult.textContent = "ERROR: ENTER 2 VALUES!"// this is the error message 
         triangleAreaResult.style.color = "rgb(102,21,7)"// changes the colour to red 
     }
     
@@ -615,8 +615,18 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
 
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
     
-    if (trianglePerimeterSideA.value === "" || trianglePerimeterSideB.value === "" || trianglePerimeterSideC.value === "" || trianglePerimeterSideA.value === "0"|| trianglePerimeterSideB.value === "0"|| trianglePerimeterSideC.value === "0"){// if any of the sides are empty
-        trianglePerimeterResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"// this si the error message 
+    if (trianglePerimeterSideA.value === "" || trianglePerimeterSideB.value === "" || trianglePerimeterSideC.value === ""){// if any of the sides are empty
+        trianglePerimeterResult.textContent = "ERROR: ENTER 3 VALUES!"// this si the error message 
+        trianglePerimeterResult.style.color = "rgb(102,21,7)"// changes the colour to a red 
+    }
+
+    else if (trianglePerimeterSideA.value === "0"|| trianglePerimeterSideB.value === "0"|| trianglePerimeterSideC.value === "0"){// if the value is a zer 
+        trianglePerimeterResult.textContent = "ERROR: 0 DETECTED!"// this si the error message 
+        trianglePerimeterResult.style.color = "rgb(102,21,7)"// changes the colour to a red 
+    }
+
+    else if (trianglePerimeterSideA.value <= -1|| trianglePerimeterSideB.value <= -1|| trianglePerimeterSideC.value <= -1){
+        trianglePerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"// this si the error message 
         trianglePerimeterResult.style.color = "rgb(102,21,7)"// changes the colour to a red 
     }
 
@@ -629,7 +639,6 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
         trianglePerimeterResult.textContent = "PERIMETER = " + trianglePerimeter + " UNITS"// this will displat the calculation 
         trianglePerimeterResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
     }
-
 });
 
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
