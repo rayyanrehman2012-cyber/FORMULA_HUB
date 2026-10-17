@@ -363,7 +363,7 @@ const coneSurfaceAreaLenght = document.getElementById("coneSurfaceAreaLenght");/
 
 //THESE ARE FOR THE SHPHERE VOLUME BUTTON
 const sphereVolumeRadius = document.getElementById("sphereVolumeRadius");// this si the shpere volume radius value 
-const calculatesphereVolume = document.getElementById("calculatesphereVolume");// this is the calculat button on the shpere volume page 
+const calculateSphereVolume = document.getElementById("calculateSphereVolume");// this is the calculat button on the shpere volume page 
 const sphereVolumeResult = document.getElementById("sphereVolumeResult");// this is the result line ins the spherevolume pages
 
 
@@ -1016,6 +1016,23 @@ calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumf
 
 });
 
+calculateSphereVolume.addEventListener ("click", function(){// if the calculate sphere folume is clicked then
+
+    if(sphereVolumeRadius.value === "0"|| sphereVolumeRadius.value === "0"){// and the values are blank or zer
+        sphereVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE";// this is the error message
+        sphereVolumeResult.style.color = "rgb(102,21,7)";//t his changes the warnin message to red
+
+    }
+
+    else {// if the value is fine 
+        const Radius = Number(sphereVolumeRadius.value);//this is the radius vale holder 
+        const Volume = (4 / 3 * pi * Radius * Radius * Radius);// this is the volume formula for a spher
+
+        sphereVolumeResult.textContent = "VOLUME = " + Volume + "UNITS CUBED";// this is the           result display
+        sphereVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
+    }
+
+});
 
 
 
@@ -1416,7 +1433,13 @@ coneSurfaceAreaBackButton.addEventListener("click", function(){
     coneSurfaceAreaResult.textContent = "";// restets the text contents 
 })
 
+sphereVolumeBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows the start page agian
+    sphereVolumePage.style.display = "none";// hides the sphere volume page 
 
+    sphereVolumeRadius.value = "";// resets the input volaue 
+    sphereVolumeResult.textContent = "";// resets the sphere volume result line again to show nothing 
+})
 
 
 
@@ -1741,8 +1764,8 @@ allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube per
 })
 
 allrectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1763,8 +1786,8 @@ allrectanglePrismVolumeButton.addEventListener("click", function(){// if the cub
 })
 
 allrectanglePrismPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1785,8 +1808,8 @@ allrectanglePrismPerimeterButton.addEventListener("click", function(){// if the 
 })
 
 allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1807,8 +1830,8 @@ allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if th
 })
 
 allcylinderVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this pages
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1829,8 +1852,8 @@ allcylinderVolumeButton.addEventListener("click", function(){// if the cube peri
 })
 
 allcylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides thi spage 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1851,8 +1874,8 @@ allcylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube
 })
 
 allcylinderPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1873,8 +1896,8 @@ allcylinderPerimeterButton.addEventListener("click", function(){// if the cube p
 })
 
 allradiusButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1895,8 +1918,8 @@ allradiusButton.addEventListener("click", function(){// if the cube perimeter is
 })
 
 alldiameterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1917,8 +1940,8 @@ alldiameterButton.addEventListener("click", function(){// if the cube perimeter 
 })
 
 allconeVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this pagge 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1939,8 +1962,8 @@ allconeVolumeButton.addEventListener("click", function(){// if the cube perimete
 })
 
 allconePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1961,8 +1984,8 @@ allconePerimeterButton.addEventListener("click", function(){// if the cube perim
 })
 
 allconeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
-    startPage.style.display = "none";
-    formulaPage.style.display = "none";
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -1982,9 +2005,27 @@ allconeSurfaceAreaButton.addEventListener("click", function(){// if the cube per
     coneSurfaceAreaPage.style.display = "flex"// shows this page
 })
 
-
-
-
+allsphereVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sphereVolumePage.style.display = "flex"// shows this page
+})
 
 
 
@@ -2563,4 +2604,27 @@ coneSurfaceAreaButton.addEventListener("click", function(){// if the cube perime
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     coneSurfaceAreaPage.style.display = "flex"// shows this page
+})
+
+sphereVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";//hides this page
+    formulaPage.style.display = "none";// hides this page 
+    mathFormulaPage.style.display = "none"// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sphereVolumePage.style.display = "flex"// shows this page
 })
