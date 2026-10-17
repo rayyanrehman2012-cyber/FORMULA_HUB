@@ -1131,14 +1131,15 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
         trianglePrismVolumeResult.style.color = "rgb(102,21,7)";// changes the color to red 
     }   
 
-    const Base = Number(trianglePrismVolumeBase.value);// hols the base value 
-    const Height = Number(trianglePrismVolumeHeight.value);// hols the height value 
-    const Length = Number(trianglePrismVolumeLength.value);// hols the length value 
-    const Volume = ((Base * Height * Length)/2);// this is the formula 
+    else { 
+        const Base = Number(trianglePrismVolumeBase.value);// hols the base value 
+        const Height = Number(trianglePrismVolumeHeight.value);// hols the height value 
+        const Length = Number(trianglePrismVolumeLength.value);// hols the length value 
+        const Volume = ((Base * Height * Length)/2);// this is the formula 
 
-    trianglePrismVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// this is the error message for th
-    trianglePrismVolumeResult.style.color = "rgb(11,61,46)";// changes the color to red 
-
+        trianglePrismVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// this is the error message for th
+        trianglePrismVolumeResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    }   
 
 })
 
