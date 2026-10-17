@@ -50,7 +50,7 @@ const sphereVolumeBackButton = document.getElementById("sphereVolumeBackButton")
 const sphereSurfaceAreaBackButton = document.getElementById("sphereSurfaceAreaBackButton");// this is the back button on the spere surface area calculator page 
 const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolumeBackButton");// this is the back bitton on the triangle prism voulume calculatpr page 
 const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePrismSurfaceAreaBackButton");// this is the surface area back button for the triangle 
-
+const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismPerimeterBackButton");// this is the back button on the perimeter back button 
 
 
 
@@ -97,7 +97,7 @@ const sphereVolumePage = document.querySelector(".sphereVolumePage");// This is 
 const sphereSurfaceAreaPage = document.querySelector(".sphereSurfaceAreaPage");// this is the sphere surface area page 
 const trianglePrismVolumePage = document.querySelector(".trianglePrismVolumePage");// this is the triangle prisim volume page 
 const trianglePrismSurfaceAreaPage = document.querySelector(".trianglePrismSurfaceAreaPage")// this is the triangle surface area page 
-
+const trianglePrismPerimeterPage = document.querySelector(".trianglePrismPerimeterPage")// this is the triangle prisim perimiter page 
 
 
 
@@ -143,6 +143,7 @@ const allsphereVolumeButton = document.getElementById("allsphereVolumeButton");/
 const allsphereSurfaceAreaButton = document.getElementById("allsphereSurfaceAreaButton");// this is the spher Surface Area button on the all formula page 
 const alltrianglePrismVolumeButton = document.getElementById("alltrianglePrismVolumeButton");// this is the triangle prism volume button  on the all formula page 
 const alltrianglePrismSurfaceAreaButton = document.getElementById("alltrianglePrismSurfaceAreaButton");// this is the traiangle prism surface area button on the all formmula page 
+const alltrianglePrismPerimeterButton = document.getElementById("alltrianglePrismPerimeterButton");// this is the all formula button 
 
 
 
@@ -188,6 +189,7 @@ const sphereVolumeButton = document.getElementById("sphereVolumeButton");// this
 const sphereSurfaceAreaButton = document.getElementById("sphereSurfaceAreaButton");// this is the spher Surface Area button on the math only page 
 const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeButton");// this is the triangle prism volume button on the math only page 
 const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSurfaceAreaButton");// this is the triangle prism Surface area button on the math only formula page 
+const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
 
 
 
@@ -450,6 +452,18 @@ const trianglePrismSurfaceAreaHeight= document.getElementById("trianglePrismSurf
 const calculateTrianglePrismSurfaceArea = document.getElementById("calculateTrianglePrismSurfaceArea");// this is the triangle prisim volume calculate button 
 const trianglePrismSurfaceAreaResult = document.getElementById("trianglePrismSurfaceAreaResult");// this is the result line 
  
+
+//THESE ARE FOR THE TRIANGLE PRISM PERIMETER  CALCULATOR 
+const trianglePrismPerimeterSideA = document.getElementById("trianglePrismPerimeterSideA");// this is the trianghle rpism vbolume base input holder 
+const trianglePrismPerimeterSideB = document.getElementById("trianglePrismPerimeterSideB");// this is the triangle prism volume lenght input holfer 
+const trianglePrismPerimeterSideC = document.getElementById("trianglePrismPerimeterSideC");// this is the triangle prism volume hright input holder 
+const trianglePrismPerimeterLength = document.getElementById("trianglePrismPerimeterLength");// this is the triangle prism volume hright input holder 
+const trianglePrismPerimeterHeight= document.getElementById("trianglePrismPerimeterHeight");// this is the triangle prism volume hright input holder 
+const calculateTrianglePrismPerimeter = document.getElementById("calculateTrianglePrismPerimeter");// this is the triangle prisim volume calculate button 
+const trianglePrismPerimeterResult = document.getElementById("trianglePrismPerimeterResult");// this is the result line 
+ 
+
+
 
 
 
@@ -1117,7 +1131,6 @@ calculateSphereVolume.addEventListener ("click", function(){// if the calculate 
 
 });
 
-
 calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calculate button is pressed 
 
     if(sphereSurfaceAreaRadius.value ==="0"||sphereSurfaceAreaRadius.value ===""){// if the surface are raduis inputs are planc or invalid 
@@ -1134,7 +1147,6 @@ calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calcu
     }
 
 })
-
 
 calculateTrianglePrismVolume.addEventListener("click", function(){// this is the caluclate button on the triangle prism volume page 
 
@@ -1154,8 +1166,6 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
     }   
 
 })
-
-
 
 calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if the calculate button is pressed then
     if(trianglePrismSurfaceAreaSideA.value ===""|| trianglePrismSurfaceAreaSideA.value  === "0"|| trianglePrismSurfaceAreaSideB.value === ""|| trianglePrismSurfaceAreaSideB.value === "0"|| trianglePrismSurfaceAreaSideC.value === ""|| trianglePrismSurfaceAreaSideC.value ==="0" || trianglePrismSurfaceAreaLength.value === "" || trianglePrismSurfaceAreaLength.value === "0"|| trianglePrismSurfaceAreaHeight.value === ""|| trianglePrismSurfaceAreaHeight.value ==="0"){// if the 4 values arent there or are invalid then 
@@ -1179,6 +1189,25 @@ calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if th
 });
 
 
+calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the calculate button is pressed then
+    if(trianglePrismPerimeterSideA.value ===""|| trianglePrismPerimeterSideA.value  === "0"|| trianglePrismPerimeterSideB.value === ""|| trianglePrismPerimeterSideB.value === "0"|| trianglePrismPerimeterSideC.value === ""|| trianglePrismPerimeterSideC.value ==="0" || trianglePrismPerimeterLength.value === "" || trianglePrismPerimeterLength.value === "0"){// if the 4 values arent there or are invalid then 
+        trianglePrismPerimeterResult.textContent = "ERROR: PLEASE ENTER 5 VALID VALUES"// shows this error message 
+        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+
+    }
+
+    else {// if the values are fine 
+        const SideA = Number(trianglePrismPerimeterSideA.value);// holds the side a value 
+        const SideB = Number(trianglePrismPerimeterSideB.value);// holds the side a value 
+        const SideC = Number(trianglePrismPerimeterSideC.value);// holds the side a value 
+        const Length = Number(trianglePrismPerimeterLength.value);// holds the side a value 
+        const Perimeter = (SideC * 2) + (SideA * 2) + (SideB * 2) + (Length * 3);
+
+        trianglePrismSurfaceAreaResult.textContent = "PERIMETER = " + Perimeter + " UNITS";// this is the result 
+        trianglePrismSurfaceAreaResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    };
+
+});
 
 
 
