@@ -536,12 +536,20 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
 
 calculateSquareArea.addEventListener("click", function() {// calculate button is pressed on square area screen 
 
-    if (SquareAreaDimenstion.value === "" || SquareAreaDimenstion.value === "0"){// if the input is empty or 0
-        squareAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// ERROR MSG
+    if (SquareAreaDimenstion.value === ""){// if the input is empty 
+        squareAreaResult.textContent = "ERROR: ENTER A VALUE!"// ERROR Message
         squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red 
     }
 
+    else if (SquareAreaDimenstion.value === "0"){// if the input is a zero 
+        squareAreaResult.textContent = "ERROR: 0 DETECTED!"// ERROR Message
+        squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red
+    }
 
+    else if (SquareAreaDimenstion.value <= -1){// if the input is a negative value 
+        squareAreaResult.textContent = "NO NEGATIVE VALUES!"// ERROR Message
+        squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red
+    }
 
     else{// if there is a valid value in the input
     const DimenstionSquareArea = Number(SquareAreaDimenstion.value);// stores the Dimenstions of the square 
