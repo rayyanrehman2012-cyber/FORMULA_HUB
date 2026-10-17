@@ -483,12 +483,12 @@ const trianglePrismPerimeterResult = document.getElementById("trianglePrismPerim
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
 
     if (lengthInput.value === "" || widthInput.value === ""){// if the inputs are empty 
-        rectangleAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALUES!" // this is the error message 
+        rectangleAreaResult.textContent = "ERROR: ENTER 2 VALUES!" // this is the error message 
         rectangleAreaResult.style.color = "rgb(102,21,7)";// the color becomes red
     }
 
     else if (lengthInput.value === "0" || widthInput.value === "0"){// if the input are zeros 
-        rectangleAreaResult.textContent = "ERROR: NO 0 VALUES ARE NOT ALLOWED!" // this is the error message 
+        rectangleAreaResult.textContent = "ERROR: 0 DETECTED!" // this is the error message 
         rectangleAreaResult.style.color = "rgb(102,21,7)";// the color becomes red
     }
 
@@ -508,16 +508,25 @@ calculateRectangleArea.addEventListener("click", function() {// calculate putton
 });
 
 calculateRectanglePerimeter.addEventListener("click", function() {// calculate button is presses (rectangles perimeter screen )
-    if (PerimeterlengthInput.value === "" || PerimeterwidthInput.value === "" || PerimeterlengthInput.value === "0" || PerimeterwidthInput.value === "0"){// if the inputs are empty or 0
-        rectanglePerimeterResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES" // this is the error message 
-        rectanglePerimeterResult.style.color = "rgb(102,21,7" // the color becomes red 
-        }
+    
+    if (PerimeterlengthInput.value === "" || PerimeterwidthInput.value === "") {// if the inputs are empty 
+        rectanglePerimeterResult.textContent = "ERROR: ENTER 2 VALUES!" // this is the error message 
+        rectanglePerimeterResult.style.color = "rgb(102,21,7)" // the color becomes red 
+    }
+
+    else if (PerimeterlengthInput.value === "0"||PerimeterwidthInput.value === "0"){// if the values are a zero
+        rectanglePerimeterResult.textContent = "ERROR: 0 DETECTED!";// shows this message 
+        rectanglePerimeterResult.style.color = "rgb(102,21,7)" // the color becomes red 
+    }
+
+    else if (PerimeterlengthInput.value <= -1||PerimeterwidthInput.value <= -1){// if the values are negative 
+        rectanglePerimeterResult.textContent = "NO NEGATIVE VALUES!" // this is the error message 
+        rectanglePerimeterResult.style.color = "rgb(102,21,7)" // the color becomes red 
+    }
 
     else{// if there is a valid value in the inputs 
         const perimeterlength = Number(PerimeterlengthInput.value);// stores the lenght of the rectangle 
-
         const perimeterwidth = Number(PerimeterwidthInput.value);// stores the width of the rectangle 
-
         const perimeter  = 2*(perimeterlength + perimeterwidth);// calculates the perimeter ( 2 times the lenght and width combained)
 
         rectanglePerimeterResult.textContent = "PERIMETER = " + perimeter + " UNITS";// displays the perimeter of the rectangle on the screen
@@ -531,14 +540,15 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
         squareAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// ERROR MSG
         squareAreaResult.style.color = "rgb(102,21,7)"// changes the text color to a red 
     }
+
+
+
     else{// if there is a valid value in the input
     const DimenstionSquareArea = Number(SquareAreaDimenstion.value);// stores the Dimenstions of the square 
-
     const SquareArea  = DimenstionSquareArea * DimenstionSquareArea;// calculates the area (L x W)
 
     squareAreaResult.textContent = "AREA = " + SquareArea + " UNITS SQUARED";// displays the area on the screen 
     squareAreaResult.style.color = "rgb(11,61,46)"// changes the color to green
-
     }
 });
 
