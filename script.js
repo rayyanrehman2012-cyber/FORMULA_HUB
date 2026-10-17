@@ -1405,7 +1405,7 @@ cubeVolumeBackButton.addEventListener("click", function(){// back button on the 
     
 });
 
-cubePerimeterBackButton.addEventListener("click", function(){
+cubePerimeterBackButton.addEventListener("click", function(){// this is the cube perimeterback button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cubePerimeterPage.style.display = "none";// hides this screen 
 
@@ -1414,7 +1414,7 @@ cubePerimeterBackButton.addEventListener("click", function(){
 
 })
 
-cubeSurfaceAreaBackButton.addEventListener("click", function(){
+cubeSurfaceAreaBackButton.addEventListener("click", function(){// this is the cube surface are back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cubeSurfaceAreaPage.style.display = "none";// hides this screen 
 
@@ -1423,7 +1423,7 @@ cubeSurfaceAreaBackButton.addEventListener("click", function(){
 
 })
 
-rectanglePrismVolumeBackButton.addEventListener("click", function(){
+rectanglePrismVolumeBackButton.addEventListener("click", function(){ //volume rectangle prisim back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismVolumePage.style.display = "none";// hides this screen 
 
@@ -1433,7 +1433,7 @@ rectanglePrismVolumeBackButton.addEventListener("click", function(){
     rectanglePrismVolumeResult.textContent = "";// restets the text contents 
 })
 
-rectanglePrismPerimeterBackButton.addEventListener("click", function(){
+rectanglePrismPerimeterBackButton.addEventListener("click", function(){// this is the reactanlge prisim perimeter bacl button 
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismPerimeterPage.style.display = "none";// hides this screen 
 
@@ -1443,7 +1443,7 @@ rectanglePrismPerimeterBackButton.addEventListener("click", function(){
     rectanglePrismPerimeterResult.textContent = "";// restets the text contents 
 })
 
-rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){
+rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){// this is the rectangle prisp area pack button 
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismSurfaceAreaPage.style.display = "none";// hides this screen 
 
@@ -1453,7 +1453,7 @@ rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){
     rectanglePrismSurfaceAreaResult.textContent = "";// restets the text contents 
 })
 
-cylinderVolumeBackButton.addEventListener("click", function(){
+cylinderVolumeBackButton.addEventListener("click", function(){// this is the culinder volume back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cylinderVolumePage.style.display = "none";// hides this screen 
 
@@ -1462,7 +1462,7 @@ cylinderVolumeBackButton.addEventListener("click", function(){
     cylinderVolumeResult.textContent = "";// restets the text contents 
 })
 
-cylinderSurfaceAreaBackButton.addEventListener("click", function(){
+cylinderSurfaceAreaBackButton.addEventListener("click", function(){// this is the cilinder surface are back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cylinderSurfaceAreaPage.style.display = "none";// hides this screen 
 
@@ -1471,7 +1471,7 @@ cylinderSurfaceAreaBackButton.addEventListener("click", function(){
     cylinderSurfaceAreaResult.textContent = "";// restets the text contents 
 })
 
-cylinderPerimeterBackButton.addEventListener("click", function(){
+cylinderPerimeterBackButton.addEventListener("click", function(){// back button on the culinder perimeter page 
     startPage.style.display = "flex";// shows this creen to everyone 
     cylinderPerimeterPage.style.display = "none";// hides this screen 
 
@@ -1479,7 +1479,7 @@ cylinderPerimeterBackButton.addEventListener("click", function(){
     cylinderPerimeterResult.textContent = "";// restets the text contents 
 })
 
-radiusBackButton.addEventListener("click", function(){
+radiusBackButton.addEventListener("click", function(){// this is the back button on the radius calculator page 
     startPage.style.display = "flex";// shows this creen to everyone 
     radiusPage.style.display = "none";// hides this screen 
 
@@ -1487,7 +1487,7 @@ radiusBackButton.addEventListener("click", function(){
     radiusResult.textContent = "";// restets the text contents 
 })
 
-diameterBackButton.addEventListener("click", function(){
+diameterBackButton.addEventListener("click", function(){// this is the diameret page pack button 
     startPage.style.display = "flex";// shows this creen to everyone 
     diameterPage.style.display = "none";// hides this screen 
 
@@ -1495,7 +1495,7 @@ diameterBackButton.addEventListener("click", function(){
     diameterResult.textContent = "";// restets the text contents 
 })
 
-coneVolumeBackButton.addEventListener("click", function(){
+coneVolumeBackButton.addEventListener("click", function(){// this is the cone volume back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     coneVolumePage.style.display = "none";// hides this screen 
 
@@ -1504,7 +1504,7 @@ coneVolumeBackButton.addEventListener("click", function(){
     coneVolumeResult.textContent = "";// restets the text contents 
 })
 
-conePerimeterBackButton.addEventListener("click", function(){
+conePerimeterBackButton.addEventListener("click", function(){// this is the cone perimeter back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     conePerimeterPage.style.display = "none";// hides this screen 
 
@@ -1512,7 +1512,7 @@ conePerimeterBackButton.addEventListener("click", function(){
     conePerimeterResult.textContent = "";// restets the text contents 
 })
 
-coneSurfaceAreaBackButton.addEventListener("click", function(){
+coneSurfaceAreaBackButton.addEventListener("click", function(){// this is the cone surface are back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     coneSurfaceAreaPage.style.display = "none";// hides this screen 
 
@@ -1521,7 +1521,7 @@ coneSurfaceAreaBackButton.addEventListener("click", function(){
     coneSurfaceAreaResult.textContent = "";// restets the text contents 
 })
 
-sphereVolumeBackButton.addEventListener("click", function(){
+sphereVolumeBackButton.addEventListener("click", function(){// this is the sphere volume back button 
     startPage.style.display = "flex";// shows the start page agian
     sphereVolumePage.style.display = "none";// hides the sphere volume page 
 
@@ -1530,7 +1530,13 @@ sphereVolumeBackButton.addEventListener("click", function(){
 })
 
 
-sphereSurfaceAreaBackButton.add 
+sphereSurfaceAreaBackButton.addEventListener("click", function() {// this is the spere surface area back  button 
+    startPage.style.display = "flex";// shows the start page agian
+    sphereSurfaceAreaPage.style.display = "none";// hides the sphere volume page
+
+    sphereSurfaceAreaRadius.value = "";// resets 
+    sphereSurfaceAreaResult.textContent = "";// resets the sphere volume result line again to show nothing 
+})
 
 
 
@@ -2122,6 +2128,27 @@ allsphereVolumeButton.addEventListener("click", function(){// if the cube perime
     sphereVolumePage.style.display = "flex"// shows this page
 })
 
+allsphereSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sphereSurfaceAreaPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -2722,4 +2749,28 @@ sphereVolumeButton.addEventListener("click", function(){// if the cube perimeter
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     sphereVolumePage.style.display = "flex"// shows this page
+})
+
+
+sphereSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sphereSurfaceAreaPage.style.display = "flex"// shows this page
 })
