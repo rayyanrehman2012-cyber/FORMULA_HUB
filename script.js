@@ -426,7 +426,7 @@ const sphereVolumeResult = document.getElementById("sphereVolumeResult");// this
 
 //THESE ARE FOR THE SPHERE SURFACE AREA 
 const sphereSurfaceAreaRadius = document.getElementById("sphereSurfaceAreaRadius");// thisis the surface area radius inpu vale 
-const sphereSurfaceAreaResult = document.getElementByUd("sphereSurfaceAreaResult");// this is the result line for the surface area 
+const sphereSurfaceAreaResult = document.getElementById("sphereSurfaceAreaResult");// this is the result line for the surface area 
 const calculateSphereSurfaceArea = document.getElementById("calculateSphereSurfaceArea");// this is the calculate button
 
 
@@ -1105,8 +1105,8 @@ calculateSphereVolume.addEventListener ("click", function(){// if the calculate 
 
 calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calculate button is pressed 
 
-    if(sphereSurfaceAreaRadius ==="0"||sphereSurfaceAreaRadius ===""){// if the surface are raduis inputs are planc or invalid 
-        sphereSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE";// this is the error message 
+    if(sphereSurfaceAreaRadius.value ==="0"||sphereSurfaceAreaRadius.value ===""){// if the surface are raduis inputs are planc or invalid 
+        sphereSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE";// this is the error message
         sphereSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red 
     }
 
@@ -2149,6 +2149,7 @@ allsphereSurfaceAreaButton.addEventListener("click", function(){// if the cube p
     cubeVolumePage.style.display = "none";// hid this page 
     sphereSurfaceAreaPage.style.display = "flex"// shows this page
 })
+
 
 
 
