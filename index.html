@@ -58,6 +58,7 @@
                     <button id = "allconePerimeterButton" class="formulaButton">CONE PERIMETER</button>
                     <button id = "allconeSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
                     <button id = "allsphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
+                    <button id = "allsphereSurfaceAreaButton" class="formulaButton">SPHERE SURFACE AREA</button>
                     <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                 </div>
             </section>
@@ -115,6 +116,7 @@
                 <button id = "conePerimeterButton" class="formulaButton">CONE PERIMETER</button>
                 <button id = "coneSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
                 <button id = "sphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
+                <button id = "sphereSurfaceAreaButton" class="formulaButton">SPHERE VOLUME</button>
                 <button class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                     
                 </div>
@@ -515,7 +517,7 @@
                 <input id = "cylinderVolumeRadius" type = "number">
 
                 <button id = "calculateCylinderVolume">CALCULATE</button>
-                <P id = "cylinderVolumeResult"></P>
+                <p id = "cylinderVolumeResult"></p>
             </div>
             <button id = "cylinderVolumeBackButton">BACK</button>
         </main>
@@ -531,7 +533,7 @@
                 <input id = "cylinderSurfaceAreaRadius" type = "number">
 
                 <button id = "calculateCylinderSurfaceArea">CALCULATE</button>
-                <P id = "cylinderSurfaceAreaResult"></P>
+                <p id = "cylinderSurfaceAreaResult"></p>
             </div>
             <button id = "cylinderSurfaceAreaBackButton">BACK</button>
         </main>
@@ -544,7 +546,7 @@
                 <input id = "cylinderPerimeterRadius" type = "number">
 
                 <button id = "calculateCylinderPerimeter">CALCULATE</button>
-                <P id = "cylinderPerimeterResult"></P>
+                <p id = "cylinderPerimeterResult"></p>
             </div>
             <button id = "cylinderPerimeterBackButton">BACK</button>
         </main>
@@ -557,7 +559,7 @@
                 <input id = "radiusDiameter" type = "number">
 
                 <button id = "calculateRadius">CALCULATE</button>
-                <P id = "radiusResult"></P>
+                <p id = "radiusResult"></p>
             </div>
             <button id = "radiusBackButton">BACK</button>
         </main>
@@ -570,7 +572,7 @@
                 <input id = "diameterRadius" type = "number">
 
                 <button id = "calculateDiameter">CALCULATE</button>
-                <P id = "diameterResult"></P>
+                <p id = "diameterResult"></p>
             </div>
             <button id = "diameterBackButton">BACK</button>
         </main>
@@ -586,7 +588,7 @@
                 <input id = "coneVolumeHeight" type = "number">
 
                 <button id = "calculateConeVolume">CALCULATE</button>
-                <P id = "coneVolumeResult"></P>
+                <p id = "coneVolumeResult"></p>
             </div>
             <button id = "coneVolumeBackButton">BACK</button>
         </main>
@@ -599,7 +601,7 @@
                 <input id = "conePerimeterRadius" type = "number">
 
                 <button id = "calculateConePerimeter">CALCULATE</button>
-                <P id = "conePerimeterResult"></P>
+                <p id = "conePerimeterResult"></p>
             </div>
             <button id = "conePerimeterBackButton">BACK</button>
         </main>
@@ -615,7 +617,7 @@
                 <input id = "coneSurfaceAreaLenght" type = "number">
 
                 <button id = "calculateConeSurfaceArea">CALCULATE</button>
-                <P id = "coneSurfaceAreaResult"></P>
+                <p id = "coneSurfaceAreaResult"></p>
 
             </div>
             <button id = "coneSurfaceAreaBackButton">BACK</button>
@@ -629,10 +631,24 @@
                 <input id = "sphereVolumeRadius" type = "number">
 
                 <button id = "calculateSphereVolume">CALCULATE</button>
-                <P id = "sphereVolumeResult"></P>
+                <p id = "sphereVolumeResult"></p>
 
             </div>
             <button id = "sphereVolumeBackButton">BACK</button>
+        </main>
+        
+        <main class = "sphereSurfaceAreaPage">
+            <h1>SPHERE SURFACE AREA</h1>
+            <div class = "calculatorBox">
+
+                <label for = "sphereSurfaceAreaRadius">RADIUS</label>   
+                <input id = "sphereSurfaceAreaRadius" type = "number">
+
+                <button id = "calculateSphereSurfaceArea">CALCULATE</button>
+                <p id = "sphereSurfaceAreaResult"></p>
+
+            </div>
+            <button id = "sphereSurfaceAreaBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>

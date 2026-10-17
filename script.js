@@ -374,6 +374,8 @@ const sphereVolumeResult = document.getElementById("sphereVolumeResult");// this
 
 
 
+
+
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
 
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
@@ -1033,6 +1035,11 @@ calculateSphereVolume.addEventListener ("click", function(){// if the calculate 
     }
 
 });
+
+
+
+
+
 
 
 
