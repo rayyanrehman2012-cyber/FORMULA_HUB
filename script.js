@@ -482,20 +482,29 @@ const trianglePrismPerimeterResult = document.getElementById("trianglePrismPerim
 
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
 
-    if (lengthInput.value === "" || widthInput.value === "" || lengthInput.value === "0" || widthInput.value === "0"){// if the inputs are empty or 0
-        rectangleAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES" // this is the error message 
+    if (lengthInput.value === "" || widthInput.value === ""){// if the inputs are empty 
+        rectangleAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALUES!" // this is the error message 
         rectangleAreaResult.style.color = "rgb(102,21,7)";// the color becomes red
     }
+
+    else if (lengthInput.value === "0" || widthInput.value === "0"){// if the input are zeros 
+        rectangleAreaResult.textContent = "ERROR: NO 0 VALUES ARE NOT ALLOWED!" // this is the error message 
+        rectangleAreaResult.style.color = "rgb(102,21,7)";// the color becomes red
+    }
+
+    else if (lengthInput.value <= -1|| widthInput.value <= -1){ // if the inputs are negatives
+        rectangleAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!" // this is the error message for negative numbers 
+        rectangleAreaResult.style.color = "rgb(102,21,7)";// the color becomes red
+    }
+
     else {// if there is a valid value in the inputs
         const length = Number(lengthInput.value);// stores the length of the rectangle 
-
         const width = Number(widthInput.value);// stores the width of the rectangle 
-
         const area  = length*width;// calculates the area of the rectangle (LENGH TIMES WIDHT)
 
         rectangleAreaResult.textContent = "AREA = " + area + " UNITS SQUARED";// displays the area of the rectangle on the screen 
         rectangleAreaResult.style.color = "rgb(11,61,46)"// changes the colour of the text to geen
-    }
+    };
 });
 
 calculateRectanglePerimeter.addEventListener("click", function() {// calculate button is presses (rectangles perimeter screen )
