@@ -1594,6 +1594,12 @@ calculateVelocity.addEventListener("click", function() {// if the calculate butt
 });
 
 calculateAvgVelocity.addEventListener("click", function() {// if the calculate button is pressed then
+    
+    let InitialVelocity = Number(avgInitialVelocity.value);// initeal velocity 
+    let FinalVelocity = Number(avgFinalVelocity.value);// final velocity 
+    let InitialDirection = avginitialDirection.value; // initeal velocity direction 
+    let FinalDirection = avgFinalDirection.value; // final velocity direction  
+
     if(avgFinalVelocity.value ===""|| avgInitialVelocity.value === ""){// if the 2 values arent there 
         avgVelocityResult.textContent = "ERROR: ENTER 34 VALUES!"// shows this error message 
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
@@ -1604,24 +1610,18 @@ calculateAvgVelocity.addEventListener("click", function() {// if the calculate b
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-    else if(avginitialDirection.value === "EAST" && avgFinalDirection.value !== "WEST"||avginitialDirection.value === "WEST" && avgFinalDirection.value !== "EAST"|| avginitialDirection.value === "NORTH" && avgFinalDirection.value !== "SOUTH"|| avginitialDirection.value === "SOUTH" && avgFinalDirection.value !== "NORTH"||avginitialDirection.value === "BACKWARD" && avgFinalDirection.value !== "FORWARD"|| avginitialDirection.value === "FORWARD" && avgFinalDirection.value !== "BACKWARD"){// if the 2 values arent there 
-        avgVelocityResult.textContent = "ERROR: DIRECTION MUST BE SAME OR OPPOSITE ON THE SAME AXIS"// shows this error message 
+    else if((InitialDirection === "NORTH" && FinalDirection !== "NORTH" && FinalDirection !== "SOUTH") || (InitialDirection === "SOUTH" && FinalDirection !== "SOUTH" && FinalDirection !== "NORTH") || (InitialDirection === "EAST" && FinalDirection !== "EAST" && FinalDirection !== "WEST") || (InitialDirection === "WEST" && FinalDirection !== "WEST" && FinalDirection !== "EAST") || (InitialDirection === "FORWARD" && FinalDirection !== "FORWARD" && FinalDirection !== "BACKWARD") || (InitialDirection === "BACKWARD" && FinalDirection !== "BACKWARD" && FinalDirection !== "FORWARD")
+){// if the 2 values arent there 
+        avgVelocityResult.textContent = "ERROR: DIRECTION MUST BE THE SAME OR OPPOSITE ON THE SAME AXIS"// shows this error message 
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-        
+    else if (FinalDirection !== InitialDirection){
+        FinalVelocity = FinalVelocity * -1
+    }
 
-    else {// if the values are fine 
-        const InitialVelocity = Number(avgInitialVelocity.value);// initeal velocity 
-        const FinalVelocity = Number(avgFinalVelocity.value);// final velocity 
-        const InitialDirection = avginitialDirection.value; // initeal velocity direction 
-        const FinalDirection = avgFinalDirection.value; // final velocity direction 
-
-        const Velocity = Displacement / Time; // this is the formula 
-
-        velocityResult.textContent = "Speed = " + Velocity.toFixed(3) + " METERS/SECOND " + "[" + Direction + "]";// this is the result 
-        velocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
-    };
+    
+       
 });
 
 
