@@ -1303,10 +1303,19 @@ calculateConeVolume.addEventListener ("click", function(){// if the circumferenc
 
 calculateConePerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
-    if(conePerimeterRadius.value === "0"||conePerimeterRadius.value === ""){ // if no values were entered or they are invalid 
-        conePerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+    if(conePerimeterRadius.value === ""){ // if no values were entered  
+        conePerimeterResult.textContent = "ERROR: ENTER A VALUE!"; //the error message
         conePerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(conePerimeterRadius.value === "0"){ // if 0 
+        conePerimeterResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        conePerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(conePerimeterRadius.value <= -1){ // if negative
+        conePerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        conePerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
@@ -1316,15 +1325,23 @@ calculateConePerimeter.addEventListener ("click", function(){// if the circumfer
         conePerimeterResult.textContent = "PERIMETER = " + Perimeter.toFixed(3) + " UNITS";// displays this 
         conePerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 });
 
 calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumference calculate button is used 
      
-    if(coneSurfaceAreaLenght.value === "0"||coneSurfaceAreaLenght.value === ""||coneSurfaceAreaRadius.value === ""||coneSurfaceAreaRadius.value === "0"){ // if no values were entered or they are invalid 
-        coneSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
+    if(coneSurfaceAreaLenght.value === ""||coneSurfaceAreaRadius.value === ""){ // if no values were entered 
+        coneSurfaceAreaResult.textContent = "ERROR: ENTER 2 VALUES!"; //the error message
         coneSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(coneSurfaceAreaLenght.value === "0"||coneSurfaceAreaRadius.value === "0"){ // if 0
+        coneSurfaceAreaResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        coneSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(coneSurfaceAreaLenght.value <= -1||coneSurfaceAreaRadius.value <= -1){ // if negative 
+        coneSurfaceAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        coneSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
@@ -1335,7 +1352,6 @@ calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumf
         coneSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea.toFixed(3) + " UNITS Squared";// displays this 
         coneSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 });
 
 calculateSphereVolume.addEventListener ("click", function(){// if the calculate sphere folume is clicked then
