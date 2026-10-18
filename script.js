@@ -2000,6 +2000,27 @@ speedBackButton.addEventListener("click", function(){
     speedResult.textContent = "";// resets 
 })
 
+velocityBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows the star pag again 
+    velocityCalculatorPage.style.display = "none";// hides this page 
+    velocityDirection.value = "";// resets 
+    velocityDisplacement.value = "";// resets 
+    velocityTime.value = "";// resets 
+    velocityResult.textContent = "";// resets 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2703,6 +2724,30 @@ allspeedButton.addEventListener("click", function(){// if the cube perimeter is 
     speedCalculatorPage.style.display = "flex"// shows this page
 })
 
+allvelocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    velocityCalculatorPage.style.display = "flex"// shows this page
+})
+
+
 
 
 
@@ -3405,6 +3450,20 @@ trianglePrismPerimeterButton.addEventListener("click", function(){// if the cube
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
 
 speedButton.addEventListener("click", function(){// if the cube perimeter is clicked 
@@ -3428,4 +3487,27 @@ speedButton.addEventListener("click", function(){// if the cube perimeter is cli
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     speedCalculatorPage.style.display = "flex"// shows this page
+})
+
+velocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    velocityCalculatorPage.style.display = "flex"// shows this page
 })
