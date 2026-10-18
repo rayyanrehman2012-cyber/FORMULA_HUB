@@ -51,7 +51,7 @@ const sphereSurfaceAreaBackButton = document.getElementById("sphereSurfaceAreaBa
 const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolumeBackButton");// this is the back bitton on the triangle prism voulume calculatpr page 
 const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePrismSurfaceAreaBackButton");// this is the surface area back button for the triangle 
 const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismPerimeterBackButton");// this is the back button on the perimeter back button 
-
+const speedBackButton = document.getElementById("speedBackButton");// this is the speed page back button 
 
 
 
@@ -96,9 +96,9 @@ const coneSurfaceAreaPage = document.querySelector(".coneSurfaceAreaPage");// th
 const sphereVolumePage = document.querySelector(".sphereVolumePage");// This is the shpere volume page itself 
 const sphereSurfaceAreaPage = document.querySelector(".sphereSurfaceAreaPage");// this is the sphere surface area page 
 const trianglePrismVolumePage = document.querySelector(".trianglePrismVolumePage");// this is the triangle prisim volume page 
-const trianglePrismSurfaceAreaPage = document.querySelector(".trianglePrismSurfaceAreaPage")// this is the triangle surface area page 
-const trianglePrismPerimeterPage = document.querySelector(".trianglePrismPerimeterPage")// this is the triangle prisim perimiter page 
-
+const trianglePrismSurfaceAreaPage = document.querySelector(".trianglePrismSurfaceAreaPage");// this is the triangle surface area page 
+const trianglePrismPerimeterPage = document.querySelector(".trianglePrismPerimeterPage");// this is the triangle prisim perimiter page 
+const speedCalculatorPage = document.querySelector(".speedCalculatorPage");// this is the speed calculator page 
 
 
 
@@ -144,6 +144,19 @@ const allsphereSurfaceAreaButton = document.getElementById("allsphereSurfaceArea
 const alltrianglePrismVolumeButton = document.getElementById("alltrianglePrismVolumeButton");// this is the triangle prism volume button  on the all formula page 
 const alltrianglePrismSurfaceAreaButton = document.getElementById("alltrianglePrismSurfaceAreaButton");// this is the traiangle prism surface area button on the all formmula page 
 const alltrianglePrismPerimeterButton = document.getElementById("alltrianglePrismPerimeterButton");// this is the all formula button 
+const allspeedButton = document.getElementById("allspeedButton");// this is the speed calculator button on the all formula page 
+
+
+
+
+
+
+
+
+
+//THESE ARE ALL OF THE BUTTONS ON THE PHYSICS FORMULA SCREEN
+const speedButton = document.getElementById("speedButton");// this is the speed calculator button on the all formula page 
+
 
 
 
@@ -463,7 +476,11 @@ const calculateTrianglePrismPerimeter = document.getElementById("calculateTriang
 const trianglePrismPerimeterResult = document.getElementById("trianglePrismPerimeterResult");// this is the result line 
  
 
-
+//THESE ARE FOR THE SPEED CALCULATOR
+const speedDistance = document.getElementById("speedDistance");// this is the  distance values 
+const speedTime = document.getElementById("speedTime");// this is the  distance values 
+const calculateSpeed = document.getElementById("calculateSpeed");// this is the  distance values 
+const speedResult = document.getElementById("speedResult");// this is the  distance values 
 
 
 
@@ -1492,7 +1509,32 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
     };
 });
 
+calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the calculate button is pressed then
+    if(speedTime.value ===""|| speedDistance.value === ""){// if the 4 values arent there 
+        trianglePrismPerimeterResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
+        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
 
+    else if(speedTime.value ==="0"|| speedDistance.value === "0"){// if the 2 values are zeros
+        trianglePrismPerimeterResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
+        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(speedTime.value <=""|| speedDistance.value <= ""){// if the 2 values are negatives 
+        trianglePrismPerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else {// if the values are fine 
+        const Distance = Number(speedDistance.value);// holds the side a value 
+        const Time = Number(speedTime.value);// holds the side a value 
+
+        const Speed = Distance/Time;
+
+        speedResult.textContent = "Speed = " + Speed.toFixed(3) + " METERS/SECOND";// this is the result 
+         speedResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    };
+});
 
 
 
@@ -1902,6 +1944,15 @@ trianglePrismPerimeterBackButton.addEventListener("click", function(){
 })
 
 
+trianglePrismPerimeterBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows the star pag again 
+    trianglePrismPerimeterPage.style.display = "none";// hides this page 
+    trianglePrismPerimeterSideA.value = "";// resets 
+    trianglePrismPerimeterSideB.value = "";// resets 
+    trianglePrismPerimeterSideC.value = "";// resets 
+    trianglePrismPerimeterLength.value = "";// resets 
+    trianglePrismPerimeterResult.textContent = "";// resets 
+})
 
 
 
