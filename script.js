@@ -52,6 +52,11 @@ const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolu
 const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePrismSurfaceAreaBackButton");// this is the surface area back button for the triangle 
 const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismPerimeterBackButton");// this is the back button on the perimeter back button 
 const speedBackButton = document.getElementById("speedBackButton");// this is the speed page back button 
+const velocityBackButton = document.getElementById("velocityBackButton");// this is the valocity page  back button 
+
+
+
+
 
 
 
@@ -99,6 +104,12 @@ const trianglePrismVolumePage = document.querySelector(".trianglePrismVolumePage
 const trianglePrismSurfaceAreaPage = document.querySelector(".trianglePrismSurfaceAreaPage");// this is the triangle surface area page 
 const trianglePrismPerimeterPage = document.querySelector(".trianglePrismPerimeterPage");// this is the triangle prisim perimiter page 
 const speedCalculatorPage = document.querySelector(".speedCalculatorPage");// this is the speed calculator page 
+const velocityCalculatorPage = document.querySelector(".velocityCalculatorPage");// this is the valocity page 
+
+
+
+
+
 
 
 
@@ -145,6 +156,8 @@ const alltrianglePrismVolumeButton = document.getElementById("alltrianglePrismVo
 const alltrianglePrismSurfaceAreaButton = document.getElementById("alltrianglePrismSurfaceAreaButton");// this is the traiangle prism surface area button on the all formmula page 
 const alltrianglePrismPerimeterButton = document.getElementById("alltrianglePrismPerimeterButton");// this is the all formula button 
 const allspeedButton = document.getElementById("allspeedButton");// this is the speed calculator button on the all formula page 
+const allvelocityButton = document.getElementById("allvelocityButton");// this is the all formula page velocity calculator button
+
 
 
 
@@ -156,6 +169,7 @@ const allspeedButton = document.getElementById("allspeedButton");// this is the 
 
 //THESE ARE ALL OF THE BUTTONS ON THE PHYSICS FORMULA SCREEN
 const speedButton = document.getElementById("speedButton");// this is the speed calculator button on the all formula page 
+const velocityButton = document.getElementById("velocityButton");// this is the velocity button on the physics formula page 
 
 
 
@@ -482,7 +496,12 @@ const speedTime = document.getElementById("speedTime");// this is the  distance 
 const calculateSpeed = document.getElementById("calculateSpeed");// this is the  distance values 
 const speedResult = document.getElementById("speedResult");// this is the  distance values 
 
-
+//THESE ARE FOR THE VELOCITY CALCULATOR
+const velocityDisplacement = document.getElementById("velocityDisplacement");// this is the displacement value 
+const velocityDirection = document.getElementById("velocityDirection");// this is the displacement value 
+const velocityTime = document.getElementById("velocityTime");// this is the displacement value 
+const calculateVelocity = document.getElementById("calculateVelocity");// this is the displacement value 
+const velocityResult = document.getElementById("velocityResult");// this is the displacement value 
 
 
 

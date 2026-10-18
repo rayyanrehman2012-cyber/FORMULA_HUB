@@ -69,6 +69,7 @@
                 <h2>PHYSICS</h2>
                 <div class="formulaContainer">
                     <button id = "allspeedButton" class="formulaButton">SPEED</button>
+                    <button id = "allvelocityButton" class="formulaButton">VELOCITY</button>
                     <button class="formulaButton">AVERAGE VELOCITY</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">DISTANCE</button>
@@ -132,6 +133,7 @@
             <h1>PHYSICS FORMULAS</h1>
             <div class="formulaContainer">
                     <button id = "speedButton" class="formulaButton">SPEED</button>
+                    <button id = "velocityButton" class="formulaButton">VELOCITY</button>
                     <button class="formulaButton">AVERAGE VELOCITY</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">DISTANCE</button>
@@ -738,6 +740,25 @@
 
             </div>
             <button id = "speedBackButton">BACK</button>
+        </main>
+
+        <main class = "velocityCalculatorPage">
+            <h1>VELOCITY CALCULATOR</h1>
+            <div class = "calculatorBox">
+
+                <label for = "velocityDisplacement">DISPLACEMENT (METERS)</label>   
+                <input id = "velocityDisplacement" type = "number">
+
+                <label for = "velocityDirection">DIRECTION</label>   
+                <input id = "velocityDirection" type = "number">
+
+                <label for = "velocityTime">TIME (SECONDS)</label>   
+                <input id = "velocityTime" type = "number">
+
+                <button id = "calculateVelocity">CALCULATE</button>
+                <p id = "velocityResult"></p>
+            </div>
+            <button id = "velocityBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
