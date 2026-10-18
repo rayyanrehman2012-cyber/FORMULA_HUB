@@ -1733,31 +1733,53 @@ calculateDisplacement.addEventListener("click", function() {// if the calculate 
 
     else {// if the values and directions are fine 
 
-        if (FinalDirection === "SOUTH" || FinalDirection === "WEST" || FinalDirection === "BACKWARD") {
-            FinalPosition = FinalPosition * -1;
+        if (FinalDirection === "SOUTH" || FinalDirection === "WEST" || FinalDirection === "BACKWARD") {// if the final direction is one of it 
+            FinalPosition = FinalPosition * -1;// make the value negative so it subtracts butter
         }
 
-        if (InitialDirection === "SOUTH" || InitialDirection === "WEST" || InitialDirection === "BACKWARD") {
-            InitialPosition = InitialPosition * -1;
+        if (InitialDirection === "SOUTH" || InitialDirection === "WEST" || InitialDirection === "BACKWARD") {// if the intial direction is going one of these dorection 
+            InitialPosition = InitialPosition * -1; // make the value negative so it subtracts butter 
         }
 
-        let Displacement = FinalPosition - InitialPosition;// the formula 
-        let DisplacementDirection = FinalDirection;
+        let Displacement = FinalPosition - InitialPosition;// the formula )displacement is final position minus initial positon
+        let DisplacementDirection = FinalDirection; // the displacements direction is the final position direction 
         
-        if (Displacement < 0) {
-            Displacement = Displacement * -1;
-            DisplacementDirection = InitialDirection;
+        if (Displacement < 0) {// if the displacement is less than 0
+            Displacement = Displacement * -1; // make it positve 
+
+            if (FinalDirection === "NORTH"){// and the direction was north 
+                DisplacementDirection = "SOUTH";// it become south 
+            }
+
+            else if (FinalDirection === "SOUTH"){// if the direction was south 
+                DisplacementDirection = "NORTH";// it become north 
+            }
+
+            else if (FinalDirection === "EAST") {// if the direction was east 
+                DisplacementDirection = "WEST";// it become wst 
+            }
+
+            else if (FinalDirection === "WEST"){// if the direction was west 
+                DisplacementDirection = "EAST";// it will become east 
+            }
+
+            else if (FinalDirection === "FORWARD"){// if it was forwards 
+                DisplacementDirection = "BACKWARD";// if will become backwards 
+            }
+
+            else {// if it was backwards 
+                DisplacementDirection = "FORWARD"; // if will become forwards 
+            }
         }
 
-        if (Displacement ===  0){ // if the velocity is 0 
+        if (Displacement ===  0){ // if the displacement is is 0 
             displacementResult.textContent = "DISPLACEMENT = " + Displacement.toFixed(3) + " METERS";// show this message 
             displacementResult.style.color = "rgb(11,61,46)";// changes the color to green  
         }
 
-
-        else {// everyting els 
-            displacementResult.textContent = "DISPLACEMENT = " + Displacement.toFixed(3) + " METERS [" + DisplacementDirection + "]" // shows this error message with the first directions 
-            displacementResult.style.color = "rgb(11,61,46)";// changes the color to green 
+        else {// everyting else
+            displacementResult.textContent = "DISPLACEMENT = " + Displacement.toFixed(3) + " METERS [" + DisplacementDirection + "]" // shows this result 
+            displacementResult.style.color = "rgb(11,61,46)";// changes the color to green  
         }
     }   
 });
@@ -2202,7 +2224,15 @@ physicsDistanceBackButton.addEventListener("click", function(){
     physicsDistanceResult.textContent = "";// resets 
 })
 
-
+displacementBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows the star pag again 
+    displacementCalculatorPage.style.display = "none";// hides this page 
+    displacement1.value = "";// resets 
+    displacement2.value = "";// resets 
+    displacementDirection1.value = "";// resets 
+    displacementDirection2.value = "";// resets 
+    displacementResult.textContent = "";// resets 
+})
 
 
 
@@ -2983,6 +3013,30 @@ allphysicsDistanceButton.addEventListener("click", function(){// if the cube per
     cubeVolumePage.style.display = "none";// hid this page 
     physicsDistanceCalculatorPage.style.display = "flex"// shows this page
 })
+alldisplacementButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    displacementCalculatorPage.style.display = "flex"// shows this page
+})
+
+
 
 
 
@@ -3790,4 +3844,27 @@ physicsDistanceButton.addEventListener("click", function(){// if the cube perime
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     physicsDistanceCalculatorPage.style.display = "flex"// shows this page
+})
+
+displacementButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    displacementCalculatorPage.style.display = "flex"// shows this page
 })
