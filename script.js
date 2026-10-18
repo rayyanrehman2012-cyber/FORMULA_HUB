@@ -1605,44 +1605,44 @@ calculateAvgVelocity.addEventListener("click", function() {// if the calculate b
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-    else if(avginitialDirection.value === ""|| avgFinalDirection.value === ""){// if the 2 values arent there 
+    else if(avgFinalVelocity.value <=-1|| avgInitialVelocity.value <=-1){// if the 2 values negative  
+        avgVelocityResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(avginitialDirection.value === ""|| avgFinalDirection.value === ""){// if the firections arnt selected 
         avgVelocityResult.textContent = "ERROR: SELECT A DIRECTION"// shows this error message 
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-    else if((InitialDirection === "NORTH" && FinalDirection !== "NORTH" && FinalDirection !== "SOUTH") || (InitialDirection === "SOUTH" && FinalDirection !== "SOUTH" && FinalDirection !== "NORTH") || (InitialDirection === "EAST" && FinalDirection !== "EAST" && FinalDirection !== "WEST") || (InitialDirection === "WEST" && FinalDirection !== "WEST" && FinalDirection !== "EAST") || (InitialDirection === "FORWARD" && FinalDirection !== "FORWARD" && FinalDirection !== "BACKWARD") || (InitialDirection === "BACKWARD" && FinalDirection !== "BACKWARD" && FinalDirection !== "FORWARD")
-){// if the 2 values arent there 
+    else if((InitialDirection === "NORTH" && FinalDirection !== "NORTH" && FinalDirection !== "SOUTH") || (InitialDirection === "SOUTH" && FinalDirection !== "SOUTH" && FinalDirection !== "NORTH") || (InitialDirection === "EAST" && FinalDirection !== "EAST" && FinalDirection !== "WEST") || (InitialDirection === "WEST" && FinalDirection !== "WEST" && FinalDirection !== "EAST") || (InitialDirection === "FORWARD" && FinalDirection !== "FORWARD" && FinalDirection !== "BACKWARD") || (InitialDirection === "BACKWARD" && FinalDirection !== "BACKWARD" && FinalDirection !== "FORWARD")){// if the directions arne on the same axis 
         avgVelocityResult.textContent = "ERROR: DIRECTION MUST BE THE SAME OR OPPOSITE ON THE SAME AXIS"// shows this error message 
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-    
+    else {// if the values and directions are fine 
 
-    else {
-
-        if (FinalDirection !== InitialDirection){
-            FinalVelocity = FinalVelocity * -1
+        if (FinalDirection !== InitialDirection){// check if the directions are opposite 
+            FinalVelocity = FinalVelocity * -1 //if there are then turn on of the values into a negative number 
         }
 
-        let AverageVelocity = (InitialVelocity + FinalVelocity)/2
+        let AverageVelocity = (InitialVelocity + FinalVelocity)/2// the formula 
         
-        if (AverageVelocity ===  0){
-            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND";//
-            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
-
-        }
-        else if (AverageVelocity <= -1){
-            AverageVelocity = AverageVelocity * -1
-        
-            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + FinalDirection + "]" // shows this error message 
-            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+        if (AverageVelocity ===  0){ // if the velocity is 0 
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND";// show this message 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to green  
         }
 
+        else if (AverageVelocity <= -1){ // if the average velocity is in the negatives 
+            AverageVelocity = AverageVelocity * -1 // make it positive 
         
-        else {
-            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + InitialDirection + "]" // shows this error message 
-            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + FinalDirection + "]" // shows this error message with the fliped direction 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to green 
+        }
 
+        else {// everyting els 
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + InitialDirection + "]" // shows this error message with the first directions 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to green 
         }
     }   
 });
