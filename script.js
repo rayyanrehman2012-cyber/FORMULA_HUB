@@ -1059,8 +1059,18 @@ calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calcula
 
 calculateRectanglePrismVolume.addEventListener ("click", function(){// if the calculate button is clicked 
 
-    if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeHeight.value === "0"|| rectanglePrismVolumeHeight.value === "" ||rectanglePrismVolumeWidth.value === "0"|| rectanglePrismVolumeWidth.value === ""){//if the values are not valide
-        rectanglePrismVolumeResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUE"; //shows this error message 
+    if(rectanglePrismVolumeLength.value === ""|| rectanglePrismVolumeHeight.value === "" ||rectanglePrismVolumeWidth.value === ""){//if the values are not there
+        rectanglePrismVolumeResult.textContent = "ERROR: ENTER 3 VALUES!"; //shows this error message 
+        rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else if(rectanglePrismVolumeLength.value === "0"|| rectanglePrismVolumeHeight.value === "0"|| rectanglePrismVolumeWidth.value === "0"){//if the values are zero 
+        rectanglePrismVolumeResult.textContent = "ERROR: 0 DETECTED!"; //shows this error message 
+        rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else if(rectanglePrismVolumeLength.value <= -1|| rectanglePrismVolumeHeight.value <= -1|| rectanglePrismVolumeWidth.value <= -1){//if the values are negative 
+        rectanglePrismVolumeResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //shows this error message 
         rectanglePrismVolumeResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
@@ -1078,8 +1088,18 @@ calculateRectanglePrismVolume.addEventListener ("click", function(){// if the ca
 
 calculateRectanglePrismPerimeter.addEventListener ("click", function(){//  if the calculate button was pressed on the rectangular prisim perimiter pages 
 
-    if(rectanglePrismPerimeterHeight.value === "0"||rectanglePrismPerimeterHeight.value === ""||rectanglePrismPerimeterWidth.value === "0"||rectanglePrismPerimeterWidth.value === ""||rectanglePrismPerimeterLength.value === "0"||rectanglePrismPerimeterLength.value === ""){ // if no values were entered or they are invalid 
-        rectanglePrismPerimeterResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"; //the error message
+    if(rectanglePrismPerimeterHeight.value === ""||rectanglePrismPerimeterWidth.value === ""||rectanglePrismPerimeterLength.value === ""){ // if no values were entered 
+        rectanglePrismPerimeterResult.textContent = "ERROR: ENTER 3 VALUES!"; //the error message
+        rectanglePrismPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(rectanglePrismPerimeterHeight.value === "0"||rectanglePrismPerimeterWidth.value === "0"||rectanglePrismPerimeterLength.value === "0"){ // if no values were zero s
+        rectanglePrismPerimeterResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        rectanglePrismPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(rectanglePrismPerimeterHeight.value <= -1||rectanglePrismPerimeterWidth.value <= -1||rectanglePrismPerimeterLength.value <= -1){ // if negative 
+        rectanglePrismPerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
         rectanglePrismPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
