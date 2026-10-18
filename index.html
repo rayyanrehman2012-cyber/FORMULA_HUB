@@ -746,12 +746,22 @@
             <h1>VELOCITY CALCULATOR</h1>
             <div class = "calculatorBox">
 
+                
+
                 <label for = "velocityDisplacement">DISPLACEMENT (METERS)</label>   
                 <input id = "velocityDisplacement" type = "number">
 
                 <label for = "velocityDirection">DIRECTION</label>   
-                <input id = "velocityDirection" type = "number">
-
+                <select id = "velocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARDS</option>
+                </select>
+                
                 <label for = "velocityTime">TIME (SECONDS)</label>   
                 <input id = "velocityTime" type = "number">
 

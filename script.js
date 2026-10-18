@@ -1539,7 +1539,7 @@ calculateSpeed.addEventListener("click", function() {// if the calculate button 
         speedResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-    else if(speedTime.value <=""|| speedDistance.value <= ""){// if the 2 values are negatives 
+    else if(speedTime.value <=-1|| speedDistance.value <= -1){// if the 2 values are negatives 
         speedResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
         speedResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
@@ -1554,6 +1554,35 @@ calculateSpeed.addEventListener("click", function() {// if the calculate button 
         speedResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
 });
+
+calculateVelocity.addEventListener("click", function() {// if the calculate button is pressed then
+    if(velocityDisplacement.value ===""|| velocityDirection.value === ""|| velocityTime.value === ""){// if the 2 values arent there 
+        velocityResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
+        velocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+
+    else if(velocityDisplacement.value ==="0"|| velocityTime.value === "0"){// if the 2 values are zeros
+        velocityResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
+        velocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(velocityDisplacement.value <=-1|| velocityTime.value <= -1){// if the 2 values are negatives 
+        velocityResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        velocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else {// if the values are fine 
+        const Displacement = Number(velocityDisplacement.value);// holds the side a value 
+        const Time = Number(velocityTime.value);// holds the side a value 
+        const Direction = velocityDirection.value; // gets the value of the drow down menu 
+        const Velocity = Displacement / Time; // this is the formula 
+
+        velocityResult.textContent = "Speed = " + Velocity.toFixed(3) + " METERS/SECOND " + "[" + Direction + "]";// this is the result 
+        velocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    };
+});
+
 
 
 
