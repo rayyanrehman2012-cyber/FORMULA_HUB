@@ -1437,7 +1437,7 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
 calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if the calculate button is pressed then
     
     if(trianglePrismSurfaceAreaSideA.value ===""||  trianglePrismSurfaceAreaSideB.value === ""|| trianglePrismSurfaceAreaSideC.value === ""||  trianglePrismSurfaceAreaLength.value === "" || trianglePrismSurfaceAreaHeight.value === ""){// if the 4 values are not entered 
-        trianglePrismSurfaceAreaResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
+        trianglePrismSurfaceAreaResult.textContent = "ERROR: ENTER 5 VALUES!"// shows this error message 
         trianglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
@@ -1465,10 +1465,19 @@ calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if th
 });
 
 calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the calculate button is pressed then
-    if(trianglePrismPerimeterSideA.value ===""|| trianglePrismPerimeterSideA.value  === "0"|| trianglePrismPerimeterSideB.value === ""|| trianglePrismPerimeterSideB.value === "0"|| trianglePrismPerimeterSideC.value === ""|| trianglePrismPerimeterSideC.value ==="0" || trianglePrismPerimeterLength.value === "" || trianglePrismPerimeterLength.value === "0"){// if the 4 values arent there or are invalid then 
-        trianglePrismPerimeterResult.textContent = "ERROR: PLEASE ENTER 4 VALID VALUES"// shows this error message 
+    if(trianglePrismPerimeterSideA.value ===""|| trianglePrismPerimeterSideB.value === ""|| trianglePrismPerimeterSideC.value === ""|| trianglePrismPerimeterLength.value === "" ){// if the 4 values arent there 
+        trianglePrismPerimeterResult.textContent = "ERROR: ENTER 4 VALUES!"// shows this error message 
         trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
 
+    else if( trianglePrismPerimeterSideA.value  === "0"||trianglePrismPerimeterSideB.value === "0"|| trianglePrismPerimeterSideC.value ==="0" || trianglePrismPerimeterLength.value === "0"){// if the 4 values are zeros
+        trianglePrismPerimeterResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
+        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if( trianglePrismPerimeterSideA.value  <= -1||trianglePrismPerimeterSideB.value <= -1|| trianglePrismPerimeterSideC.value <= -1 || trianglePrismPerimeterLength.value <= -1){// if the 4 values are negatives 
+        trianglePrismPerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
     else {// if the values are fine 
@@ -1481,7 +1490,6 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
         trianglePrismPerimeterResult.textContent = "PERIMETER = " + Perimeter + " UNITS";// this is the result 
         trianglePrismPerimeterResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
-
 });
 
 
