@@ -53,6 +53,7 @@ const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePris
 const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismPerimeterBackButton");// this is the back button on the perimeter back button 
 const speedBackButton = document.getElementById("speedBackButton");// this is the speed page back button 
 const velocityBackButton = document.getElementById("velocityBackButton");// this is the valocity page  back button 
+const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");// this is the valocity page  back button 
 
 
 
@@ -105,6 +106,7 @@ const trianglePrismSurfaceAreaPage = document.querySelector(".trianglePrismSurfa
 const trianglePrismPerimeterPage = document.querySelector(".trianglePrismPerimeterPage");// this is the triangle prisim perimiter page 
 const speedCalculatorPage = document.querySelector(".speedCalculatorPage");// this is the speed calculator page 
 const velocityCalculatorPage = document.querySelector(".velocityCalculatorPage");// this is the valocity page 
+const avgVelocityCalculatorPage = document.querySelector(".avgVelocityCalculatorPage");// this is the valocity page 
 
 
 
@@ -157,6 +159,7 @@ const alltrianglePrismSurfaceAreaButton = document.getElementById("alltrianglePr
 const alltrianglePrismPerimeterButton = document.getElementById("alltrianglePrismPerimeterButton");// this is the all formula button 
 const allspeedButton = document.getElementById("allspeedButton");// this is the speed calculator button on the all formula page 
 const allvelocityButton = document.getElementById("allvelocityButton");// this is the all formula page velocity calculator button
+const allavgVelocityButton = document.getElementById("allavgVelocityButton");// this is the all formula page velocity calculator button
 
 
 
@@ -170,6 +173,7 @@ const allvelocityButton = document.getElementById("allvelocityButton");// this i
 //THESE ARE ALL OF THE BUTTONS ON THE PHYSICS FORMULA SCREEN
 const speedButton = document.getElementById("speedButton");// this is the speed calculator button on the all formula page 
 const velocityButton = document.getElementById("velocityButton");// this is the velocity button on the physics formula page 
+const avgVelocityButton = document.getElementById("avgVelocityButton");// this is the velocity button on the physics formula page 
 
 
 
@@ -503,7 +507,13 @@ const velocityTime = document.getElementById("velocityTime");// this is the disp
 const calculateVelocity = document.getElementById("calculateVelocity");// this is the displacement value 
 const velocityResult = document.getElementById("velocityResult");// this is the displacement value 
 
-
+//THESE ARE FOR THE AVERAGE VELOCITY CALCULATOR
+const avgInitialVelocity = document.getElementById("avgInitialVelocity");// this is the displacement value 
+const avginitialDirection = document.getElementById("avginitialDirection");// this is the displacement value 
+const avgFinalVelocity = document.getElementById("avgFinalVelocity");// this is the displacement value 
+const avgFinalDirection = document.getElementById("avgFinalDirection");// this is the displacement value 
+const calculateAvgVelocity = document.getElementById("calculateAvgVelocity");// this is the displacement value 
+const avgVelocityResult = document.getElementById("avgVelocityResult");// this is the displacement value 
 
 
 
@@ -1583,6 +1593,36 @@ calculateVelocity.addEventListener("click", function() {// if the calculate butt
     };
 });
 
+calculateAvgVelocity.addEventListener("click", function() {// if the calculate button is pressed then
+    if(avgFinalVelocity.value ===""|| avgInitialVelocity.value === ""){// if the 2 values arent there 
+        avgVelocityResult.textContent = "ERROR: ENTER 34 VALUES!"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(avginitialDirection.value === ""|| avgFinalDirection.value === ""){// if the 2 values arent there 
+        avgVelocityResult.textContent = "ERROR: SELECT A DIRECTION"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(avginitialDirection.value === "EAST" && avgFinalDirection.value !== "WEST"||avginitialDirection.value === "WEST" && avgFinalDirection.value !== "EAST"|| avginitialDirection.value === "NORTH" && avgFinalDirection.value !== "SOUTH"|| avginitialDirection.value === "SOUTH" && avgFinalDirection.value !== "NORTH"||avginitialDirection.value === "BACKWARD" && avgFinalDirection.value !== "FORWARD"|| avginitialDirection.value === "FORWARD" && avgFinalDirection.value !== "BACKWARD"){// if the 2 values arent there 
+        avgVelocityResult.textContent = "ERROR: DIRECTION MUST BE SAME OR OPPOSITE ON THE SAME AXIS"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+        
+
+    else {// if the values are fine 
+        const InitialVelocity = Number(avgInitialVelocity.value);// initeal velocity 
+        const FinalVelocity = Number(avgFinalVelocity.value);// final velocity 
+        const InitialDirection = avginitialDirection.value; // initeal velocity direction 
+        const FinalDirection = avgFinalDirection.value; // final velocity direction 
+
+        const Velocity = Displacement / Time; // this is the formula 
+
+        velocityResult.textContent = "Speed = " + Velocity.toFixed(3) + " METERS/SECOND " + "[" + Direction + "]";// this is the result 
+        velocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    };
+});
 
 
 
