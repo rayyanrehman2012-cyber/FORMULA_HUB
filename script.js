@@ -1356,10 +1356,19 @@ calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumf
 
 calculateSphereVolume.addEventListener ("click", function(){// if the calculate sphere folume is clicked then
 
-    if(sphereVolumeRadius.value === ""|| sphereVolumeRadius.value === "0"){// and the values are blank or zer
-        sphereVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE";// this is the error message
+    if(sphereVolumeRadius.value === ""){// and the values are blank 
+        sphereVolumeResult.textContent = "ERROR: ENTER A VALUE!";// this is the error message
         sphereVolumeResult.style.color = "rgb(102,21,7)";//t his changes the warnin message to red
+    }
 
+    else if(sphereVolumeRadius.value === "0"){// and the values are zero
+        sphereVolumeResult.textContent = "ERROR: 0 DETECTED!";// this is the error message
+        sphereVolumeResult.style.color = "rgb(102,21,7)";//t his changes the warnin message to red
+    }
+
+    else if(sphereVolumeRadius.value <= -1){// and the values are negative
+        sphereVolumeResult.textContent = "ERROR: NO NEGATIVE VALUES!";// this is the error message
+        sphereVolumeResult.style.color = "rgb(102,21,7)";//t his changes the warnin message to red
     }
 
     else {// if the value is fine 
@@ -1369,13 +1378,22 @@ calculateSphereVolume.addEventListener ("click", function(){// if the calculate 
         sphereVolumeResult.textContent = "VOLUME = " + Volume.toFixed(3) + " UNITS CUBED";// this is the           result display
         sphereVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 });
 
 calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calculate button is pressed 
 
-    if(sphereSurfaceAreaRadius.value ==="0"||sphereSurfaceAreaRadius.value ===""){// if the surface are raduis inputs are planc or invalid 
-        sphereSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE";// this is the error message
+    if(sphereSurfaceAreaRadius.value ===""){// no value entered 
+        sphereSurfaceAreaResult.textContent = "ERROR: ENTER A VALUE!";// this is the error message
+        sphereSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red 
+    }
+
+    else if(sphereSurfaceAreaRadius.value ==="0"){// 0 entered
+        sphereSurfaceAreaResult.textContent = "ERROR: 0 DETECTED!";// this is the error message
+        sphereSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red 
+    }
+
+    else if(sphereSurfaceAreaRadius.value <= -1){// if negative 
+        sphereSurfaceAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!";// this is the error message
         sphereSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red 
     }
 
@@ -1386,16 +1404,25 @@ calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calcu
         sphereSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea.toFixed(3) + " UNITS SQUARED";//thiis is the result message 
         sphereSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 })
 
 calculateTrianglePrismVolume.addEventListener("click", function(){// this is the caluclate button on the triangle prism volume page 
 
-    if(trianglePrismVolumeLength.value === "" || trianglePrismVolumeLength.value === "0" || trianglePrismVolumeBase.value === "" || trianglePrismVolumeBase.value === "0" || trianglePrismVolumeHeight.value === "" || trianglePrismVolumeHeight.value === "0"){// if the values entered are not valid 
-        trianglePrismVolumeResult.textContent = "ERROR: PLEASE UNTER 3 VALID VALUES";// this is the error message for th
+    if(trianglePrismVolumeLength.value === "" || trianglePrismVolumeBase.value === "" || trianglePrismVolumeHeight.value === ""){// if the values are not entered
+        trianglePrismVolumeResult.textContent = "ERROR: ENTER 3 VALUES!";// this is the error message for th
         trianglePrismVolumeResult.style.color = "rgb(102,21,7)";// changes the color to red 
-    }   
+    } 
+    
+    else if(trianglePrismVolumeLength.value === "0" || trianglePrismVolumeBase.value === "0" ||trianglePrismVolumeHeight.value === "0"){// if the values entered are 0
+        trianglePrismVolumeResult.textContent = "ERROR: 0 DETECTED!";// this is the error message for th
+        trianglePrismVolumeResult.style.color = "rgb(102,21,7)";// changes the color to red 
+    } 
 
+    else if(trianglePrismVolumeLength.value <= -1 ||trianglePrismVolumeBase.value <= -1 || trianglePrismVolumeHeight.value <= -1){// if the values entered are not valid 
+        trianglePrismVolumeResult.textContent = "ERROR: NO NEGATIVE VALUES!";// this is the error message for th
+        trianglePrismVolumeResult.style.color = "rgb(102,21,7)";// changes the color to red 
+    } 
+    
     else { 
         const Base = Number(trianglePrismVolumeBase.value);// hols the base value 
         const Height = Number(trianglePrismVolumeHeight.value);// hols the height value 
@@ -1405,7 +1432,6 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
         trianglePrismVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// this is the error message for th
         trianglePrismVolumeResult.style.color = "rgb(11,61,46)";// changes the color to red 
     }   
-
 })
 
 calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if the calculate button is pressed then
