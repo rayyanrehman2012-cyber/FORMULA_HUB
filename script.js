@@ -1435,10 +1435,20 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
 })
 
 calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if the calculate button is pressed then
-    if(trianglePrismSurfaceAreaSideA.value ===""|| trianglePrismSurfaceAreaSideA.value  === "0"|| trianglePrismSurfaceAreaSideB.value === ""|| trianglePrismSurfaceAreaSideB.value === "0"|| trianglePrismSurfaceAreaSideC.value === ""|| trianglePrismSurfaceAreaSideC.value ==="0" || trianglePrismSurfaceAreaLength.value === "" || trianglePrismSurfaceAreaLength.value === "0"|| trianglePrismSurfaceAreaHeight.value === ""|| trianglePrismSurfaceAreaHeight.value ==="0"){// if the 4 values arent there or are invalid then 
-        trianglePrismSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 5 VALID VALUES"// shows this error message 
+    
+    if(trianglePrismSurfaceAreaSideA.value ===""||  trianglePrismSurfaceAreaSideB.value === ""|| trianglePrismSurfaceAreaSideC.value === ""||  trianglePrismSurfaceAreaLength.value === "" || trianglePrismSurfaceAreaHeight.value === ""){// if the 4 values are not entered 
+        trianglePrismSurfaceAreaResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
         trianglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
 
+    else if(trianglePrismSurfaceAreaSideA.value  === "0"|| trianglePrismSurfaceAreaSideB.value === "0"||trianglePrismSurfaceAreaSideC.value ==="0" || trianglePrismSurfaceAreaLength.value === "0"||trianglePrismSurfaceAreaHeight.value ==="0"){// if the 4 values have a zero in them 
+        trianglePrismSurfaceAreaResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
+        trianglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(trianglePrismSurfaceAreaSideA.value <= -1||  trianglePrismSurfaceAreaSideB.value <= -1|| trianglePrismSurfaceAreaSideC.value <= -1||  trianglePrismSurfaceAreaLength.value <= -1 || trianglePrismSurfaceAreaHeight.value <= -1){// if the 4 values are negatives 
+        trianglePrismSurfaceAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        trianglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
     else {// if the values are fine 
@@ -1452,7 +1462,6 @@ calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if th
         trianglePrismSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea + " UNITS SQUARED";// this is the error message for th
         trianglePrismSurfaceAreaResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
-
 });
 
 calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the calculate button is pressed then
@@ -1534,19 +1543,16 @@ rectangleAreaBackButton.addEventListener("click", function() { // area bck butto
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
     formulaPage.style.display = "none";// the formula page dissapears 
     rectangleAreaPage.style.display = "none"// the rectangle area screen is visible
-    
     lengthInput.value = "";// rests the inpus value 
     widthInput.value = "";// restes the input value 
     rectangleAreaResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
 });
 
 rectanglePerimeterBackButton.addEventListener("click", function() {// back button rectangle perimiter pages 
-
     startPage.style.display = "flex";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
     formulaPage.style.display = "none";// the formula page dissapears 
     rectanglePerimeterPage.style.display = "none"// the rectangle area screen is visible
-    
     PerimeterlengthInput.value = "";// rests the inpus value 
     PerimeterwidthInput.value = "";// restes the input value 
     rectanglePerimeterResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
@@ -1557,18 +1563,15 @@ squareAreaBackButton.addEventListener("click", function() { // area bck button r
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
     formulaPage.style.display = "none";// the formula page dissapears 
     squareAreaPage.style.display = "none"// the rectangle area screen is visible
-    
-   SquareAreaDimenstion.value = "";// rests the inpus value 
-   squareAreaResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
-
+    SquareAreaDimenstion.value = "";// rests the inpus value 
+    squareAreaResult.textContent = "";// thiss removes the answer text from the bottom when you exit 
 });
 
 squarePerimeterBackButton.addEventListener("click", function() {// back button on sqaure perimeter screen 
     startPage.style.display = "flex";// shows the start screen 
     mathFormulaPage.style.display = "none";// hides it 
     formulaPage.style.display = "none";// hides it 
-    squarePerimeterPage.style.display = "none";//hides it
-
+    squarePerimeterPage.style.display = "none";//hides i
     SquarePerimeterDimenstion.value = "";// removes the value 
     squarePerimeterResult.textContent = ""; // removes the line of text 
 });
@@ -1579,7 +1582,6 @@ triangleAreaBackButton.addEventListener("click", function() {// if the triangle 
     formulaPage.style.display = "none";//hides this servfec 
     squarePerimeterPage.style.display = "none";// hiedes this screen 
     triangleAreaPage.style.display = "none";
-
     triangleAreaBase.value = "";// the base value of the triangle resets 
     triangleAreaHeight.value = "";// the height value of the triangle resets 
     triangleAreaResult.textContent = "";// the result line rests 
@@ -1591,11 +1593,9 @@ trianglePerimeterBackButton.addEventListener("click", function() { // if the bac
     formulaPage.style.display = "none";//hide
     squarePerimeterPage.style.display = "none";//hid 
     trianglePerimeterPage.style.display = "none";//hid 
-
     trianglePerimeterSideA.value = "";// the value resets 
     trianglePerimeterSideB.value = "";// the value rests 
     trianglePerimeterSideC.value = "";// the valuse rests 
-
     trianglePerimeterResult.textContent = "";// the result line resets 
 });
 
@@ -1606,7 +1606,6 @@ circleAreaBackButton.addEventListener("click", function() {// if the back button
     squarePerimeterPage.style.display = "none";//hid 
     trianglePerimeterPage.style.display = "none";//hid 
     circleAreaPage.style.display = "none";//hide
-
     circleAreaRadius.value = "";// the value of the radius restsn 
     circleAreaResult.textContent = "";// the result line resets 
 });
@@ -1619,7 +1618,6 @@ circleCircumferenceBackButton.addEventListener("click", function() {// if the ba
     trianglePerimeterPage.style.display = "none";//hid 
     circleAreaPage.style.display = "none";//hide
     circleCircumferencePage.style.display = "none";//hide
-
     circleCircumferenceDiameter.value = "";// the value of the dia restsn 
     circleCircumferenceRadius.value = "";// the value of the radius restsn 
     circleCircumferenceResult.textContent = "";// the result line resets 
@@ -1634,7 +1632,6 @@ trapezoidAreaBackButton.addEventListener("click", function(){// if the back butt
     circleAreaPage.style.display = "none";//hide
     circleCircumferencePage.style.display = "none";//hide
     trapezoidAreaPage.style.display = "none"//hide
-
     trapezoidAreaBaseA.value = "";//restes value 
     trapezoidAreaBaseB.value = "";//restes value 
     trapezoidAreaHeight.value = "";//restes value //restes value 
@@ -1652,7 +1649,6 @@ quadrilateralPerimeterBackButton.addEventListener("click", function() {// if the
     circleCircumferencePage.style.display = "none";//hide
     trapezoidAreaPage.style.display = "none"//hide
     quadrilateralPerimeterPage.style.display = "none"// hide tis bage
-
     quadSideA.value = "";// rests the value 
     quadSideB.value = "";// rests the value 
     quadSideC.value = "";// rests the value 
@@ -1670,9 +1666,7 @@ parallelogramAreaBackButton.addEventListener("click", function() {// back button
     circleCircumferencePage.style.display = "none";//hide
     trapezoidAreaPage.style.display = "none";//hide
     quadrilateralPerimeterPage.style.display = "none";// hide tis bage
-    parallelogramAreaPage.style.display = "none";//hides this 
-
-
+    parallelogramAreaPage.style.display = "none";//hides this
     parallelogramBase.value = ""; //resetn everything 
     parallelogramHeight.value = ""; //resetn everything 
     parallelogramAreaResult.textContent = "";// removes everything 
@@ -1690,8 +1684,6 @@ slopeBackButton.addEventListener("click", function() { // this is the slope back
     quadrilateralPerimeterPage.style.display = "none";// hide tis bage
     parallelogramAreaPage.style.display = "none";//hides this
     slopePage.style.display = "none";// hieds this pages 
-
-
     slopeX1.value = ""; //resetn everything 
     slopeX2.value = ""; //resetn everything 
     slopeY1.value = ""; //resetn everything 
@@ -1702,7 +1694,6 @@ slopeBackButton.addEventListener("click", function() { // this is the slope back
 distanceBackButton.addEventListener("click", function() {// the distance back button 
     startPage.style.display = "flex";// shows the screen 
     distancePage.style.display = "none";// hides the distance page
-
     distanceX1.value = "";// reset
     distanceX2.value = "";//restet
     distanceY1.value = "";//reset
@@ -1713,12 +1704,10 @@ distanceBackButton.addEventListener("click", function() {// the distance back bu
 midpointBackButton.addEventListener("click", function(){// the midpoint back putton 
     startPage.style.display = "flex"; // shows the screen 
     midpointPage.style.display = "none"; // hides rhis screen 
-
     midpointX1.value = "";// reset
     midpointX2.value = "";// reset
     midpointY1.value = "";// reset
     midpointY2.value = "";// reset
-
     midpointResult.textContent = ""; // removes everything 
 
 });
@@ -1726,7 +1715,6 @@ midpointBackButton.addEventListener("click", function(){// the midpoint back put
 pythagoreanABackButton.addEventListener("click", function(){ // back button on pythagorean therom page a
     startPage.style.display = "flex";// shows this screen 
     pythagoreanPageA.style.display = "none";// hides this page 
-
     pythagoreanAB.value = "";//resets 
     pythagoreanAC.value = "";//resets 
     pythagoreanAResult.textContent = "";// removes everything
@@ -1735,7 +1723,6 @@ pythagoreanABackButton.addEventListener("click", function(){ // back button on p
 pythagoreanBBackButton.addEventListener("click", function(){ // back button on pythagorean therom page b
     startPage.style.display = "flex";// shows this screen 
     pythagoreanPageB.style.display = "none";// hides this page 
-
     pythagoreanBA.value = "";//resets 
     pythagoreanBC.value = "";//resets 
     pythagoreanBResult.textContent = "";// removes everything
@@ -1744,16 +1731,14 @@ pythagoreanBBackButton.addEventListener("click", function(){ // back button on p
 pythagoreanCBackButton.addEventListener("click", function(){ // back button on pythagorean therom page c
     startPage.style.display = "flex";// shows this screen 
     pythagoreanPageC.style.display = "none";// hides this page 
-
     pythagoreanCA.value = "";//resets 
     pythagoreanCB.value = "";//resets 
     pythagoreanCResult.textContent = "";// removes everything
 });
 
-cubeVolumeBackButton.addEventListener("click", function(){// back button on the cube volume pages 
+cubeVolumeBackButton.addEventListener("click", function(){// back button on the cube volume pages
     startPage.style.display = "flex";// shows this screen to everytone 
     cubeVolumePage.style.display = "none";// hides this pages 
-
     cubeSide.value = "";// resets the cube value 
     cubeVolumeResult.textContent = ""; // rests the text you see to a blank 
     
@@ -1762,7 +1747,6 @@ cubeVolumeBackButton.addEventListener("click", function(){// back button on the 
 cubePerimeterBackButton.addEventListener("click", function(){// this is the cube perimeterback button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cubePerimeterPage.style.display = "none";// hides this screen 
-
     cubePerimeterSide.value = "";// rests the input value 
     cubePerimeterResult.textContent = "";// restets the text contents 
 
@@ -1771,7 +1755,6 @@ cubePerimeterBackButton.addEventListener("click", function(){// this is the cube
 cubeSurfaceAreaBackButton.addEventListener("click", function(){// this is the cube surface are back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cubeSurfaceAreaPage.style.display = "none";// hides this screen 
-
     cubeSurfaceAreaSide.value = "";// rests the input value 
     cubeSurfaceAreaResult.textContent = "";// restets the text contents 
 
@@ -1780,7 +1763,6 @@ cubeSurfaceAreaBackButton.addEventListener("click", function(){// this is the cu
 rectanglePrismVolumeBackButton.addEventListener("click", function(){ //volume rectangle prisim back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismVolumePage.style.display = "none";// hides this screen 
-
     rectanglePrismVolumeHeight.value = "";// rests the input value 
     rectanglePrismVolumeLength.value = "";// rests the input value 
     rectanglePrismVolumeWidth.value = "";// rests the input value 
@@ -1790,7 +1772,6 @@ rectanglePrismVolumeBackButton.addEventListener("click", function(){ //volume re
 rectanglePrismPerimeterBackButton.addEventListener("click", function(){// this is the reactanlge prisim perimeter bacl button 
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismPerimeterPage.style.display = "none";// hides this screen 
-
     rectanglePrismPerimeterHeight.value = "";// rests the input value 
     rectanglePrismPerimeterLength.value = "";// rests the input value 
     rectanglePrismPerimeterWidth.value = "";// rests the input value 
@@ -1800,7 +1781,6 @@ rectanglePrismPerimeterBackButton.addEventListener("click", function(){// this i
 rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){// this is the rectangle prisp area pack button 
     startPage.style.display = "flex";// shows this creen to everyone 
     rectanglePrismSurfaceAreaPage.style.display = "none";// hides this screen 
-
     rectanglePrismSurfaceAreaHeight.value = "";// rests the input value 
     rectanglePrismSurfaceAreaLength.value = "";// rests the input value 
     rectanglePrismSurfaceAreaWidth.value = "";// rests the input value 
@@ -1810,7 +1790,6 @@ rectanglePrismSurfaceAreaBackButton.addEventListener("click", function(){// this
 cylinderVolumeBackButton.addEventListener("click", function(){// this is the culinder volume back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cylinderVolumePage.style.display = "none";// hides this screen 
-
     cylinderVolumeHeight.value = "";// rests the input value 
     cylinderVolumeRadius.value = "";// rests the input value 
     cylinderVolumeResult.textContent = "";// restets the text contents 
@@ -1819,7 +1798,6 @@ cylinderVolumeBackButton.addEventListener("click", function(){// this is the cul
 cylinderSurfaceAreaBackButton.addEventListener("click", function(){// this is the cilinder surface are back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     cylinderSurfaceAreaPage.style.display = "none";// hides this screen 
-
     cylinderSurfaceAreaHeight.value = "";// rests the input value 
     cylinderSurfaceAreaRadius.value = "";// rests the input value 
     cylinderSurfaceAreaResult.textContent = "";// restets the text contents 
@@ -1828,7 +1806,6 @@ cylinderSurfaceAreaBackButton.addEventListener("click", function(){// this is th
 cylinderPerimeterBackButton.addEventListener("click", function(){// back button on the culinder perimeter page 
     startPage.style.display = "flex";// shows this creen to everyone 
     cylinderPerimeterPage.style.display = "none";// hides this screen 
-
     cylinderPerimeterRadius.value = "";// rests the input value 
     cylinderPerimeterResult.textContent = "";// restets the text contents 
 })
@@ -1836,7 +1813,6 @@ cylinderPerimeterBackButton.addEventListener("click", function(){// back button 
 radiusBackButton.addEventListener("click", function(){// this is the back button on the radius calculator page 
     startPage.style.display = "flex";// shows this creen to everyone 
     radiusPage.style.display = "none";// hides this screen 
-
     radiusDiameter.value = "";// rests the input value 
     radiusResult.textContent = "";// restets the text contents 
 })
@@ -1844,7 +1820,6 @@ radiusBackButton.addEventListener("click", function(){// this is the back button
 diameterBackButton.addEventListener("click", function(){// this is the diameret page pack button 
     startPage.style.display = "flex";// shows this creen to everyone 
     diameterPage.style.display = "none";// hides this screen 
-
     diameterRadius.value = "";// rests the input value 
     diameterResult.textContent = "";// restets the text contents 
 })
@@ -1852,7 +1827,6 @@ diameterBackButton.addEventListener("click", function(){// this is the diameret 
 coneVolumeBackButton.addEventListener("click", function(){// this is the cone volume back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     coneVolumePage.style.display = "none";// hides this screen 
-
     coneVolumeRadius.value = "";// rests the input value 
     coneVolumeHeight.value = "";// rests the input value 
     coneVolumeResult.textContent = "";// restets the text contents 
@@ -1861,7 +1835,6 @@ coneVolumeBackButton.addEventListener("click", function(){// this is the cone vo
 conePerimeterBackButton.addEventListener("click", function(){// this is the cone perimeter back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     conePerimeterPage.style.display = "none";// hides this screen 
-
     conePerimeterRadius.value = "";// rests the input value 
     conePerimeterResult.textContent = "";// restets the text contents 
 })
@@ -1869,7 +1842,6 @@ conePerimeterBackButton.addEventListener("click", function(){// this is the cone
 coneSurfaceAreaBackButton.addEventListener("click", function(){// this is the cone surface are back button 
     startPage.style.display = "flex";// shows this creen to everyone 
     coneSurfaceAreaPage.style.display = "none";// hides this screen 
-
     coneSurfaceAreaLenght.value = "";// rests the input value 
     coneSurfaceAreaRadius.value = "";// rests the input value 
     coneSurfaceAreaResult.textContent = "";// restets the text contents 
@@ -1878,7 +1850,6 @@ coneSurfaceAreaBackButton.addEventListener("click", function(){// this is the co
 sphereVolumeBackButton.addEventListener("click", function(){// this is the sphere volume back button 
     startPage.style.display = "flex";// shows the start page agian
     sphereVolumePage.style.display = "none";// hides the sphere volume page 
-
     sphereVolumeRadius.value = "";// resets the input volaue 
     sphereVolumeResult.textContent = "";// resets the sphere volume result line again to show nothing 
 })
@@ -1886,7 +1857,6 @@ sphereVolumeBackButton.addEventListener("click", function(){// this is the spher
 sphereSurfaceAreaBackButton.addEventListener("click", function() {// this is the spere surface area back  button 
     startPage.style.display = "flex";// shows the start page agian
     sphereSurfaceAreaPage.style.display = "none";// hides the sphere volume page
-
     sphereSurfaceAreaRadius.value = "";// resets 
     sphereSurfaceAreaResult.textContent = "";// resets the sphere volume result line again to show nothing 
 })
@@ -1894,13 +1864,10 @@ sphereSurfaceAreaBackButton.addEventListener("click", function() {// this is the
 trianglePrismVolumeBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows the star pag again 
     trianglePrismVolumePage.style.display = "none";
-
     trianglePrismVolumeHeight.value = "";// resets 
     trianglePrismVolumeLength.value = "";// resets 
     trianglePrismVolumeBase.value = "";// resets 
-
     trianglePrismVolumeResult.textContent = "";// resets 
-
 })
 
 trianglePrismSurfaceAreaBackButton.addEventListener("click", function(){
@@ -1912,7 +1879,6 @@ trianglePrismSurfaceAreaBackButton.addEventListener("click", function(){
     trianglePrismSurfaceAreaHeight.value = "";// resets 
     trianglePrismSurfaceAreaLength.value = "";// resets 
     trianglePrismSurfaceAreaResult.textContent = "";// resets 
-
 })
 
 trianglePrismPerimeterBackButton.addEventListener("click", function(){
@@ -1923,7 +1889,6 @@ trianglePrismPerimeterBackButton.addEventListener("click", function(){
     trianglePrismPerimeterSideC.value = "";// resets 
     trianglePrismPerimeterLength.value = "";// resets 
     trianglePrismPerimeterResult.textContent = "";// resets 
-
 })
 
 
