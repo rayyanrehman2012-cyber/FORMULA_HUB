@@ -71,8 +71,8 @@
                     <button id = "allspeedButton" class="formulaButton">SPEED</button>
                     <button id = "allvelocityButton" class="formulaButton">VELOCITY</button>
                     <button id = "allavgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
+                    <button id = "allphysicsDistanceButton" class="formulaButton">DISTANCE</button>
                     <button class="formulaButton">ACCELERATION</button>
-                    <button class="formulaButton">DISTANCE</button>
                     <button class="formulaButton">TIME</button>
                     <button class="formulaButton">DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY</button>
@@ -135,8 +135,8 @@
                     <button id = "speedButton" class="formulaButton">SPEED</button>
                     <button id = "velocityButton" class="formulaButton">VELOCITY</button>
                     <button id = "avgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
+                    <button id = "physicsDistanceButton" class="formulaButton">DISTANCE</button>
                     <button class="formulaButton">ACCELERATION</button>
-                    <button class="formulaButton">DISTANCE</button>
                     <button class="formulaButton">TIME</button>
                     <button class="formulaButton">DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY</button>
@@ -806,6 +806,29 @@
                 <p id = "avgVelocityResult"></p>
             </div>
             <button id = "avgVelocityBackButton">BACK</button>
+        </main>
+
+        <main class = "physicsDistanceCalculatorPage">
+            <h1>DISTANCE CALCULATOR</h1>
+            <div class = "calculatorBox">
+                <p> ADD AS MANY VALUES AS YOU LIKE <br> NO NEED TO FILL EACH INTERVAL BOX</p>
+
+                <label for = "physicsDistance1">DISTANCE INTERVAL 1</label>   
+                <input id = "physicsDistance1" type = "number">
+
+                <label for = "physicsDistance3">DISTANCE INTERVAL 2</label>   
+                <input id = "physicsDistance2" type = "number">
+
+                <label for = "physicsDistance3">DISTANCE INTERVAL 3</label>   
+                <input id = "physicsDistance3" type = "number">
+
+                <label for = "physicsDistance4">DISTANCE INTERVAL 4</label>   
+                <input id = "physicsDistance4" type = "number">
+
+                <button id = "calculatePhysicsDistance">CALCULATE</button>
+                <p id = "physicsDistanceResult"></p>
+            </div>
+            <button id = "physicsDistanceBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
