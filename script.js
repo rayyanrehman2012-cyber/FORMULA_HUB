@@ -1166,15 +1166,23 @@ calculateCylinderVolume.addEventListener ("click", function(){ // calculate butt
         cylinderVolumeResult.textContent = "VOLUME = " + Volume.toFixed(3) + " UNITS CUBED";// displays this 
         cylinderVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 })
 
 calculateCylinderSurfaceArea.addEventListener ("click", function(){// calculate button on the cylinderSurface area
 
-    if(cylinderSurfaceAreaHeight.value === "0"||cylinderSurfaceAreaHeight.value === ""||cylinderSurfaceAreaRadius.value === "0"||cylinderSurfaceAreaRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
+    if(cylinderSurfaceAreaHeight.value === ""||cylinderSurfaceAreaRadius.value === ""){ // if no values were entered 
+        cylinderSurfaceAreaResult.textContent = "ERROR: ENTER 2 VALUES!"; //the error message
         cylinderSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(cylinderSurfaceAreaHeight.value === "0"||cylinderSurfaceAreaRadius.value === "0"){ // if 0
+        cylinderSurfaceAreaResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        cylinderSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(cylinderSurfaceAreaHeight.value <= -1||cylinderSurfaceAreaRadius.value <= -1){ // if negative  
+        cylinderSurfaceAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        cylinderSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
@@ -1185,15 +1193,23 @@ calculateCylinderSurfaceArea.addEventListener ("click", function(){// calculate 
         cylinderSurfaceAreaResult.textContent = "VOLUME = " + SurfaceArea.toFixed(3) + " UNITS SQUARED";// displays this 
         cylinderSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 })
 
 calculateCylinderPerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
-    if(cylinderPerimeterRadius.value === "0"||cylinderPerimeterRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderPerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+    if(cylinderPerimeterRadius.value === ""){ // if no values were entered 
+        cylinderPerimeterResult.textContent = "ERROR: ENTER A VALUE!"; //the error message
         cylinderPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(cylinderPerimeterRadius.value === "0"){ // if 0
+        cylinderPerimeterResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        cylinderPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(cylinderPerimeterRadius.value <= -1){ // if negative
+        cylinderPerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        cylinderPerimeterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
@@ -1203,7 +1219,6 @@ calculateCylinderPerimeter.addEventListener ("click", function(){// if the circu
         cylinderPerimeterResult.textContent = "VOLUME = " + Perimeter.toFixed(3) + " UNITS";// displays this 
         cylinderPerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 });
 
 calculateRadius.addEventListener ("click", function(){// if the circumference calculate button is used 
