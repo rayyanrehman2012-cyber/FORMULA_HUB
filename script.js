@@ -980,14 +980,24 @@ calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate 
 });
 
 calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
-    if(cubeSide.value ===""|| cubeSide.value ==="0"){// if the values are not value or dont exist then 
-        cubeVolumeResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"// error message 
+    
+    if(cubeSide.value ===""){// if the values are not there
+        cubeVolumeResult.textContent = "ERROR: ENTER A VALUE!"// error message 
+        cubeVolumeResult.style.color = "rgb(102,21,7)";// this changes the colour of the message to red 
+    }
+
+    else if(cubeSide.value ==="0"){// if the values are zero
+        cubeVolumeResult.textContent = "ERROR: 0 DETECTED!"// error message 
+        cubeVolumeResult.style.color = "rgb(102,21,7)";// this changes the colour of the message to red 
+    }
+
+    else if(cubeSide.value <= -1){// if the values are negative 
+        cubeVolumeResult.textContent = "ERROR: NO NEGATIVE VALUES!"// error message 
         cubeVolumeResult.style.color = "rgb(102,21,7)";// this changes the colour of the message to red 
     }
 
     else{// if the values are fined 
         const side = Number(cubeSide.value);// the variable stores the value of the cubes side 
-        
         const volume = side * side * side; // calculates the volume 
 
         cubeVolumeResult.textContent = "VOLUME = " + volume +" UNITS CUBED"// this is the display 
@@ -997,8 +1007,18 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
 
 calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate button is clicked 
 
-    if(cubePerimeterSide.value === "0"|| cubePerimeterSide.value === ""){//if the values are not valide
-        cubePerimeterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //shows this error message 
+    if(cubePerimeterSide.value === ""){//if the values are not there 
+        cubePerimeterResult.textContent = "ERROR: ENTER A VALUE!"; //shows this error message 
+        cubePerimeterResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else if(cubePerimeterSide.value === "0"){//if the values are 0rs 
+        cubePerimeterResult.textContent = "ERROR: 0 DETECTED!"; //shows this error message 
+        cubePerimeterResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else if(cubePerimeterSide.value <= -1){//if the values negative 
+        cubePerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //shows this error message 
         cubePerimeterResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
@@ -1013,8 +1033,18 @@ calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate
 
 calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calculate button is clicked 
 
-    if(cubeSurfaceAreaSide.value === "0"|| cubeSurfaceAreaSide.value === ""){//if the values are not valide
-        cubeSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //shows this error message 
+    if(cubeSurfaceAreaSide.value === ""){//if the values are not there
+        cubeSurfaceAreaResult.textContent = "ERROR: ENTER A VALUE!"; //shows this error message 
+        cubeSurfaceAreaResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else if(cubeSurfaceAreaSide.value === "0"){//if the values are zeros 
+        cubeSurfaceAreaResult.textContent = "ERROR: 0 DETECTED!"; //shows this error message 
+        cubeSurfaceAreaResult.style.color = "rgb(102,21,7)"// shows the text in red 
+    }
+
+    else if(cubeSurfaceAreaSide.value <= -1){//if the values negative 
+        cubeSurfaceAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //shows this error message 
         cubeSurfaceAreaResult.style.color = "rgb(102,21,7)"// shows the text in red 
     }
 
