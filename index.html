@@ -72,9 +72,9 @@
                     <button id = "allvelocityButton" class="formulaButton">VELOCITY</button>
                     <button id = "allavgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
                     <button id = "allphysicsDistanceButton" class="formulaButton">DISTANCE</button>
+                    <button id = "alldisplacementButton" class="formulaButton">DISPLACEMENT</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">TIME</button>
-                    <button class="formulaButton">DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY</button>
                     <button class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY SQUARED</button>
@@ -136,9 +136,9 @@
                     <button id = "velocityButton" class="formulaButton">VELOCITY</button>
                     <button id = "avgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
                     <button id = "physicsDistanceButton" class="formulaButton">DISTANCE</button>
+                    <button id = "displacementButton" class="formulaButton">DISPLACEMENT</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">TIME</button>
-                    <button class="formulaButton">DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY</button>
                     <button class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY SQUARED</button>
@@ -829,6 +829,74 @@
                 <p id = "physicsDistanceResult"></p>
             </div>
             <button id = "physicsDistanceBackButton">BACK</button>
+        </main>
+
+        <main class = "displacementCalculatorPage">
+            <h1>DISPLACEMENT CALCULATOR</h1>
+            <div class = "calculatorBox">
+
+                <p> ADD AS MANY VALUES AS YOU LIKE <br> NO NEED TO FILL EACH INTERVAL BOX</p>
+
+                <label for = "displacement1">DISTANCE INTERVAL 1</label>   
+                <input id = "displacement1" type = "number">
+
+                <label for = "displacementDirection1">DIRECTION 1</label>   
+                <select id = "displacementDirection1">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+                <label for = "displacement2">DISTANCE INTERVAL 2</label>   
+                <input id = "displacement2" type = "number">
+
+                <label for = "displacementDirection2">DIRECTION 2</label>   
+                <select id = "displacementDirection2">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+                <label for = "displacement3">DISTANCE INTERVAL 3</label>   
+                <input id = "displacement3" type = "number">
+
+                <label for = "displacementDirection3">DIRECTION 3</label>   
+                <select id = "displacementDirection3">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+                <label for = "displacement4">DISTANCE INTERVAL 4</label>   
+                <input id = "displacemen4" type = "number">
+
+                <label for = "displacementDirection4">DIRECTION 4</label>   
+                <select id = "displacementDirection4">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+                <button id = "calculateDisplacement">CALCULATE</button>
+                <p id = "avgVelocityResult"></p>
+            </div>
+            <button id = "displacementBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
