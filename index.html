@@ -872,11 +872,11 @@
             <h1> ACCELERATION CALCULATOR</h1>
             <div class = "calculatorBox">
                 
-                <label for = "displacement1">FINAL VELOCITY</label>   
-                <input id = "displacement1" type = "number">
+                <label for = "accelerationVelocity1">FINAL VELOCITY</label>   
+                <input id = "accelerationVelocity1" type = "number">
 
-                <label for = "displacementDirection1">FINAL VELOCITY DIRECTION</label>   
-                <select id = "displacementDirection1">
+                <label for = "accelerationDirection1">FINAL VELOCITY DIRECTION</label>   
+                <select id = "accelerationDirection1">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
                     <option value="SOUTH">SOUTH</option>
@@ -886,11 +886,11 @@
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-                <label for = "displacement2">INITIAL POSITION </label>   
-                <input id = "displacement2" type = "number">
+                <label for = "accelerationVelocity2">INITIAL VELOCITY </label>   
+                <input id = "accelerationVelocity2" type = "number">
 
-                <label for = "velocity"> INITIAL VELOCITY DIRECTION</label>   
-                <select id = "displacementDirection2">
+                <label for = "accelerationDirection2"> INITIAL VELOCITY DIRECTION</label>   
+                <select id = "accelerationDirection2">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
                     <option value="SOUTH">SOUTH</option>
@@ -900,12 +900,16 @@
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-                <button id = "calculateDisplacement">CALCULATE</button>
-                <p id = "displacementResult"></p>
+                <label for = "accelerationTime">TIME </label>   
+                <input id = "accelerationTime" type = "number">
+
+                <button id = "calculateAcceleration">CALCULATE</button>
+                <p id = "accelerationResult"></p>
             </div>
+        <button id = "accelerationBackButton">BACK</button>
         </main>
 
-        
+
         <script src="./script.js"></script>
     </body>
     </html>

@@ -56,7 +56,7 @@ const velocityBackButton = document.getElementById("velocityBackButton");// this
 const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");// this is the valocity page  back button 
 const physicsDistanceBackButton = document.getElementById("physicsDistanceBackButton");// this is the valocity page  back button 
 const displacementBackButton = document.getElementById("displacementBackButton");// this is the valocity page  back button 
-
+const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
 
 
 
@@ -113,7 +113,7 @@ const velocityCalculatorPage = document.querySelector(".velocityCalculatorPage")
 const avgVelocityCalculatorPage = document.querySelector(".avgVelocityCalculatorPage");// this is the valocity page 
 const physicsDistanceCalculatorPage = document.querySelector(".physicsDistanceCalculatorPage");// this is the valocity page 
 const displacementCalculatorPage = document.querySelector(".displacementCalculatorPage");// this is the valocity page 
-
+const accelerationPage = document.querySelector(".accelerationPage");// this is the acceleration calculator page 
 
 
 
@@ -168,6 +168,7 @@ const allvelocityButton = document.getElementById("allvelocityButton");// this i
 const allavgVelocityButton = document.getElementById("allavgVelocityButton");// this is the all formula page velocity calculator button
 const allphysicsDistanceButton = document.getElementById("allphysicsDistanceButton");// this is the all formula page distance  calculator button
 const alldisplacementButton = document.getElementById("alldisplacementButton");// this is the all formula page distance  calculator button
+const allaccelerationButton = document.getElementById("allaccelerationButton");// this is the acceleration page button on the all formula page 
 
 
 
@@ -184,7 +185,7 @@ const velocityButton = document.getElementById("velocityButton");// this is the 
 const avgVelocityButton = document.getElementById("avgVelocityButton");// this is the velocity button on the physics formula page 
 const physicsDistanceButton = document.getElementById("physicsDistanceButton");// this is the distance button on the physics formula page 
 const displacementButton = document.getElementById("displacementButton");// this is the distance button on the physics formula page 
-
+const accelerationButton = document.getElementById("accelerationButton");// this is the acceleration button o the physics only page 
 
 
 
@@ -545,6 +546,15 @@ const displacementDirection2 = document.getElementById("displacementDirection2")
 const calculateDisplacement = document.getElementById("calculateDisplacement");// this is the displacement value 
 const displacementResult = document.getElementById("displacementResult");// this is the displacement value 
 
+
+//THESE ARE FOR THE ACCELERATION CALCULATOR
+const accelerationVelocity1 = document.getElementById("accelerationVelocity1");// this is the displacement value 
+const accelerationDirection1 = document.getElementById("accelerationDirection1");// this is the displacement value 
+const accelerationVelocity2 = document.getElementById("accelerationVelocity2");// this is the displacement value 
+const accelerationDirection2 = document.getElementById("accelerationDirection2");// this is the displacement value 
+const accelerationTime = document.getElementById("accelerationTime");// this is the displacement value 
+const accelerationResult = document.getElementById("accelerationResult");// this is the displacement value 
+const calculateAcceleration = document.getElementById("calculateAcceleration");// this is the displacement value 
 
 
 
@@ -1783,6 +1793,27 @@ calculateDisplacement.addEventListener("click", function() {// if the calculate 
         }
     }   
 });
+
+
+
+calculateAcceleration.addEventListener("click", function() { 
+
+    let FinalVelocity =  Number(accelerationVelocity1.value);// hold the final velocity 
+    let InitialVelocity =  Number(accelerationVelocity2.value);// holds the intital velocity 
+    let FinalDirection =  Number(accelerationDirection1.value);// holds the final direction 
+    let InitialDirection =  Number(accelerationDirection2.value); // holds the initial direction 
+    let Time =  Number(accelerationTime.value);// this holds the time 
+    
+    if(accelerationVelocity1.value ===""|| accelerationVelocity2.value === ""|| accelerationTime.value === ""){// if the 2 values arent there 
+        displacementResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
+        displacementResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+})
+
+
+
+
 
 
 
