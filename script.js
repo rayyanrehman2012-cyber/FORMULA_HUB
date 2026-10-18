@@ -1510,19 +1510,19 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
 });
 
 calculateSpeed.addEventListener("click", function() {// if the calculate button is pressed then
-    if(speedTime.value ===""|| speedDistance.value === ""){// if the 4 values arent there 
-        trianglePrismPerimeterResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
-        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+    if(speedTime.value ===""|| speedDistance.value === ""){// if the 2 values arent there 
+        speedResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
+        speedResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
     else if(speedTime.value ==="0"|| speedDistance.value === "0"){// if the 2 values are zeros
-        trianglePrismPerimeterResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
-        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+        speedResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
+        speedResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
     else if(speedTime.value <=""|| speedDistance.value <= ""){// if the 2 values are negatives 
-        trianglePrismPerimeterResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
-        trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
+        speedResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        speedResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
     else {// if the values are fine 
