@@ -1509,7 +1509,7 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
     };
 });
 
-calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the calculate button is pressed then
+calculateSpeed.addEventListener("click", function() {// if the calculate button is pressed then
     if(speedTime.value ===""|| speedDistance.value === ""){// if the 4 values arent there 
         trianglePrismPerimeterResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
         trianglePrismPerimeterResult.style.color = "rgb(102,21,7)";// changes the color to red
@@ -1532,7 +1532,7 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
         const Speed = Distance/Time;
 
         speedResult.textContent = "Speed = " + Speed.toFixed(3) + " METERS/SECOND";// this is the result 
-         speedResult.style.color = "rgb(11,61,46)";// changes the color to red 
+        speedResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
 });
 
@@ -1944,14 +1944,12 @@ trianglePrismPerimeterBackButton.addEventListener("click", function(){
 })
 
 
-trianglePrismPerimeterBackButton.addEventListener("click", function(){
+speedBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows the star pag again 
-    trianglePrismPerimeterPage.style.display = "none";// hides this page 
-    trianglePrismPerimeterSideA.value = "";// resets 
-    trianglePrismPerimeterSideB.value = "";// resets 
-    trianglePrismPerimeterSideC.value = "";// resets 
-    trianglePrismPerimeterLength.value = "";// resets 
-    trianglePrismPerimeterResult.textContent = "";// resets 
+    speedCalculatorPage.style.display = "none";// hides this page 
+    speedTime.value = "";// resets 
+    speedDistance.value = "";// resets 
+    speedResult.textContent = "";// resets 
 })
 
 
@@ -2634,7 +2632,28 @@ alltrianglePrismPerimeterButton.addEventListener("click", function(){// if the c
     trianglePrismPerimeterPage.style.display = "flex"// shows this page
 })
 
-
+allspeedButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    speedCalculatorPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -3338,3 +3357,27 @@ trianglePrismPerimeterButton.addEventListener("click", function(){// if the cube
 })
 
 
+//THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
+
+speedButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    speedCalculatorPage.style.display = "flex"// shows this page
+})

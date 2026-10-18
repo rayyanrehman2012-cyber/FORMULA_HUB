@@ -32,7 +32,8 @@
 .sphereVolumePage,
 .sphereSurfaceAreaPage,
 .trianglePrismVolumePage,
-.trianglePrismSurfaceArea{
+.trianglePrismSurfaceArea,
+.speedCalculatorPage{
     display: none;
 }
 
