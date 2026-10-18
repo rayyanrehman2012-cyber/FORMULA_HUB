@@ -1223,10 +1223,19 @@ calculateCylinderPerimeter.addEventListener ("click", function(){// if the circu
 
 calculateRadius.addEventListener ("click", function(){// if the circumference calculate button is used 
      
-    if(radiusDiameter.value === "0"||radiusDiameter.value === ""){ // if no values were entered or they are invalid 
-        radiusResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+    if(radiusDiameter.value === ""){ // if no values were entered
+        radiusResult.textContent = "ERROR: ENTER A VALUE!"; //the error message
         radiusResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(radiusDiameter.value === "0"){ // if 0
+        radiusResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        radiusResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(radiusDiameter.value <= -1){ // if negatives
+        radiusResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        radiusResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
@@ -1241,10 +1250,19 @@ calculateRadius.addEventListener ("click", function(){// if the circumference ca
 
 calculateDiameter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
-    if(diameterRadius.value === "0"||diameterRadius.value === ""){ // if no values were entered or they are invalid 
-        diameterResult.textContent = "ERROR: PLEASE ENTER A VALID VALUE"; //the error message
+    if(diameterRadius.value === ""){ // if no values were entered 
+        diameterResult.textContent = "ERROR: ENTER A VALUE!"; //the error message
         diameterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if (diameterRadius.value === "0"){ // if 0
+        diameterResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        diameterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(diameterRadius.value <= -1){ // if negitve 
+        diameterResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        diameterResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
@@ -1254,27 +1272,33 @@ calculateDiameter.addEventListener ("click", function(){// if the circumference 
         diameterResult.textContent = "DIAMETER = " + Diameter.toFixed(3) + " UNITS";// displays this 
         diameterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 });
 
 calculateConeVolume.addEventListener ("click", function(){// if the circumference calculate button is used 
      
-    if(coneVolumeHeight.value === "0"||coneVolumeHeight.value === ""||coneVolumeRadius.value === "0"||coneVolumeRadius.value === ""){ // if no values were entered or they are invalid 
-        coneVolumeResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
+    if(coneVolumeHeight.value === ""||coneVolumeRadius.value === ""){ // if no values were entered 
+        coneVolumeResult.textContent = "ERROR: ENTER 2 VALUES!"; //the error message
         coneVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(coneVolumeHeight.value === "0"||coneVolumeRadius.value === "0"){ // if 0
+        coneVolumeResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        coneVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(coneVolumeHeight.value <= -1||coneVolumeRadius.value <= -1){ // if negative 
+        coneVolumeResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        coneVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if the valuse are fine then 
         const Radius = Number(coneVolumeRadius.value);//the cariable stores the vale
         const Height = Number(coneVolumeHeight.value);//the cariable stores the value 
-
         const Volume = (pi * Radius * Radius * Height)/3 ; //this is the formula
 
         coneVolumeResult.textContent = "DIAMETER = " + Volume.toFixed(3) + " UNITS CUBED";// displays this 
         coneVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 });
 
 calculateConePerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
