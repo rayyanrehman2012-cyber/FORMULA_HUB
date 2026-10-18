@@ -1601,7 +1601,7 @@ calculateAvgVelocity.addEventListener("click", function() {// if the calculate b
     let FinalDirection = avgFinalDirection.value; // final velocity direction  
 
     if(avgFinalVelocity.value ===""|| avgInitialVelocity.value === ""){// if the 2 values arent there 
-        avgVelocityResult.textContent = "ERROR: ENTER 34 VALUES!"// shows this error message 
+        avgVelocityResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
@@ -1616,12 +1616,35 @@ calculateAvgVelocity.addEventListener("click", function() {// if the calculate b
         avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-    else if (FinalDirection !== InitialDirection){
-        FinalVelocity = FinalVelocity * -1
-    }
-
     
-       
+
+    else {
+
+        if (FinalDirection !== InitialDirection){
+            FinalVelocity = FinalVelocity * -1
+        }
+
+        let AverageVelocity = (InitialVelocity + FinalVelocity)/2
+        
+        if (AverageVelocity ===  0){
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND";//
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+
+        }
+        else if (AverageVelocity <= -1){
+            AverageVelocity = AverageVelocity * -1
+        
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + FinalDirection + "]" // shows this error message 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+        }
+
+        
+        else {
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + InitialDirection + "]" // shows this error message 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
+
+        }
+    }   
 });
 
 
@@ -2047,6 +2070,16 @@ velocityBackButton.addEventListener("click", function(){
     velocityDisplacement.value = "";// resets 
     velocityTime.value = "";// resets 
     velocityResult.textContent = "";// resets 
+})
+
+avgVelocityBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows the star pag again 
+    avgVelocityCalculatorPage.style.display = "none";// hides this page 
+    avginitialDirection.value = "";// resets 
+    avgFinalDirection.value = "";// resets 
+    avgFinalVelocity.value = "";// resets 
+    avgInitialVelocity.value = "";// resets 
+    avgVelocityResult.textContent = "";// resets 
 })
 
 
@@ -2787,7 +2820,28 @@ allvelocityButton.addEventListener("click", function(){// if the cube perimeter 
     velocityCalculatorPage.style.display = "flex"// shows this page
 })
 
-
+allavgVelocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    avgVelocityCalculatorPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -3550,4 +3604,27 @@ velocityButton.addEventListener("click", function(){// if the cube perimeter is 
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     velocityCalculatorPage.style.display = "flex"// shows this page
+})
+
+avgVelocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    avgVelocityCalculatorPage.style.display = "flex"// shows this page
 })
