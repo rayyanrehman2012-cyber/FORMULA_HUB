@@ -70,7 +70,7 @@
                 <div class="formulaContainer">
                     <button id = "allspeedButton" class="formulaButton">SPEED</button>
                     <button id = "allvelocityButton" class="formulaButton">VELOCITY</button>
-                    <button class="formulaButton">AVERAGE VELOCITY</button>
+                    <button id = "allavgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">DISTANCE</button>
                     <button class="formulaButton">TIME</button>
@@ -134,7 +134,7 @@
             <div class="formulaContainer">
                     <button id = "speedButton" class="formulaButton">SPEED</button>
                     <button id = "velocityButton" class="formulaButton">VELOCITY</button>
-                    <button class="formulaButton">AVERAGE VELOCITY</button>
+                    <button id = "avgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">DISTANCE</button>
                     <button class="formulaButton">TIME</button>
@@ -746,8 +746,6 @@
             <h1>VELOCITY CALCULATOR</h1>
             <div class = "calculatorBox">
 
-                
-
                 <label for = "velocityDisplacement">DISPLACEMENT (METERS)</label>   
                 <input id = "velocityDisplacement" type = "number">
 
@@ -761,7 +759,7 @@
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARDS</option>
                 </select>
-                
+
                 <label for = "velocityTime">TIME (SECONDS)</label>   
                 <input id = "velocityTime" type = "number">
 
@@ -769,6 +767,45 @@
                 <p id = "velocityResult"></p>
             </div>
             <button id = "velocityBackButton">BACK</button>
+        </main>
+
+        <main class = "avgVelocityCalculatorPage">
+            <h1>AVERAGE VELOCITY CALCULATOR</h1>
+            <div class = "calculatorBox">
+
+                <label for = "avgInitialVelocity">INITIAL VELOCITY</label>   
+                <input id = "avgInitialVelocity" type = "number">
+
+                <label for = "avginitialDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "avginitialDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARDS</option>
+                </select>
+
+                <label for = "avgFinalVelocity">FINAL VELOCITY</label>   
+                <input id = "avgFinalVelocity" type = "number">
+
+                <label for = "avgFinalDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "avgFinalDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARDS</option>
+                </select>
+
+
+                <button id = "calculateAvgVelocity">CALCULATE</button>
+                <p id = "avgVelocityResult"></p>
+            </div>
+            <button id = "avgVelocityBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
