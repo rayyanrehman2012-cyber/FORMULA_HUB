@@ -536,6 +536,10 @@ const physicsDistanceResult = document.getElementById("physicsDistanceResult");/
 
 
 
+
+
+
+
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
 
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
@@ -1578,11 +1582,15 @@ calculateSpeed.addEventListener("click", function() {// if the calculate button 
 });
 
 calculateVelocity.addEventListener("click", function() {// if the calculate button is pressed then
-    if(velocityDisplacement.value ===""|| velocityDirection.value === ""|| velocityTime.value === ""){// if the 2 values arent there 
-        velocityResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
+    if(velocityDisplacement.value ===""|| velocityTime.value === ""){// if the 2 values arent there 
+        velocityResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
         velocityResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
+    else if(velocityDirection.value === ""){// if the 2 values arent there 
+        velocityResult.textContent = "ERROR: SELECT A DIRECTION"// shows this error message 
+        velocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
 
     else if(velocityDisplacement.value ==="0"|| velocityTime.value === "0"){// if the 2 values are zeros
         velocityResult.textContent = "ERROR: 0 DETECTED!"// shows this error message 
