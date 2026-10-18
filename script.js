@@ -55,6 +55,10 @@ const speedBackButton = document.getElementById("speedBackButton");// this is th
 const velocityBackButton = document.getElementById("velocityBackButton");// this is the valocity page  back button 
 const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");// this is the valocity page  back button 
 const physicsDistanceBackButton = document.getElementById("physicsDistanceBackButton");// this is the valocity page  back button 
+const displacementBackButton = document.getElementById("displacementBackButton");// this is the valocity page  back button 
+
+
+
 
 
 
@@ -108,6 +112,7 @@ const speedCalculatorPage = document.querySelector(".speedCalculatorPage");// th
 const velocityCalculatorPage = document.querySelector(".velocityCalculatorPage");// this is the valocity page 
 const avgVelocityCalculatorPage = document.querySelector(".avgVelocityCalculatorPage");// this is the valocity page 
 const physicsDistanceCalculatorPage = document.querySelector(".physicsDistanceCalculatorPage");// this is the valocity page 
+const displacementCalculatorPage = document.querySelector(".displacementCalculatorPage");// this is the valocity page 
 
 
 
@@ -162,6 +167,7 @@ const allspeedButton = document.getElementById("allspeedButton");// this is the 
 const allvelocityButton = document.getElementById("allvelocityButton");// this is the all formula page velocity calculator button
 const allavgVelocityButton = document.getElementById("allavgVelocityButton");// this is the all formula page velocity calculator button
 const allphysicsDistanceButton = document.getElementById("allphysicsDistanceButton");// this is the all formula page distance  calculator button
+const alldisplacementButton = document.getElementById("alldisplacementButton");// this is the all formula page distance  calculator button
 
 
 
@@ -177,6 +183,7 @@ const speedButton = document.getElementById("speedButton");// this is the speed 
 const velocityButton = document.getElementById("velocityButton");// this is the velocity button on the physics formula page 
 const avgVelocityButton = document.getElementById("avgVelocityButton");// this is the velocity button on the physics formula page 
 const physicsDistanceButton = document.getElementById("physicsDistanceButton");// this is the distance button on the physics formula page 
+const displacementButton = document.getElementById("displacementButton");// this is the distance button on the physics formula page 
 
 
 
@@ -530,6 +537,13 @@ const calculatePhysicsDistance = document.getElementById("calculatePhysicsDistan
 const physicsDistanceResult = document.getElementById("physicsDistanceResult");// this is the displacement value 
 
 
+//THESE ARE FOR THE DISTANCE CALCULATOR
+const displacement1 = document.getElementById("displacement1");// this is the displacement value 
+const displacement2 = document.getElementById("displacement2");// this is the displacement value 
+const displacementDirection1 = document.getElementById("displacementDirection1");// this is the displacement value 
+const displacementDirection2 = document.getElementById("displacementDirection2");// this is the displacement value 
+const calculateDisplacement = document.getElementById("calculateDisplacement");// this is the displacement value 
+const displacementResult = document.getElementById("displacementResult");// this is the displacement value 
 
 
 
@@ -1695,7 +1709,54 @@ calculatePhysicsDistance.addEventListener("click", function() {// if the calcula
     };
 });
 
+calculateAvgVelocity.addEventListener("click", function() {// if the calculate button is pressed then
+    
+    let FinalPosition = Number(displacement1.value);// initeal velocity 
+    let InitialPosition = Number(displacement2.value);// final velocity 
+    let FinalDirection  = displacementDirection1.value; // initeal velocity direction 
+    let InitialDirection  = displacementDirection2.value; // final velocity direction  
+    
+    if(displacement1.value ===""|| displacement2.value === ""){// if the 2 values arent there 
+        avgVelocityResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
 
+    else if(displacementDirection1.value === ""|| displacementDirection2.value === ""){// if the firections arnt selected 
+        avgVelocityResult.textContent = "ERROR: SELECT A DIRECTION"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if((InitialDirection === "NORTH" && FinalDirection !== "NORTH" && FinalDirection !== "SOUTH") || (InitialDirection === "SOUTH" && FinalDirection !== "SOUTH" && FinalDirection !== "NORTH") || (InitialDirection === "EAST" && FinalDirection !== "EAST" && FinalDirection !== "WEST") || (InitialDirection === "WEST" && FinalDirection !== "WEST" && FinalDirection !== "EAST") || (InitialDirection === "FORWARD" && FinalDirection !== "FORWARD" && FinalDirection !== "BACKWARD") || (InitialDirection === "BACKWARD" && FinalDirection !== "BACKWARD" && FinalDirection !== "FORWARD")){// if the directions arne on the same axis 
+        avgVelocityResult.textContent = "ERROR: DIRECTION MUST BE THE SAME OR OPPOSITE ON THE SAME AXIS"// shows this error message 
+        avgVelocityResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else {// if the values and directions are fine 
+
+        if (FinalDirection !== InitialDirection){// check if the directions are opposite 
+            FinalVelocity = FinalVelocity * -1 //if there are then turn on of the values into a negative number 
+        }
+
+        let AverageVelocity = (InitialVelocity + FinalVelocity)/2// the formula 
+        
+        if (AverageVelocity ===  0){ // if the velocity is 0 
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND";// show this message 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to green  
+        }
+
+        else if (AverageVelocity <= -1){ // if the average velocity is in the negatives 
+            AverageVelocity = AverageVelocity * -1 // make it positive 
+        
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + FinalDirection + "]" // shows this error message with the fliped direction 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to green 
+        }
+
+        else {// everyting els 
+            avgVelocityResult.textContent = "AVERAGE VELOCITY = " + AverageVelocity.toFixed(3) + " METER/SECOND [" + InitialDirection + "]" // shows this error message with the first directions 
+            avgVelocityResult.style.color = "rgb(11,61,46)";// changes the color to green 
+        }
+    }   
+});
 
 
 
