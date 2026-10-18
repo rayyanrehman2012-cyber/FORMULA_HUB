@@ -1501,6 +1501,8 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
 
 
 
+
+
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 

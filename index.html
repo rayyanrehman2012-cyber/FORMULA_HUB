@@ -68,7 +68,7 @@
             <section class="physicsSection">
                 <h2>PHYSICS</h2>
                 <div class="formulaContainer">
-                    <button class="formulaButton">SPEED</button>
+                    <button id = "allspeedButton" class="formulaButton">SPEED</button>
                     <button class="formulaButton">AVERAGE VELOCITY</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">DISTANCE</button>
@@ -131,7 +131,7 @@
         <main class = "physicsFormulaPage">
             <h1>PHYSICS FORMULAS</h1>
             <div class="formulaContainer">
-                    <button class="formulaButton">SPEED</button>
+                    <button id = "speedButton" class="formulaButton">SPEED</button>
                     <button class="formulaButton">AVERAGE VELOCITY</button>
                     <button class="formulaButton">ACCELERATION</button>
                     <button class="formulaButton">DISTANCE</button>
@@ -714,7 +714,6 @@
                 <label for = "trianglePrismPerimeterSideC">TRIANGLE FACE SIDE C</label>   
                 <input id = "trianglePrismPerimeterSideC" type = "number">
 
-
                 <label for = "trianglePrismPerimeterLength">LENGHT</label>   
                 <input id = "trianglePrismPerimeterLength" type = "number">
 
@@ -722,7 +721,23 @@
                 <p id = "trianglePrismPerimeterResult"></p>
             </div>
             <button id = "trianglePrismPerimeterBackButton">BACK</button>
+        </main>
 
+        <main class = "speedCalculatorPage">
+            <h1>SPEED CALCULATOR</h1>
+            <div class = "calculatorBox">
+
+                <label for = "speedDistance">DISTANCE (METERS)</label>   
+                <input id = "speedDistance" type = "number">
+
+                <label for = "speedTime">TIME (SECONDS)</label>   
+                <input id = "speedTime" type = "number">
+
+                <button id = "calculateSpeed">CALCULATE</button>
+                <p id = "speedResult"></p>
+
+            </div>
+            <button id = speedBackButton">BACK</button>
         </main>
 
         <script src="./script.js"></script>
