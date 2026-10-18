@@ -1078,7 +1078,6 @@ calculateRectanglePrismVolume.addEventListener ("click", function(){// if the ca
         const Length = Number(rectanglePrismVolumeLength.value);//the cariable stores the calue of the rectangle  lenght
         const Width = Number(rectanglePrismVolumeWidth.value);//the cariable stores the calue of the rectangles  width 
         const Height = Number(rectanglePrismVolumeHeight.value);//the cariable stores the calue of the rectangle base
-
         const Volume = Length * Width * Height;// this is the formula 
 
         rectanglePrismVolumeResult.textContent = "VOLUME = " + Volume + " UNITS CUBED";// displays this 
@@ -1107,47 +1106,63 @@ calculateRectanglePrismPerimeter.addEventListener ("click", function(){//  if th
         const Length = Number(rectanglePrismPerimeterLength.value);//the cariable stores the calue of the rectangle  lenght
         const Width = Number(rectanglePrismPerimeterWidth.value);//the cariable stores the calue of the rectangles  width 
         const Height = Number(rectanglePrismPerimeterHeight.value);//the cariable stores the calue of the rectangle base
-
         const Perimeter = (4*Height) + (4*Width) + (4*Length); //this is the formula 
+
         rectanglePrismPerimeterResult.textContent = "PERIMETER = " + Perimeter + " UNITS";// displays this 
         rectanglePrismPerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 })  
 
 calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){// this is the calculate button on the rectangular prism surface are pages 
 
-    if(rectanglePrismSurfaceAreaHeight.value === "0"||rectanglePrismSurfaceAreaHeight.value === ""||rectanglePrismSurfaceAreaWidth.value === "0"||rectanglePrismSurfaceAreaWidth.value === ""||rectanglePrismSurfaceAreaLength.value === "0"||rectanglePrismSurfaceAreaLength.value === ""){ // if no values were entered or they are invalid 
-        rectanglePrismSurfaceAreaResult.textContent = "ERROR: PLEASE ENTER 3 VALID VALUES"; //the error message
+    if(rectanglePrismSurfaceAreaHeight.value === ""||rectanglePrismSurfaceAreaWidth.value === ""||rectanglePrismSurfaceAreaLength.value === ""){ // if no values were entered 
+        rectanglePrismSurfaceAreaResult.textContent = "ERROR: ENTER 3 VALUES!"; //the error message
         rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(rectanglePrismSurfaceAreaHeight.value === "0"||rectanglePrismSurfaceAreaWidth.value === "0"||rectanglePrismSurfaceAreaLength.value === "0"){ // if  they are 0 
+        rectanglePrismSurfaceAreaResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(rectanglePrismSurfaceAreaHeight.value <= -1 ||rectanglePrismSurfaceAreaWidth.value <= -1||rectanglePrismSurfaceAreaLength.value <= -1){ // if they are negative
+        rectanglePrismSurfaceAreaResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        rectanglePrismSurfaceAreaResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
         const Length = Number(rectanglePrismSurfaceAreaLength.value);//the cariable stores the calue of the rectangle  lenght
         const Width = Number(rectanglePrismSurfaceAreaWidth.value);//the cariable stores the calue of the rectangles  width 
         const Height = Number(rectanglePrismSurfaceAreaHeight.value);//the cariable stores the calue of the rectangle base
-
         const SurfaceArea = (2*(Length*Height)) + (2*(Length*Width)) + (2*(Height*Width)); //this is the formula 
+
         rectanglePrismSurfaceAreaResult.textContent = "SURFACE AREA = " + SurfaceArea + " UNITS SQUARED";// displays this 
         rectanglePrismSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
-
 })
 
 calculateCylinderVolume.addEventListener ("click", function(){ // calculate button on the cylindr volume screent 
 
-    if(cylinderVolumeHeight.value === "0"||cylinderVolumeHeight.value === ""||cylinderVolumeRadius.value === "0"||cylinderVolumeRadius.value === ""){ // if no values were entered or they are invalid 
-        cylinderVolumeResult.textContent = "ERROR: PLEASE ENTER 2 VALID VALUES"; //the error message
+    if(cylinderVolumeHeight.value === ""||cylinderVolumeRadius.value === ""){ // if no values were entered 
+        cylinderVolumeResult.textContent = "ERROR: ENTER 2 VALUES!"; //the error message
         cylinderVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
-    
+    }
+
+    else if(cylinderVolumeHeight.value === "0"||cylinderVolumeRadius.value === "0"){ // if  values were zero
+        cylinderVolumeResult.textContent = "ERROR: 0 DETECTED!"; //the error message
+        cylinderVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
+    }
+
+    else if(cylinderVolumeHeight.value <= -1||cylinderVolumeRadius.value <= -1){ // if negative number was added
+        cylinderVolumeResult.textContent = "ERROR: NO NEGATIVE VALUES!"; //the error message
+        cylinderVolumeResult.style.color = "rgb(102,21,7)" ; //changes the colr to red    
     }
 
     else {//if everything is fine 
         const Radius = Number(cylinderVolumeRadius.value);//the cariable stores the calue of the rectangle  lenght
         const Height = Number(cylinderVolumeHeight.value);//the cariable stores the calue of the rectangle base
-
         const Volume = pi * Radius * Radius * Height ; //this is the formula 
+
         cylinderVolumeResult.textContent = "VOLUME = " + Volume.toFixed(3) + " UNITS CUBED";// displays this 
         cylinderVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
