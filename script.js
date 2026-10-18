@@ -54,7 +54,7 @@ const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismP
 const speedBackButton = document.getElementById("speedBackButton");// this is the speed page back button 
 const velocityBackButton = document.getElementById("velocityBackButton");// this is the valocity page  back button 
 const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");// this is the valocity page  back button 
-
+const physicsDistanceBackButton = document.getElementById("physicsDistanceBackButton");// this is the valocity page  back button 
 
 
 
@@ -107,6 +107,7 @@ const trianglePrismPerimeterPage = document.querySelector(".trianglePrismPerimet
 const speedCalculatorPage = document.querySelector(".speedCalculatorPage");// this is the speed calculator page 
 const velocityCalculatorPage = document.querySelector(".velocityCalculatorPage");// this is the valocity page 
 const avgVelocityCalculatorPage = document.querySelector(".avgVelocityCalculatorPage");// this is the valocity page 
+const physicsDistanceCalculatorPage = document.querySelector(".physicsDistanceCalculatorPage");// this is the valocity page 
 
 
 
@@ -160,6 +161,7 @@ const alltrianglePrismPerimeterButton = document.getElementById("alltrianglePris
 const allspeedButton = document.getElementById("allspeedButton");// this is the speed calculator button on the all formula page 
 const allvelocityButton = document.getElementById("allvelocityButton");// this is the all formula page velocity calculator button
 const allavgVelocityButton = document.getElementById("allavgVelocityButton");// this is the all formula page velocity calculator button
+const allphysicsDistanceButton = document.getElementById("allphysicsDistanceButton");// this is the all formula page distance  calculator button
 
 
 
@@ -174,6 +176,7 @@ const allavgVelocityButton = document.getElementById("allavgVelocityButton");// 
 const speedButton = document.getElementById("speedButton");// this is the speed calculator button on the all formula page 
 const velocityButton = document.getElementById("velocityButton");// this is the velocity button on the physics formula page 
 const avgVelocityButton = document.getElementById("avgVelocityButton");// this is the velocity button on the physics formula page 
+const physicsDistanceButton = document.getElementById("physicsDistanceButton");// this is the distance button on the physics formula page 
 
 
 
@@ -500,12 +503,14 @@ const speedTime = document.getElementById("speedTime");// this is the  distance 
 const calculateSpeed = document.getElementById("calculateSpeed");// this is the  distance values 
 const speedResult = document.getElementById("speedResult");// this is the  distance values 
 
+
 //THESE ARE FOR THE VELOCITY CALCULATOR
 const velocityDisplacement = document.getElementById("velocityDisplacement");// this is the displacement value 
 const velocityDirection = document.getElementById("velocityDirection");// this is the displacement value 
 const velocityTime = document.getElementById("velocityTime");// this is the displacement value 
 const calculateVelocity = document.getElementById("calculateVelocity");// this is the displacement value 
 const velocityResult = document.getElementById("velocityResult");// this is the displacement value 
+
 
 //THESE ARE FOR THE AVERAGE VELOCITY CALCULATOR
 const avgInitialVelocity = document.getElementById("avgInitialVelocity");// this is the displacement value 
@@ -516,6 +521,13 @@ const calculateAvgVelocity = document.getElementById("calculateAvgVelocity");// 
 const avgVelocityResult = document.getElementById("avgVelocityResult");// this is the displacement value 
 
 
+//THESE ARE FOR THE PHYSICS DISTANCE CALCULATOR
+const physicsDistance1 = document.getElementById("physicsDistance1");// this is the displacement value 
+const physicsDistance2 = document.getElementById("physicsDistance2");// this is the displacement value 
+const physicsDistance3 = document.getElementById("physicsDistance3");// this is the displacement value 
+const physicsDistance4 = document.getElementById("physicsDistance4");// this is the displacement value 
+const calculatePhysicsDistance = document.getElementById("calculatePhysicsDistance");// this is the displacement value 
+const physicsDistanceResult = document.getElementById("physicsDistanceResult");// this is the displacement value 
 
 
 
@@ -1647,7 +1659,33 @@ calculateAvgVelocity.addEventListener("click", function() {// if the calculate b
     }   
 });
 
+calculatePhysicsDistance.addEventListener("click", function() {// if the calculate button is pressed then
+    if(physicsDistance1.value ===""|| physicsDistance2.value === ""){// if there arnt 2 values arent there 
+        physicsDistanceResult.textContent = "ERROR: ENTER ATLEAST 2 VALUES!"// shows this error message 
+        physicsDistanceResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
 
+    else if(physicsDistance1.value ==="0"|| physicsDistance2.value === "0"){// if the first 2 values are zer
+        physicsDistanceResult.textContent = "ERROR: THE FIRST 2 VALUES CAN'T BE 0!"// shows this error message 
+        physicsDistanceResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(physicsDistance1.value <=-1|| physicsDistance2.value <= -1 || physicsDistance3.value <=-1|| physicsDistance4.value <= -1){// if the any values are negative  values are negatives 
+        physicsDistanceResult.textContent = "ERROR: NO NEGATIVE VALUES!"// shows this error message 
+        physicsDistanceResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else {// if the values are fine 
+        const Interval1 = Number(physicsDistance1.value);// holds the 1  value 
+        const Interval2 = Number(physicsDistance2.value);// holds the 2  value 
+        const Interval3 = Number(physicsDistance3.value);// holds the 3  value
+        const Interval4 = Number(physicsDistance4.value);// holds the 4  value
+        const Distance = Interval1 + Interval2 + Interval3 + Interval4 ; // this is the formula 
+
+        physicsDistanceResult.textContent = "DISTANCE = " + Distance.toFixed(3) + " UNITS " 
+        physicsDistanceResult.style.color = "rgb(11,61,46)";// changes the color to red 
+    };
+});
 
 
 
@@ -2054,7 +2092,6 @@ trianglePrismPerimeterBackButton.addEventListener("click", function(){
     trianglePrismPerimeterResult.textContent = "";// resets 
 })
 
-
 speedBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows the star pag again 
     speedCalculatorPage.style.display = "none";// hides this page 
@@ -2082,7 +2119,15 @@ avgVelocityBackButton.addEventListener("click", function(){
     avgVelocityResult.textContent = "";// resets 
 })
 
-
+physicsDistanceBackButton.addEventListener("click", function(){
+    startPage.style.display = "flex";// shows the star pag again 
+    physicsDistanceCalculatorPage.style.display = "none";// hides this page 
+    physicsDistance1.value = "";// resets 
+    physicsDistance2.value = "";// resets 
+    physicsDistance3.value = "";// resets 
+    physicsDistance4.value = "";// resets 
+    physicsDistanceResult.textContent = "";// resets 
+})
 
 
 
@@ -2843,6 +2888,28 @@ allavgVelocityButton.addEventListener("click", function(){// if the cube perimet
     avgVelocityCalculatorPage.style.display = "flex"// shows this page
 })
 
+allphysicsDistanceButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    physicsDistanceCalculatorPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -3627,4 +3694,27 @@ avgVelocityButton.addEventListener("click", function(){// if the cube perimeter 
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     avgVelocityCalculatorPage.style.display = "flex"// shows this page
+})
+
+physicsDistanceButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    physicsDistanceCalculatorPage.style.display = "flex"// shows this page
 })
