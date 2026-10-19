@@ -54,7 +54,7 @@ const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");/
 const physicsDistanceBackButton = document.getElementById("physicsDistanceBackButton");// this is the valocity page  back button 
 const displacementBackButton = document.getElementById("displacementBackButton");// this is the valocity page  back button 
 const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
-
+const timeBackButton = document.getElementById("timeBackButton");// this is the time page back button 
 
 
 
@@ -107,7 +107,7 @@ const avgVelocityCalculatorPage = document.querySelector(".avgVelocityCalculator
 const physicsDistanceCalculatorPage = document.querySelector(".physicsDistanceCalculatorPage");// this is the valocity page 
 const displacementCalculatorPage = document.querySelector(".displacementCalculatorPage");// this is the valocity page 
 const accelerationPage = document.querySelector(".accelerationPage");// this is the acceleration calculator page 
-
+const timePage = document.querySelector(".timePage");// this is the time calculator page 
 
 
 
@@ -156,7 +156,7 @@ const allavgVelocityButton = document.getElementById("allavgVelocityButton");// 
 const allphysicsDistanceButton = document.getElementById("allphysicsDistanceButton");// this is the all formula page distance  calculator button
 const alldisplacementButton = document.getElementById("alldisplacementButton");// this is the all formula page distance  calculator button
 const allaccelerationButton = document.getElementById("allaccelerationButton");// this is the acceleration page button on the all formula page 
-
+const alltimeButton = document.getElementById("alltimeButton");// this tl the tim page button on the all formulla page 
 
 
 
@@ -169,7 +169,7 @@ const avgVelocityButton = document.getElementById("avgVelocityButton");// this i
 const physicsDistanceButton = document.getElementById("physicsDistanceButton");// this is the distance button on the physics formula page 
 const displacementButton = document.getElementById("displacementButton");// this is the distance button on the physics formula page 
 const accelerationButton = document.getElementById("accelerationButton");// this is the acceleration button o the physics only page 
-
+const timeButton = document.getElementById("timeButtn");// this is the time button on the physics formula pages 
 
 
 
@@ -534,44 +534,50 @@ const velocityResult = document.getElementById("velocityResult");// this is the 
 
 
 //THESE ARE FOR THE AVERAGE VELOCITY CALCULATOR
-const avgInitialVelocity = document.getElementById("avgInitialVelocity");// this is the displacement value 
-const avginitialDirection = document.getElementById("avginitialDirection");// this is the displacement value 
-const avgFinalVelocity = document.getElementById("avgFinalVelocity");// this is the displacement value 
-const avgFinalDirection = document.getElementById("avgFinalDirection");// this is the displacement value 
-const calculateAvgVelocity = document.getElementById("calculateAvgVelocity");// this is the displacement value 
-const avgVelocityResult = document.getElementById("avgVelocityResult");// this is the displacement value 
+const avgInitialVelocity = document.getElementById("avgInitialVelocity");// this is the initeal velocity value 
+const avginitialDirection = document.getElementById("avginitialDirection");// this is the direction  value 
+const avgFinalVelocity = document.getElementById("avgFinalVelocity");// this is the final velocity value 
+const avgFinalDirection = document.getElementById("avgFinalDirection");// this is the direction  value 
+const calculateAvgVelocity = document.getElementById("calculateAvgVelocity");// this is the calculate button  
+const avgVelocityResult = document.getElementById("avgVelocityResult");// this is the result line   
 
 
 
 //THESE ARE FOR THE PHYSICS DISTANCE CALCULATOR
-const physicsDistance1 = document.getElementById("physicsDistance1");// this is the displacement value 
-const physicsDistance2 = document.getElementById("physicsDistance2");// this is the displacement value 
-const physicsDistance3 = document.getElementById("physicsDistance3");// this is the displacement value 
-const physicsDistance4 = document.getElementById("physicsDistance4");// this is the displacement value 
-const calculatePhysicsDistance = document.getElementById("calculatePhysicsDistance");// this is the displacement value 
-const physicsDistanceResult = document.getElementById("physicsDistanceResult");// this is the displacement value 
+const physicsDistance1 = document.getElementById("physicsDistance1");// this is the distance value 1
+const physicsDistance2 = document.getElementById("physicsDistance2");// this is the distance value 2
+const physicsDistance3 = document.getElementById("physicsDistance3");// this is the distance value 3
+const physicsDistance4 = document.getElementById("physicsDistance4");// this is the distance value 4
+const calculatePhysicsDistance = document.getElementById("calculatePhysicsDistance");// this is the calculate button   
+const physicsDistanceResult = document.getElementById("physicsDistanceResult");// this is the result value 
 
 
 
 //THESE ARE FOR THE DISTANCE CALCULATOR
-const displacement1 = document.getElementById("displacement1");// this is the displacement value 
-const displacement2 = document.getElementById("displacement2");// this is the displacement value 
-const displacementDirection1 = document.getElementById("displacementDirection1");// this is the displacement value 
-const displacementDirection2 = document.getElementById("displacementDirection2");// this is the displacement value 
-const calculateDisplacement = document.getElementById("calculateDisplacement");// this is the displacement value 
-const displacementResult = document.getElementById("displacementResult");// this is the displacement value 
+const displacement1 = document.getElementById("displacement1");// this is the displacement value 1
+const displacement2 = document.getElementById("displacement2");// this is the displacement value 2
+const displacementDirection1 = document.getElementById("displacementDirection1");// this is the displacement firection 1 
+const displacementDirection2 = document.getElementById("displacementDirection2");// this is the displacement direction 2 
+const calculateDisplacement = document.getElementById("calculateDisplacement");// this is the caluclate button
+const displacementResult = document.getElementById("displacementResult");// this is the result  line 
 
 
 
 //THESE ARE FOR THE ACCELERATION CALCULATOR
-const accelerationVelocity1 = document.getElementById("accelerationVelocity1");// this is the displacement value 
-const accelerationDirection1 = document.getElementById("accelerationDirection1");// this is the displacement value 
-const accelerationVelocity2 = document.getElementById("accelerationVelocity2");// this is the displacement value 
-const accelerationDirection2 = document.getElementById("accelerationDirection2");// this is the displacement value 
-const accelerationTime = document.getElementById("accelerationTime");// this is the displacement value 
-const accelerationResult = document.getElementById("accelerationResult");// this is the displacement value 
-const calculateAcceleration = document.getElementById("calculateAcceleration");// this is the displacement value 
+const accelerationVelocity1 = document.getElementById("accelerationVelocity1");// this is the veleocity value 
+const accelerationDirection1 = document.getElementById("accelerationDirection1");// this is the direction value 
+const accelerationVelocity2 = document.getElementById("accelerationVelocity2");// this is the velocity  value 
+const accelerationDirection2 = document.getElementById("accelerationDirection2");// this is the other  direction  value 
+const accelerationTime = document.getElementById("accelerationTime");// this is the time value 
+const accelerationResult = document.getElementById("accelerationResult");// this is the result line 
+const calculateAcceleration = document.getElementById("calculateAcceleration");// this is the calculate acceleration button 
 
+
+//THESE ARE FOR THE TIME CALCULATOR
+const timespeed = document.getElementById("timespeed");// This is the speed value on the time page  
+const timeDistance = document.getElementById("timeDistance");// this is the distance value for the time calculatoe  
+const calculateTime = document.getElementById("calculateTime");// this is the caluclate button for the time  
+const timeResult = document.getElementById("timeResult");// this is the time result 
 
 
 
@@ -2250,7 +2256,7 @@ sphereSurfaceAreaBackButton.addEventListener("click", function() {// this is the
     sphereSurfaceAreaResult.textContent = "";// resets the sphere volume result line again to show nothing 
 })
 
-trianglePrismVolumeBackButton.addEventListener("click", function(){
+trianglePrismVolumeBackButton.addEventListener("click", function(){// this is the triancgle prism volume back bitton 
     startPage.style.display = "flex";// shows the star pag again 
     trianglePrismVolumePage.style.display = "none";
     trianglePrismVolumeHeight.value = "";// resets 
@@ -2259,7 +2265,7 @@ trianglePrismVolumeBackButton.addEventListener("click", function(){
     trianglePrismVolumeResult.textContent = "";// resets 
 })
 
-trianglePrismSurfaceAreaBackButton.addEventListener("click", function(){
+trianglePrismSurfaceAreaBackButton.addEventListener("click", function(){// this is the triangle prism surface are back button 
     startPage.style.display = "flex";// shows the star pag again 
     trianglePrismSurfaceAreaPage.style.display = "none";// hides this page 
     trianglePrismSurfaceAreaSideA.value = "";// resets 
@@ -2270,7 +2276,7 @@ trianglePrismSurfaceAreaBackButton.addEventListener("click", function(){
     trianglePrismSurfaceAreaResult.textContent = "";// resets 
 })
 
-trianglePrismPerimeterBackButton.addEventListener("click", function(){
+trianglePrismPerimeterBackButton.addEventListener("click", function(){// this is the triangle prism perimeter back button 
     startPage.style.display = "flex";// shows the star pag again 
     trianglePrismPerimeterPage.style.display = "none";// hides this page 
     trianglePrismPerimeterSideA.value = "";// resets 
@@ -2280,7 +2286,7 @@ trianglePrismPerimeterBackButton.addEventListener("click", function(){
     trianglePrismPerimeterResult.textContent = "";// resets 
 })
 
-speedBackButton.addEventListener("click", function(){
+speedBackButton.addEventListener("click", function(){// this is the speed back button 
     startPage.style.display = "flex";// shows the star pag again 
     speedCalculatorPage.style.display = "none";// hides this page 
     speedTime.value = "";// resets 
@@ -2288,7 +2294,7 @@ speedBackButton.addEventListener("click", function(){
     speedResult.textContent = "";// resets 
 })
 
-velocityBackButton.addEventListener("click", function(){
+velocityBackButton.addEventListener("click", function(){// this is the velocity back button 
     startPage.style.display = "flex";// shows the star pag again 
     velocityCalculatorPage.style.display = "none";// hides this page 
     velocityDirection.value = "";// resets 
@@ -2297,7 +2303,7 @@ velocityBackButton.addEventListener("click", function(){
     velocityResult.textContent = "";// resets 
 })
 
-avgVelocityBackButton.addEventListener("click", function(){
+avgVelocityBackButton.addEventListener("click", function(){// this is the average velocity back button 
     startPage.style.display = "flex";// shows the star pag again 
     avgVelocityCalculatorPage.style.display = "none";// hides this page 
     avginitialDirection.value = "";// resets 
@@ -2307,7 +2313,7 @@ avgVelocityBackButton.addEventListener("click", function(){
     avgVelocityResult.textContent = "";// resets 
 })
 
-physicsDistanceBackButton.addEventListener("click", function(){
+physicsDistanceBackButton.addEventListener("click", function(){// this is the diatance back button 
     startPage.style.display = "flex";// shows the star pag again 
     physicsDistanceCalculatorPage.style.display = "none";// hides this page 
     physicsDistance1.value = "";// resets 
@@ -2317,7 +2323,7 @@ physicsDistanceBackButton.addEventListener("click", function(){
     physicsDistanceResult.textContent = "";// resets 
 })
 
-displacementBackButton.addEventListener("click", function(){
+displacementBackButton.addEventListener("click", function(){// this is the displacement back button 
     startPage.style.display = "flex";// shows the star pag again 
     displacementCalculatorPage.style.display = "none";// hides this page 
     displacement1.value = "";// resets 
@@ -2327,7 +2333,7 @@ displacementBackButton.addEventListener("click", function(){
     displacementResult.textContent = "";// resets 
 })
 
-accelerationBackButton.addEventListener("click", function(){
+accelerationBackButton.addEventListener("click", function(){// this is the acceleration back button 
     startPage.style.display = "flex";// shows the star pag again 
     accelerationPage.style.display = "none";// hides this page 
     accelerationDirection1.value = "";// resets 
@@ -2336,6 +2342,14 @@ accelerationBackButton.addEventListener("click", function(){
     accelerationVelocity1.value = "";// resets 
     accelerationVelocity2.value = "";// resets 
     accelerationResult.textContent = "";// resets 
+})
+
+timeBackButton.addEventListener("click", function(){// this is the time page back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    timePage.style.display = "none";// hides this page 
+    timeResult.value = "";// resets 
+    timespeed.value = "";// resets 
+    timeResult.textContent = "";// resets
 })
 
 
