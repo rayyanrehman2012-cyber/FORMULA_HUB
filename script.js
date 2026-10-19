@@ -169,7 +169,7 @@ const avgVelocityButton = document.getElementById("avgVelocityButton");// this i
 const physicsDistanceButton = document.getElementById("physicsDistanceButton");// this is the distance button on the physics formula page 
 const displacementButton = document.getElementById("displacementButton");// this is the distance button on the physics formula page 
 const accelerationButton = document.getElementById("accelerationButton");// this is the acceleration button o the physics only page 
-const timeButton = document.getElementById("timeButtn");// this is the time button on the physics formula pages 
+const timeButton = document.getElementById("timeButton");// this is the time button on the physics formula pages 
 
 
 
@@ -584,7 +584,6 @@ const timeResult = document.getElementById("timeResult");// this is the time res
 
 
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
-
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
 
     if (lengthInput.value === "" || widthInput.value === ""){// if the inputs are empty 
@@ -1917,7 +1916,6 @@ physicsButton.addEventListener("click", function() {// physics formula menue
 
 
 // THESE ARE ALL THE BACK BUTTON EVENT FUNCTIONS IN THIS PROJECT
-
 backButton.addEventListener("click", function() {// back button all formulas bage 
     formulaPage.style.display = "none";// the formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
@@ -2358,7 +2356,6 @@ timeBackButton.addEventListener("click", function(){// this is the time page bac
 
 
 //THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
-
 allrectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
     mathFormulaPage.style.display = "none";// the math formula page dissapears 
@@ -3167,6 +3164,29 @@ allaccelerationButton.addEventListener("click", function(){// if the cube perime
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     accelerationPage.style.display = "flex"// shows this page
+})
+
+alltimeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    timePage.style.display = "flex"// shows this page
 })
 
 
@@ -4008,4 +4028,27 @@ accelerationButton.addEventListener("click", function(){// if the cube perimeter
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     accelerationPage.style.display = "flex"// shows this page
+})
+
+timeButton.addEventListener("click", function(){// if the time page button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    timePage.style.display = "flex"// shows this page
 })
