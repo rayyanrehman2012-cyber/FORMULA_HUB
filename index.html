@@ -74,7 +74,7 @@
                     <button id = "allphysicsDistanceButton" class="formulaButton">DISTANCE</button>
                     <button id = "alldisplacementButton" class="formulaButton">DISPLACEMENT</button>
                     <button id = "allaccelerationButton" class="formulaButton">ACCELERATION</button>
-                    <button class="formulaButton">TIME</button>
+                    <button id = "allTimeButton" class="formulaButton">TIME</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY</button>
                     <button class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY SQUARED</button>
@@ -138,7 +138,7 @@
                     <button id = "physicsDistanceButton" class="formulaButton">DISTANCE</button>
                     <button id = "displacementButton" class="formulaButton">DISPLACEMENT</button>
                     <button id = "accelerationButton" class="formulaButton">ACCELERATION</button>
-                    <button class="formulaButton">TIME</button>
+                    <button id = "TimeButton" class="formulaButton">TIME</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY</button>
                     <button class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT</button>
                     <button class="formulaButton">KINEMATICS EQUATION - FINAL VELOCITY SQUARED</button>
@@ -909,6 +909,21 @@
         <button id = "accelerationBackButton">BACK</button>
         </main>
 
+        <main class = "timePage">
+            <h1> TIME CALCULATOR</h1>
+            <div class = "calculatorBox">
+
+                <label for = "timespeed">SPEED (METERS/SECOND)</label>   
+                <input id = "timespeed" type = "number">
+
+                <label for = "timeDistance">Distance (METERS)</label>   
+                <input id = "timeDistance" type = "number">
+
+                <button id = "calculateTime">CALCULATE</button>
+                <p id = "timeResult"></p>
+            </div>
+            <button id = "timeBackButton"></button>
+        </main>
 
         <script src="./script.js"></script>
     </body>
