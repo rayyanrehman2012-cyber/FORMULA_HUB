@@ -1794,22 +1794,81 @@ calculateDisplacement.addEventListener("click", function() {// if the calculate 
     }   
 });
 
-
-
 calculateAcceleration.addEventListener("click", function() { 
 
     let FinalVelocity =  Number(accelerationVelocity1.value);// hold the final velocity 
     let InitialVelocity =  Number(accelerationVelocity2.value);// holds the intital velocity 
-    let FinalDirection =  Number(accelerationDirection1.value);// holds the final direction 
-    let InitialDirection =  Number(accelerationDirection2.value); // holds the initial direction 
+    let FinalDirection =  accelerationDirection1.value;// holds the final direction 
+    let InitialDirection = accelerationDirection2.value; // holds the initial direction 
     let Time =  Number(accelerationTime.value);// this holds the time 
     
     if(accelerationVelocity1.value ===""|| accelerationVelocity2.value === ""|| accelerationTime.value === ""){// if the 2 values arent there 
-        displacementResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
-        displacementResult.style.color = "rgb(102,21,7)";// changes the color to red
+        accelerationResult.textContent = "ERROR: ENTER 3 VALUES!"// shows this error message 
+        accelerationResult.style.color = "rgb(102,21,7)";// changes the color to red
     }
 
-})
+    else if(accelerationDirection1.value ===""|| accelerationDirection2.value === ""){// if the 2 values arent there 
+        accelerationResult.textContent = "ERROR: SELECT A DIRECTION"// shows this error message 
+        accelerationResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(accelerationTime.value ==="0"){// if the 2 values arent there 
+        accelerationResult.textContent = "ERROR: TIME CANNOT BE ZERO"// shows this error message 
+        accelerationResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if ((InitialDirection === "NORTH" && FinalDirection !== "NORTH" && FinalDirection !== "SOUTH") || (InitialDirection === "SOUTH" && FinalDirection !== "SOUTH" && FinalDirection !== "NORTH") || (InitialDirection === "EAST" && FinalDirection !== "EAST" && FinalDirection !== "WEST") || (InitialDirection === "WEST" && FinalDirection !== "WEST" && FinalDirection !== "EAST") || (InitialDirection === "FORWARD" && FinalDirection !== "FORWARD" && FinalDirection !== "BACKWARD") || (InitialDirection === "BACKWARD" && FinalDirection !== "BACKWARD" && FinalDirection !== "FORWARD")) {
+        accelerationResult.textContent = "ERROR: DIRECTION MUST BE THE SAME OR OPPOSITE ON THE SAME AXIS";
+        accelerationResult.style.color = "rgb(102,21,7)";
+    }
+
+    else{
+        if (FinalDirection === "SOUTH" || FinalDirection === "WEST" || FinalDirection === "BACKWARD") {// if these are the selected direction 
+            FinalVelocity = FinalVelocity * -1;// flip the values so that they are easy to use 
+        }
+
+        if (InitialDirection === "SOUTH" || InitialDirection === "WEST" || InitialDirection === "BACKWARD") {// if one of these directions are selected 
+            InitialVelocity = InitialVelocity * -1; // flip the values so that they are easy to use 
+        }
+
+        let acceleration = (FinalVelocity - InitialVelocity) / Time;// this is the formula for the acceleration 
+        let accelerationDirection = FinalDirection;// the acceleration direction will be the final direection 
+
+        if (acceleration < 0){ // if the acceleration is in the negatives 
+            acceleration = acceleration * -1;// make the value posite 
+
+            if (FinalDirection === "NORTH") { // if it was north before 
+                accelerationDirection = "SOUTH";// make it south 
+            }
+            else if (FinalDirection === "SOUTH") {//if it was south 
+                accelerationDirection = "NORTH";// make it north
+            }
+            else if (FinalDirection === "EAST") {//if it was east
+                accelerationDirection = "WEST";//make it west
+            }
+            else if (FinalDirection === "WEST") {// if it was west
+                accelerationDirection = "EAST";// make it east
+            }
+            else if (FinalDirection === "FORWARD") {// if it ws forward 
+                accelerationDirection = "BACKWARD";// make it backward 
+            }
+            else {// if it was backward 
+                accelerationDirection = "FORWARD";// mae it forward 
+            }
+        }
+
+        if (acceleration === 0){
+            accelerationResult.textContent = "ACCELERATION = " +  acceleration.toFixed(3) + " METERS/SECOND SQUARED" // the result line 
+            accelerationResult.style.color = "rgb(11,61,46)"
+        }
+
+        else{
+            accelerationResult.textContent = "ACCELERATION = " +  acceleration.toFixed(3) + " METERS/SECOND SQUARED [" + accelerationDirection + "]" // the result line 
+         accelerationResult.style.color = "rgb(11,61,46)"
+        }
+    }
+})  
+
 
 
 
