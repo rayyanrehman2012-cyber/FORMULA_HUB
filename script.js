@@ -1887,7 +1887,11 @@ calculateAcceleration.addEventListener("click", function() { // if the accelerat
     }
 })  
 
+calculateTime.addEventListener("click", function(){//iff the calculate Time button is clicked then :
+ const Speed = Number(timespeed.value);// hold the value of the time speed 
+ const Distance = Number(timeDistance.value);// hold the value of the time distance 
 
+})
 
 
 
