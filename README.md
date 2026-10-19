@@ -1,14 +1,22 @@
 # FORMULA_HUB
-## WHAT WE ARE MAKING
 
+## WHAT WE ARE MAKING
 Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related, but in the futur we might add other formulas as well
 
-## Navigation ON THE WEBSITE
 
+
+
+
+
+## Navigation ON THE WEBSITE
 The website starts of on the front page. The front page contains a short description and 3 buttons (ALL FORMULAS, MATH FORMULAS, and PHYSICS FORMULAS). Each button takes you to the page you chose( MATH FORMULAS button will take you to the page with only math formulas, etc). Each formula bage has a back button on the tip left, that takes you to the front page again. On the formula pages you can scrol to find the formula you want to use, and click it. Clicking a formula will open the appropreat calculator, example the Rextangle Area formula will open the rectangle area calculator. On the calculator pages, you will be asked to input your values. you may type them or use the arrows in the input boxs to increase or decreas the number. After you finish inputing your numbers, you can hit the calculate button, which will have you the answer. Each calculator page has a back button on the top left that returns you to the starting page. 
 
-## WHAT WE MADE (WEEK 1)
 
+
+
+
+
+## WHAT WE MADE (WEEK 1)
 - Designed the starting page 
 - Came up with the theme (GREEN & WHITE)
 - Added the 3 buttons on the start screen & Linked them to their respective pages 
@@ -33,6 +41,10 @@ The website starts of on the front page. The front page contains a short descrip
 - Designed and built the quadralatteral Perimeter calculator
 - Designed and built the Slope calculator
 - Designed and built the Error Messagees, gives error if the value is missing or zero
+
+
+
+
 
 
 ## WHAT WE MADE (WEEK 2)
@@ -60,6 +72,11 @@ The website starts of on the front page. The front page contains a short descrip
 - Designed and built the Cone Perimeter Calculator
 - Designed and built the Sphere Volume Calculator
 
+
+
+
+
+
 ## WHAT WE MADE (WEEK 3)
 - Finished the Sphere Volume Calculator
 - Designed and built the Sphere Surface Area Calculator
@@ -67,6 +84,23 @@ The website starts of on the front page. The front page contains a short descrip
 - Designed and built the Triangle Prism Surface Area Calculator 
 - Designed and built the Triangle Prism Perimeter Calculator
 - FINISHED Math formula page(WE MIGHT ADD MORE MATH FORMULAS IOF WE DECIDE TO EXTEND THE PROJECT)
+- Remade the The Error messaging Syestem, Its now more efficent, and spcific which should allow all the useres to know what the proplem is when they calculator doesnt work 
+    Some Changes include 
+    - Detects if the value entered was a zero, tells you zeros are not allowed 
+    - Detects if you forgot to enter a value, Tells you to enter the values again 
+    - Detects if the value is a Negatve Number, Tells you to enter a positive number 
+    - Tells if you forgot to select a direction, tells you to telest the direction for vectors 
+    - Tells if you entered directions that arnt on the same plane,  tells you to change them 
+- Designed and built the Speed caluclator 
+- Designed and built the Velocity Calculator 
+- Designed and built the Average velocity Calculator
+- Designed and built the Distance calculator 
+- Designed and built the Displacement calculator 
+- Designed and built the Acceleration Calculator 
+
+
+
+
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 4)
@@ -74,10 +108,8 @@ The website starts of on the front page. The front page contains a short descrip
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - doing the physics formulas 
 - some more math formulas 
-- possable a search function that lets you search and scroll to you desired formula 
 - a earase button in each calculator that erases / clears the operation othimes 
 -  a basic calculator tab, that lets a person yous a calculatore if they want to 
 - some more formulas that arnt from math or physics,
-- Splitting the error messages up so that they are more specifc, for example right now if you enter a zer0 as a value or leave it blank, it gives you the same error message, instead we can split it up and makit so that its, if you entered a zer then it says no zeros allow, and if you left it blank it says add 4 values , that way its mor euser freindly 
-
-@Zayan TELL ME MORE IDEAS HERE SO THAT WE HAVE A BETTER LIST AND IDE OF WHAT TO DO NECT !!!
+- A filter Function on thee different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
+- Having a search function on the all formula page 

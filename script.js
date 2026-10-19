@@ -2329,7 +2329,7 @@ displacementBackButton.addEventListener("click", function(){
 
 accelerationBackButton.addEventListener("click", function(){
     startPage.style.display = "flex";// shows the star pag again 
-    displacementCalculatorPage.style.display = "none";// hides this page 
+    accelerationPage.style.display = "none";// hides this page 
     accelerationDirection1.value = "";// resets 
     accelerationDirection2.value = "";// resets 
     accelerationTime.value = "";// resets 
