@@ -71,6 +71,7 @@ The website starts of on the front page. The front page contains a short descrip
 - Designed and built the Cone Surface Area Calculator
 - Designed and built the Cone Perimeter Calculator
 - Designed and built the Sphere Volume Calculator
+- Designed and built the time Calculator
 
 
 
