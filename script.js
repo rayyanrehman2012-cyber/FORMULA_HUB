@@ -56,6 +56,7 @@ const displacementBackButton = document.getElementById("displacementBackButton")
 const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
 const timeBackButton = document.getElementById("timeBackButton");// this is the time page back button 
 const velocityTimeEquationBackButton = document.getElementById("velocityTimeEquationBackButton");// this is the veleocity time equation back button 
+const displacementInitialEquationBackButton = document.getElementById("displacementInitialEquationBackButton")
 
 
 
@@ -110,6 +111,8 @@ const displacementCalculatorPage = document.querySelector(".displacementCalculat
 const accelerationPage = document.querySelector(".accelerationPage");// this is the acceleration calculator page 
 const timePage = document.querySelector(".timePage");// this is the time calculator page 
 const velocityTimeEquationPage = document.querySelector(".velocityTimeEquationPage");// this is the velocity time equation page 
+const displacementInitialEquationPage = document.querySelector(".displacementInitialEquationPage");// this is the displacement using initeal velocity page, which is the second kinamatic formula 
+
 
 
 
@@ -160,7 +163,7 @@ const alldisplacementButton = document.getElementById("alldisplacementButton");/
 const allaccelerationButton = document.getElementById("allaccelerationButton");// this is the acceleration page button on the all formula page 
 const alltimeButton = document.getElementById("alltimeButton");// this tl the tim page button on the all formulla page 
 const allvelocityTimeEquationButton = document.getElementById("allvelocityTimeEquationButton");// this is the all velocity tiem equation button on the all folrmula page 
-
+const alldisplacementInitialEquationButton = document.getElementById("alldisplacementInitialEquationButton");// this is the button on the all formula page 
 
 
 
@@ -173,7 +176,8 @@ const physicsDistanceButton = document.getElementById("physicsDistanceButton");/
 const displacementButton = document.getElementById("displacementButton");// this is the distance button on the physics formula page 
 const accelerationButton = document.getElementById("accelerationButton");// this is the acceleration button o the physics only page 
 const timeButton = document.getElementById("timeButton");// this is the time button on the physics formula pages 
-const velocityTimeEquationButton = document.getElementById("velocityTimeEquationButton");// this is the all velocity tiem equation button on the all folrmula page 
+const velocityTimeEquationButton = document.getElementById("velocityTimeEquationButton");// this is the all velocity tiem equation button on the physics  folrmula page 
+const displacementInitialEquationButton = document.getElementById("displacementInitialEquationButton");// this is the button on the physics  formula page 
 
 
 
