@@ -1888,9 +1888,29 @@ calculateAcceleration.addEventListener("click", function() { // if the accelerat
 })  
 
 calculateTime.addEventListener("click", function(){//iff the calculate Time button is clicked then :
- const Speed = Number(timespeed.value);// hold the value of the time speed 
- const Distance = Number(timeDistance.value);// hold the value of the time distance 
+    const Speed = Number(timespeed.value);// hold the value of the time speed 
+    const Distance = Number(timeDistance.value);// hold the value of the time distance 
 
+    if(timespeed.value ===""|| timeDistance.value === ""){// if the 2 values arent there 
+        timeResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
+        timeResult.style.color = "rgb(102,21,7)";// changes the color to red
+    }
+
+    else if(timespeed.value === "0"|| timeDistance.value ==="0"){
+        timeResult.textContent = "ERROR: TIME CANNOT BE ZERO";// this is the error message 
+        timeResult.style.color = "rgb(102,21,7)";// changes the color to red 
+    }
+
+    else if(timespeed.value <= -1|| timeDistance.value <= -1){
+        timeResult.textContent = "ERROR: NO NEGATIVE VALUES!";// this is the error message 
+        timeResult.style.color = "rgb(102,21,7)";// changes the color to red 
+    }
+
+    else {
+        const Time = Distance / Speed // this is the formula 
+        timeResult.textContent = "TIME = " + Time + " SECONDS";// this is the result lone 
+        timeResult.style.color = "rgb(11,61,46)";// changes the color to green  
+    }
 })
 
 
