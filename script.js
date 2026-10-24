@@ -55,6 +55,7 @@ const physicsDistanceBackButton = document.getElementById("physicsDistanceBackBu
 const displacementBackButton = document.getElementById("displacementBackButton");// this is the valocity page  back button 
 const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
 const timeBackButton = document.getElementById("timeBackButton");// this is the time page back button 
+const velocityTimeEquationBackButton = document.getElementById("velocityTimeEquationBackButton");// this is the veleocity time equation back button 
 
 
 
@@ -108,6 +109,7 @@ const physicsDistanceCalculatorPage = document.querySelector(".physicsDistanceCa
 const displacementCalculatorPage = document.querySelector(".displacementCalculatorPage");// this is the valocity page 
 const accelerationPage = document.querySelector(".accelerationPage");// this is the acceleration calculator page 
 const timePage = document.querySelector(".timePage");// this is the time calculator page 
+const velocityTimeEquationPage = document.querySelector(".velocityTimeEquationPage");// this is the velocity time equation page 
 
 
 
@@ -157,6 +159,7 @@ const allphysicsDistanceButton = document.getElementById("allphysicsDistanceButt
 const alldisplacementButton = document.getElementById("alldisplacementButton");// this is the all formula page distance  calculator button
 const allaccelerationButton = document.getElementById("allaccelerationButton");// this is the acceleration page button on the all formula page 
 const alltimeButton = document.getElementById("alltimeButton");// this tl the tim page button on the all formulla page 
+const allvelocityTimeEquationButton = document.getElementById("allvelocityTimeEquationButton");// this is the all velocity tiem equation button on the all folrmula page 
 
 
 
@@ -170,6 +173,7 @@ const physicsDistanceButton = document.getElementById("physicsDistanceButton");/
 const displacementButton = document.getElementById("displacementButton");// this is the distance button on the physics formula page 
 const accelerationButton = document.getElementById("accelerationButton");// this is the acceleration button o the physics only page 
 const timeButton = document.getElementById("timeButton");// this is the time button on the physics formula pages 
+const velocityTimeEquationButton = document.getElementById("velocityTimeEquationButton");// this is the all velocity tiem equation button on the all folrmula page 
 
 
 
@@ -578,6 +582,12 @@ const timespeed = document.getElementById("timespeed");// This is the speed valu
 const timeDistance = document.getElementById("timeDistance");// this is the distance value for the time calculatoe  
 const calculateTime = document.getElementById("calculateTime");// this is the caluclate button for the time  
 const timeResult = document.getElementById("timeResult");// this is the time result 
+
+// THESE ARE THE ELEMENTS ON THE VELOCITY-TIME EQUATION PAGE
+const velocityTimePopup = document.getElementById("velocityTimePopup");// this is the velocity time popups that lets u select veriables to solve for 
+const velocityTimeSelectedVariable = document.getElementById("velocityTimeSelectedVariable"); // the selectied variables 
+const velocityTimeInputs = document.getElementById("velocityTimeInputs"); // the inputs holder 
+const variableButtons = document.querySelectorAll(".variableButton"); // different variables 
 
 
 
@@ -1942,6 +1952,7 @@ physicsButton.addEventListener("click", function() {// physics formula menue
 
 
 
+
 // THESE ARE ALL THE BACK BUTTON EVENT FUNCTIONS IN THIS PROJECT
 backButton.addEventListener("click", function() {// back button all formulas bage 
     formulaPage.style.display = "none";// the formula page dissapears 
@@ -2377,6 +2388,10 @@ timeBackButton.addEventListener("click", function(){// this is the time page bac
     timeResult.textContent = "";// resets
 })
 
+velocityTimeEquationBackButton.addEventListener("click", function(){// this is the time page back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    velocityTimeEquationPage.style.display = "none";// hides this page 
+})
 
 
 
@@ -3216,6 +3231,28 @@ alltimeButton.addEventListener("click", function(){// if the cube perimeter is c
     timePage.style.display = "flex"// shows this page
 })
 
+allvelocityTimeEquationButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    velocityTimeEquationPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -4078,4 +4115,27 @@ timeButton.addEventListener("click", function(){// if the time page button is cl
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     timePage.style.display = "flex"// shows this page
+})
+
+velocityTimeEquationButton.addEventListener("click", function(){// if the time page button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    velocityTimeEquationPage.style.display = "flex"// shows this page
 })
