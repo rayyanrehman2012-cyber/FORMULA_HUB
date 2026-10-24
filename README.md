@@ -9,7 +9,7 @@ Me and my partner are making a website that has all the commonly used formulas o
 
 
 ## Navigation ON THE WEBSITE
-The website starts of on the front page. The front page contains a short description and 3 buttons (ALL FORMULAS, MATH FORMULAS, and PHYSICS FORMULAS). Each button takes you to the page you chose( MATH FORMULAS button will take you to the page with only math formulas, etc). Each formula bage has a back button on the tip left, that takes you to the front page again. On the formula pages you can scrol to find the formula you want to use, and click it. Clicking a formula will open the appropreat calculator, example the Rextangle Area formula will open the rectangle area calculator. On the calculator pages, you will be asked to input your values. you may type them or use the arrows in the input boxs to increase or decreas the number. After you finish inputing your numbers, you can hit the calculate button, which will have you the answer. Each calculator page has a back button on the top left that returns you to the starting page. 
+The website starts of on the front page. The front page contains a short description and 3 buttons (ALL FORMULAS, MATH FORMULAS, and PHYSICS FORMULAS). Each button takes you to the page you chose( MATH FORMULAS button will take you to the page with only math formulas, etc). Each formula bage has a back button on the tip left, that takes you to the front page again. On the formula pages you can scrol to find the formula you want to use, and click it. Clicking a formula will open the appropreat calculator, example the Rextangle Area formula will open the rectangle area calculator. On the calculator pages, you will be asked to input your values. you may type them or use the arrows in the input boxs to increase or decreas the number. After you finish inputing your numbers, you can hit the calculate button, which will give you the answer. Each calculator page has a back button on the top left that returns you to the starting page. Inputing Balank values gives you and error, and depending on which calulator your using negatives and zeros can also trigger an error. Some physics formulas have multiple rearranged version, so clicking on them opens a popup that lets you choose which variable you want the equations to solve.
 
 
 
@@ -104,7 +104,31 @@ The website starts of on the front page. The front page contains a short descrip
 
 
 
-## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 4)
+## WHAT WE MADE (WEEK 4)
+- Finished the Acceleration Calculator
+- Made the first Kinimatic formula page (Velocity-time EQUATION)
+    - The page opens a popup with 4 versions(rearranged) of the formula
+    - you can choose which variable you want to solve for
+    - clicking the buttons opens the appropriat calulator
+    - Calulator for time
+    - calulator for Initial velocity 
+    - caluclaor for final velocity
+    - caluclator of acceleration 
+- Made the Second Kinimatic formula page (Displacement with Initial velocity EQUATION)
+    - The page opens a popup with 4 versions(rearranged) of the formula
+    - you can choose which variable you want to solve for
+    - clicking the buttons opens the appropriat calulator
+    - Calulator for time
+    - calulator for Initial velocity 
+    - caluclaor for Displacement 
+    - caluclator of acceleration 
+
+
+
+
+
+
+## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 5)
 - sound effects when you click on buttons so that it feels premium ish 
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - doing the physics formulas 
@@ -114,3 +138,6 @@ The website starts of on the front page. The front page contains a short descrip
 - some more formulas that arnt from math or physics,
 - A filter Function on thee different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
 - Having a search function on the all formula page 
+- boyancy formula 
+- gass formula 
+
