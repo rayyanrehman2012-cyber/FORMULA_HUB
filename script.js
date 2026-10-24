@@ -2252,19 +2252,19 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
         changeVelocityTimeVariable.style.display = "block"// shows this 
 
         if (button.value === "finalVelocity") {// if the value is final velocity 
-            velocityTimeSelectedVariable.textContent = "FINAL VELOCITY (vf)";// then the variable is final velocity 
+            velocityTimeSelectedVariable.textContent = "SOLVING FOR FINAL VELOCITY (vf)";// then the variable is final velocity 
         }
 
         else if (button.value === "initialVelocity") {// if the velue is initial velocity 
-            velocityTimeSelectedVariable.textContent = "INITIAL VELOCITY (vi)";// then the variables is initial velocuty 
+            velocityTimeSelectedVariable.textContent = "SOLVING FOR INITIAL VELOCITY (vi)";// then the variables is initial velocuty 
         }
 
         else if (button.value === "acceleration") {// if the value is acelerations 
-            velocityTimeSelectedVariable.textContent = "ACCELERATION (a)";// the selected variable is acceleration 
+            velocityTimeSelectedVariable.textContent = "SOLVING FOR ACCELERATION (a)";// the selected variable is acceleration 
         }
 
         else if (button.value === "time") {// if the value is time 
-            velocityTimeSelectedVariable.textContent = "TIME (t)";// then the selected variable is time 
+            velocityTimeSelectedVariable.textContent = "SOLVING FOR TIME (t)";// then the selected variable is time 
         }
         velocityTimeInputs.innerHTML = "";// clear the inputs
 
@@ -2273,7 +2273,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
-            <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
+            <label for = "vtInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "vtInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2287,7 +2287,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
 
-            <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
+            <label for = "vtAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "vtAccelerationDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2309,7 +2309,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for = "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
-            <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
+            <label for = "vtFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "vtFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2323,7 +2323,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for = "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
 
-            <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
+            <label for = "vtAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "vtAccelerationDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2344,7 +2344,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
-            <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
+            <label for = "vtFinalVelocityDirection"> FINAL VELOCITY DIRECTION</label>   
                 <select id = "vtFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2358,7 +2358,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
-            <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
+            <label for = "vtInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "vtInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2379,7 +2379,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
-            <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
+            <label for = "vtFinalVelocityDirection"> FINAL VELOCITY DIRECTION</label>   
                 <select id = "vtFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2393,7 +2393,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
-            <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
+            <label for = "vtInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "vtInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2407,7 +2407,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label for "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
 
-            <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
+            <label for = "vtAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "vtAccelerationDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
@@ -2429,7 +2429,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
 //THESE ARE THE CHANGE VARIABLE BUTTONS 
 
 changeVelocityTimeVariable.addEventListener("click", function(){
-    velocityTimePopup.style.display = "block";// hide these function
+    velocityTimePopup.style.display = "flex";// hide these function
     calculateVelocityTimeEquation.style.display = "none"
     velocityTimeInputs.innerHTML = "";// clears the inputs
     velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
@@ -2906,7 +2906,7 @@ velocityTimeEquationBackButton.addEventListener("click", function(){// this is t
     velocityTimeEquationPage.style.display = "none";// hides this page 
     velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
 
-    velocityTimePopup.style.display = "block";// hide page switches to pop up 
+    velocityTimePopup.style.display = "flex";// hide page switches to pop up 
     calculateVelocityTimeEquation.style.display = "none" //hides this calculate buttons 
     velocityTimeInputs.innerHTML = "";// clears the inputs
     velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
