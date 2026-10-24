@@ -1973,8 +1973,8 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
             let finalDirection;
 
             if (Result === 0) { // if the result is  0 
-                velocityTimeEquationResult.textContent = "FINAL VELOCITY =: 0 METERS/SECOND";
-                velocityTimeEquationResult.style.display = "rgb(11,61,46)" // changes the colour to grree n
+                velocityTimeEquationResult.textContent = "FINAL VELOCITY = 0 METERS/SECOND";
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
 
             }
 
@@ -2007,12 +2007,91 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
             }
 
             if (Result !== 0){
-                velocityTimeEquationResult.textContent = "FINAL VELOCITY = " +Result+ " METERS/SECOND [" +finalDirection+ "]"// result line 
-                velocityTimeEquationResult.style.display = "rgb(11,61,46)" // changes the colour to grree n
+                velocityTimeEquationResult.textContent = "FINAL VELOCITY = " +Math.abs(Result).toFixed(3)+ " METERS/SECOND [" +finalDirection+ "]"// result line 
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
             }
         }
 
-}})
+    }
+
+    else if(velocityTimeSelectedVariable.textContent === "INITIAL VELOCITY (vi)") {
+        let FinalVelocity = Number(document.getElementById("vtFinalVelocity").value); // holds the inital velocity value 
+        let acceleration = Number(document.getElementById("vtAcceleration").value);// holds the acceleration vlaue 
+        let time = Number(document.getElementById("vtTime").value); // holdes the time value 
+        let FinalVelocityDirection = document.getElementById("vtFinalVelocityDirection").value;// this hold the directiosn value 
+        let accelerationDirection = document.getElementById("vtAccelerationDirection").value;// this hold the directiosn value 
+
+        if(document.getElementById("vtFinalVelocity").value === "" || document.getElementById("vtAcceleration").value === "" || document.getElementById("vtTime").value === "") {
+            velocityTimeEquationResult.textContent = "ERROR: ENTER 3 VALUES!";
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+
+        }
+
+        else if (FinalVelocityDirection === "" || accelerationDirection === "") {// are the directions blanked 
+            velocityTimeEquationResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if ((FinalVelocityDirection === "EAST" || FinalVelocityDirection === "WEST") && (accelerationDirection !== "EAST" && accelerationDirection !== "WEST") || (FinalVelocityDirection === "NORTH" || FinalVelocityDirection === "SOUTH") && (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH") || (FinalVelocityDirection === "FORWARD" || FinalVelocityDirection === "BACKWARD") && (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))// if this is not tr
+        {
+            velocityTimeEquationResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (FinalVelocityDirection === "WEST" || FinalVelocityDirection === "SOUTH" || FinalVelocityDirection === "BACKWARD") { 
+                FinalVelocity = -FinalVelocity;
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { 
+                acceleration = -acceleration;
+            }
+
+            Result = FinalVelocity - acceleration * time; //this is the formuls 
+
+            let finalDirection;
+
+            if (Result === 0) { // if the result is  0 
+                velocityTimeEquationResult.textContent = "INITIAL VELOCITY =: 0 METERS/SECOND";
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+
+            else if (FinalVelocityDirection === "EAST" || FinalVelocityDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // but the result was zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise it would be west 
+                    finalDirection = "WEST";
+                }
+            }
+
+            else if (FinalVelocityDirection === "NORTH" || FinalVelocityDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // and the result is zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// and the result is not zero 
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (FinalVelocityDirection === "FORWARD" || FinalVelocityDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){
+                velocityTimeEquationResult.textContent = "INITIAL VELOCITY = " +Math.abs(Result).toFixed(3)+ " METERS/SECOND [" +finalDirection+ "]"// result line 
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+
+    }
+})
 
 
 
@@ -2212,6 +2291,7 @@ changeVelocityTimeVariable.addEventListener("click", function(){
     calculateVelocityTimeEquation.style.display = "none"
     velocityTimeInputs.innerHTML = "";// clears the inputs
     velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
+    velocityTimeEquationResult.textContent = "";// clears the result 
 })
 
 
