@@ -1936,21 +1936,32 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
     let Result;
 
     if(velocityTimeSelectedVariable.textContent === "FINAL VELOCITY (vf)") {
-        let initialVelocity = Number(document.getElementById("vtInitialVelocity").value);
-        let acceleration = Number(document.getElementById("vtAcceleration").value);
-        let time = Number(document.getElementById("vtTime").value);
+        let initialVelocity = Number(document.getElementById("vtInitialVelocity").value); // holds the inital velocity value 
+        let acceleration = Number(document.getElementById("vtAcceleration").value);// holds the acceleration vlaue 
+        let time = Number(document.getElementById("vtTime").value); // holdes the time value 
+        let initialDirection = document.getElementById("vtInitialVelocityDirection").value;// this hold the directiosn value 
+        let accelerationDirection = document.getElementById("vtAccelerationDirection").value;// this hold the directiosn value 
 
-        Result = initialVelocity + acceleration * time; //the formula 
-    }
+        if(document.getElementById("vtInitialVelocity").value === "" || document.getElementById("vtAcceleration").value === "" || document.getElementById("vtTime").value === "") {
+            velocityTimeEquationResult.textContent = "ERROR: ENTER 3 VALUES!";
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
 
-    else if(velocityTimeSelectedVariable.textContent === "INITIAL VELOCITY (vi)") {
-        let initialVelocity = Number(document.getElementById("vtInitialVelocity").value);
-        let acceleration = Number(document.getElementById("vtAcceleration").value);
-        let time = Number(document.getElementById("vtTime").value);
+        }
 
-        Result = initialVelocity + acceleration * time; //the formula 
-        velocityTimeEquationResult.textContent = ""
-    } 
+        else if (initialDirection === "" || accelerationDirection === "") {// are the directions blanked 
+            velocityTimeEquationResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if ((initialDirection === "EAST" || initialDirection === "WEST") && (accelerationDirection !== "EAST" && accelerationDirection !== "WEST") || (initialDirection === "NORTH" || initialDirection === "SOUTH") && (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH") || (initialDirection === "FORWARD" || initialDirection === "BACKWARD") && (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))// if this is not tr
+        {
+            velocityTimeEquationResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            
+        }
 
 })
 
@@ -2136,7 +2147,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-                
+
             `;//add this the the html
         }
 
