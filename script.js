@@ -583,6 +583,7 @@ const timeDistance = document.getElementById("timeDistance");// this is the dist
 const calculateTime = document.getElementById("calculateTime");// this is the caluclate button for the time  
 const timeResult = document.getElementById("timeResult");// this is the time result 
 
+
 // THESE ARE THE ELEMENTS ON THE VELOCITY-TIME EQUATION PAGE
 const velocityTimePopup = document.getElementById("velocityTimePopup");// this is the velocity time popups that lets u select veriables to solve for 
 const velocityTimeSelectedVariable = document.getElementById("velocityTimeSelectedVariable"); // the selectied variables 
@@ -1922,6 +1923,95 @@ calculateTime.addEventListener("click", function(){//iff the calculate Time butt
         timeResult.style.color = "rgb(11,61,46)";// changes the color to green  
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+//THESE ARE THE POPUP MENU BUTTONS 
+variableButtons.forEach(function(button){// in variable buttons, for each of them 
+    button.addEventListener("click", function() {// if they are clicked 
+        velocityTimePopup.style.display = "none";// hides this
+
+        if (button.value === "finalVelocity") {// if the value is final velocity 
+            velocityTimeSelectedVariable.textContent = "FINAL VELOCITY (vf)";// then the variable is final velocity 
+        }
+
+        else if (button.value === "initialVelocity") {// if the velue is initial velocity 
+            velocityTimeSelectedVariable.textContent = "INITIAL VELOCITY (vi)";// then the variables is initial velocuty 
+        }
+
+        else if (button.value === "acceleration") {// if the value is acelerations 
+            velocityTimeSelectedVariable.textContent = "ACCELERATION (a)";// the selected variable is acceleration 
+        }
+
+        else if (button.value === "time") {// if the value is time 
+            velocityTimeSelectedVariable.textContent = "TIME (t)";// then the selected variable is time 
+        }
+        velocityTimeInputs.innerHTML = "";// clear the inputs
+
+        if (button.value === "finalVelocity") {// if the value is final velocity 
+            velocityTimeInputs.innerHTML = ` 
+            <label>INITIAL VELOCITY (vi)</label>
+            <input type="number" id="vtInitialVelocity">
+
+            <label>ACCELERATION (a)</label>
+            <input type="number" id="vtAcceleration">
+
+            <label>TIME (t)</label>
+            <input type="number" id="vtTime">
+            `;//add this the the html 
+        }
+
+        else if (button.value === "initialVelocity") {// if the value is initial velocity 
+            velocityTimeInputs.innerHTML = `
+            <label>FINAL VELOCITY (vf)</label>
+            <input type="number" id="vtFinalVelocity">
+
+            <label>ACCELERATION (a)</label>
+            <input type="number" id="vtAcceleration">
+
+            <label>TIME (t)</label>
+            <input type="number" id="vtTime">
+            `;//add this the the html
+        }
+
+        else if (button.value === "acceleration") {// if the value is acceleration   
+            velocityTimeInputs.innerHTML = `
+            <label>FINAL VELOCITY (vf)</label>
+            <input type="number" id="vtFinalVelocity">
+
+            <label>INITIAL VELOCITY (vi)</label>
+            <input type="number" id="vtInitialVelocity">
+
+            <label>TIME (t)</label>
+            <input type="number" id="vtTime">
+            `;//add this the the html
+        }
+
+        else if (button.value === "time") {// if the value is time 
+            velocityTimeInputs.innerHTML = `
+            <label>FINAL VELOCITY (vf)</label>
+            <input type="number" id="vtFinalVelocity">
+
+            <label>INITIAL VELOCITY (vi)</label>
+            <input type="number" id="vtInitialVelocity">
+
+            <label>ACCELERATION (a)</label>
+            <input type="number" id="vtAcceleration">
+            `;//add this the the html
+        }
+
+    });
+});
+
 
 
 
