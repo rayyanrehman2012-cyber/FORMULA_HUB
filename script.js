@@ -593,6 +593,7 @@ const calculateVelocityTimeEquation = document.getElementById("calculateVelocity
 calculateVelocityTimeEquation.style.display = "none";// hides this variable
 const changeVelocityTimeVariable = document.getElementById("changeVelocityTimeVariable");// this is the change velocity time variable 
 changeVelocityTimeVariable.style.display = "none";// hides this intiteall 
+const velocityTimeEquationResult = document.getElementById("velocityTimeEquationResult");// this is the result lone 
 
 
 
@@ -1931,7 +1932,27 @@ calculateTime.addEventListener("click", function(){//iff the calculate Time butt
     }
 })
 
+calculateVelocityTimeEquation.addEventListener("click", function(){// if the calulate button is clicked 
+    let Result;
 
+    if(velocityTimeSelectedVariable.textContent === "FINAL VELOCITY (vf)") {
+        let initialVelocity = Number(document.getElementById("vtInitialVelocity").value);
+        let acceleration = Number(document.getElementById("vtAcceleration").value);
+        let time = Number(document.getElementById("vtTime").value);
+
+        Result = initialVelocity + acceleration * time; //the formula 
+    }
+
+    else if(velocityTimeSelectedVariable.textContent === "INITIAL VELOCITY (vi)") {
+        let initialVelocity = Number(document.getElementById("vtInitialVelocity").value);
+        let acceleration = Number(document.getElementById("vtAcceleration").value);
+        let time = Number(document.getElementById("vtTime").value);
+
+        Result = initialVelocity + acceleration * time; //the formula 
+        velocityTimeEquationResult.textContent = ""
+    } 
+
+})
 
 
 
@@ -1971,8 +1992,31 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label>INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
+            <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
+                <select id = "vtInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
             <label>ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
+
+            <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
+                <select id = "vtAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+            
 
             <label>TIME (t)</label>
             <input type="number" id="vtTime">
@@ -1984,8 +2028,30 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label>FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
+            <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
+                <select id = "vtFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
             <label>ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
+
+            <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
+                <select id = "vtAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
 
             <label>TIME (t)</label>
             <input type="number" id="vtTime">
@@ -1997,8 +2063,30 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label>FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
+            <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
+                <select id = "vtFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
             <label>INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
+
+            <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
+                <select id = "vtInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
 
             <label>TIME (t)</label>
             <input type="number" id="vtTime">
@@ -2010,11 +2098,45 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             <label>FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
+            <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
+                <select id = "vtFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
             <label>INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
+            <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
+                <select id = "vtInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
             <label>ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
+
+            <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
+                <select id = "vtAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+                
             `;//add this the the html
         }
 
