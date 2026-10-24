@@ -1917,6 +1917,9 @@ calculateTime.addEventListener("click", function(){//iff the calculate Time butt
 
 
 
+
+
+
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
