@@ -589,6 +589,13 @@ const velocityTimePopup = document.getElementById("velocityTimePopup");// this i
 const velocityTimeSelectedVariable = document.getElementById("velocityTimeSelectedVariable"); // the selectied variables 
 const velocityTimeInputs = document.getElementById("velocityTimeInputs"); // the inputs holder 
 const variableButtons = document.querySelectorAll(".variableButton"); // different variables 
+const calculateVelocityTimeEquation = document.getElementById("calculateVelocityTimeEquation");
+calculateVelocityTimeEquation.style.display = "none";// hides this variable
+const changeVelocityTimeVariable = document.getElementById("changeVelocityTimeVariable");// this is the change velocity time variable 
+changeVelocityTimeVariable.style.display = "none";// hides this intiteall 
+
+
+
 
 
 
@@ -1939,6 +1946,8 @@ calculateTime.addEventListener("click", function(){//iff the calculate Time butt
 variableButtons.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         velocityTimePopup.style.display = "none";// hides this
+        calculateVelocityTimeEquation.style.display = "block";// shows this 
+        changeVelocityTimeVariable.style.display = "block"// shows this 
 
         if (button.value === "finalVelocity") {// if the value is final velocity 
             velocityTimeSelectedVariable.textContent = "FINAL VELOCITY (vf)";// then the variable is final velocity 
@@ -2014,7 +2023,14 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
 
 
 
+//THESE ARE THE CHANGE VARIABLE BUTTONS 
 
+changeVelocityTimeVariable.addEventListener("click", function(){
+    velocityTimePopup.style.display = "block";// hide these function
+    calculateVelocityTimeEquation.style.display = "none"
+    velocityTimeInputs.innerHTML = "";// clears the inputs
+    velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
+})
 
 
 
