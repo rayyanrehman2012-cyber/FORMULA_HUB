@@ -588,7 +588,7 @@ const calculateTime = document.getElementById("calculateTime");// this is the ca
 const timeResult = document.getElementById("timeResult");// this is the time result 
 
 
-// THESE ARE THE ELEMENTS ON THE VELOCITY-TIME EQUATION PAGE
+// THESE ARE THE FOR  THE VELOCITY-TIME EQUATION CALCULATOR
 const velocityTimePopup = document.getElementById("velocityTimePopup");// this is the velocity time popups that lets u select veriables to solve for 
 const velocityTimeSelectedVariable = document.getElementById("velocityTimeSelectedVariable"); // the selectied variables 
 const velocityTimeInputs = document.getElementById("velocityTimeInputs"); // the inputs holder 
@@ -599,6 +599,16 @@ const changeVelocityTimeVariable = document.getElementById("changeVelocityTimeVa
 changeVelocityTimeVariable.style.display = "none";// hides this intiteall 
 const velocityTimeEquationResult = document.getElementById("velocityTimeEquationResult");// this is the result lone 
 
+
+//THESE ARE THE FOR THE DISPLACEMENT USING INITIAL VELOCITY EQUATION  CALCULATOR
+const displacementInitialPopup = document.getElementById("displacementInitialPopup");// this is the velocity time popups that lets u select veriables to solve for 
+const displacementInitialSelectedVariable = document.getElementById("displacementInitialSelectedVariable"); // the selectied variables 
+const displacementInitialInputs = document.getElementById("displacementInitialInputs"); // the inputs holder 
+const calculateDisplacementInitialEquation = document.getElementById("calculateDisplacementInitialEquation");
+calculateDisplacementInitialEquation.style.display = "none";// hides this variable
+const changeDisplacementInitialVariable = document.getElementById("changeDisplacementInitialVariable");// this is the change velocity time variable 
+changeDisplacementInitialVariable.style.display = "none";// hides this intiteall 
+const displacementInitialEquationResult = document.getElementById("displacementInitialEquationResult");// this is the result lone 
 
 
 
@@ -2432,7 +2442,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
 
 //THESE ARE THE CHANGE VARIABLE BUTTONS 
 
-changeVelocityTimeVariable.addEventListener("click", function(){
+changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
     velocityTimePopup.style.display = "flex";// hide these function
     calculateVelocityTimeEquation.style.display = "none"
     velocityTimeInputs.innerHTML = "";// clears the inputs
@@ -2440,6 +2450,16 @@ changeVelocityTimeVariable.addEventListener("click", function(){
     velocityTimeEquationResult.textContent = "";// clears the result 
     changeVelocityTimeVariable.style.display = "none";// hides the button 
 })
+
+changeDisplacementInitialVariable.addEventListener("click", function(){// if the change variable button is clicked 
+    displacementInitialPopup.style.display = "flex";// hide these function
+    calculateDisplacementInitialEquation.style.display = "none"
+    displacementInitialInputs.innerHTML = "";// clears the inputs
+    displacementInitialSelectedVariable.textContent = "";// clears the selected variable 
+    displacementInitialEquationResult.textContent = "";// clears the result 
+    changeDisplacementInitialVariable.style.display = "none";// hides the button 
+})
+
 
 
 
@@ -2918,8 +2938,18 @@ velocityTimeEquationBackButton.addEventListener("click", function(){// this is t
     changeVelocityTimeVariable.style.display = "none";// hides this 
 })
 
+displacementInitialEquationBackButton.addEventListener("click", function(){// this is the time page back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    displacementInitialEquationPage.style.display = "none";// hides this page 
+    displacementInitialSelectedVariable.textContent = "";// clears the selected variable 
 
-
+    displacementInitialPopup.style.display = "flex";// hide page switches to pop up 
+    calculateDisplacementInitialEquation.style.display = "none" //hides this calculate buttons 
+    displacementInitialInputs.innerHTML = "";// clears the inputs
+    displacementInitialSelectedVariable.textContent = "";// clears the selected variable 
+    displacementInitialEquationResult.textContent = "";// clears the result 
+    changeDisplacementInitialVariable.style.display = "none";// hides this 
+})
 
 
 
@@ -3781,6 +3811,28 @@ allvelocityTimeEquationButton.addEventListener("click", function(){// if the cub
     velocityTimeEquationPage.style.display = "flex"// shows this page
 })
 
+alldisplacementInitialEquationButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    displacementInitialEquationPage.style.display = "flex"// shows this page
+})
 
 
 
@@ -4670,3 +4722,29 @@ velocityTimeEquationButton.addEventListener("click", function(){// if the time p
     cubeVolumePage.style.display = "none";// hid this page 
     velocityTimeEquationPage.style.display = "flex"// shows this page
 })
+
+displacementInitialEquationButton.addEventListener("click", function(){// if the time page button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    displacementInitialEquationPage.style.display = "flex"// shows this page
+})
+
+
+
