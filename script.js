@@ -2901,6 +2901,14 @@ timeBackButton.addEventListener("click", function(){// this is the time page bac
 velocityTimeEquationBackButton.addEventListener("click", function(){// this is the time page back button 
     startPage.style.display = "flex";// shows the star pag again 
     velocityTimeEquationPage.style.display = "none";// hides this page 
+    velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
+
+    velocityTimePopup.style.display = "block";// hide page switches to pop up 
+    calculateVelocityTimeEquation.style.display = "none" //hides this calculate buttons 
+    velocityTimeInputs.innerHTML = "";// clears the inputs
+    velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
+    velocityTimeEquationResult.textContent = "";// clears the result 
+    changeVelocityTimeVariable.style.display = "none";// hides this 
 })
 
 
