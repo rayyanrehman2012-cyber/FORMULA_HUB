@@ -609,6 +609,7 @@ calculateDisplacementInitialEquation.style.display = "none";// hides this variab
 const changeDisplacementInitialVariable = document.getElementById("changeDisplacementInitialVariable");// this is the change velocity time variable 
 changeDisplacementInitialVariable.style.display = "none";// hides this intiteall 
 const displacementInitialEquationResult = document.getElementById("displacementInitialEquationResult");// this is the result lone 
+const variableButton1s = document.querySelectorAll(".variableButton1"); // different variables 
 
 
 
@@ -2438,7 +2439,184 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
     });
 });
 
+variableButton1s.forEach(function(button){// in variable buttons, for each of them 
+    button.addEventListener("click", function() {// if they are clicked 
+        displacementInitialPopup.style.display = "none";// hides this
+        calculateDisplacementInitialEquation.style.display = "block";// shows this 
+        changeDisplacementInitialVariable.style.display = "block"// shows this 
 
+        if (button.value === "DIdisplacement") {// if the value is final velocity 
+            displacementInitialSelectedVariable.textContent = "SOLVING FOR DISPLACEMENT (d)";// then the variable is final velocity 
+        }
+
+        else if (button.value === "DIinitialVelocity") {// if the velue is initial velocity 
+            displacementInitialSelectedVariable.textContent = "SOLVING FOR INITIAL VELOCITY (vi)";// then the variables is initial velocuty 
+        }
+
+        else if (button.value === "DIacceleration") {// if the value is acelerations 
+            displacementInitialSelectedVariable.textContent = "SOLVING FOR ACCELERATION (a)";// the selected variable is acceleration 
+        }
+
+        else if (button.value === "DItime") {// if the value is time 
+            displacementInitialSelectedVariable.textContent = "SOLVING FOR TIME (t)";// then the selected variable is time 
+        }
+        displacementInitialInputs.innerHTML = "";// clear the inputs
+
+        if (button.value === "DIdisplacement") {// if the value is final velocity 
+            displacementInitialInputs.innerHTML = ` 
+            <label for ="IDInitialVelocity">INITIAL VELOCITY (vi)</label>
+            <input type="number" id="IDInitialVelocity">
+
+            <label for = "IDInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "IDInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="IDAcceleration">ACCELERATION (a)</label>
+            <input type="number" id="IDAcceleration">
+
+            <label for = "IDAccelerationDirection">ACCELERATION DIRECTION</label>   
+                <select id = "IDAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+            
+
+            <label for ="IDTime" >TIME (t)</label>
+            <input type="number" id="IDTime">
+            `;//add this the the html 
+        }
+
+        else if (button.value === "DIinitialVelocity") {// if the value is initial velocity 
+            displacementInitialInputs.innerHTML = `
+            <label for = "IDdisplacement">DISPLACEMENT (d)</label>
+            <input type= "number" id="IDdisplacement">
+
+            <label for = "IDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
+                <select id = "IDdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for = "IDAcceleration">ACCELERATION (a)</label>
+            <input type="number" id="IDAcceleration">
+
+            <label for = "IDAccelerationDirection">ACCELERATION DIRECTION</label>   
+                <select id = "IDAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="IDTime">TIME (t)</label>
+            <input type="number" id="IDTime">
+            `;//add this the the html
+        }
+
+        else if (button.value === "DIacceleration") {// if the value is acceleration   
+            displacementInitialInputs.innerHTML = `
+            <label for ="IDdisplacement">DISPLACEMENT (d)</label>
+            <input type="number" id="IDdisplacement">
+
+            <label for = "IDdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
+                <select id = "IDdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="IDInitialVelocity">INITIAL VELOCITY (vi)</label>
+            <input type="number" id="IDInitialVelocity">
+
+            <label for = "IDInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "IDInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="IDTime">TIME (t)</label>
+            <input type="number" id="IDTime">
+            `;//add this the the html
+        }
+
+        else if (button.value === "DItime") {// if the value is time 
+            displacementInitialInputs.innerHTML = `
+            <label for ="IDdisplacement">DISPLACEMENT (d)</label>
+            <input type="number" id="IDdisplacement">
+
+            <label for = "IDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
+                <select id = "IDdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for = "IDInitialVelocity">INITIAL VELOCITY (vi)</label>
+            <input type="number" id="IDInitialVelocity">
+
+            <label for = "IDInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "IDInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="IDAcceleration">ACCELERATION (a)</label>
+            <input type="number" id="IDAcceleration">
+
+            <label for = "IDAccelerationDirection">ACCELERATION DIRECTION</label>   
+                <select id = "IDAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            `;//add this the the html
+        }
+
+    });
+});
 
 //THESE ARE THE CHANGE VARIABLE BUTTONS 
 
