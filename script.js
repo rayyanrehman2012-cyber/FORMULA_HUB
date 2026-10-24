@@ -2169,6 +2169,68 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
         }
     }
 
+    else if(velocityTimeSelectedVariable.textContent === "TIME (t)") {
+
+        let FinalVelocity = Number(document.getElementById("vtFinalVelocity").value); // holds the inital velocity value 
+        let InitialVelocity = Number(document.getElementById("vtInitialVelocity").value);// holds the acceleration vlaue 
+        let accelerationDirection = document.getElementById("vtAccelerationDirection").value;// this hold the directiosn value 
+        let FinalVelocityDirection = document.getElementById("vtFinalVelocityDirection").value;// this hold the directiosn value 
+        let InitialVelocityDirection = document.getElementById("vtInitialVelocityDirection").value;// this hold the directiosn value 
+        let acceleration = Number(document.getElementById("vtAcceleration").value);// holds the acceleration vlaue 
+
+        if(document.getElementById("vtFinalVelocity").value === "" || document.getElementById("vtInitialVelocity").value === "" || document.getElementById("vtAcceleration").value === "") {
+            velocityTimeEquationResult.textContent = "ERROR: ENTER 3 VALUES!";
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (accelerationDirection === "" || FinalVelocityDirection === "" || InitialVelocityDirection === "") {// are the directions blanked 
+            velocityTimeEquationResult.textContent = "ERROR: SELECT 3 DIRECTION";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (((FinalVelocityDirection === "EAST" || FinalVelocityDirection === "WEST") && ((InitialVelocityDirection !== "EAST" && InitialVelocityDirection !== "WEST") || (accelerationDirection !== "EAST" && accelerationDirection !== "WEST"))) || ((FinalVelocityDirection === "NORTH" || FinalVelocityDirection === "SOUTH") && ((InitialVelocityDirection !== "NORTH" && InitialVelocityDirection !== "SOUTH") || (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH"))) || ((FinalVelocityDirection === "FORWARD" || FinalVelocityDirection === "BACKWARD") && ((InitialVelocityDirection !== "FORWARD" && InitialVelocityDirection !== "BACKWARD") || (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))))
+        {
+            velocityTimeEquationResult.textContent = "ERROR: ALL DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (acceleration === 0) {
+            velocityTimeEquationResult.textContent = "ERROR: ACCELERATION CANNOT BE ZERO!";
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";
+        }
+
+        else{
+            if (FinalVelocityDirection === "WEST" || FinalVelocityDirection === "SOUTH" || FinalVelocityDirection === "BACKWARD") { 
+                FinalVelocity = -FinalVelocity;
+            }
+
+            if (InitialVelocityDirection === "WEST" || InitialVelocityDirection === "SOUTH" || InitialVelocityDirection === "BACKWARD") { 
+                InitialVelocity = -InitialVelocity;
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { 
+                acceleration = -acceleration;
+            }
+
+            Result = (FinalVelocity - InitialVelocity )/ acceleration; //this is the formuls 
+
+
+            if (Result === 0) { // if the result is  0 
+                velocityTimeEquationResult.textContent = "TIME = 0 SECOND";
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+
+            else if (Result < 0){
+                velocityTimeEquationResult.textContent = "ERROR: FIX YOUR VALUES, TIME CAN'T BE NEGATIVE"// result line 
+                velocityTimeEquationResult.style.color = "rgb(102,21,7)" // changes the colour to grree n
+            }
+
+            else if (Result > 0){
+                velocityTimeEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
     
 
 })
