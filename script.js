@@ -2434,6 +2434,7 @@ changeVelocityTimeVariable.addEventListener("click", function(){
     velocityTimeInputs.innerHTML = "";// clears the inputs
     velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
     velocityTimeEquationResult.textContent = "";// clears the result 
+    changeVelocityTimeVariable.style.display = "none";// hides the button 
 })
 
 

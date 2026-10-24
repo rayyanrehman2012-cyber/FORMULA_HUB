@@ -4320,7 +4320,34 @@ p {
     margin-bottom: 20px;
 }
 
-.calculatorBox select {
+
+#velocityTimeInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#velocityTimeInputs label{
+    color: rgb(11,61,46);
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+
+#velocityTimeInputs input{
+    width:250px;
+    height:40px;
+    border: 3px solid rgb(11,61,46);
+    border-radius: 10px;
+    font-family:'baloo 2', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#velocityTimeInputs select{
     width:260px;
     height:50px;
     border: 3px solid rgb(11,61,46);
@@ -4331,8 +4358,71 @@ p {
     margin-bottom: 20px;
 }
 
-.calculatorBox select:focus {
+#velocityTimeInputs select,#velocityTimeInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
 
+#changeVelocityTimeVariable{
+    border: none;
+    border-radius:15px;
+    background: rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 30px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin-top:5px;
+}
+
+#changeVelocityTimeVariable:hover {
+    background: rgb(11,61,46);
+    color: rgb(247, 249, 248);
+    transform:scale(1.2);
+}
+
+
+
+#velocityTimePopup {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#velocityTimePopup h2 {
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+#velocityTimePopup .variableButton {
+    width: 100%;
+    max-width: 320px;
+    min-height: 45px;
+    padding: 8px 12px;
+    border: 2px solid rgb(11, 61, 46);
+    border-radius: 12px;
+    background: rgb(247, 249, 248);
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#velocityTimePopup .variableButton:hover {
+    background: rgb(11,61,46);
+    color: rgb(247, 249, 248);
+    transform: scale(1.2);
+}
