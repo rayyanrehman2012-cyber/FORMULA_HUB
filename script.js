@@ -2270,7 +2270,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
 
         if (button.value === "finalVelocity") {// if the value is final velocity 
             velocityTimeInputs.innerHTML = ` 
-            <label>INITIAL VELOCITY (vi)</label>
+            <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
             <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
@@ -2284,7 +2284,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>ACCELERATION (a)</label>
+            <label for "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
 
             <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
@@ -2299,14 +2299,14 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                 </select>
             
 
-            <label>TIME (t)</label>
+            <label for "vtTime" >TIME (t)</label>
             <input type="number" id="vtTime">
             `;//add this the the html 
         }
 
         else if (button.value === "initialVelocity") {// if the value is initial velocity 
             velocityTimeInputs.innerHTML = `
-            <label>FINAL VELOCITY (vf)</label>
+            <label for = "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
             <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
@@ -2320,7 +2320,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>ACCELERATION (a)</label>
+            <label for = "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
 
             <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
@@ -2334,14 +2334,14 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>TIME (t)</label>
+            <label for "vtTime">TIME (t)</label>
             <input type="number" id="vtTime">
             `;//add this the the html
         }
 
         else if (button.value === "acceleration") {// if the value is acceleration   
             velocityTimeInputs.innerHTML = `
-            <label>FINAL VELOCITY (vf)</label>
+            <label for "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
             <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
@@ -2355,7 +2355,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>INITIAL VELOCITY (vi)</label>
+            <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
             <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
@@ -2369,14 +2369,14 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>TIME (t)</label>
+            <label for "vtTime">TIME (t)</label>
             <input type="number" id="vtTime">
             `;//add this the the html
         }
 
         else if (button.value === "time") {// if the value is time 
             velocityTimeInputs.innerHTML = `
-            <label>FINAL VELOCITY (vf)</label>
+            <label for "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
 
             <label for = "vtFinalVelocityDirection"> Final VELOCITY DIRECTION</label>   
@@ -2390,7 +2390,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>INITIAL VELOCITY (vi)</label>
+            <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
 
             <label for = "vtInitialVelocityDirection"> INITIAL VELOCITY DIRECTION</label>   
@@ -2404,7 +2404,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
 
-            <label>ACCELERATION (a)</label>
+            <label for "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
 
             <label for = "vtAccelerationDirection"> ACCELERATION DIRECTION</label>   
@@ -2440,6 +2440,7 @@ changeVelocityTimeVariable.addEventListener("click", function(){
 
 
 
+
 // THESE ARE ALL OF THE MAIN MENU BUTTONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
@@ -2456,6 +2457,7 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
+
 
 
 
@@ -2910,6 +2912,8 @@ velocityTimeEquationBackButton.addEventListener("click", function(){// this is t
     velocityTimeEquationResult.textContent = "";// clears the result 
     changeVelocityTimeVariable.style.display = "none";// hides this 
 })
+
+
 
 
 
@@ -3776,6 +3780,8 @@ allvelocityTimeEquationButton.addEventListener("click", function(){// if the cub
 
 
 
+
+
 //THESE ARE ALL OF THE BUTONS ON THE MATH FORMULA PAGE
 rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
@@ -4466,6 +4472,8 @@ trianglePrismPerimeterButton.addEventListener("click", function(){// if the cube
     cubeVolumePage.style.display = "none";// hid this page 
     trianglePrismPerimeterPage.style.display = "flex"// shows this page
 })
+
+
 
 
 
