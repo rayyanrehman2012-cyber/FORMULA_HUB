@@ -1960,10 +1960,59 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
         }
 
         else{
-            
+            if (initialDirection === "WEST" || initialDirection === "SOUTH" || initialDirection === "BACKWARD") { 
+                initialVelocity = -initialVelocity;
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { 
+                acceleration = -acceleration;
+            }
+
+            Result = initialVelocity + acceleration * time; //this is the formuls 
+
+            let finalDirection;
+
+            if (Result === 0) { // if the result is  0 
+                velocityTimeEquationResult.textContent = "FINAL VELOCITY =: 0 METERS/SECOND";
+                velocityTimeEquationResult.style.display = "rgb(11,61,46)" // changes the colour to grree n
+
+            }
+
+            else if (initialDirection === "EAST" || initialDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // but the result was zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise it would be west 
+                    finalDirection = "WEST";
+                }
+            }
+
+            else if (initialDirection === "NORTH" || initialDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // and the result is zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// and the result is not zero 
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (initialDirection === "FORWARD" || initialDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){
+                velocityTimeEquationResult.textContent = "FINAL VELOCITY = " +Result+ " METERS/SECOND [" +finalDirection+ "]"// result line 
+                velocityTimeEquationResult.style.display = "rgb(11,61,46)" // changes the colour to grree n
+            }
         }
 
-})
+}})
 
 
 
