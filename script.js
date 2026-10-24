@@ -2091,6 +2091,86 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
         }
 
     }
+
+    else if(velocityTimeSelectedVariable.textContent === "ACCELERATION (a)") {
+
+        let FinalVelocity = Number(document.getElementById("vtFinalVelocity").value); // holds the inital velocity value 
+        let InitialVelocity = Number(document.getElementById("vtInitialVelocity").value);// holds the acceleration vlaue 
+        let time = Number(document.getElementById("vtTime").value); // holdes the time value 
+        let FinalVelocityDirection = document.getElementById("vtFinalVelocityDirection").value;// this hold the directiosn value 
+        let InitialVelocityDirection = document.getElementById("vtInitialVelocityDirection").value;// this hold the directiosn value 
+
+        if(document.getElementById("vtFinalVelocity").value === "" || document.getElementById("vtInitialVelocity").value === "" || document.getElementById("vtTime").value === "") {
+            velocityTimeEquationResult.textContent = "ERROR: ENTER 3 VALUES!";
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (FinalVelocityDirection === "" || InitialVelocityDirection === "") {// are the directions blanked 
+            velocityTimeEquationResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if ((FinalVelocityDirection === "EAST" || FinalVelocityDirection === "WEST") && (InitialVelocityDirection !== "EAST" && InitialVelocityDirection !== "WEST") || (FinalVelocityDirection === "NORTH" || FinalVelocityDirection === "SOUTH") && (InitialVelocityDirection !== "NORTH" && InitialVelocityDirection !== "SOUTH") || (FinalVelocityDirection === "FORWARD" || FinalVelocityDirection === "BACKWARD") && (InitialVelocityDirection !== "FORWARD" && InitialVelocityDirection !== "BACKWARD"))// if this is not tr
+        {
+            velocityTimeEquationResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            velocityTimeEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (FinalVelocityDirection === "WEST" || FinalVelocityDirection === "SOUTH" || FinalVelocityDirection === "BACKWARD") { 
+                FinalVelocity = -FinalVelocity;
+            }
+
+            if (InitialVelocityDirection === "WEST" || InitialVelocityDirection === "SOUTH" || InitialVelocityDirection === "BACKWARD") { 
+                InitialVelocity = -InitialVelocity;
+            }
+
+            Result = (FinalVelocity - InitialVelocity )/ time; //this is the formuls 
+
+            let finalDirection;
+
+            if (Result === 0) { // if the result is  0 
+                velocityTimeEquationResult.textContent = "ACCELERATION = 0 METERS/SECOND SQUARED";
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+
+            else if (FinalVelocityDirection === "EAST" || FinalVelocityDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // but the result was zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise it would be west 
+                    finalDirection = "WEST";
+                }
+            }
+
+            else if (FinalVelocityDirection === "NORTH" || FinalVelocityDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // and the result is zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// and the result is not zero 
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (FinalVelocityDirection === "FORWARD" || FinalVelocityDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){
+                velocityTimeEquationResult.textContent = "ACCELERATION =" +Math.abs(Result).toFixed(3)+ " METERS/SECOND SQUARED [" +finalDirection+ "]"// result line 
+                velocityTimeEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
+
+    
+
 })
 
 
