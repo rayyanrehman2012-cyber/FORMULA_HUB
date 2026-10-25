@@ -3165,6 +3165,83 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
         }
     }
 
+    else if(timeIndependentSelectedVariable.textContent === "SOLVING FOR INITIAL VELOCITY (vi)") {// if we are calulating the inital velocity 
+        
+        let DisplacementDirection = document.getElementById("ITdisplacementDirection").value;// this hold the directiosn value 
+        let acceleration = Number(document.getElementById("ITAcceleration").value);// holds the acceleration vlaue 
+        let FinalDirection = document.getElementById("ITFinalVelocityDirection").value;// this hold the directiosn value 
+        let FinalVelocity = Number(document.getElementById("ITFinalVelocity").value); // holdes the time value 
+        let Displacement = Number(document.getElementById("ITdisplacement").value); // holds the inital velocity value 
+        let accelerationDirection = document.getElementById("ITAccelerationDirection").value;// this hold the directiosn value 
+
+        
+        if(document.getElementById("ITdisplacement").value === "" || document.getElementById("ITAcceleration").value === "" || document.getElementById("ITFinalVelocity").value === "") { // if the values are blank 
+            timeIndependentResult.textContent = "ERROR: ENTER 3 VALUES!";
+            timeIndependentResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+        
+        else if (FinalDirection === "" || DisplacementDirection === "" || accelerationDirection === "") {// are the directions blanked 
+            timeIndependentResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            timeIndependentResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (((FinalDirection === "EAST" || FinalDirection === "WEST") && ((DisplacementDirection !== "EAST" && DisplacementDirection !== "WEST") || (accelerationDirection !== "EAST" && accelerationDirection !== "WEST"))) || ((FinalDirection === "NORTH" || FinalDirection === "SOUTH") && ((DisplacementDirection !== "NORTH" && DisplacementDirection !== "SOUTH") || (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH"))) || ((FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") && ((DisplacementDirection !== "FORWARD" && DisplacementDirection !== "BACKWARD") || (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))))
+        {
+            timeIndependentResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            timeIndependentResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{ // otherwise 
+            if (DisplacementDirection === "WEST" || DisplacementDirection === "SOUTH" || DisplacementDirection === "BACKWARD") { //if these are the directions 
+                Displacement = -Displacement; // make the value negative to make it easier to use 
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { // if these are your directionas 
+                acceleration = -acceleration;// make the value nagative to make it easier to use 
+            }
+
+            if (FinalDirection === "WEST" || FinalDirection === "SOUTH" || FinalDirection === "BACKWARD") { // if these are your directionas 
+                FinalVelocity = -FinalVelocity;// make the value nagative to make it easier to use 
+            }
+
+            let velocitySquared = FinalVelocity * FinalVelocity - 2 * acceleration * Displacement; // // this calulates the vlocity beofre being square routed 
+
+            if (velocitySquared < 0) { // if its negative 
+                timeIndependentResult.textContent = "ERROR: NO REAL VELOCITY SOLUTION"; // nosolution 
+                timeIndependentResult.style.color = "rgb(102,21,7)";// red 
+            }
+
+            else {
+                Result = Math.sqrt(velocitySquared); // the formula(square root part) 
+
+                let positiveDirection; // holds on direction 
+                let negativeDirection; // holds the other direction 
+
+                if (DisplacementDirection === "EAST" || DisplacementDirection === "WEST") { // if these were the directions entered 
+                    positiveDirection = "EAST"; // then this will e this 
+                    negativeDirection = "WEST"; // and this will be dith 
+                }
+                else if (DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") {// if these were entered 
+                    positiveDirection = "NORTH"; // then this will be the direction 
+                    negativeDirection = "SOUTH"; // and this one will be the othe rone 
+                }
+                else { // anything else 
+                    positiveDirection = "FORWARD"; // it will be this 
+                    negativeDirection = "BACKWARD";// and this 
+                }
+
+                if (Result === 0) {// if the result is zero 
+                    timeIndependentResult.textContent = "INITIAL VELOCITY  = 0.000 METERS/SECOND"; // this is the line 
+                }
+                else {// everythig else 
+                    timeIndependentResult.textContent = "INITIAL VELOCITY MAGNITUDE = " + Result.toFixed(3) + " METERS/SECOND [" + positiveDirection + " OR " + negativeDirection + "]"; //result 
+                }
+
+                timeIndependentResult.style.color = "rgb(11,61,46)";// the color is grrne 
+            }
+        }
+    }
+
 });
 
 
@@ -4003,12 +4080,12 @@ physicsButton.addEventListener("click", function() {// physics formula menue
 
 
 // THESE ARE ALL THE BACK BUTTON EVENT FUNCTIONS IN THIS PROJECT
-backButton.addEventListener("click", function() {// back button all formulas bage 
+backButton.addEventListener("click", function() {//BACK BUTTON
     formulaPage.style.display = "none";// the formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
 });
 
-mathBackButton.addEventListener("click", function() {// back button math menu 
+mathBackButton.addEventListener("click", function() {// BACK BUTTON ON THE MATH MENU  
     mathFormulaPage.style.display = "none";// the math only formula page dissapears 
     startPage.style.display = "flex";// the starte page becomes visible 
 });
@@ -4647,7 +4724,7 @@ allslopeButton.addEventListener("click", function() {// the slopw buton on the f
     slopePage.style.display = "flex"; //show this pages 
 });
 
-alldistanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+alldistanceButton.addEventListener("click", function() {// the distance buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -4666,7 +4743,7 @@ alldistanceButton.addEventListener("click", function() {// the slopw buton on th
     distancePage.style.display = "flex";// shows this page
 });
 
-allmidpointButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+allmidpointButton.addEventListener("click", function() {// the midpoint buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -4792,7 +4869,7 @@ allcubePerimeterButton.addEventListener("click", function(){// if the cube perim
     cubePerimeterPage.style.display = "flex"// shows this page
 });
 
-allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube SurfaceArea is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4814,7 +4891,7 @@ allcubeSurfaceAreaButton.addEventListener("click", function(){// if the cube per
     cubeSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-allrectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allrectanglePrismVolumeButton.addEventListener("click", function(){// if the rectanglePrismVolume is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4836,7 +4913,7 @@ allrectanglePrismVolumeButton.addEventListener("click", function(){// if the cub
     rectanglePrismVolumePage.style.display = "flex"// shows this page
 });
 
-allrectanglePrismPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allrectanglePrismPerimeterButton.addEventListener("click", function(){// if the rectanglePrismPerimeter is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4858,7 +4935,7 @@ allrectanglePrismPerimeterButton.addEventListener("click", function(){// if the 
     rectanglePrismPerimeterPage.style.display = "flex"// shows this page
 });
 
-allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the rectanglePrismSurfaceArea is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4880,7 +4957,7 @@ allrectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if th
     rectanglePrismSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-allcylinderVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allcylinderVolumeButton.addEventListener("click", function(){// if the cylinderVolume is clicked 
     startPage.style.display = "none";// hides this pages
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4902,7 +4979,7 @@ allcylinderVolumeButton.addEventListener("click", function(){// if the cube peri
     cylinderVolumePage.style.display = "flex"// shows this page
 });
 
-allcylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allcylinderSurfaceAreaButton.addEventListener("click", function(){// if the cylinderSurfaceArea is clicked 
     startPage.style.display = "none";// hides thi spage 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4924,7 +5001,7 @@ allcylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube
     cylinderSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-allcylinderPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allcylinderPerimeterButton.addEventListener("click", function(){// if thecylinderPerimeterButton is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4946,7 +5023,7 @@ allcylinderPerimeterButton.addEventListener("click", function(){// if the cube p
     cylinderPerimeterPage.style.display = "flex"// shows this page
 });
 
-allradiusButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allradiusButton.addEventListener("click", function(){// if the radiusButton is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4968,7 +5045,7 @@ allradiusButton.addEventListener("click", function(){// if the cube perimeter is
     radiusPage.style.display = "flex"// shows this page
 });
 
-alldiameterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+alldiameterButton.addEventListener("click", function(){// if the diameterButton is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -4990,7 +5067,7 @@ alldiameterButton.addEventListener("click", function(){// if the cube perimeter 
     diameterPage.style.display = "flex"// shows this page
 });
 
-allconeVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allconeVolumeButton.addEventListener("click", function(){// if the coneVolume is clicked 
     startPage.style.display = "none";// hides this pagge 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -5012,7 +5089,7 @@ allconeVolumeButton.addEventListener("click", function(){// if the cube perimete
     coneVolumePage.style.display = "flex"// shows this page
 });
 
-allconePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allconePerimeterButton.addEventListener("click", function(){// if the conePerimeter is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -5034,7 +5111,7 @@ allconePerimeterButton.addEventListener("click", function(){// if the cube perim
     conePerimeterPage.style.display = "flex"// shows this page
 });
 
-allconeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allconeSurfaceAreaButton.addEventListener("click", function(){// if the coneSurfaceArea is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -5056,7 +5133,7 @@ allconeSurfaceAreaButton.addEventListener("click", function(){// if the cube per
     coneSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-allsphereVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allsphereVolumeButton.addEventListener("click", function(){// if the sphereVolume is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -5078,7 +5155,7 @@ allsphereVolumeButton.addEventListener("click", function(){// if the cube perime
     sphereVolumePage.style.display = "flex"// shows this page
 });
 
-allsphereSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allsphereSurfaceAreaButton.addEventListener("click", function(){// if the sphereSurfaceArea is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     squareAreaPage.style.display = "none";// hides this page 
@@ -5100,7 +5177,7 @@ allsphereSurfaceAreaButton.addEventListener("click", function(){// if the cube p
     sphereSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-alltrianglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+alltrianglePrismVolumeButton.addEventListener("click", function(){// if the trianglePrism is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -5399,7 +5476,7 @@ alldisplacementFinalEquationButton.addEventListener("click", function (){// the 
     displacementFinalEquationPage.style.display = "flex"// shows this page
 });
 
-alltimeIndependentButton.addEventListener("click", function (){// the displacement final equation on the all formjula page 
+alltimeIndependentButton.addEventListener("click", function (){// the time independe equation on the all formjula page 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -5565,7 +5642,7 @@ parallelogramAreaButton.addEventListener("click", function(){// the parallelogra
     parallelogramAreaPage.style.display = "flex";// shows this page 
 });
 
-slopeButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+slopeButton.addEventListener("click", function() {// the slope buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -5583,7 +5660,7 @@ slopeButton.addEventListener("click", function() {// the slopw buton on the form
     slopePage.style.display = "flex"; //shows this pages 
 });
 
-distanceButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+distanceButton.addEventListener("click", function() {// the distance buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -5602,7 +5679,7 @@ distanceButton.addEventListener("click", function() {// the slopw buton on the f
     distancePage.style.display = "flex";// shows this page
 });
 
-midpointButton.addEventListener("click", function() {// the slopw buton on the formula screen 
+midpointButton.addEventListener("click", function() {// the midpoint buton on the formula screen 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -5622,7 +5699,7 @@ midpointButton.addEventListener("click", function() {// the slopw buton on the f
     midpointPage.style.display = "flex";// shows rhis page
 });
 
-pythagoreanAButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+pythagoreanAButton.addEventListener("click", function() {// on formula bage, pythagorean a is clciked 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -5643,7 +5720,7 @@ pythagoreanAButton.addEventListener("click", function() {// on formula bage, pyt
     pythagoreanPageA.style.display = "flex";// show this 
 });
 
-pythagoreanBButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+pythagoreanBButton.addEventListener("click", function() {// on formula bage, pythagorean b is clciked 
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -5664,7 +5741,7 @@ pythagoreanBButton.addEventListener("click", function() {// on formula bage, pyt
     pythagoreanPageB.style.display = "flex";// show this 
 });
 
-pythagoreanCButton.addEventListener("click", function() {// on formula bage, pythagorean a 
+pythagoreanCButton.addEventListener("click", function() {// on formula bage, pythagorean c ic clicked
     startPage.style.display = "none"; // hides the pages 
     mathFormulaPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none"; // hides this page 
@@ -5707,7 +5784,7 @@ cubeVolumeButton.addEventListener("click", function() {// if the cube volume but
     cubeVolumePage.style.display = "flex";// show this page 
 });
 
-cubePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+cubePerimeterButton.addEventListener("click", function(){// if the cube perimeter button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     mathFormulaPage.style.display = "none"; // hides this page 
@@ -5730,7 +5807,7 @@ cubePerimeterButton.addEventListener("click", function(){// if the cube perimete
     cubePerimeterPage.style.display = "flex"// shows this page
 });
 
-cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube surface area is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this pages
     mathFormulaPage.style.display = "none"; // hides this page 
@@ -5753,7 +5830,7 @@ cubeSurfaceAreaButton.addEventListener("click", function(){// if the cube perime
     cubeSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-rectanglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+rectanglePrismVolumeButton.addEventListener("click", function(){// if the rectangle volume button is clicked 
     startPage.style.display = "none";// this hides the screen 
     mathFormulaPage.style.display = "none"; // hides this page 
     formulaPage.style.display = "none";// this hides the screen 
@@ -5776,7 +5853,7 @@ rectanglePrismVolumeButton.addEventListener("click", function(){// if the cube p
     rectanglePrismVolumePage.style.display = "flex"// shows this page
 });
 
-rectanglePrismPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+rectanglePrismPerimeterButton.addEventListener("click", function(){// if the rectangle prism perimeter button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     mathFormulaPage.style.display = "none"; // hides this page 
@@ -5799,7 +5876,7 @@ rectanglePrismPerimeterButton.addEventListener("click", function(){// if the cub
     rectanglePrismPerimeterPage.style.display = "flex"// shows this page
 });
 
-rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the rectangle prism surface area button  is clicked 
     startPage.style.display = "none"; // hides this page 
     formulaPage.style.display = "none"; // hides this page 
     mathFormulaPage.style.display = "none"; // hides this page 
@@ -5822,7 +5899,7 @@ rectanglePrismSurfaceAreaButton.addEventListener("click", function(){// if the c
     rectanglePrismSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-cylinderVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+cylinderVolumeButton.addEventListener("click", function(){// if the cylinder volume is clicked 
     startPage.style.display = "none"; // hides this page 
     formulaPage.style.display = "none"; // hides this page 
     mathFormulaPage.style.display = "none"; // hides this page 
@@ -5845,7 +5922,7 @@ cylinderVolumeButton.addEventListener("click", function(){// if the cube perimet
     cylinderVolumePage.style.display = "flex"// shows this page
 });
 
-cylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+cylinderSurfaceAreaButton.addEventListener("click", function(){// if the cylinder surface area is clicked 
     startPage.style.display = "none";// hides this page 
     mathFormulaPage.style.display = "none"; // hides this page 
     formulaPage.style.display = "none";// hides this page 
@@ -5868,7 +5945,7 @@ cylinderSurfaceAreaButton.addEventListener("click", function(){// if the cube pe
     cylinderSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-cylinderPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+cylinderPerimeterButton.addEventListener("click", function(){// if the cylinder perimeter is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";// hides this page 
     mathFormulaPage.style.display = "none";// hides this page 
@@ -5891,7 +5968,7 @@ cylinderPerimeterButton.addEventListener("click", function(){// if the cube peri
     cylinderPerimeterPage.style.display = "flex"// shows this page
 });
 
-radiusButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+radiusButton.addEventListener("click", function(){// if the radius button is clicked
     startPage.style.display = "none";// hides this screen 
     formulaPage.style.display = "none";// hides this screen 
     mathFormulaPage.style.display = "none";// hides this screen 
@@ -5914,7 +5991,7 @@ radiusButton.addEventListener("click", function(){// if the cube perimeter is cl
     radiusPage.style.display = "flex"// shows this page
 });
 
-diameterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+diameterButton.addEventListener("click", function(){// if the diameter button is clicked
     startPage.style.display = "none";
     formulaPage.style.display = "none";
     mathFormulaPage.style.display = "none";
@@ -5937,7 +6014,7 @@ diameterButton.addEventListener("click", function(){// if the cube perimeter is 
     diameterPage.style.display = "flex"// shows this page
 });
 
-coneVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+coneVolumeButton.addEventListener("click", function(){// if the cone volume is clicked 
     startPage.style.display = "none";// hides this screen 
     mathFormulaPage.style.display = "none"; // hides this screent 
     formulaPage.style.display = "none";// hides this screen 
@@ -5960,7 +6037,7 @@ coneVolumeButton.addEventListener("click", function(){// if the cube perimeter i
     coneVolumePage.style.display = "flex"// shows this page
 });
 
-conePerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+conePerimeterButton.addEventListener("click", function(){// if the cone perimeter is clicked 
     startPage.style.display = "none";//hide this page 
     mathFormulaPage.style.display = "none"; // hides this screent 
     formulaPage.style.display = "none";// hide this page 
@@ -5983,7 +6060,7 @@ conePerimeterButton.addEventListener("click", function(){// if the cube perimete
     conePerimeterPage.style.display = "flex"// shows this page
 });
 
-coneSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+coneSurfaceAreaButton.addEventListener("click", function(){// if the cone surface area  is clicked 
     startPage.style.display = "none";// this hides this page from the screen 
     formulaPage.style.display = "none";// this hides this page
     mathFormulaPage.style.display = "none"// this hides the math formula page after the button is cilced  
@@ -6006,7 +6083,7 @@ coneSurfaceAreaButton.addEventListener("click", function(){// if the cube perime
     coneSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-sphereVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+sphereVolumeButton.addEventListener("click", function(){// if the sphere volume is clicked 
     startPage.style.display = "none";//hides this page
     formulaPage.style.display = "none";// hides this page 
     mathFormulaPage.style.display = "none"// hides this page 
@@ -6029,7 +6106,7 @@ sphereVolumeButton.addEventListener("click", function(){// if the cube perimeter
     sphereVolumePage.style.display = "flex"// shows this page
 });
 
-sphereSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+sphereSurfaceAreaButton.addEventListener("click", function(){// if the sphere surface areea button is clicked  is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -6052,7 +6129,7 @@ sphereSurfaceAreaButton.addEventListener("click", function(){// if the cube peri
     sphereSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-trianglePrismVolumeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+trianglePrismVolumeButton.addEventListener("click", function(){// if the triangle prism volume button  is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -6075,7 +6152,7 @@ trianglePrismVolumeButton.addEventListener("click", function(){// if the cube pe
     trianglePrismVolumePage.style.display = "flex"// shows this page
 });
 
-trianglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+trianglePrismSurfaceAreaButton.addEventListener("click", function(){// if the triangle prism surface area button is clicked 
     startPage.style.display = "none";// hides this page 
     mathFormulaPage.style.display = "none"// hides this page 
     formulaPage.style.display = "none";//hides this page 
@@ -6099,7 +6176,7 @@ trianglePrismSurfaceAreaButton.addEventListener("click", function(){// if the cu
     trianglePrismSurfaceAreaPage.style.display = "flex"// shows this page
 });
 
-trianglePrismPerimeterButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+trianglePrismPerimeterButton.addEventListener("click", function(){// if the Triangle prisim perimeter buttob is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -6132,7 +6209,7 @@ trianglePrismPerimeterButton.addEventListener("click", function(){// if the cube
 
 
 //THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
-speedButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+speedButton.addEventListener("click", function(){// if the speed putton is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6155,7 +6232,7 @@ speedButton.addEventListener("click", function(){// if the cube perimeter is cli
     speedCalculatorPage.style.display = "flex"// shows this page
 });
 
-velocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+velocityButton.addEventListener("click", function(){// if the velocity button is clicked  
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6178,7 +6255,7 @@ velocityButton.addEventListener("click", function(){// if the cube perimeter is 
     velocityCalculatorPage.style.display = "flex"// shows this page
 });
 
-avgVelocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+avgVelocityButton.addEventListener("click", function(){// if the average velocity button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6201,7 +6278,7 @@ avgVelocityButton.addEventListener("click", function(){// if the cube perimeter 
     avgVelocityCalculatorPage.style.display = "flex"// shows this page
 });
 
-physicsDistanceButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+physicsDistanceButton.addEventListener("click", function(){// if the physics distance button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6224,7 +6301,7 @@ physicsDistanceButton.addEventListener("click", function(){// if the cube perime
     physicsDistanceCalculatorPage.style.display = "flex"// shows this page
 });
 
-displacementButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+displacementButton.addEventListener("click", function(){// if the displacement calculator page is cliked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6247,7 +6324,7 @@ displacementButton.addEventListener("click", function(){// if the cube perimeter
     displacementCalculatorPage.style.display = "flex"// shows this page
 });
 
-accelerationButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+accelerationButton.addEventListener("click", function(){// if accelerationncalulator button is clicked
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6270,7 +6347,7 @@ accelerationButton.addEventListener("click", function(){// if the cube perimeter
     accelerationPage.style.display = "flex"// shows this page
 });
 
-timeButton.addEventListener("click", function(){// if the time page button is clicked 
+timeButton.addEventListener("click", function(){// if the time calculator page is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6293,7 +6370,7 @@ timeButton.addEventListener("click", function(){// if the time page button is cl
     timePage.style.display = "flex"// shows this page
 });
 
-velocityTimeEquationButton.addEventListener("click", function(){// if the time page button is clicked 
+velocityTimeEquationButton.addEventListener("click", function(){// if velocity time equation button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";
@@ -6316,7 +6393,7 @@ velocityTimeEquationButton.addEventListener("click", function(){// if the time p
     velocityTimeEquationPage.style.display = "flex"// shows this page
 });
 
-displacementInitialEquationButton.addEventListener("click", function(){// if the time page button is clicked 
+displacementInitialEquationButton.addEventListener("click", function(){// if the initial velocity Displacement equation button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";// hides this page 
@@ -6339,7 +6416,7 @@ displacementInitialEquationButton.addEventListener("click", function(){// if the
     displacementInitialEquationPage.style.display = "flex"// shows this page
 });
 
-displacementFinalEquationButton.addEventListener("click", function(){// if the time page button is clicked 
+displacementFinalEquationButton.addEventListener("click", function(){// if the final velocity  Displacement equation is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";// hides this page 
@@ -6362,7 +6439,7 @@ displacementFinalEquationButton.addEventListener("click", function(){// if the t
     displacementFinalEquationPage.style.display = "flex"// shows this page
 });
 
-timeIndependentButton.addEventListener("click", function(){// if the time page button is clicked 
+timeIndependentButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     physicsFormulaPage.style.display = "none";// hides this page 
