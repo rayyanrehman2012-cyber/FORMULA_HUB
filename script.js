@@ -3337,6 +3337,10 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
 
 
 
+
+
+
+
 //THESE ARE THE POPUP MENU BUTTONS FOR THE KINAMATIC EQUATIONS
 
 //first equation 

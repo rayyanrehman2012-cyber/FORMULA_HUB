@@ -135,7 +135,7 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
     - Calculator for Displacement 
     - Calculator of Acceleration 
 
-- Started Making the forth Kinamatice formula pafge (TIME INDEPENDENT EQUATION)
+- Started Making the forth Kinamatice formula page (TIME INDEPENDENT EQUATION)
     - The page opens a popup with 4 version (rearranged) of the formula 
     - you can choose which variable you want to solve for
     - Clicking the button opens the appropriat calulator
@@ -144,9 +144,16 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
     - Calculator for Displacement
     - Calculator for Acceleration
 
+- Started Making the fifth Kinamatice formula page (AVERAGE VELOCITY EQUATION)
+    - The page opens a popup with 4 version (rearranged) of the formula 
+    - you can choose which variable you want to solve for
+    - Clicking the button opens the appropriat calulator
+    - Calculator for Final Velocity 
+    - Calculator for Initial Velocity
+    - Calculator for Displacement
+    - Calculator for Time
 
-
-
+SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID 20, BECAUSE EACH OF THE KINEMATIC EQUATIONS HAVE 5 CALUCLATORS WITHIN THEM
 
 
 
