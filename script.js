@@ -2331,6 +2331,89 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
         }
     }
 
+    else if(displacementInitialSelectedVariable.textContent === "SOLVING FOR INITIAL VELOCITY (vi)") {
+        let Displacement = Number(document.getElementById("IDdisplacement").value); // holds the inital velocity value 
+        let acceleration = Number(document.getElementById("IDAcceleration").value);// holds the acceleration vlaue 
+        let time = Number(document.getElementById("IDTime").value); // holdes the time value 
+        let DisplacementDirection = document.getElementById("IDdisplacementDirection").value;// this hold the directiosn value 
+        let accelerationDirection = document.getElementById("IDAccelerationDirection").value;// this hold the directiosn value 
+
+        if(document.getElementById("IDdisplacement").value === "" || document.getElementById("IDAcceleration").value === "" || document.getElementById("IDTime").value === "") {
+            displacementInitialEquationResult.textContent = "ERROR: ENTER 3 VALUES!";
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+
+        }
+        else if (time === 0) {// if the time is qual to zero 
+            displacementInitialEquationResult.textContent = "ERROR: TIME CANNOT BE ZERO!";//show this error message 
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// in red 
+        }
+        else if (DisplacementDirection === "" || accelerationDirection === "") {// are the directions blanked 
+            displacementInitialEquationResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if ((DisplacementDirection === "EAST" || DisplacementDirection === "WEST") && (accelerationDirection !== "EAST" && accelerationDirection !== "WEST") || (DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") && (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH") || (DisplacementDirection === "FORWARD" || DisplacementDirection === "BACKWARD") && (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))// if this is not tr
+        {
+            displacementInitialEquationResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (DisplacementDirection === "WEST" || DisplacementDirection === "SOUTH" || DisplacementDirection === "BACKWARD") { 
+                Displacement = -Displacement;
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { 
+                acceleration = -acceleration;
+            }
+
+            Result = (Displacement - (0.5* acceleration * time * time))/ time; //this is the formuls 
+
+            let finalDirection;
+
+            if (Result === 0) { // if the result is  0 
+                displacementInitialEquationResult.textContent = "INITIAL VELOCITY =: 0 METERS/SECOND";
+                displacementInitialEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+
+            else if (DisplacementDirection === "EAST" || DisplacementDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // but the result was zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise it would be west 
+                    finalDirection = "WEST";
+                }
+            }
+
+            else if (DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // and the result is zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// and the result is not zero 
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (DisplacementDirection === "FORWARD" || DisplacementDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){
+                displacementInitialEquationResult.textContent = "INITIAL VELOCITY = " +Math.abs(Result).toFixed(3)+ " METERS/SECOND [" +finalDirection+ "]"// result line 
+                displacementInitialEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+
+    }
+
+
+
     
 })
 
