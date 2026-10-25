@@ -77,7 +77,7 @@
                     <button id = "alltimeButton" class="formulaButton">TIME</button>
                     <button id = "allvelocityTimeEquationButton" class="formulaButton">KINEMATICS EQUATION - VELOCITY-TIME EQUATION</button>
                     <button id = "alldisplacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT WITH INITIAL VELOCITY</button>
-                    <button class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT WITH FINAL VELOCITY</button>
+                    <button id = "alldisplacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT WITH FINAL VELOCITY</button>
                     <button class="formulaButton">KINEMATICS EQUATION - AVERAGE VELOCITY EQUATION</button>
                     <button class="formulaButton">KINAMATICS EQUATION - VELOCITY-DISPLACEMENT EQUATION </button>
                 </div>
@@ -141,7 +141,7 @@
                     <button id = "timeButton" class="formulaButton">TIME</button>
                     <button id = "velocityTimeEquationButton" class="formulaButton">KINEMATICS EQUATION - VELOCITY-TIME EQUATION</button>
                     <button id = "displacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT WITH INITIAL VELOCITY</button>
-                    <button class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT WITH FINAL VELOCITY</button>
+                    <button id = "displacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION - DISPLACEMENT WITH FINAL VELOCITY</button>
                     <button class="formulaButton">KINEMATICS EQUATION - AVERAGE VELOCITY EQUATION</button>
                     <button class="formulaButton">KINAMATICS EQUATION - VELOCITY-DISPLACEMENT EQUATION </button>
                 </div>
@@ -948,6 +948,7 @@
             </div>
             <button id="velocityTimeEquationBackButton">BACK</button>
         </main>
+
         <main class = "displacementInitialEquationPage">
             <h1>DISPLACEMNT WITH INITIAL VELOCITY EQUATION</h1>
             <div class = "calculatorBox">
@@ -971,6 +972,29 @@
             </div>
             <button id="displacementInitialEquationBackButton">BACK</button>
 
+        </main>
+
+        <main class="displacementFinalEquationPage">
+            <h1>DISPLACEMENT WITH FINAL VELOCITY EQUATION</h1>
+            <div class = "calculatorBox">
+                <div id="displacementFinalPopup" class="popupMenu">
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <button class="variableButton2" value="DFdisplacement"> DISPLACEMENT (d) </button>
+                    <button class="variableButton2" value="DFfinalVelocity">FINAL VELOCITY (vf)</button>         
+                    <button class="variableButton2" value="DFacceleration"> ACCELERATION (a)</button>
+                    <button class="variableButton2" value="DFtime"> TIME (t) </button>
+                </div>
+                <h2 id="displacementFinalSelectedVariable"></h2>
+
+                <div id="displacementFinalInputs"></div>
+
+                <button id="calculateDisplacementFinalEquation">CALCULATE</button>
+
+                <p id="displacementFinalEquationResult"></p>
+
+                <button id="changeDisplacementFinalVariable">CHANGE VARIABLE</button>
+            </div>
+            <button id="displacementFinalEquationBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
