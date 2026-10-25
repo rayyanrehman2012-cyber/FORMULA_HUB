@@ -2862,7 +2862,7 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
         let FinalVelocityDirection = document.getElementById("FDFinalVelocityDirection").value;// this hold the directiosn value 
         let acceleration = Number(document.getElementById("FDAcceleration").value);// holds the acceleration vlaue 
 
-        if(document.getElementById("IDdisplacement").value === "" || document.getElementById("IDFinalVelocity").value === "" || document.getElementById("IDAcceleration").value === "") {// if these are blank 
+        if(document.getElementById("FDdisplacement").value === "" || document.getElementById("FDFinalVelocity").value === "" || document.getElementById("FDAcceleration").value === "") {// if these are blank 
             displacementFinalEquationResult.textContent = "ERROR: ENTER 3 VALUES!"; // this is the error messge 
             displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
         }
@@ -2878,14 +2878,6 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
             displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
         }
 
-        else if (acceleration === 0) {// if acceleration is zero 
-
-            Result = Displacement / FinalVelocity;// this is the forumls 
-        
-            displacementFinalEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
-            displacementFinalEquationResult.style.color = "rgb(11,61,46)";// make the massage in red 
-        }
-
         else{
             if (DisplacementDirection === "WEST" || DisplacementDirection === "SOUTH" || DisplacementDirection === "BACKWARD") { // if these are the values 
                 Displacement = -Displacement;// make this negative 
@@ -2899,16 +2891,38 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
                 acceleration = -acceleration; // make the values negative 
             }
 
-        let discriminant = (FinalVelocity * FinalVelocity) - (2 * acceleration * Displacement); // the discriminenet of f the quadratic formula 
+            let discriminant = (FinalVelocity * FinalVelocity) - (2 * acceleration * Displacement); // the discriminenet of f the quadratic formula 
 
-        if (discriminant < 0) {// if the discriminene its a negative number 
+            if (acceleration === 0) {// if acceleration is zero 
+
+                if (FinalVelocity === 0) {// if final velocity is zero
+                    displacementFinalEquationResult.textContent = "ERROR: CANNOT DETERMINE TIME";// erro message 
+                    displacementFinalEquationResult.style.color = "rgb(102,21,7)";//in red 
+                }
+
+                else {
+                    Result = Displacement / FinalVelocity;// calculate time//formula 
+
+                    if (Result < 0) {// if time is negative
+                    displacementFinalEquationResult.textContent = "ERROR: FIX YOUR VALUES, TIME CAN'T BE NEGATIVE";//error message 
+                    displacementFinalEquationResult.style.color = "rgb(102,21,7)";// i n red 
+                }
+
+                else {
+                    displacementFinalEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS";//result 
+                    displacementFinalEquationResult.style.color = "rgb(11,61,46)";// in green 
+                }
+            }
+        }
+        
+        else if (discriminant < 0) {// if the discriminene its a negative number 
             displacementFinalEquationResult.textContent = "ERROR: NO REAL TIME SOLUTION"; // show this erro 
             displacementFinalEquationResult.style.color = "rgb(102,21,7)";// in red 
         }
 
         else {
-            let Result1 = (-FinalVelocity + Math.sqrt(discriminant)) / acceleration; // calulate with one way 
-            let Result2 = (-FinalVelocity - Math.sqrt(discriminant)) / acceleration; // calulate the other way 
+            let Result1 = (FinalVelocity + Math.sqrt(discriminant)) / acceleration; // calulate with one way 
+            let Result2 = (FinalVelocity - Math.sqrt(discriminant)) / acceleration; // calulate the other way 
 
             if (Result1 >= 0 && Result2 >= 0) { // if both are positive 
             Result = Math.min(Result1, Result2); // the smaller number 
@@ -3328,11 +3342,11 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
             displacementFinalSelectedVariable.textContent = "SOLVING FOR FINAL VELOCITY (vf)";// then the variables is initial velocuty 
         }
 
-        else if (button.value === "DIacceleration") {// if the value is acelerations 
+        else if (button.value === "DFacceleration") {// if the value is acelerations 
             displacementFinalSelectedVariable.textContent = "SOLVING FOR ACCELERATION (a)";// the selected variable is acceleration 
         }
 
-        else if (button.value === "DItime") {// if the value is time 
+        else if (button.value === "DFtime") {// if the value is time 
             displacementFinalSelectedVariable.textContent = "SOLVING FOR TIME (t)";// then the selected variable is time 
         }
         displacementFinalInputs.innerHTML = "";// clear the inputs
