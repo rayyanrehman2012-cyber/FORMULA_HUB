@@ -42,6 +42,8 @@ The website starts of on the front page. The front page contains a short descrip
 - Designed and built the Slope calculator
 - Designed and built the Error Messagees, gives error if the value is missing or zero
 
+PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR THE 3rd KINAMATIC EQUATION
+
 
 
 
