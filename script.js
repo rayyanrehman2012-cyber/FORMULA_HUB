@@ -3038,7 +3038,7 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
             `;//add this the the html 
         }
 
-        else if (button.value === "DFFinalVelocity") {// if the value is final velocity 
+        else if (button.value === "DFfinalVelocity") {// if the value is final velocity 
             displacementFinalInputs.innerHTML = `
             <label for = "FDdisplacement">DISPLACEMENT (d)</label>
             <input type= "number" id="FDdisplacement">
