@@ -9,6 +9,8 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 
 
 
+
+
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
@@ -59,6 +61,8 @@ const timeBackButton = document.getElementById("timeBackButton");// this is the 
 const velocityTimeEquationBackButton = document.getElementById("velocityTimeEquationBackButton");// this is the veleocity time equation back button 
 const displacementInitialEquationBackButton = document.getElementById("displacementInitialEquationBackButton");// this is the second kinamatic equation back button 
 const displacementFinalEquationBackButton = document.getElementById("displacementFinalEquationBackButton");// this is the third equation in the kinamatics one, back button 
+const timeIndependentBackButton = document.getElementById("timeIndependentBackButton");// this is the back button on the time indipendent kinimatic equations 
+
 
 
 
@@ -117,6 +121,7 @@ const timePage = document.querySelector(".timePage");// this is the time calcula
 const velocityTimeEquationPage = document.querySelector(".velocityTimeEquationPage");// this is the velocity time equation page 
 const displacementInitialEquationPage = document.querySelector(".displacementInitialEquationPage");// this is the displacement using initeal velocity page, which is the second kinamatic formula 
 const displacementFinalEquationPage = document.querySelector(".displacementFinalEquationPage");// this is the 3rd kinamatic equation page 
+const timeIndependentPage = document.querySelector(".timeIndependentPage")// this is the 4th kinamatic forumla (timekinamtic formula page)\
 
 
 
@@ -171,6 +176,7 @@ const alltimeButton = document.getElementById("alltimeButton");// this tl the ti
 const allvelocityTimeEquationButton = document.getElementById("allvelocityTimeEquationButton");// this is the all velocity tiem equation button on the all folrmula page 
 const alldisplacementInitialEquationButton = document.getElementById("alldisplacementInitialEquationButton");// this is the button on the all formula page 
 const alldisplacementFinalEquationButton = document.getElementById("alldisplacementFinalEquationButton");// this is the bitton on the all formula page for the 3rd formula button 
+const alltimeIndependentButton = document.getElementById("alltimeIndependentButton")// this is the button on the all formula screen for the time independent equatiosn 
 
 
 
@@ -189,7 +195,7 @@ const timeButton = document.getElementById("timeButton");// this is the time but
 const velocityTimeEquationButton = document.getElementById("velocityTimeEquationButton");// this is the all velocity tiem equation button on the physics  folrmula page 
 const displacementInitialEquationButton = document.getElementById("displacementInitialEquationButton");// this is the button on the physics  formula page 
 const displacementFinalEquationButton = document.getElementById("displacementFinalEquationButton");// this is the 3rd kinamatic equation button on the physics formula page 
-
+const timeIndependentButton = document.getElementById("timeIndependentButton");// this is the button on the physics formula page that takes you to the poups 
 
 
 
@@ -637,8 +643,24 @@ const calculateDisplacementFinalEquation = document.getElementById("calculateDis
 calculateDisplacementFinalEquation.style.display = "none";// hides this intiteall 
 const changeDisplacementFinalVariable = document.getElementById("changeDisplacementFinalVariable");
 changeDisplacementFinalVariable.style.display = "none";// hides this intiteall 
-const displacementFinalEquationResult = document.getElementById("displacementFinalEquationResult");
-const variableButton2s = document.querySelectorAll(".variableButton2");
+const displacementFinalEquationResult = document.getElementById("displacementFinalEquationResult");//result line 
+const variableButton2s = document.querySelectorAll(".variableButton2");// holds the variable buttons 
+
+
+
+// THESE ARE FOR THE TIME INDEPENDENT EQUATION (FORTH KINAMATIC EQUATION)
+const timeIndependentPopup = document.getElementById("timeIndependentPopup");// this is the popup for displacement final velocity equation  
+const timeIndependentSelectedVariable = document.getElementById("timeIndependentSelectedVariable");// this holds the selected variaple 
+const timeIndependentInputs = document.getElementById("timeIndependentInputs");// these are the inputs 
+const calculateTimeIndependent = document.getElementById("calculateTimeIndependent"); // calulate button 
+calculateTimeIndependent.style.display = "none";// hides this intiteall 
+const changeTimeIndependentVariable = document.getElementById("changeTimeIndependentVariable");// change variable button 
+changeTimeIndependentVariable.style.display = "none";// hides this intiteall 
+const timeIndependentResult = document.getElementById("timeIndependentResult");// resut line 
+const variableButton3s = document.querySelectorAll(".variableButton3");// variable buttons 
+
+
+
 
 
 
@@ -3555,6 +3577,14 @@ changeDisplacementFinalVariable.addEventListener("click", function(){// if the c
     changeDisplacementFinalVariable.style.display = "none";// hides the button 
 });
 
+changeTimeIndependentVariable.addEventListener("click", function(){// if the change variable button is clicked 
+    timeIndependentPopup.style.display = "flex";// hide these function
+    calculateTimeIndependent.style.display = "none"
+    timeIndependentInputs.innerHTML = "";// clears the inputs
+    timeIndependentSelectedVariable.textContent = "";// clears the selected variable 
+    displacementFinalEquationResult.textContent = "";// clears the result 
+    changeDisplacementFinalVariable.style.display = "none";// hides the button 
+});
 
 
 
