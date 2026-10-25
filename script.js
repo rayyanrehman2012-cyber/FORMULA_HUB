@@ -2996,7 +2996,99 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
 
 });
 
+calculateTimeIndependent.addEventListener("click", function(){// if the calulate button is clicked 
+    let Result;// this is the result 
 
+    if(timeIndependentSelectedVariable.textContent === "SOLVING FOR DISPLACEMENT (d)") {// if we are solving for diplacement 
+        let FinalVelocity = Number(document.getElementById("ITFinalVelocity").value); // holds the inital velocity value 
+        let acceleration = Number(document.getElementById("ITAcceleration").value);// holds the acceleration vlaue 
+        let InitialDirection = document.getElementById("ITInitialVelocityDirection").value;// this hold the directiosn value 
+        let InitialVelocity = Number(document.getElementById("ITInitialVelocity").value); // holdes the time value 
+        let FinalDirection = document.getElementById("ITFinalVelocityDirection").value;// this hold the directiosn value 
+        let accelerationDirection = document.getElementById("ITAccelerationDirection").value;// this hold the directiosn value 
+
+        if(document.getElementById("ITFinalVelocity").value === "" || document.getElementById("ITAcceleration").value === "" || document.getElementById("ITInitialVelocity").value === "") {
+            timeIndependentResult.textContent = "ERROR: ENTER 3 VALUES!";// this is the erro message 
+            timeIndependentResult.style.color = "rgb(102,21,7)";// change the text color to red 
+
+        }
+
+        else if (InitialDirection === "" || FinalDirection === "" || accelerationDirection === "") {// are the directions blanked 
+            timeIndependentResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            timeIndependentResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (Number(document.getElementById("ITAcceleration").value) === 0) {/// if acceleration is zero 
+            timeIndependentResult.textContent = "ERROR: ACCELERATION CANNOT BE ZERO"; // give this errr
+            timeIndependentResult.style.color = "rgb(102,21,7)";// in red 
+        }
+
+        else if (((InitialDirection === "EAST" || InitialDirection === "WEST") && ((FinalDirection !== "EAST" && FinalDirection !== "WEST") || (accelerationDirection !== "EAST" && accelerationDirection !== "WEST"))) || ((InitialDirection === "NORTH" || InitialDirection === "SOUTH") && ((FinalDirection !== "NORTH" && FinalDirection !== "SOUTH") || (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH"))) || ((InitialDirection === "FORWARD" || InitialDirection === "BACKWARD") && ((FinalDirection !== "FORWARD" && FinalDirection !== "BACKWARD") || (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))))
+        {
+            timeIndependentResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            timeIndependentResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (FinalDirection === "WEST" || FinalDirection === "SOUTH" || FinalDirection === "BACKWARD") { // if these were the directions 
+                FinalVelocity = -FinalVelocity;// flips the value into a negative 
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { ////if these were the directiosn 
+                acceleration = -acceleration; // flips the value into a negative 
+            }
+
+            if (InitialDirection === "WEST" || InitialDirection === "SOUTH" || InitialDirection === "BACKWARD") { ////if these were the directiosn 
+                InitialVelocity = -InitialVelocity; // flips the value into a negative 
+            }
+
+            Result = (FinalVelocity * FinalVelocity - InitialVelocity * InitialVelocity) / (2* acceleration) //this is the formuls 
+
+            let finalDirection; //holds the final final directions 
+
+            if (Result === 0) { // if the result is  0 
+                timeIndependentResult.textContent = "DISPLACEMENT = 0 METERS"; // there is no displacement show this line 
+                timeIndependentResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+
+            }
+
+            else if (FinalDirection === "EAST" || FinalDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // if the result was greater than zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise 
+                    finalDirection = "WEST";// the direction would eb west 
+                }
+            }
+
+            else if (FinalDirection === "NORTH" || FinalDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // if the result was greater than zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// otherwise
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){// if the result is not zer then 
+                timeIndependentResult.textContent = "DISPLACEMENT = " +Math.abs(Result).toFixed(3)+ " METERS [" +finalDirection+ "]"// result line 
+                timeIndependentResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
+
+
+});
 
 
 
@@ -3575,7 +3667,7 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
             <input type="number" id="ITFinalVelocity">
 
             <label for = "ITFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
-                <select id = "FDFinalVelocityDirection">
+                <select id = "ITFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
                     <option value="SOUTH">SOUTH</option>
@@ -3743,7 +3835,7 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
             <input type="number" id="ITAcceleration">
 
             <label for = "ITAccelerationDirection">ACCELERATION DIRECTION</label>   
-                <select id = ITAccelerationDirection">
+                <select id = "ITAccelerationDirection">
                     <option value="">SELECT ONE</option>
                     <option value="NORTH">NORTH</option>
                     <option value="SOUTH">SOUTH</option>
