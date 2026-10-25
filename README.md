@@ -108,32 +108,42 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 
 ## WHAT WE MADE (WEEK 4)
 - Finished the Acceleration Calculator
-- Made the first Kinimatic formula page (Velocity-time EQUATION)
+- Made the first Kinimatic formula page (VELOCITY-TIME EQUATION)
     - The page opens a popup with 4 versions(rearranged) of the formula
     - you can choose which variable you want to solve for
-    - clicking the buttons opens the appropriat calulator
-    - Calulator for time
-    - calulator for Initial velocity 
-    - caluclaor for final velocity
-    - caluclator of acceleration 
+    - Clicking the buttons opens the appropriat calulator
+    - Calculator for Time
+    - Calculator for Initial velocity 
+    - Calculator for Final velocity
+    - Calculator of Acceleration 
 
-- Made the Second Kinimatic formula page (Displacement with Initial velocity EQUATION)
-    - The page opens a popup with 4 versions(rearranged) of the formula
+- Made the Second Kinimatic formula page (DISPLACEMENT  (INITIAL VELOCITY))
+    - The page opens a popup with 4 versions (rearranged) of the formula
     - you can choose which variable you want to solve for
-    - clicking the buttons opens the appropriat calulator
-    - Calulator for time
-    - calulator for Initial velocity 
-    - caluclaor for Displacement 
-    - caluclator of acceleration 
+    - Clicking the buttons opens the appropriat calulator
+    - Calculator for Time
+    - Calculator for Initial velocity 
+    - Calculator for Displacement 
+    - Calculator of Acceleration 
 
-- Started Making the 3rd Kinamatice formula pafge (DISPLACEMENT WITH FINAL VELOCITY EQUATION)
-    - The page opens a popup with 4 versions(rearranged) of the formula
+- Started Making the third Kinamatice formula pafge (DISPLACEMENT  (FINAL VELOCITY))
+    - The page opens a popup with 4 versions (rearranged) of the formula
     - you can choose which variable you want to solve for
-    - clicking the buttons opens the appropriat calulator
-    - Calulator for time
-    - calulator for Final velocity 
-    - caluclaor for Displacement 
-    - caluclator of acceleration 
+    - Clicking the buttons opens the appropriat calulator
+    - Calculator for Time
+    - Calculator for Final velocity 
+    - Calculator for Displacement 
+    - Calculator of Acceleration 
+
+- Started Making the forth Kinamatice formula pafge (TIME INDEPENDENT EQUATION)
+    - The page opens a popup with 4 version (rearranged) of the formula 
+    - you can choose which variable you want to solve for
+    - Clicking the button opens the appropriat calulator
+    - Calculator for Final Velocity 
+    - Calculator for Initial Velocity
+    - Calculator for Displacement
+    - Calculator for Acceleration
+
 
 
 
