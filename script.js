@@ -2979,6 +2979,183 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
+variableButton2s.forEach(function(button){// in variable buttons, for each of them 
+    button.addEventListener("click", function() {// if they are clicked 
+        displacementFinalPopup.style.display = "none";// hides this
+        calculateDisplacementFinalEquation.style.display = "block";// shows this 
+        changeDisplacementFinalVariable.style.display = "block"// shows this 
+
+        if (button.value === "DFdisplacement") {// if the value is final velocity 
+            displacementFinalSelectedVariable.textContent = "SOLVING FOR DISPLACEMENT (d)";// then the variable is final velocity 
+        }
+
+        else if (button.value === "DFfinalVelocity") {// if the velue is final  velocity 
+            displacementFinalSelectedVariable.textContent = "SOLVING FOR FINAL VELOCITY (vf)";// then the variables is initial velocuty 
+        }
+
+        else if (button.value === "DIacceleration") {// if the value is acelerations 
+            displacementFinalSelectedVariable.textContent = "SOLVING FOR ACCELERATION (a)";// the selected variable is acceleration 
+        }
+
+        else if (button.value === "DItime") {// if the value is time 
+            displacementFinalSelectedVariable.textContent = "SOLVING FOR TIME (t)";// then the selected variable is time 
+        }
+        displacementFinalInputs.innerHTML = "";// clear the inputs
+
+        if (button.value === "DFdisplacement") {// if the value is final velocity 
+            displacementFinalInputs.innerHTML = ` 
+            <label for ="FDFinalVelocity">FINAL VELOCITY (vf)</label>
+            <input type="number" id="FDFinalVelocity">
+
+            <label for = "FDFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "FDFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="FDAcceleration">ACCELERATION (a)</label>
+            <input type="number" id="FDAcceleration">
+
+            <label for = "FDAccelerationDirection">ACCELERATION DIRECTION</label>   
+                <select id = "FDAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+            
+
+            <label for ="FDTime" >TIME (t)</label>
+            <input type="number" id="FDTime">
+            `;//add this the the html 
+        }
+
+        else if (button.value === "DFFinalVelocity") {// if the value is final velocity 
+            displacementFinalInputs.innerHTML = `
+            <label for = "FDdisplacement">DISPLACEMENT (d)</label>
+            <input type= "number" id="FDdisplacement">
+
+            <label for = "FDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
+                <select id = "FDdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for = "FDAcceleration">ACCELERATION (a)</label>
+            <input type="number" id="FDAcceleration">
+
+            <label for = "FDAccelerationDirection">ACCELERATION DIRECTION</label>   
+                <select id = "FDAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="FDTime">TIME (t)</label>
+            <input type="number" id="FDTime">
+            `;//add this the the html
+        }
+
+        else if (button.value === "DFacceleration") {// if the value is acceleration   
+            displacementFinalInputs.innerHTML = `
+            <label for ="FDdisplacement">DISPLACEMENT (d)</label>
+            <input type="number" id="FDdisplacement">
+
+            <label for = "FDdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
+                <select id = "FDdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="FDFinalVelocity">FINAL VELOCITY (vf)</label>
+            <input type="number" id="FDFinalVelocity">
+
+            <label for = "FDFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "FDFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="FDTime">TIME (t)</label>
+            <input type="number" id="FDTime">
+            `;//add this the the html
+        }
+
+        else if (button.value === "DFtime") {// if the value is time 
+            displacementFinalInputs.innerHTML = `
+            <label for ="FDdisplacement">DISPLACEMENT (d)</label>
+            <input type="number" id="FDdisplacement">
+
+            <label for = "FDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
+                <select id = "FDdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for = "FDFinalVelocity">FINAL VELOCITY (vf)</label>
+            <input type="number" id="FDFinalVelocity">
+
+            <label for = "FDFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "FDFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="FDAcceleration">ACCELERATION (a)</label>
+            <input type="number" id="FDAcceleration">
+
+            <label for = "FDAccelerationDirection">ACCELERATION DIRECTION</label>   
+                <select id = "FDAccelerationDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+            `;//add this the the html
+        }
+    });
+});
+
 
 
 
