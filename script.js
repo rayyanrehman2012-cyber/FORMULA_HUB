@@ -3087,7 +3087,7 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
         }
     }
 
-    else if(displacementFinalSelectedVariable.textContent === "SOLVING FOR FINAL VELOCITY (vf)") {// if we are calulating the inital velocity 
+    else if(timeIndependentSelectedVariable.textContent === "SOLVING FOR FINAL VELOCITY (vf)") {// if we are calulating the inital velocity 
         
         let DisplacementDirection = document.getElementById("ITdisplacementDirection").value;// this hold the directiosn value 
         let acceleration = Number(document.getElementById("ITAcceleration").value);// holds the acceleration vlaue 
@@ -3126,15 +3126,15 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
                 InitialVelocity = -InitialVelocity;// make the value nagative to make it easier to use 
             }
 
-            let velocitySquared = InitialVelocity * InitialVelocity + 2 * acceleration * Displacement;
+            let velocitySquared = InitialVelocity * InitialVelocity + 2 * acceleration * Displacement; // // this calulates the vlocity beofre being square routed 
 
-            if (velocitySquared < 0) {
-                timeIndependentResult.textContent = "ERROR: NO REAL VELOCITY SOLUTION";
-                timeIndependentResult.style.color = "rgb(102,21,7)";
+            if (velocitySquared < 0) { // if its negative 
+                timeIndependentResult.textContent = "ERROR: NO REAL VELOCITY SOLUTION"; // nosolution 
+                timeIndependentResult.style.color = "rgb(102,21,7)";// red 
             }
 
             else {
-                Result = Math.sqrt(velocitySquared); // the formula 
+                Result = Math.sqrt(velocitySquared); // the formula(square root part) 
 
                 let positiveDirection; // holds on direction 
                 let negativeDirection; // holds the other direction 
@@ -3143,19 +3143,19 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
                     positiveDirection = "EAST"; // then this will e this 
                     negativeDirection = "WEST"; // and this will be dith 
                 }
-                else if (DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") {
-                    positiveDirection = "NORTH";
-                    negativeDirection = "SOUTH";
+                else if (DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") {// if these were entered 
+                    positiveDirection = "NORTH"; // then this will be the direction 
+                    negativeDirection = "SOUTH"; // and this one will be the othe rone 
                 }
-                else {
-                    positiveDirection = "FORWARD";
-                    negativeDirection = "BACKWARD";
+                else { // anything else 
+                    positiveDirection = "FORWARD"; // it will be this 
+                    negativeDirection = "BACKWARD";// and this 
                 }
 
-                if (Result === 0) {
-                    timeIndependentResult.textContent = "FINAL VELOCITY  = 0.000 METERS/SECOND";
+                if (Result === 0) {// if the result is zero 
+                    timeIndependentResult.textContent = "FINAL VELOCITY  = 0.000 METERS/SECOND"; // this is the line 
                 }
-                else {
+                else {// everythig else 
                     timeIndependentResult.textContent = "FINAL VELOCITY MAGNITUDE = " + Result.toFixed(3) + " METERS/SECOND [" + positiveDirection + " OR " + negativeDirection + "]"; //result 
                 }
 
