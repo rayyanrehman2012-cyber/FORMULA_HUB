@@ -4010,7 +4010,7 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
 
 
 
-//THESE ARE THE CHANGE VARIABLE BUTTONS 
+//THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF THE KINAMATIC FORMULAS
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
     velocityTimePopup.style.display = "flex";// hide these function
     calculateVelocityTimeEquation.style.display = "none"
@@ -4475,7 +4475,7 @@ avgVelocityBackButton.addEventListener("click", function(){// this is the averag
     avgVelocityResult.textContent = "";// resets 
 });
 
-physicsDistanceBackButton.addEventListener("click", function(){// this is the diatance back button 
+physicsDistanceBackButton.addEventListener("click", function(){// this is the physics diatance back button 
     startPage.style.display = "flex";// shows the star pag again 
     physicsDistanceCalculatorPage.style.display = "none";// hides this page 
     physicsDistance1.value = "";// resets 
@@ -4514,7 +4514,7 @@ timeBackButton.addEventListener("click", function(){// this is the time page bac
     timeResult.textContent = "";// resets
 });
 
-velocityTimeEquationBackButton.addEventListener("click", function(){// this is the time page back button 
+velocityTimeEquationBackButton.addEventListener("click", function(){// this is the velocity  time page back button 
     startPage.style.display = "flex";// shows the star pag again 
     velocityTimeEquationPage.style.display = "none";// hides this page 
     velocityTimeSelectedVariable.textContent = "";// clears the selected variable 
@@ -4527,7 +4527,7 @@ velocityTimeEquationBackButton.addEventListener("click", function(){// this is t
     changeVelocityTimeVariable.style.display = "none";// hides this 
 });
 
-displacementInitialEquationBackButton.addEventListener("click", function(){// this is the time page back button 
+displacementInitialEquationBackButton.addEventListener("click", function(){// this is the displacement with inital velocity  page back button 
     startPage.style.display = "flex";// shows the star pag again 
     displacementInitialEquationPage.style.display = "none";// hides this page 
     displacementInitialSelectedVariable.textContent = "";// clears the selected variable 
@@ -4540,7 +4540,7 @@ displacementInitialEquationBackButton.addEventListener("click", function(){// th
     changeDisplacementInitialVariable.style.display = "none";// hides this 
 });
 
-displacementFinalEquationBackButton.addEventListener("click", function(){// this is the time page back button 
+displacementFinalEquationBackButton.addEventListener("click", function(){// this is the diplacement with final velocity page back button 
     startPage.style.display = "flex";// shows the star pag again 
     displacementFinalEquationPage.style.display = "none";// hides this page 
     displacementFinalSelectedVariable.textContent = "";// clears the selected variable 
@@ -4553,7 +4553,7 @@ displacementFinalEquationBackButton.addEventListener("click", function(){// this
     changeDisplacementFinalVariable.style.display = "none";// hides this 
 });
 
-timeIndependentBackButton.addEventListener("click", function(){// this is the time page back button 
+timeIndependentBackButton.addEventListener("click", function(){// this is the time independer page back button 
     startPage.style.display = "flex";// shows the star pag again 
     timeIndependentPage.style.display = "none";// hides this page 
     timeIndependentSelectedVariable.textContent = "";// clears the selected variable 
@@ -4565,6 +4565,8 @@ timeIndependentBackButton.addEventListener("click", function(){// this is the ti
     timeIndependentResult.textContent = "";// clears the result 
     changeimeIndependentVariable.style.display = "none";// hides this 
 });
+
+
 
 
 
