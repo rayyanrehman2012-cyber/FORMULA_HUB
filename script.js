@@ -3582,8 +3582,8 @@ changeTimeIndependentVariable.addEventListener("click", function(){// if the cha
     calculateTimeIndependent.style.display = "none"
     timeIndependentInputs.innerHTML = "";// clears the inputs
     timeIndependentSelectedVariable.textContent = "";// clears the selected variable 
-    displacementFinalEquationResult.textContent = "";// clears the result 
-    changeDisplacementFinalVariable.style.display = "none";// hides the button 
+    timeIndependentResult.textContent = "";// clears the result 
+    changeTimeIndependentVariable.style.display = "none";// hides the button 
 });
 
 
@@ -4092,6 +4092,18 @@ displacementFinalEquationBackButton.addEventListener("click", function(){// this
     changeDisplacementFinalVariable.style.display = "none";// hides this 
 });
 
+timeIndependentBackButton.addEventListener("click", function(){// this is the time page back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    timeIndependentPage.style.display = "none";// hides this page 
+    timeIndependentSelectedVariable.textContent = "";// clears the selected variable 
+
+    timeIndependentPopup.style.display = "flex";// hide page switches to pop up 
+    calculateTimeIndependent.style.display = "none" //hides this calculate buttons 
+    timeIndependentInputs.innerHTML = "";// clears the inputs
+    timeIndependentSelectedVariable.textContent = "";// clears the selected variable 
+    timeIndependentResult.textContent = "";// clears the result 
+    changeimeIndependentVariable.style.display = "none";// hides this 
+});
 
 
 
@@ -5003,6 +5015,33 @@ alldisplacementFinalEquationButton.addEventListener("click", function (){// the 
     displacementFinalEquationPage.style.display = "flex"// shows this page
 });
 
+alltimeIndependentButton.addEventListener("click", function (){// the displacement final equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    timeIndependentPage.style.display = "flex"// shows this page
+});
+
+
+
+
+
 
 
 
@@ -5706,8 +5745,9 @@ trianglePrismPerimeterButton.addEventListener("click", function(){// if the cube
 
 
 
-//THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
 
+
+//THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
 speedButton.addEventListener("click", function(){// if the cube perimeter is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
@@ -5938,4 +5978,25 @@ displacementFinalEquationButton.addEventListener("click", function(){// if the t
     displacementFinalEquationPage.style.display = "flex"// shows this page
 });
 
-
+timeIndependentButton.addEventListener("click", function(){// if the time page button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    timeIndependentPage.style.display = "flex"// shows this page
+});
