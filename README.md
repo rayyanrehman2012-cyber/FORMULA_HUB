@@ -1,7 +1,7 @@
 # FORMULA_HUB
 
 ## WHAT WE ARE MAKING
-Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related, but in the futur we might add other formulas as well
+Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related, but in the futur we might add other formulas as well like from Calulus. We Also might add some visula affects in the futur as well, that could visulaize equations like the kinamatice formula or Vector additions 
 
 
 
@@ -114,12 +114,22 @@ The website starts of on the front page. The front page contains a short descrip
     - calulator for Initial velocity 
     - caluclaor for final velocity
     - caluclator of acceleration 
+
 - Made the Second Kinimatic formula page (Displacement with Initial velocity EQUATION)
     - The page opens a popup with 4 versions(rearranged) of the formula
     - you can choose which variable you want to solve for
     - clicking the buttons opens the appropriat calulator
     - Calulator for time
     - calulator for Initial velocity 
+    - caluclaor for Displacement 
+    - caluclator of acceleration 
+
+- Started Making the 3rd Kinamatice formula pafge (DISPLACEMENT WITH FINAL VELOCITY EQUATION)
+    - The page opens a popup with 4 versions(rearranged) of the formula
+    - you can choose which variable you want to solve for
+    - clicking the buttons opens the appropriat calulator
+    - Calulator for time
+    - calulator for Final velocity 
     - caluclaor for Displacement 
     - caluclator of acceleration 
 
@@ -140,4 +150,5 @@ The website starts of on the front page. The front page contains a short descrip
 - Having a search function on the all formula page 
 - boyancy formula 
 - gass formula 
+- Viualizing buttons, which would make a visula diagram for the physics formulas and some of the math one, I personaly think this could be very usefull for people who might be confused with the aswers porvided by the calulator, or it can be helfull for those who who learn through visuals 
 
