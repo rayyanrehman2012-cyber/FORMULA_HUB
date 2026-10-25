@@ -4076,7 +4076,186 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
+//FIFTH equation
+variableButton4s.forEach(function(button){// in variable buttons, for each of them 
+    button.addEventListener("click", function() {// if they are clicked 
+        averageVelocityDisplacementPopup.style.display = "none";// hides this
+        calculateAverageVelocityDisplacement.style.display = "block";// shows this 
+        changeAverageVelocityDisplacementVariable.style.display = "block"// shows this 
 
+        if (button.value === "AVdisplacement") {// if the value is final velocity 
+            averageVelocityDisplacementSelectedVariable.textContent = "SOLVING FOR DISPLACEMENT (d)";// then the variable is final velocity 
+        }
+
+        else if (button.value === "AVfinalVelocity") {// if the velue is final  velocity 
+           averageVelocityDisplacementSelectedVariable.textContent = "SOLVING FOR FINAL VELOCITY (vf)";// then the variables is initial velocuty 
+        }
+
+        else if (button.value === "AVtime") {// if the value is acelerations 
+            averageVelocityDisplacementSelectedVariable.textContent = "SOLVING FOR TIME (t)";// the selected variable is acceleration 
+        }
+
+        else if (button.value === "AVinitialVelocity") {// if the value is time 
+            averageVelocityDisplacementSelectedVariable.textContent = "SOLVING FOR INITIAL VELOCITY (vi)";// then the selected variable is time 
+        }
+
+        averageVelocityDisplacementInputs.innerHTML = "";// clear the inputs
+
+        if (button.value === "AVdisplacement") {// if the value is final velocity 
+            averageVelocityDisplacementInputs.innerHTML = ` 
+            <label for ="VAFinalVelocity">FINAL VELOCITY (vf)</label>
+            <input type="number" id="VAFinalVelocity">
+
+            <label for = "VAFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "VAFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="VATime">TIME (t)</label>
+            <input type="number" id="VATime">
+            
+            <label for ="VAInitialVelocity">INITIAL VELOCITY (vi)</label>
+            <input type="number" id="VAInitialVelocity">
+
+            <label for = "VAInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "VAInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+            
+            `;//add this the the html 
+        }
+
+        else if (button.value === "AVfinalVelocity") {// if the value is final velocity 
+            averageVelocityDisplacementInputs.innerHTML = `
+            <label for = "VAdisplacement">DISPLACEMENT (d)</label>
+            <input type= "number" id="VAdisplacement">
+
+            <label for = "VAdisplacementDirection">DISPLACEMENT DIRECTION</label>   
+                <select id = "VAdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+           <label for ="VATime">TIME (t)</label>
+            <input type="number" id="VATime">
+
+
+            <label for ="VAInitialVelocity">INITIAL VELOCITY (vi)</label>
+            <input type="number" id="VAInitialVelocity">
+
+            <label for = "VAInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "VAInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            `;//add this the the html
+        }
+
+        else if (button.value === "AVtime") {// if the value is acceleration   
+            averageVelocityDisplacementInputs.innerHTML = `
+            <label for ="VAdisplacement">DISPLACEMENT (d)</label>
+            <input type="number" id="VAdisplacement">
+
+            <label for = "VAdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
+                <select id = "VAdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="VAFinalVelocity">FINAL VELOCITY (vf)</label>
+            <input type="number" id="VAFinalVelocity">
+
+            <label for = "VAFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "VAFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="VAInitialVelocity">INITIAL VELOCITY (vi)</label>
+            <input type="number" id="VAInitialVelocity">
+
+            <label for = "VAInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
+                <select id = "VAInitialVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+            `;//add this the the html
+        }
+
+        else if (button.value === "AVinitialVelocity") {// if the value is time 
+            averageVelocityDisplacementInputs.innerHTML = `
+            <label for ="VAdisplacement">DISPLACEMENT (d)</label>
+            <input type="number" id="VAdisplacement">
+
+            <label for = "VAdisplacementDirection">DISPLACEMENT DIRECTION</label>   
+                <select id = "VAdisplacementDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for = "VAFinalVelocity">FINAL VELOCITY (vf)</label>
+            <input type="number" id="VAFinalVelocity">
+
+            <label for = "VAFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
+                <select id = "VAFinalVelocityDirection">
+                    <option value="">SELECT ONE</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="SOUTH">SOUTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                    <option value="FORWARD">FORWARD</option>
+                    <option value="BACKWARD">BACKWARD</option>
+                </select>
+
+            <label for ="VATime">TIME (t)</label>
+            <input type="number" id="VATime">
+            `;//add this the the html
+        }
+    });
+});
 
 
 
