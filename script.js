@@ -2519,7 +2519,7 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
             Result = Displacement / InitialVelocity;// this is the forumls 
         
             displacementInitialEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
-            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// make the massage in red 
+            displacementInitialEquationResult.style.color = "rgb(11,61,46)";// make the massage in red 
         }
 
         else{
@@ -2535,27 +2535,52 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
                 acceleration = -acceleration; // make the values negative 
             }
 
-            Result = (-InitialVelocity + Math.sqrt((InitialVelocity * InitialVelocity) + (2 * acceleration * Displacement))) / acceleration;// this is  the formula 
+        let discriminant = (InitialVelocity * InitialVelocity) + (2 * acceleration * Displacement); // the discriminenet of the calulations 
 
-            if (Result === 0) { // if the result is  0 
-                displacementInitialEquationResult.textContent = "TIME = 0 SECOND";// this is the result line 
-                displacementInitialEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
-            }
-
-            else if (Result < 0){// if the resut is less than zero 
-                displacementInitialEquationResult.textContent = "ERROR: FIX YOUR VALUES, TIME CAN'T BE NEGATIVE"// result line 
-                displacementInitialEquationResult.style.color = "rgb(102,21,7)" // changes the colour to grree n
-            }
-
-            else if (Result > 0){// if its greater 
-                displacementInitialEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
-                displacementInitialEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
-            }
+        if (discriminant < 0) {// if the discriminene its a negative number 
+            displacementInitialEquationResult.textContent = "ERROR: NO REAL TIME SOLUTION"; // show this erro 
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// in red 
         }
+
+        else {
+            let Result1 = (-InitialVelocity + Math.sqrt(discriminant)) / acceleration; // calulate with one way 
+            let Result2 = (-InitialVelocity - Math.sqrt(discriminant)) / acceleration; // calulate the other way 
+
+            if (Result1 >= 0 && Result2 >= 0) { // if both are positive 
+            Result = Math.min(Result1, Result2); // the smaller number 
+            }
+
+            else if (Result1 >= 0) {// if this one is positve 
+                Result = Result1; // its the result 
+            }
+
+            else if (Result2 >= 0) {//if only this one is positive 
+                Result = Result2;// this is the number 
+            }
+
+            else {// if this both ar enegative 
+                Result = -1; // as placeholder 
+            }
+
+            if (Result < 0) { // if its a negative then ma
+                displacementInitialEquationResult.textContent = "ERROR: FIX YOUR VALUES, TIME CAN'T BE NEGATIVE";// show this as the result 
+                displacementInitialEquationResult.style.color = "rgb(102,21,7)"; //  in red color 
+            }
+
+            else if (Result === 0) { // if its zero 
+                displacementInitialEquationResult.textContent = "TIME = 0 SECONDS";// show this 
+                displacementInitialEquationResult.style.color = "rgb(11,61,46)";// in green 
+            }
+
+            else {// if  its greater 
+                displacementInitialEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS";//this is the reults 
+                displacementInitialEquationResult.style.color = "rgb(11,61,46)"; // in green 
+            }
+        }       
     }
 
 
-})
+}})
 
 
 
