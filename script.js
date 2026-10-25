@@ -2251,9 +2251,9 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
 })
 
 calculateDisplacementInitialEquation.addEventListener("click", function(){// if the calulate button is clicked 
-    let Result;
+    let Result;// this is the result 
 
-    if(displacementInitialSelectedVariable.textContent === "SOLVING FOR DISPLACEMENT (d)") {
+    if(displacementInitialSelectedVariable.textContent === "SOLVING FOR DISPLACEMENT (d)") {// if we are solving for diplacement 
         let initialVelocity = Number(document.getElementById("IDInitialVelocity").value); // holds the inital velocity value 
         let acceleration = Number(document.getElementById("IDAcceleration").value);// holds the acceleration vlaue 
         let time = Number(document.getElementById("IDTime").value); // holdes the time value 
@@ -2488,6 +2488,72 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
             }
         }
     }
+
+    else if(displacementInitialSelectedVariable.textContent === "SOLVING FOR TIME (t)") {//if we are calulating time 
+
+        let Displacement = Number(document.getElementById("IDdisplacement").value); // holds the inital velocity value 
+        let InitialVelocity = Number(document.getElementById("IDInitialVelocity").value);// holds the acceleration vlaue 
+        let accelerationDirection = document.getElementById("IDAccelerationDirection").value;// this hold the directiosn value 
+        let DisplacementDirection = document.getElementById("IDdisplacementDirection").value;// this hold the directiosn value 
+        let InitialVelocityDirection = document.getElementById("IDInitialVelocityDirection").value;// this hold the directiosn value 
+        let acceleration = Number(document.getElementById("IDAcceleration").value);// holds the acceleration vlaue 
+
+        if(document.getElementById("IDdisplacement").value === "" || document.getElementById("IDInitialVelocity").value === "" || document.getElementById("IDAcceleration").value === "") {// if these are blank 
+            displacementInitialEquationResult.textContent = "ERROR: ENTER 3 VALUES!"; // this is the error messge 
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (accelerationDirection === "" || DisplacementDirection === "" || InitialVelocityDirection === "") {// are the directions blanked 
+            displacementInitialEquationResult.textContent = "ERROR: SELECT 3 DIRECTION";// select a directions message
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (((DisplacementDirection === "EAST" || DisplacementDirection === "WEST") && ((InitialVelocityDirection !== "EAST" && InitialVelocityDirection !== "WEST") || (accelerationDirection !== "EAST" && accelerationDirection !== "WEST"))) || ((DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") && ((InitialVelocityDirection !== "NORTH" && InitialVelocityDirection !== "SOUTH") || (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH"))) || ((DisplacementDirection === "FORWARD" || DisplacementDirection === "BACKWARD") && ((InitialVelocityDirection !== "FORWARD" && InitialVelocityDirection !== "BACKWARD") || (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))))
+        {
+            displacementInitialEquationResult.textContent = "ERROR: ALL DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (acceleration === 0) {// if acceleration is zero 
+
+            Result = Displacement / InitialVelocity;// this is the forumls 
+        
+            displacementInitialEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
+            displacementInitialEquationResult.style.color = "rgb(102,21,7)";// make the massage in red 
+        }
+
+        else{
+            if (DisplacementDirection === "WEST" || DisplacementDirection === "SOUTH" || DisplacementDirection === "BACKWARD") { // if these are the values 
+                Displacement = -Displacement;// make this negative 
+            }
+
+            if (InitialVelocityDirection === "WEST" || InitialVelocityDirection === "SOUTH" || InitialVelocityDirection === "BACKWARD") { //if these are the values 
+                InitialVelocity = -InitialVelocity;// make this negative 
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") {  // if these are the direction 
+                acceleration = -acceleration; // make the values negative 
+            }
+
+            Result = (-InitialVelocity + Math.sqrt((InitialVelocity * InitialVelocity) + (2 * acceleration * Displacement))) / acceleration;// this is  the formula 
+
+            if (Result === 0) { // if the result is  0 
+                displacementInitialEquationResult.textContent = "TIME = 0 SECOND";// this is the result line 
+                displacementInitialEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+
+            else if (Result < 0){// if the resut is less than zero 
+                displacementInitialEquationResult.textContent = "ERROR: FIX YOUR VALUES, TIME CAN'T BE NEGATIVE"// result line 
+                displacementInitialEquationResult.style.color = "rgb(102,21,7)" // changes the colour to grree n
+            }
+
+            else if (Result > 0){// if its greater 
+                displacementInitialEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
+                displacementInitialEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
+
 
 })
 
