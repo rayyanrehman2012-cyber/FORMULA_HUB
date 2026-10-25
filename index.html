@@ -76,9 +76,9 @@
                     <button id = "allaccelerationButton" class="formulaButton">ACCELERATION</button>
                     <button id = "alltimeButton" class="formulaButton">TIME</button>
                     <button id = "allvelocityTimeEquationButton" class="formulaButton">KINEMATICS EQUATION: VELOCITY-TIME</button>
-                    <button id = "alldisplacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT <br> (WITH INITIAL VELOCITY)</button>
-                    <button id = "alldisplacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT <br> (WITH FINAL VELOCITY)</button>
-                    <button class="formulaButton">KINEMATICS EQUATION - AVERAGE VELOCITY EQUATION</button>
+                    <button id = "alldisplacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH INITIAL VELOCITY)</button>
+                    <button id = "alldisplacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH FINAL VELOCITY)</button>
+                    <button id = "allTimeIndependentButton" class="formulaButton">KINEMATIC EQUATION: TIME INDEPENDENT</button>
                     <button class="formulaButton">KINAMATICS EQUATION - VELOCITY-DISPLACEMENT EQUATION </button>
                 </div>
             </section>
@@ -140,9 +140,9 @@
                     <button id = "accelerationButton" class="formulaButton">ACCELERATION</button>
                     <button id = "timeButton" class="formulaButton">TIME</button>
                     <button id = "velocityTimeEquationButton" class="formulaButton">KINEMATICS EQUATION: VELOCITY-TIME</button>
-                    <button id = "displacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT <br> (WITH INITIAL VELOCITY)</button>
-                    <button id = "displacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT <br> (WITH FINAL VELOCITY)</button>
-                    <button class="formulaButton">KINEMATICS EQUATION - AVERAGE VELOCITY EQUATION</button>
+                    <button id = "displacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH INITIAL VELOCITY)</button>
+                    <button id = "displacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH FINAL VELOCITY)</button>
+                    <button id = "TimeIndependentButton" class="formulaButton">KINEMATIC EQUATION: TIME INDEPENDENT</button>
                     <button class="formulaButton">KINAMATICS EQUATION - VELOCITY-DISPLACEMENT EQUATION </button>
                 </div>
             <button id="physicsBackButton">BACK</button>
@@ -995,6 +995,29 @@
                 <button id="changeDisplacementFinalVariable">CHANGE VARIABLE</button>
             </div>
             <button id="displacementFinalEquationBackButton">BACK</button>
+        </main>
+
+        <main class="timeIndependentPage">
+            <h1>TIME INDEPENDENT EQUATION</h1>
+            <div class = "calculatorBox">
+                <div id="timeIndependentPopup" class="popupMenu">
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <button class="variableButton3" value="TIdisplacement"> DISPLACEMENT (d) </button>
+                    <button class="variableButton3" value="TIfinalVelocity">FINAL VELOCITY (vf)</button>         
+                    <button class="variableButton3" value="TIacceleration"> ACCELERATION (a)</button>
+                    <button class="variableButton3" value="TIinitialVelocity">INITIAL VELOCITY (vi)</button>
+                </div>
+                <h2 id="timeIndependentSelectedVariable"></h2>
+
+                <div id="timeIndependentInputs"></div>
+
+                <button id="calculateTimeIndependent">CALCULATE</button>
+
+                <p id="timeIndependentResult"></p>
+
+                <button id="changeTimeIndependentVariable">CHANGE VARIABLE</button>
+            </div>
+            <button id="timeIndependentBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
