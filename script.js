@@ -2969,6 +2969,8 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
 
 
 
+
+
 //THESE ARE THE POPUP MENU BUTTONS FOR THE KINAMATIC EQUATIONS
 variableButtons.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
