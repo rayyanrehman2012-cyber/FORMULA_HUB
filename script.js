@@ -8,6 +8,7 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 
 
 
+
 // THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
@@ -56,7 +57,10 @@ const displacementBackButton = document.getElementById("displacementBackButton")
 const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
 const timeBackButton = document.getElementById("timeBackButton");// this is the time page back button 
 const velocityTimeEquationBackButton = document.getElementById("velocityTimeEquationBackButton");// this is the veleocity time equation back button 
-const displacementInitialEquationBackButton = document.getElementById("displacementInitialEquationBackButton")
+const displacementInitialEquationBackButton = document.getElementById("displacementInitialEquationBackButton");// this is the second kinamatic equation back button 
+const displacementFinalEquationBackButton = document.getElementById("displacementFinalEquationBackButton");// this is the third equation in the kinamatics one, back button 
+
+
 
 
 
@@ -112,6 +116,8 @@ const accelerationPage = document.querySelector(".accelerationPage");// this is 
 const timePage = document.querySelector(".timePage");// this is the time calculator page 
 const velocityTimeEquationPage = document.querySelector(".velocityTimeEquationPage");// this is the velocity time equation page 
 const displacementInitialEquationPage = document.querySelector(".displacementInitialEquationPage");// this is the displacement using initeal velocity page, which is the second kinamatic formula 
+const displacementFinalEquationPage = document.querySelector(".displacementFinalEquationPage");// this is the 3rd kinamatic equation page 
+
 
 
 
@@ -164,6 +170,10 @@ const allaccelerationButton = document.getElementById("allaccelerationButton");/
 const alltimeButton = document.getElementById("alltimeButton");// this tl the tim page button on the all formulla page 
 const allvelocityTimeEquationButton = document.getElementById("allvelocityTimeEquationButton");// this is the all velocity tiem equation button on the all folrmula page 
 const alldisplacementInitialEquationButton = document.getElementById("alldisplacementInitialEquationButton");// this is the button on the all formula page 
+const alldisplacementFinalEquationButton = document.getElementById("alldisplacementFinalEquationButton");// this is the bitton on the all formula page for the 3rd formula button 
+
+
+
 
 
 
@@ -178,6 +188,8 @@ const accelerationButton = document.getElementById("accelerationButton");// this
 const timeButton = document.getElementById("timeButton");// this is the time button on the physics formula pages 
 const velocityTimeEquationButton = document.getElementById("velocityTimeEquationButton");// this is the all velocity tiem equation button on the physics  folrmula page 
 const displacementInitialEquationButton = document.getElementById("displacementInitialEquationButton");// this is the button on the physics  formula page 
+const displacementFinalEquationButton = document.getElementById("displacementFinalEquationButton");// this is the 3rd kinamatic equation button on the physics formula page 
+
 
 
 
@@ -221,6 +233,7 @@ const sphereSurfaceAreaButton = document.getElementById("sphereSurfaceAreaButton
 const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeButton");// this is the triangle prism volume button on the math only page 
 const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSurfaceAreaButton");// this is the triangle prism Surface area button on the math only formula page 
 const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
+
 
 
 
@@ -581,6 +594,7 @@ const accelerationResult = document.getElementById("accelerationResult");// this
 const calculateAcceleration = document.getElementById("calculateAcceleration");// this is the calculate acceleration button 
 
 
+
 //THESE ARE FOR THE TIME CALCULATOR
 const timespeed = document.getElementById("timespeed");// This is the speed value on the time page  
 const timeDistance = document.getElementById("timeDistance");// this is the distance value for the time calculatoe  
@@ -588,7 +602,8 @@ const calculateTime = document.getElementById("calculateTime");// this is the ca
 const timeResult = document.getElementById("timeResult");// this is the time result 
 
 
-// THESE ARE THE FOR  THE VELOCITY-TIME EQUATION CALCULATOR
+
+// THESE ARE THE FOR  THE VELOCITY-TIME EQUATION CALCULATOR(KINAMATIC FORMULA 1)
 const velocityTimePopup = document.getElementById("velocityTimePopup");// this is the velocity time popups that lets u select veriables to solve for 
 const velocityTimeSelectedVariable = document.getElementById("velocityTimeSelectedVariable"); // the selectied variables 
 const velocityTimeInputs = document.getElementById("velocityTimeInputs"); // the inputs holder 
@@ -600,8 +615,9 @@ changeVelocityTimeVariable.style.display = "none";// hides this intiteall
 const velocityTimeEquationResult = document.getElementById("velocityTimeEquationResult");// this is the result lone 
 
 
-//THESE ARE THE FOR THE DISPLACEMENT USING INITIAL VELOCITY EQUATION  CALCULATOR
-const displacementInitialPopup = document.getElementById("displacementInitialPopup");// this is the velocity time popups that lets u select veriables to solve for 
+
+//THESE ARE THE FOR THE DISPLACEMENT USING INITIAL VELOCITY EQUATION CALCULATOR(KINAMATIC FORMULA 2)
+const displacementInitialPopup = document.getElementById("displacementInitialPopup");// this is the displacement final velocity   popups that lets u select veriables to solve for 
 const displacementInitialSelectedVariable = document.getElementById("displacementInitialSelectedVariable"); // the selectied variables 
 const displacementInitialInputs = document.getElementById("displacementInitialInputs"); // the inputs holder 
 const calculateDisplacementInitialEquation = document.getElementById("calculateDisplacementInitialEquation");
@@ -610,6 +626,21 @@ const changeDisplacementInitialVariable = document.getElementById("changeDisplac
 changeDisplacementInitialVariable.style.display = "none";// hides this intiteall 
 const displacementInitialEquationResult = document.getElementById("displacementInitialEquationResult");// this is the result lone 
 const variableButton1s = document.querySelectorAll(".variableButton1"); // different variables 
+
+
+
+// THESE ARE FOR THE DISPLACEMENT USING FINAL VELOCITY EQUATION CLAULATOR(KINAMATIC FORMULA 3)
+const displacementFinalPopup = document.getElementById("displacementFinalPopup");// this is the popup for displacement final velocity equation  
+const displacementFinalSelectedVariable = document.getElementById("displacementFinalSelectedVariable");// this holds the selected variaple 
+const displacementFinalInputs = document.getElementById("displacementFinalInputs");// these are the inputs 
+const calculateDisplacementFinalEquation = document.getElementById("calculateDisplacementFinalEquation")
+calculateDisplacementFinalEquation.style.display = "none";// hides this intiteall 
+const changeDisplacementFinalVariable = document.getElementById("changeDisplacementFinalVariable")
+changeDisplacementFinalVariable.style.display = "none";// hides this intiteall 
+const displacementFinalEquationResult = document.getElementById("displacementFinalEquationResult")
+const variableButton2s = document.querySelectorAll(".variableButton2")
+
+
 
 
 
@@ -2968,7 +2999,14 @@ changeDisplacementInitialVariable.addEventListener("click", function(){// if the
     changeDisplacementInitialVariable.style.display = "none";// hides the button 
 })
 
-
+changeDisplacementFinalVariable.addEventListener("click", function(){// if the change variable button is clicked 
+    displacementFinalPopup.style.display = "flex";// hide these function
+    calculateDisplacementFinalEquation.style.display = "none"
+    displacementFinalInputs.innerHTML = "";// clears the inputs
+    displacementFinalSelectedVariable.textContent = "";// clears the selected variable 
+    displacementFinalEquationResult.textContent = "";// clears the result 
+    changeDisplacementFinalVariable.style.display = "none";// hides the button 
+})
 
 
 
@@ -3458,6 +3496,24 @@ displacementInitialEquationBackButton.addEventListener("click", function(){// th
     displacementInitialEquationResult.textContent = "";// clears the result 
     changeDisplacementInitialVariable.style.display = "none";// hides this 
 })
+
+displacementFinalEquationBackButton.addEventListener("click", function(){// this is the time page back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    displacementFinalEquationPage.style.display = "none";// hides this page 
+    displacementFinalSelectedVariable.textContent = "";// clears the selected variable 
+
+    displacementFinalPopup.style.display = "flex";// hide page switches to pop up 
+    calculateDisplacementFinalEquation.style.display = "none" //hides this calculate buttons 
+    displacementFinalInputs.innerHTML = "";// clears the inputs
+    displacementFinalSelectedVariable.textContent = "";// clears the selected variable 
+    displacementFinalEquationResult.textContent = "";// clears the result 
+    changeDisplacementFinalVariable.style.display = "none";// hides this 
+})
+
+
+
+
+
 
 
 
@@ -4181,7 +4237,7 @@ allvelocityButton.addEventListener("click", function(){// if the cube perimeter 
     velocityCalculatorPage.style.display = "flex"// shows this page
 })
 
-allavgVelocityButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allavgVelocityButton.addEventListener("click", function(){// if the average velocity is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4204,7 +4260,7 @@ allavgVelocityButton.addEventListener("click", function(){// if the cube perimet
     avgVelocityCalculatorPage.style.display = "flex"// shows this page
 })
 
-allphysicsDistanceButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allphysicsDistanceButton.addEventListener("click", function(){// if the physics distance button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4227,7 +4283,7 @@ allphysicsDistanceButton.addEventListener("click", function(){// if the cube per
     physicsDistanceCalculatorPage.style.display = "flex"// shows this page
 })
 
-alldisplacementButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+alldisplacementButton.addEventListener("click", function(){// if the displacement is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4250,7 +4306,7 @@ alldisplacementButton.addEventListener("click", function(){// if the cube perime
     displacementCalculatorPage.style.display = "flex"// shows this page
 })
 
-allaccelerationButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allaccelerationButton.addEventListener("click", function(){// if the acceleration button  is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4273,7 +4329,7 @@ allaccelerationButton.addEventListener("click", function(){// if the cube perime
     accelerationPage.style.display = "flex"// shows this page
 })
 
-alltimeButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+alltimeButton.addEventListener("click", function(){// if the time button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4296,7 +4352,7 @@ alltimeButton.addEventListener("click", function(){// if the cube perimeter is c
     timePage.style.display = "flex"// shows this page
 })
 
-allvelocityTimeEquationButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+allvelocityTimeEquationButton.addEventListener("click", function(){// the velocity time equation on the all formjula page 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4319,7 +4375,7 @@ allvelocityTimeEquationButton.addEventListener("click", function(){// if the cub
     velocityTimeEquationPage.style.display = "flex"// shows this page
 })
 
-alldisplacementInitialEquationButton.addEventListener("click", function(){// if the cube perimeter is clicked 
+alldisplacementInitialEquationButton.addEventListener("click", function(){// the displacement initial equation on the all formjula page 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";
@@ -4340,6 +4396,29 @@ alldisplacementInitialEquationButton.addEventListener("click", function(){// if 
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     displacementInitialEquationPage.style.display = "flex"// shows this page
+})
+
+alldisplacementFinalEquationButton.addEventListener("click", function (){// the displacement final equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    displacementFinalEquationPage.style.display = "flex"// shows this page
 })
 
 
