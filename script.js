@@ -3587,6 +3587,7 @@ physicsButton.addEventListener("click", function() {// physics formula menue
 
 
 
+
 // THESE ARE ALL THE BACK BUTTON EVENT FUNCTIONS IN THIS PROJECT
 backButton.addEventListener("click", function() {// back button all formulas bage 
     formulaPage.style.display = "none";// the formula page dissapears 
