@@ -2613,6 +2613,90 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
 
 }});
 
+calculateDisplacementFinalEquation.addEventListener("click", function(){// if the calulate button is clicked 
+    let Result;// this is the result 
+
+    if(displacementFinalSelectedVariable.textContent === "SOLVING FOR DISPLACEMENT (d)") {// if we are solving for diplacement 
+        let FinalVelocity = Number(document.getElementById("FDFinalVelocity").value); // holds the inital velocity value 
+        let acceleration = Number(document.getElementById("FDAcceleration").value);// holds the acceleration vlaue 
+        let time = Number(document.getElementById("FDTime").value); // holdes the time value 
+        let FinalDirection = document.getElementById("FDFinalVelocityDirection").value;// this hold the directiosn value 
+        let accelerationDirection = document.getElementById("FDAccelerationDirection").value;// this hold the directiosn value 
+
+        if(document.getElementById("FDFinalVelocity").value === "" || document.getElementById("FDAcceleration").value === "" || document.getElementById("FDTime").value === "") {
+            displacementFinalEquationResult.textContent = "ERROR: ENTER 3 VALUES!";// this is the erro message 
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+
+        }
+
+        else if (FinalDirection === "" || accelerationDirection === "") {// are the directions blanked 
+            displacementFinalEquationResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if ((FinalDirection === "EAST" || FinalDirection === "WEST") && (accelerationDirection !== "EAST" && accelerationDirection !== "WEST") || (FinalDirection === "NORTH" || FinalDirection === "SOUTH") && (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH") || (FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") && (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))// if this is not tr
+        {
+            displacementFinalEquationResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (FinalDirection === "WEST" || FinalDirection === "SOUTH" || FinalDirection === "BACKWARD") { // if these were the directions 
+                FinalVelocity = -FinalVelocity;// flips the value into a negative 
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") { ////if these were the directiosn 
+                acceleration = -acceleration; // flips the value into a negative 
+            }
+
+            Result = FinalVelocity * time - (0.5 * acceleration * time *time); //this is the formuls 
+
+            let finalDirection; //holds the final final directions 
+
+            if (Result === 0) { // if the result is  0 
+                displacementFinalEquationResult.textContent = "DISPLACEMENT = 0 METERS"; // there is no displacement show this line 
+                displacementFinalEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+
+            }
+
+            else if (FinalDirection === "EAST" || FinalDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // if the result was greater than zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise 
+                    finalDirection = "WEST";// the direction would eb west 
+                }
+            }
+
+            else if (FinalDirection === "NORTH" || FinalDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // if the result was greater than zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// otherwise
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){// if the result is not zer then 
+                displacementFinalEquationResult.textContent = "DISPLACEMENT = " +Math.abs(Result).toFixed(3)+ " METERS [" +finalDirection+ "]"// result line 
+                displacementFinalEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
+
+    
+
+});
 
 
 
@@ -2620,7 +2704,10 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
 
 
 
-//THESE ARE THE POPUP MENU BUTTONS 
+
+
+
+//THESE ARE THE POPUP MENU BUTTONS FOR THE KINAMATIC EQUATIONS
 variableButtons.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         velocityTimePopup.style.display = "none";// hides this
@@ -3163,6 +3250,8 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
 
 
 
+
+
 //THESE ARE THE CHANGE VARIABLE BUTTONS 
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
     velocityTimePopup.style.display = "flex";// hide these function
@@ -3190,6 +3279,10 @@ changeDisplacementFinalVariable.addEventListener("click", function(){// if the c
     displacementFinalEquationResult.textContent = "";// clears the result 
     changeDisplacementFinalVariable.style.display = "none";// hides the button 
 });
+
+
+
+
 
 
 
