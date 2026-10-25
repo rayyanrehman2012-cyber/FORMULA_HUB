@@ -2611,7 +2611,8 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
     }
 
 
-}});
+    }
+});
 
 calculateDisplacementFinalEquation.addEventListener("click", function(){// if the calulate button is clicked 
     let Result;// this is the result 
@@ -2850,6 +2851,97 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
                 displacementFinalEquationResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
             }
         }
+    }
+
+    else if(displacementFinalSelectedVariable.textContent === "SOLVING FOR TIME (t)") {//if we are calulating time 
+
+        let Displacement = Number(document.getElementById("FDdisplacement").value); // holds the inital velocity value 
+        let FinalVelocity = Number(document.getElementById("FDFinalVelocity").value);// holds the acceleration vlaue 
+        let accelerationDirection = document.getElementById("FDAccelerationDirection").value;// this hold the directiosn value 
+        let DisplacementDirection = document.getElementById("FDdisplacementDirection").value;// this hold the directiosn value 
+        let FinalVelocityDirection = document.getElementById("FDFinalVelocityDirection").value;// this hold the directiosn value 
+        let acceleration = Number(document.getElementById("FDAcceleration").value);// holds the acceleration vlaue 
+
+        if(document.getElementById("IDdisplacement").value === "" || document.getElementById("IDFinalVelocity").value === "" || document.getElementById("IDAcceleration").value === "") {// if these are blank 
+            displacementFinalEquationResult.textContent = "ERROR: ENTER 3 VALUES!"; // this is the error messge 
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (accelerationDirection === "" || DisplacementDirection === "" || FinalVelocityDirection === "") {// are the directions blanked 
+            displacementFinalEquationResult.textContent = "ERROR: SELECT 3 DIRECTION";// select a directions message
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (((DisplacementDirection === "EAST" || DisplacementDirection === "WEST") && ((FinalVelocityDirection !== "EAST" && FinalVelocityDirection !== "WEST") || (accelerationDirection !== "EAST" && accelerationDirection !== "WEST"))) || ((DisplacementDirection === "NORTH" || DisplacementDirection === "SOUTH") && ((FinalVelocityDirection !== "NORTH" && FinalVelocityDirection !== "SOUTH") || (accelerationDirection !== "NORTH" && accelerationDirection !== "SOUTH"))) || ((DisplacementDirection === "FORWARD" || DisplacementDirection === "BACKWARD") && ((FinalVelocityDirection !== "FORWARD" && FinalVelocityDirection !== "BACKWARD") || (accelerationDirection !== "FORWARD" && accelerationDirection !== "BACKWARD"))))
+        {
+            displacementFinalEquationResult.textContent = "ERROR: ALL DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (acceleration === 0) {// if acceleration is zero 
+
+            Result = Displacement / FinalVelocity;// this is the forumls 
+        
+            displacementFinalEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS"// result line 
+            displacementFinalEquationResult.style.color = "rgb(11,61,46)";// make the massage in red 
+        }
+
+        else{
+            if (DisplacementDirection === "WEST" || DisplacementDirection === "SOUTH" || DisplacementDirection === "BACKWARD") { // if these are the values 
+                Displacement = -Displacement;// make this negative 
+            }
+
+            if (FinalVelocityDirection === "WEST" || FinalVelocityDirection === "SOUTH" || FinalVelocityDirection === "BACKWARD") { //if these are the values 
+                FinalVelocity = -FinalVelocity;// make this negative 
+            }
+
+            if (accelerationDirection === "WEST" || accelerationDirection === "SOUTH" || accelerationDirection === "BACKWARD") {  // if these are the direction 
+                acceleration = -acceleration; // make the values negative 
+            }
+
+        let discriminant = (FinalVelocity * FinalVelocity) - (2 * acceleration * Displacement); // the discriminenet of f the quadratic formula 
+
+        if (discriminant < 0) {// if the discriminene its a negative number 
+            displacementFinalEquationResult.textContent = "ERROR: NO REAL TIME SOLUTION"; // show this erro 
+            displacementFinalEquationResult.style.color = "rgb(102,21,7)";// in red 
+        }
+
+        else {
+            let Result1 = (-FinalVelocity + Math.sqrt(discriminant)) / acceleration; // calulate with one way 
+            let Result2 = (-FinalVelocity - Math.sqrt(discriminant)) / acceleration; // calulate the other way 
+
+            if (Result1 >= 0 && Result2 >= 0) { // if both are positive 
+            Result = Math.min(Result1, Result2); // the smaller number 
+            }
+
+            else if (Result1 >= 0) {// if this one is positve 
+                Result = Result1; // its the result 
+            }
+
+            else if (Result2 >= 0) {//if only this one is positive 
+                Result = Result2;// this is the number 
+            }
+
+            else {// if this both ar enegative 
+                Result = -1; // as placeholder 
+            }
+
+            if (Result < 0) { // if its a negative then ma
+                displacementFinalEquationResult.textContent = "ERROR: FIX YOUR VALUES, TIME CAN'T BE NEGATIVE";// show this as the result 
+                displacementFinalEquationResult.style.color = "rgb(102,21,7)"; //  in red color 
+            }
+
+            else if (Result === 0) { // if its zero 
+                displacementFinalEquationResult.textContent = "TIME = 0 SECONDS";// show this 
+                displacementFinalEquationResult.style.color = "rgb(11,61,46)";// in green 
+            }
+
+            else {// if  its greater 
+                displacementFinalEquationResult.textContent = "TIME = " + Result.toFixed(3) + " SECONDS";//this is the reults 
+                displacementFinalEquationResult.style.color = "rgb(11,61,46)"; // in green 
+            }
+        }       
+    }
     }
 
 });
