@@ -4,15 +4,6 @@ const mathButton = document.getElementById("mathButton"); // this is the math fo
 const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
 
 
-let buttonClickSound = new Audio("click.mp3"); // declaring the sound 
-
-function playButtonClickSound() {//sound function 
-    buttonClickSound.currentTime = 0;
-    buttonClickSound.play();
-    buttonClickSound.volume(200);
-}
-
-
 
 
 
@@ -7077,6 +7068,14 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
 
 
 // THIS IS THE USER EXPPERENCE STUFF, LIKE SOUND AND IMMAGES
+let buttonClickSound = new Audio("click1.mp3"); // declaring the sound 
+
+function playButtonClickSound() {//sound function 
+    buttonClickSound.currentTime = 0.3;
+    buttonClickSound.play();
+    buttonClickSound.volume(200);
+}
+
 document.querySelectorAll("button").forEach(function(button) {// sellect all button 
     button.addEventListener("click", function() {/// if buttons are clicked 
         playButtonClickSound(); // use the click sound function 
