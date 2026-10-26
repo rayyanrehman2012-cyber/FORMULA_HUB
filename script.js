@@ -3469,6 +3469,59 @@ calculateAverageVelocityDisplacement.addEventListener("click", function(){// if 
         }
     }
 
+    else if(averageVelocityDisplacementSelectedVariable.textContent === "SOLVING FOR TIME (t)") {// if we are solving for final velocity 
+        let displacement = Number(document.getElementById("VAdisplacement").value);// holds the acceleration vlaue 
+        let FinalDirection = document.getElementById("VAFinalVelocityDirection").value;// this hold the directiosn value 
+        let InitialDirection = document.getElementById("VAInitialVelocityDirection").value;// this hold the directiosn value 
+        let InitialVelocity = Number(document.getElementById("VAInitialVelocity").value); // holdes the time value 
+        let displacementDirection = document.getElementById("VAdisplacementDirection").value;// this hold the directiosn value 
+        let FinalVelocity = Number(document.getElementById("VAFinalVelocity").value); // holds the inital velocity value 
+
+        if(document.getElementById("VAdisplacement").value === "" || document.getElementById("VAFinalVelocity").value === "" || document.getElementById("VAInitialVelocity").value === "") {
+            averageVelocityDisplacementResult.textContent = "ERROR: ENTER 3 VALUES!";// this is the erro message 
+            averageVelocityDisplacementResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (FinalDirection === "" || InitialDirection === "" || displacementDirection === "") {// are the directions blanked 
+            averageVelocityDisplacementResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            averageVelocityDisplacementResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if (((FinalDirection === "EAST" || FinalDirection === "WEST") && ((displacementDirection !== "EAST" && displacementDirection !== "WEST") || (InitialDirection !== "EAST" && InitialDirection !== "WEST"))) || ((FinalDirection === "NORTH" || FinalDirection === "SOUTH") && ((displacementDirection !== "NORTH" && displacementDirection !== "SOUTH") || (InitialDirection !== "NORTH" && InitialDirection !== "SOUTH"))) || ((FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") && ((displacementDirection !== "FORWARD" && displacementDirection !== "BACKWARD") || (InitialDirection !== "FORWARD" && InitialDirection !== "BACKWARD"))))
+        {
+            averageVelocityDisplacementResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            averageVelocityDisplacementResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (displacementDirection === "WEST" || displacementDirection === "SOUTH" || displacementDirection === "BACKWARD") { // if these were the directions 
+                displacement = - displacement;// flips the value into a negative 
+            }
+
+            if (InitialDirection === "WEST" || InitialDirection === "SOUTH" || InitialDirection === "BACKWARD") { ////if these were the directiosn 
+                InitialVelocity = -InitialVelocity; // flips the value into a negative 
+            }
+
+            if (FinalDirection === "WEST" || FinalDirection === "SOUTH" || FinalDirection === "BACKWARD") { ////if these were the directiosn 
+                FinalVelocity = -FinalVelocity; // flips the value into a negative 
+            }
+
+            Result = ((2 * displacement)/( InitialVelocity + FinalVelocity)) //this is the formula that calculates the final velocity
+
+            let finalDirection; //holds the final final directions 
+
+            if (Result === 0) { // if the result is  0 
+                averageVelocityDisplacementResult.textContent = "TIME = 0 SECOND"; // there is no displacement show this line 
+                averageVelocityDisplacementResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+
+            else if (Result !== 0){// if the result is not zer then 
+                averageVelocityDisplacementResult.textContent = "TIME = " +Math.abs(Result).toFixed(3)+ "SECONDS"// result line 
+                averageVelocityDisplacementResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
+
 });
 
 

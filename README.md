@@ -1,7 +1,7 @@
 # FORMULA_HUB
 
 ## WHAT WE ARE MAKING
-Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related, but in the futur we might add other formulas as well like from Calulus. We Also might add some visula affects in the futur as well, that could visulaize equations like the kinamatice formula or Vector additions 
+Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related.In the future we might add formulas from other subjects as weel, like from Calulus. Another possability that we are concidering is adding Some visula affects in the future as well, that could visulaize equations like the kinamatice formula or Vector addition and subtraction. BUT that is Futur planning, right now its a calculator with math and basic physics fromulas including the 5 kinamatic equations. 
 
 
 
@@ -157,17 +157,26 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 5)
 - sound effects when you click on buttons so that it feels premium ish 
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
-- doing the physics formulas 
-- some more math formulas 
-- a earase button in each calculator that erases / clears the operation othimes 
--  a basic calculator tab, that lets a person yous a calculatore if they want to 
 - some more formulas that arnt from math or physics,
 - A filter Function on thee different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
 - Having a search function on the all formula page 
 - boyancy formula 
 - gass formula 
-- Viualizing buttons, which would make a visula diagram for the physics formulas and some of the math one, I personaly think this could be very usefull for people who might be confused with the aswers porvided by the calulator, or it can be helfull for those who who learn through visuals 
+- A visulalizing button, which would make a visula diagram for the physics formulas and some of the math one, I personaly think this could be very usefull for people who might be confused with the aswers porvided by the calulator, or it can be helfull for those who who learn through visuals 
 
