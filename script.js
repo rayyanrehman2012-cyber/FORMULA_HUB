@@ -631,7 +631,7 @@ const variableButton3s = document.querySelectorAll(".variableButton3");// variab
 
 
 // THESE ARE FOR THE AVEREAGE VELOCITY DISPLACEMENT (FIFTH KINAMATIC EQUATION)
-const averageVelocityDisplacementPopup = document.getElementById("");// this is the popup for displacement final velocity equation  
+const averageVelocityDisplacementPopup = document.getElementById("averageVelocityDisplacementPopup");// this is the popup for displacement final velocity equation  
 const averageVelocityDisplacementSelectedVariable = document.getElementById("averageVelocityDisplacementSelectedVariable");// this holds the selected variaple 
 const averageVelocityDisplacementInputs = document.getElementById("averageVelocityDisplacementInputs");// these are the inputs 
 const calculateAverageVelocityDisplacement = document.getElementById("calculateAverageVelocityDisplacement"); // calulate button 
@@ -3314,9 +3314,88 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
 });
 
 
+calculateAverageVelocityDisplacement.addEventListener("click", function(){// if the calulate button is clicked 
+    let Result;// this is the result , it holds the value and is used in the result lines 
 
+    if(averageVelocityDisplacementSelectedVariable.textContent === "SOLVING FOR DISPLACEMENT (d)") {// if we are solving for diplacement 
+        let FinalVelocity = Number(document.getElementById("VAFinalVelocity").value); // holds the inital velocity value 
+        let time = Number(document.getElementById("VATime").value);// holds the acceleration vlaue 
+        let InitialDirection = document.getElementById("VAInitialVelocityDirection").value;// this hold the directiosn value 
+        let InitialVelocity = Number(document.getElementById("VAInitialVelocity").value); // holdes the time value 
+        let FinalDirection = document.getElementById("VAFinalVelocityDirection").value;// this hold the directiosn value 
 
+        if(document.getElementById("VAFinalVelocity").value === "" || document.getElementById("VATime").value === "" || document.getElementById("VAInitialVelocity").value === "") {
+            averageVelocityDisplacementResult.textContent = "ERROR: ENTER 3 VALUES!";// this is the erro message 
+            averageVelocityDisplacementResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
 
+        else if (InitialDirection === "" || FinalDirection === "") {// are the directions blanked 
+            averageVelocityDisplacementResult.textContent = "ERROR: SELECT A DIRECTION";// select a directions message
+            averageVelocityDisplacementResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else if ((FinalDirection === "EAST" || FinalDirection === "WEST") && (InitialDirection !== "EAST" && InitialDirection !== "WEST") || (FinalDirection === "NORTH" || FinalDirection === "SOUTH") && (InitialDirection !== "NORTH" && InitialDirection !== "SOUTH") || (FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") && (InitialDirection !== "FORWARD" && InitialDirection !== "BACKWARD"))// if this is not tr
+        {
+            averageVelocityDisplacementResult.textContent = "ERROR: DIRECTIONS MUST BE ON THE SAME AXIS";// select a directions message
+            averageVelocityDisplacementResult.style.color = "rgb(102,21,7)";// change the text color to red 
+        }
+
+        else{
+            if (FinalDirection === "WEST" || FinalDirection === "SOUTH" || FinalDirection === "BACKWARD") { // if these were the directions 
+                FinalVelocity = -FinalVelocity;// flips the value into a negative 
+            }
+
+            if (InitialDirection === "WEST" || InitialDirection === "SOUTH" || InitialDirection === "BACKWARD") { ////if these were the directiosn 
+                InitialVelocity = -InitialVelocity; // flips the value into a negative 
+            }
+
+            Result = (((FinalVelocity + InitialVelocity) / 2)* time) //this is the formuls 
+
+            let finalDirection; //holds the final final directions 
+
+            if (Result === 0) { // if the result is  0 
+                averageVelocityDisplacementResult.textContent = "DISPLACEMENT = 0 METERS"; // there is no displacement show this line 
+                averageVelocityDisplacementResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+
+            }
+
+            else if (FinalDirection === "EAST" || FinalDirection === "WEST") { // these are the directions 
+                
+                if (Result > 0) { // if the result was greater than zero 
+                    finalDirection = "EAST";// the the direction would be easrt 
+                }
+                else {// otherwise 
+                    finalDirection = "WEST";// the direction would eb west 
+                }
+            }
+
+            else if (FinalDirection === "NORTH" || FinalDirection === "SOUTH") { // if it was these 
+                if (Result > 0) { // if the result was greater than zero 
+                    finalDirection = "NORTH";// then the direction is orth 
+                }
+                else {// otherwise
+                    finalDirection = "SOUTH";// the direction is south 
+                }
+            }
+
+            else if (FinalDirection === "FORWARD" || FinalDirection === "BACKWARD") {// if the directions was these
+                if (Result > 0) {// and the result is less than zero 
+                    finalDirection = "FORWARD";// it is forward 
+                }
+                else {// otherwais 
+                    finalDirection = "BACKWARD"; // its backwards 
+                }
+            }
+
+            if (Result !== 0){// if the result is not zer then 
+                averageVelocityDisplacementResult.textContent = "DISPLACEMENT = " +Math.abs(Result).toFixed(3)+ " METERS [" +finalDirection+ "]"// result line 
+                averageVelocityDisplacementResult.style.color = "rgb(11,61,46)" // changes the colour to grree n
+            }
+        }
+    }
+
+    
+});
 
 
 
@@ -4262,6 +4341,9 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
 
 
 
+
+
+
 //THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF THE KINAMATIC FORMULAS
 //forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
@@ -4308,6 +4390,7 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
     averageVelocityDisplacementResult.textContent = "";// clears the result 
     changeAverageVelocityDisplacementVariable.style.display = "none";// hides the button 
 });
+
 
 
 
