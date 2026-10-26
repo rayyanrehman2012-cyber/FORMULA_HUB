@@ -16,7 +16,7 @@ The website starts of on the front page. The front page contains a short descrip
 
 
 
-## WHAT WE MADE (WEEK 1)
+## WHAT WE MADE (WEEK 1, THIRDSPACE WEEK 3)
 - Designed the starting page 
 - Came up with the theme (GREEN & WHITE)
 - Added the 3 buttons on the start screen & Linked them to their respective pages 
@@ -49,7 +49,7 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 
 
 
-## WHAT WE MADE (WEEK 2)
+## WHAT WE MADE (WEEK 2, THIRDSPACE WEEK 4)
 - Improved the Slope Calculator - it tells you if the line is verticle or horizontal too now
 - Divided the Pythagorean Theorem Calculator into 3 for 3 versions 
 - Designed and built the Pythagorean Theorem (Side A) Calculator 
@@ -80,7 +80,7 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 
 
 
-## WHAT WE MADE (WEEK 3)
+## WHAT WE MADE (WEEK 3, THIRDSPACE WEEK 5)
 - Finished the Sphere Volume Calculator
 - Designed and built the Sphere Surface Area Calculator
 - Designed and built the Triangle Prism Volume Calculator
@@ -106,7 +106,7 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 
 
 
-## WHAT WE MADE (WEEK 4)
+## WHAT WE MADE (WEEK 4, THIRDSPACE WEEK 6)
 - Finished the Acceleration Calculator
 - Made the first Kinimatic formula page (VELOCITY-TIME EQUATION)
     - The page opens a popup with 4 versions(rearranged) of the formula
@@ -155,6 +155,7 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 
 SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID 20, BECAUSE EACH OF THE KINEMATIC EQUATIONS HAVE 5 CALUCLATORS WITHIN THEM
 
+- Added sound affects for every button clicked, so that it feels premiumish
 
 
 
@@ -169,14 +170,12 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 
 
 
-
-## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 5)
-- sound effects when you click on buttons so that it feels premium ish 
+## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 5 or in the future)
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - some more formulas that arnt from math or physics,
-- A filter Function on thee different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
+- A filter Function on the different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
 - Having a search function on the all formula page 
 - boyancy formula 
-- gass formula 
+- gas formula 
 - A visulalizing button, which would make a visula diagram for the physics formulas and some of the math one, I personaly think this could be very usefull for people who might be confused with the aswers porvided by the calulator, or it can be helfull for those who who learn through visuals 
 
