@@ -659,7 +659,6 @@ sohCahToaSidePopup.style.display = "none";// hides the pop up
 
 
 
-
 // THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
 
@@ -4547,8 +4546,65 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
 });
 
 
+variableButton5s.forEach(function(button){
+    button.addEventListener("click", function(){
+        sohCahToaPopup.style.display = "none"// hides this 
+        sohCahToaSidePopup.style.display = "flex"// hides this 
 
+        sohCahToaSelectedVariable.textContent = "";// clears the selected variable
+        sohCahToaSelectedSide.textContent = "";// clears the selected side
+        sohCahToaInputs.innerHTML = "";// clears the inputs
+        sohCahToaResult.textContent = "";// clears the result
 
+        if (button.value === "SCTSine"){
+            sohCahToaSelectedVariable.textContent = "SINE (SOH)";
+
+            sohCahToaSideButtons.innerHTML = `
+                <button class="sohCahToaSideButton" value="opposite">OPPOSITE</button>
+                <button class="sohCahToaSideButton" value="hypotenuse">HYPOTENUSE</button>
+            `;
+        }
+
+        else if (button.value === "SCTCosine"){
+            sohCahToaSelectedVariable.textContent = "COSINE (CAH)";
+
+            sohCahToaSideButtons.innerHTML = `
+                <button class="sohCahToaSideButton" value="adjacent">ADJACENT</button>
+                <button class="sohCahToaSideButton" value="hypotenuse">HYPOTENUSE</button>
+            `;
+        }
+
+        else if (button.value === "SCTTangent"){
+            sohCahToaSelectedVariable.textContent = "TANGENT (TOA)";
+
+            sohCahToaSideButtons.innerHTML = `
+                <button class="sohCahToaSideButton" value="opposite">OPPOSITE</button>
+                <button class="sohCahToaSideButton" value="adjacent">ADJACENT</button>
+
+            `;
+        }
+
+        let sohCahToaSideButtonElements = document.querySelectorAll(".sohCahToaSideButton");// selects the side buttons
+
+        sohCahToaSideButtonElements.forEach(function(sideButton){// for each side button
+            sideButton.addEventListener("click", function(){// if the side button is clicked
+                sohCahToaSidePopup.style.display = "none";// hides the side popup
+
+                sohCahToaSelectedSide.textContent = "SOLVING FOR " + sideButton.textContent;// displays the selected side
+
+                if (sideButton)
+
+                sohCahToaInputs.innerHTML = "";// clears the inputs
+                sohCahToaResult.textContent = "";// clears the result
+
+                calculateSohCahToa.style.display = "block";// shows calculate button
+                changeSohCahToaVariable.style.display = "block";// shows change ratio button
+                changeSohCahToaSide.style.display = "block";// shows change side button
+                playButtonClickSound();
+            });
+        });
+    });
+})
 
 
 
