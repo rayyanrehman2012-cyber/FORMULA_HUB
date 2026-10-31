@@ -1061,8 +1061,21 @@
             <div class = "calculatorBox">
                 <div id="sohCahToaPopup" class = "popupMenu">
                     <h2>WHICH RATIO ARE YOU USING TODAY?</h2>
+                    <button class="variableButton5" value="SCTSine"> SINE (SOH) </button>
+                    <button class="variableButton5" value="SCTCosine"> COSINE (CAH) </button>
+                    <button class="variableButton5" value="SCTTangent"> TANGENT (TOA) </button>
                 </div>
+                <h2 id="sohCahToaSelectedVariable"></h2>
+
+                <div id="sohCahToaInputs"></div>
+
+                <button id="calculateSohCahToa">CALCULATE</button>
+
+                <p id="sohCahToaResult"></p>
+
+                <button id="changeSohCahToaVariable">CHANGE RATIO</button>
             </div>
+            <button id="sohCahToaBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
