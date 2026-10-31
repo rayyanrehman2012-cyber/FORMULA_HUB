@@ -3788,7 +3788,6 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
         }
     }
 
-
 })
 
 
