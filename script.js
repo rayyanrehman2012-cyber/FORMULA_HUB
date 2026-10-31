@@ -3829,7 +3829,6 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
             InverseResult.style.color = "rgb(11,61,46)";// in green 
         }
     }
-
 })
 
 
