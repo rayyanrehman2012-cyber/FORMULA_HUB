@@ -182,8 +182,15 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
         - CHange Ratio : lets you switch the ratio your using
         - CHange side : lets you switch the side your ussalving for
 
+- Made the INVERSE TRIGONOMITRY CALCULATOR
+    - The page opens a popup with 3 options, Tan invers, Sine invers, and Cos invers
+    - Clicking sin opens the sine inverese calculator 
+    - cliking cos opens the cos invers calculator 
+    - clicking the tan opens the tan invers calculator
+    - Each calculator on this page has another  button
+        - change ration: brings back the menu so that you can swith the ratio being used
 
-
+Today I completed a total of 9 formulas which is a good addition to this website 
 
 
 
