@@ -4829,11 +4829,12 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
     });
 })
 
-variableButton6s.forEach(function(button){// in variable buttons for each of them
+// this is the selection menu and buttosn for the tan invers 
+variableButton6s.forEach(function(button){// in variable buttons for each of th
     button.addEventListener("click", function(){
         
         playButtonClickSound();
-
+        InversePopup.style.display = "none";
         InversePopup.style.display = "none"// hides this 
         calculateInverse.style.display = "block";
         changeSInverseVariable.style.display = "block";// 
@@ -4842,8 +4843,10 @@ variableButton6s.forEach(function(button){// in variable buttons for each of the
             InverseSelectedVariable.textContent = "SINE INVERSE (sin-1)";
 
             InverseInputs.innerHTML = `
-                <input type="number" id="InverseOpposite" placeholder="OPPOSITE">
-                <input type="number" id="InverseHypotenuse" placeholder="HYPOTENUSE">
+                <label for="InverseOpposite">OPPOSITE</label>
+                <input type="number" id="InverseOpposite">
+                <label for="InverseHypotenuse">HYPOTENUSE</label>
+                <input type="number" id="InverseHypotenuse" >
             `;
         }
 
@@ -4851,8 +4854,11 @@ variableButton6s.forEach(function(button){// in variable buttons for each of the
             InverseSelectedVariable.textContent = "COSINE INVERSE (cos-1)"; // this si what the text will show 
 
             InverseInputs.innerHTML = `
-                <input type="number" id="InverseAdjacent" placeholder="ADJACENT">
-                <input type="number" id="InverseHypotenuse" placeholder="HYPOTENUSE">
+                
+                <label for="InverseAdjacent">ADJACENT</label>
+                <input type="number" id="InverseAdjacent">
+                <label for="InverseHypotenuse">HYPOTENUSE</label>
+                <input type="number" id="InverseHypotenuse" >
             `;// add these buttons 
         }
 
@@ -4860,8 +4866,10 @@ variableButton6s.forEach(function(button){// in variable buttons for each of the
             InverseSelectedVariable.textContent = "TANGENT INVERSE (tan-1)"; // show this text 
 
             InverseInputs.innerHTML = `
-                <input type="number" id="InverseOpposite" placeholder="OPPOSITE">
-                <input type="number" id="InverseAdjacent" placeholder="ADJACENT">
+                <label for="InverseOpposite">OPPOSITE</label>
+                <input type="number" id="InverseOpposite" >
+                <label for="InverseAdjacent">ADJACENT</label>
+                <input type="number" id="InverseAdjacent" >
             `; // add thes buttons 
         }
         InverseResult.textContent = "";
@@ -4962,6 +4970,7 @@ changeSohCahToaSide.addEventListener("click", function(){// if the change variab
 changeSInverseVariable.addEventListener("click", function(){// if the change variable button is clicked 
     InversePopup.style.display = "flex";// hide these function
     calculateInverse.style.display = "none"
+    playButtonClickSound();
     InverseInputs.innerHTML = "";// clears the inputs
     InverseSelectedVariable.textContent = "";// clears the selected variable 
     InverseResult.textContent = "";// clears the result 
