@@ -62,7 +62,7 @@ const displacementFinalEquationBackButton = document.getElementById("displacemen
 const timeIndependentBackButton = document.getElementById("timeIndependentBackButton");// this is the back button on the time indipendent kinimatic equations 
 const averageVelocityDisplacementBackButton = document.getElementById("averageVelocityDisplacementBackButton");// this is the back button on the 5th kinamatic eaquations
 const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// this is the back button
-
+const InverseBackButton = document.getElementById("InverseBackButton");// this is the inverse page back button 
 
 
 
@@ -125,7 +125,7 @@ const displacementFinalEquationPage = document.querySelector(".displacementFinal
 const timeIndependentPage = document.querySelector(".timeIndependentPage");// this is the 4th kinamatic forumla (timekinamtic formula page)\
 const averageVelocityDisplacementPage = document.querySelector(".averageVelocityDisplacementPage");// this is the average velocituy displaement page
 const sohCahToaPage = document.querySelector(".sohCahToaPage");//this is the so cah toa page 
-
+const InversePage = document.querySelector(".InversePage");// this is the inverse page 
 
 
 
@@ -183,6 +183,8 @@ const alldisplacementFinalEquationButton = document.getElementById("alldisplacem
 const alltimeIndependentButton = document.getElementById("alltimeIndependentButton")// this is the button on the all formula screen for the time independent equatiosn 
 const allaverageVelocityDisplacement = document.getElementById("allaverageVelocityDisplacement");// this is the average velocity equation button on the all formula page 
 const allsohCahToaButton = document.getElementById("allsohCahToaButton");// this si the soh cah toa button on the all formula button 
+const allinverseButton = document.getElementById("allinverseButton");// this is the button on the all formula page 
+
 
 
 
@@ -250,6 +252,7 @@ const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeBu
 const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSurfaceAreaButton");// this is the triangle prism Surface area button on the math only formula page 
 const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
 const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the all formula button 
+const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
 
 
 
@@ -653,6 +656,18 @@ const sohCahToaSideButtons = document.getElementById("sohCahToaSideButtons");// 
 const changeSohCahToaSide = document.getElementById("changeSohCahToaSide");// change variable button 
 changeSohCahToaSide.style.display = "none";// hides this intiteall 
 sohCahToaSidePopup.style.display = "none";// hides the pop up 
+
+
+// THESE ARE FOR THE INVERSE TRIGONOMITRY CALCULATOR 
+const InversePopup = document.getElementById("InversePopup");// this is the popup for displacement final velocity equation  
+const InverseSelectedVariable = document.getElementById("InverseSelectedVariable");// this holds the selected variaple 
+const InverseInputs = document.getElementById("InverseInputs");// these are the inputs 
+const calculateInverse = document.getElementById("calculateInverse"); // calulate button 
+calculateInverse.style.display = "none";// hides this intiteall 
+const changeSInverseVariable = document.getElementById("changeSInverseVariable");// change variable button 
+changeSInverseVariable.style.display = "none";// hides this intiteall 
+const InverseResult = document.getElementById("InverseResult");// resut line 
+const variableButton6s = document.querySelectorAll(".variableButton6");// variable buttons 
 
 
 
@@ -4906,6 +4921,14 @@ changeSohCahToaSide.addEventListener("click", function(){// if the change variab
     changeSohCahToaSide.style.display = "none";// this si the change side button 
 });
 
+changeSInverseVariable.addEventListener("click", function(){// if the change variable button is clicked 
+    InversePopup.style.display = "flex";// hide these function
+    calculateInverse.style.display = "none"
+    InverseInputs.innerHTML = "";// clears the inputs
+    InverseSelectedVariable.textContent = "";// clears the selected variable 
+    InverseResult.textContent = "";// clears the result 
+    changeSInverseVariable.style.display = "none";// hides the button 
+});
 
 
 
@@ -5454,6 +5477,16 @@ sohCahToaBackButton.addEventListener("click", function(){// this is the time ind
     changeSohCahToaSide.style.display = "none";// hides this 
 });
 
+InverseBackButton.addEventListener("click", function(){// this is the time independer page back button 
+    startPage.style.display = "flex";// shows the start page again 
+    InversePage.style.display = "none";// hides this page 
+    InversePopup.style.display = "flex";// shows the ratio popup
+    calculateInverse.style.display = "none";// hides the calculate button
+    InverseInputs.innerHTML = "";// clears the inputs
+    InverseSelectedVariable.textContent = "";// clears the selected ratio
+    InverseResult.textContent = "";// clears the result
+    changeSInverseVariable.style.display = "none";// hides this
+});
 
 
 
@@ -6435,7 +6468,28 @@ allsohCahToaButton.addEventListener("click", function (){// the Average velocity
     sohCahToaPage.style.display = "flex"// shows this page
 });
 
-
+allinverseButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides  the math formula page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    InversePage.style.display = "flex"// shows this page
+}); 
 
 
 
@@ -7159,6 +7213,29 @@ sohCahToaButton.addEventListener("click", function(){// if the time indipendent 
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     sohCahToaPage.style.display = "flex"// shows this page
+});
+
+inverseButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    InversePage.style.display = "flex"// shows this page
 });
 
 
