@@ -3611,9 +3611,9 @@ calculateAverageVelocityDisplacement.addEventListener("click", function(){// if 
 
 
 
-//THESE ARE THE POPUP MENU BUTTONS that let you selce variables 
+//THESE ARE THE POPUP MENU BUTTONS that let you selce variablesand side you want to solve for 
 
-//first equation 
+// THIS IS THE 1st KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButtons.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         velocityTimePopup.style.display = "none";// hides this
@@ -3793,7 +3793,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
     });
 });
 
-//second equation
+// THIS IS THE 2nd KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton1s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         displacementInitialPopup.style.display = "none";// hides this
@@ -3973,7 +3973,7 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
-//third equation
+// THIS IS THE 3rd KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton2s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         displacementFinalPopup.style.display = "none";// hides this
@@ -4151,7 +4151,7 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
-//forth equation
+// THIS IS THE 4th KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton3s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         timeIndependentPopup.style.display = "none";// hides this
@@ -4364,7 +4364,7 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
-//FIFTH equation
+// THIS IS THE 5th KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton4s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
         averageVelocityDisplacementPopup.style.display = "none";// hides this
@@ -4545,8 +4545,8 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
-
-variableButton5s.forEach(function(button){
+// THIS IS THE SELECTION MENU AND BUTTONS FOR THE SOH CAH TOA page 
+variableButton5s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){
         sohCahToaPopup.style.display = "none"// hides this 
         sohCahToaSidePopup.style.display = "flex"// hides this 
@@ -4556,7 +4556,7 @@ variableButton5s.forEach(function(button){
         sohCahToaInputs.innerHTML = "";// clears the inputs
         sohCahToaResult.textContent = "";// clears the result
 
-        if (button.value === "SCTSine"){
+        if (button.value === "SCTSine"){// if sine is selectod 
             sohCahToaSelectedVariable.textContent = "SINE (SOH)";
 
             sohCahToaSideButtons.innerHTML = `
@@ -4565,23 +4565,23 @@ variableButton5s.forEach(function(button){
             `;
         }
 
-        else if (button.value === "SCTCosine"){
-            sohCahToaSelectedVariable.textContent = "COSINE (CAH)";
+        else if (button.value === "SCTCosine"){ // if the  button value is cosine 
+            sohCahToaSelectedVariable.textContent = "COSINE (CAH)"; // this is the text content of rhte selected variable 
 
             sohCahToaSideButtons.innerHTML = `
                 <button class="sohCahToaSideButton" value="adjacent">ADJACENT</button>
                 <button class="sohCahToaSideButton" value="hypotenuse">HYPOTENUSE</button>
-            `;
+            `;// add these buttons 
         }
 
-        else if (button.value === "SCTTangent"){
+        else if (button.value === "SCTTangent"){ // if the ratio selected is tangent 
             sohCahToaSelectedVariable.textContent = "TANGENT (TOA)";
 
             sohCahToaSideButtons.innerHTML = `
                 <button class="sohCahToaSideButton" value="opposite">OPPOSITE</button>
                 <button class="sohCahToaSideButton" value="adjacent">ADJACENT</button>
 
-            `;
+            `; // add thes buttons 
         }
 
         let sohCahToaSideButtonElements = document.querySelectorAll(".sohCahToaSideButton");// selects the side buttons
@@ -4589,10 +4589,9 @@ variableButton5s.forEach(function(button){
         sohCahToaSideButtonElements.forEach(function(sideButton){// for each side button
             sideButton.addEventListener("click", function(){// if the side button is clicked
                 sohCahToaSidePopup.style.display = "none";// hides the side popup
-
                 sohCahToaSelectedSide.textContent = "SOLVING FOR " + sideButton.textContent;// displays the selected side
-
                 sohCahToaInputs.innerHTML = "";
+
                 if (button.value === "SCTSine"){//if the selected ratio is sine 
 
                     if(sideButton.value ==="opposite"){ //  and the side selected is opposite 
@@ -4638,9 +4637,10 @@ variableButton5s.forEach(function(button){
                         `;//add all of this 
                     }
                 }
+
                 else if (button.value === "SCTTangent"){//if the selected ratio is cosine 
 
-                    if(sideButton.value ==="opposite"){ // and the side selected is adjacent
+                    if(sideButton.value ==="opposite"){ // and the side selected is opposine 
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
@@ -4650,7 +4650,7 @@ variableButton5s.forEach(function(button){
                         `;// add all of this 
                     }
 
-                    else if (sideButton.value === "adjacent") {// and the siide selected is hypotenuse 
+                    else if (sideButton.value === "adjacent") {// and the siide selected is adjacent  
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
@@ -4661,13 +4661,11 @@ variableButton5s.forEach(function(button){
                     }
                 }
 
-                sohCahToaInputs.innerHTML = "";// clears the inputs
                 sohCahToaResult.textContent = "";// clears the result
-
                 calculateSohCahToa.style.display = "block";// shows calculate button
                 changeSohCahToaVariable.style.display = "block";// shows change ratio button
                 changeSohCahToaSide.style.display = "block";// shows change side button
-                playButtonClickSound();
+                playButtonClickSound(); // play the sounds when the button is clicked 
             });
         });
     });
@@ -4742,7 +4740,7 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
 
 
 
-// THESE ARE THE DIFFERENT CHANGE VARIABLE BUTTONS FOR DIFFERENT VERSIONS FO THE MATH FORMULAS 
+// THESE ARE THE DIFFERENT CHange SELEECTION BUTTONS FOR DIFFERENT VERSIONS FO THE MATH FORMULAS 
 changeSohCahToaVariable.addEventListener("click", function(){// if the change variable button is clicked 
     sohCahToaPopup.style.display = "flex";// hide these function
     calculateSohCahToa.style.display = "none";// this is caluclate button 
