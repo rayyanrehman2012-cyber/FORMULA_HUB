@@ -3677,6 +3677,29 @@ calculateSohCahToa.addEventListener("click", function(){// if the ccaluculate bu
             sohCahToaResult.style.color = "rgb(11,61,46)";// in green 
         }
     }
+
+    else if(sohCahToaSelectedVariable.textContent === "COSINE (CAH)" && sohCahToaSelectedSide.textContent === "SOLVING FOR HYPOTENUSE"){// if this is the selection made by the user 
+        let angle = Number(document.getElementById("SCTangle").value) // holds the angle value (theta)
+        let adjacent = Number(document.getElementById("SCTadjacent").value);// hold the hypotensje baolue  of the triangle because it known 
+
+        if(document.getElementById("SCTangle").value === "" || document.getElementById("SCTadjacent").value === ""){
+            sohCahToaResult.textContent = "ERROR: ENTER 2 VALUES" // this is the  error message
+            sohCahToaResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angle <= 0 || angle >= 90 || adjacent <= 0) { // if the values are engative or to big(for angle)
+            sohCahToaResult.textContent = "ERROR: ENTER VALID VALUES!"; // this is the error message that tells them to chang ethe values 
+            sohCahToaResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{// if everythjing is fine and the values ar eusabel 
+            let angleRadians = angle*(Math.PI/180);// converts the degrees into radiants because js uses radians
+            Result = adjacent / Math.cos(angleRadians);// this is the formula 
+
+            sohCahToaResult.textContent = "HYPOTENUSE = " + Result.toFixed(3) + " UNITS";// the result line 
+            sohCahToaResult.style.color = "rgb(11,61,46)";// this is the color of the result 
+        }
+    }
 })
 
 
