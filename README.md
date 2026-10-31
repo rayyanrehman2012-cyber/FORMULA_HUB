@@ -160,6 +160,27 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 
 
 
+## WHAT WE MADE (WEEK 5, THIRDSPACE WEEK 7)
+- Made the SOH CAH TOA PAGE
+    - The page opens a popup with 3 ratious SINE, COSINE, and TANGENT
+    - CLICKING SINE
+        - opens another popup that has 3 buttons OPPOSITE and HYPOTENUSE 
+        - You Choos which side you want to solve for
+        - It brings you to the apropreat calculator 
+
+    - CLICKING COSINE
+        - opens another popup that has 3 buttons ADJACENT and HYPOTENUSE 
+        - You Choos which side you want to solve for
+        - It brings you to the apropreat calculator 
+
+    - CLICKING TANGENT
+        - opens another popup that has 3 buttons ADJACENT and OPPOSITE 
+        - You Choos which side you want to solve for
+        - It brings you to the apropreat calculator 
+    
+    - Each calculator on this page has 2 more buttons
+        - CHange Ratio : lets you switch the ratio your using
+        - CHange side : lets you switch the side your ussalving for
 
 
 
@@ -167,10 +188,7 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 
 
 
-
-
-
-## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 5 or in the future)
+## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 8 or AFTER THIR SPACE ENDS)
 - some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - some more formulas that arnt from math or physics,
 - A filter Function on the different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
