@@ -61,7 +61,7 @@ const displacementInitialEquationBackButton = document.getElementById("displacem
 const displacementFinalEquationBackButton = document.getElementById("displacementFinalEquationBackButton");// this is the third equation in the kinamatics one, back button 
 const timeIndependentBackButton = document.getElementById("timeIndependentBackButton");// this is the back button on the time indipendent kinimatic equations 
 const averageVelocityDisplacementBackButton = document.getElementById("averageVelocityDisplacementBackButton");// this is the back button on the 5th kinamatic eaquations
-
+const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// this is the back button
 
 
 
@@ -124,7 +124,7 @@ const displacementInitialEquationPage = document.querySelector(".displacementIni
 const displacementFinalEquationPage = document.querySelector(".displacementFinalEquationPage");// this is the 3rd kinamatic equation page 
 const timeIndependentPage = document.querySelector(".timeIndependentPage");// this is the 4th kinamatic forumla (timekinamtic formula page)\
 const averageVelocityDisplacementPage = document.querySelector(".averageVelocityDisplacementPage");// this is the average velocituy displaement page
-
+const sohCahToaPage = document.querySelector(".sohCahToaPage");//this is the so cah toa page 
 
 
 
@@ -182,8 +182,7 @@ const alldisplacementInitialEquationButton = document.getElementById("alldisplac
 const alldisplacementFinalEquationButton = document.getElementById("alldisplacementFinalEquationButton");// this is the bitton on the all formula page for the 3rd formula button 
 const alltimeIndependentButton = document.getElementById("alltimeIndependentButton")// this is the button on the all formula screen for the time independent equatiosn 
 const allaverageVelocityDisplacement = document.getElementById("allaverageVelocityDisplacement");// this is the average velocity equation button on the all formula page 
-
-
+const allsohCahToaButton = document.getElementById("allsohCahToaButton");// this si the soh cah toa button on the all formula button 
 
 
 
@@ -250,8 +249,7 @@ const sphereSurfaceAreaButton = document.getElementById("sphereSurfaceAreaButton
 const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeButton");// this is the triangle prism volume button on the math only page 
 const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSurfaceAreaButton");// this is the triangle prism Surface area button on the math only formula page 
 const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
-
-
+const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the all formula button 
 
 
 
@@ -639,6 +637,16 @@ const averageVelocityDisplacementResult = document.getElementById("averageVeloci
 const variableButton4s = document.querySelectorAll(".variableButton4");// variable buttons 
 
 
+// THESE ARE FOR THE SOH CAH TOA CALCULATOR
+const sohCahToaPopup = document.getElementById("sohCahToaPopup");// this is the popup for displacement final velocity equation  
+const sohCahToaSelectedVariable = document.getElementById("sohCahToaSelectedVariable");// this holds the selected variaple 
+const sohCahToaInputs = document.getElementById("sohCahToaInputs");// these are the inputs 
+const calculateSohCahToa = document.getElementById("calculateSohCahToa"); // calulate button 
+calculateSohCahToa.style.display = "none";// hides this intiteall 
+const changeSohCahToaVariable = document.getElementById("changeSohCahToaVariable");// change variable button 
+changeSohCahToaVariable.style.display = "none";// hides this intiteall 
+const sohCahToaResult = document.getElementById("sohCahToaResult");// resut line 
+const variableButton5s = document.querySelectorAll(".variableButton5");// variable buttons 
 
 
 
@@ -3601,7 +3609,7 @@ calculateAverageVelocityDisplacement.addEventListener("click", function(){// if 
 
 
 
-//THESE ARE THE POPUP MENU BUTTONS FOR THE KINAMATIC EQUATIONS
+//THESE ARE THE POPUP MENU BUTTONS that let you selce variables 
 
 //first equation 
 variableButtons.forEach(function(button){// in variable buttons, for each of them 
@@ -4543,6 +4551,12 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
 
 
 
+
+
+
+
+
+
 //THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF PHYSICS FORMULAS
 //kinamatic forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
@@ -4591,7 +4605,28 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
 // THESE ARE THE DIFFERENT CHANGE VARIABLE BUTTONS FOR DIFFERENT VERSIONS FO THE MATH FORMULAS 
+changeSohCahToaVariable.addEventListener("click", function(){// if the change variable button is clicked 
+    sohCahToaPopup.style.display = "flex";// hide these function
+    calculateSohCahToa.style.display = "none"
+    sohCahToaInputs.innerHTML = "";// clears the inputs
+    sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
+    sohCahToaResult.textContent = "";// clears the result 
+    changeSohCahToaVariable.style.display = "none";// hides the button 
+});
+
+
 
 
 
@@ -5125,6 +5160,18 @@ averageVelocityDisplacementBackButton.addEventListener("click", function(){// th
     changeAverageVelocityDisplacementVariable.style.display = "none";// hides this 
 });
 
+sohCahToaBackButton.addEventListener("click", function(){// this is the time independer page back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    sohCahToaPage.style.display = "none";// hides this page 
+    sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
+
+    sohCahToaPopup.style.display = "flex";// hide page switches to pop up 
+    calculateSohCahToa.style.display = "none" //hides this calculate buttons 
+    sohCahToaInputs.innerHTML = "";// clears the inputs
+    sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
+    sohCahToaResult.textContent = "";// clears the result 
+    changeSohCahToaVariable.style.display = "none";// hides this 
+});
 
 
 
@@ -6081,7 +6128,28 @@ allaverageVelocityDisplacement.addEventListener("click", function (){// the Aver
     averageVelocityDisplacementPage.style.display = "flex"// shows this page
 });
 
-
+allsohCahToaButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sohCahToaPage.style.display = "flex"// shows this page
+});
 
 
 
@@ -7066,6 +7134,8 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
     cubeVolumePage.style.display = "none";// hid this page 
     averageVelocityDisplacementPage.style.display = "flex"// shows this page
 });
+
+
 
 
 
