@@ -3763,6 +3763,38 @@ calculateSohCahToa.addEventListener("click", function(){// if the ccaluculate bu
     }
 })
 
+calculateInverse.addEventListener("click", function(){// if the ccaluculate button is clicked 
+    let angle = 0;// this si the variable that will hold the result value 
+
+    if(InverseSelectedVariable.textContent === "SINE INVERSE (sin-1)"){// if these are the selections made by yht user 
+        let opposite = Number(document.getElementById("InverseOpposite").value);
+        let hypotenuse = Number(document.getElementById("InverseHypotenuse").value);
+
+        if(document.getElementById("InverseOpposite").value === "" || document.getElementById("InverseHypotenuse").value === ""){
+            InverseResult.textContent = "ERROR: ENTER 2 VALUES" // the error message
+            InverseResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(opposite <= 0 || hypotenuse <= 0 || opposite >= hypotenuse) { // if the values are engative or to big(for angle)
+            InverseResult.textContent = "ERROR: ENTER VALID VALUES!"; // this is the error message 
+            InverseResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+            angle = Math.asin(opposite / hypotenuse) * (180 / Math.PI); // the formula 
+
+            InverseResult.textContent = "Angle Theta = " + angle.toFixed(3) + " DEGREES";
+            InverseResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+
+
+})
+
+
+
+
+
 
 
 
