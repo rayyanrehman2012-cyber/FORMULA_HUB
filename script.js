@@ -640,6 +640,7 @@ const variableButton4s = document.querySelectorAll(".variableButton4");// variab
 // THESE ARE FOR THE SOH CAH TOA CALCULATOR
 const sohCahToaPopup = document.getElementById("sohCahToaPopup");// this is the popup for displacement final velocity equation  
 const sohCahToaSelectedVariable = document.getElementById("sohCahToaSelectedVariable");// this holds the selected variaple 
+const sohCahToaSelectedSide = document.getElementById("sohCahToaSelectedSide");// this holds the selected variaple 
 const sohCahToaInputs = document.getElementById("sohCahToaInputs");// these are the inputs 
 const calculateSohCahToa = document.getElementById("calculateSohCahToa"); // calulate button 
 calculateSohCahToa.style.display = "none";// hides this intiteall 
@@ -647,9 +648,11 @@ const changeSohCahToaVariable = document.getElementById("changeSohCahToaVariable
 changeSohCahToaVariable.style.display = "none";// hides this intiteall 
 const sohCahToaResult = document.getElementById("sohCahToaResult");// resut line 
 const variableButton5s = document.querySelectorAll(".variableButton5");// variable buttons 
-
-
-
+const sohCahToaSidePopup = document.getElementById("sohCahToaSidePopup");// this is the popup for displacement final velocity equation  
+const sohCahToaSideButtons = document.getElementById("sohCahToaSideButtons");// this is the popup for displacement final velocity equation  
+const changeSohCahToaSide = document.getElementById("changeSohCahToaSide");// change variable button 
+changeSohCahToaSide.style.display = "none";// hides this intiteall 
+sohCahToaSidePopup.style.display = "none";// hides the pop up 
 
 
 
@@ -4619,11 +4622,23 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
 // THESE ARE THE DIFFERENT CHANGE VARIABLE BUTTONS FOR DIFFERENT VERSIONS FO THE MATH FORMULAS 
 changeSohCahToaVariable.addEventListener("click", function(){// if the change variable button is clicked 
     sohCahToaPopup.style.display = "flex";// hide these function
-    calculateSohCahToa.style.display = "none"
+    calculateSohCahToa.style.display = "none";// this is caluclate button 
     sohCahToaInputs.innerHTML = "";// clears the inputs
     sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
     sohCahToaResult.textContent = "";// clears the result 
     changeSohCahToaVariable.style.display = "none";// hides the button 
+    sohCahToaSelectedSide.textContent = "";// this is the selected side getting cleared 
+    sohCahToaSidePopup.style.display = "none";// this is the side popup hiding 
+});
+
+changeSohCahToaSide.addEventListener("click", function(){// if the change variable button is clicked 
+    sohCahToaSidePopup.style.display = "flex";// hide these function
+    calculateSohCahToa.style.display = "none";// this is the calculate button 
+    sohCahToaInputs.innerHTML = "";// clears the inputs
+    sohCahToaSelectedSide.textContent = "";// clears the selected variable 
+    sohCahToaResult.textContent = "";// clears the result 
+    changeSohCahToaVariable.style.display = "none";// hides the button 
+    changeSohCahToaSide.style.display = "none";// this si the change side button 
 });
 
 
@@ -5161,16 +5176,17 @@ averageVelocityDisplacementBackButton.addEventListener("click", function(){// th
 });
 
 sohCahToaBackButton.addEventListener("click", function(){// this is the time independer page back button 
-    startPage.style.display = "flex";// shows the star pag again 
+    startPage.style.display = "flex";// shows the start page again 
     sohCahToaPage.style.display = "none";// hides this page 
-    sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
-
-    sohCahToaPopup.style.display = "flex";// hide page switches to pop up 
-    calculateSohCahToa.style.display = "none" //hides this calculate buttons 
+    sohCahToaPopup.style.display = "flex";// shows the ratio popup
+    sohCahToaSidePopup.style.display = "none";// hides the side popup
+    calculateSohCahToa.style.display = "none";// hides the calculate button
     sohCahToaInputs.innerHTML = "";// clears the inputs
-    sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
-    sohCahToaResult.textContent = "";// clears the result 
-    changeSohCahToaVariable.style.display = "none";// hides this 
+    sohCahToaSelectedVariable.textContent = "";// clears the selected ratio
+    sohCahToaSelectedSide.textContent = "";// clears the selected side
+    sohCahToaResult.textContent = "";// clears the result
+    changeSohCahToaVariable.style.display = "none";// hides this
+    changeSohCahToaSide.style.display = "none";// hides this 
 });
 
 
