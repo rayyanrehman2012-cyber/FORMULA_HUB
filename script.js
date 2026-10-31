@@ -4543,8 +4543,8 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
 
 
 
-//THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF THE KINAMATIC FORMULAS
-//forumal1
+//THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF PHYSICS FORMULAS
+//kinamatic forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
     velocityTimePopup.style.display = "flex";// hide these function
     calculateVelocityTimeEquation.style.display = "none"
@@ -4553,7 +4553,7 @@ changeVelocityTimeVariable.addEventListener("click", function(){// if the change
     velocityTimeEquationResult.textContent = "";// clears the result 
     changeVelocityTimeVariable.style.display = "none";// hides the button 
 });
-//formula2
+// kinamatic formula2
 changeDisplacementInitialVariable.addEventListener("click", function(){// if the change variable button is clicked 
     displacementInitialPopup.style.display = "flex";// hide these function
     calculateDisplacementInitialEquation.style.display = "none"
@@ -4562,7 +4562,7 @@ changeDisplacementInitialVariable.addEventListener("click", function(){// if the
     displacementInitialEquationResult.textContent = "";// clears the result 
     changeDisplacementInitialVariable.style.display = "none";// hides the button 
 });
-//formula3
+//kinamatic formula3
 changeDisplacementFinalVariable.addEventListener("click", function(){// if the change variable button is clicked 
     displacementFinalPopup.style.display = "flex";// hide these function
     calculateDisplacementFinalEquation.style.display = "none"
@@ -4571,7 +4571,7 @@ changeDisplacementFinalVariable.addEventListener("click", function(){// if the c
     displacementFinalEquationResult.textContent = "";// clears the result 
     changeDisplacementFinalVariable.style.display = "none";// hides the button 
 });
-//formula4
+//kinamatic formula4
 changeTimeIndependentVariable.addEventListener("click", function(){// if the change variable button is clicked 
     timeIndependentPopup.style.display = "flex";// hide these function
     calculateTimeIndependent.style.display = "none"
@@ -4580,7 +4580,7 @@ changeTimeIndependentVariable.addEventListener("click", function(){// if the cha
     timeIndependentResult.textContent = "";// clears the result 
     changeTimeIndependentVariable.style.display = "none";// hides the button 
 });
-//formula5
+//kinamatic formula5
 changeAverageVelocityDisplacementVariable.addEventListener("click", function(){// if the change variable button is clicked 
     averageVelocityDisplacementPopup.style.display = "flex";// hide these function
     calculateAverageVelocityDisplacement.style.display = "none"
@@ -4591,6 +4591,7 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
 });
 
 
+// THESE ARE THE DIFFERENT CHANGE VARIABLE BUTTONS FOR DIFFERENT VERSIONS FO THE MATH FORMULAS 
 
 
 
@@ -7067,7 +7068,8 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
 });
 
 
-// THIS IS THE USER EXPPERENCE STUFF, LIKE SOUND AND IMMAGES
+
+// THIS IS THE USER EXPPERENCE STUFF, LIKE SOUND AND IMAGES
 let buttonClickSound = new Audio("click1.mp3"); // declaring the sound 
 
 function playButtonClickSound() {//sound function 

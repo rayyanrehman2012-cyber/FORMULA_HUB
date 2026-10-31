@@ -62,6 +62,13 @@
                     <button id = "alltrianglePrismVolumeButton" class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                     <button id = "alltrianglePrismSurfaceAreaButton" class="formulaButton">TRIANGULAR PRISM SURFACE AREA</button>
                     <button id = "alltrianglePrismPerimeterButton" class="formulaButton">TRIANGULAR PRISM PERIMETER</button>
+                    <button id = "allsohCahToaButton" class = "formulaButton"> SOH-CAH-TOA CALCULATOR</button>
+                    <button id = "allinverseButton" class = "formulaButton"> INVERSE TRIGONOMETRY  CALCULATOR</button>
+                    <button id = "allsinLawSidesButton" class = "formulaButton"> SIN LAW(FOR SIDES)</button>
+                    <button id = "allsinLawAnglesButton" class = "formulaButton"> SIN LAW(FOR ANGLES)</button>
+                    <button id = "allcosineLawSidesButton" class = "formulaButton"> COSINE LAW (FOR SIDES)</button>
+                    <button id = "allcosineLawAnglesButton" class = "formulaButton"> COSINE LAW (FOR ANGLES)</button>
+
 
                 </div>
             </section>
@@ -124,7 +131,13 @@
                 <button id = "trianglePrismVolumeButton" class="formulaButton">TRIANGULAR PRISM VOLUME</button>
                 <button id = "trianglePrismSurfaceAreaButton" class="formulaButton">TRIANGULAR PRISM SURFACE AREA</button>
                 <button id = "trianglePrismPerimeterButton" class="formulaButton">TRIANGULAR PRISM PERIMETER</button>
-                    
+                <button id = "sohCahToaButton" class = "formulaButton"> SOH-CAH-TOA CALCULATOR</button>
+                <button id = "inverseButton" class = "formulaButton"> INVERSE TRIGONOMETRY  CALCULATOR</button>
+                <button id = "sinLawSidesButton" class = "formulaButton"> SIN LAW(FOR SIDES)</button>
+                <button id = "sinLawAnglesButton" class = "formulaButton"> SIN LAW(FOR ANGLES)</button>
+                <button id = "cosineLawSidesButton" class = "formulaButton"> COSINE LAW (FOR SIDES)</button>
+                <button id = "cosineLawAnglesButton" class = "formulaButton"> COSINE LAW (FOR ANGLES)</button>
+
                 </div>
             <button id="mathBackButton">BACK</button>
         </main>
@@ -929,7 +942,7 @@
             <h1>VELOCITY-TIME-EQUATION</h1>
             <div class = "calculatorBox">
                 <div id="velocityTimePopup" class="popupMenu">
-                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton" value="finalVelocity"> FINAL VELOCITY (vf) </button>
                     <button class="variableButton" value="initialVelocity">INITIAL VELOCITY (vi)</button>         
                     <button class="variableButton" value="acceleration"> ACCELERATION (a)</button>
@@ -953,7 +966,7 @@
             <h1>DISPLACEMNT <br> (WITH INITIAL VELOCITY)</h1>
             <div class = "calculatorBox">
                 <div id="displacementInitialPopup" class="popupMenu">
-                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton1" value="DIdisplacement"> DISPLACEMENT (d) </button>
                     <button class="variableButton1" value="DIinitialVelocity">INITIAL VELOCITY (vi)</button>         
                     <button class="variableButton1" value="DIacceleration"> ACCELERATION (a)</button>
@@ -978,7 +991,7 @@
             <h1>DISPLACEMENT <br> (WITH FINAL VELOCITY)</h1>
             <div class = "calculatorBox">
                 <div id="displacementFinalPopup" class="popupMenu">
-                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton2" value="DFdisplacement"> DISPLACEMENT (d) </button>
                     <button class="variableButton2" value="DFfinalVelocity">FINAL VELOCITY (vf)</button>         
                     <button class="variableButton2" value="DFacceleration"> ACCELERATION (a)</button>
@@ -1001,7 +1014,7 @@
             <h1>TIME INDEPENDENT EQUATION</h1>
             <div class = "calculatorBox">
                 <div id="timeIndependentPopup" class="popupMenu">
-                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton3" value="TIdisplacement"> DISPLACEMENT (d) </button>
                     <button class="variableButton3" value="TIfinalVelocity">FINAL VELOCITY (vf)</button>         
                     <button class="variableButton3" value="TIacceleration"> ACCELERATION (a)</button>
@@ -1024,7 +1037,7 @@
             <h1>DISPLACEMENT <br> WITH AVERAGE VELOCITY</h1>
             <div class = "calculatorBox">
                 <div id="averageVelocityDisplacementPopup" class="popupMenu">
-                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR</h2>
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton4" value="AVdisplacement"> DISPLACEMENT (d) </button>
                     <button class="variableButton4" value="AVfinalVelocity">FINAL VELOCITY (vf)</button>         
                     <button class="variableButton4" value="AVtime"> TIME (t)</button>
@@ -1041,6 +1054,15 @@
                 <button id="changeAverageVelocityDisplacementVariable">CHANGE VARIABLE</button>
             </div>
             <button id="averageVelocityDisplacementBackButton">BACK</button>
+        </main>
+
+        <main class="sohCahToaPage">
+            <h1>SIN COS TAN (SOH CAH TOA)</h1>
+            <div class = "calculatorBox">
+                <div id="sohCahToaPopup" class = "popupMenu">
+                    <h2>WHICH RATIO ARE YOU USING TODAY?</h2>
+                </div>
+            </div>
         </main>
         
         <script src="./script.js"></script>
