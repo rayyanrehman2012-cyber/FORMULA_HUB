@@ -3788,6 +3788,48 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
         }
     }
 
+    else if(InverseSelectedVariable.textContent === "COSINE INVERSE (cos-1)"){// if these are the selections made by yht user 
+        let adjacent = Number(document.getElementById("InverseAdjacent").value);// hold the adjacent avlue 
+        let hypotenuse = Number(document.getElementById("InverseHypotenuse").value);// hold the hypotenuse value 
+
+        if(document.getElementById("InverseAdjacent").value === "" || document.getElementById("InverseHypotenuse").value === ""){// if the values are blanc
+            InverseResult.textContent = "ERROR: ENTER 2 VALUES" // the error message
+            InverseResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(adjacent <= 0 || hypotenuse <= 0 || adjacent >= hypotenuse) { // if the values are engative or to big(for angle)
+            InverseResult.textContent = "ERROR: ENTER VALID VALUES!"; // this is the error message 
+            InverseResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+            angle = Math.acos(adjacent / hypotenuse) * (180 / Math.PI); // this is the formula
+            InverseResult.textContent = "Angle Theta = " + angle.toFixed(3) + " DEGREES";// this is the result line 
+            InverseResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+
+    else if(InverseSelectedVariable.textContent === "TANGENT INVERSE (tan-1)"){// if these are the selections made by yht user 
+        let adjacent = Number(document.getElementById("InverseAdjacent").value);// hold the adjacent avlue 
+        let opposite = Number(document.getElementById("InverseOpposite").value);// hold the hypotenuse value 
+
+        if(document.getElementById("InverseAdjacent").value === "" || document.getElementById("InverseOpposite").value === ""){// if the values are blanc
+            InverseResult.textContent = "ERROR: ENTER 2 VALUES" // the error message
+            InverseResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(adjacent <= 0 || opposite <= 0) { // if the values are engative or to big(for angle)
+            InverseResult.textContent = "ERROR: ENTER VALID VALUES!"; // this is the error message 
+            InverseResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+            angle = Math.atan(opposite / adjacent) * (180 / Math.PI); // this is the formula
+            InverseResult.textContent = "Angle Theta = " + angle.toFixed(3) + " DEGREES";// this is the result line 
+            InverseResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+
 })
 
 
