@@ -4592,7 +4592,74 @@ variableButton5s.forEach(function(button){
 
                 sohCahToaSelectedSide.textContent = "SOLVING FOR " + sideButton.textContent;// displays the selected side
 
-                if (sideButton)
+                sohCahToaInputs.innerHTML = "";
+                if (button.value === "SCTSine"){//if the selected ratio is sine 
+
+                    if(sideButton.value ==="opposite"){ //  and the side selected is opposite 
+                        sohCahToaInputs.innerHTML = ` 
+                            <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
+                            <input type="number" id="SCTangle">
+
+                            <label for="SCThypotenuse">HYPOTENUSE</label>
+                            <input type="number" id="SCThypotenuse">
+                        `;// add all of this
+                    }
+
+                    else if (sideButton.value === "hypotenuse") {// solving for hypotenuse
+                        sohCahToaInputs.innerHTML = `
+                            <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
+                            <input type="number" id="SCTangle">
+
+                            <label for="SCTopposite">OPPOSITE</label>
+                            <input type="number" id="SCTopposite">
+                        `; // add alll of this 
+                    }
+                }
+
+                else if (button.value === "SCTCosine"){//if the selected ratio is cosine 
+
+                    if(sideButton.value ==="adjacent"){ // and the side selected is adjacent
+                        sohCahToaInputs.innerHTML = `
+                            <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
+                            <input type="number" id="SCTangle">
+
+                            <label for="SCThypotenuse">HYPOTENUSE</label>
+                            <input type="number" id="SCThypotenuse">
+                        `;// add all of this 
+                    }
+
+                    else if (sideButton.value === "hypotenuse") {// and the siide selected is hypotenuse 
+                        sohCahToaInputs.innerHTML = `
+                            <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
+                            <input type="number" id="SCTangle">
+
+                            <label for="SCTadjacent">ADJACENT</label>
+                            <input type="number" id="SCTadjacent"> 
+                        `;//add all of this 
+                    }
+                }
+                else if (button.value === "SCTTangent"){//if the selected ratio is cosine 
+
+                    if(sideButton.value ==="opposite"){ // and the side selected is adjacent
+                        sohCahToaInputs.innerHTML = `
+                            <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
+                            <input type="number" id="SCTangle">
+
+                            <label for="SCTadjacent">ADJACENT</label>
+                            <input type="number" id="SCTadjacent"> 
+                        `;// add all of this 
+                    }
+
+                    else if (sideButton.value === "adjacent") {// and the siide selected is hypotenuse 
+                        sohCahToaInputs.innerHTML = `
+                            <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
+                            <input type="number" id="SCTangle">
+
+                            <label for="SCTopposite">OPPOSITE</label>
+                            <input type="number" id="SCTopposite"> 
+                        `;//add all of this 
+                    }
+                }
 
                 sohCahToaInputs.innerHTML = "";// clears the inputs
                 sohCahToaResult.textContent = "";// clears the result
