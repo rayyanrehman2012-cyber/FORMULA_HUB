@@ -4833,7 +4833,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
 variableButton6s.forEach(function(button){// in variable buttons for each of th
     button.addEventListener("click", function(){
         
-        playButtonClickSound();
         InversePopup.style.display = "none";
         InversePopup.style.display = "none"// hides this 
         calculateInverse.style.display = "block";
@@ -4970,7 +4969,6 @@ changeSohCahToaSide.addEventListener("click", function(){// if the change variab
 changeSInverseVariable.addEventListener("click", function(){// if the change variable button is clicked 
     InversePopup.style.display = "flex";// hide these function
     calculateInverse.style.display = "none"
-    playButtonClickSound();
     InverseInputs.innerHTML = "";// clears the inputs
     InverseSelectedVariable.textContent = "";// clears the selected variable 
     InverseResult.textContent = "";// clears the result 
