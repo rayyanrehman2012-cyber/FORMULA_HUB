@@ -4693,7 +4693,7 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
     button.addEventListener("click", function(){
         sohCahToaPopup.style.display = "none"// hides this 
         sohCahToaSidePopup.style.display = "flex"// hides this 
-
+        changeSohCahToaVariable.style.display = "none"
         sohCahToaSelectedVariable.textContent = "";// clears the selected variable
         sohCahToaSelectedSide.textContent = "";// clears the selected side
         sohCahToaInputs.innerHTML = "";// clears the inputs
@@ -4891,6 +4891,7 @@ changeSohCahToaVariable.addEventListener("click", function(){// if the change va
     sohCahToaSelectedVariable.textContent = "";// clears the selected variable 
     sohCahToaResult.textContent = "";// clears the result 
     changeSohCahToaVariable.style.display = "none";// hides the button 
+    changeSohCahToaSide.style.display = "none";// hides the button 
     sohCahToaSelectedSide.textContent = "";// this is the selected side getting cleared 
     sohCahToaSidePopup.style.display = "none";// this is the side popup hiding 
 });
