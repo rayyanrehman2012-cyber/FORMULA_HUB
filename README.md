@@ -191,12 +191,12 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
         - change ration: brings back the menu so that you can swith the ratio being used
 
 Today I completed a total of 9 formulas which is a good addition to this website 
-
+- Redesigned the layout and formating of the Front page adding visual operations signs
+- Added and designed a Search bar on the physics page, that lets you shearch for the exact function.
 
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 8 or AFTER THIR SPACE ENDS)
-- some mathamatical operation images/ elements on the from screen so it doesnt look plane 
 - some more formulas that arnt from math or physics,
 - A filter Function on the different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
 - Having a search function on the all formula page 
