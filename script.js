@@ -5179,6 +5179,9 @@ sohCahToaBackButton.addEventListener("click", function(){// this is the time ind
 
 
 
+
+
+
 //THESE ARE ALL OF THE ALL FORMULA PAGE BUTTONS IN THIS PROJECT
 allrectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
@@ -6131,7 +6134,7 @@ allaverageVelocityDisplacement.addEventListener("click", function (){// the Aver
 allsohCahToaButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
-    mathFormulaPage.style.display = "none";
+    mathFormulaPage.style.display = "none";// hides  the math formula page 
     squareAreaPage.style.display = "none";// hides this page 
     rectangleAreaPage.style.display = "none";// hides this page 
     rectanglePerimeterPage.style.display = "none"// hides this page 
@@ -6150,6 +6153,11 @@ allsohCahToaButton.addEventListener("click", function (){// the Average velocity
     cubeVolumePage.style.display = "none";// hid this page 
     sohCahToaPage.style.display = "flex"// shows this page
 });
+
+
+
+
+
 
 
 
@@ -6849,6 +6857,30 @@ trianglePrismPerimeterButton.addEventListener("click", function(){// if the Tria
     trianglePrismPerimeterPage.style.display = "flex"// shows this page
 });
 
+sohCahToaButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sohCahToaPage.style.display = "flex"// shows this page
+});
+
+
 
 
 
@@ -7134,6 +7166,11 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
     cubeVolumePage.style.display = "none";// hid this page 
     averageVelocityDisplacementPage.style.display = "flex"// shows this page
 });
+
+
+
+
+
 
 
 
