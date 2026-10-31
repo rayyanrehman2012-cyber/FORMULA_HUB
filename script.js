@@ -4829,7 +4829,45 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
     });
 })
 
+variableButton6s.forEach(function(button){// in variable buttons for each of them
+    button.addEventListener("click", function(){
+        
+        playButtonClickSound();
 
+        InversePopup.style.display = "none"// hides this 
+        calculateInverse.style.display = "block";
+        changeSInverseVariable.style.display = "block";// 
+
+        if (button.value === "ISine"){// if sine is selectod 
+            InverseSelectedVariable.textContent = "SINE INVERSE (sin-1)";
+
+            InverseInputs.innerHTML = `
+                <input type="number" id="InverseOpposite" placeholder="OPPOSITE">
+                <input type="number" id="InverseHypotenuse" placeholder="HYPOTENUSE">
+            `;
+        }
+
+        else if (button.value === "ICosine"){ // if the  button value is cosine 
+            InverseSelectedVariable.textContent = "COSINE INVERSE (cos-1)"; // this si what the text will show 
+
+            InverseInputs.innerHTML = `
+                <input type="number" id="InverseAdjacent" placeholder="ADJACENT">
+                <input type="number" id="InverseHypotenuse" placeholder="HYPOTENUSE">
+            `;// add these buttons 
+        }
+
+        else if (button.value === "ITangent"){ // if the ratio selected is tangent 
+            InverseSelectedVariable.textContent = "TANGENT INVERSE (tan-1)"; // show this text 
+
+            InverseInputs.innerHTML = `
+                <input type="number" id="InverseOpposite" placeholder="OPPOSITE">
+                <input type="number" id="InverseAdjacent" placeholder="ADJACENT">
+            `; // add thes buttons 
+        }
+        InverseResult.textContent = "";
+
+    });
+})
 
 
 
@@ -5487,6 +5525,11 @@ InverseBackButton.addEventListener("click", function(){// this is the time indep
     InverseResult.textContent = "";// clears the result
     changeSInverseVariable.style.display = "none";// hides this
 });
+
+
+
+
+
 
 
 
