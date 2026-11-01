@@ -7788,6 +7788,7 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
 let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
 let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
 
+// THESE ARE THE FILTR FINCTIONS 
 allFilterDropdownButton.addEventListener("click", function(){//if the filter button is clicked 
     if(allFilterDropdownMenu.style.display === "block"){// if the filter doep down menu is swhing
         allFilterDropdownMenu.style.display = "none";// then show  then kid the meue 
@@ -7799,14 +7800,14 @@ allFilterDropdownButton.addEventListener("click", function(){//if the filter but
 })
 
 let formulaFilters = document.querySelectorAll(".formulaFilter");// this is the variable that holds all the filters 
-let resetFilterButton = document.getElementById("resetFilterButton");// this is the  button that resets the filters  on the all formula page
+let resetFiltersButton = document.getElementById("resetFiltersButton");// this is the  button that resets the filters  on the all formula page
 let allFormulaButtons = document.querySelectorAll(".formulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
 
 function filterAllFormulas(filter){// this is the function that filters the formulas on the all formula page
 
     let selectedFilter = [];// this the array that hold the selected buttons
 
-    formulaFilters.forEach(function(button){// for all the filture boxes
+    formulaFilters.forEach(function(filter){// for all the filture boxes
         if (filter.checked){// if the they are checked
             selectedFilter.push(filter.value);// then add the value to the the seleted filters 
         }
@@ -7831,3 +7832,14 @@ formulaFilters.forEach(function(filter){ // check all the checkboxes on the all 
         filterAllFormulas(filter);// then run the filter function
     })
 })
+
+//THESE ARE FOR THE FILTER RESET FUNCTION
+resetFiltersButton.addEventListener("click", function() { // if the reset filters button is clickes 
+
+    formulaFilters.forEach(function(filter) { // in formula filters in the check boxes 
+        filter.checked = false; // uncheck the boxes 
+    });
+
+    filterAllFormulas();// run the funtion 
+
+});

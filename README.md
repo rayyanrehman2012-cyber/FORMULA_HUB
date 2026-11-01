@@ -199,7 +199,9 @@ Today I completed a total of 9 formulas which is a good addition to this website
 
 - added and designed a Search bar on te All formula page, that lets you search for the exact funtion on the all formula page 
 
-- Currently designing a filter function, it would let people filtorthe formulas, so smaller catigories like area, perimeter, 3d, 2d etc etc, there a clear button on it to so filters can be removed after adding them .
+- Made a filter function on the All formula page, it lets  people filter formulas into smaller catigories like area, perimeter, 3d, 2d etc etc.
+
+- There is a clear button on it to so filters can be removed after adding them .
 
 
 
