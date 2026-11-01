@@ -7807,7 +7807,7 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
 
 
 
-//THESE ARE FOR THE FILTER DROPDOWN MENU
+//THESE ARE FOR THE FILTER DROPDOWN MENU on the all formula page 
 let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
 let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
 allFilterDropdownButton.addEventListener("click", function(){//if the filter button is clicked 
@@ -7820,10 +7820,23 @@ allFilterDropdownButton.addEventListener("click", function(){//if the filter but
     }
 })
 
+//THESE ARE FOR THE FILTER DROPDOWN MENU ON THE MATH FORMULA PAGE
+let mathFilterDropdownButton = document.getElementById("mathFilterDropdownButton");// this is the filter drop down button on the math formula page 
+let mathFilterDropdownMenu = document.querySelector(".mathfilterDropdownMenu");// thi is the fillter menu
+mathFilterDropdownButton.addEventListener("click", function(){// if the filter button on the math screen is clicked then 
+    
+    if(mathFilterDropdownMenu.style.display === "grid"){// if the filter menu is showing
+        mathFilterDropdownMenu.style.display = "none";//hide it
+    }
+
+    else{// if the filter menu is not showig then 
+        mathFilterDropdownMenu.style.display = "grid";// show it
+    }
+})
 
 
 
-// THESE ARE THE FILTR FINCTIONS 
+// THESE ARE THE FILTR FINCTIONS FOR THE ALL: FORMULA PAGE
 let formulaFilters = document.querySelectorAll(".formulaFilter");// this is the variable that holds all the filters 
 let resetFiltersButton = document.getElementById("resetFiltersButton");// this is the  button that resets the filters  on the all formula page
 let allFormulaButtons = document.querySelectorAll(".formulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
@@ -7859,6 +7872,42 @@ formulaFilters.forEach(function(filter){ // check all the checkboxes on the all 
 })
 
 
+//THESE ARE THE FILTER FUNCTIONS FOR THE MATH FILTER
+
+let formulaFilters1 = document.querySelectorAll(".formulaFilter1");// this is the variable that holds all the filters
+let mathresetFiltersButton = document.getElementById("mathresetFiltersButton");// this is the bittton the resets the filters 
+let mathFormulaButtons = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
+
+
+function filterMathFormulas(filter){// this is the function that filters the formulas on the all formula page
+
+    let selectedFilter1 = [];// this the array that hold the selected buttons
+
+    formulaFilters1.forEach(function(filter){// for all the filture boxes
+        if (filter.checked){// if the they are checked
+            selectedFilter1.push(filter.value);// then add the value to the the seleted filters 
+        }
+    });
+
+    mathFormulaButtons.forEach(function(button){// for all of the buttons on the all formula page
+                
+        let buttonCategories = (button.dataset.categories || "").split(" ");// split their catigories based on spacing, and hold the value
+
+        if(selectedFilter1.length === 0||selectedFilter1.some(function(filter){// if the no filter is selected, or if the selected filter is in the button
+            return buttonCategories.includes(filter)// show it in the all formula page
+        })){button.style.display = "block"}// show the button
+
+        else{// otherwise hide it
+            button.style.display = "none"// hide the button
+        }
+    });
+}
+
+formulaFilters1.forEach(function(filter){ // check all the checkboxes on the all formula page 
+    filter.addEventListener("change", function(){// if the any box is clicked
+        filterMathFormulas(filter);// then run the filter function
+    })
+})
 
 
 //THESE ARE FOR THE FILTER RESET FUNCTION
