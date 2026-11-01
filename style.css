@@ -6393,7 +6393,52 @@ body {
     font-size: 16px;
     cursor:pointer;
     color:rgb(11, 61, 46);
-
-
+    transition: 0.7s ease;
 
 }
+
+.allfilterDropdownMenu label:hover{
+    background-color: rgb(11, 61, 46);
+    color: rgb(247, 249, 248);
+    border-radius: 8px;
+    
+}
+
+.allfilterDropdownMenu input[type="checkbox"] {
+    accent-color: rgb(11, 61, 46);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .allfilterDropdownMenu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .allfilterDropdownMenu {
+        grid-template-columns: 1fr;
+    }
+}
+
+#resetFiltersButton{
+    grid-column: 1/-1;
+    width:100%;
+    padding: 10px;
+    margin-top:10px;
+    border:none;
+    border-radius: 8px;
+    background-color: rgb(10,60,46);
+    color:white;
+    transition: 0.7s ease;
+    cursor:pointer;
+
+}
+
+#resetFiltersButton:hover{
+    background-color: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+}
+
