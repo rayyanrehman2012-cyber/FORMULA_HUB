@@ -6501,3 +6501,113 @@ body {
 #allFilterDropdownButton:active {
     transform: scale(0.97);
 }
+
+
+.mathFilterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.mathfilterDropdownMenu{
+    display:none;
+    position:static;
+    min-width: min(100%, 520px);
+    box-sizing: border-box;
+    padding:12px;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+
+.mathfilterDropdownMenu label{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding:8px;
+    font-size: 16px;
+    cursor:pointer;
+    color:rgb(11, 61, 46);
+    transition: 0.7s ease;
+}
+
+
+.mathfilterDropdownMenu label:hover{
+    background-color: rgb(11, 61, 46);
+    color: rgb(247, 249, 248);
+    border-radius: 8px;
+ 
+}
+
+
+.mathfilterDropdownMenu input[type="checkbox"] {
+    accent-color: rgb(11, 61, 46);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .mathfilterDropdownMenu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 400px) {
+    .mathfilterDropdownMenu {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+#mathresetFiltersButton{
+    grid-column: 1/-1;
+    width:100%;
+    padding: 10px;
+    margin-top:10px;
+    border:none;
+    border-radius: 8px;
+    background-color: rgb(10,60,46);
+    color:white;
+    transition: 0.7s ease;
+    cursor:pointer;
+}
+
+
+#mathresetFiltersButton:hover{
+    background-color: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+}
+
+
+#mathFilterDropdownButton{
+    padding: 10px 18px;
+    background-color: rgb(11, 61, 46);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+
+#mathFilterDropdownButton:hover {
+    background-color: rgb(128, 170, 144);
+}
+
+
+#mathFilterDropdownButton:active {
+    transform: scale(0.97);
+}

@@ -1,7 +1,7 @@
 # FORMULA_HUB
 
 ## WHAT WE ARE MAKING
-Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related.In the future we might add formulas from other subjects as weel, like from Calulus. Another possability that we are concidering is adding Some visula affects in the future as well, that could visulaize equations like the kinamatice formula or Vector addition and subtraction. BUT that is Futur planning, right now its a calculator with math and basic physics fromulas including the 5 kinamatic equations. 
+Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related.In the future we might add formulas from other subjects as weel, like from Calulus. Another possability that we are concidering is adding Some visula affects in the future as well, that could visulaize equations like the kinamatice formula or Vector addition and subtraction. BUT that is Futue planning, right now its a calculator with math and basic physics fromulas including the 5 kinamatic equations. 
 
 
 
@@ -9,9 +9,9 @@ Me and my partner are making a website that has all the commonly used formulas o
 
 
 ## Navigation ON THE WEBSITE
-The website starts of on the front page. The front page contains a short description and 3 buttons (ALL FORMULAS, MATH FORMULAS, and PHYSICS FORMULAS). Each button takes you to the page you chose( MATH FORMULAS button will take you to the page with only math formulas, etc). Each formula bage has a back button on the tip left, that takes you to the front page again. On the formula pages you can scrol to find the formula you want to use, and click it. Clicking a formula will open the appropreat calculator, example the Rextangle Area formula will open the rectangle area calculator. On the calculator pages, you will be asked to input your values. you may type them or use the arrows in the input boxs to increase or decreas the number. After you finish inputing your numbers, you can hit the calculate button, which will give you the answer. Each calculator page has a back button on the top left that returns you to the starting page. Inputing Balank values gives you and error, and depending on which calulator your using negatives and zeros can also trigger an error. Some physics formulas have multiple rearranged version, so clicking on them opens a popup that lets you choose which variable you want the equations to solve.
+The website starts of on the front page. The front page contains a short description and 3 buttons (ALL FORMULAS, MATH FORMULAS, and PHYSICS FORMULAS). Each button takes you to the page you chose( MATH FORMULAS button will take you to the page with only math formulas, etc). Each formula bage has a back button on the tip left, that takes you to the front page again. On the formula pages you can scrol to find the formula you want to use, and click it. Clicking a formula will open the appropreat calculator, example the Rextangle Area formula will open the rectangle area calculator. On the calculator pages, you will be asked to input your values. you may type them or use the arrows in the input boxs to increase or decreas the number. After you finish inputing your numbers, you can hit the calculate button, which will give you the answer. Each calculator page has a back button on the top left that returns you to the starting page. Inputing Balanc values gives you and error, and depending on which calulator your using negatives and zeros can also trigger an error. Some physics formulas have multiple rearranged version, so clicking on them opens a popup that lets you choose which variable you want the equations to solve. 
 
-
+Since The website has grown over the few weeks, we added a search function on each of the formula pages. You can search the functions, and if there on the page, they will come to the top. Additionally we added filters to the Math and All Formula page because over the week they have grown imensly. Now you can use filters to see different catigories of functions. Some filter options include, 2d, 3d, perimiter, area, surface area, volume and trigonomitry. Although we havent added the filter function on the physics page yet, we may do that in the future (theres no point to add them right now because there arn't tat many formulas for physics on the website yet). 
 
 
 
@@ -202,6 +202,10 @@ Today I completed a total of 9 formulas which is a good addition to this website
 - Made a filter function on the All formula page, it lets  people filter formulas into smaller catigories like area, perimeter, 3d, 2d etc etc.
 
 - There is a clear button on it to so filters can be removed after adding them .
+
+- I also Made a filter function on the Math formula page, it also lets people filter formulas into smaller catigories like area, perimeter, 3d, 2d etc etc.
+
+- There is a also clear button on it to so filters can be removed after adding them .
 
 
 
