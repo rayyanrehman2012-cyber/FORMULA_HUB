@@ -725,6 +725,22 @@ const variableButton6s = document.querySelectorAll(".variableButton6");// variab
 
 
 // THESE ARE FOR THE SINE LAW  FOR SIDE
+const sinLawSidesPopup = document.getElementById("sinLawSidesPopup");// this is the popup for displacement final velocity equation  
+const sinLawSidesSelectedVariable = document.getElementById("sinLawSidesSelectedVariable");// this holds the selected variaple 
+const sinLawSidesSelectedSide = document.getElementById("sinLawSidesSelectedSide");// this holds the selected variaple 
+const sinLawSidesInputs = document.getElementById("sinLawSidesInputs");// these are the inputs 
+const calculateSinLawSides = document.getElementById("calculateSinLawSides"); // calulate button 
+calculateSinLawSides.style.display = "none";// hides this intiteall 
+const changeSinLawSidesVariable = document.getElementById("changeSinLawSidesVariable");// change variable button 
+changeSinLawSidesVariable.style.display = "none";// hides this intiteall 
+const sinLawSidesResult = document.getElementById("sinLawSidesResult");// resut line 
+const variableButton7 = document.querySelectorAll(".variableButton7");// variable buttons 
+const sinLawSidesSidePopup = document.getElementById("sinLawSidesSidePopup");// this is the popup for displacement final velocity equation  
+const sinLawSidesSideButtons = document.getElementById("sinLawSidesSideButtons");// this is the popup for displacement final velocity equation  
+const changeSinLawSidesSide = document.getElementById("changeSinLawSidesSide");// change variable button 
+changeSinLawSidesSide.style.display = "none";// hides this intiteall 
+sinLawSidesSidePopup.style.display = "none";// hides the pop up 
+
 
 
 
@@ -5164,7 +5180,27 @@ changeSInverseVariable.addEventListener("click", function(){// if the change var
     changeSInverseVariable.style.display = "none";// hides the button 
 });
 
+changeSinLawSidesVariable.addEventListener("click", function(){// if the change variable button is clicked 
+    sinLawSidesPopup.style.display = "flex";// hide these function
+    calculateSinLawSides.style.display = "none";// this is caluclate button 
+    sinLawSidesInputs.innerHTML = "";// clears the inputs
+    sinLawSidesSelectedVariable.textContent = "";// clears the selected variable 
+    sinLawSidesResult.textContent = "";// clears the result 
+    changeSinLawSidesVariable.style.display = "none";// hides the button 
+    changeSinLawSidesSide.style.display = "none";// hides the button 
+    sinLawSidesSelectedSide.textContent = "";// this is the selected side getting cleared 
+    sinLawSidesSidePopup.style.display = "none";// this is the side popup hiding 
+});
 
+changeSinLawSidesSide.addEventListener("click", function(){// if the change variable button is clicked 
+    sinLawSidesSidePopup.style.display = "flex";// hide these function
+    calculateSinLawSides.style.display = "none";// this is the calculate button 
+    sinLawSidesInputs.innerHTML = "";// clears the inputs
+    sinLawSidesSelectedSide.textContent = "";// clears the selected variable 
+    sinLawSidesResult.textContent = "";// clears the result 
+    changeSinLawSidesVariable.style.display = "none";// hides the button 
+    changeSinLawSidesSide.style.display = "none";// this si the change side button 
+});
 
 
 
@@ -5695,6 +5731,19 @@ InverseBackButton.addEventListener("click", function(){// this is the time indep
     changeSInverseVariable.style.display = "none";// hides this
 });
 
+sinLawSidesBackButton.addEventListener("click", function(){// this is the time independer page back button 
+    startPage.style.display = "flex";// shows the start page again 
+    sinLawSidesPage.style.display = "none";// hides this page 
+    sinLawSidesPopup.style.display = "flex";// shows the ratio popup
+    sinLawSidesSidePopup.style.display = "none";// hides the side popup
+    calculateSinLawSides.style.display = "none";// hides the calculate button
+    sinLawSidesInputs.innerHTML = "";// clears the inputs
+    sinLawSidesSelectedVariable.textContent = "";// clears the selected ratio
+    sinLawSidesSelectedSide.textContent = "";// clears the selected side
+    sinLawSidesResult.textContent = "";// clears the result
+    changeSinLawSidesVariable.style.display = "none";// hides this
+    changeSinLawSidesSide.style.display = "none";// hides this 
+});
 
 
 
@@ -6696,6 +6745,28 @@ allinverseButton.addEventListener("click", function (){// the Average velocity d
     InversePage.style.display = "flex"// shows this page
 }); 
 
+allsinLawSidesButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides  the math formula page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sinLawSidesPage.style.display = "flex"// shows this page
+});
 
 
 
@@ -7437,6 +7508,29 @@ inverseButton.addEventListener("click", function(){// if the time indipendent eq
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     InversePage.style.display = "flex"// shows this page
+});
+
+sinLawSidesButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    sinLawSidesPage.style.display = "flex"// shows this page
 });
 
 
