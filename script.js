@@ -71,6 +71,7 @@ const timeIndependentPage = document.querySelector(".timeIndependentPage");// th
 const averageVelocityDisplacementPage = document.querySelector(".averageVelocityDisplacementPage");// this is the average velocituy displaement page
 const sohCahToaPage = document.querySelector(".sohCahToaPage");//this is the so cah toa page 
 const InversePage = document.querySelector(".InversePage");// this is the inverse page 
+const sinLawSidesPage = document.querySelector(".sinLawSidesPage");// this is the sine law side addition page
 
 
 
@@ -128,6 +129,8 @@ const alltimeIndependentButton = document.getElementById("alltimeIndependentButt
 const allaverageVelocityDisplacement = document.getElementById("allaverageVelocityDisplacement");// this is the average velocity equation button on the all formula page 
 const allsohCahToaButton = document.getElementById("allsohCahToaButton");// this si the soh cah toa button on the all formula button 
 const allinverseButton = document.getElementById("allinverseButton");// this is the button on the all formula page 
+const allsinLawSidesButton = document.getElementById("allsinLawSidesButton")// this is the button on the all  formula page that takes u to  the sine law for sides page 
+
 
 
 
@@ -192,6 +195,7 @@ const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSur
 const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
 const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the all formula button 
 const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
+const sinLawSidesButton = document.getElementById("allsinLawSidesButton");// this is the sine la  for side button on the math formula page 
 
 
 
@@ -252,7 +256,9 @@ const timeIndependentBackButton = document.getElementById("timeIndependentBackBu
 const averageVelocityDisplacementBackButton = document.getElementById("averageVelocityDisplacementBackButton");// this is the back button on the 5th kinamatic eaquations
 const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// this is the back button
 const InverseBackButton = document.getElementById("InverseBackButton");// this is the inverse page back button 
- 
+const sinLawSidesBackButton = document.getElementById("sinLawSidesBackButton");// this is the back button on the sine law for side page 
+
+
 
 
 
@@ -718,6 +724,7 @@ const variableButton6s = document.querySelectorAll(".variableButton6");// variab
 
 
 
+// THESE ARE FOR THE SINE LAW  FOR SIDE
 
 
 
