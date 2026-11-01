@@ -7811,12 +7811,12 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
 let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
 let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
 allFilterDropdownButton.addEventListener("click", function(){//if the filter button is clicked 
-    if(allFilterDropdownMenu.style.display === "block"){// if the filter doep down menu is swhing
+    if(allFilterDropdownMenu.style.display === "grid"){// if the filter doep down menu is swhing
         allFilterDropdownMenu.style.display = "none";// then show  then kid the meue 
     }
 
     else{// if the menu is not showingthen  
-        allFilterDropdownMenu.style.display = "block";// show it
+        allFilterDropdownMenu.style.display = "grid";// show it
     }
 })
 
