@@ -7764,20 +7764,70 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //THESE ARE FOR THE FILTER DROPDOWN MENU
 let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
 let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
 
 allFilterDropdownButton.addEventListener("click", function(){//if the filter button is clicked 
-    if(allFilterDropdownMenu.style.display === "block"){
-        allFilterDropdownMenu.style.display = "none";// then show the filter drop down menu
+    if(allFilterDropdownMenu.style.display === "block"){// if the filter doep down menu is swhing
+        allFilterDropdownMenu.style.display = "none";// then show  then kid the meue 
     }
 
-    else{// if its hidden then
+    else{// if the menu is not showingthen  
         allFilterDropdownMenu.style.display = "block";// show it
     }
 })
 
-let formulaFilters = document.querySelectorAll(".formulaFilter");// this is the variable that holds all the filter buttons on the all formula page
-let resetFilterButton = document.getElementById("resetFilterButton");// this is the reset filter button on the all formula page
+let formulaFilters = document.querySelectorAll(".formulaFilter");// this is the variable that holds all the filters 
+let resetFilterButton = document.getElementById("resetFilterButton");// this is the  button that resets the filters  on the all formula page
 let allFormulaButtons = document.querySelectorAll(".formulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
+
+function filterAllFormulas(filter){// this is the function that filters the formulas on the all formula page
+
+    let selectedFilter = [];// this the array that hold the selected buttons
+
+    formulaFilters.forEach(function(button){// for all the filture boxes
+        if (filter.checked){// if the they are checked
+            selectedFilter.push(filter.value);// then add the value to the the seleted filters 
+        }
+    });
+
+    allFormulaButtons.forEach(function(button){// for all of the buttons on the all formula page
+                
+        let buttonCategories = (button.dataset.categories || "").split(" ");// split their catigories based on spacing, and hold the value
+
+        if(selectedFilter.length === 0||selectedFilter.some(function(filter){// if the no filter is selected, or if the selected filter is in the button
+            return buttonCategories.includes(filter)// show it in the all formula page
+        })){button.style.display = "block"}// show the button
+
+        else{// otherwise hide it
+            button.style.display = "none"// hide the button
+        }
+    });
+}
+
+formulaFilters.forEach(function(filter){ // check all the checkboxes on the all formula page 
+    filter.addEventListener("change", function(){// if the any box is clicked
+        filterAllFormulas(filter);// then run the filter function
+    })
+})
