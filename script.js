@@ -3958,6 +3958,7 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
 
 
 
+
 //THESE ARE THE POPUP MENU BUTTONS that let you REARRANGE THE EQUATION FOR WHAT YOUR SOLVING FOR
 
 // THIS IS THE 1st KINAMATIC EQUATION SELECTION MENY AND BUTTONS
@@ -5071,8 +5072,6 @@ variableButton6s.forEach(function(button){// in variable buttons for each of th
 
 
 
-
-
 //THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF PHYSICS FORMULAS
 //kinamatic forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
@@ -5126,12 +5125,6 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
 
 
 
-
-
-
-
-
-
 // THESE ARE THE DIFFERENT CHange SELEECTION BUTTONS FOR DIFFERENT VERSIONS FO THE MATH FORMULAS 
 changeSohCahToaVariable.addEventListener("click", function(){// if the change variable button is clicked 
     sohCahToaPopup.style.display = "flex";// hide these function
@@ -5163,23 +5156,6 @@ changeSInverseVariable.addEventListener("click", function(){// if the change var
     InverseResult.textContent = "";// clears the result 
     changeSInverseVariable.style.display = "none";// hides the button 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -5711,13 +5687,6 @@ InverseBackButton.addEventListener("click", function(){// this is the time indep
     InverseResult.textContent = "";// clears the result
     changeSInverseVariable.style.display = "none";// hides this
 });
-
-
-
-
-
-
-
 
 
 
@@ -6726,10 +6695,6 @@ allinverseButton.addEventListener("click", function (){// the Average velocity d
 
 
 
-
-
-
-
 //THESE ARE ALL OF THE BUTONS ON THE MATH FORMULA PAGE
 rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
@@ -7473,10 +7438,6 @@ inverseButton.addEventListener("click", function(){// if the time indipendent eq
 
 
 
-
-
-
-
 //THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
 speedButton.addEventListener("click", function(){// if the speed putton is clicked 
     startPage.style.display = "none";// hides this page 
@@ -7760,9 +7721,6 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
 
 
 
-
-
-
 // THIS IS FOR THE SOUND EFFECTS
 let buttonClickSound = new Audio("click1.mp3"); // declaring the sound 
 
@@ -7776,6 +7734,7 @@ document.querySelectorAll("button").forEach(function(button) {// sellect all but
         playButtonClickSound(); // use the click sound function 
     });
 });
+
 
 
 
@@ -7801,7 +7760,6 @@ physicsSearchInput.addEventListener("input", function() {// if the physics serac
 });
 
 
-
 //THESE ARE FOR THE SEARCH BAR ON THE MATH formula PAGE
 let mathSearchInput = document. getElementById("mathSearchInput")// this is the searchpare input, holder 
 let mathFormulaButtonsSearch = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons 
@@ -7820,7 +7778,6 @@ mathSearchInput.addEventListener("input", function() {// if the physics serach b
         }
     })
 });
-
 
 
 //THESE ARE FOR THE SEARCH BAR ON THE ALL FORMULA PAGE
@@ -7850,25 +7807,9 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //THESE ARE FOR THE FILTER DROPDOWN MENU
 let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
 let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
-
-// THESE ARE THE FILTR FINCTIONS 
 allFilterDropdownButton.addEventListener("click", function(){//if the filter button is clicked 
     if(allFilterDropdownMenu.style.display === "block"){// if the filter doep down menu is swhing
         allFilterDropdownMenu.style.display = "none";// then show  then kid the meue 
@@ -7879,6 +7820,10 @@ allFilterDropdownButton.addEventListener("click", function(){//if the filter but
     }
 })
 
+
+
+
+// THESE ARE THE FILTR FINCTIONS 
 let formulaFilters = document.querySelectorAll(".formulaFilter");// this is the variable that holds all the filters 
 let resetFiltersButton = document.getElementById("resetFiltersButton");// this is the  button that resets the filters  on the all formula page
 let allFormulaButtons = document.querySelectorAll(".formulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
@@ -7912,6 +7857,9 @@ formulaFilters.forEach(function(filter){ // check all the checkboxes on the all 
         filterAllFormulas(filter);// then run the filter function
     })
 })
+
+
+
 
 //THESE ARE FOR THE FILTER RESET FUNCTION
 resetFiltersButton.addEventListener("click", function() { // if the reset filters button is clickes 
