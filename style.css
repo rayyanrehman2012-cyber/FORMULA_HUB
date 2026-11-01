@@ -83,6 +83,7 @@ body {
     font-size: 85px;
     font-weight: 800;
     letter-spacing: 3px;
+    line-height: 1;
     text-align: left;
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     
@@ -241,8 +242,9 @@ body {
     font-family: 'Baloo 2', sans-serif;
     font-size:20px;
     font-weight: 800;
-    width: 380px;
+    width: 350px;
     height: 120px;
+    
     letter-spacing: 1px;
     padding: 5px 10px;
     box-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
@@ -254,7 +256,8 @@ body {
     display: flex;
     flex-direction:column;
     gap:40px;
-    width: 350px;
+    width: 450px;
+    
 }
 
 .homeButtons button:hover {
@@ -274,7 +277,7 @@ body {
 
     .homeButtons,
     .HomeDescription {
-        width: 100%;
+        width: 70%;
     }
 
     .StartPage h1 {
@@ -6336,4 +6339,22 @@ body {
     font-family: "Baloo 2", sans-serif;
     font-size:20px;
     text-align:center; 
+}
+
+
+.allSearch{
+    display: flex;
+    justify-content: center;
+    margin:4px 0;
+}
+
+#allSearchInput{
+    width:100%;
+    padding: 12px 15px;
+    border:3px solid rgb(11,61,46);
+    border-radius:25px;
+    outline:none;
+    font-family: "baloo 2", sans-serif;
+    font-size:20px;
+    text-align:center;
 }
