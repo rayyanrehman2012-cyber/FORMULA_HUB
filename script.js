@@ -7762,3 +7762,22 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
         }
     })
 })
+
+
+//THESE ARE FOR THE FILTER DROPDOWN MENU
+let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
+let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
+
+allFilterDropdownButton.addEventListener("click", function(){//if the filter button is clicked 
+    if(allFilterDropdownMenu.style.display === "block"){
+        allFilterDropdownMenu.style.display = "none";// then show the filter drop down menu
+    }
+
+    else{// if its hidden then
+        allFilterDropdownMenu.style.display = "block";// show it
+    }
+})
+
+let formulaFilters = document.querySelectorAll(".formulaFilter");// this is the variable that holds all the filter buttons on the all formula page
+let resetFilterButton = document.getElementById("resetFilterButton");// this is the reset filter button on the all formula page
+let allFormulaButtons = document.querySelectorAll(".formulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
