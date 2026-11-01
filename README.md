@@ -197,6 +197,10 @@ Today I completed a total of 9 formulas which is a good addition to this website
 
 - Added and designed a Search bar on the Math Formula page, that lets you shearch for the exact function on the math formula page
 
+- added and designed a Search bar on te All formula page, that lets you search for the exact funtion on the all formula page 
+
+- Currently designing a filter function, it would let people filtorthe formulas, so smaller catigories like area, perimeter, 3d, 2d etc etc, there a clear button on it to so filters can be removed after adding them .
+
 
 
 
@@ -210,8 +214,6 @@ Today I completed a total of 9 formulas which is a good addition to this website
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 8 or AFTER THIR SPACE ENDS)
 - some more formulas that arnt from math or physics,
-
-- A filter Function on the different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
 
 - more math and physics formulas like
     - boyancy formula 
