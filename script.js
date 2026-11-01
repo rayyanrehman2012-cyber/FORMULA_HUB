@@ -3976,6 +3976,38 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
     }
 })
 
+calculateSinLawSides.addEventListener("click", function(){// if the ccaluculate button is clicked 
+    let Result;// this si the variable that will hold the result value 
+
+    if(sinLawSidesSelectedVariable.textContent === "SINE LAW (A AND B)" && sinLawSidesSelectedSide.textContent === "SOLVING FOR SIDE A"){// if these are the selections made by yht user 
+        let angleB = Number(document.getElementById("sinLawSidesAngleB").value) // holds the angle value 
+        let sideB = Number(document.getElementById("sinLawSidesSideB").value);// hold the hypotensje baolue 
+        let angleA = Number(document.getElementById("sinLawSidesAngleA").value);// hold the hypotensje baolue 
+
+        if(document.getElementById("sinLawSidesAngleA").value === "" || document.getElementById("sinLawSidesAngleB").value === "" || document.getElementById("sinLawSidesSideB").value === ""){
+            sinLawSidesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
+            sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleA <= 0 || angleA >= 180 || angleB <= 0 || angleB >= 180 || sideB <= 0) { // if the values are engative or to big(for angle)
+            sinLawSidesResult.textContent = "ERROR: ENTER VALID VALUES!"; // this is the error message 
+            sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+            let angleBRadians = angleB*(Math.PI/180);// converts the degrees into radiants because js uses radians
+            let angleARadians = angleA*(Math.PI/180);// converts the degrees into radiants because js uses radians
+
+            Result = sideB * Math.sin(angleARadians) /Math.sin(angleBRadians)// this is the formula 
+
+            sinLawSidesResult.textContent = "SIDE A = " + Result.toFixed(3) + " UNITS";
+            sinLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+    
+
+})
+
 
 
 
@@ -5089,6 +5121,7 @@ variableButton6s.forEach(function(button){// in variable buttons for each of th
     });
 })
 
+
 variableButton7s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){
         sinLawSidesPopup.style.display = "none"// hides this 
@@ -5103,8 +5136,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
             sinLawSidesSelectedVariable.textContent = "SINE LAW (A AND B)";
 
             sinLawSidesSideButtons.innerHTML = `
-                <button class="sinLawSidesSideButton" value="sideA">FOR SIDE A</button>
-                <button class="sinLawSidesSideButton" value="sideB">FOR SIDE B</button>
+                <button class="sinLawSidesSideButton" value="sideA">SIDE A</button>
+                <button class="sinLawSidesSideButton" value="sideB">SIDE B</button>
             `;
         }
 
@@ -5112,8 +5145,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
             sinLawSidesSelectedVariable.textContent = "SINE LAW (A AND C)"; // this is the text content of rhte selected variable 
 
             sinLawSidesSideButtons.innerHTML = `
-                <button class="sinLawSidesSideButton" value="sideA">FOR SIDE A</button>
-                <button class="sinLawSidesSideButton" value="sideC">FOR SIDE C</button>
+                <button class="sinLawSidesSideButton" value="sideA">SIDE A</button>
+                <button class="sinLawSidesSideButton" value="sideC">SIDE C</button>
             `;// add these buttons 
         }
 
@@ -5121,8 +5154,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
             sinLawSidesSelectedVariable.textContent = "SINE LAW (B AND C)";
 
             sinLawSidesSideButtons.innerHTML = `
-                <button class="sinLawSidesSideButton" value="sideB">FOR SIDE B</button>
-                <button class="sinLawSidesSideButton" value="sideC">FOR SIDE C</button>
+                <button class="sinLawSidesSideButton" value="sideB">SIDE B</button>
+                <button class="sinLawSidesSideButton" value="sideC">SIDE C</button>
 
             `; // add thes buttons 
         }
