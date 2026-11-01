@@ -1,4 +1,12 @@
-// THESE ARE THE MAIN MENU SCREEN BUTTONS 
+// THIS IS THE FULL JS CODE FOR THIS PROJECT, ITS ORGANIZED BY SIMILAR FUNCTIONS SO ITS EASY TO READ, FEEL FREE TO MAKE CHANGES TO TO FORMATING OF THE CODE TO IMPROVE IT FOR READABILITY WHEN YOU WORK
+//PROJECT STARTED IN OCTOBER 2026
+
+
+
+
+
+
+// THESE ARE THE MAIN FORMLA PAGES(MATH, PHYSICS, & THE ALL FORMULA BAGE)
 const allFormulaButton = document.getElementById("allFormulaButton"); // the formula page button (all formulas)
 const mathButton = document.getElementById("mathButton"); // this is the math formula button 
 const physicsButton = document.getElementById("physicsButton");// this is the physics formula putton on the starting page 
@@ -8,70 +16,7 @@ const physicsButton = document.getElementById("physicsButton");// this is the ph
 
 
 
-
-// THESE ARE ALL OF THE BACK BUTTON CONSTANTS  IN THIS PROJECT
-const backButton = document.getElementById("backButton");// back button on the all formula page 
-const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
-const squareAreaBackButton = document.getElementById("squareAreaBackButton");// this is the back button on the physics page 
-const rectanglePerimeterBackButton = document.getElementById("rectanglePerimeterBackButton");// this is the
-const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton");// this is the back button on the physics page 
-const physicsBackButton = document.getElementById("physicsBackButton");// this is the back button on the physics page 
-const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
-const triangleAreaBackButton = document.getElementById("triangleAreaBackButton");// the back button on the triangle are calculator backed 
-const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton");// this is the back buton on the triangle perimeter page 
-const circleAreaBackButton = document.getElementById("circleAreaBackButton");// this is the backk button on the circle are page 
-const circleCircumferenceBackButton = document.getElementById("circleCircumferenceBackButton");// this is the back button on the circumference pages 
-const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton");// the back button o the trapezoid page 
-const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralPerimeterBackButton");// the quadrilateral perimeterbutton 
-const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
-const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
-const distanceBackButton = document.getElementById("distanceBackButton");// back button distance page
-const midpointBackButton = document.getElementById("midpointBackButton");// this is the midpoint page back button 
-const pythagoreanCBackButton = document.getElementById("pythagoreanCBackButton");// back button on the pythagorean side c/hypotenuse pages 
-const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton");// back button on the pythagorean side b pages 
-const pythagoreanABackButton = document.getElementById("pythagoreanABackButton");// back button on the pythagorean side a pages 
-const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// back button on the volume pages 
-const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton");// cube perimeter page back button 
-const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackButton");// cube survae are back button 
-const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
-const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
-const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
-const cylinderVolumeBackButton = document.getElementById("cylinderVolumeBackButton");// this is the the back button on the cilinder volume page 
-const cylinderSurfaceAreaBackButton = document.getElementById("cylinderSurfaceAreaBackButton");// this is the cylinder surface are button, 
-const cylinderPerimeterBackButton = document.getElementById("cylinderPerimeterBackButton");// this is the cylinder surface are button, 
-const radiusBackButton = document.getElementById("radiusBackButton");// this is the radius page back button
-const diameterBackButton = document.getElementById("diameterBackButton");// this is the dimeter back button 
-const coneVolumeBackButton = document.getElementById("coneVolumeBackButton");// this is the cone volume back button 
-const conePerimeterBackButton = document.getElementById("conePerimeterBackButton");// this is the come perimiter page back buttons 
-const coneSurfaceAreaBackButton = document.getElementById("coneSurfaceAreaBackButton");// this is the cone surface are back button 
-const sphereVolumeBackButton = document.getElementById("sphereVolumeBackButton");// this is the back button on the sphere volume page 
-const sphereSurfaceAreaBackButton = document.getElementById("sphereSurfaceAreaBackButton");// this is the back button on the spere surface area calculator page 
-const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolumeBackButton");// this is the back bitton on the triangle prism voulume calculatpr page 
-const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePrismSurfaceAreaBackButton");// this is the surface area back button for the triangle 
-const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismPerimeterBackButton");// this is the back button on the perimeter back button 
-const speedBackButton = document.getElementById("speedBackButton");// this is the speed page back button 
-const velocityBackButton = document.getElementById("velocityBackButton");// this is the valocity page  back button 
-const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");// this is the valocity page  back button 
-const physicsDistanceBackButton = document.getElementById("physicsDistanceBackButton");// this is the valocity page  back button 
-const displacementBackButton = document.getElementById("displacementBackButton");// this is the valocity page  back button 
-const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
-const timeBackButton = document.getElementById("timeBackButton");// this is the time page back button 
-const velocityTimeEquationBackButton = document.getElementById("velocityTimeEquationBackButton");// this is the veleocity time equation back button 
-const displacementInitialEquationBackButton = document.getElementById("displacementInitialEquationBackButton");// this is the second kinamatic equation back button 
-const displacementFinalEquationBackButton = document.getElementById("displacementFinalEquationBackButton");// this is the third equation in the kinamatics one, back button 
-const timeIndependentBackButton = document.getElementById("timeIndependentBackButton");// this is the back button on the time indipendent kinimatic equations 
-const averageVelocityDisplacementBackButton = document.getElementById("averageVelocityDisplacementBackButton");// this is the back button on the 5th kinamatic eaquations
-const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// this is the back button
-const InverseBackButton = document.getElementById("InverseBackButton");// this is the inverse page back button 
-
-
-
-
-
-
-
-
-// THESE ARE ALL OF THE PAGES IN THIS PROJECTS 
+// THESE ARE ALL OF FORMULA PAGES IN THIS WEBSITE, THERE NOT SEPERATED BY SUBJECT HERE
 const squarePerimeterPage = document.querySelector(".squarePerimeterPage");// square perimeter pages 
 const squareAreaPage = document.querySelector(".squareAreaPage");// this is the rectangles area page 
 const rectanglePerimeterPage = document.querySelector(".rectanglePerimeterPage");// this is the rectangles area page 
@@ -132,8 +77,7 @@ const InversePage = document.querySelector(".InversePage");// this is the invers
 
 
 
-
-//THESE ARE ALL THE BUTONS FROM THE ALL FORMULA SCREEN
+//THESE ARE ALL THE FORMULA BUTTON THAT ARE PRESENT ON THE ALL FORMULA SCREEN
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const allrectanglePerimeterButton = document.getElementById("allrectanglePerimeterButton");// this is the rectangle area formula button all formula page
 const allsquareAreaButton = document.getElementById("allsquareAreaButton");// this is the rectangle area formula button all formula page
@@ -190,9 +134,7 @@ const allinverseButton = document.getElementById("allinverseButton");// this is 
 
 
 
-
-
-//THESE ARE ALL OF THE BUTTONS ON THE PHYSICS FORMULA SCREEN
+//THESE ARE ALL OF THE FORMULA BUTTONS ON THE PHYSICS FORMULA PAGE
 const speedButton = document.getElementById("speedButton");// this is the speed calculator button on the physics formula page 
 const velocityButton = document.getElementById("velocityButton");// this is the velocity button on the physics formula page 
 const avgVelocityButton = document.getElementById("avgVelocityButton");// this is the velocity button on the physics formula page 
@@ -211,10 +153,7 @@ const averageVelocityDisplacementButton = document.getElementById("averageVeloci
 
 
 
-
-
-
-//THESE ARE ALL THE BUTTONS FROM THE MATH ONLY FORMULA SCREEN 
+//THESE ARE ALL THE FORMULA BUTTONS PRESENT ON THE MATH FORMULA PAGE
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
 const squareAreaButton = document.getElementById("squareAreaButton");// this is the rectangle area formula button math formula page only
@@ -259,6 +198,61 @@ const inverseButton = document.getElementById("inverseButton");// this is the bu
 
 
 
+// THESE ARE ALL OF THE BACK BUTTONS IN THIS PROJECT, THEY ALL LEAD TO THE ALL FORMULA PAGE
+const backButton = document.getElementById("backButton");// back button on the all formula page 
+const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
+const squareAreaBackButton = document.getElementById("squareAreaBackButton");// this is the back button on the physics page 
+const rectanglePerimeterBackButton = document.getElementById("rectanglePerimeterBackButton");// this is the
+const rectangleAreaBackButton = document.getElementById("rectangleAreaBackButton");// this is the back button on the physics page 
+const physicsBackButton = document.getElementById("physicsBackButton");// this is the back button on the physics page 
+const mathBackButton = document.getElementById("mathBackButton");// back button on the math formula page 
+const triangleAreaBackButton = document.getElementById("triangleAreaBackButton");// the back button on the triangle are calculator backed 
+const trianglePerimeterBackButton = document.getElementById("trianglePerimeterBackButton");// this is the back buton on the triangle perimeter page 
+const circleAreaBackButton = document.getElementById("circleAreaBackButton");// this is the backk button on the circle are page 
+const circleCircumferenceBackButton = document.getElementById("circleCircumferenceBackButton");// this is the back button on the circumference pages 
+const trapezoidAreaBackButton = document.getElementById("trapezoidAreaBackButton");// the back button o the trapezoid page 
+const quadrilateralPerimeterBackButton = document.getElementById("quadrilateralPerimeterBackButton");// the quadrilateral perimeterbutton 
+const parallelogramAreaBackButton = document.getElementById("parallelogramAreaBackButton");// thiss is the back button on the parallerlogram area screent 
+const slopeBackButton = document.getElementById("slopeBackButton");// back button slope pages 
+const distanceBackButton = document.getElementById("distanceBackButton");// back button distance page
+const midpointBackButton = document.getElementById("midpointBackButton");// this is the midpoint page back button 
+const pythagoreanCBackButton = document.getElementById("pythagoreanCBackButton");// back button on the pythagorean side c/hypotenuse pages 
+const pythagoreanBBackButton = document.getElementById("pythagoreanBBackButton");// back button on the pythagorean side b pages 
+const pythagoreanABackButton = document.getElementById("pythagoreanABackButton");// back button on the pythagorean side a pages 
+const cubeVolumeBackButton = document.getElementById("cubeVolumeBackButton");// back button on the volume pages 
+const cubePerimeterBackButton = document.getElementById("cubePerimeterBackButton");// cube perimeter page back button 
+const cubeSurfaceAreaBackButton = document.getElementById("cubeSurfaceAreaBackButton");// cube survae are back button 
+const rectanglePrismVolumeBackButton = document.getElementById("rectanglePrismVolumeBackButton"); // back button on the rectangle prisim volume pages 
+const rectanglePrismPerimeterBackButton = document.getElementById("rectanglePrismPerimeterBackButton"); // this is the back button on the rectangle prisim perimerter pages
+const rectanglePrismSurfaceAreaBackButton = document.getElementById("rectanglePrismSurfaceAreaBackButton"); // this is the syrface area back button
+const cylinderVolumeBackButton = document.getElementById("cylinderVolumeBackButton");// this is the the back button on the cilinder volume page 
+const cylinderSurfaceAreaBackButton = document.getElementById("cylinderSurfaceAreaBackButton");// this is the cylinder surface are button, 
+const cylinderPerimeterBackButton = document.getElementById("cylinderPerimeterBackButton");// this is the cylinder surface are button, 
+const radiusBackButton = document.getElementById("radiusBackButton");// this is the radius page back button
+const diameterBackButton = document.getElementById("diameterBackButton");// this is the dimeter back button 
+const coneVolumeBackButton = document.getElementById("coneVolumeBackButton");// this is the cone volume back button 
+const conePerimeterBackButton = document.getElementById("conePerimeterBackButton");// this is the come perimiter page back buttons 
+const coneSurfaceAreaBackButton = document.getElementById("coneSurfaceAreaBackButton");// this is the cone surface are back button 
+const sphereVolumeBackButton = document.getElementById("sphereVolumeBackButton");// this is the back button on the sphere volume page 
+const sphereSurfaceAreaBackButton = document.getElementById("sphereSurfaceAreaBackButton");// this is the back button on the spere surface area calculator page 
+const trianglePrismVolumeBackButton = document.getElementById("trianglePrismVolumeBackButton");// this is the back bitton on the triangle prism voulume calculatpr page 
+const trianglePrismSurfaceAreaBackButton = document.getElementById("trianglePrismSurfaceAreaBackButton");// this is the surface area back button for the triangle 
+const trianglePrismPerimeterBackButton = document.getElementById("trianglePrismPerimeterBackButton");// this is the back button on the perimeter back button 
+const speedBackButton = document.getElementById("speedBackButton");// this is the speed page back button 
+const velocityBackButton = document.getElementById("velocityBackButton");// this is the valocity page  back button 
+const avgVelocityBackButton = document.getElementById("avgVelocityBackButton");// this is the valocity page  back button 
+const physicsDistanceBackButton = document.getElementById("physicsDistanceBackButton");// this is the valocity page  back button 
+const displacementBackButton = document.getElementById("displacementBackButton");// this is the valocity page  back button 
+const accelerationBackButton = document.getElementById("accelerationBackButton");// this is the acceleration page back button 
+const timeBackButton = document.getElementById("timeBackButton");// this is the time page back button 
+const velocityTimeEquationBackButton = document.getElementById("velocityTimeEquationBackButton");// this is the veleocity time equation back button 
+const displacementInitialEquationBackButton = document.getElementById("displacementInitialEquationBackButton");// this is the second kinamatic equation back button 
+const displacementFinalEquationBackButton = document.getElementById("displacementFinalEquationBackButton");// this is the third equation in the kinamatics one, back button 
+const timeIndependentBackButton = document.getElementById("timeIndependentBackButton");// this is the back button on the time indipendent kinimatic equations 
+const averageVelocityDisplacementBackButton = document.getElementById("averageVelocityDisplacementBackButton");// this is the back button on the 5th kinamatic eaquations
+const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// this is the back button
+const InverseBackButton = document.getElementById("InverseBackButton");// this is the inverse page back button 
+ 
 
 
 
@@ -271,11 +265,13 @@ const calculateRectangleArea = document.getElementById("calculateRectangleArea")
 const rectangleAreaResult = document.getElementById("rectangleAreaResult");// the line that gives u the answer
 
 
+
 // THESE ARE FOR THE RECTANGLE PERIMETER CALCULATOR
 const PerimeterlengthInput = document.getElementById("Perimeterlength"); // you length input 
 const PerimeterwidthInput = document.getElementById("Perimeterwidth");// your width input 
 const calculateRectanglePerimeter = document.getElementById("calculateRectanglePerimeter");// the calculate button 
 const rectanglePerimeterResult = document.getElementById("rectanglePerimeterResult");// the line that gives u the answer
+
 
 
 // THESE ARE FOR THE SQUARE AREA CALCULATOR 
@@ -284,10 +280,12 @@ const calculateSquareArea = document.getElementById("calculateSquareArea");// th
 const squareAreaResult = document.getElementById("squareAreaResult");// the line that gives u the answer
 
 
+
 //THESE ARE FOR THE  SQUARE PERIMETER CALCULATOR 
 const SquarePerimeterDimenstion = document.getElementById("SquarePerimeterDimenstion");// square dimentions for area 
 const calculateSquarePerimeter = document.getElementById("calculateSquarePerimeter");// square perimiter calculate button 
 const squarePerimeterResult = document.getElementById("squarePerimeterResult");// the line that gives u the answer
+
 
 
 //THESE ARE FOR THE TRIANGLE ARE CALCULATOR
@@ -295,6 +293,7 @@ const triangleAreaHeight = document.getElementById("triangleAreaHeight");// heig
 const triangleAreaBase = document.getElementById("triangleAreaBase"); //  the base measurement ofr the triangle 
 const calculateTriangleArea = document.getElementById("calculateTriangleArea");// the calculate btton
 const triangleAreaResult = document.getElementById("triangleAreaResult");// displays score 
+
 
 
 // THESE ARE FOR THE TRIANGLE PERIMETER CALCULSTOR
@@ -305,11 +304,13 @@ const calculateTrianglePerimeter = document.getElementById("calculateTrianglePer
 const trianglePerimeterResult = document.getElementById("trianglePerimeterResult");//this is the result line
 
 
+
 //THESE ARE FOR THE CIRCLE  AREA  CALCULATOR
 const circleAreaRadius = document.getElementById("circleAreaRadius");// radius input 
 const calculateCircleArea = document.getElementById("calculateCircleArea");// the calculat button 
 const circleAreaResult = document.getElementById("circleAreaResult");// this is the result line
 const pi = 3.14159265358979323846; // this si the value of pi that will be used in the calculaotre 
+
 
 
 // THESE ARE FOR THE CIRCLE CIRCUMPERFERENCE CALCULATOR 
@@ -319,12 +320,14 @@ const circleCircumferenceResult = document.getElementById("circleCircumferenceRe
 const calculateCircleCircumference = document.getElementById("calculateCircleCircumference");// the calculat button 
 
 
+
 // THESE ARE FOR THE TRAPEZOID AREA CALCULATOR
 const trapezoidAreaBaseA = document.getElementById("trapezoidAreaBaseA");// this is the trabozoid base a value 
 const trapezoidAreaBaseB = document.getElementById("trapezoidAreaBaseB");// this is the trapizode base b value 
 const trapezoidAreaHeight = document.getElementById("trapezoidAreaHeight");// the trapizoid hight value 
 const calculateTrapezoidArea = document.getElementById("calculateTrapezoidArea");// the calculate butto 
 const trapezoidAreaResult = document.getElementById("trapezoidAreaResult");// the trapezod result 
+
 
 
 // THESE ARE FOR THE QUADILATERAL PERIMETER CALCULATORS
@@ -336,11 +339,13 @@ const calculateQuadrilateralPerimeter = document.getElementById("calculateQuadri
 const quadrilateralPerimeterResult = document.getElementById("quadrilateralPerimeterResult");// result line 
 
 
+
 //THES ARE FOR THE PERALLELOGRAM ARE CALCULATOR
 const parallelogramBase = document.getElementById("parallelogramBase");// base of the parallelograph
 const parallelogramHeight = document.getElementById("parallelogramHeight");// height of the parallelopgram 
 const calculateParallelogramArea = document.getElementById("calculateParallelogramArea");// the calculate button 
 const parallelogramAreaResult = document.getElementById("parallelogramAreaResult");// the calculating result 
+
 
 
 //THESE ARE FOR THE SLOPE CALCULATOR 
@@ -352,6 +357,7 @@ const calculateSlope = document.getElementById("calculateSlope");; //calculate b
 const slopeResult = document.getElementById("slopeResult");; //result
 
 
+
 //THESE ARE FOR THE DISTANCE CALCULATOR
 const distanceY1 = document.getElementById("distanceY1");// this is the y
 const distanceY2 = document.getElementById("distanceY2");// this is the y
@@ -359,6 +365,7 @@ const distanceX1 = document.getElementById("distanceX1");// this is the x
 const distanceX2 = document.getElementById("distanceX2");// this is the X
 const calculateDistance = document.getElementById("calculateDistance");// this is the calculate button 
 const distanceResult = document.getElementById("distanceResult"); // this is this resut of the distance formula 
+
 
 
 // THESE ARE FOR THR MIDPOINT FORMULA CALCULATOR
@@ -370,11 +377,13 @@ const calculateMidpoint = document.getElementById("calculateMidpoint");// this i
 const midpointResult = document.getElementById("midpointResult");// this is the midpoint result display 
 
 
+
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE C CALCULATOR 
 const pythagoreanCA = document.getElementById("pythagoreanCA");// side a for pythagorean theorm 
 const pythagoreanCB = document.getElementById("pythagoreanCB");// side b 
 const calculatePythagoreanC = document.getElementById("calculatePythagoreanC");// calulate button 
 const pythagoreanCResult = document.getElementById("pythagoreanCResult");// result 
+
 
 
 // THESE ARE FOR THE PYTHAGOREAN THEOREM DIS B CALCULATOR
@@ -384,11 +393,13 @@ const calculatePythagoreanB = document.getElementById("calculatePythagoreanB");/
 const pythagoreanBResult = document.getElementById("pythagoreanBResult");// resut 
 
 
+
 // THESE ARE FOR THE PYTHAGOREAN THEOREM SIDE A CALCULATOR
 const pythagoreanAB = document.getElementById("pythagoreanAB");// side b
 const pythagoreanAC = document.getElementById("pythagoreanAC");// side c
 const calculatePythagoreanA = document.getElementById("calculatePythagoreanA");// calculate button 
 const pythagoreanAResult = document.getElementById("pythagoreanAResult");// result 
+
 
 
 // THESE ARE FOR THE CUBE VOLUME PAGE
@@ -397,16 +408,19 @@ const calculateCubeVolume = document.getElementById("calculateCubeVolume"); // t
 const cubeVolumeResult = document.getElementById("cubeVolumeResult");// the result message/line in the calculator 
 
 
+
 // THESE ARE FOR THE CUBE PERIMETER PAGE
 const cubePerimeterSide = document.getElementById("cubePerimeterSide");//This is the cube perimeter side vale 
 const calculateCubePerimeter = document.getElementById("calculateCubePerimeter")//the caluclate button
 const cubePerimeterResult = document.getElementById("cubePerimeterResult"); // cthe resultline 
 
 
+
 // THESE ARE FOR THE CUBE SURFACE ARE PAGE 
 const cubeSurfaceAreaSide = document.getElementById("cubeSurfaceAreaSide");//This is the cube perimeter side vale 
 const calculateCubeSurfaceArea = document.getElementById("calculateCubeSurfaceArea")//the caluclate button
 const cubeSurfaceAreaResult = document.getElementById("cubeSurfaceAreaResult"); // cthe resultline 
+
 
 
 // THESE ARE FOR THE RECTANGLE PRISM VOLUME
@@ -417,12 +431,14 @@ const calculateRectanglePrismVolume = document.getElementById("calculateRectangl
 const rectanglePrismVolumeResult = document.getElementById("rectanglePrismVolumeResult");//This is the result line 
 
 
+
 // THESE ARE FOR THE RECTANGLE PRISM VOLUME
 const rectanglePrismPerimeterLength = document.getElementById("rectanglePrismPerimeterLength");//this is the lenght input for the the rectangle prisim perimeter 
 const rectanglePrismPerimeterWidth = document.getElementById("rectanglePrismPerimeterWidth");// this is the width input
 const rectanglePrismPerimeterHeight = document.getElementById("rectanglePrismPerimeterHeight");// this is the height input 
 const calculateRectanglePrismPerimeter = document.getElementById("calculateRectanglePrismPerimeter");// this is the caluclate buton 
 const rectanglePrismPerimeterResult = document.getElementById("rectanglePrismPerimeterResult")// this is the result line 
+
 
 
 // THESE ARE FOR THE RECTANGLE PRISIM SURFACE ARE CALCULATOR
@@ -433,11 +449,13 @@ const calculateRectanglePrismSurfaceArea = document.getElementById("calculateRec
 const rectanglePrismSurfaceAreaResult = document.getElementById("rectanglePrismSurfaceAreaResult")// this is the result line 
 
 
+
 // THESE ARE FOR THE CYLINDER VOLUM CALCULATOR
 const cylinderVolumeHeight = document.getElementById("cylinderVolumeHeight");// this is the height of the cilynder 
 const cylinderVolumeRadius = document.getElementById("cylinderVolumeRadius");// this is the radius  of the cilynder 
 const calculateCylinderVolume = document.getElementById("calculateCylinderVolume");// this is the caluclate buton 
 const cylinderVolumeResult = document.getElementById("cylinderVolumeResult")// this is the result line 
+
 
 
 // THESE ARE FOR THE CYLINDER VOLUME CALCULATOR 
@@ -447,10 +465,12 @@ const calculateCylinderSurfaceArea = document.getElementById("calculateCylinderS
 const cylinderSurfaceAreaResult = document.getElementById("cylinderSurfaceAreaResult")// this is the result line 
 
 
+
 // THESE ARE FOR TH CYLINDER VOLUME CALCULATOR 
 const cylinderPerimeterRadius = document.getElementById("cylinderPerimeterRadius");//the radius of the cylinder 
 const calculateCylinderPerimeter = document.getElementById("calculateCylinderPerimeter");// this is the caluclate button  on the screan 
 const cylinderPerimeterResult = document.getElementById("cylinderPerimeterResult");// the result line 
+
 
 
 //THESE ARE FOR THE RADIUS CALCULATOR
@@ -459,10 +479,12 @@ const calculateRadius = document.getElementById("calculateRadius");// this is th
 const radiusResult = document.getElementById("radiusResult");/// this si the result line
 
 
+
 //THESE ARE FOR THE DIAMETER CALCULATOR
 const diameterRadius = document.getElementById("diameterRadius");// gets the radius diameter input 
 const calculateDiameter = document.getElementById("calculateDiameter");// this is the calculate button
 const diameterResult = document.getElementById("diameterResult");/// this si the result line
+
 
 
 //THESE ARE FOR THE CONE VOLUME CALCULATOR
@@ -472,10 +494,12 @@ const calculateConeVolume = document.getElementById("calculateConeVolume");// th
 const coneVolumeResult = document.getElementById("coneVolumeResult");/// this si the result line
 
 
+
 //THESE ARE FOR THE CONE PERIMETER CALCULATOR
 const conePerimeterRadius = document.getElementById("conePerimeterRadius");// this is the cone readius 
 const calculateConePerimeter = document.getElementById("calculateConePerimeter");// this is the calculate button
 const conePerimeterResult = document.getElementById("conePerimeterResult");/// this si the result line
+
 
 
 //THESE ARE FOR THE CONE SURFACE AREA PAGE CALCULATOR
@@ -485,16 +509,19 @@ const coneSurfaceAreaResult = document.getElementById("coneSurfaceAreaResult");/
 const coneSurfaceAreaLenght = document.getElementById("coneSurfaceAreaLenght");// this is the cone readius 
 
 
+
 //THESE ARE FOR THE SHPHERE VOLUME BUTTON CALCULATOR
 const sphereVolumeRadius = document.getElementById("sphereVolumeRadius");// this si the shpere volume radius value 
 const calculateSphereVolume = document.getElementById("calculateSphereVolume");// this is the calculat button on the shpere volume page 
 const sphereVolumeResult = document.getElementById("sphereVolumeResult");// this is the result line ins the spherevolume pages
 
 
+
 //THESE ARE FOR THE SPHERE SURFACE AREA CALCULATOR
 const sphereSurfaceAreaRadius = document.getElementById("sphereSurfaceAreaRadius");// thisis the surface area radius inpu vale 
 const sphereSurfaceAreaResult = document.getElementById("sphereSurfaceAreaResult");// this is the result line for the surface area 
 const calculateSphereSurfaceArea = document.getElementById("calculateSphereSurfaceArea");// this is the calculate button
+
 
 
 // THESE ARE FOR THE TRIANGLE PRISIM VOLUME CALCULATOR
@@ -505,6 +532,7 @@ const calculateTrianglePrismVolume = document.getElementById("calculateTriangleP
 const trianglePrismVolumeResult = document.getElementById("trianglePrismVolumeResult");// this is the result line 
 
 
+
 //THESE ARE FOR THE TRIANGLE PRISM SURFACE AREA CALCULATOR 
 const trianglePrismSurfaceAreaSideA = document.getElementById("trianglePrismSurfaceAreaSideA");// this is the trianghle rpism vbolume base input holder 
 const trianglePrismSurfaceAreaSideB = document.getElementById("trianglePrismSurfaceAreaSideB");// this is the triangle prism volume lenght input holfer 
@@ -513,7 +541,8 @@ const trianglePrismSurfaceAreaLength = document.getElementById("trianglePrismSur
 const trianglePrismSurfaceAreaHeight= document.getElementById("trianglePrismSurfaceAreaHeight");// this is the triangle prism volume hright input holder 
 const calculateTrianglePrismSurfaceArea = document.getElementById("calculateTrianglePrismSurfaceArea");// this is the triangle prisim volume calculate button 
 const trianglePrismSurfaceAreaResult = document.getElementById("trianglePrismSurfaceAreaResult");// this is the result line 
- 
+
+
 
 //THESE ARE FOR THE TRIANGLE PRISM PERIMETER  CALCULATOR 
 const trianglePrismPerimeterSideA = document.getElementById("trianglePrismPerimeterSideA");// this is the trianghle rpism vbolume base input holder 
@@ -525,11 +554,13 @@ const calculateTrianglePrismPerimeter = document.getElementById("calculateTriang
 const trianglePrismPerimeterResult = document.getElementById("trianglePrismPerimeterResult");// this is the result line 
 
 
+
 //THESE ARE FOR THE SPEED CALCULATOR
 const speedDistance = document.getElementById("speedDistance");// this is the  distance values 
 const speedTime = document.getElementById("speedTime");// this is the  distance values 
 const calculateSpeed = document.getElementById("calculateSpeed");// this is the  distance values 
 const speedResult = document.getElementById("speedResult");// this is the  distance values 
+
 
 
 //THESE ARE FOR THE VELOCITY CALCULATOR
@@ -538,6 +569,7 @@ const velocityDirection = document.getElementById("velocityDirection");// this i
 const velocityTime = document.getElementById("velocityTime");// this is the displacement value 
 const calculateVelocity = document.getElementById("calculateVelocity");// this is the displacement value 
 const velocityResult = document.getElementById("velocityResult");// this is the displacement value 
+
 
 
 //THESE ARE FOR THE AVERAGE VELOCITY CALCULATOR
@@ -549,6 +581,7 @@ const calculateAvgVelocity = document.getElementById("calculateAvgVelocity");// 
 const avgVelocityResult = document.getElementById("avgVelocityResult");// this is the result line   
 
 
+
 //THESE ARE FOR THE PHYSICS DISTANCE CALCULATOR
 const physicsDistance1 = document.getElementById("physicsDistance1");// this is the distance value 1
 const physicsDistance2 = document.getElementById("physicsDistance2");// this is the distance value 2
@@ -558,6 +591,7 @@ const calculatePhysicsDistance = document.getElementById("calculatePhysicsDistan
 const physicsDistanceResult = document.getElementById("physicsDistanceResult");// this is the result value 
 
 
+
 //THESE ARE FOR THE DISTANCE CALCULATOR
 const displacement1 = document.getElementById("displacement1");// this is the displacement value 1
 const displacement2 = document.getElementById("displacement2");// this is the displacement value 2
@@ -565,6 +599,7 @@ const displacementDirection1 = document.getElementById("displacementDirection1")
 const displacementDirection2 = document.getElementById("displacementDirection2");// this is the displacement direction 2 
 const calculateDisplacement = document.getElementById("calculateDisplacement");// this is the caluclate button
 const displacementResult = document.getElementById("displacementResult");// this is the result  line 
+
 
 
 //THESE ARE FOR THE ACCELERATION CALCULATOR
@@ -577,11 +612,13 @@ const accelerationResult = document.getElementById("accelerationResult");// this
 const calculateAcceleration = document.getElementById("calculateAcceleration");// this is the calculate acceleration button 
 
 
+
 //THESE ARE FOR THE TIME CALCULATOR
 const timespeed = document.getElementById("timespeed");// This is the speed value on the time page  
 const timeDistance = document.getElementById("timeDistance");// this is the distance value for the time calculatoe  
 const calculateTime = document.getElementById("calculateTime");// this is the caluclate button for the time  
 const timeResult = document.getElementById("timeResult");// this is the time result 
+
 
 
 // THESE ARE THE FOR  THE VELOCITY-TIME EQUATION CALCULATOR(KINAMATIC FORMULA 1)
@@ -596,6 +633,7 @@ changeVelocityTimeVariable.style.display = "none";// hides this intiteall
 const velocityTimeEquationResult = document.getElementById("velocityTimeEquationResult");// this is the result lone 
 
 
+
 //THESE ARE THE FOR THE DISPLACEMENT USING INITIAL VELOCITY EQUATION CALCULATOR(KINAMATIC FORMULA 2)
 const displacementInitialPopup = document.getElementById("displacementInitialPopup");// this is the displacement final velocity   popups that lets u select veriables to solve for 
 const displacementInitialSelectedVariable = document.getElementById("displacementInitialSelectedVariable"); // the selectied variables 
@@ -606,6 +644,7 @@ const changeDisplacementInitialVariable = document.getElementById("changeDisplac
 changeDisplacementInitialVariable.style.display = "none";// hides this intiteall 
 const displacementInitialEquationResult = document.getElementById("displacementInitialEquationResult");// this is the result lone 
 const variableButton1s = document.querySelectorAll(".variableButton1"); // different variables 
+
 
 
 // THESE ARE FOR THE DISPLACEMENT USING FINAL VELOCITY EQUATION CLAULATOR(KINAMATIC FORMULA 3)
@@ -620,6 +659,7 @@ const displacementFinalEquationResult = document.getElementById("displacementFin
 const variableButton2s = document.querySelectorAll(".variableButton2");// holds the variable buttons 
 
 
+
 // THESE ARE FOR THE TIME INDEPENDENT EQUATION (FORTH KINAMATIC EQUATION)
 const timeIndependentPopup = document.getElementById("timeIndependentPopup");// this is the popup for displacement final velocity equation  
 const timeIndependentSelectedVariable = document.getElementById("timeIndependentSelectedVariable");// this holds the selected variaple 
@@ -632,6 +672,7 @@ const timeIndependentResult = document.getElementById("timeIndependentResult");/
 const variableButton3s = document.querySelectorAll(".variableButton3");// variable buttons 
 
 
+
 // THESE ARE FOR THE AVEREAGE VELOCITY DISPLACEMENT (FIFTH KINAMATIC EQUATION)
 const averageVelocityDisplacementPopup = document.getElementById("averageVelocityDisplacementPopup");// this is the popup for displacement final velocity equation  
 const averageVelocityDisplacementSelectedVariable = document.getElementById("averageVelocityDisplacementSelectedVariable");// this holds the selected variaple 
@@ -642,6 +683,7 @@ const changeAverageVelocityDisplacementVariable = document.getElementById("chang
 changeAverageVelocityDisplacementVariable.style.display = "none";// hides this intiteall 
 const averageVelocityDisplacementResult = document.getElementById("averageVelocityDisplacementResult");// resut line 
 const variableButton4s = document.querySelectorAll(".variableButton4");// variable buttons 
+
 
 
 // THESE ARE FOR THE SOH CAH TOA CALCULATOR
@@ -660,6 +702,7 @@ const sohCahToaSideButtons = document.getElementById("sohCahToaSideButtons");// 
 const changeSohCahToaSide = document.getElementById("changeSohCahToaSide");// change variable button 
 changeSohCahToaSide.style.display = "none";// hides this intiteall 
 sohCahToaSidePopup.style.display = "none";// hides the pop up 
+
 
 
 // THESE ARE FOR THE INVERSE TRIGONOMITRY CALCULATOR 
@@ -682,21 +725,29 @@ const variableButton6s = document.querySelectorAll(".variableButton6");// variab
 
 
 
+// THESE ARE ALL OF THE FORMULA PAGE BUTTONS AND THEIR FUNCTIONS
+allFormulaButton.addEventListener("click", function(){// all formulas page menu 
+    startPage.style.display = "none";// the start page diss apears 
+    formulaPage.style.display = "flex";// the formula page apears 
+});
+
+mathButton.addEventListener("click", function() {// math menu button 
+    startPage.style.display = "none";// hide the start screen 
+    mathFormulaPage.style.display = "flex";// show the math formula page 
+
+});
+
+physicsButton.addEventListener("click", function() {// physics formula menue 
+    startPage.style.display = "none";// the start page is not visible 
+    physicsFormulaPage.style.display = "flex";// the physics page isvisible 
+});
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-// THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WITH THE INPUTS  
+// THESE  ARE WHERE ALL THE CALCULATIONS ARE HAPPENING, THIS IS WHERE YOU TELL THE CALCULATOR WHAT TO DO WHEN THE CALCULATE BUTTON IS PRESSED  
 calculateRectangleArea.addEventListener("click", function() {// calculate putton is pressed on area rectangle screen 
 
     if (lengthInput.value === "" || widthInput.value === ""){// if the inputs are empty 
@@ -723,6 +774,7 @@ calculateRectangleArea.addEventListener("click", function() {// calculate putton
         rectangleAreaResult.style.color = "rgb(11,61,46)"// changes the colour of the text to geen
     };
 });
+
 
 calculateRectanglePerimeter.addEventListener("click", function() {// calculate button is presses (rectangles perimeter screen )
     
@@ -751,6 +803,7 @@ calculateRectanglePerimeter.addEventListener("click", function() {// calculate b
     }
 });
 
+
 calculateSquareArea.addEventListener("click", function() {// calculate button is pressed on square area screen 
 
     if (SquareAreaDimenstion.value === ""){// if the input is empty 
@@ -776,6 +829,7 @@ calculateSquareArea.addEventListener("click", function() {// calculate button is
     squareAreaResult.style.color = "rgb(11,61,46)"// changes the color to green
     }
 });
+
 
 calculateSquarePerimeter.addEventListener("click", function() {// calculate button ispressed, then solve the perimiter of the square
     
@@ -803,6 +857,7 @@ calculateSquarePerimeter.addEventListener("click", function() {// calculate butt
     }
 });
 
+
 calculateTriangleArea.addEventListener("click", function() {// calculates the triangle are if pressed 
     
     if (triangleAreaHeight.value === "" || triangleAreaBase.value === "") {// if the values are empty 
@@ -829,6 +884,7 @@ calculateTriangleArea.addEventListener("click", function() {// calculates the tr
         triangleAreaResult.style.color = "rgb(11,61,46)" // changes the colour to green for the text 
     }
 });
+
 
 calculateTrianglePerimeter.addEventListener("click", function() {// calculates the triangle perimeter 
     
@@ -858,6 +914,7 @@ calculateTrianglePerimeter.addEventListener("click", function() {// calculates t
     }
 });
 
+
 calculateCircleArea.addEventListener("click", function() {// calculates the area of the circle if pressed
      
     if (circleAreaRadius.value === ""){// if the radius is empty 
@@ -884,6 +941,7 @@ calculateCircleArea.addEventListener("click", function() {// calculates the area
         circleAreaResult.style.color = "rgb(11,61,46)"// changes the colore to gree 
     }
 });
+
 
 calculateCircleCircumference.addEventListener ("click", function(){// if the circumference calculate button is used 
     const circleDiameter = circleCircumferenceDiameter.value;// stores the value of the diameter
@@ -919,6 +977,7 @@ calculateCircleCircumference.addEventListener ("click", function(){// if the cir
     }
 });
 
+
 calculateTrapezoidArea.addEventListener ("click", function() {// when u click calculate area for trapizoid 
     
     if (trapezoidAreaBaseA.value === ""|| trapezoidAreaBaseB.value === ""|| trapezoidAreaHeight.value === ""){// if the value is emty 
@@ -946,6 +1005,7 @@ calculateTrapezoidArea.addEventListener ("click", function() {// when u click ca
         trapezoidAreaResult.style.color = "rgb(11,61,46)"// change the color to green 
     }
 });
+
 
 calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the calculate button is pressed then 
     
@@ -976,6 +1036,7 @@ calculateQuadrilateralPerimeter.addEventListener ("click", function (){// if the
     }
 });
 
+
 calculateParallelogramArea.addEventListener ("click", function() {// this is the parallelogram are caluclat button 
 
     if (parallelogramBase.value === "" || parallelogramHeight.value === ""){// if the values enteret are balnck 
@@ -1002,6 +1063,7 @@ calculateParallelogramArea.addEventListener ("click", function() {// this is the
     parallelogramAreaResult.style.color = "rgb(11,61,46)"// change the color to green
     }
 });
+
 
 calculateSlope.addEventListener ("click", function() { // if the calculate slipe button is pressed 
 
@@ -1050,6 +1112,7 @@ calculateSlope.addEventListener ("click", function() { // if the calculate slipe
     }
 });
 
+
 calculateDistance.addEventListener ("click", function() { // if the calculate distance button is pressed
 
     if (distanceY1.value === "" || distanceY2.value === "" ||  distanceX1.value === ""  || distanceX2.value === ""){
@@ -1073,6 +1136,7 @@ calculateDistance.addEventListener ("click", function() { // if the calculate di
     }
 
 });
+
 
 calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclate button is presses 
     if (midpointX1.value === "" ||midpointY1.value === "" || midpointX2.value === "" || midpointY2.value === "" ){
@@ -1099,6 +1163,7 @@ calculateMidpoint.addEventListener ("click", function() {// id midpoint caluclat
         }
     }
 });
+
 
 calculatePythagoreanA.addEventListener ("click", function(){// calculate side a is pressed 
     if(pythagoreanAB.value === ""|| pythagoreanAC.value === ""){// if the values are blacnk
@@ -1133,6 +1198,7 @@ calculatePythagoreanA.addEventListener ("click", function(){// calculate side a 
         }
     }
 });
+
 
 calculatePythagoreanB.addEventListener ("click", function(){// if the calculate button is clicked in the pythagorean b pages 
 
@@ -1169,6 +1235,7 @@ calculatePythagoreanB.addEventListener ("click", function(){// if the calculate 
     }
 });
 
+
 calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate button is clicked on the pythagorean c pages
 
     if(pythagoreanCA.value === ""|| pythagoreanCB.value === ""){// if the values are blacnk
@@ -1196,6 +1263,7 @@ calculatePythagoreanC.addEventListener ("click", function(){// of the caluclate 
     }
 });
 
+
 calculateCubeVolume.addEventListener ("click", function(){// if the cube volume pages calculate button is pressed 
     
     if(cubeSide.value ===""){// if the values are not there
@@ -1221,6 +1289,7 @@ calculateCubeVolume.addEventListener ("click", function(){// if the cube volume 
         cubeVolumeResult.style.color = "rgb(11,61,46)"; // // changes the color to green 
     }
 });
+
 
 calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate button is clicked 
 
@@ -1248,6 +1317,7 @@ calculateCubePerimeter.addEventListener ("click", function(){// if the caluclate
     }
 });
 
+
 calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calculate button is clicked 
 
     if(cubeSurfaceAreaSide.value === ""){//if the values are not there
@@ -1273,6 +1343,7 @@ calculateCubeSurfaceArea.addEventListener ("click", function(){// if the calcula
         cubeSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green 
     }
 });
+
 
 calculateRectanglePrismVolume.addEventListener ("click", function(){// if the calculate button is clicked 
 
@@ -1302,6 +1373,7 @@ calculateRectanglePrismVolume.addEventListener ("click", function(){// if the ca
     }
 });
 
+
 calculateRectanglePrismPerimeter.addEventListener ("click", function(){//  if the calculate button was pressed on the rectangular prisim perimiter pages 
 
     if(rectanglePrismPerimeterHeight.value === ""||rectanglePrismPerimeterWidth.value === ""||rectanglePrismPerimeterLength.value === ""){ // if no values were entered 
@@ -1329,6 +1401,7 @@ calculateRectanglePrismPerimeter.addEventListener ("click", function(){//  if th
         rectanglePrismPerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 });  
+
 
 calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){// this is the calculate button on the rectangular prism surface are pages 
 
@@ -1358,6 +1431,7 @@ calculateRectanglePrismSurfaceArea.addEventListener ("click", function(){// this
     }
 });
 
+
 calculateCylinderVolume.addEventListener ("click", function(){ // calculate button on the cylindr volume screent 
 
     if(cylinderVolumeHeight.value === ""||cylinderVolumeRadius.value === ""){ // if no values were entered 
@@ -1384,6 +1458,7 @@ calculateCylinderVolume.addEventListener ("click", function(){ // calculate butt
         cylinderVolumeResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 });
+
 
 calculateCylinderSurfaceArea.addEventListener ("click", function(){// calculate button on the cylinderSurface area
 
@@ -1412,6 +1487,7 @@ calculateCylinderSurfaceArea.addEventListener ("click", function(){// calculate 
     }
 });
 
+
 calculateCylinderPerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(cylinderPerimeterRadius.value === ""){ // if no values were entered 
@@ -1437,6 +1513,7 @@ calculateCylinderPerimeter.addEventListener ("click", function(){// if the circu
         cylinderPerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 });
+
 
 calculateRadius.addEventListener ("click", function(){// if the circumference calculate button is used 
      
@@ -1465,6 +1542,7 @@ calculateRadius.addEventListener ("click", function(){// if the circumference ca
 
 });
 
+
 calculateDiameter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(diameterRadius.value === ""){ // if no values were entered 
@@ -1490,6 +1568,7 @@ calculateDiameter.addEventListener ("click", function(){// if the circumference 
         diameterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 });
+
 
 calculateConeVolume.addEventListener ("click", function(){// if the circumference calculate button is used 
      
@@ -1518,6 +1597,7 @@ calculateConeVolume.addEventListener ("click", function(){// if the circumferenc
     }
 });
 
+
 calculateConePerimeter.addEventListener ("click", function(){// if the circumference calculate button is used 
      
     if(conePerimeterRadius.value === ""){ // if no values were entered  
@@ -1543,6 +1623,7 @@ calculateConePerimeter.addEventListener ("click", function(){// if the circumfer
         conePerimeterResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 });
+
 
 calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumference calculate button is used 
      
@@ -1571,6 +1652,7 @@ calculateConeSurfaceArea.addEventListener ("click", function(){// if the circumf
     }
 });
 
+
 calculateSphereVolume.addEventListener ("click", function(){// if the calculate sphere folume is clicked then
 
     if(sphereVolumeRadius.value === ""){// and the values are blank 
@@ -1597,6 +1679,7 @@ calculateSphereVolume.addEventListener ("click", function(){// if the calculate 
     }
 });
 
+
 calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calculate button is pressed 
 
     if(sphereSurfaceAreaRadius.value ===""){// no value entered 
@@ -1622,6 +1705,7 @@ calculateSphereSurfaceArea.addEventListener ("click", function(){// if thi calcu
         sphereSurfaceAreaResult.style.color = "rgb(11,61,46)"; // changes the color to green
     }
 });
+
 
 calculateTrianglePrismVolume.addEventListener("click", function(){// this is the caluclate button on the triangle prism volume page 
 
@@ -1650,6 +1734,7 @@ calculateTrianglePrismVolume.addEventListener("click", function(){// this is the
         trianglePrismVolumeResult.style.color = "rgb(11,61,46)";// changes the color to red 
     }   
 });
+
 
 calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if the calculate button is pressed then
     
@@ -1681,6 +1766,7 @@ calculateTrianglePrismSurfaceArea.addEventListener("click", function() {// if th
     };
 });
 
+
 calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the calculate button is pressed then
     if(trianglePrismPerimeterSideA.value ===""|| trianglePrismPerimeterSideB.value === ""|| trianglePrismPerimeterSideC.value === ""|| trianglePrismPerimeterLength.value === "" ){// if the 4 values arent there 
         trianglePrismPerimeterResult.textContent = "ERROR: ENTER 4 VALUES!"// shows this error message 
@@ -1709,6 +1795,7 @@ calculateTrianglePrismPerimeter.addEventListener("click", function() {// if the 
     };
 });
 
+
 calculateSpeed.addEventListener("click", function() {// if the calculate button is pressed then
     if(speedTime.value ===""|| speedDistance.value === ""){// if the 2 values arent there 
         speedResult.textContent = "ERROR: ENTER 2 VALUES!"// shows this error message 
@@ -1735,6 +1822,7 @@ calculateSpeed.addEventListener("click", function() {// if the calculate button 
         speedResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
 });
+
 
 calculateVelocity.addEventListener("click", function() {// if the calculate button is pressed then
     if(velocityDisplacement.value ===""|| velocityTime.value === ""){// if the 2 values arent there 
@@ -1767,6 +1855,7 @@ calculateVelocity.addEventListener("click", function() {// if the calculate butt
         velocityResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
 });
+
 
 calculateAvgVelocity.addEventListener("click", function() {// if the calculate button is pressed then
     
@@ -1822,6 +1911,7 @@ calculateAvgVelocity.addEventListener("click", function() {// if the calculate b
     }   
 });
 
+
 calculatePhysicsDistance.addEventListener("click", function() {// if the calculate button is pressed on the distance page 
     if(physicsDistance1.value ===""|| physicsDistance2.value === ""){// if there arnt 2 values arent there 
         physicsDistanceResult.textContent = "ERROR: ENTER ATLEAST 2 VALUES!"// shows this error message 
@@ -1849,6 +1939,7 @@ calculatePhysicsDistance.addEventListener("click", function() {// if the calcula
         physicsDistanceResult.style.color = "rgb(11,61,46)";// changes the color to red 
     };
 });
+
 
 calculateDisplacement.addEventListener("click", function() {// if the calculate button is pressed on the displacement page 
     
@@ -1925,6 +2016,7 @@ calculateDisplacement.addEventListener("click", function() {// if the calculate 
     }   
 });
 
+
 calculateAcceleration.addEventListener("click", function() { // if the acceleration calculate button was pressed then do this 
 
     let FinalVelocity =  Number(accelerationVelocity1.value);// hold the final velocity 
@@ -2000,6 +2092,7 @@ calculateAcceleration.addEventListener("click", function() { // if the accelerat
     }
 }); 
 
+
 calculateTime.addEventListener("click", function(){//iff the calculate Time button is clicked then :
     const Speed = Number(timespeed.value);// hold the value of the time speed 
     const Distance = Number(timeDistance.value);// hold the value of the time distance 
@@ -2025,6 +2118,7 @@ calculateTime.addEventListener("click", function(){//iff the calculate Time butt
         timeResult.style.color = "rgb(11,61,46)";// changes the color to green  
     }
 });
+
 
 calculateVelocityTimeEquation.addEventListener("click", function(){// if the calulate button is clicked 
     let Result;
@@ -2328,6 +2422,7 @@ calculateVelocityTimeEquation.addEventListener("click", function(){// if the cal
     
 
 });
+
 
 calculateDisplacementInitialEquation.addEventListener("click", function(){// if the calulate button is clicked 
     let Result;// this is the result 
@@ -2676,6 +2771,7 @@ calculateDisplacementInitialEquation.addEventListener("click", function(){// if 
     }
 });
 
+
 calculateDisplacementFinalEquation.addEventListener("click", function(){// if the calulate button is clicked 
     let Result;// this is the result 
 
@@ -3022,6 +3118,7 @@ calculateDisplacementFinalEquation.addEventListener("click", function(){// if th
 
 });
 
+
 calculateTimeIndependent.addEventListener("click", function(){// if the calulate button is clicked 
     let Result;// this is the result 
 
@@ -3357,6 +3454,7 @@ calculateTimeIndependent.addEventListener("click", function(){// if the calulate
     }
 });
 
+
 calculateAverageVelocityDisplacement.addEventListener("click", function(){// if the calulate button is clicked 
     let Result;// this is the result , it holds the value and is used in the result lines 
 
@@ -3643,6 +3741,7 @@ calculateAverageVelocityDisplacement.addEventListener("click", function(){// if 
     }
 });
 
+
 calculateSohCahToa.addEventListener("click", function(){// if the ccaluculate button is clicked 
     let Result;// this si the variable that will hold the result value 
 
@@ -3785,6 +3884,7 @@ calculateSohCahToa.addEventListener("click", function(){// if the ccaluculate bu
     }
 })
 
+
 calculateInverse.addEventListener("click", function(){// if the ccaluculate button is clicked 
     let angle = 0;// this si the variable that will hold the result value 
 
@@ -3858,12 +3958,7 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
 
 
 
-
-
-
-
-
-//THESE ARE THE POPUP MENU BUTTONS that let you selce variablesand side you want to solve for 
+//THESE ARE THE POPUP MENU BUTTONS that let you REARRANGE THE EQUATION FOR WHAT YOUR SOLVING FOR
 
 // THIS IS THE 1st KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButtons.forEach(function(button){// in variable buttons, for each of them 
@@ -5077,22 +5172,7 @@ changeSInverseVariable.addEventListener("click", function(){// if the change var
 
 
 
-// THESE ARE ALL OF THE MAIN MENU BUTTONS
-allFormulaButton.addEventListener("click", function(){// all formulas page menu 
-    startPage.style.display = "none";// the start page diss apears 
-    formulaPage.style.display = "flex";// the formula page apears 
-});
 
-mathButton.addEventListener("click", function() {// math menu button 
-    startPage.style.display = "none";// hide the start screen 
-    mathFormulaPage.style.display = "flex";// show the math formula page 
-
-});
-
-physicsButton.addEventListener("click", function() {// physics formula menue 
-    startPage.style.display = "none";// the start page is not visible 
-    physicsFormulaPage.style.display = "flex";// the physics page isvisible 
-});
 
 
 
