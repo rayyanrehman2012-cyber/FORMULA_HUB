@@ -255,7 +255,26 @@ const sohCahToaButton = document.getElementById("sohCahToaButton");// this si th
 const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
 
 
+//THESE ARE FOR THE SEARCH BAR ON THE PHYSICS PAGE
+let physicsSearchInput = document. getElementById("physicsSearchInput")// this is the searchpare input, holder 
+let physicsFormulaButtonsSearch = document.querySelectorAll(".physicsFormulaPage .formulaButton");// this is the variable that holds all the buttons 
 
+physicsSearchInput.addEventListener("input", function() {// if the physics serach bar is used then 
+    
+    let searchvalue = physicsSearchInput.value.toUpperCase();// make the input value upercase and then store it 
+    
+    physicsFormulaButtonsSearch.forEach(function(button) {// for all of the buttos 
+        let formulaName = button.textContent.toUpperCase(); // // get there name  of the button 
+
+        if(formulaName.includes(searchvalue)){ // if the name of the button is there 
+            button.style.display = "block" // then show that button on the screen 
+        }
+
+        else {// if  the name of the button is not there 
+            button.style.display = "none"; // hide the button from the user 
+        }
+    })
+});
 
 
 
