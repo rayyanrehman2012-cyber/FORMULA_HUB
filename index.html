@@ -53,7 +53,7 @@
                 <button id="allFilterDropdownButton">FILTER ▼</button>
                 <div class="allfilterDropdownMenu">
                     <label>
-                        <input type ="checkbox" class="formulaFilter1" value="3d-shapes">3D SHAPES
+                        <input type ="checkbox" class="formulaFilter" value="3d-shapes">3D SHAPES
                     </label>
             
                     <label>
@@ -175,49 +175,94 @@
                 <input id="mathSearchInput" type="text" placeholder="SEARCH FOR A FORMULA...">
             </div>  
 
+            <div class="mathFilterContainer"> 
+                <button id="mathFilterDropdownButton">FILTER ▼</button>
+                <div class="mathfilterDropdownMenu">
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="3d-shapes">3D SHAPES
+                    </label>
+            
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="2d-shapes">2D SHAPES
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="area">AREA
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="perimeter">PERIMETER
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="surface-area">SURFACE AREA
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="volume">VOLUME
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="trigonometry">TRIGONOMETRY
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="round-shapes">ROUND SHAPES
+                    </label>
+
+                    <label>
+                        <input type ="checkbox" class="formulaFilter1" value="linear-systems">LINEAR SYSTEMS
+                    </label>
+
+                    <button id="mathresetFiltersButton">RESET FILTERS</button>
+
+                </div>
+            </div>
+
+
             <div class="formulaContainer">
-                <button id = "radiusButton" class="formulaButton">RADIUS CALCULATOR</button>
-                <button id = "diameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
-                <button id = "rectangleAreaButton" class="formulaButton">RECTANGLE AREA</button>
-                <button id = "rectanglePerimeterButton"  class="formulaButton">RECTANGLE PERIMETER</button>
-                <button id = "squareAreaButton" class="formulaButton">SQUARE AREA</button>
-                <button id = "squarePerimeterButton" class="formulaButton">SQUARE PERIMETER</button>
-                <button id = "triangleAreaButton" class="formulaButton">TRIANGLE AREA</button>
-                <button id = "trianglePerimeterButton"class="formulaButton">TRIANGLE PERIMETER</button>
-                <button id = "circleAreaButton" class="formulaButton">CIRCLE AREA</button>
-                <button id = "circleCircumferenceButton" class="formulaButton">CIRCLE CIRCUMFERENCE</button>
-                <button id = "trapezoidAreaButton" class="formulaButton">TRAPEZOID AREA</button>
-                <button id = "quadrilateralPerimeterButton" class="formulaButton">QUADRILATERAL PERIMETER</button>
-                <button id = "parallelogramAreaButton"  class="formulaButton">PARALLELOGRAM AREA</button>
-                <button id = "slopeButton" class="formulaButton">SLOPE</button>
-                <button id = "distanceButton" class="formulaButton">DISTANCE FORMULA</button>
-                <button id = "midpointButton" class="formulaButton">MIDPOINT FORMULA</button>
-                <button id = "pythagoreanCButton" class="formulaButton">PYTHAGOREAN THEOREM (HYPOTENUSE)</button>
-                <button id = "pythagoreanBButton" class="formulaButton">PYTHAGOREAN THEOREM (SIDE B)</button>
-                <button id = "pythagoreanAButton" class="formulaButton">PYTHAGOREAN THEOREM (SIDE A)</button>
-                <button id = "cubeVolumeButton" class="formulaButton">CUBE VOLUME</button>
-                <button id = "cubePerimeterButton" class="formulaButton">CUBE PERIMETER</button>
-                <button id = "cubeSurfaceAreaButton" class="formulaButton">CUBE SURFACE AREA</button>
-                <button id = "rectanglePrismVolumeButton" class="formulaButton">RECTANGULAR PRISM VOLUME</button>
-                <button id = "rectanglePrismPerimeterButton" class="formulaButton">RECTANGULAR PRISM PERIMETER</button>
-                <button id = "rectanglePrismSurfaceAreaButton" class="formulaButton">RECTANGULAR PRISM SURFACE AREA</button>
-                <button id = "cylinderVolumeButton" class="formulaButton">CYLINDER VOLUME</button>
-                <button id = "cylinderSurfaceAreaButton" class="formulaButton">CYLINDER SURFACE AREA</button>
-                <button id = "cylinderPerimeterButton" class="formulaButton">CYLINDER PERIMETER</button>
-                <button id = "coneVolumeButton" class="formulaButton">CONE VOLUME</button>
-                <button id = "conePerimeterButton" class="formulaButton">CONE PERIMETER</button>
-                <button id = "coneSurfaceAreaButton" class="formulaButton">CONE SURFACE AREA</button>
-                <button id = "sphereVolumeButton" class="formulaButton">SPHERE VOLUME</button>
-                <button id = "sphereSurfaceAreaButton" class="formulaButton">SPHERE SURFACE AREA</button>
-                <button id = "trianglePrismVolumeButton" class="formulaButton">TRIANGULAR PRISM VOLUME</button>
-                <button id = "trianglePrismSurfaceAreaButton" class="formulaButton">TRIANGULAR PRISM SURFACE AREA</button>
-                <button id = "trianglePrismPerimeterButton" class="formulaButton">TRIANGULAR PRISM PERIMETER</button>
-                <button id = "sohCahToaButton" class = "formulaButton"> SOH-CAH-TOA CALCULATOR</button>
-                <button id = "inverseButton" class = "formulaButton"> INVERSE TRIGONOMETRY  CALCULATOR</button>
-                <button id = "sinLawSidesButton" class = "formulaButton"> SIN LAW(FOR SIDES)</button>
-                <button id = "sinLawAnglesButton" class = "formulaButton"> SIN LAW(FOR ANGLES)</button>
-                <button id = "cosineLawSidesButton" class = "formulaButton"> COSINE LAW (FOR SIDES)</button>
-                <button id = "cosineLawAnglesButton" class = "formulaButton"> COSINE LAW (FOR ANGLES)</button>
+                <button id = "radiusButton" class="formulaButton" data-categories="2d-shapes round-shapes" >RADIUS CALCULATOR</button>
+                <button id = "diameterButton" class="formulaButton" data-categories="2d-shapes round-shapes">DIAMETER CALCULATOR</button>
+                <button id = "rectangleAreaButton" class="formulaButton" data-categories="2d-shapes area">RECTANGLE AREA</button>
+                <button id = "rectanglePerimeterButton" class="formulaButton" data-categories="2d-shapes perimeter">RECTANGLE PERIMETER</button>
+                <button id = "squareAreaButton" class="formulaButton" data-categories="2d-shapes area">SQUARE AREA</button>
+                <button id = "squarePerimeterButton" class="formulaButton" data-categories="2d-shapes perimeter">SQUARE PERIMETER</button>
+                <button id = "triangleAreaButton" class="formulaButton" data-categories="2d-shapes area">TRIANGLE AREA</button>
+                <button id = "trianglePerimeterButton" class="formulaButton" data-categories="2d-shapes perimeter">TRIANGLE PERIMETER</button>
+                <button id = "circleAreaButton" class="formulaButton" data-categories="2d-shapes round-shapes area">CIRCLE AREA</button>
+                <button id = "circleCircumferenceButton" class="formulaButton" data-categories="2d-shapes round-shapes perimeter">CIRCLE CIRCUMFERENCE</button>
+                <button id = "trapezoidAreaButton"class="formulaButton" data-categories="2d-shapes area">TRAPEZOID AREA</button>
+                <button id = "quadrilateralPerimeterButton" class="formulaButton" data-categories="2d-shapes perimeter">QUADRILATERAL PERIMETER</button>
+                <button id = "parallelogramAreaButton" class="formulaButton" data-categories="2d-shapes area">PARALLELOGRAM AREA</button>
+                <button id = "slopeButton" class="formulaButton" data-categories="linear-systems">SLOPE</button>
+                <button id = "distanceButton" class="formulaButton" data-categories="linear-systems">DISTANCE FORMULA</button>
+                <button id = "midpointButton" class="formulaButton" data-categories="linear-systems">MIDPOINT FORMULA</button>
+                <button id = "pythagoreanCButton" class="formulaButton" data-categories="2d-shapes trigonometry">PYTHAGOREAN THEOREM (HYPOTENUSE)</button>
+                <button id = "pythagoreanBButton" class="formulaButton" data-categories="2d-shapes trigonometry">PYTHAGOREAN THEOREM (SIDE B)</button>
+                <button id = "pythagoreanAButton" class="formulaButton" data-categories="2d-shapes trigonometry">PYTHAGOREAN THEOREM (SIDE A)</button>
+                <button id = "cubeVolumeButton" class="formulaButton" data-categories="3d-shapes volume">CUBE VOLUME</button>
+                <button id = "cubePerimeterButton" class="formulaButton" data-categories="3d-shapes perimeter">CUBE PERIMETER</button>
+                <button id = "cubeSurfaceAreaButton" class="formulaButton" data-categories="3d-shapes surface-area">CUBE SURFACE AREA</button>
+                <button id = "rectanglePrismVolumeButton" class="formulaButton" data-categories="3d-shapes volume">RECTANGULAR PRISM VOLUME</button>
+                <button id = "rectanglePrismPerimeterButton" class="formulaButton" data-categories="3d-shapes perimeter">RECTANGULAR PRISM PERIMETER</button>
+                <button id = "rectanglePrismSurfaceAreaButton" class="formulaButton" data-categories="3d-shapes surface-area">RECTANGULAR PRISM SURFACE AREA</button>
+                <button id = "cylinderVolumeButton" class="formulaButton" data-categories="3d-shapes round-shapes volume">CYLINDER VOLUME</button>
+                <button id = "cylinderSurfaceAreaButton" class="formulaButton" data-categories="3d-shapes round-shapes surface-area">CYLINDER SURFACE AREA</button>
+                <button id = "cylinderPerimeterButton" class="formulaButton" data-categories="3d-shapes round-shapes perimeter">CYLINDER PERIMETER</button>
+                <button id = "coneVolumeButton" class="formulaButton" data-categories="3d-shapes round-shapes volume" >CONE VOLUME</button>
+                <button id = "conePerimeterButton" class="formulaButton" data-categories="3d-shapes round-shapes perimeter" >CONE PERIMETER</button>
+                <button id = "coneSurfaceAreaButton" class="formulaButton" data-categories="3d-shapes round-shapes surface-area">CONE SURFACE AREA</button>
+                <button id = "sphereVolumeButton" class="formulaButton" data-categories="3d-shapes round-shapes volume">SPHERE VOLUME</button>
+                <button id = "sphereSurfaceAreaButton" class="formulaButton"  data-categories="3d-shapes round-shapes surface-area">SPHERE SURFACE AREA</button>
+                <button id = "trianglePrismVolumeButton" class="formulaButton" data-categories="3d-shapes volume">TRIANGULAR PRISM VOLUME</button>
+                <button id = "trianglePrismSurfaceAreaButton" class="formulaButton" data-categories="3d-shapes surface-area">TRIANGULAR PRISM SURFACE AREA</button>
+                <button id = "trianglePrismPerimeterButton" class="formulaButton" data-categories="3d-shapes perimeter">TRIANGULAR PRISM PERIMETER</button>
+                <button id = "sohCahToaButton" class = "formulaButton" data-categories="2d-shapes trigonometry"> SOH-CAH-TOA CALCULATOR</button>
+                <button id = "inverseButton" class = "formulaButton" data-categories="2d-shapes trigonometry"> INVERSE TRIGONOMETRY  CALCULATOR</button>
+                <button id = "sinLawSidesButton" class = "formulaButton" data-categories="2d-shapes trigonometry"> SIN LAW(FOR SIDES)</button>
+                <button id = "sinLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry"> SIN LAW(FOR ANGLES)</button>
+                <button id = "cosineLawSidesButton" class = "formulaButton" data-categories="2d-shapes trigonometry"> COSINE LAW (FOR SIDES)</button>
+                <button id = "cosineLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry"> COSINE LAW (FOR ANGLES)</button>
             </div>
 
             <button id="mathBackButton">BACK</button>
