@@ -3977,20 +3977,25 @@ calculateInverse.addEventListener("click", function(){// if the ccaluculate butt
 })
 
 calculateSinLawSides.addEventListener("click", function(){// if the ccaluculate button is clicked 
-    let Result;// this si the variable that will hold the result value 
+    let Result;// this is the variable that will hold the result value FOR ALL OF TE 6 CALCULATORS
 
     if(sinLawSidesSelectedVariable.textContent === "SINE LAW (A AND B)" && sinLawSidesSelectedSide.textContent === "SOLVING FOR SIDE A"){// if these are the selections made by yht user 
-        let angleB = Number(document.getElementById("sinLawSidesAngleB").value) // holds the angle value 
-        let sideB = Number(document.getElementById("sinLawSidesSideB").value);// hold the hypotensje baolue 
-        let angleA = Number(document.getElementById("sinLawSidesAngleA").value);// hold the hypotensje baolue 
+        let angleB = Number(document.getElementById("sinLawSidesAngleB").value) // holds the angle value for side B
+        let sideB = Number(document.getElementById("sinLawSidesSideB").value);// hold the side value for side B
+        let angleA = Number(document.getElementById("sinLawSidesAngleA").value);// hold the anglle value for side A 
 
-        if(document.getElementById("sinLawSidesAngleA").value === "" || document.getElementById("sinLawSidesAngleB").value === "" || document.getElementById("sinLawSidesSideB").value === ""){
+        if(document.getElementById("sinLawSidesAngleA").value === "" || document.getElementById("sinLawSidesAngleB").value === "" || document.getElementById("sinLawSidesSideB").value === ""){ //If these values are left empty by the user 
             sinLawSidesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
             sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
-        else if(angleA <= 0 || angleA >= 180 || angleB <= 0 || angleB >= 180 || sideB <= 0) { // if the values are engative or to big(for angle)
-            sinLawSidesResult.textContent = "ERROR: ENTER VALID VALUES!"; // this is the error message 
+        else if(angleA < 0 || angleA > 180 || angleB < 0 || angleB > 180 || sideB < 0) { // if the values are engative or to big(for angle)
+            sinLawSidesResult.textContent = "ERROR: ANGLES CAN'T BE GREATHER THAN 180, NOTHING CAN BE NEGATIVE!"; // this is the error message 
+            sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleA === 0 ||  angleB === 0 ||  sideB === 0) { // if the values are engative or to big(for angle)
+            sinLawSidesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
             sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
@@ -4000,11 +4005,42 @@ calculateSinLawSides.addEventListener("click", function(){// if the ccaluculate 
 
             Result = sideB * Math.sin(angleARadians) /Math.sin(angleBRadians)// this is the formula 
 
-            sinLawSidesResult.textContent = "SIDE A = " + Result.toFixed(3) + " UNITS";
+            sinLawSidesResult.textContent = "SIDE A = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
             sinLawSidesResult.style.color = "rgb(11,61,46)";// in green 
         }
     }
-    
+
+    else if(sinLawSidesSelectedVariable.textContent === "SINE LAW (A AND B)" && sinLawSidesSelectedSide.textContent === "SOLVING FOR SIDE B"){// if these are the selections made by yht user 
+        let angleB = Number(document.getElementById("sinLawSidesAngleB").value) // holds the angle value of be
+        let sideA = Number(document.getElementById("sinLawSidesSideA").value);// hold the side value of a 
+        let angleA = Number(document.getElementById("sinLawSidesAngleA").value);// hold the  the side angle of a
+
+        if(document.getElementById("sinLawSidesAngleA").value === "" || document.getElementById("sinLawSidesAngleB").value === "" || document.getElementById("sinLawSidesSideA").value === ""){// if the vlaues are a blank or are not there
+            sinLawSidesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
+            sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleA < 0 || angleA > 180 || angleB < 0 || angleB > 180 || sideA < 0) { // if the values are engative or to big for a triangle 
+            sinLawSidesResult.textContent = "ERROR: ANGLES CAN'T BE GREATHER THAN 180, NOTHING CAN BE NEGATIVE!"; // this is the error message 
+            sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleA === 0 ||  angleB === 0 ||  sideA === 0) { // if the values are engative or to big(for angle)
+            sinLawSidesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            sinLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+            let angleBRadians = angleB*(Math.PI/180);// converts the degrees into radiants because js uses radians
+            let angleARadians = angleA*(Math.PI/180);// converts the degrees into radiants because js uses radians
+
+            Result = sideA * Math.sin(angleBRadians) /Math.sin(angleARadians)// this is the formula 
+
+            sinLawSidesResult.textContent = "SIDE B = " + Result.toFixed(3) + " UNITS"; // this is the result the calculator will displace 
+            sinLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+
 
 })
 
