@@ -192,15 +192,30 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 
 Today I completed a total of 9 formulas which is a good addition to this website 
 - Redesigned the layout and formating of the Front page adding visual operations signs
-- Added and designed a Search bar on the physics page, that lets you shearch for the exact function.
+
+- Added and designed a Search bar on the Physics Formula page, that lets you shearch for the exact function.
+
+- Added and designed a Search bar on the Math Formula page, that lets you shearch for the exact function on the math formula page
+
+
+
+
+
+
+
+
+
 
 
 
 ## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 8 or AFTER THIR SPACE ENDS)
 - some more formulas that arnt from math or physics,
+
 - A filter Function on the different  formula pages, (Ithink we can do this on the Math formula page, the physics Formula page and the all formula page), that would let you sort the functions based on the think there caluclating like Area, Perimeter, Surface are , Volume, etc. And also sortable by the shape you using, like square, circle, triangle, rectangle, cube, triangle prisim, rectangle prism, cone, or cylinder. Also it would be nice if you can hidethe formulas that you dont want 
-- Having a search function on the all formula page 
-- boyancy formula 
-- gas formula 
+
+- more math and physics formulas like
+    - boyancy formula 
+    - gas formula 
+
 - A visulalizing button, which would make a visula diagram for the physics formulas and some of the math one, I personaly think this could be very usefull for people who might be confused with the aswers porvided by the calulator, or it can be helfull for those who who learn through visuals 
 

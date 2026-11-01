@@ -255,6 +255,23 @@ const sohCahToaButton = document.getElementById("sohCahToaButton");// this si th
 const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //THESE ARE FOR THE SEARCH BAR ON THE PHYSICS PAGE
 let physicsSearchInput = document. getElementById("physicsSearchInput")// this is the searchpare input, holder 
 let physicsFormulaButtonsSearch = document.querySelectorAll(".physicsFormulaPage .formulaButton");// this is the variable that holds all the buttons 
@@ -296,6 +313,19 @@ mathSearchInput.addEventListener("input", function() {// if the physics serach b
         }
     })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -709,6 +739,24 @@ const changeSInverseVariable = document.getElementById("changeSInverseVariable")
 changeSInverseVariable.style.display = "none";// hides this intiteall 
 const InverseResult = document.getElementById("InverseResult");// resut line 
 const variableButton6s = document.querySelectorAll(".variableButton6");// variable buttons 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5121,6 +5169,11 @@ physicsButton.addEventListener("click", function() {// physics formula menue
 
 
 
+
+
+
+
+
 // THESE ARE ALL THE BACK BUTTON EVENT FUNCTIONS IN THIS PROJECT
 backButton.addEventListener("click", function() {//BACK BUTTON
     formulaPage.style.display = "none";// the formula page dissapears 
@@ -7697,17 +7750,17 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
 
 
 
-// THIS IS THE USER EXPPERENCE STUFF, LIKE SOUND AND IMAGES
+// THIS IS THE USER EXPPERENCE STUFF, LIKE SOUND 
 let buttonClickSound = new Audio("click1.mp3"); // declaring the sound 
 
 function playButtonClickSound() {//sound function 
-    buttonClickSound.currentTime = 0.3;
-    buttonClickSound.play();
-    buttonClickSound.volume(200);
+    buttonClickSound.currentTime = 0.3;// start at this time 
+    buttonClickSound.play();//play the sound 
+    buttonClickSound.volume(200);// at this volume 
 }
 
-document.querySelectorAll("button").forEach(function(button) {// sellect all button 
-    button.addEventListener("click", function() {/// if buttons are clicked 
+document.querySelectorAll("button").forEach(function(button) {// sellect all buttons insdxe the program 
+    button.addEventListener("click", function() {/// if any button is clicked then 
         playButtonClickSound(); // use the click sound function 
     });
 });
