@@ -734,7 +734,7 @@ calculateSinLawSides.style.display = "none";// hides this intiteall
 const changeSinLawSidesVariable = document.getElementById("changeSinLawSidesVariable");// change variable button 
 changeSinLawSidesVariable.style.display = "none";// hides this intiteall 
 const sinLawSidesResult = document.getElementById("sinLawSidesResult");// resut line 
-const variableButton7 = document.querySelectorAll(".variableButton7");// variable buttons 
+const variableButton7s = document.querySelectorAll(".variableButton7");// variable buttons 
 const sinLawSidesSidePopup = document.getElementById("sinLawSidesSidePopup");// this is the popup for displacement final velocity equation  
 const sinLawSidesSideButtons = document.getElementById("sinLawSidesSideButtons");// this is the popup for displacement final velocity equation  
 const changeSinLawSidesSide = document.getElementById("changeSinLawSidesSide");// change variable button 
@@ -5089,7 +5089,148 @@ variableButton6s.forEach(function(button){// in variable buttons for each of th
     });
 })
 
+variableButton7s.forEach(function(button){// in variable buttons for each of them
+    button.addEventListener("click", function(){
+        sinLawSidesPopup.style.display = "none"// hides this 
+       sinLawSidesSidePopup.style.display = "flex"// hides this 
+        changeSinLawSidesVariable.style.display = "none"
+        sinLawSidesSelectedVariable.textContent = "";// clears the selected variable
+        sinLawSidesSelectedSide.textContent = "";// clears the selected side
+        sinLawSidesInputs.innerHTML = "";// clears the inputs
+        sinLawSidesResult.textContent = "";// clears the result
 
+        if (button.value === "SLSA"){// if sine is selectod 
+            sinLawSidesSelectedVariable.textContent = "SINE LAW (A AND B)";
+
+            sinLawSidesSideButtons.innerHTML = `
+                <button class="sinLawSidesSideButton" value="sideA">FOR SIDE A</button>
+                <button class="sinLawSidesSideButton" value="sideB">FOR SIDE B</button>
+            `;
+        }
+
+        else if (button.value === "SLSB"){ // if the  button value is cosine 
+            sinLawSidesSelectedVariable.textContent = "SINE LAW (A AND C)"; // this is the text content of rhte selected variable 
+
+            sinLawSidesSideButtons.innerHTML = `
+                <button class="sinLawSidesSideButton" value="sideA">FOR SIDE A</button>
+                <button class="sinLawSidesSideButton" value="sideC">FOR SIDE C</button>
+            `;// add these buttons 
+        }
+
+        else if (button.value === "SLSC"){ // if the ratio selected is tangent 
+            sinLawSidesSelectedVariable.textContent = "SINE LAW (B AND C)";
+
+            sinLawSidesSideButtons.innerHTML = `
+                <button class="sinLawSidesSideButton" value="sideB">FOR SIDE B</button>
+                <button class="sinLawSidesSideButton" value="sideC">FOR SIDE C</button>
+
+            `; // add thes buttons 
+        }
+
+        let sinLawSidesSideButtonElements = document.querySelectorAll(".sinLawSidesSideButton");// selects the side buttons
+
+        sinLawSidesSideButtonElements.forEach(function(sideButton){// for each side button
+            sideButton.addEventListener("click", function(){// if the side button is clicked
+                sinLawSidesSidePopup.style.display = "none";// hides the side popup
+                sinLawSidesSelectedSide.textContent = "SOLVING FOR " + sideButton.textContent;// displays the selected side
+                sinLawSidesInputs.innerHTML = "";
+
+                if (button.value === "SLSA"){//if the selected ratio is sine 
+
+                    if(sideButton.value ==="sideA"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="sinLawSidesSideB">SIDE B (b)</label>
+                            <input type="number" id="sinLawSidesSideB" >
+
+                            <label for="sinLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="sinLawSidesAngleA" >
+
+                            <label for="sinLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="sinLawSidesAngleB" >
+                        `;// add all of this
+                    }
+
+                    else if (sideButton.value === "sideB") {// solving for hypotenuse
+                        sinLawSidesInputs.innerHTML = `
+                            <label for="sinLawSidesSideA">SIDE A (A)</label>
+                            <input type="number" id="sinLawSidesSideA">
+
+                            <label for="sinLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="sinLawSidesAngleA" >
+
+                            <label for="sinLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="sinLawSidesAngleB">
+                        `; // add alll of this 
+                    }
+                }
+
+                else if (button.value === "SLSB"){//if the selected ratio is cosine 
+
+                    if(sideButton.value ==="sideA"){ // and the side selected is adjacent
+                        sinLawSidesInputs.innerHTML = `
+                            <label for="sinLawSidesSideC">SIDE C (c)</label>
+                            <input type="number" id="sinLawSidesSideC">
+
+                            <label for="sinLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="sinLawSidesAngleA">
+
+                            <label for="sinLawSidesAngleC">ANGLE C (°)</label>
+                            <input type="number" id="sinLawSidesAngleC" >
+                        `;// add all of this 
+                    }
+
+                    else if (sideButton.value === "sideC") {// and the siide selected is hypotenuse 
+                        sinLawSidesInputs.innerHTML = `
+                            <label for="sinLawSidesSideA">SIDE A (a)</label>
+                            <input type="number" id="sinLawSidesSideA">
+
+                            <label for="sinLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="sinLawSidesAngleA">
+
+                            <label for="sinLawSidesAngleC">ANGLE C (°)</label>
+                            <input type="number" id="sinLawSidesAngleC" > 
+                        `;//add all of this 
+                    }
+                }
+
+                else if (button.value === "SLSC"){//if the selected ratio is cosine 
+
+                    if(sideButton.value ==="sideC"){ // and the side selected is opposine 
+                        sinLawSidesInputs.innerHTML = `
+                            <label for="sinLawSidesSideB">SIDE B (b)</label>
+                            <input type="number" id="sinLawSidesSideB">
+
+                            <label for="sinLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="sinLawSidesAngleB">
+
+                            <label for="sinLawSidesAngleC">ANGLE C (°)</label>
+                            <input type="number" id="sinLawSidesAngleC" > 
+                        `;// add all of this 
+                    }
+
+                    else if (sideButton.value === "sideB") {// and the siide selected is adjacent  
+                        sinLawSidesInputs.innerHTML = `
+                            <label for="sinLawSidesSideC">SIDE C (c)</label>
+                            <input type="number" id="sinLawSidesSideC">
+
+                            <label for="sinLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="sinLawSidesAngleB">
+
+                            <label for="sinLawSidesAngleC">ANGLE C (°)</label>
+                            <input type="number" id="sinLawSidesAngleC" > 
+                        `;//add all of this 
+                    }
+                }
+
+                sinLawSidesResult.textContent = "";// clears the result
+                calculateSinLawSides.style.display = "block";// shows calculate button
+                changeSinLawSidesVariable.style.display = "block";// shows change ratio button
+                changeSinLawSidesSide.style.display = "block";// shows change side button
+                playButtonClickSound(); // play the sounds when the button is clicked 
+            });
+        });
+    });
+})
 
 
 
