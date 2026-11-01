@@ -89,9 +89,11 @@ body {
     
 }
 
+
 .mathDecorations span {
     font-family: Arial, sans-serif;
 }
+
 
 .mathDecorations {
     position: absolute;
@@ -99,6 +101,7 @@ body {
     pointer-events: none;
     z-index: 0;
 }
+
 
 .mathDecorations span {
     position: absolute;
@@ -108,11 +111,13 @@ body {
     color: rgba(255, 255, 255, 0.12);
 }
 
+
 .mathDecorations span:nth-child(1) {
     top: 80%;
     right: 40%;
     transform:Scale(1.1);
 }
+
 
 .mathDecorations span:nth-child(2){
     top: 70%;
@@ -121,12 +126,14 @@ body {
 
 }
 
+
 .mathDecorations span:nth-child(3) {
     top: 25%;
     left: 45%;
     transform:Scale(0.8);
 
 }
+
 
 .mathDecorations span:nth-child(4) {
     top: 4%;
@@ -135,12 +142,14 @@ body {
 
 }
 
+
 .mathDecorations span:nth-child(5) {
     top: 10%;
     right: 8%;
     transform:Scale(1.1);
 
 }
+
 
 .mathDecorations span:nth-child(6) {
     top: 65%;
@@ -149,12 +158,14 @@ body {
 
 }
 
+
 .mathDecorations span:nth-child(7) {
     top: 40%;
     right: 95%;
     transform:Scale(1.2);
 
 }
+
 
 .mathDecorations span:nth-child(8) {
     top: 15%;
@@ -163,12 +174,14 @@ body {
 
 }
 
+
 .mathDecorations span:nth-child(9){
     top: 73%;
     left: 28%;   
     transform:Scale(1.9);
  
 }
+
 
 .mathDecorations span:nth-child(10) {
     top: 35%;
@@ -177,12 +190,14 @@ body {
 
 }
 
+
 .mathDecorations span:nth-child(11) {
     top: 75%;
     left: 72%;
     transform:Scale(1.6);
 
 }
+
 
 .mathDecorations span:nth-child(12) {
     top: 35%;
@@ -191,6 +206,7 @@ body {
 
 }   
 
+
 .mathDecorations span:nth-child(13) {
     top: 87%;
     right: 75%;
@@ -198,18 +214,22 @@ body {
 
 }
 
+
 .mathDecorations span:nth-child(14) {
     top: 85%;
     right: 5%;    
     transform:Scale(1.1);
 
 }
+
+
 .mathDecorations span:nth-child(15) {
     top: 65%;
     right: 15%;
     transform:Scale(0.6);
 
 }
+
 
 .mathDecorations span:nth-child(16) {
     top: 20%;
@@ -218,11 +238,13 @@ body {
 
 }
 
+
 .HomeDescription {
     width: 55%;
     text-align: left;
 
 }
+
 
 .HomeDescription p {
     color: rgb(255,255,255);
@@ -252,6 +274,7 @@ body {
     transition: 0.4s ease;
 }
 
+
 .homeButtons{
     display: flex;
     flex-direction:column;
@@ -260,12 +283,14 @@ body {
     
 }
 
+
 .homeButtons button:hover {
     background: rgb(128, 170, 144);
     color: rgb(6, 42, 31);
     transform: translateX(-70px) scale(1.0);
     box-shadow: 7px 7px 0px rgba(11, 61, 46, 0.5);
 }
+
 
 @media (max-width: 750px) {
     .StartPage {
@@ -288,6 +313,7 @@ body {
         font-size: 55px;
     }
 }
+
 
 .formulaPage {
     min-height: 100vh;
@@ -6352,6 +6378,7 @@ body {
     margin:4px 0;
 }
 
+
 #allSearchInput{
     width:100%;
     padding: 12px 15px;
@@ -6363,9 +6390,12 @@ body {
     text-align:center;
 }
 
-.allFilterContainer{
-    position: relative;
-    display:inline-block;
+
+.allFilterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 
@@ -6385,6 +6415,7 @@ body {
     gap: 10px;
 }
 
+
 .allfilterDropdownMenu label{
     display: flex;
     align-items: center;
@@ -6397,12 +6428,14 @@ body {
 
 }
 
+
 .allfilterDropdownMenu label:hover{
     background-color: rgb(11, 61, 46);
     color: rgb(247, 249, 248);
     border-radius: 8px;
     
 }
+
 
 .allfilterDropdownMenu input[type="checkbox"] {
     accent-color: rgb(11, 61, 46);
@@ -6411,17 +6444,20 @@ body {
     cursor: pointer;
 }
 
+
 @media (max-width: 600px) {
     .allfilterDropdownMenu {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
+
 @media (max-width: 400px) {
     .allfilterDropdownMenu {
         grid-template-columns: 1fr;
     }
 }
+
 
 #resetFiltersButton{
     grid-column: 1/-1;
@@ -6437,8 +6473,31 @@ body {
 
 }
 
+
 #resetFiltersButton:hover{
     background-color: rgb(128, 170, 144);
     color: rgb(6,42,31);
 }
 
+
+#allFilterDropdownButton{
+    padding: 10px 18px;
+    background-color: rgb(11, 61, 46);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+
+#allFilterDropdownButton:hover {
+    background-color: rgb(128, 170, 144);
+}
+
+
+#allFilterDropdownButton:active {
+    transform: scale(0.97);
+}
