@@ -47,6 +47,7 @@
 
             <section class="mathSection">
                 <h2>MATHEMATICS</h2>
+
                 <div class="formulaContainer">
                     <button id = "allradiusButton" class="formulaButton">RADIUS CALCULATOR</button>
                     <button id = "alldiameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
@@ -90,12 +91,12 @@
                     <button id = "allsinLawAnglesButton" class = "formulaButton"> SIN LAW(FOR ANGLES)</button>
                     <button id = "allcosineLawSidesButton" class = "formulaButton"> COSINE LAW (FOR SIDES)</button>
                     <button id = "allcosineLawAnglesButton" class = "formulaButton"> COSINE LAW (FOR ANGLES)</button>
-
-
                 </div>
+
             </section>
             <section class="physicsSection">
                 <h2>PHYSICS</h2>
+
                 <div class="formulaContainer">
                     <button id = "allspeedButton" class="formulaButton">SPEED</button>
                     <button id = "allvelocityButton" class="formulaButton">VELOCITY</button>
@@ -110,12 +111,18 @@
                     <button id = "alltimeIndependentButton" class="formulaButton">KINEMATIC EQUATION: TIME INDEPENDENT</button>
                     <button id = "allaverageVelocityDisplacement" class="formulaButton">KINAMATICS EQUATION - AVERAGE VELOCITY </button>
                 </div>
+
             </section>
             <button id="backButton">BACK</button>
         </main>
         
         <main class="mathFormulaPage">
             <h1>MATH FORMULAS</h1>
+
+            <div class="mathSearch">
+                <input id="mathSearchInput" type="text" placeholder="SEARCH FOR A FORMULA...">
+            </div>  
+
             <div class="formulaContainer">
                 <button id = "radiusButton" class="formulaButton">RADIUS CALCULATOR</button>
                 <button id = "diameterButton" class="formulaButton">DIAMETER CALCULATOR</button>
@@ -159,8 +166,8 @@
                 <button id = "sinLawAnglesButton" class = "formulaButton"> SIN LAW(FOR ANGLES)</button>
                 <button id = "cosineLawSidesButton" class = "formulaButton"> COSINE LAW (FOR SIDES)</button>
                 <button id = "cosineLawAnglesButton" class = "formulaButton"> COSINE LAW (FOR ANGLES)</button>
+            </div>
 
-                </div>
             <button id="mathBackButton">BACK</button>
         </main>
 
@@ -172,24 +179,26 @@
             </div>            
             
             <div class="formulaContainer">
-                    <button id = "speedButton" class="formulaButton">SPEED</button>
-                    <button id = "velocityButton" class="formulaButton">VELOCITY</button>
-                    <button id = "avgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
-                    <button id = "physicsDistanceButton" class="formulaButton">DISTANCE</button>
-                    <button id = "displacementButton" class="formulaButton">DISPLACEMENT</button>
-                    <button id = "accelerationButton" class="formulaButton">ACCELERATION</button>
-                    <button id = "timeButton" class="formulaButton">TIME</button>
-                    <button id = "velocityTimeEquationButton" class="formulaButton">KINEMATICS EQUATION: VELOCITY-TIME</button>
-                    <button id = "displacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH INITIAL VELOCITY)</button>
-                    <button id = "displacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH FINAL VELOCITY)</button>
-                    <button id = "timeIndependentButton" class="formulaButton">KINEMATIC EQUATION: TIME INDEPENDENT</button>
-                    <button id = "averageVelocityDisplacement" class="formulaButton">KINAMATICS EQUATION - AVERAGE VELOCITY </button>
-                </div>
+                <button id = "speedButton" class="formulaButton">SPEED</button>
+                <button id = "velocityButton" class="formulaButton">VELOCITY</button>
+                <button id = "avgVelocityButton" class="formulaButton">AVERAGE VELOCITY</button>
+                <button id = "physicsDistanceButton" class="formulaButton">DISTANCE</button>
+                <button id = "displacementButton" class="formulaButton">DISPLACEMENT</button>
+                <button id = "accelerationButton" class="formulaButton">ACCELERATION</button>
+                <button id = "timeButton" class="formulaButton">TIME</button>
+                <button id = "velocityTimeEquationButton" class="formulaButton">KINEMATICS EQUATION: VELOCITY-TIME</button>
+                <button id = "displacementInitialEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH INITIAL VELOCITY)</button>
+                <button id = "displacementFinalEquationButton" class="formulaButton">KINEMATICS EQUATION: DISPLACEMENT-TIME <br> (WITH FINAL VELOCITY)</button>
+                <button id = "timeIndependentButton" class="formulaButton">KINEMATIC EQUATION: TIME INDEPENDENT</button>
+                <button id = "averageVelocityDisplacement" class="formulaButton">KINAMATICS EQUATION - AVERAGE VELOCITY </button>
+            </div>
+
             <button id="physicsBackButton">BACK</button>
         </main>
 
         <main class = "rectangleAreaPage">
             <h1>RECTANGLE AREA</h1>
+
             <div class = "calculatorBox">
                 <label for="length">Length</label>
                 <input id="length" type="number">
@@ -198,11 +207,13 @@
                 <button id = "calculateRectangleArea">CALCULATE</button>
                 <p id="rectangleAreaResult"></p>
             </div>
+
             <button id="rectangleAreaBackButton">BACK</button>
         </main>
     
         <main class = "rectanglePerimeterPage">
             <h1>RECTANGLE PERIMETER</h1>
+
             <div class = "calculatorBox">
                 <label for="Perimeterlength">Length</label>
                 <input id="Perimeterlength" type="number">
@@ -211,11 +222,13 @@
                 <button id = "calculateRectanglePerimeter">CALCULATE</button>
                 <p id="rectanglePerimeterResult"></p>
             </div>
+
             <button id="rectanglePerimeterBackButton">BACK</button>
         </main>
 
         <main class = "squareAreaPage">
             <h1>SQUARE AREA</h1>
+
             <div class = "calculatorBox">
                 <label for="SquareAreaDimenstion">Dimenstion</label>
                 <input id="SquareAreaDimenstion" type="number">
@@ -223,11 +236,13 @@
                 <button id = "calculateSquareArea">CALCULATE</button>
                 <p id="squareAreaResult"></p>
             </div>
+
             <button id="squareAreaBackButton">BACK</button>
         </main>
 
         <main class = "squarePerimeterPage">
             <h1>SQUARE PERIMETER</h1>
+
             <div class = "calculatorBox">
                 <label for="SquarePerimeterDimenstion">Dimenstion</label>
                 <input id="SquarePerimeterDimenstion" type="number">
@@ -235,11 +250,13 @@
                 <button id = "calculateSquarePerimeter">CALCULATE</button>
                 <p id="squarePerimeterResult"></p>
             </div>
+
             <button id="squarePerimeterBackButton">BACK</button>
         </main>
     
         <main class = "triangleAreaPage">
             <h1>TRIANGLE AREA</h1>
+
             <div class ="calculatorBox">
                 <label for="triangleAreaHeight">HEIGHT</label>
                 <input id="triangleAreaHeight" type="number">
@@ -250,11 +267,13 @@
                 <button id = "calculateTriangleArea">CALCULATE</button>
                 <p id="triangleAreaResult"></p>
             </div>
+
             <button id="triangleAreaBackButton">BACK</button>
         </main>
 
         <main class = "trianglePerimeterPage">
             <h1>TRIANGLE PERIMETER</h1>
+
             <div class ="calculatorBox">
                 <label for="trianglePerimeterSideA">SIZE A</label>
                 <input id="trianglePerimeterSideA" type="number">
@@ -268,11 +287,13 @@
                 <button id = "calculateTrianglePerimeter">CALCULATE</button>
                 <p id="trianglePerimeterResult"></p>
             </div>
+
             <button id="trianglePerimeterBackButton">BACK</button>
         </main>
 
         <main class = "circleAreaPage">
             <h1>CIRCLE AREA</h1>
+
             <div class = "calculatorBox">
                 <label for ="circleAreaRadius">RADIUS</label>
                 <input id="circleAreaRadius" type="number">
@@ -280,11 +301,13 @@
                 <button id = "calculateCircleArea">CALCULATE</button>
                 <p id="circleAreaResult"></p>
             </div>
+
             <button id="circleAreaBackButton">BACK</button>
         </main>
 
         <main class = "circleCircumferencePage">
             <h1>CIRCLE CIRCUMFERENCE</h1>
+
             <div class = "calculatorBox">
                 <label for = "circleCircumferenceDiameter">DIAMETER</label>
                 <input id = "circleCircumferenceDiameter" type="number">
@@ -294,13 +317,14 @@
 
                 <button id = "calculateCircleCircumference">CALCULATE</button>
                 <p id="circleCircumferenceResult"></p>
-
             </div>
+
             <button id="circleCircumferenceBackButton">BACK</button>
         </main>
 
         <main class = "trapezoidAreaPage">
             <h1>TRAPEZOID AREA</h1>
+
             <div class = "calculatorBox">
                 <label for = "trapezoidAreaBaseA">BASE A</label>
                 <input id = "trapezoidAreaBaseA" type="number">
@@ -314,11 +338,13 @@
                 <button id = "calculateTrapezoidArea">CALCULATE</button>
                 <p id="trapezoidAreaResult"></p>
             </div>
+
             <button id="trapezoidAreaBackButton">BACK</button>
         </main>
 
         <main class = "quadrilateralPerimeterPage">
             <h1>QUADRILATERAL PERIMETER</h1>
+
             <div class = "calculatorBox">
                 <label for = "quadSideA">SIDE A</label>
                 <input id = "quadSideA" type="number">
@@ -335,11 +361,13 @@
                 <button id = "calculateQuadrilateralPerimeter">CALCULATE</button>
                 <p id="quadrilateralPerimeterResult"></p>
             </div>
+
             <button id="quadrilateralPerimeterBackButton">BACK</button>
         </main>
 
         <main class = "parallelogramAreaPage">
             <h1>PARALLELOGRAM AREA</h1>
+
             <div class = "calculatorBox">
                 <label for = "parallelogramBase">BASE</label>
                 <input id = "parallelogramBase" type="number">
@@ -350,11 +378,13 @@
                 <button id = "calculateParallelogramArea">CALCULATE</button>
                 <p id="parallelogramAreaResult"></p>
             </div>
+
             <button id="parallelogramAreaBackButton">BACK</button>
         </main>
 
         <main class = "slopePage"> 
             <h1>SLOPE CALCULATOR</h1>
+
             <div class = "calculatorBox">
                 <label for = "slopeY1"> Y1</label>
                 <input id = "slopeY1" type = "number">
@@ -371,13 +401,14 @@
 
                 <button id = "calculateSlope">CALCULATE</button>
                 <p id = "slopeResult"></p>
-
             </div>
+
             <button id = "slopeBackButton">BACK</button>
         </main>
 
         <main class = "distancePage">
             <h1>DISTANCE CALCULATOR</h1>
+
             <div class = "calculatorBox">
                 <label for = "distanceX1"> X1</label>
                 <input id = "distanceX1" type = "number">
@@ -394,11 +425,13 @@
                 <button id = "calculateDistance">CALCULATE</button>
                 <p id = "distanceResult"></p>
             </div>
+
             <button id = "distanceBackButton">BACK</button>
         </main>
 
         <main class = "midpointPage">
             <h1>MIDPOINT CALCULATOR</h1>
+
             <div class = "calculatorBox">
                 <label for = "midpointX1"> X1</label>
                 <input id = "midpointX1" type = "number">
@@ -415,11 +448,13 @@
                 <button id = "calculateMidpoint">CALCULATE</button>
                 <p id = "midpointResult"></p>
             </div>
+
             <button id = "midpointBackButton">BACK</button>
         </main>
 
         <main class = "pythagoreanPageC">
             <h1>PYTHAGOREAN THEOREM FOR <br> (HYPOTENUSE)</h1>
+
             <div class = "calculatorBox">
                 <label for = "pythagoreanCA">SIDE A</label>
                 <input id = "pythagoreanCA" type = "number">
@@ -430,11 +465,13 @@
                 <button id = "calculatePythagoreanC">CALCULATE</button>
                 <p id = "pythagoreanCResult"></p>
             </div>
+
             <button id = "pythagoreanCBackButton">BACK</button>
         </main>
 
         <main class = "pythagoreanPageB">
             <h1>PYTHAGOREAN THEOREM <br> (SIDE B)</h1>
+
             <div class = "calculatorBox">
                 <label for = "pythagoreanBA">SIDE A</label>
                 <input id = "pythagoreanBA" type = "number">
@@ -445,11 +482,13 @@
                 <button id = "calculatePythagoreanB">CALCULATE</button>
                 <p id = "pythagoreanBResult"></p>
             </div>
+
             <button id = "pythagoreanBBackButton">BACK</button>
         </main>
 
         <main class = "pythagoreanPageA">
             <h1>PYTHAGOREAN THEOREM <br> (SIDE A)</h1>
+
             <div class = "calculatorBox">
                 <label for = "pythagoreanAB">SIDE B</label>
                 <input id = "pythagoreanAB" type = "number">
@@ -460,11 +499,13 @@
                 <button id = "calculatePythagoreanA">CALCULATE</button>
                 <p id = "pythagoreanAResult"></p>
             </div>
+
             <button id = "pythagoreanABackButton">BACK</button>
         </main>
 
         <main class = "cubeVolumePage">
             <h1>CUBE VOLUME</h1>
+
             <div class = "calculatorBox">
                 <label for="cubeSide">SIDE LENGTH</label>
                 <input id = "cubeSide" type = "number">
@@ -472,11 +513,13 @@
                 <button id = "calculateCubeVolume">CALCULATE</button>
                 <p id = "cubeVolumeResult"></p>
             </div>
+
             <button id = "cubeVolumeBackButton">BACK</button>
         </main>
 
         <main class = "cubePerimeterPage">
             <h1>CUBE PERIMETER</h1>
+
             <div class = "calculatorBox">
                 <label for="cubePerimeterSide">SIDE LENGTH</label>
                 <input id = "cubePerimeterSide" type = "number">
@@ -484,11 +527,13 @@
                 <button id = "calculateCubePerimeter">CALCULATE</button>
                 <p id = "cubePerimeterResult"></p>
             </div>
+
             <button id = "cubePerimeterBackButton">BACK</button>
         </main>
 
         <main class = "cubeSurfaceAreaPage">
             <h1>CUBE SURFACE AREA</h1>
+
             <div class = "calculatorBox">
                 <label for="cubeSurfaceAreaSide">SIDE LENGTH</label>
                 <input id = "cubeSurfaceAreaSide" type = "number">
@@ -496,11 +541,13 @@
                 <button id = "calculateCubeSurfaceArea">CALCULATE</button>
                 <p id = "cubeSurfaceAreaResult"></p>
             </div>
+
             <button id = "cubeSurfaceAreaBackButton">BACK</button>
         </main>
 
         <main class = "rectanglePrismVolumePage">
             <h1>RECTANGLE PRISM VOLUME</h1>
+
             <div class = "calculatorBox">
                 <label for="rectanglePrismVolumeLength"> LENGTH</label>
                 <input id = "rectanglePrismVolumeLength" type = "number">
@@ -514,11 +561,13 @@
                 <button id = "calculateRectanglePrismVolume">CALCULATE</button>
                 <p id = "rectanglePrismVolumeResult"></p>
             </div>
+
             <button id = "rectanglePrismVolumeBackButton">BACK</button>
         </main>
 
         <main class = "rectanglePrismPerimeterPage">
             <h1>RECTANGLE PRISM PERIMETER</h1>
+
             <div class = "calculatorBox">
                 <label for="rectanglePrismPerimeterLength"> LENGTH</label>
                 <input id = "rectanglePrismPerimeterLength" type = "number">
@@ -532,11 +581,13 @@
                 <button id = "calculateRectanglePrismPerimeter">CALCULATE</button>
                 <p id = "rectanglePrismPerimeterResult"></p>
             </div>
+
             <button id = "rectanglePrismPerimeterBackButton">BACK</button>
         </main>
 
         <main class = "rectanglePrismSurfaceAreaPage">
             <h1>RECTANGLE PRISM SURFACE</h1>
+
             <div class = "calculatorBox">
                 <label for="rectanglePrismSurfaceAreaLength"> LENGTH</label>
                 <input id = "rectanglePrismSurfaceAreaLength" type = "number">
@@ -550,11 +601,13 @@
                 <button id = "calculateRectanglePrismSurfaceArea">CALCULATE</button>
                 <p id = "rectanglePrismSurfaceAreaResult"></p>
             </div>
+
             <button id = "rectanglePrismSurfaceAreaBackButton">BACK</button>
         </main>
 
         <main class = "cylinderVolumePage">
             <h1>CYLINDER VOLUME</h1>
+
             <div class = "calculatorBox">
 
                 <label for="cylinderVolumeHeight"> HEIGHT</label>
@@ -566,11 +619,13 @@
                 <button id = "calculateCylinderVolume">CALCULATE</button>
                 <p id = "cylinderVolumeResult"></p>
             </div>
+
             <button id = "cylinderVolumeBackButton">BACK</button>
         </main>
 
         <main class = "cylinderSurfaceAreaPage">
             <h1>CYLINDER SURFACE AREA</h1>
+
             <div class = "calculatorBox">
 
                 <label for="cylinderSurfaceAreaHeight"> HEIGHT</label>
@@ -582,11 +637,13 @@
                 <button id = "calculateCylinderSurfaceArea">CALCULATE</button>
                 <p id = "cylinderSurfaceAreaResult"></p>
             </div>
+
             <button id = "cylinderSurfaceAreaBackButton">BACK</button>
         </main>
 
         <main class = "cylinderPerimeterPage">
             <h1>CYLINDER PERIMITER</h1>
+
             <div class = "calculatorBox">
 
                 <label for= "cylinderPerimeterRadius"> RADIUS</label>
@@ -595,11 +652,13 @@
                 <button id = "calculateCylinderPerimeter">CALCULATE</button>
                 <p id = "cylinderPerimeterResult"></p>
             </div>
+
             <button id = "cylinderPerimeterBackButton">BACK</button>
         </main>
 
         <main class = "radiusPage">
             <h1>RADIUS CALCULATOR</h1>
+
             <div class = "calculatorBox">
 
                 <label for= "radiusDiameter"> DIAMETER</label>
@@ -608,26 +667,28 @@
                 <button id = "calculateRadius">CALCULATE</button>
                 <p id = "radiusResult"></p>
             </div>
+
             <button id = "radiusBackButton">BACK</button>
         </main>
 
         <main class = "diameterPage">
             <h1>DIAMETER CALCULATOR</h1>
-            <div class= "calculatorBox">
 
+            <div class= "calculatorBox">
                 <label for= "diameterRadius">RADIUS</label>
                 <input id = "diameterRadius" type = "number">
 
                 <button id = "calculateDiameter">CALCULATE</button>
                 <p id = "diameterResult"></p>
             </div>
+
             <button id = "diameterBackButton">BACK</button>
         </main>
 
         <main class = "coneVolumePage">
             <h1>CONE VOLUME </h1>
-            <div class= "calculatorBox">
 
+            <div class= "calculatorBox">
                 <label for= "coneVolumeRadius">RADIUS</label>
                 <input id = "coneVolumeRadius" type = "number">
 
@@ -637,11 +698,13 @@
                 <button id = "calculateConeVolume">CALCULATE</button>
                 <p id = "coneVolumeResult"></p>
             </div>
+
             <button id = "coneVolumeBackButton">BACK</button>
         </main>
 
         <main class = "conePerimeterPage">
             <h1>CONE PERIMETER </h1>
+
             <div class= "calculatorBox">
 
                 <label for= "conePerimeterRadius">RADIUS</label>
@@ -650,13 +713,14 @@
                 <button id = "calculateConePerimeter">CALCULATE</button>
                 <p id = "conePerimeterResult"></p>
             </div>
+
             <button id = "conePerimeterBackButton">BACK</button>
         </main>
         
         <main class = "coneSurfaceAreaPage">
             <h1>CONE SURFACE AREA</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for= "coneSurfaceAreaRadius">RADIUS</label>
                 <input id = "coneSurfaceAreaRadius" type = "number">
 
@@ -665,15 +729,15 @@
 
                 <button id = "calculateConeSurfaceArea">CALCULATE</button>
                 <p id = "coneSurfaceAreaResult"></p>
-
             </div>
+
             <button id = "coneSurfaceAreaBackButton">BACK</button>
         </main>
 
         <main class = "sphereVolumePage">
             <h1>SPHERE VOLUME</h1>
+        
             <div class = "calculatorBox">
-
                 <label for= "sphereVolumeRadius">RADIUS</label>
                 <input id = "sphereVolumeRadius" type = "number">
 
@@ -681,27 +745,28 @@
                 <p id = "sphereVolumeResult"></p>
 
             </div>
+
             <button id = "sphereVolumeBackButton">BACK</button>
         </main>
         
         <main class = "sphereSurfaceAreaPage">
             <h1>SPHERE SURFACE AREA</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "sphereSurfaceAreaRadius">RADIUS</label>   
                 <input id = "sphereSurfaceAreaRadius" type = "number">
 
                 <button id = "calculateSphereSurfaceArea">CALCULATE</button>
                 <p id = "sphereSurfaceAreaResult"></p>
-
             </div>
+
             <button id = "sphereSurfaceAreaBackButton">BACK</button>
         </main>
         
         <main class = "trianglePrismVolumePage">
             <h1>TRIANGLE PRISM VOLUME</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "trianglePrismVolumeBase">BASE</label>   
                 <input id = "trianglePrismVolumeBase" type = "number">
 
@@ -711,17 +776,17 @@
                 <label for = "trianglePrismVolumeHeight">HEIGHT</label>   
                 <input id = "trianglePrismVolumeHeight" type = "number">
 
-
                 <button id = "calculateTrianglePrismVolume">CALCULATE</button>
                 <p id = "trianglePrismVolumeResult"></p>
             </div>
+
             <button id = "trianglePrismVolumeBackButton">BACK</button>
         </main>
 
         <main class = "trianglePrismSurfaceAreaPage">
             <h1>TRIANGLE PRISM SURFACE AREA</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "trianglePrismSurfaceAreaSideA">TRIANGLE FACE SIDE A</label>   
                 <input id = "trianglePrismSurfaceAreaSideA" type = "number">
 
@@ -740,13 +805,14 @@
                 <button id = "calculateTrianglePrismSurfaceArea">CALCULATE</button>
                 <p id = "trianglePrismSurfaceAreaResult"></p>
             </div>
+
             <button id = "trianglePrismSurfaceAreaBackButton">BACK</button>
         </main>
 
         <main class = "trianglePrismPerimeterPage">
             <h1>TRIANGLE PRISIM PERIMETER </h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "trianglePrismPerimeterSideA">TRIANGLE FACE SIDE A</label>   
                 <input id = "trianglePrismPerimeterSideA" type = "number">
 
@@ -762,13 +828,14 @@
                 <button id = "calculateTrianglePrismPerimeter">CALCULATE</button>
                 <p id = "trianglePrismPerimeterResult"></p>
             </div>
+
             <button id = "trianglePrismPerimeterBackButton">BACK</button>
         </main>
 
         <main class = "speedCalculatorPage">
             <h1>SPEED CALCULATOR</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "speedDistance">DISTANCE (METERS)</label>   
                 <input id = "speedDistance" type = "number">
 
@@ -777,15 +844,15 @@
 
                 <button id = "calculateSpeed">CALCULATE</button>
                 <p id = "speedResult"></p>
-
             </div>
+
             <button id = "speedBackButton">BACK</button>
         </main>
 
         <main class = "velocityCalculatorPage">
             <h1>VELOCITY CALCULATOR</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "velocityDisplacement">DISPLACEMENT (METERS)</label>   
                 <input id = "velocityDisplacement" type = "number">
 
@@ -806,13 +873,14 @@
                 <button id = "calculateVelocity">CALCULATE</button>
                 <p id = "velocityResult"></p>
             </div>
+
             <button id = "velocityBackButton">BACK</button>
         </main>
 
         <main class = "avgVelocityCalculatorPage">
             <h1>AVERAGE VELOCITY CALCULATOR</h1>
-            <div class = "calculatorBox">
 
+            <div class = "calculatorBox">
                 <label for = "avgInitialVelocity">INITIAL VELOCITY</label>   
                 <input id = "avgInitialVelocity" type = "number">
 
@@ -845,11 +913,13 @@
                 <button id = "calculateAvgVelocity">CALCULATE</button>
                 <p id = "avgVelocityResult"></p>
             </div>
+
             <button id = "avgVelocityBackButton">BACK</button>
         </main>
 
         <main class = "physicsDistanceCalculatorPage">
             <h1>DISTANCE CALCULATOR</h1>
+
             <div class = "calculatorBox">
                 <p> ADD AS MANY VALUES AS YOU LIKE <br> NO NEED TO FILL EACH INTERVAL BOX</p>
 
@@ -868,11 +938,13 @@
                 <button id = "calculatePhysicsDistance">CALCULATE</button>
                 <p id = "physicsDistanceResult"></p>
             </div>
+
             <button id = "physicsDistanceBackButton">BACK</button>
         </main>
 
         <main class = "displacementCalculatorPage">
             <h1>DISPLACEMENT CALCULATOR</h1>
+            
             <div class = "calculatorBox">
                 <label for = "displacement1">FINAL POSITION</label>   
                 <input id = "displacement1" type = "number">
@@ -905,11 +977,13 @@
                 <button id = "calculateDisplacement">CALCULATE</button>
                 <p id = "displacementResult"></p>
             </div>
+
             <button id = "displacementBackButton">BACK</button>
         </main>
 
         <main class = "accelerationPage">
             <h1> ACCELERATION CALCULATOR</h1>
+
             <div class = "calculatorBox">
                 
                 <label for = "accelerationVelocity1">FINAL VELOCITY</label>   
@@ -946,11 +1020,13 @@
                 <button id = "calculateAcceleration">CALCULATE</button>
                 <p id = "accelerationResult"></p>
             </div>
+
         <button id = "accelerationBackButton">BACK</button>
         </main>
 
         <main class = "timePage">
             <h1> TIME CALCULATOR</h1>
+
             <div class = "calculatorBox">
 
                 <label for = "timespeed">SPEED (METERS/SECOND)</label>   
@@ -962,11 +1038,13 @@
                 <button id = "calculateTime">CALCULATE</button>
                 <p id = "timeResult"></p>
             </div>
+
             <button id = "timeBackButton">BACK</button>
         </main>
 
         <main class = "velocityTimeEquationPage">
             <h1>VELOCITY-TIME-EQUATION</h1>
+
             <div class = "calculatorBox">
                 <div id="velocityTimePopup" class="popupMenu">
                     <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
@@ -986,12 +1064,15 @@
                 <button id="changeVelocityTimeVariable">CHANGE VARIABLE</button>
 
             </div>
+
             <button id="velocityTimeEquationBackButton">BACK</button>
         </main>
 
         <main class = "displacementInitialEquationPage">
             <h1>DISPLACEMNT <br> (WITH INITIAL VELOCITY)</h1>
+
             <div class = "calculatorBox">
+
                 <div id="displacementInitialPopup" class="popupMenu">
                     <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton1" value="DIdisplacement"> DISPLACEMENT (d) </button>
@@ -1010,13 +1091,16 @@
 
                 <button id="changeDisplacementInitialVariable">CHANGE VARIABLE</button>
             </div>
+
             <button id="displacementInitialEquationBackButton">BACK</button>
 
         </main>
 
         <main class="displacementFinalEquationPage">
             <h1>DISPLACEMENT <br> (WITH FINAL VELOCITY)</h1>
+
             <div class = "calculatorBox">
+
                 <div id="displacementFinalPopup" class="popupMenu">
                     <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton2" value="DFdisplacement"> DISPLACEMENT (d) </button>
@@ -1024,6 +1108,7 @@
                     <button class="variableButton2" value="DFacceleration"> ACCELERATION (a)</button>
                     <button class="variableButton2" value="DFtime"> TIME (t) </button>
                 </div>
+
                 <h2 id="displacementFinalSelectedVariable"></h2>
 
                 <div id="displacementFinalInputs"></div>
@@ -1034,12 +1119,15 @@
 
                 <button id="changeDisplacementFinalVariable">CHANGE VARIABLE</button>
             </div>
+
             <button id="displacementFinalEquationBackButton">BACK</button>
         </main>
 
         <main class="timeIndependentPage">
             <h1>TIME INDEPENDENT EQUATION</h1>
+
             <div class = "calculatorBox">
+
                 <div id="timeIndependentPopup" class="popupMenu">
                     <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton3" value="TIdisplacement"> DISPLACEMENT (d) </button>
@@ -1047,6 +1135,7 @@
                     <button class="variableButton3" value="TIacceleration"> ACCELERATION (a)</button>
                     <button class="variableButton3" value="TIinitialVelocity">INITIAL VELOCITY (vi)</button>
                 </div>
+
                 <h2 id="timeIndependentSelectedVariable"></h2>
 
                 <div id="timeIndependentInputs"></div>
@@ -1057,12 +1146,15 @@
 
                 <button id="changeTimeIndependentVariable">CHANGE VARIABLE</button>
             </div>
+
             <button id="timeIndependentBackButton">BACK</button>
         </main>
 
         <main class="averageVelocityDisplacementPage">
             <h1>DISPLACEMENT <br> WITH AVERAGE VELOCITY</h1>
+
             <div class = "calculatorBox">
+
                 <div id="averageVelocityDisplacementPopup" class="popupMenu">
                     <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
                     <button class="variableButton4" value="AVdisplacement"> DISPLACEMENT (d) </button>
@@ -1070,6 +1162,7 @@
                     <button class="variableButton4" value="AVtime"> TIME (t)</button>
                     <button class="variableButton4" value="AVinitialVelocity">INITIAL VELOCITY (vi)</button>
                 </div>
+
                 <h2 id="averageVelocityDisplacementSelectedVariable"></h2>
 
                 <div id="averageVelocityDisplacementInputs"></div>
@@ -1080,19 +1173,24 @@
 
                 <button id="changeAverageVelocityDisplacementVariable">CHANGE VARIABLE</button>
             </div>
+
             <button id="averageVelocityDisplacementBackButton">BACK</button>
         </main>
 
         <main class="sohCahToaPage">
             <h1>SIN COS TAN (SOH CAH TOA)</h1>
+
             <div class = "calculatorBox">
+
                 <div id="sohCahToaPopup" class = "popupMenu">
                     <h2>WHICH RATIO ARE YOU USING TODAY?</h2>
                     <button class="variableButton5" value="SCTSine"> SINE (SOH) </button>
                     <button class="variableButton5" value="SCTCosine"> COSINE (CAH) </button>
                     <button class="variableButton5" value="SCTTangent"> TANGENT (TOA) </button>
                 </div>
+
                 <h2 id="sohCahToaSelectedVariable"></h2>
+
                 <div id="sohCahToaSidePopup" class="popupMenu">
                     <h3>WHICH SIDE ARE YOU SOLVING FOR?</h3>
 
@@ -1109,13 +1207,14 @@
 
                 <button id="changeSohCahToaVariable">CHANGE RATIO</button>
                 <button id="changeSohCahToaSide">CHANGE SIDE</button>
-
             </div>
+
             <button id="sohCahToaBackButton">BACK</button>
         </main>
 
         <main class="InversePage">
             <h1>INVERSE TRIGONOMETRY CALCULATOR</h1>
+
             <div class = "calculatorBox">
                 <div id="InversePopup" class = "popupMenu">
                     <h2>WHICH INVERSE ARE YOU USING?</h2>
@@ -1133,6 +1232,7 @@
 
                 <button id="changeSInverseVariable">CHANGE RATIO</button>
             </div>
+            
             <button id="InverseBackButton">BACK</button>
         </main>
         
