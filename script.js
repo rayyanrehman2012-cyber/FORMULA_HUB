@@ -276,6 +276,28 @@ physicsSearchInput.addEventListener("input", function() {// if the physics serac
     })
 });
 
+//THESE ARE FOR THE SEARCH BAR ON THE math formula PAGE
+let mathSearchInput = document. getElementById("mathSearchInput")// this is the searchpare input, holder 
+let mathFormulaButtonsSearch = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons 
+
+mathSearchInput.addEventListener("input", function() {// if the physics serach bar is used then 
+    
+    let searchvalue2 = mathSearchInput.value.toUpperCase();// make the input value upercase and then store it 
+    
+    mathFormulaButtonsSearch.forEach(function(button) {// for all of the buttos 
+        let formulaName2 = button.textContent.toUpperCase(); // // get there name  of the button 
+
+        if(formulaName2.includes(searchvalue2)){ // if the name of the button is there 
+            button.style.display = "block" // then show that button on the screen 
+        }
+
+        else {// if  the name of the button is not there 
+            button.style.display = "none"; // hide the button from the user 
+        }
+    })
+});
+
+
 
 
 

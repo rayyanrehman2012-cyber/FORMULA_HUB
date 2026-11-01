@@ -6301,11 +6301,13 @@ body {
     transform: scale(1.2);
 }
 
+
 .physicsSearch{
     display: flex;
     justify-content: center;
     margin:4px 0;
 }
+
 
 #physicsSearchInput{
     width:100%;
@@ -6316,6 +6318,23 @@ body {
     font-family: "Baloo 2", sans-serif;
     font-size: 20px;
     text-align: center;
+}
 
 
+.mathSearch{
+    display:flex;
+    justify-content:center;
+    margin:4px 0;
+}
+
+
+#mathSearchInput{
+    width:100%;
+    padding: 12px 15px;
+    border:3px solid rgb(11,61,46);
+    border-radius:25px;
+    outline:none;
+    font-family: "Baloo 2", sans-serif;
+    font-size:20px;
+    text-align:center; 
 }
