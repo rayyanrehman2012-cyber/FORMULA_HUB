@@ -195,7 +195,7 @@ const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSur
 const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
 const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the all formula button 
 const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
-const sinLawSidesButton = document.getElementById("allsinLawSidesButton");// this is the sine la  for side button on the math formula page 
+const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this is the sine la  for side button on the math formula page 
 
 
 
