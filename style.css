@@ -275,7 +275,11 @@ body {
         padding: 80px 10%;
     }
 
-    .homeButtons,
+    .homeButtons{
+         width: 500px;
+    
+    }
+    
     .HomeDescription {
         width: 70%;
     }

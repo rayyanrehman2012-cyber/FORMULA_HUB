@@ -264,73 +264,6 @@ const inverseButton = document.getElementById("inverseButton");// this is the bu
 
 
 
-
-
-
-
-
-
-
-
-//THESE ARE FOR THE SEARCH BAR ON THE PHYSICS PAGE
-let physicsSearchInput = document. getElementById("physicsSearchInput")// this is the searchpare input, holder 
-let physicsFormulaButtonsSearch = document.querySelectorAll(".physicsFormulaPage .formulaButton");// this is the variable that holds all the buttons 
-
-physicsSearchInput.addEventListener("input", function() {// if the physics serach bar is used then 
-    
-    let searchvalue = physicsSearchInput.value.toUpperCase();// make the input value upercase and then store it 
-    
-    physicsFormulaButtonsSearch.forEach(function(button) {// for all of the buttos 
-        let formulaName = button.textContent.toUpperCase(); // // get there name  of the button 
-
-        if(formulaName.includes(searchvalue)){ // if the name of the button is there 
-            button.style.display = "block" // then show that button on the screen 
-        }
-
-        else {// if  the name of the button is not there 
-            button.style.display = "none"; // hide the button from the user 
-        }
-    })
-});
-
-//THESE ARE FOR THE SEARCH BAR ON THE math formula PAGE
-let mathSearchInput = document. getElementById("mathSearchInput")// this is the searchpare input, holder 
-let mathFormulaButtonsSearch = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons 
-
-mathSearchInput.addEventListener("input", function() {// if the physics serach bar is used then 
-    
-    let searchvalue2 = mathSearchInput.value.toUpperCase();// make the input value upercase and then store it 
-    
-    mathFormulaButtonsSearch.forEach(function(button) {// for all of the buttos 
-        let formulaName2 = button.textContent.toUpperCase(); // // get there name  of the button 
-
-        if(formulaName2.includes(searchvalue2)){ // if the name of the button is there 
-            button.style.display = "block" // then show that button on the screen 
-        }
-
-        else {// if  the name of the button is not there 
-            button.style.display = "none"; // hide the button from the user 
-        }
-    })
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // THESE ARE FOR THE RECTANGLE AREA CALCULATOR
 const lengthInput = document.getElementById("length"); // you length input 
 const widthInput = document.getElementById("width");// your width input 
@@ -7750,7 +7683,7 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
 
 
 
-// THIS IS THE USER EXPPERENCE STUFF, LIKE SOUND 
+// THIS IS FOR THE SOUND EFFECTS
 let buttonClickSound = new Audio("click1.mp3"); // declaring the sound 
 
 function playButtonClickSound() {//sound function 
@@ -7758,9 +7691,74 @@ function playButtonClickSound() {//sound function
     buttonClickSound.play();//play the sound 
     buttonClickSound.volume(200);// at this volume 
 }
-
 document.querySelectorAll("button").forEach(function(button) {// sellect all buttons insdxe the program 
     button.addEventListener("click", function() {/// if any button is clicked then 
         playButtonClickSound(); // use the click sound function 
     });
 });
+
+
+
+
+
+//THESE ARE FOR THE SEARCH BAR ON THE PHYSICS PAGE
+let physicsSearchInput = document. getElementById("physicsSearchInput")// this is the searchpare input, holder 
+let physicsFormulaButtonsSearch = document.querySelectorAll(".physicsFormulaPage .formulaButton");// this is the variable that holds all the buttons 
+physicsSearchInput.addEventListener("input", function() {// if the physics serach bar is used then 
+    let searchvalue = physicsSearchInput.value.toUpperCase();// make the input value upercase and then store it 
+    
+    physicsFormulaButtonsSearch.forEach(function(button) {// for all of the buttos 
+        let formulaName = button.textContent.toUpperCase(); // // get there name  of the button 
+
+        if(formulaName.includes(searchvalue)){ // if the name of the button is there 
+            button.style.display = "block" // then show that button on the screen 
+        }
+
+        else {// if  the name of the button is not there 
+            button.style.display = "none"; // hide the button from the user 
+        }
+    })
+});
+
+
+
+//THESE ARE FOR THE SEARCH BAR ON THE MATH formula PAGE
+let mathSearchInput = document. getElementById("mathSearchInput")// this is the searchpare input, holder 
+let mathFormulaButtonsSearch = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons 
+mathSearchInput.addEventListener("input", function() {// if the physics serach bar is used then 
+    let searchvalue2 = mathSearchInput.value.toUpperCase();// make the input value upercase and then store it 
+    
+    mathFormulaButtonsSearch.forEach(function(button) {// for all of the buttos 
+        let formulaName2 = button.textContent.toUpperCase(); // // get there name  of the button 
+
+        if(formulaName2.includes(searchvalue2)){ // if the name of the button is there 
+            button.style.display = "block" // then show that button on the screen 
+        }
+
+        else {// if  the name of the button is not there 
+            button.style.display = "none"; // hide the button from the user 
+        }
+    })
+});
+
+
+
+//THESE ARE FOR THE SEARCH BAR ON THE ALL FORMULA PAGE
+let allSearchInput = document.getElementById("allSearchInput")// this is the seachbareinput holder
+let allFormulaButtonsSearch = document.querySelectorAll(".formulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
+allSearchInput.addEventListener("input", function(button){// if the physics search bare is udes
+    
+    let searchvalue3 = allSearchInput.value.toUpperCase();// make the input value uppercase and then store it 
+
+    allFormulaButtonsSearch.forEach(function(button){// for all of the buttons
+        let formulaName3 = button.textContent.toUpperCase();// get the name of the button
+
+        if(formulaName3.includes(searchvalue3)){// if the searched word is in the name of the button
+            button.style.display = "block"// then show that button on the scree
+        }
+
+        else{ // otherwise hide them
+            button.style.display = "none";// hide the button from the user
+        }
+    })
+})
