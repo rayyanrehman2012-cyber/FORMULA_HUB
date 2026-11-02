@@ -71,7 +71,9 @@ const timeIndependentPage = document.querySelector(".timeIndependentPage");// th
 const averageVelocityDisplacementPage = document.querySelector(".averageVelocityDisplacementPage");// this is the average velocituy displaement page
 const sohCahToaPage = document.querySelector(".sohCahToaPage");//this is the so cah toa page 
 const InversePage = document.querySelector(".InversePage");// this is the inverse page 
-const sinLawSidesPage = document.querySelector(".sinLawSidesPage");// this is the sine law side addition page
+const sinLawSidesPage = document.querySelector(".sinLawSidesPage");// this is the sine law side formula page
+const sinLawAnglesPage = document.querySelector(".sinLawAnglesPage");// this is the sine law formula pages                 
+
 
 
 
@@ -129,7 +131,9 @@ const alltimeIndependentButton = document.getElementById("alltimeIndependentButt
 const allaverageVelocityDisplacement = document.getElementById("allaverageVelocityDisplacement");// this is the average velocity equation button on the all formula page 
 const allsohCahToaButton = document.getElementById("allsohCahToaButton");// this si the soh cah toa button on the all formula button 
 const allinverseButton = document.getElementById("allinverseButton");// this is the button on the all formula page 
-const allsinLawSidesButton = document.getElementById("allsinLawSidesButton")// this is the button on the all  formula page that takes u to  the sine law for sides page 
+const allsinLawSidesButton = document.getElementById("allsinLawSidesButton");// this is the button on the all  formula page that takes u to  the sine law for sides page 
+const allsinLawAnglesButton = document.getElementById("allsinLawAnglesButton");// this is the button on the all formula page that tales u to the sine law for angles 
+
 
 
 
@@ -196,6 +200,9 @@ const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerim
 const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the all formula button 
 const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
 const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this is the sine la  for side button on the math formula page 
+const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the all formula page that tales u to the sine law for angles 
+
+
 
 
 
@@ -257,6 +264,7 @@ const averageVelocityDisplacementBackButton = document.getElementById("averageVe
 const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// this is the back button
 const InverseBackButton = document.getElementById("InverseBackButton");// this is the inverse page back button 
 const sinLawSidesBackButton = document.getElementById("sinLawSidesBackButton");// this is the back button on the sine law for side page 
+const sinLawAnglesBackButton = document.getElementById("sinLawAnglesBackButton");// this is the back button on the all formula page that tales u to the sine law for angles 
 
 
 
@@ -745,6 +753,22 @@ sinLawSidesSidePopup.style.display = "none";// hides the pop up
 
 
 
+// THESE ARE FOR THE SINE LAW  FOR ANGLES CALCULATOR
+const sinLawAnglesPopup = document.getElementById("sinLawAnglesPopup");// this is the popup for displacement final velocity equation  
+const sinLawAnglesSelectedVariable = document.getElementById("sinLawAnglesSelectedVariable");// this holds the selected variaple 
+const sinLawAnglesSelectedAngle = document.getElementById("sinLawAnglesSelectedAngle");// this holds the selected variaple 
+const sinLawAnglesInputs = document.getElementById("sinLawAnglesInputs");// these are the inputs 
+const calculateSinLawAngles = document.getElementById("calculateSinLawAngles"); // calulate button 
+calculateSinLawAngles.style.display = "none";// hides this intiteall 
+const changeSinLawAnglesVariable = document.getElementById("changeSinLawAnglesVariable");// change variable button 
+changeSinLawAnglesVariable.style.display = "none";// hides this intiteall 
+const sinLawAnglesResult = document.getElementById("sinLawAnglesResult");// resut line 
+const variableButton8s = document.querySelectorAll(".variableButton8");// variable buttons 
+const sinLawAnglesAnglePopup = document.getElementById("sinLawAnglesAnglePopup");// this is the popup for displacement final velocity equation  
+const sinLawAnglesAngleButtons = document.getElementById("sinLawAnglesAngleButtons");// this is the popup for displacement final velocity equation  
+const changeSinLawAnglesAngle = document.getElementById("changeSinLawAnglesAngle");// change variable button 
+changeSinLawAnglesAngle.style.display = "none";// hides this intiteall 
+sinLawAnglesAnglePopup.style.display = "none";// hides the pop up 
 
 
 
