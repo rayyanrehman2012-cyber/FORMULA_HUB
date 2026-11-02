@@ -273,6 +273,35 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
         - CHange side : lets you switch the side your SOLVING for
 
 
+- Made 90% SINE LAW CALCULATOR FOR ANGLES
+    - The page opens a popup with 3 VERSIONS OF THE SINE LAW FORMULA: angle A & B, angle A & C, and angle B & C
+    - angle  A & B
+        - opens another popup that has 2 buttons angleA and angleB 
+        - You Choose which angle you want to solve for
+            -If you choose A, your solving for angle a
+            -If you choose B, your solving for angle b
+
+    - angle  A & C
+        - opens another popup that has 2 buttons angleA and angleC 
+        - You Choose which angle you want to solve for
+        - It brings you to the apropreat calculator 
+            -If you choose A, your solving for angle a
+            -If you choose C, your solving for angle c
+
+    - angle  B & C
+        - opens another popup that has 2 buttons angleB and angleC
+        - You Choose which angle you want to solve for
+        - It brings you to the apropreat calculator 
+            -If you choose C, your solving for angle c
+            -If you choose B, your solving for angle b
+    
+        - Each calculator  has 2 more buttons
+        - CHange LAW : lets you switch the LAW VERSION your using
+        - CHange side : lets you switch the anlge your SOLVING for
+
+BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIME RUNNING OUT WE LEFT THE CALULATION PARTS FOR NEXT WEEK. all in all we did 15 new formulas that are fully functional, 6 formulas that are there with all structures but dont perform calculations. And search and filters for the pages this week 
+
+
 
 
 
