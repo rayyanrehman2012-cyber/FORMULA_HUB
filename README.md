@@ -16,6 +16,12 @@ Since The website has grown over the few weeks, we added a search function on ea
 
 
 
+
+
+
+
+
+
 ## WHAT WE MADE (WEEK 1, THIRDSPACE WEEK 3)
 - Designed the starting page 
 - Came up with the theme (GREEN & WHITE)
@@ -43,6 +49,11 @@ Since The website has grown over the few weeks, we added a search function on ea
 - Designed and built the Error Messagees, gives error if the value is missing or zero
 
 PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR THE 3rd KINAMATIC EQUATION
+
+
+
+
+
 
 
 
@@ -80,6 +91,12 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 
 
 
+
+
+
+
+
+
 ## WHAT WE MADE (WEEK 3, THIRDSPACE WEEK 5)
 - Finished the Sphere Volume Calculator
 - Designed and built the Sphere Surface Area Calculator
@@ -100,6 +117,15 @@ PS IVE DONE THE JS FOR IT YOU HAVE TO DO THE LAST TO 2 FUNCTIONS AND THE CSS FOR
 - Designed and built the Distance calculator 
 - Designed and built the Displacement calculator 
 - Designed and built the Acceleration Calculator 
+
+
+
+
+
+
+
+
+
 
 
 
@@ -160,21 +186,32 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ## WHAT WE MADE (WEEK 5, THIRDSPACE WEEK 7)
 - Made the SOH CAH TOA PAGE
     - The page opens a popup with 3 ratious SINE, COSINE, and TANGENT
     - CLICKING SINE
-        - opens another popup that has 3 buttons OPPOSITE and HYPOTENUSE 
+        - opens another popup that has 2 buttons OPPOSITE and HYPOTENUSE 
         - You Choos which side you want to solve for
         - It brings you to the apropreat calculator 
 
     - CLICKING COSINE
-        - opens another popup that has 3 buttons ADJACENT and HYPOTENUSE 
+        - opens another popup that has 2 buttons ADJACENT and HYPOTENUSE 
         - You Choos which side you want to solve for
         - It brings you to the apropreat calculator 
 
     - CLICKING TANGENT
-        - opens another popup that has 3 buttons ADJACENT and OPPOSITE 
+        - opens another popup that has 2 buttons ADJACENT and OPPOSITE 
         - You Choos which side you want to solve for
         - It brings you to the apropreat calculator 
     
@@ -190,22 +227,53 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
     - Each calculator on this page has another  button
         - change ration: brings back the menu so that you can swith the ratio being used
 
-Today I completed a total of 9 formulas which is a good addition to this website 
-- Redesigned the layout and formating of the Front page adding visual operations signs
+- Redesigned the layout and formating of the Front page andd added visual operations signs
 
-- Added and designed a Search bar on the Physics Formula page, that lets you shearch for the exact function.
+- Added a Search bar on the Physics Formula page
+    - lets you search for the exact function on the physics page
 
-- Added and designed a Search bar on the Math Formula page, that lets you shearch for the exact function on the math formula page
+- Added a Search bar on the All Formula page
+    - lets you search for the exact function on the All FORMULA page
 
-- added and designed a Search bar on te All formula page, that lets you search for the exact funtion on the all formula page 
+- Added a Search bar on the Math Formula page
+    - lets you search for the exact function on the MATH page
 
-- Made a filter function on the All formula page, it lets  people filter formulas into smaller catigories like area, perimeter, 3d, 2d etc etc.
+- Added a Filter function  on the ALL FORMULA PAGE page
+    - lets you filter the library of formulas on the All formula page into smaller catigories like 3d,2d,perimeter, Area, Trigonomety and Surface area
+    - The filter also has a reset button to reset the filters
 
-- There is a clear button on it to so filters can be removed after adding them .
+- Added a Filter function  on the Math Formula page
+    - lets you filter the library of formulas on the Math Formula page into smaller catigories like 3d,2d,perimeter, Area, Trigonomety and Surface area
+    - The filter also has a reset button to reset the filters
 
-- I also Made a filter function on the Math formula page, it also lets people filter formulas into smaller catigories like area, perimeter, 3d, 2d etc etc.
+- Made the SINE LAW CALCULATOR FOR SIDES
+    - The page opens a popup with 3 VERSIONS OF THE SINE LAW FORMULA: SIDE A & B, SIDE A & C, and SIDE B & C
+    - SIDE A & B
+        - opens another popup that has 2 buttons SideA and SideB 
+        - You Choose which side you want to solve for
+            -If you choose A, your solving for a
+            -If you choose B, your solving for b
 
-- There is a also clear button on it to so filters can be removed after adding them .
+    - SIDE A & C
+        - opens another popup that has 2 buttons SideA and SideC 
+        - You Choose which side you want to solve for
+        - It brings you to the apropreat calculator 
+            -If you choose A, your solving for a
+            -If you choose C, your solving for c
+
+    - SIDE B & C
+        - opens another popup that has 2 buttons SideB and SideC
+        - You Choose which side you want to solve for
+        - It brings you to the apropreat calculator 
+            -If you choose C, your solving for c
+            -If you choose B, your solving for b
+    
+        - Each calculator  has 2 more buttons
+        - CHange LAW : lets you switch the LAW VERSION your using
+        - CHange side : lets you switch the side your SOLVING for
+
+
+
 
 
 
