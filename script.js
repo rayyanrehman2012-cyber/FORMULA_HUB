@@ -3,9 +3,6 @@
 
 
 
-
-
-
 // THESE ARE THE MAIN FORMLA PAGES(MATH, PHYSICS, & THE ALL FORMULA BAGE)
 const allFormulaButton = document.getElementById("allFormulaButton"); // the formula page button (all formulas)
 const mathButton = document.getElementById("mathButton"); // this is the math formula button 
@@ -74,6 +71,7 @@ const InversePage = document.querySelector(".InversePage");// this is the invers
 const sinLawSidesPage = document.querySelector(".sinLawSidesPage");// this is the sine law side formula page
 const sinLawAnglesPage = document.querySelector(".sinLawAnglesPage");// this is the sine law formula pages                 
 const cosineLawSidesPage = document.querySelector(".cosineLawSidesPage");// this is the cosine law for side page
+const cosineLawAnglePage = document.querySelector(".cosineLawAnglesPage");// this is the cosine law angles page 
 
 
 
@@ -138,6 +136,7 @@ const allinverseButton = document.getElementById("allinverseButton");// this is 
 const allsinLawSidesButton = document.getElementById("allsinLawSidesButton");// this is the button on the all  formula page that takes u to  the sine law for sides page 
 const allsinLawAnglesButton = document.getElementById("allsinLawAnglesButton");// this is the button on the all formula page that tales u to the sine law for angles 
 const allcosineLawSidesButton = document.getElementById("allcosineLawSidesButton");// this is the cosine law sides button on the all formula page
+const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButton")
 
 
 
@@ -161,6 +160,10 @@ const displacementInitialEquationButton = document.getElementById("displacementI
 const displacementFinalEquationButton = document.getElementById("displacementFinalEquationButton");// this is the 3rd kinamatic equation button on the physics formula page 
 const timeIndependentButton = document.getElementById("timeIndependentButton");// this is the button on the physics formula page that takes you to the poups 
 const averageVelocityDisplacementButton = document.getElementById("averageVelocityDisplacement");// this is the average velocity equation button on the physics  formula page 
+
+
+
+
 
 
 
@@ -209,6 +212,7 @@ const inverseButton = document.getElementById("inverseButton");// this is the bu
 const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this is the sine la  for side button on the math formula page 
 const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the math formula page that tales u to the sine law for angles 
 const cosineLawSidesButton = document.getElementById("cosineLawSidesButton");// this is the cosine law sides button on the math formula page
+const cosineLawAnglesButton = document.getElementById("cosineLawAnglesButton")// this is the cosine law angle button on the math formula page 
 
 
 
@@ -276,6 +280,7 @@ const InverseBackButton = document.getElementById("InverseBackButton");// this i
 const sinLawSidesBackButton = document.getElementById("sinLawSidesBackButton");// this is the back button on the sine law for side page 
 const sinLawAnglesBackButton = document.getElementById("sinLawAnglesBackButton");// this is the back button on the all formula page that tales u to the sine law for angles 
 const cosineLawSidesBackButton = document.getElementById("cosineLawSidesBackButton");// this is the back button on the cosine law for sides pages
+const cosineLawAnglesBackButton = document.getElementById("cosineLawAnglesBackButton");// this is the back button om tjhe angles for cosine law page 
 
 
 
@@ -787,7 +792,7 @@ sinLawAnglesAnglePopup.style.display = "none";// hides the pop up
 
 
 
-// THESE ARE FOR THE SINE LAW  FOR SIDE
+// THESE ARE FOR THE COSINE LAW  FOR SIDE
 const cosineLawSidesPopup = document.getElementById("cosineLawSidesPopup");// this is the popup for displacement final velocity equation  
 const cosineLawSidesSelectedVariable = document.getElementById("cosineLawSidesSelectedVariable");// this holds the selected variaple 
 const cosineLawSidesInputs = document.getElementById("cosineLawSidesInputs");// these are the inputs 
@@ -798,6 +803,18 @@ changeCosineLawSidesVariable.style.display = "none";// hides this intiteall
 const cosineLawSidesResult = document.getElementById("cosineLawSidesResult");// resut line 
 const variableButton9s = document.querySelectorAll(".variableButton9");// variable buttons 
 
+
+
+// THESE ARE FOR THE COSINE LAW FOR ANGLE
+const cosineLawAnglesPopup = document.getElementById("cosineLawAnglesPopup");// this is the popup for displacement final velocity equation  
+const cosineLawAnglesSelectedVariable = document.getElementById("cosineLawAnglesSelectedVariable");// this holds the selected variaple 
+const cosineLawAnglesInputs = document.getElementById("cosineLawAnglesInputs");// these are the inputs 
+const calculateCosineLawAnglesSides = document.getElementById("calculateCosineLawAnglesSides"); // calulate button 
+calculateCosineLawAnglesSides.style.display = "none";// hides this intiteall 
+const changeCosineLawAnglesVariable = document.getElementById("changeCosineLawAnglesVariable");// change variable button 
+changeCosineLawAnglesVariable.style.display = "none";// hides this intiteall 
+const cosineLawAnglesResult = document.getElementById("cosineLawAnglesResult");// resut line 
+const variableButton10s = document.querySelectorAll(".variableButton10");// variable buttons 
 
 
 
@@ -4551,6 +4568,9 @@ calculateCosineLawSides.addEventListener("click", function(){// if the ccalucula
 
 
 
+
+
+
 //THESE ARE THE POPUP MENU BUTTONS that let you REARRANGE THE EQUATION FOR WHAT YOUR SOLVING FOR
 
 // THIS IS THE 1st KINAMATIC EQUATION SELECTION MENY AND BUTTONS
@@ -6014,6 +6034,8 @@ s
 
 
 
+
+
 //THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF PHYSICS FORMULAS
 //kinamatic forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
@@ -6060,6 +6082,8 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
     averageVelocityDisplacementResult.textContent = "";// clears the result 
     changeAverageVelocityDisplacementVariable.style.display = "none";// hides the button 
 });
+
+
 
 
 
@@ -6154,6 +6178,7 @@ changeCosineLawSidesVariable.addEventListener("click", function(){// if the chan
     cosineLawSidesResult.textContent = "";// clears the result 
     changeCosineLawSidesVariable.style.display = "none";// hides the button 
 });
+
 
 
 
@@ -6729,6 +6754,7 @@ cosineLawSidesBackButton.addEventListener("click", function(){// this is the tim
     cosineLawSidesResult.textContent = "";// clears the result
     changeCosineLawSidesVariable.style.display = "none";// hides this
 });
+
 
 
 
@@ -7812,6 +7838,7 @@ allcosineLawSidesButton.addEventListener("click", function (){// the Average vel
 
 
 
+
 //THESE ARE ALL OF THE BUTONS ON THE MATH FORMULA PAGE
 rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
@@ -8625,6 +8652,9 @@ cosineLawSidesButton.addEventListener("click", function(){// if the time indipen
 
 
 
+
+
+
 //THESE ARE ALL THE BUTTONS ON THE PHYSICS ONLY FORMULA PAGE 
 speedButton.addEventListener("click", function(){// if the speed putton is clicked 
     startPage.style.display = "none";// hides this page 
@@ -8914,20 +8944,7 @@ averageVelocityDisplacementButton.addEventListener("click", function(){// if the
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// THESE ARE EXTRA FEATURES LIKE THE SEARCH FUNCTION< FILTERS AND SOUND AFFECTS FOR CLIKING BUTTONS
-
-
+// THESE ARE EXTRA FEATURES LIKE THE SEARCH FUNCTION, FILTERS AND SOUND AFFECTS FOR CLIKING BUTTONS
 // THIS IS FOR THE SOUND EFFECTS
 let buttonClickSound = new Audio("click1.mp3"); // declaring the sound 
 
@@ -8941,11 +8958,6 @@ document.querySelectorAll("button").forEach(function(button) {// sellect all but
         playButtonClickSound(); // use the click sound function 
     });
 });
-
-
-
-
-
 
 
 
@@ -8969,6 +8981,7 @@ physicsSearchInput.addEventListener("input", function() {// if the physics serac
 });
 
 
+
 //THESE ARE FOR THE SEARCH BAR ON THE MATH formula PAGE
 let mathSearchInput = document. getElementById("mathSearchInput")// this is the searchpare input, holder 
 let mathFormulaButtonsSearch = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons 
@@ -8987,6 +9000,7 @@ mathSearchInput.addEventListener("input", function() {// if the physics serach b
         }
     })
 });
+
 
 
 //THESE ARE FOR THE SEARCH BAR ON THE ALL FORMULA PAGE
@@ -9011,11 +9025,6 @@ allSearchInput.addEventListener("input", function(button){// if the physics sear
 
 
 
-
-
-
-
-
 //THESE ARE FOR THE FILTER DROPDOWN MENU on the all formula page 
 let allFilterDropdownButton = document.getElementById("allFilterDropdownButton")// this is the filter button on the all formula page 
 let allFilterDropdownMenu = document.querySelector(".allfilterDropdownMenu");// this is the gilter drow down menu 
@@ -9028,6 +9037,8 @@ allFilterDropdownButton.addEventListener("click", function(){//if the filter but
         allFilterDropdownMenu.style.display = "grid";// show it
     }
 })
+
+
 
 //THESE ARE FOR THE FILTER DROPDOWN MENU ON THE MATH FORMULA PAGE
 let mathFilterDropdownButton = document.getElementById("mathFilterDropdownButton");// this is the filter drop down button on the math formula page 
@@ -9042,12 +9053,6 @@ mathFilterDropdownButton.addEventListener("click", function(){// if the filter b
         mathFilterDropdownMenu.style.display = "grid";// show it
     }
 })
-
-
-
-
-
-
 
 
 
@@ -9085,8 +9090,8 @@ formulaFilters.forEach(function(filter){ // check all the checkboxes on the all 
 })
 
 
-//THESE ARE THE FILTER FUNCTIONS FOR THE MATH FILTER
 
+//THESE ARE THE FILTER FUNCTIONS FOR THE MATH FILTER
 let formulaFilters1 = document.querySelectorAll(".formulaFilter1");// this is the variable that holds all the filters
 let mathresetFiltersButton = document.getElementById("mathresetFiltersButton");// this is the bittton the resets the filters 
 let mathFormulaButtons = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons on the all formula page 
@@ -9118,10 +9123,6 @@ formulaFilters1.forEach(function(filter){ // check all the checkboxes on the all
         filterMathFormulas(filter);// then run the filter function
     })
 })
-
-
-
-
 
 
 
