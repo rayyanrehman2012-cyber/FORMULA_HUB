@@ -798,11 +798,11 @@ const changeCosineLawSidesVariable = document.getElementById("changeCosineLawSid
 changeCosineLawSidesVariable.style.display = "none";// hides this intiteall 
 const cosineLawSidesResult = document.getElementById("cosineLawSidesResult");// resut line 
 const variableButton9 = document.querySelectorAll(".variableButton9");// variable buttons 
-const sinLawSidesSidePopup = document.getElementById("sinLawSidesSidePopup");// this is the popup for displacement final velocity equation  
+const cosineLawSidesSideButtons = document.getElementById("cosineLawSidesSideButtons");// this is the popup for displacement final velocity equation  
 const cosineLawSidesSidePopup = document.getElementById("cosineLawSidesSidePopup");// this is the popup for displacement final velocity equation  
 const changecosineLawSidesSide = document.getElementById("changecosineLawSidesSide");// change variable button 
 changecosineLawSidesSide.style.display = "none";// hides this intiteall 
-sinLawSidesSidePopup.style.display = "none";// hides the pop up 
+cosineLawSidesSidePopup.style.display = "none";// hides the pop up 
 
 
 
@@ -7645,7 +7645,7 @@ allcosineLawSidesButton.addEventListener("click", function (){// the Average vel
     midpointPage.style.display = "none";// hide rhis page
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
-    cosineLawSidesPage.style.display = "flex"// shows this page
+    cosineLawSidesPage.style.display = "flex";// shows this page
 });
 
 
@@ -8812,7 +8812,6 @@ physicsSearchInput.addEventListener("input", function() {// if the physics serac
         }
     })
 });
-
 
 
 //THESE ARE FOR THE SEARCH BAR ON THE MATH formula PAGE
