@@ -790,7 +790,6 @@ sinLawAnglesAnglePopup.style.display = "none";// hides the pop up
 // THESE ARE FOR THE SINE LAW  FOR SIDE
 const cosineLawSidesPopup = document.getElementById("cosineLawSidesPopup");// this is the popup for displacement final velocity equation  
 const cosineLawSidesSelectedVariable = document.getElementById("cosineLawSidesSelectedVariable");// this holds the selected variaple 
-const cosineLawSidesSelectedSide = document.getElementById("cosineLawSidesSelectedSide");// this holds the selected variaple 
 const cosineLawSidesInputs = document.getElementById("cosineLawSidesInputs");// these are the inputs 
 const calculateCosineLawSides = document.getElementById("calculateCosineLawSides"); // calulate button 
 calculateCosineLawSides.style.display = "none";// hides this intiteall 
@@ -798,11 +797,8 @@ const changeCosineLawSidesVariable = document.getElementById("changeCosineLawSid
 changeCosineLawSidesVariable.style.display = "none";// hides this intiteall 
 const cosineLawSidesResult = document.getElementById("cosineLawSidesResult");// resut line 
 const variableButton9s = document.querySelectorAll(".variableButton9");// variable buttons 
-const cosineLawSidesSideButtons = document.getElementById("cosineLawSidesSideButtons");// this is the popup for displacement final velocity equation  
-const cosineLawSidesSidePopup = document.getElementById("cosineLawSidesSidePopup");// this is the popup for displacement final velocity equation  
 const changecosineLawSidesSide = document.getElementById("changecosineLawSidesSide");// change variable button 
 changecosineLawSidesSide.style.display = "none";// hides this intiteall 
-cosineLawSidesSidePopup.style.display = "none";// hides the pop up 
 
 
 
@@ -4435,7 +4431,7 @@ calculateSinLawAngles.addEventListener("click", function(){// if the caluclate b
 calculateCosineLawSides.addEventListener("click", function(){// if the ccaluculate button is clicked 
     let Result;// this is the variable that will hold the result value FOR ALL OF TE 6 CALCULATORS
 
-    if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (A)" && cosineLawSidesSelectedSide.textContent === "SOLVING FOR SIDE A"){// if these are the selections made by yht user 
+    if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (SIDE A)"){// if these are the selections made by yht user 
         let sideB = Number(document.getElementById("cosineLawSidesSideB").value) // holds the angle value for side B
         let sideC = Number(document.getElementById("cosineLawSidesSideC").value);// hold the side value for side B
         let angleA = Number(document.getElementById("cosineLawSidesAngleA").value);// hold the anglle value for side A 
@@ -4456,72 +4452,96 @@ calculateCosineLawSides.addEventListener("click", function(){// if the ccalucula
         }
 
         else{
-
             Result = Math.sqrt(Math.pow(sideB, 2) + Math.pow(sideC, 2) - 2 * sideB * sideC * Math.cos(angleA * Math.PI / 180));// this is the formula 
 
-            cosineLawSidesResult.textContent = "SIDE A = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
-            cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+           if (isNaN(Result)) { // if the result doent form a triangle 
+                cosineLawSidesResult.textContent = "ERROR: INVALID TRIANGLE!"; // not a triangle 
+                cosineLawSidesResult.style.color = "rgb(102,21,7)"; // in red 
+            }
+
+            else {
+                cosineLawSidesResult.textContent = "SIDE A = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
+                cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+        
+            }
         }
     }
     
-    else if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (B)" && cosineLawSidesSelectedSide.textContent === "SOLVING FOR SIDE B"){// if these are the selections made by yht user 
+    else if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (SIDE B)"){// if these are the selections made by yht user 
         let sideA = Number(document.getElementById("cosineLawSidesSideA").value) // holds the angle value for side B
         let sideC = Number(document.getElementById("cosineLawSidesSideC").value);// hold the side value for side B
-        let angleA = Number(document.getElementById("cosineLawSidesAngleA").value);// hold the anglle value for side A 
+        let angleB = Number(document.getElementById("cosineLawSidesAngleB").value);// hold the anglle value for side A 
 
-        if(document.getElementById("cosineLawSidesSideA").value === "" || document.getElementById("cosineLawSidesSideC").value === "" || document.getElementById("cosineLawSidesAngleA").value === ""){ //If these values are left empty by the user 
+        if(document.getElementById("cosineLawSidesSideA").value === "" || document.getElementById("cosineLawSidesSideC").value === "" || document.getElementById("cosineLawSidesAngleB").value === ""){ //If these values are left empty by the user 
             cosineLawSidesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
             cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
-        else if(angleA < 0 || angleA > 180 || sideC < 0 || sideA < 0) { // if the values are engative or to big(for angle)
+        else if(angleB < 0 || angleB > 180 || sideC < 0 || sideA < 0) { // if the values are engative or to big(for angle)
             cosineLawSidesResult.textContent = "ERROR: ANGLES CAN'T BE GREATHER THAN 180, NOTHING CAN BE NEGATIVE!"; // this is the error message 
             cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
-        else if(angleA === 0 ||  sideA === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
+        else if(angleB === 0 ||  sideA === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
             cosineLawSidesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
             cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
+
         else{
 
-            Result = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideC, 2) - 2 * sideA * sideC * Math.cos(angleA * Math.PI / 180));// this is the formula 
+            Result = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideC, 2) - 2 * sideA * sideC * Math.cos(angleB * Math.PI / 180));
+            
+            if (isNaN(Result)) { // if the result doent form a triangle 
+                cosineLawSidesResult.textContent = "ERROR: INVALID TRIANGLE!"; // not a triangle 
+                cosineLawSidesResult.style.color = "rgb(102,21,7)"; // in red 
+            }
 
-            cosineLawSidesResult.textContent = "SIDE B = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
-            cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+            else {
+                cosineLawSidesResult.textContent = "SIDE B = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
+                cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+        
+            }
         }
     }
 
-    else if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (C)" && cosineLawSidesSelectedSide.textContent === "SOLVING FOR SIDE C"){// if these are the selections made by yht user 
+    else if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (SIDE C)"){// if these are the selections made by yht user 
         let sideA = Number(document.getElementById("cosineLawSidesSideA").value) // holds the angle value for side B
         let sideB = Number(document.getElementById("cosineLawSidesSideB").value);// hold the side value for side B
-        let angleA = Number(document.getElementById("cosineLawSidesAngleA").value);// hold the anglle value for side A 
+        let angleC = Number(document.getElementById("cosineLawSidesAngleC").value);// hold the anglle value for side A 
 
-        if(document.getElementById("cosineLawSidesSideA").value === "" || document.getElementById("cosineLawSidesSideB").value === "" || document.getElementById("cosineLawSidesAngleA").value === ""){ //If these values are left empty by the user 
+        if(document.getElementById("cosineLawSidesSideB").value === "" || document.getElementById("cosineLawSidesSideA").value === "" || document.getElementById("cosineLawSidesAngleC").value === ""){ //If these values are left empty by the user 
             cosineLawSidesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
             cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
-        else if(angleA < 0 || angleA > 180 || sideB < 0 || sideA < 0) { // if the values are engative or to big(for angle)
+        else if(angleC< 0 || angleC > 180 || sideA < 0 || sideB < 0) { // if the values are engative or to big(for angle)
             cosineLawSidesResult.textContent = "ERROR: ANGLES CAN'T BE GREATHER THAN 180, NOTHING CAN BE NEGATIVE!"; // this is the error message 
             cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
-        else if(angleA === 0 ||  sideA === 0 ||  sideB === 0) { // if the values are engative or to big(for angle)
+        else if(angleC === 0 ||  sideB === 0 ||  sideA === 0) { // if the values are engative or to big(for angle)
             cosineLawSidesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
             cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
         }
 
         else{
 
-            Result = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2) - 2 * sideA * sideB * Math.cos(angleA * Math.PI / 180));// this is the formula 
+            Result = Math.sqrt(Math.pow(sideB, 2) + Math.pow(sideA, 2) - 2 * sideB * sideA * Math.cos(angleC * Math.PI / 180));// this is the formula 
 
-            cosineLawSidesResult.textContent = "SIDE C = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
-            cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+            if (isNaN(Result)) { // if the result doent form a triangle 
+                cosineLawSidesResult.textContent = "ERROR: INVALID TRIANGLE!"; // not a triangle 
+                cosineLawSidesResult.style.color = "rgb(102,21,7)"; // in red 
+            }
+
+            else {
+                cosineLawSidesResult.textContent = "SIDE C = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
+                cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+        
+            }
         }
     }
-
+    
 })
 
 
@@ -5996,7 +6016,6 @@ s
 
 
 
-
 //THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF PHYSICS FORMULAS
 //kinamatic forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
@@ -6137,15 +6156,11 @@ changeCosineLawSidesVariable.addEventListener("click", function(){// if the chan
     cosineLawSidesResult.textContent = "";// clears the result 
     changeCosineLawSidesVariable.style.display = "none";// hides the button 
     changecosineLawSidesSide.style.display = "none";// hides the button 
-    cosineLawSidesSelectedSide.textContent = "";// this is the selected side getting cleared 
-    cosineLawSidesSidePopup.style.display = "none";// this is the side popup hiding 
 });
 
 changecosineLawSidesSide.addEventListener("click", function(){// if the change variable button is clicked 
-    cosineLawSidesSidePopup.style.display = "flex";// hide these function
     calculateCosineLawSides.style.display = "none";// this is the calculate button 
     cosineLawSidesInputs.innerHTML = "";// clears the inputs
-    cosineLawSidesSelectedSide.textContent = "";// clears the selected variable 
     cosineLawSidesResult.textContent = "";// clears the result 
     changeCosineLawSidesVariable.style.display = "none";// hides the button 
     changecosineLawSidesSide.style.display = "none";// this si the change side button 
@@ -6717,11 +6732,9 @@ cosineLawSidesBackButton.addEventListener("click", function(){// this is the tim
     startPage.style.display = "flex";// shows the start page again 
     cosineLawSidesPage.style.display = "none";// hides this page 
     cosineLawSidesPopup.style.display = "flex";// shows the ratio popup
-    cosineLawSidesSidePopup.style.display = "none";// hides the side popup
     calculateCosineLawSides.style.display = "none";// hides the calculate button
     cosineLawSidesInputs.innerHTML = "";// clears the inputs
     cosineLawSidesSelectedVariable.textContent = "";// clears the selected ratio
-    cosineLawSidesSelectedSide.textContent = "";// clears the selected side
     cosineLawSidesResult.textContent = "";// clears the result
     changeCosineLawSidesVariable.style.display = "none";// hides this
     changecosineLawSidesSide.style.display = "none";// hides this 
