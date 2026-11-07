@@ -4192,7 +4192,42 @@ calculateSinLawSides.addEventListener("click", function(){// if the ccaluculate 
     }
 })
 
+calculateSinLawAngles.addEventListener("click", function(){// if the caluclate buttton is clicked  on the sine law anfles page
+    let Result;// this is the variable that will hold the result value FOR ALL OF TE 6 CALCULATORS
 
+    if(sinLawAnglesSelectedVariable.textContent === "ANGLE SINE LAW (A AND B)" && sinLawAnglesSelectedAngle.textContent === "SOLVING FOR ANGLE A"){// if these are the selections made by yht user 
+        let sideB = Number(document.getElementById("sinLawAnglesSideB").value) // holds the angle value for side B
+        let sideA = Number(document.getElementById("sinLawAnglesSideA").value);// hold the side value for side B
+        let angleB = Number(document.getElementById("sinLawAnglesAngleB").value);// hold the anglle value for side A 
+
+        if(document.getElementById("sinLawAnglesSideB").value === "" || document.getElementById("sinLawAnglesSideA").value === "" || document.getElementById("sinLawAnglesAngleB").value === ""){ //If these values are left empty by the user 
+            sinLawAnglesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
+            sinLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleB < 0 || angleB > 180  || sideA < 0 || sideB < 0) { // if the values are engative or to big(for angle)
+            sinLawAnglesResult.textContent = "ERROR: ANGLE CAN'T BE GREATHER THAN 180, NOTHING CAN BE NEGATIVE!"; // this is the error message 
+            sinLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleB === 0 ||  sideA === 0 ||  sideB === 0) { // if the values are engative or to big(for angle)
+            sinLawAnglesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            sinLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+            let angleBRadians = angleB*(Math.PI/180);// converts the degrees into radiants because js uses radians
+
+            let Result1 = (sideA * Math.sin(angleBRadians)) / sideB // this is the formula 
+
+            Result = Math.asin(Result1) * 180 / Math.PI;
+
+            sinLawAnglesResult.textContent = "Angle A = " + Result.toFixed(3) + " DEGREES";// this is  the result line for the calculator to displace 
+            sinLawAnglesResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+    
+})
 
 
 
