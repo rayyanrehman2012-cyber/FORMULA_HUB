@@ -825,6 +825,7 @@ const variableButton10s = document.querySelectorAll(".variableButton10");// vari
 
 
 
+
 // THESE ARE ALL OF THE FORMULA PAGE BUTTONS AND THEIR FUNCTIONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
