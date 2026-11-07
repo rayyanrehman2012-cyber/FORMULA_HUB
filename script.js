@@ -5837,7 +5837,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 })
 
 
-variableButton7s.forEach(function(button){// in variable buttons for each of them
+variableButton9s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){
         cosineLawSidesPopup.style.display = "none"// hides this 
         cosineLawSidesSidePopup.style.display = "flex"// hides this 
@@ -5857,7 +5857,7 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
             `;
         }
 
-        else if (button.value === "CLSA"){// if sine is selectod 
+        else if (button.value === "CLSB"){// if sine is selectod 
             cosineLawSidesSelectedVariable.textContent = "SINE LAW (COS B)";
 
             cosineLawSidesSideButtons.innerHTML = `
@@ -5866,7 +5866,6 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
                 <button class="cosineLawSidesSideButton" value="sideC">SIDE C</button>
             `;
         }
-
 
         else if (button.value === "CLSC"){// if sine is selectod 
             cosineLawSidesSelectedVariable.textContent = "SINE LAW (COS C)";
@@ -5880,6 +5879,109 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
 
         let cosineLawSidesSideButtonElements = document.querySelectorAll(".cosineLawSidesSideButtons");// selects the side buttons
 
+        cosineLawSidesSideButtonElements.forEach(function(sideButton){// for each side button
+            sideButton.addEventListener("click", function(){// if the side button is clicked
+                cosineLawSidesSidePopup.style.display = "none";// hides the side popup
+                cosineLawSidesSelectedSide.textContent = "SOLVING FOR " + sideButton.textContent;// displays the selected side
+                cosineLawSidesInputs.innerHTML = "";
+
+                if (button.value === "CLSA"){//if the selected ratio is sine 
+
+                    if(sideButton.value ==="sideA"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="cosineLawSidesSideB">SIDE B (b)</label>
+                            <input type="number" id="cosineLawSidesSideB" >
+
+                            <label for="cosineLawSidesSideC">SIDE C (c)</label>
+                            <input type="number" id="cosineLawSidesSideC" >
+
+                            <label for="cosineLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="cosineLawSidesAngleA" >
+                        `;// add all of this
+                    }
+
+                    else if(sideButton.value ==="sideB"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="cosineLawSidesSideA">SIDE A (a)</label>
+                            <input type="number" id="cosineLawSidesSideA" >
+
+                            <label for="cosineLawSidesSideC">SIDE C (c)</label>
+                            <input type="number" id="cosineLawSidesSideC" >
+
+                            <label for="cosineLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="cosineLawSidesAngleA" >
+                        `;// add all of this
+                    }
+
+                    else if(sideButton.value ==="sideC"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="cosineLawSidesSideA">SIDE A (a)</label>
+                            <input type="number" id="cosineLawSidesSideA" >
+
+                            <label for="cosineLawSidesSideB">SIDE B (b)</label>
+                            <input type="number" id="cosineLawSidesSideB" >
+
+                            <label for="cosineLawSidesAngleA">ANGLE A (°)</label>
+                            <input type="number" id="cosineLawSidesAngleA" >
+                        `;// add all of this
+                    }
+                }
+
+                else if (button.value === "CLSB"){//if the selected ratio is cosine 
+
+                    if(sideButton.value ==="sideA"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="cosineLawSidesSideB">SIDE B (b)</label>
+                            <input type="number" id="cosineLawSidesSideB" >
+
+                            <label for="cosineLawSidesSideC">SIDE C (c)</label>
+                            <input type="number" id="cosineLawSidesSideC" >
+
+                            <label for="cosineLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="cosineLawSidesAngleB" >
+                        `;// add all of this
+                    }
+
+                    else if(sideButton.value ==="sideB"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="cosineLawSidesSideA">SIDE A (a)</label>
+                            <input type="number" id="cosineLawSidesSideA" >
+
+                            <label for="cosineLawSidesSideC">SIDE C (c)</label>
+                            <input type="number" id="cosineLawSidesSideC" >
+
+                            <label for="cosineLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="cosineLawSidesAngleB" >
+                        `;// add all of this
+                    }
+
+                    else if(sideButton.value ==="sideC"){ //  and the side selected is opposite 
+                        sinLawSidesInputs.innerHTML = ` 
+                            <label for="cosineLawSidesSideA">SIDE A (a)</label>
+                            <input type="number" id="cosineLawSidesSideA" >
+
+                            <label for="cosineLawSidesSideB">SIDE B (b)</label>
+                            <input type="number" id="cosineLawSidesSideB" >
+
+                            <label for="cosineLawSidesAngleB">ANGLE B (°)</label>
+                            <input type="number" id="cosineLawSidesAngleB" >
+                        `;// add all of this
+                    }
+                }
+
+                else if (button.value === "CLSC"){//if the selected ratio is cosine 
+
+                    
+
+                }
+
+                sinLawSidesResult.textContent = "";// clears the result
+                calculateSinLawSides.style.display = "block";// shows calculate button
+                changeSinLawSidesVariable.style.display = "block";// shows change ratio button
+                changeSinLawSidesSide.style.display = "block";// shows change side button
+                playButtonClickSound(); // play the sounds when the button is clicked 
+            });
+        });
         
     });
 })
