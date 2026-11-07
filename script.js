@@ -4432,6 +4432,40 @@ calculateSinLawAngles.addEventListener("click", function(){// if the caluclate b
 
 })
 
+calculateCosineLawSides.addEventListener("click", function(){// if the ccaluculate button is clicked 
+    let Result;// this is the variable that will hold the result value FOR ALL OF TE 6 CALCULATORS
+
+    if(cosineLawSidesSelectedVariable.textContent === "COSINE LAW (A)" && cosineLawSidesSelectedSide.textContent === "SOLVING FOR SIDE A"){// if these are the selections made by yht user 
+        let sideB = Number(document.getElementById("cosineLawSidesSideB").value) // holds the angle value for side B
+        let sideC = Number(document.getElementById("cosineLawSidesSideC").value);// hold the side value for side B
+        let angleA = Number(document.getElementById("cosineLawSidesAngleA").value);// hold the anglle value for side A 
+
+        if(document.getElementById("cosineLawSidesSideB").value === "" || document.getElementById("cosineLawSidesSideC").value === "" || document.getElementById("cosineLawSidesAngleA").value === ""){ //If these values are left empty by the user 
+            cosineLawSidesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message
+            cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleA < 0 || angleA > 180 || sideC < 0 || sideB < 0) { // if the values are engative or to big(for angle)
+            cosineLawSidesResult.textContent = "ERROR: ANGLES CAN'T BE GREATHER THAN 180, NOTHING CAN BE NEGATIVE!"; // this is the error message 
+            cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else if(angleA === 0 ||  sideB === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
+            cosineLawSidesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            cosineLawSidesResult.style.color = "rgb(102,21,7)";// this is the color for the message 
+        }
+
+        else{
+
+            Result = Math.sqrt(Math.pow(sideB, 2) + Math.pow(sideC, 2) - 2 * sideB * sideC * Math.cos(angleA * Math.PI / 180));// this is the formula 
+
+            cosineLawSidesResult.textContent = "SIDE A = " + Result.toFixed(3) + " UNITS";// this is  the result line for the calculator to displace 
+            cosineLawSidesResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+ 
+
+})
 
 
 
@@ -5848,7 +5882,7 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
         cosineLawSidesResult.textContent = "";// clears the result
 
         if (button.value === "CLSA"){// if sine is selectod 
-            cosineLawSidesSelectedVariable.textContent = "SINE LAW (A)"; // the text contenxt is this now 
+            cosineLawSidesSelectedVariable.textContent = "COSINE LAW (A)"; // the text contenxt is this now 
 
             cosineLawSidesSideButtons.innerHTML = `
                 <button class="cosineLawSidesSideButton" value="sideA">SIDE A</button>
@@ -5858,7 +5892,7 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
         }
 
         else if (button.value === "CLSB"){// if sine is selectod 
-            cosineLawSidesSelectedVariable.textContent = "SINE LAW (B)"; // this is the text context now 
+            cosineLawSidesSelectedVariable.textContent = "COSINE LAW (B)"; // this is the text context now 
 
             cosineLawSidesSideButtons.innerHTML = `
                 <button class="cosineLawSidesSideButton" value="sideA">SIDE A</button>
@@ -5868,7 +5902,7 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
         }
 
         else if (button.value === "CLSC"){// if sine is selectod 
-            cosineLawSidesSelectedVariable.textContent = "SINE LAW (C)"; // this is the text context now 
+            cosineLawSidesSelectedVariable.textContent = "COSINE LAW (C)"; // this is the text context now 
 
             cosineLawSidesSideButtons.innerHTML = `
                 <button class="cosineLawSidesSideButton" value="sideA">SIDE A</button>
