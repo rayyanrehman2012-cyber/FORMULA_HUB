@@ -5837,6 +5837,54 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 })
 
 
+variableButton7s.forEach(function(button){// in variable buttons for each of them
+    button.addEventListener("click", function(){
+        cosineLawSidesPopup.style.display = "none"// hides this 
+        cosineLawSidesSidePopup.style.display = "flex"// hides this 
+        changeCosineLawSidesVariable.style.display = "none"
+        cosineLawSidesSelectedVariable.textContent = "";// clears the selected variable
+        cosineLawSidesSelectedSide.textContent = "";// clears the selected side
+        cosineLawSidesInputs.innerHTML = "";// clears the inputs
+        cosineLawSidesResult.textContent = "";// clears the result
+
+        if (button.value === "CLSA"){// if sine is selectod 
+            cosineLawSidesSelectedVariable.textContent = "SINE LAW (COS A)";
+
+            cosineLawSidesSideButtons.innerHTML = `
+                <button class="cosineLawSidesSideButton" value="sideA">SIDE A</button>
+                <button class="cosineLawSidesSideButton" value="sideB">SIDE B</button>
+                <button class="cosineLawSidesSideButton" value="sideC">SIDE C</button>
+            `;
+        }
+
+        else if (button.value === "CLSA"){// if sine is selectod 
+            cosineLawSidesSelectedVariable.textContent = "SINE LAW (COS B)";
+
+            cosineLawSidesSideButtons.innerHTML = `
+                <button class="cosineLawSidesSideButton" value="sideA">SIDE A</button>
+                <button class="cosineLawSidesSideButton" value="sideB">SIDE B</button>
+                <button class="cosineLawSidesSideButton" value="sideC">SIDE C</button>
+            `;
+        }
+
+
+        else if (button.value === "CLSC"){// if sine is selectod 
+            cosineLawSidesSelectedVariable.textContent = "SINE LAW (COS C)";
+
+            cosineLawSidesSideButtons.innerHTML = `
+                <button class="cosineLawSidesSideButton" value="sideA">SIDE A</button>
+                <button class="cosineLawSidesSideButton" value="sideB">SIDE B</button>
+                <button class="cosineLawSidesSideButton" value="sideC">SIDE C</button>
+            `;
+        }
+
+        let cosineLawSidesSideButtonElements = document.querySelectorAll(".cosineLawSidesSideButtons");// selects the side buttons
+
+        
+    });
+})
+
+
 
 
 
