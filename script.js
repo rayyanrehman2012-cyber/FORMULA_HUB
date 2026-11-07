@@ -4755,6 +4755,7 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
     });
 });
 
+
 // THIS IS THE 2nd KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton1s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
@@ -4935,6 +4936,7 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
+
 // THIS IS THE 3rd KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton2s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
@@ -5112,6 +5114,7 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
         }
     });
 });
+
 
 // THIS IS THE 4th KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton3s.forEach(function(button){// in variable buttons, for each of them 
@@ -5326,6 +5329,7 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
+
 // THIS IS THE 5th KINAMATIC EQUATION SELECTION MENY AND BUTTONS
 variableButton4s.forEach(function(button){// in variable buttons, for each of them 
     button.addEventListener("click", function() {// if they are clicked 
@@ -5507,6 +5511,7 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
     });
 });
 
+
 // THIS IS THE SELECTION MENU AND BUTTONS FOR THE SOH CAH TOA page 
 variableButton5s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){
@@ -5632,6 +5637,7 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
         });
     });
 })
+
 
 // this is the selection menu and buttosn for the tan invers 
 variableButton6s.forEach(function(button){// in variable buttons for each of th
@@ -5826,16 +5832,16 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
 
 
 variableButton8s.forEach(function(button){// in variable buttons for each of them
-    button.addEventListener("click", function(){
-        sinLawAnglesPopup.style.display = "none"// hides this 
+    button.addEventListener("click", function(){// iff the buttons are clicked 
+        sinLawAnglesPopup.style.display = "none"// hides the popup menu  
         sinLawAnglesAnglePopup.style.display = "flex"// hides this 
-        changeSinLawAnglesVariable.style.display = "none"
+        changeSinLawAnglesVariable.style.display = "none"// thsi is the chinge sine law vertion variabel 
         sinLawAnglesSelectedVariable.textContent = "";// clears the selected variable
         sinLawAnglesSelectedAngle.textContent = "";// clears the selected side
         sinLawAnglesInputs.innerHTML = "";// clears the inputs
         sinLawAnglesResult.textContent = "";// clears the result
 
-        if (button.value === "SLAA"){// if sine is selectod 
+        if (button.value === "SLAA"){// if sin law angle a is clciekd 
             sinLawAnglesSelectedVariable.textContent = "ANGLE SINE LAW (A AND B)";
 
             sinLawAnglesAngleButtons.innerHTML = `
@@ -5844,7 +5850,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
             `;
         }
 
-        else if (button.value === "SLAB"){ // if the  button value is cosine 
+        else if (button.value === "SLAB"){ // if the sin law angle b is clicked
             sinLawAnglesSelectedVariable.textContent = "ANGLE SINE LAW (A AND C)"; // this is the text content of rhte selected variable 
 
             sinLawAnglesAngleButtons.innerHTML = `
@@ -5853,7 +5859,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
             `;// add these buttons 
         }
 
-        else if (button.value === "SLAC"){ // if the ratio selected is tangent 
+        else if (button.value === "SLAC"){ // if the sin law angle c is clicked 
             sinLawAnglesSelectedVariable.textContent = "ANGLE SINE LAW (B AND C)";
 
             sinLawAnglesAngleButtons.innerHTML = `
@@ -5969,14 +5975,14 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
 
 variableButton9s.forEach(function(button){// in variable buttons for each of them
-    button.addEventListener("click", function(){ // if the button is clicked 
-        cosineLawSidesPopup.style.display = "none"// hides this 
+    button.addEventListener("click", function(){ // if any of the buttons is clicked 
+        cosineLawSidesPopup.style.display = "none"// hid the popup menu 
         changeCosineLawSidesVariable.style.display = "none" // hide this button 
         cosineLawSidesSelectedVariable.textContent = "";// clears the selected variable
         cosineLawSidesInputs.innerHTML = "";// clears the inputs
         cosineLawSidesResult.textContent = "";// clears the result
 
-        if (button.value === "CLSA"){// if sine is selectod 
+        if (button.value === "CLSA"){// if the cosine law for side a is selectend 
             cosineLawSidesSelectedVariable.textContent = "COSINE LAW (SIDE A)"; // the text contenxt is this now 
             cosineLawSidesInputs.innerHTML = ` 
                 <label for="cosineLawSidesSideB">SIDE B (b)</label>
@@ -5991,7 +5997,7 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
         }
 
 
-        else if (button.value === "CLSB"){// if sine is selectod 
+        else if (button.value === "CLSB"){// if cosine law side b is selected 
             cosineLawSidesSelectedVariable.textContent = "COSINE LAW (SIDE B)"; // this is the text context now 
             cosineLawSidesInputs.innerHTML = ` 
                 <label for="cosineLawSidesSideA">SIDE A (a)</label>
@@ -6006,7 +6012,7 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
 
         }
 
-        else if (button.value === "CLSC"){// if sine is selectod 
+        else if (button.value === "CLSC"){// if the cosine law side c is selected
             cosineLawSidesSelectedVariable.textContent = "COSINE LAW (SIDE C)"; // this is the text context now 
             cosineLawSidesInputs.innerHTML = ` 
                 <label for="cosineLawSidesSideA">SIDE A (a)</label>
@@ -6014,21 +6020,79 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
 
                 <label for="cosineLawSidesSideB">SIDE B (b)</label>
                 <input type="number" id="cosineLawSidesSideB" >
-s
+
                 <label for="cosineLawSidesAngleC">ANGLE C (°)</label>
                 <input type="number" id="cosineLawSidesAngleC" >
             `;// add all of this in the htmls 
         }
 
         cosineLawSidesResult.textContent = "";// clears the result
-        calculateCosineLawSides.style.display = "block";// shows calculate button
-        changeCosineLawSidesVariable.style.display = "block";// shows change ratio button
+        calculateCosineLawSides.style.display = "block";// shows calculate button on the bage 
+        changeCosineLawSidesVariable.style.display = "block";// shows change law button
         playButtonClickSound(); // play the sounds when the button is clicked 
 
     });
 })
 
 
+variableButton10s.forEach(function(button){// search all of the variable 10 buttons 
+    button.addEventListener("click", function(){ // if any of the buttons are clicked 
+        cosineLawAnglesPopup.style.display = "none"// hides the popup page 
+        changeCosineLawAnglesVariable.style.display = "none" // hide the change variable button 
+        cosineLawAnglesSelectedVariable.textContent = "";// Clear the selected angle variable 
+        cosineLawAnglesInputs.innerHTML = "";// clears the input the htmll that was added before 
+        cosineLawAnglesResult.textContent = "";// Hides the text content of the result line 
+
+        if (button.value === "CLAA"){// If the button that was selected is the cosine law for angles, for angle a
+            cosineLawAnglesSelectedVariable.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
+            cosineLawAnglesInputs.innerHTML = ` 
+                <label for="cosineLawAnglesSideA">SIDE A (a)</label>
+                <input type="number" id="cosineLawAnglesSideA" >
+
+                <label for="cosineLawAnglesSideB">SIDE B (b)</label>
+                <input type="number" id="cosineLawAnglesSideB" >
+
+                <label for="cosineLawAnglesSideC">SIDE C (c)</label>
+                <input type="number" id="cosineLawAnglesSideC" >
+            `;// add all of this in the htmls  
+        }
+
+
+        else if (button.value === "CLAB"){// if the button that was selected is the cosine law for angles, for angle b
+            cosineLawAnglesSelectedVariable.textContent = "COSINE LAW (ANGLE B)"; // this is the text context now 
+            cosineLawAnglesInputs.innerHTML = ` 
+                <label for="cosineLawAnglesSideA">SIDE A (a)</label>
+                <input type="number" id="cosineLawAnglesSideA" >
+
+                <label for="cosineLawAnglesSideB">SIDE B (b)</label>
+                <input type="number" id="cosineLawAnglesSideB" >
+
+                <label for="cosineLawAnglesSideC">SIDE C (c)</label>
+                <input type="number" id="cosineLawAnglesSideC" >
+            `;// add all of this in the htmls 
+        }
+
+        else if (button.value === "CLAC"){// if the button that was selected is the cosine law for angles for anfle C
+            cosineLawAnglesSelectedVariable.textContent = "COSINE LAW (ANGLE C)"; // this is the text context now 
+            cosineLawAnglesInputs.innerHTML = ` 
+                <label for="cosineLawAnglesSideA">SIDE A (a)</label>
+                <input type="number" id="cosineLawAnglesSideA" >
+
+                <label for="cosineLawAnglesSideB">SIDE B (b)</label>
+                <input type="number" id="cosineLawAnglesSideB" >
+
+                <label for="cosineLawAnglesSideC">SIDE C (c)</label>
+                <input type="number" id="cosineLawAnglesSideC" >
+            `;// add all of this in the htmls 
+        }
+
+        cosineLawAnglesResult.textContent = "";// clears the result
+        calculateCosineLawAnglesSides.style.display = "block";// shows te calculate button 
+        changeCosineLawAnglesVariable.style.display = "block";// shows change change law verstio  button
+        playButtonClickSound(); // play the sounds when the button is clicked 
+
+    });
+})
 
 
 
