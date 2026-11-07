@@ -73,6 +73,10 @@ const sohCahToaPage = document.querySelector(".sohCahToaPage");//this is the so 
 const InversePage = document.querySelector(".InversePage");// this is the inverse page 
 const sinLawSidesPage = document.querySelector(".sinLawSidesPage");// this is the sine law side formula page
 const sinLawAnglesPage = document.querySelector(".sinLawAnglesPage");// this is the sine law formula pages                 
+const cosineLawSidesPage = document.querySelector(".cosineLawSidesPage");// this is the cosine law for side page
+
+
+
 
 
 
@@ -133,6 +137,9 @@ const allsohCahToaButton = document.getElementById("allsohCahToaButton");// this
 const allinverseButton = document.getElementById("allinverseButton");// this is the button on the all formula page 
 const allsinLawSidesButton = document.getElementById("allsinLawSidesButton");// this is the button on the all  formula page that takes u to  the sine law for sides page 
 const allsinLawAnglesButton = document.getElementById("allsinLawAnglesButton");// this is the button on the all formula page that tales u to the sine law for angles 
+const allcosineLawSidesButton = document.getElementById("allcosineLawSidesButton");// this is the cosine law sides button on the all formula page
+
+
 
 
 
@@ -185,11 +192,11 @@ const rectanglePrismVolumeButton = document.getElementById("rectanglePrismVolume
 const rectanglePrismPerimeterButton = document.getElementById("rectanglePrismPerimeterButton");//this is the math page button 
 const rectanglePrismSurfaceAreaButton = document.getElementById("rectanglePrismSurfaceAreaButton")// this is the rectanglular prisim surfac3 area button on the math page 
 const cylinderVolumeButton = document.getElementById("cylinderVolumeButton");// this is the button on the math formula page 
-const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaButton");// this is the cylinder formula page on the all gormula pages 
-const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton");// this is the cylinder formula page on the all gormula pages 
+const cylinderSurfaceAreaButton = document.getElementById("cylinderSurfaceAreaButton");// this is the cylinder formula page on the math formula page 
+const cylinderPerimeterButton = document.getElementById("cylinderPerimeterButton");// this is the cylinder formula page on the math formula page  
 const radiusButton = document.getElementById("radiusButton");// this is the radius button on the math formula screen 
 const diameterButton = document.getElementById("diameterButton");// this is the diameter button on the math formula pages
-const coneVolumeButton = document.getElementById("coneVolumeButton");// this is the cone volume button on the all formula button 
+const coneVolumeButton = document.getElementById("coneVolumeButton");// this is the cone volume button on the math formula pages button 
 const conePerimeterButton = document.getElementById("conePerimeterButton");// this is the cone perimeter button located on the math formula page 
 const coneSurfaceAreaButton = document.getElementById("coneSurfaceAreaButton");// this is the cone surface area button on the math only page 
 const sphereVolumeButton = document.getElementById("sphereVolumeButton");// this is the shpere volume button on the math only formula page 
@@ -197,10 +204,13 @@ const sphereSurfaceAreaButton = document.getElementById("sphereSurfaceAreaButton
 const trianglePrismVolumeButton = document.getElementById("trianglePrismVolumeButton");// this is the triangle prism volume button on the math only page 
 const trianglePrismSurfaceAreaButton = document.getElementById("trianglePrismSurfaceAreaButton");// this is the triangle prism Surface area button on the math only formula page 
 const trianglePrismPerimeterButton = document.getElementById("trianglePrismPerimeterButton");// this is the math only formula button 
-const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the all formula button 
+const sohCahToaButton = document.getElementById("sohCahToaButton");// this si the soh cah toa button on the math formula page button 
 const inverseButton = document.getElementById("inverseButton");// this is the button on the math formula page 
 const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this is the sine la  for side button on the math formula page 
-const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the all formula page that tales u to the sine law for angles 
+const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the math formula page that tales u to the sine law for angles 
+const cosineLawSidesButton = document.getElementById("cosineLawSidesButton");// this is the cosine law sides button on the math formula page
+
+
 
 
 
@@ -265,6 +275,10 @@ const sohCahToaBackButton = document.getElementById("sohCahToaBackButton");// th
 const InverseBackButton = document.getElementById("InverseBackButton");// this is the inverse page back button 
 const sinLawSidesBackButton = document.getElementById("sinLawSidesBackButton");// this is the back button on the sine law for side page 
 const sinLawAnglesBackButton = document.getElementById("sinLawAnglesBackButton");// this is the back button on the all formula page that tales u to the sine law for angles 
+const cosineLawSidesBackButton = document.getElementById("cosineLawSidesBackButton");// this is the back button on the cosine law for sides pages
+
+
+
 
 
 
@@ -773,6 +787,31 @@ sinLawAnglesAnglePopup.style.display = "none";// hides the pop up
 
 
 
+// THESE ARE FOR THE SINE LAW  FOR SIDE
+const cosineLawSidesPopup = document.getElementById("cosineLawSidesPopup");// this is the popup for displacement final velocity equation  
+const cosineLawSidesSelectedVariable = document.getElementById("cosineLawSidesSelectedVariable");// this holds the selected variaple 
+const cosineLawSidesSelectedSide = document.getElementById("cosineLawSidesSelectedSide");// this holds the selected variaple 
+const cosineLawSidesInputs = document.getElementById("cosineLawSidesInputs");// these are the inputs 
+const calculateCosineLawSides = document.getElementById("calculateCosineLawSides"); // calulate button 
+calculateCosineLawSides.style.display = "none";// hides this intiteall 
+const changeCosineLawSidesVariable = document.getElementById("changeCosineLawSidesVariable");// change variable button 
+changeCosineLawSidesVariable.style.display = "none";// hides this intiteall 
+const cosineLawSidesResult = document.getElementById("cosineLawSidesResult");// resut line 
+const variableButton9 = document.querySelectorAll(".variableButton9");// variable buttons 
+const sinLawSidesSidePopup = document.getElementById("sinLawSidesSidePopup");// this is the popup for displacement final velocity equation  
+const cosineLawSidesSidePopup = document.getElementById("cosineLawSidesSidePopup");// this is the popup for displacement final velocity equation  
+const changecosineLawSidesSide = document.getElementById("changecosineLawSidesSide");// change variable button 
+changecosineLawSidesSide.style.display = "none";// hides this intiteall 
+sinLawSidesSidePopup.style.display = "none";// hides the pop up 
+
+
+
+
+
+
+
+
+
 
 // THESE ARE ALL OF THE FORMULA PAGE BUTTONS AND THEIR FUNCTIONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
@@ -790,6 +829,10 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
+
+
+
+
 
 
 
