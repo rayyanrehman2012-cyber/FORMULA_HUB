@@ -8814,6 +8814,7 @@ physicsSearchInput.addEventListener("input", function() {// if the physics serac
 });
 
 
+
 //THESE ARE FOR THE SEARCH BAR ON THE MATH formula PAGE
 let mathSearchInput = document. getElementById("mathSearchInput")// this is the searchpare input, holder 
 let mathFormulaButtonsSearch = document.querySelectorAll(".mathFormulaPage .formulaButton");// this is the variable that holds all the buttons 
