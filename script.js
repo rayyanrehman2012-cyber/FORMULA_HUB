@@ -797,8 +797,6 @@ const changeCosineLawSidesVariable = document.getElementById("changeCosineLawSid
 changeCosineLawSidesVariable.style.display = "none";// hides this intiteall 
 const cosineLawSidesResult = document.getElementById("cosineLawSidesResult");// resut line 
 const variableButton9s = document.querySelectorAll(".variableButton9");// variable buttons 
-const changecosineLawSidesSide = document.getElementById("changecosineLawSidesSide");// change variable button 
-changecosineLawSidesSide.style.display = "none";// hides this intiteall 
 
 
 
@@ -6155,16 +6153,9 @@ changeCosineLawSidesVariable.addEventListener("click", function(){// if the chan
     cosineLawSidesSelectedVariable.textContent = "";// clears the selected variable 
     cosineLawSidesResult.textContent = "";// clears the result 
     changeCosineLawSidesVariable.style.display = "none";// hides the button 
-    changecosineLawSidesSide.style.display = "none";// hides the button 
 });
 
-changecosineLawSidesSide.addEventListener("click", function(){// if the change variable button is clicked 
-    calculateCosineLawSides.style.display = "none";// this is the calculate button 
-    cosineLawSidesInputs.innerHTML = "";// clears the inputs
-    cosineLawSidesResult.textContent = "";// clears the result 
-    changeCosineLawSidesVariable.style.display = "none";// hides the button 
-    changecosineLawSidesSide.style.display = "none";// this si the change side button 
-});
+
 
 
 
@@ -6737,7 +6728,6 @@ cosineLawSidesBackButton.addEventListener("click", function(){// this is the tim
     cosineLawSidesSelectedVariable.textContent = "";// clears the selected ratio
     cosineLawSidesResult.textContent = "";// clears the result
     changeCosineLawSidesVariable.style.display = "none";// hides this
-    changecosineLawSidesSide.style.display = "none";// hides this 
 });
 
 
