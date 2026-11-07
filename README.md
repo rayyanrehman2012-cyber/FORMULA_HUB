@@ -302,8 +302,19 @@ SO I KNOW IT LOOKS LIKE WE ONLY DID 5 EQUATIONS THIS WEEK, BUT IN REALITY WE DID
 BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIME RUNNING OUT WE LEFT THE CALULATION PARTS FOR NEXT WEEK. all in all we did 15 new formulas that are fully functional, 6 formulas that are there with all structures but dont perform calculations. And search and filters for the pages this week 
 
 
+## WHAT WE MADE (WEEK 6, THIRDSPACE WEEK 8)
 
-
+- Did the calculating function for sine law AB, angle A
+- Did the calculating function for sine law AB, angle B
+- Did the calculating function for sine law AC, angle C
+- Did the calculating function for sine law AC, angle A
+- Did the calculating function for sine law BC, angle C
+- Did the calculating function for sine law BC, angle B
+- Designed and did the calculate function for the cosine law calculator  
+    - opens a popup with 3 different festion of the calculator for sides
+    - clicking it takes you to the apropreat calculator
+    -  if the calculator needs to be changed you can use the change variable button to change it 
+    
 
 
 

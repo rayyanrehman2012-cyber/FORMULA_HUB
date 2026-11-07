@@ -7234,7 +7234,7 @@ body {
 }
 
 
-#cosineLawSidesSidePopup, 
+
 #cosineLawSidesPopup {
     display: flex;
     flex-direction: column;
@@ -7246,7 +7246,7 @@ body {
 }
 
 
-#cosineLawSidesSidePopup h2,#cosineLawSidesSidePopup h3, 
+
 #cosineLawSidesPopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -7257,8 +7257,7 @@ body {
 }
 
 
-#cosineLawSidesPopup .variableButton9,
-#cosineLawSidesSidePopup .cosineLawSidesSideButtons{
+#cosineLawSidesPopup .variableButton9{
     display: block;
     width: 100%;
     max-width: 320px;
@@ -7278,8 +7277,7 @@ body {
 }
 
 
-#cosineLawSidesPopup .variableButton9:hover,
-#cosineLawSidesSidePopup .cosineLawSidesSideButtons:hover{
+#cosineLawSidesPopup .variableButton9:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
