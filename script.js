@@ -792,6 +792,7 @@ sinLawAnglesAnglePopup.style.display = "none";// hides the pop up
 
 
 
+
 // THESE ARE FOR THE COSINE LAW  FOR SIDE
 const cosineLawSidesPopup = document.getElementById("cosineLawSidesPopup");// this is the popup for displacement final velocity equation  
 const cosineLawSidesSelectedVariable = document.getElementById("cosineLawSidesSelectedVariable");// this holds the selected variaple 
