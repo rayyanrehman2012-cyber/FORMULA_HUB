@@ -4589,9 +4589,34 @@ calculateCosineLawAnglesSides.addEventListener("click", function(){// if the cal
             cosineLawAnglesResult.textContent = "ANGLE A = " + Result.toFixed(3) + " DEGREES";// this is  the result line for the calculator to displace 
             cosineLawAnglesResult.style.color = "rgb(11,61,46)";// in green 
         }
-    }
+    }// if you are calculating angle a
 
+    else if(cosineLawAnglesSelectedVariable.textContent === "COSINE LAW (ANGLE B)"){// if these are the selections made by yht user 
+        let sideA = Number(document.getElementById("cosineLawAnglesSideA").value) // Holds the value of side A
+        let sideB = Number(document.getElementById("cosineLawAnglesSideB").value);// Holds the value of side B
+        let sideC = Number(document.getElementById("cosineLawAnglesSideC").value);// Holds the value of side C
 
+        if(document.getElementById("cosineLawAnglesSideA").value === "" || document.getElementById("cosineLawAnglesSideB").value === "" || document.getElementById("cosineLawAnglesSideC").value === ""){ //If these values are left empty by the user 
+            cosineLawAnglesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
+            cosineLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( sideA < 0 ||sideB < 0 ||sideC < 0) { // if the values are negative  then do :
+            cosineLawAnglesResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // SHOW them the Error message thattels them that negatives are not allowed  s
+            cosineLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(sideA === 0 ||  sideB === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
+            cosineLawAnglesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            cosineLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Math.acos((Math.pow(sideA,2)+ Math.pow(sideC, 2) - Math.pow(sideB, 2)) / (2 * sideA * sideC)) * 180 / Math.PI;// this is the the formula for this callculator 
+            cosineLawAnglesResult.textContent = "ANGLE B = " + Result.toFixed(3) + " DEGREES";// this is  the result line for the calculator to displace 
+            cosineLawAnglesResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating angle b
 })
 
 
