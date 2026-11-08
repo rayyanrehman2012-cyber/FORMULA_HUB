@@ -84,7 +84,6 @@ const forcePage = document.querySelector(".forcePage");// this is the force page
 
 
 
-
 //THESE ARE ALL THE FORMULA BUTTON THAT ARE PRESENT ON THE ALL FORMULA SCREEN
 const allrectangleAreaButton = document.getElementById("allrectangleAreaButton");// this is the rectangle area formula button all formula page
 const allrectanglePerimeterButton = document.getElementById("allrectanglePerimeterButton");// this is the rectangle area formula button all formula page
