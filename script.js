@@ -174,6 +174,8 @@ const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// th
 
 
 
+
+
 //THESE ARE ALL THE FORMULA BUTTONS PRESENT ON THE MATH FORMULA PAGE
 const rectangleAreaButton = document.getElementById("rectangleAreaButton");// this is the rectangle area formula button math formula page only
 const rectanglePerimeterButton = document.getElementById("rectanglePerimeterButton");// this is the rectangle area formula button math formula page only
@@ -217,7 +219,8 @@ const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this i
 const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the math formula page that tales u to the sine law for angles 
 const cosineLawSidesButton = document.getElementById("cosineLawSidesButton");// this is the cosine law sides button on the math formula page
 const cosineLawAnglesButton = document.getElementById("cosineLawAnglesButton");// this is the cosine law angle button on the math formula page 
-const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton");//this is the area using trig back button 
+const areaUsingTriButton = document.getElementById("areaUsingTrigButton");//this is the area using trig back button 
+
 
 
 
@@ -285,6 +288,11 @@ const sinLawSidesBackButton = document.getElementById("sinLawSidesBackButton");/
 const sinLawAnglesBackButton = document.getElementById("sinLawAnglesBackButton");// this is the back button on the all formula page that tales u to the sine law for angles 
 const cosineLawSidesBackButton = document.getElementById("cosineLawSidesBackButton");// this is the back button on the cosine law for sides pages
 const cosineLawAnglesBackButton = document.getElementById("cosineLawAnglesBackButton");// this is the back button om tjhe angles for cosine law page 
+const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton")
+
+
+
+
 
 
 
@@ -764,6 +772,17 @@ changeCosineLawAnglesVariable.style.display = "none";// hides this intiteall
 const cosineLawAnglesResult = document.getElementById("cosineLawAnglesResult");// resut line 
 const variableButton10s = document.querySelectorAll(".variableButton10");// variable buttons 
 
+
+// THESE ARE FOR THE Area Using Trig Calculator 
+const areaUsingTrigPopup = document.getElementById("areaUsingTrigPopup");// this is the popup for displacement final velocity equation  
+const areaUsingTrigSelectedVersion = document.getElementById("areaUsingTrigSelectedVersion");// this holds the selected variaple 
+const areaUsingTrigInputs = document.getElementById("areaUsingTrigInputs");// these are the inputs 
+const calculateAreaUsingTrig = document.getElementById("calculateAreaUsingTrig"); // calulate button 
+calculateAreaUsingTrig.style.display = "none";// hides this intiteall 
+const changeAreaUsingTrigVersion = document.getElementById("changeAreaUsingTrigVersion");// change variable button 
+changeAreaUsingTrigVersion.style.display = "none";// hides this intiteall 
+const areaUsingTrigResult = document.getElementById("areaUsingTrigResult");// resut line 
+const variableButton11s = document.querySelectorAll(".variableButton11");// variable buttons 
 
 
 
