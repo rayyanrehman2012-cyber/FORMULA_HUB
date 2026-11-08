@@ -4657,7 +4657,16 @@ calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate 
     }// if you are calculating area with angle a
 })
 
+calculateHeronsFormula.addEventListener("click", function(){
+    const sideA = Number(document.getElementById("heronsSideA").value);
+    const sideB = Number(document.getElementById("heronsSideB").value);
+    const sideC = Number(document.getElementById("heronsSideC").value);
 
+    if(document.getElementById("heronsSideA").value === "" || document.getElementById("heronsSideB").value === "" || document.getElementById("heronsSideC").value === ""){// if any of the 3 values are left blank by th user then \
+        heronsFormulaResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
+        heronsFormulaResult.style.color = "rgb(102,21,7)";// this is the color for the message (red
+    }
+})
 
 
 
