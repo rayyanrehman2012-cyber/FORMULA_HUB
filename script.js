@@ -4566,7 +4566,7 @@ calculateCosineLawAnglesSides.addEventListener("click", function(){// if the cal
 calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate cosine law angle button is clicked then do this 
     let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
 
-    if(areaUsingTrigSelectedVersion.textContent === "COSINE LAW (ANGLE A)"){// if these are the selections made by yht user 
+    if(areaUsingTrigSelectedVersion.textContent === "SIDE B: ANGLE A: SIDE C"){// if these are the selections made by yht user 
         let angleA = Number(document.getElementById("areaUsingTrigAngleA").value) // Holds the value of side A
         let sideB = Number(document.getElementById("areaUsingTrigSideB").value);// Holds the value of side B
         let sideC = Number(document.getElementById("areaUsingTrigSideC").value);// Holds the value of side C
@@ -4588,6 +4588,33 @@ calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate 
 
         else{
             Result = 0.5 * sideB * sideC * Math.sin(angleA * Math.PI / 180);// this is the the formula for the area calculator
+            areaUsingTrigResult.textContent = " TRIANGLE AREA = " + Result.toFixed(3) + " UNITS SQUARED";// this is  the result line for the calculator to display  
+            areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating area with angle a
+
+    else if(areaUsingTrigSelectedVersion.textContent === "SIDE A: ANGLE B: SIDE C"){// if these are the selections made by yht user 
+        let angleB = Number(document.getElementById("areaUsingTrigAngleB").value) // Holds the value of side A
+        let sideA = Number(document.getElementById("areaUsingTrigSideA").value);// Holds the value of side B
+        let sideC = Number(document.getElementById("areaUsingTrigSideC").value);// Holds the value of side C
+
+        if(document.getElementById("areaUsingTrigAngleB").value === "" || document.getElementById("areaUsingTrigSideA").value === "" || document.getElementById("areaUsingTrigSideC").value === ""){ //If these values are left empty by the user 
+            areaUsingTrigResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( angleB < 0 || angleB > 180 ||sideA < 0 ||sideC < 0) { // if the values are negative or the angles are to big
+            areaUsingTrigResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE! & THE ANGLE CANT BE GREATER THAN 180 DEGREES"; // this is the error message that will be shown 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(angleB === 0 ||  sideA === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
+            areaUsingTrigResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = 0.5 * sideA * sideC * Math.sin(angleB * Math.PI / 180);// this is the the formula for the area calculator
             areaUsingTrigResult.textContent = " TRIANGLE AREA = " + Result.toFixed(3) + " UNITS SQUARED";// this is  the result line for the calculator to display  
             areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
         }
@@ -5984,7 +6011,7 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
         areaUsingTrigResult.textContent = "";// Hides the text content of the result line 
 
         if (button.value === "TRIG1"){// If the button that was selected is the cosine law for angles, for angle a
-            areaUsingTrigSelectedVersion.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
+            areaUsingTrigSelectedVersion.textContent = "SIDE B: ANGLE A: SIDE C"; // the text content for the selcted veriable will be this  
             areaUsingTrigInputs.innerHTML = ` 
                 <label for="areaUsingTrigSideB">SIDE B (b)</label>
                 <input type="number" id="areaUsingTrigSideB" >
@@ -5992,11 +6019,11 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
                 <input type="number" id="areaUsingTrigSideC" >
                 <label for="areaUsingTrigAngleA">ANGLE A (°)</label>
                 <input type="number" id="areaUsingTrigAngleA" >
-            `;// add all of this in the htmls  
+            `;// add all of this in the htmls (this is what gives the inputs)
         }
 
         else if (button.value === "TRIG2"){// If the button that was selected is the cosine law for angles, for angle a
-            areaUsingTrigSelectedVersion.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
+            areaUsingTrigSelectedVersion.textContent = "SIDE A: ANGLE B: SIDE C"; // the text content for the selcted veriable will be this  
             areaUsingTrigInputs.innerHTML = ` 
                 <label for="areaUsingTrigSideA">SIDE A (a)</label>
                 <input type="number" id="areaUsingTrigSideA" >
@@ -6004,20 +6031,9 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
                 <input type="number" id="areaUsingTrigSideC" >
                 <label for="areaUsingTrigAngleB">ANGLE B (°)</label>
                 <input type="number" id="areaUsingTrigAngleB" >
-            `;// add all of this in the htmls  
+            `;// add all of this in the htmls  (this is what givess the inputs)
         }
 
-        else if (button.value === "TRIG3"){// If the button that was selected is the cosine law for angles, for angle a
-            areaUsingTrigSelectedVersion.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
-            areaUsingTrigInputs.innerHTML = ` 
-                <label for="areaUsingTrigSideA">SIDE A (a)</label>
-                <input type="number" id="areaUsingTrigSideA" >
-                <label for="areaUsingTrigSideA">SIDE B (b)</label>
-                <input type="number" id="areaUsingTrigSideA" >
-                <label for="areaUsingTrigAngleC">ANGLE C (°)</label>
-                <input type="number" id="areaUsingTrigAngleC" >
-            `;// add all of this in the htmls  
-        }
 
         areaUsingTrigResult.textContent = "";// clears the result
         calculateAreaUsingTrig.style.display = "block";// shows te calculate button 
