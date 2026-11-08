@@ -6304,8 +6304,8 @@ variableButton13s.forEach(function(button){// search all of the variable 10 butt
         weightResult.textContent = "";// Hides thWEIGHTntent of the result line 
 
         if (button.value === "WFG"){// If the button that was selected is the cosine law for angles, for angle a
-            forceSelectedVariable.textContent = "WEIGHT (Fg)"; // the text content for the selcted veriable will be this  
-            forceInputs.innerHTML = ` 
+            weightSelectedVariable.textContent = "WEIGHT (Fg)"; // the text content for the selcted veriable will be this  
+            weightInputs.innerHTML = ` 
                 <label for="forceGravity">GRAVITY (METERS/SECOND SQUARED)</label>
                 <input type="number" id="forceGravity" >
                 <label for="forceMass">MASS (KG)</label>
@@ -6315,30 +6315,30 @@ variableButton13s.forEach(function(button){// search all of the variable 10 butt
         }
 
         else if (button.value === "WM"){// If the button that was selected is the cosine law for angles, for angle a
-            forceSelectedVariable.textContent = "ACCELERATION (METERS/SECOND)"; // the text content for the selcted veriable will be this  
-            forceInputs.innerHTML = ` 
-                <label for="forceForce">FORCE (N)</label>
-                <input type="number" id="forceForce" >
-                <label for="forceMass">MASS (KG)</label>
-                <input type="number" id="forceMass" >
+            weightSelectedVariable.textContent = "MASS (KG)"; // the text content for the selcted veriable will be this  
+            weightInputs.innerHTML = ` 
+                <label for="weightGravity">GRAVITY (METERS/SECOND SQUARED)</label>
+                <input type="number" id="weightGravity" >
+                <label for="weightWeight">WEIGHT (Fg)</label>
+                <input type="number" id="weightGravity" >
                 
             `;// add all of this in the htmls (this is what gives the inputs)
         }
 
         else if (button.value === "WG"){// If the button that was selected is the cosine law for angles, for angle a
-            forceSelectedVariable.textContent = "FORCE (N)"; // the text content for the selcted veriable will be this  
-            forceInputs.innerHTML = ` 
-                <label for="forceAcceleration">ACCELERATION (METERS/SECOND)</label>
-                <input type="number" id="forceAcceleration" >
-                <label for="forceMass">MASS (KG)</label>
-                <input type="number" id="forceMass" >
+            weightSelectedVariable.textContent = "GRAVITY (METERS/SECOND SQUARED)"; // the text content for the selcted veriable will be this  
+            weightInputs.innerHTML = ` 
+                <label for="weightWeight">WEIGHT (Fg)</label>
+                <input type="number" id="weightGravity" >
+                <label for="weightMass">MASS (KG)</label>
+                <input type="number" id="weightMass">
                 
             `;// add all of this in the htmls (this is what gives the inputs)
         }
 
-        forceResult.textContent = "";// clears the result
-        calculateForce.style.display = "block";// shows te calculate button 
-        changeForceVersion.style.display = "block";// shows change change law verstio  button
+        weightResult.textContent = "";// clears the result
+        calculateWeight.style.display = "block";// shows te calculate button 
+        changeWeightVersion.style.display = "block";// shows change change law verstio  button
         playButtonClickSound(); // play the sounds when the button is clicked 
     });
 })
