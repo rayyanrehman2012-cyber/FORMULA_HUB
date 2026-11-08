@@ -7974,7 +7974,8 @@ body {
 
 #changeForceVersion:hover {
     background: rgb(11,61,46);
-    color: rgb(247, 249, 248);
+    color: rgb(247,249,248); 
+
     transform:scale(1.2);
 }
 
@@ -7986,7 +7987,6 @@ body {
     width: 100%;
     box-sizing: border-box;
     gap: 12px;
-
 }
 
 

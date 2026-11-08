@@ -4714,6 +4714,35 @@ calculateHeronsFormula.addEventListener("click", function(){
 
 })
 
+calculateForce.addEventListener("click", function(){ // this is the calculate force button 
+    let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
+
+    if(areaUsingTrigSelectedVersion.textContent === "MASS (KG)"){// if these are the selections made by yht user 
+        let Acceleration = Number(document.getElementById("forceAcceleration").value) // Holds the value of side A
+        let Force = Number(document.getElementById("forceForce").value);// Holds the value of side B
+
+        if(document.getElementById("forceAcceleration").value === "" || document.getElementById("forceForce").value === ""){ //If these values are left empty by the user 
+            areaUsingTrigResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Force < 0 ||Acceleration < 0) { // if the values are negative or the angles are to big
+            areaUsingTrigResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Force === 0 ||  Acceleration === 0) { // if the values are engative or to big(for angle)
+            areaUsingTrigResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = 0.5 * sideB * sideC * Math.sin(angleA * Math.PI / 180);// this is the the formula for the area calculator
+            areaUsingTrigResult.textContent = " TRIANGLE AREA = " + Result.toFixed(3) + " UNITS SQUARED";// this is  the result line for the calculator to display  
+            areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating area with angle a
+})
 
 
 
@@ -6148,7 +6177,7 @@ variableButton12s.forEach(function(button){// search all of the variable 10 butt
     button.addEventListener("click", function(){ // if any of the buttons are clicked 
         forcePopup.style.display = "none"// hides the popup page 
         changeForceVersion.style.display = "none" // hide the change variable button 
-        changeForceVersion.textContent = "";// Clear the selected angle variable 
+        forceSelectedVariable.textContent = "";// Clear the selected angle variable 
         forceInputs.innerHTML = "";// clears the input the htmll that was added before 
         forceResult.textContent = "";// Hides the text content of the result line 
 
