@@ -4646,7 +4646,6 @@ calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate 
             areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
         }
     }// if you are calculating area with angle a
-
 })
 
 

@@ -148,7 +148,7 @@
                     <button id = "allcosineLawSidesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR SIDES)</button>
                     <button id = "allcosineLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR ANGLES)</button>
                     <button id = "allAreaUsingTrigButton" class = "formulaButton" data-categories = "2d-shapes trigonometry area">TRIANGLE AREA USING TRIGONOMETRY (SAS)</button>
-
+                    <button id = "allHeronsFormulaButton" class = "formulaButton" data-categories = "2d-shapes  area">HERON'S FORMULA</button>
                 </div>
 
             </section>
@@ -271,6 +271,7 @@
                 <button id = "cosineLawSidesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR SIDES)</button>
                 <button id = "cosineLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR ANGLES)</button>
                 <button id = "AreaUsingTrigButton" class = "formulaButton" data-categories = "2d-shapes trigonometry area">TRIANGLE AREA USING TRIGONOMETRY (SAS)</button>
+                <button id = "HeronsFormulaButton" class = "formulaButton" data-categories = "2d-shapes area">HERONS FORMULA BUTTON</button>
             </div>
 
             <button id="mathBackButton">BACK</button>
@@ -1542,8 +1543,29 @@
 
             <button id="areaUsingTrigBackButton">BACK</button>
         </main>
+
+        <main class="HeronsFormulaPage">
+            <h1> HERON'S FORMULA</h1>
+
+             <div class = "calculatorBox">
+                <label for = "heronsFormulaSideA">SIDE A</label>   
+                <input id = "heronsFOrmulaSideA" type = "number">
+
+                <label for = "heronsFormulaSideB">SIDE A</label>   
+                <input id = "heronsFOrmulaSideB" type = "number">
+
+                <label for = "heronsFormulaSideC">SIDE C</label>   
+                <input id = "heronsFOrmulaSideC" type = "number">
+
+                <button id = "calculateHeronsFormula">CALCULATE</button>
+                <p id = "heronsFormulaResult"></p>
+            </div>
+
+            <button id="heronsFormulaBackButton">BACK</button>
+        </main>
         
         <script src="./script.js"></script>
         
     </body>
+
     </html>
