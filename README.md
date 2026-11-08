@@ -324,22 +324,28 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
     - Did the calculating function for sine law BC, angle C
     - Did the calculating function for sine law BC, angle B
 - Designed and did the calculate function for the cosine law for Side calculator  page  
-    - opens a popup with 3 different festion of the calculator for sides
+    - opens a popup with 3 different versions of the calculator for sides
         - Side A
         - Side B
         - Side C
-    - clicking it takes you to the appropriates calculator
+    - clicking it takes you to the appropriate  calculator
     - if the calculator needs to be changed you can use the change variable button to change it 
 - Designed and did the calculate function for the cosine law for angles calculator  page  
-    - opens a popup with 3 different festion of the calculator for sides
+    - opens a popup with 3 different versions of the calculator for sides
         - Angle A
         - Angle B
         - Angle C
-    - clicking it takes you to the appropriates calculator
+    - clicking it takes you to the appropriate calculator
     - if the calculator needs to be changed you can use the change variable button to change it  
+- Designed and did the calculate funtion for the Area Using Trigonomtry (SAS) Calculator 
+    - opens a popup with 3 different versions of the formula
+        - SIDE B: ANGLE A: SIDE C
+        - SIDE A: ANGLE B: SIDE C
+        - SIDE A: ANGLE C: SIDE B
+    - clicking these buttons on the popup brings you to the appropriate calculator 
+    - if you want to swithc your formula  version, then click there is a change variable button
 
-
-
+In total, I made 9 calculators today, and finished 3 more ontop of that
 
 
 

@@ -7499,3 +7499,222 @@ body {
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
+
+
+.areaUsingTrigPage{
+    min-height:100vh;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    position:relative
+}
+
+
+.areaUsingTrigPage::before{
+    content: "";
+    position:absolute;
+    inset: 12px;
+    min-height: calc(100% - 24px);
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events:none;
+}
+
+
+.areaUsingTrigPage h1 {
+    margin-top:80px;
+    font-size:65px;
+    text-align: center;
+    font-weight:800;
+    letter-spacing:3px;
+    text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
+    font-family: 'Baloo 2', sans-serif;
+}
+
+
+#areaUsingTrigBackButton{
+    border:none;
+    border-radius:15px;
+    background:rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    width: 80px;
+    height: 35px;
+    position:absolute;
+    top: 35px;
+    left: 35px;
+    box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
+    cursor:pointer;
+    transition: 0.2s ease;
+}
+
+
+#areaUsingTrigBackButton:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+
+#areaUsingTrigResult {
+    color: rgb(11,61,46);
+    font-size:24px;
+    font-weight:800;
+    margin:15px 0 0;
+}
+
+
+#calculateAreaUsingTrig{
+    border: none;
+    border-radius:15px;
+    background: rgb(11,61,46);
+    color: rgb(247,249,248);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 30px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top:5px;
+}
+
+
+#calculateAreaUsingTrig:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+
+.areaUsingTrigPage .calculatorBox {
+    top: 10px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+
+#areaUsingTrigInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#areaUsingTrigInputs label{
+    color: rgb(11,61,46);
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+
+#areaUsingTrigInputs input{
+    width:250px;
+    height:40px;
+    border: 3px solid rgb(11,61,46);
+    border-radius: 10px;
+    font-family:'baloo 2', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#areaUsingTrigInputs select{
+    width:260px;
+    height:50px;
+    border: 3px solid rgb(11,61,46);
+    border-radius: 10px;
+    font-family:'baloo 2', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#areaUsingTrigInputs select,
+#areaUsingTrigInputs input:focus {
+    outline: none;
+    border-color: rgb(128, 170, 144);
+}
+
+
+#changeAreaUsingTrigVersion{
+    border: none;
+    border-radius:15px;
+    background: rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 30px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    margin-bottom:10px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin-top:5px;
+}
+
+
+#changeAreaUsingTrigVersion:hover {
+    background: rgb(11,61,46);
+    color: rgb(247, 249, 248);
+    transform:scale(1.2);
+}
+
+
+
+#areaUsingTrigPopup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 12px;
+
+}
+
+
+
+#areaUsingTrigPopup h2 {
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+#areaUsingTrigPopup .variableButton11{
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    min-height: 45px;
+    padding: 8px 12px;
+    border: 2px solid rgb(11, 61, 46);
+    border-radius: 12px;
+    background: rgb(247, 249, 248);
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom:10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+
+#areaUsingTrigPopup .variableButton11:hover{
+    background: rgb(11,61,46);
+    color: rgb(247, 249, 248);
+    transform: scale(1.2);
+}

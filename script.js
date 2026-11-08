@@ -7972,6 +7972,9 @@ allAreaUsingTrigButton.addEventListener("click", function (){// the Average velo
 
 
 
+
+
+
 //THESE ARE ALL OF THE BUTONS ON THE MATH FORMULA PAGE
 rectangleAreaButton.addEventListener("click", function() {// takes you tot he rectanke area screen 
     startPage.style.display = "none";// the start page is not visibe
@@ -8801,7 +8804,7 @@ cosineLawAnglesButton.addEventListener("click", function(){// if the time indipe
     cosineLawAnglesPage.style.display = "flex"// shows this page
 });
 
-areaUsingTriButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+AreaUsingTrigButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
     mathFormulaPage.style.display = "none";// hides this page 
@@ -8823,6 +8826,8 @@ areaUsingTriButton.addEventListener("click", function(){// if the time indipende
     cubeVolumePage.style.display = "none";// hid this page 
     areaUsingTrigPage.style.display = "flex"// shows this page
 });
+
+
 
 
 
