@@ -76,6 +76,7 @@ const areaUsingTrigPage = document.querySelector(".areaUsingTrigPage");// this i
 const HeronsFormulaPage = document.querySelector(".HeronsFormulaPage");// this is the herons formula page for the hermons formul calculators
 const forcePage = document.querySelector(".forcePage");// this is the force page for the force calculators 
 const weightPage = document.querySelector(".weightPage");// this is the weght calculator page 
+const normalPage = document.querySelector(".normalPage");// this is the normal force calculator page on this website that we made 
 
 
 
@@ -146,7 +147,7 @@ const allAreaUsingTrigButton = document.getElementById("allAreaUsingTrigButton")
 const allHeronsFormulaButton = document.getElementById("allHeronsFormulaButton");// this is the herons formul button on the all formumul page 
 const allforceButton = document.getElementById("allforceButton");// this is the force calculator button on a the all formula page 
 const allweightButton = document.getElementById("allweightButton");// this is the weight calculator button on the all formula page 
-
+const allnormalButton = document.getElementById("allnormalButton");// this is the normal force calculator putton on the all gormula pages 
 
 
 
@@ -170,9 +171,9 @@ const displacementFinalEquationButton = document.getElementById("displacementFin
 const timeIndependentButton = document.getElementById("timeIndependentButton");// this is the button on the physics formula page that takes you to the poups 
 const averageVelocityDisplacementButton = document.getElementById("averageVelocityDisplacement");// this is the average velocity equation button on the physics  formula page 
 const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// this is the area using tric button on the math formula page 
-const forceButton = document.getElementById("forceButton");// this is the force calculator button on a the all formula page 
-const weightButton = document.getElementById("weightButton");// this is the force calculator button on the all formula page 
-
+const forceButton = document.getElementById("forceButton");// this is the force calculator button on a the physics  formula page 
+const weightButton = document.getElementById("weightButton");// this is the force calculator button on the physics  formula page 
+const normalButton = document.getElementById("normalButton");// this is the normal force calculator button on the phhysics formula page 
 
 
 
@@ -304,6 +305,7 @@ const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton
 const heronsFormulaBackButton = document.getElementById("heronsFormulaBackButton");// this is the back button on the herons formula calculator page 
 const forceBackButton = document.getElementById("forceBackButton");// this is the back button on the force formula page 
 const WeightBackButton = document.getElementById("WeightBackButton");// this is the back button on the weight page 
+const normalBackButton = document.getElementById("normalBackButton");// this is the back button on the normal force calculator page 
 
 
 
@@ -830,6 +832,18 @@ changeWeightVersion.style.display = "none";// hides this intiteall
 const weightResult = document.getElementById("weightResult");// resut line 
 const variableButton13s = document.querySelectorAll(".variableButton13");// variable buttons 
 
+
+
+// THESE ARE FOR THE Area Using Trig Calculator 
+const normalPopup = document.getElementById("normalPopup");// this is the popup for displacement final velocity equation  
+const normalSelectedVariable = document.getElementById("normalSelectedVariable");// this holds the selected variaple 
+const normalInputs = document.getElementById("normalInputs");// these are the inputs 
+const calculateNormal = document.getElementById("calculateNormal"); // calulate button 
+calculateNormal.style.display = "none";// hides this intiteall 
+const changeNormalVersion = document.getElementById("changeNormalVersion");// change variable button 
+changeNormalVersion.style.display = "none";// hides this intiteall 
+const normalResult = document.getElementById("normalResult");// resut line 
+const variableButton14s = document.querySelectorAll(".variableButton14");// variable buttons 
 
 
 
