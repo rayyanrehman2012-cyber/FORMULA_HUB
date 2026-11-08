@@ -72,6 +72,7 @@ const sinLawSidesPage = document.querySelector(".sinLawSidesPage");// this is th
 const sinLawAnglesPage = document.querySelector(".sinLawAnglesPage");// this is the sine law formula pages                 
 const cosineLawSidesPage = document.querySelector(".cosineLawSidesPage");// this is the cosine law for side page
 const cosineLawAnglesPage = document.querySelector(".cosineLawAnglesPage");// this is the cosine law angles page 
+const areaUsingTrigPage = document.querySelector(".areaUsingTrigPage");// this is the are using triq calculator page 
 
 
 
@@ -136,7 +137,9 @@ const allinverseButton = document.getElementById("allinverseButton");// this is 
 const allsinLawSidesButton = document.getElementById("allsinLawSidesButton");// this is the button on the all  formula page that takes u to  the sine law for sides page 
 const allsinLawAnglesButton = document.getElementById("allsinLawAnglesButton");// this is the button on the all formula page that tales u to the sine law for angles 
 const allcosineLawSidesButton = document.getElementById("allcosineLawSidesButton");// this is the cosine law sides button on the all formula page
-const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButton")
+const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButton");// this is the cosine law for angles button on the all formula page 
+const allAreaUsingTrigButton = document.getElementById("allAreaUsingTrigButton");// this is the area using tric button on the alll formula page 
+
 
 
 
@@ -160,6 +163,7 @@ const displacementInitialEquationButton = document.getElementById("displacementI
 const displacementFinalEquationButton = document.getElementById("displacementFinalEquationButton");// this is the 3rd kinamatic equation button on the physics formula page 
 const timeIndependentButton = document.getElementById("timeIndependentButton");// this is the button on the physics formula page that takes you to the poups 
 const averageVelocityDisplacementButton = document.getElementById("averageVelocityDisplacement");// this is the average velocity equation button on the physics  formula page 
+const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// this is the area using tric button on the math formula page 
 
 
 
@@ -212,8 +216,8 @@ const inverseButton = document.getElementById("inverseButton");// this is the bu
 const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this is the sine la  for side button on the math formula page 
 const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the math formula page that tales u to the sine law for angles 
 const cosineLawSidesButton = document.getElementById("cosineLawSidesButton");// this is the cosine law sides button on the math formula page
-const cosineLawAnglesButton = document.getElementById("cosineLawAnglesButton")// this is the cosine law angle button on the math formula page 
-
+const cosineLawAnglesButton = document.getElementById("cosineLawAnglesButton");// this is the cosine law angle button on the math formula page 
+const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton");//this is the area using trig back button 
 
 
 
