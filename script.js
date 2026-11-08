@@ -4658,16 +4658,36 @@ calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate 
 })
 
 calculateHeronsFormula.addEventListener("click", function(){
-    const sideA = Number(document.getElementById("heronsSideA").value);
-    const sideB = Number(document.getElementById("heronsSideB").value);
-    const sideC = Number(document.getElementById("heronsSideC").value);
+    const sideA = Number(document.getElementById("heronsSideA").value); // this is the side a 
+    const sideB = Number(document.getElementById("heronsSideB").value); // this is the side b
+    const sideC = Number(document.getElementById("heronsSideC").value); // this is the side c
 
     if(document.getElementById("heronsSideA").value === "" || document.getElementById("heronsSideB").value === "" || document.getElementById("heronsSideC").value === ""){// if any of the 3 values are left blank by th user then \
         heronsFormulaResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
         heronsFormulaResult.style.color = "rgb(102,21,7)";// this is the color for the message (red
     }
-})
 
+    else if(sideA<0||sideB<0||sideC<0){
+        heronsFormulaResult.textContent = "ERROR: NO NEGATIVES!" // the aree mewsage for the person 
+        heronsFormulaResult.style.color = "rgb(102,21,7)";// this is the color for the message(red)
+    }
+
+    else if(sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA){ // makes sure that the sidnes make a triangle 
+        heronsFormulaResult.textContent = "ERROR: SIDES DON'T FORM A TRIANGLE" // the aree mewsage for the person 
+        heronsFormulaResult.style.color = "rgb(102,21,7)";// this is the color for the message(red)
+    }
+
+    else{
+        const s = (sideA + sideB + sideC) / 2; // gets the value of s \
+
+        const result = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC)); // this is the formula 
+        
+        heronsFormulaResult.textContent = "AREA = " + result + " UNITS SQUARED"// the aree mewsage for the person 
+        heronsFormulaResult.style.color = "rgb(11,61,46)";// this is the color for the message(red)
+
+    }
+
+})
 
 
 
