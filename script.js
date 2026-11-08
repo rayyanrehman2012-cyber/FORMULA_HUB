@@ -4620,6 +4620,33 @@ calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate 
         }
     }// if you are calculating area with angle a
 
+    else if(areaUsingTrigSelectedVersion.textContent === "SIDE A: ANGLE C: SIDE B"){// if these are the selections made by yht user 
+        let angleC = Number(document.getElementById("areaUsingTrigAngleC").value) // Holds the value of side A
+        let sideA = Number(document.getElementById("areaUsingTrigSideA").value);// Holds the value of side B
+        let sideB = Number(document.getElementById("areaUsingTrigSideB").value);// Holds the value of side C
+
+        if(document.getElementById("areaUsingTrigSideB").value === "" || document.getElementById("areaUsingTrigSideA").value === "" || document.getElementById("areaUsingTrigAngleC").value === ""){ //If these values are left empty then show the user this error message  
+            areaUsingTrigResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( angleC < 0 || angleC > 180 ||sideA < 0 ||sideB < 0) { // if the values are negative or the angles are to big
+            areaUsingTrigResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE! & THE ANGLE CANT BE GREATER THAN 180 DEGREES"; // this is the error message that will be shown 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(angleC === 0 ||  sideA === 0 ||  sideB === 0) { // if the values are engative or to big(for angle)
+            areaUsingTrigResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = 0.5 * sideA * sideB * Math.sin(angleC * Math.PI / 180);// this is the the formula for the area calculator
+            areaUsingTrigResult.textContent = " TRIANGLE AREA = " + Result.toFixed(3) + " UNITS SQUARED";// this is  the result line for the calculator to display  
+            areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating area with angle a
+
 })
 
 
@@ -6034,6 +6061,17 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
             `;// add all of this in the htmls  (this is what givess the inputs)
         }
 
+        else if (button.value === "TRIG3"){// If the button that was selected is the cosine law for angles, for angle a
+            areaUsingTrigSelectedVersion.textContent = "SIDE A: ANGLE C: SIDE B"; // the text content for the selcted veriable will be this  
+            areaUsingTrigInputs.innerHTML = ` 
+                <label for="areaUsingTrigSideA">SIDE A (a)</label>
+                <input type="number" id="areaUsingTrigSideA" >
+                <label for="areaUsingTrigSideB">SIDE B (b)</label>
+                <input type="number" id="areaUsingTrigSideB" >
+                <label for="areaUsingTrigAngleC">ANGLE C (°)</label>
+                <input type="number" id="areaUsingTrigAngleC" >
+            `;// add all of this in the htmls  (this is what givess the inputs)
+        }
 
         areaUsingTrigResult.textContent = "";// clears the result
         calculateAreaUsingTrig.style.display = "block";// shows te calculate button 
