@@ -74,6 +74,8 @@ const cosineLawSidesPage = document.querySelector(".cosineLawSidesPage");// this
 const cosineLawAnglesPage = document.querySelector(".cosineLawAnglesPage");// this is the cosine law angles page 
 const areaUsingTrigPage = document.querySelector(".areaUsingTrigPage");// this is the are using triq calculator page 
 const HeronsFormulaPage = document.querySelector(".HeronsFormulaPage");// this is the herons formula page for the hermons formul calculators
+const forcePage = document.querySelector(".forcePage");// this is the force page for the force calculators 
+
 
 
 
@@ -140,6 +142,8 @@ const allcosineLawSidesButton = document.getElementById("allcosineLawSidesButton
 const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButton");// this is the cosine law for angles button on the all formula page 
 const allAreaUsingTrigButton = document.getElementById("allAreaUsingTrigButton");// this is the area using tric button on the alll formula page 
 const allHeronsFormulaButton = document.getElementById("allHeronsFormulaButton");// this is the herons formul button on the all formumul page 
+const allforceButton = document.getElementById("allforceButton");// this is the force calculator button on a the all formula page 
+
 
 
 
@@ -164,6 +168,8 @@ const displacementFinalEquationButton = document.getElementById("displacementFin
 const timeIndependentButton = document.getElementById("timeIndependentButton");// this is the button on the physics formula page that takes you to the poups 
 const averageVelocityDisplacementButton = document.getElementById("averageVelocityDisplacement");// this is the average velocity equation button on the physics  formula page 
 const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// this is the area using tric button on the math formula page 
+const forceButton = document.getElementById("forceButton");// this is the force calculator button on a the all formula page 
+
 
 
 
@@ -293,8 +299,7 @@ const cosineLawSidesBackButton = document.getElementById("cosineLawSidesBackButt
 const cosineLawAnglesBackButton = document.getElementById("cosineLawAnglesBackButton");// this is the back button om tjhe angles for cosine law page 
 const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton");// this is the back button on the area using trig page 
 const heronsFormulaBackButton = document.getElementById("heronsFormulaBackButton");// this is the back button on the herons formula calculator page 
-
-
+const forceBackButton = document.getElementById("forceBackButton");// this is the back button on the force formula page 
 
 
 
@@ -797,6 +802,17 @@ const heronsFormulaResult = document.getElementById("heronsFormulaResult");// th
 const calculateHeronsFormula = document.getElementById("calculateHeronsFormula");// this is the time result 
 
 
+
+// THESE ARE FOR THE Area Using Trig Calculator 
+const forcePopup = document.getElementById("forcePopup");// this is the popup for displacement final velocity equation  
+const forceSelectedVariable = document.getElementById("forceSelectedVariable");// this holds the selected variaple 
+const forceInputs = document.getElementById("forceInputs");// these are the inputs 
+const calculateForce = document.getElementById("calculateForce"); // calulate button 
+calculateForce.style.display = "none";// hides this intiteall 
+const changeForceVersion = document.getElementById("changeForceVersion");// change variable button 
+changeForceVersion.style.display = "none";// hides this intiteall 
+const forceResult = document.getElementById("forceResult");// resut line 
+const variableButton12s = document.querySelectorAll(".variableButton12");// variable buttons 
 
 
 
@@ -4698,6 +4714,8 @@ calculateHeronsFormula.addEventListener("click", function(){
     }
 
 })
+
+
 
 
 
