@@ -4717,29 +4717,81 @@ calculateHeronsFormula.addEventListener("click", function(){
 calculateForce.addEventListener("click", function(){ // this is the calculate force button 
     let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
 
-    if(areaUsingTrigSelectedVersion.textContent === "MASS (KG)"){// if these are the selections made by yht user 
+    if(forceSelectedVariable.textContent === "MASS (KG)"){// if these are the selections made by yht user 
         let Acceleration = Number(document.getElementById("forceAcceleration").value) // Holds the value of side A
         let Force = Number(document.getElementById("forceForce").value);// Holds the value of side B
 
         if(document.getElementById("forceAcceleration").value === "" || document.getElementById("forceForce").value === ""){ //If these values are left empty by the user 
-            areaUsingTrigResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
-            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+            forceResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
         }
 
         else if( Force < 0 ||Acceleration < 0) { // if the values are negative or the angles are to big
-            areaUsingTrigResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
-            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+            forceResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
         }
 
         else if(Force === 0 ||  Acceleration === 0) { // if the values are engative or to big(for angle)
-            areaUsingTrigResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
-            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+            forceResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
         }
 
         else{
-            Result = 0.5 * sideB * sideC * Math.sin(angleA * Math.PI / 180);// this is the the formula for the area calculator
-            areaUsingTrigResult.textContent = " TRIANGLE AREA = " + Result.toFixed(3) + " UNITS SQUARED";// this is  the result line for the calculator to display  
-            areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
+            Result = Force/Acceleration;// this is the the formula for the force calculator
+            forceResult.textContent = " MASS OF THE OBJECT = " + Result.toFixed(3) + " KILOGRAMS";// this is  the result line for the calculator to display  
+            forceResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating area with angle a
+
+    else if(forceSelectedVariable.textContent === "ACCELERATION (METERS/SECOND)"){// if these are the selections made by yht user 
+        let Mass = Number(document.getElementById("forcMass").value) // Holds the value of side A
+        let Force = Number(document.getElementById("forceForce").value);// Holds the value of side B
+
+        if(document.getElementById("forceMass").value === "" || document.getElementById("forceForce").value === ""){ //If these values are left empty by the user 
+            forceResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Force < 0 ||Mass < 0) { // if the values are negative or the angles are to big
+            forceResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Force === 0 ||  Mass === 0) { // if the values are engative or to big(for angle)
+            forceResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Force/Mass;// this is the the formula for the force calculator
+            forceResult.textContent = " ACCELERATION OF THE OBJECT = " + Result.toFixed(3) + " METERS/SECOND SQUARED";// this is  the result line for the calculator to display  
+            forceResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating area with angle a
+
+    else if(forceSelectedVariable.textContent === "FORCE (N)"){// if these are the selections made by yht user 
+        let Mass = Number(document.getElementById("forceMass").value) // Holds the value of side A
+        let Acceleration = Number(document.getElementById("forceAcceleration").value);// Holds the value of side B
+
+        if(document.getElementById("forceMass").value === "" || document.getElementById("forceAcceleration").value === ""){ //If these values are left empty by the user 
+            forceResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Acceleration < 0 ||Mass < 0) { // if the values are negative or the angles are to big
+            forceResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Acceleration === 0 ||  Mass === 0) { // if the values are engative or to big(for angle)
+            forceResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            forceResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Acceleration * Mass;// this is the the formula for the force calculator
+            forceResult.textContent = " FORCE ON OBJECT = " + Result.toFixed(3) + " NEWTONS";// this is  the result line for the calculator to display  
+            forceResult.style.color = "rgb(11,61,46)";// in green 
         }
     }// if you are calculating area with angle a
 })
@@ -7008,9 +7060,9 @@ heronsFormulaBackButton.addEventListener("click", function(){// this is the tria
 });
 
 forceBackButton.addEventListener("click", function(){// this is the time independer page back button 
-    forcePage.style.display = "flex";// shows the start page again 
-    forcePopup.style.display = "none";// hides this page 
-    areaUsingTrigPopup.style.display = "flex";// shows the ratio popup
+    startPage.style.display = "flex";// shows the start page again 
+    forcePage.style.display = "none";// hides this page 
+    forcePopup.style.display = "flex";// hides this page 
     calculateForce.style.display = "none";// hides the calculate button
     forceInputs.innerHTML = "";// clears the inputs
     forceSelectedVariable.textContent = "";// clears the selected ratio
