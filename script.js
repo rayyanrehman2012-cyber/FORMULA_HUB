@@ -232,6 +232,7 @@ const HeronsFormulaButton = document.getElementById("HeronsFormulaButton");// th
 
 
 
+
 // THESE ARE ALL OF THE BACK BUTTONS IN THIS PROJECT, THEY ALL LEAD TO THE ALL FORMULA PAGE
 const backButton = document.getElementById("backButton");// back button on the all formula page 
 const squarePerimeterBackButton = document.getElementById("squarePerimeterBackButton");// this is the back button on the physics page 
@@ -815,6 +816,7 @@ physicsButton.addEventListener("click", function() {// physics formula menue
     startPage.style.display = "none";// the start page is not visible 
     physicsFormulaPage.style.display = "flex";// the physics page isvisible 
 });
+
 
 
 
