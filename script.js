@@ -4563,7 +4563,37 @@ calculateCosineLawAnglesSides.addEventListener("click", function(){// if the cal
     }// if you are calculating angle b
 })
 
+calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate cosine law angle button is clicked then do this 
+    let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
 
+    if(areaUsingTrigSelectedVersion.textContent === "COSINE LAW (ANGLE A)"){// if these are the selections made by yht user 
+        let angleA = Number(document.getElementById("areaUsingTrigAngleA").value) // Holds the value of side A
+        let sideB = Number(document.getElementById("areaUsingTrigSideB").value);// Holds the value of side B
+        let sideC = Number(document.getElementById("areaUsingTrigSideC").value);// Holds the value of side C
+
+        if(document.getElementById("areaUsingTrigAngleA").value === "" || document.getElementById("areaUsingTrigSideB").value === "" || document.getElementById("areaUsingTrigSideC").value === ""){ //If these values are left empty by the user 
+            areaUsingTrigResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( angleA < 0 || angleA > 180 ||sideB < 0 ||sideC < 0) { // if the values are negative or the angles are to big
+            areaUsingTrigResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE! & THE ANGLE CANT BE GREATER THAN 180 DEGREES"; // this is the error message that will be shown 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(angleA === 0 ||  sideB === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
+            areaUsingTrigResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            areaUsingTrigResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = 0.5 * sideB * sideC * Math.sin(angleA * Math.PI / 180);// this is the the formula for the area calculator
+            areaUsingTrigResult.textContent = " TRIANGLE AREA = " + Result.toFixed(3) + " UNITS SQUARED";// this is  the result line for the calculator to display  
+            areaUsingTrigResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }// if you are calculating area with angle a
+
+})
 
 
 
