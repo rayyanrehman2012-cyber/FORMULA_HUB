@@ -171,6 +171,7 @@
                     <button id = "allaverageVelocityDisplacement" class="formulaButton" data-categories="kinematics">KINAMATICS EQUATION - AVERAGE VELOCITY </button>
                     <button id = "allforceButton" class="formulaButton" data-categories = "mechanics">FORCE</button>
                     <button id = "allweightButton" class="formulaButton" data-categories = "mechanics">WEIGHT</button>
+                    <button id = "allnormalButton" class="formulaButton" data-categories = "mechanics">NORMAL FORCE (PERPENDICULAR SURFACE)</button>
 
                 </div>
 
@@ -307,6 +308,7 @@
                 <button id = "averageVelocityDisplacement" class="formulaButton">KINAMATICS EQUATION - AVERAGE VELOCITY </button>
                 <button id = "forceButton" class="formulaButton">FORCE</button>
                 <button id = "weightButton" class="formulaButton">WEIGHT</button>
+                <button id = "normalButton" class="formulaButton">NORMAL FORCE (PERPENDICULAR SURFACE)</button>
 
             </div>
 
@@ -1620,10 +1622,36 @@
 
                 <p id="weightResult"></p>
 
-                <button id="changeWeightVersion"> CHANGE EQUATION VERSION</button>
+                <button id="changeWeightVersion"> CHANGE SOLVING VERSION</button>
             </div>
 
             <button id="WeightBackButton">BACK</button>
+        </main>
+
+        <main class="normalPage">
+            <h1> NORMAL FORCE (PERPENDICULAR SURFACE)</h1>
+
+            <div class = "calculatorBox">
+
+                <div id="normalPopup" class = "popupMenu">
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
+                    <button class="variableButton14" value="NFNF"> NORMAL FORCE (Fn) </button>
+                    <button class="variableButton14" value="NFM"> MASS (KG) </button>
+                    <button class="variableButton14" value="NFG"> GRAVITY (METERS/SECOND SQUARED) </button>
+                </div>
+
+                <h2 id="normalSelectedVariable"></h2>
+
+                <div id="normalInputs"></div>
+
+                <button id="calculateNormal">CALCULATE</button>
+
+                <p id="normalResult"></p>
+
+                <button id="changeNormalVersion"> CHANGE SOLVING VERSION</button>
+            </div>
+
+            <button id="normalBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>

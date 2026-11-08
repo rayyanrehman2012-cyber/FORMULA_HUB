@@ -314,7 +314,7 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
 
 
 
-## WHAT WE MADE (WEEK 6, THIRDSPACE WEEK 8)
+## WHAT WE MADE (WEEK 6, THIRDSPACE WEEK 8 FINAL WEEEEEEEK!!!!!!)
 - I finished the calculation functions for the Sine law angle calculators 
     - Did the calculating function for sine law AB, angle A
     - Did the calculating function for sine law AB, angle B
@@ -361,7 +361,15 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
     - Clicking it opens a popup with 3 different versions of the formula
         - WEIGHT
         - MASS 
-        - GRAVITY 
+        - GRAVITY (METER PER SECOND)
+    - clicking these buttons on the popup brings you to the appropriate calculator 
+    - if you want to swith the variable your solving for, then there is a change variable button
+
+- Designed & made the NORMAL FORCE calculator for PERPENDICULAR SURFACE 
+    - Clicking it opens a popup with 3 different versions of the formula
+        - NORMAL FORCE (Fn)
+        - MASS (KG)
+        - GRAVITY (METERS OER SECOND)
     - clicking these buttons on the popup brings you to the appropriate calculator 
     - if you want to swith the variable your solving for, then there is a change variable button
 
