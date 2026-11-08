@@ -4810,6 +4810,65 @@ calculateForce.addEventListener("click", function(){ // this is the calculate fo
     }// if you are calculating area with angle a
 })
 
+calculateWeight.addEventListener("click", function(){ // this is the calculate force button 
+    let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
+
+    if(weightSelectedVariable.textContent === "WEIGHT (Fg)"){// if these are the selections made by yht user 
+        let Gravity = Number(document.getElementById("weightGravity").value) // Holds the value of side A
+        let Mass = Number(document.getElementById("weightMass").value);// Holds the value of side B
+
+        if(document.getElementById("weightGravity").value === "" || document.getElementById("weightMass").value === ""){ //If these values are left empty by the user 
+            weightResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            weightResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Mass < 0 ||Gravity < 0) { // if the values are negative or the angles are to big
+            weightResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            weightResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Mass === 0 ||Gravity === 0) { // if the values are engative or to big(for angle)
+            weightResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            weightResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Mass * Gravity;// this is the the formula for the weight calculator
+            weightResult.textContent = " WEIGHT OF THE OBJECT = " + Result.toFixed(3) + " NEWTONS";// this is  the result line for the calculator to display the objects  
+            weightResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+    if(weightSelectedVariable.textContent === "MASS (KG)"){// if these are the selections made by yht user 
+        let Gravity = Number(document.getElementById("weightGravity").value) // Holds the value of side A
+        let Mass = Number(document.getElementById("weightMass").value);// Holds the value of side B
+
+        if(document.getElementById("weightGravity").value === "" || document.getElementById("weightMass").value === ""){ //If these values are left empty by the user 
+            weightResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            weightResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Mass < 0 ||Gravity < 0) { // if the values are negative or the angles are to big
+            weightResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            weightResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Mass === 0 ||Gravity === 0) { // if the values are engative or to big(for angle)
+            weightResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            weightResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Mass * Gravity;// this is the the formula for the weight calculator
+            weightResult.textContent = " WEIGHT OF THE OBJECT = " + Result.toFixed(3) + " NEWTONS";// this is  the result line for the calculator to display the objects  
+            weightResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+})
+
+
+
 
 
 
@@ -6306,10 +6365,10 @@ variableButton13s.forEach(function(button){// search all of the variable 10 butt
         if (button.value === "WFG"){// If the button that was selected is the cosine law for angles, for angle a
             weightSelectedVariable.textContent = "WEIGHT (Fg)"; // the text content for the selcted veriable will be this  
             weightInputs.innerHTML = ` 
-                <label for="forceGravity">GRAVITY (METERS/SECOND SQUARED)</label>
-                <input type="number" id="forceGravity" >
-                <label for="forceMass">MASS (KG)</label>
-                <input type="number" id="forceMass">
+                <label for="weightGravity">GRAVITY (METERS/SECOND SQUARED)</label>
+                <input type="number" id="weightGravity" >
+                <label for="weightMass">MASS (KG)</label>
+                <input type="number" id="weightMass">
                 
             `;// add all of this in the htmls (this is what gives the inputs)
         }
