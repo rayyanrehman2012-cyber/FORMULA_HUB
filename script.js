@@ -6094,6 +6094,10 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
 
 
 
+
+
+
+
 //THESE ARE THE CHANGE VARIABLE BUTTONS  FOR THE DIFFERENT VERSIONS OF PHYSICS FORMULAS
 //kinamatic forumal1
 changeVelocityTimeVariable.addEventListener("click", function(){// if the change variaple button is clicked 
@@ -6853,6 +6857,14 @@ areaUsingTrigBackButton.addEventListener("click", function(){// this is the time
     changeAreaUsingTrigVersion.style.display = "none";// hides this
 });
 
+heronsFormulaBackButton.addEventListener("click", function(){// this is the triangle prism perimeter back button 
+    startPage.style.display = "flex";// shows the star pag again 
+    HeronsFormulaPage.style.display = "none";// hides this page 
+    heronsFormulaSideA.value = "";// resets 
+    heronsFormulaSideB.value = "";// resets 
+    heronsFormulaSideC.value = "";// resets 
+    heronsFormulaResult.textContent = "";// resets 
+});
 
 
 
@@ -7973,6 +7985,28 @@ allAreaUsingTrigButton.addEventListener("click", function (){// the Average velo
     areaUsingTrigPage.style.display = "flex";// shows this page
 });
 
+allHeronsFormulaButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides  the math formula page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    HeronsFormulaPage.style.display = "flex";// shows this page
+});
 
 
 
@@ -8835,7 +8869,28 @@ AreaUsingTrigButton.addEventListener("click", function(){// if the time indipend
     areaUsingTrigPage.style.display = "flex"// shows this page
 });
 
-
+HeronsFormulaButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    HeronsFormulaPage.style.display = "flex"// shows this page
+});
 
 
 
