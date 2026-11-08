@@ -73,7 +73,7 @@ const sinLawAnglesPage = document.querySelector(".sinLawAnglesPage");// this is 
 const cosineLawSidesPage = document.querySelector(".cosineLawSidesPage");// this is the cosine law for side page
 const cosineLawAnglesPage = document.querySelector(".cosineLawAnglesPage");// this is the cosine law angles page 
 const areaUsingTrigPage = document.querySelector(".areaUsingTrigPage");// this is the are using triq calculator page 
-
+const HeronsFormulaPage = document.querySelector(".HeronsFormulaPage");// this is the herons formula page for the hermons formul calculators
 
 
 
@@ -139,7 +139,7 @@ const allsinLawAnglesButton = document.getElementById("allsinLawAnglesButton");/
 const allcosineLawSidesButton = document.getElementById("allcosineLawSidesButton");// this is the cosine law sides button on the all formula page
 const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButton");// this is the cosine law for angles button on the all formula page 
 const allAreaUsingTrigButton = document.getElementById("allAreaUsingTrigButton");// this is the area using tric button on the alll formula page 
-
+const allHeronsFormulaButton = document.getElementById("allHeronsFormulaButton");// this is the herons formul button on the all formumul page 
 
 
 
@@ -219,7 +219,9 @@ const sinLawSidesButton = document.getElementById("sinLawSidesButton");// this i
 const sinLawAnglesButton = document.getElementById("sinLawAnglesButton");// this is the button on the math formula page that tales u to the sine law for angles 
 const cosineLawSidesButton = document.getElementById("cosineLawSidesButton");// this is the cosine law sides button on the math formula page
 const cosineLawAnglesButton = document.getElementById("cosineLawAnglesButton");// this is the cosine law angle button on the math formula page 
-const areaUsingTriButton = document.getElementById("areaUsingTrigButton");//this is the area using trig back button 
+const areaUsingTrigButton = document.getElementById("areaUsingTrigButton");//this is the area using trig back button 
+const HeronsFormulaButton = document.getElementById("HeronsFormulaButton");// this is the herons formul button on the all formumul page 
+
 
 
 
@@ -288,8 +290,8 @@ const sinLawSidesBackButton = document.getElementById("sinLawSidesBackButton");/
 const sinLawAnglesBackButton = document.getElementById("sinLawAnglesBackButton");// this is the back button on the all formula page that tales u to the sine law for angles 
 const cosineLawSidesBackButton = document.getElementById("cosineLawSidesBackButton");// this is the back button on the cosine law for sides pages
 const cosineLawAnglesBackButton = document.getElementById("cosineLawAnglesBackButton");// this is the back button om tjhe angles for cosine law page 
-const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton")
-
+const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton");// this is the back button on the area using trig page 
+const heronsFormulaBackButton = document.getElementById("heronsFormulaBackButton");// this is the back button on the herons formula calculator page 
 
 
 
@@ -786,7 +788,12 @@ const variableButton11s = document.querySelectorAll(".variableButton11");// vari
 
 
 
-
+// THESE ARE FOR THE HERONS FORMULA PAGE
+const heronsFormulaSideA = document.getElementById("heronsFormulaSideA");// This is the speed value on the time page  
+const heronsFormulaSideB = document.getElementById("heronsFormulaSideB");// this is the distance value for the time calculatoe  
+const heronsFormulaSideC = document.getElementById("heronsFormulaSideC");// this is the caluclate button for the time  
+const heronsFormulaResult = document.getElementById("heronsFormulaResult");// this is the time result 
+const calculateHeronsFormula = document.getElementById("calculateHeronsFormula");// this is the time result 
 
 
 
