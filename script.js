@@ -6236,7 +6236,6 @@ changeCosineLawSidesVariable.addEventListener("click", function(){// if the chan
     changeCosineLawSidesVariable.style.display = "none";// hides the button 
 });
 
-
 changeCosineLawAnglesVariable.addEventListener("click", function(){// if the change variable button is clicked 
     cosineLawAnglesPopup.style.display = "flex";// hide these function
     calculateCosineLawAnglesSides.style.display = "none";// this is caluclate button 
@@ -6246,6 +6245,14 @@ changeCosineLawAnglesVariable.addEventListener("click", function(){// if the cha
     changeCosineLawAnglesVariable.style.display = "none";// hides the button 
 });
 
+changeAreaUsingTrigVersion.addEventListener("click", function(){// if the change variable button is clicked 
+    areaUsingTrigPopup.style.display = "flex";// hide these function
+    calculateAreaUsingTrig.style.display = "none";// this is caluclate button 
+    areaUsingTrigInputs.innerHTML = "";// clears the inputs
+    areaUsingTrigSelectedVersion.textContent = "";// clears the selected variable 
+    areaUsingTrigResult.textContent = "";// clears the result 
+    changeAreaUsingTrigVersion.style.display = "none";// hides the button 
+});
 
 
 
@@ -6830,7 +6837,16 @@ cosineLawAnglesBackButton.addEventListener("click", function(){// this is the ti
     changeCosineLawAnglesVariable.style.display = "none";// hides this
 });
 
-
+areaUsingTrigBackButton.addEventListener("click", function(){// this is the time independer page back button 
+    startPage.style.display = "flex";// shows the start page again 
+    areaUsingTrigPage.style.display = "none";// hides this page 
+    areaUsingTrigPopup.style.display = "flex";// shows the ratio popup
+    calculateAreaUsingTrig.style.display = "none";// hides the calculate button
+    areaUsingTrigInputs.innerHTML = "";// clears the inputs
+    areaUsingTrigSelectedVersion.textContent = "";// clears the selected ratio
+    areaUsingTrigResult.textContent = "";// clears the result
+    changeAreaUsingTrigVersion.style.display = "none";// hides this
+});
 
 
 
@@ -7927,6 +7943,28 @@ allcosineLawAnglesButton.addEventListener("click", function (){// the Average ve
     cosineLawAnglesPage.style.display = "flex";// shows this page
 });
 
+allAreaUsingTrigButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides  the math formula page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    areaUsingTrigPage.style.display = "flex";// shows this page
+});
 
 
 
@@ -8763,7 +8801,28 @@ cosineLawAnglesButton.addEventListener("click", function(){// if the time indipe
     cosineLawAnglesPage.style.display = "flex"// shows this page
 });
 
-
+areaUsingTriButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    areaUsingTrigPage.style.display = "flex"// shows this page
+});
 
 
 
