@@ -147,6 +147,8 @@
                     <button id = "allsinLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">SINE LAW(FOR ANGLES)</button>
                     <button id = "allcosineLawSidesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR SIDES)</button>
                     <button id = "allcosineLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR ANGLES)</button>
+                    <button id = "allAreaUsingTrig" class = "formulaButton" data-categories = "2d-shapes trigonometry area">TRIANGLE AREA USING TRIGONOMETRY (SAS)</button>
+
                 </div>
 
             </section>
@@ -268,6 +270,7 @@
                 <button id = "sinLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">SINE LAW (FOR ANGLES)</button>
                 <button id = "cosineLawSidesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR SIDES)</button>
                 <button id = "cosineLawAnglesButton" class = "formulaButton" data-categories="2d-shapes trigonometry">COSINE LAW (FOR ANGLES)</button>
+                <button id = "AreaUsingTrig" class = "formulaButton" data-categories = "2d-shapes trigonometry area">TRIANGLE AREA USING TRIGONOMETRY (SAS)</button>
             </div>
 
             <button id="mathBackButton">BACK</button>
@@ -1512,6 +1515,32 @@
             </div>
 
             <button id="cosineLawAnglesBackButton">BACK</button>
+        </main>
+
+        <main class="areaUsingTrigPage">
+            <h1> TRIANGLE AREA USING TRIGONOMETRY (SAS)</h1>
+
+            <div class = "calculatorBox">
+
+                <div id="areaUsingTrigPopup" class = "popupMenu">
+                    <h2>WHICH ANGLE IS BETWEEN YOUR TO SIDES</h2>
+                    <button class="variableButton11" value="TRIG1"> SIDE B: ANGLE A: SIDE C </button>
+                    <button class="variableButton11" value="TRIG2"> SIDE A: ANGLE B: SIDE C </button>
+                    <button class="variableButton11" value="TRIG3"> SIDE A: ANGLE C: SIDE B</button>
+                </div>
+
+                <h2 id="areaUsingTrigSelectedVersion"></h2>
+
+                <div id="areaUsingTrigInputs"></div>
+
+                <button id="calculateAreaUsingTrig">CALCULATE</button>
+
+                <p id="areaUsingTrigResult"></p>
+
+                <button id="changeAreaUsingTrigVersion">CHANGE LAW</button>
+            </div>
+
+            <button id="areaUsingTrigBackButton">BACK</button>
         </main>
         
         <script src="./script.js"></script>
