@@ -145,7 +145,7 @@ const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButt
 const allAreaUsingTrigButton = document.getElementById("allAreaUsingTrigButton");// this is the area using tric button on the alll formula page 
 const allHeronsFormulaButton = document.getElementById("allHeronsFormulaButton");// this is the herons formul button on the all formumul page 
 const allforceButton = document.getElementById("allforceButton");// this is the force calculator button on a the all formula page 
-const allweightButton = document.getElementByID("allweightButton");// this is the force calculator button on the all formula page 
+const allweightButton = document.getElementById("allweightButton");// this is the weight calculator button on the all formula page 
 
 
 
@@ -171,7 +171,7 @@ const timeIndependentButton = document.getElementById("timeIndependentButton");/
 const averageVelocityDisplacementButton = document.getElementById("averageVelocityDisplacement");// this is the average velocity equation button on the physics  formula page 
 const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// this is the area using tric button on the math formula page 
 const forceButton = document.getElementById("forceButton");// this is the force calculator button on a the all formula page 
-const weightButton = document.getElementByID("weightButton");// this is the force calculator button on the all formula page 
+const weightButton = document.getElementById("weightButton");// this is the force calculator button on the all formula page 
 
 
 
@@ -4817,6 +4817,8 @@ calculateForce.addEventListener("click", function(){ // this is the calculate fo
 
 
 
+
+
 //THESE ARE THE POPUP MENU BUTTONS that let you REARRANGE THE EQUATION FOR WHAT YOUR SOLVING FOR
 
 // THIS IS THE 1st KINAMATIC EQUATION SELECTION MENY AND BUTTONS
@@ -5824,6 +5826,7 @@ variableButton6s.forEach(function(button){// in variable buttons for each of th
     });
 })
 
+// this is for a calculator
 variableButton7s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){
         sinLawSidesPopup.style.display = "none"// hides this 
@@ -5959,6 +5962,7 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
     });
 })
 
+// this si for a calculator 
 variableButton8s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){// iff the buttons are clicked 
         sinLawAnglesPopup.style.display = "none"// hides the popup menu  
@@ -6085,6 +6089,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
     });
 })
 
+// this is for a calculator 
 variableButton9s.forEach(function(button){// in variable buttons for each of them
     button.addEventListener("click", function(){ // if any of the buttons is clicked 
         cosineLawSidesPopup.style.display = "none"// hid the popup menu 
@@ -6137,6 +6142,7 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
     });
 })
 
+// thuis is for a calculator
 variableButton10s.forEach(function(button){// search all of the variable 10 buttons 
     button.addEventListener("click", function(){ // if any of the buttons are clicked 
         cosineLawAnglesPopup.style.display = "none"// hides the popup page 
@@ -6188,6 +6194,7 @@ variableButton10s.forEach(function(button){// search all of the variable 10 butt
     });
 })
 
+// this si for a calculator 
 variableButton11s.forEach(function(button){// search all of the variable 10 buttons 
     button.addEventListener("click", function(){ // if any of the buttons are clicked 
         areaUsingTrigPopup.style.display = "none"// hides the popup page 
@@ -6239,6 +6246,7 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
     });
 })
 
+// this is for the force calculator
 variableButton12s.forEach(function(button){// search all of the variable 10 buttons 
     button.addEventListener("click", function(){ // if any of the buttons are clicked 
         forcePopup.style.display = "none"// hides the popup page 
@@ -6287,7 +6295,53 @@ variableButton12s.forEach(function(button){// search all of the variable 10 butt
     });
 })
 
+variableButton13s.forEach(function(button){// search all of the variable 10 buttons 
+    button.addEventListener("click", function(){ // if any of the buttons are clicked 
+        weightPopup.style.display = "none"// hides the popup page 
+        changeWeightVersion.style.display = "none" // hide the change variable button 
+        weightSelectedVariable.textContent = "";// Clear the selected angle variable 
+        weightInputs.innerHTML = "";// clears the input the htmll that was added before 
+        weightResult.textContent = "";// Hides thWEIGHTntent of the result line 
 
+        if (button.value === "WFG"){// If the button that was selected is the cosine law for angles, for angle a
+            forceSelectedVariable.textContent = "WEIGHT (Fg)"; // the text content for the selcted veriable will be this  
+            forceInputs.innerHTML = ` 
+                <label for="forceGravity">GRAVITY (METERS/SECOND SQUARED)</label>
+                <input type="number" id="forceGravity" >
+                <label for="forceMass">MASS (KG)</label>
+                <input type="number" id="forceMass">
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "WM"){// If the button that was selected is the cosine law for angles, for angle a
+            forceSelectedVariable.textContent = "ACCELERATION (METERS/SECOND)"; // the text content for the selcted veriable will be this  
+            forceInputs.innerHTML = ` 
+                <label for="forceForce">FORCE (N)</label>
+                <input type="number" id="forceForce" >
+                <label for="forceMass">MASS (KG)</label>
+                <input type="number" id="forceMass" >
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "WG"){// If the button that was selected is the cosine law for angles, for angle a
+            forceSelectedVariable.textContent = "FORCE (N)"; // the text content for the selcted veriable will be this  
+            forceInputs.innerHTML = ` 
+                <label for="forceAcceleration">ACCELERATION (METERS/SECOND)</label>
+                <input type="number" id="forceAcceleration" >
+                <label for="forceMass">MASS (KG)</label>
+                <input type="number" id="forceMass" >
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        forceResult.textContent = "";// clears the result
+        calculateForce.style.display = "block";// shows te calculate button 
+        changeForceVersion.style.display = "block";// shows change change law verstio  button
+        playButtonClickSound(); // play the sounds when the button is clicked 
+    });
+})
 
 
 
@@ -7096,7 +7150,7 @@ forceBackButton.addEventListener("click", function(){// this is the time indepen
     changeForceVersion.style.display = "none";// hides this
 });
 
-weightBackButton.addEventListener("click", function(){// this is the time independer page back button 
+WeightBackButton.addEventListener("click", function(){// this is the time independer page back button 
     startPage.style.display = "flex";// shows the start page again 
     weightPage.style.display = "none";// hides this page 
     weightPopup.style.display = "flex";// hides this page 
