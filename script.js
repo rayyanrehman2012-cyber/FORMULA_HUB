@@ -6144,6 +6144,55 @@ variableButton11s.forEach(function(button){// search all of the variable 10 butt
     });
 })
 
+variableButton12s.forEach(function(button){// search all of the variable 10 buttons 
+    button.addEventListener("click", function(){ // if any of the buttons are clicked 
+        forcePopup.style.display = "none"// hides the popup page 
+        changeForceVersion.style.display = "none" // hide the change variable button 
+        changeForceVersion.textContent = "";// Clear the selected angle variable 
+        forceInputs.innerHTML = "";// clears the input the htmll that was added before 
+        forceResult.textContent = "";// Hides the text content of the result line 
+
+        if (button.value === "FM"){// If the button that was selected is the cosine law for angles, for angle a
+            forceSelectedVariable.textContent = "MASS (KG)"; // the text content for the selcted veriable will be this  
+            forceInputs.innerHTML = ` 
+                <label for="forceForce">FORCE (N)</label>
+                <input type="number" id="forceForce" >
+                <label for="forceAcceleration">ACCELERATION (METERS/SECOND)</label>
+                <input type="number" id="forceAcceleration" >
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "FA"){// If the button that was selected is the cosine law for angles, for angle a
+            forceSelectedVariable.textContent = "ACCELERATION (METERS/SECOND)"; // the text content for the selcted veriable will be this  
+            forceInputs.innerHTML = ` 
+                <label for="forceForce">FORCE (N)</label>
+                <input type="number" id="forceForce" >
+                <label for="forceMass">MASS (KG)</label>
+                <input type="number" id="forceMass" >
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "FF"){// If the button that was selected is the cosine law for angles, for angle a
+            forceSelectedVariable.textContent = "FORCE (N)"; // the text content for the selcted veriable will be this  
+            forceInputs.innerHTML = ` 
+                <label for="forceAcceleration">ACCELERATION (METERS/SECOND)</label>
+                <input type="number" id="forceAcceleration" >
+                <label for="forceMass">MASS (KG)</label>
+                <input type="number" id="forceMass" >
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        forceResult.textContent = "";// clears the result
+        calculateForce.style.display = "block";// shows te calculate button 
+        changeForceVersion.style.display = "block";// shows change change law verstio  button
+        playButtonClickSound(); // play the sounds when the button is clicked 
+    });
+})
+
+
 
 
 
