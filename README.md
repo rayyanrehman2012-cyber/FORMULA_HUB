@@ -316,13 +316,13 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
 
 
 ## WHAT WE MADE (WEEK 6, THIRDSPACE WEEK 8)
-
-- Did the calculating function for sine law AB, angle A
-- Did the calculating function for sine law AB, angle B
-- Did the calculating function for sine law AC, angle C
-- Did the calculating function for sine law AC, angle A
-- Did the calculating function for sine law BC, angle C
-- Did the calculating function for sine law BC, angle B
+- I finished the calculation functions for the Sine law angle calculators 
+    - Did the calculating function for sine law AB, angle A
+    - Did the calculating function for sine law AB, angle B
+    - Did the calculating function for sine law AC, angle C
+    - Did the calculating function for sine law AC, angle A
+    - Did the calculating function for sine law BC, angle C
+    - Did the calculating function for sine law BC, angle B
 - Designed and did the calculate function for the cosine law for Side calculator  page  
     - opens a popup with 3 different festion of the calculator for sides
         - Side A

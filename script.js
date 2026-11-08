@@ -4561,6 +4561,38 @@ calculateCosineLawSides.addEventListener("click", function(){// if the ccalucula
     
 })
 
+calculateCosineLawAnglesSides.addEventListener("click", function(){// if the calculate cosine law angle button is clicked then do this 
+    let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
+
+    if(cosineLawAnglesSelectedVariable.textContent === "COSINE LAW (ANGLE A)"){// if these are the selections made by yht user 
+        let sideA = Number(document.getElementById("cosineLawAnglesSideA").value) // Holds the value of side A
+        let sideB = Number(document.getElementById("cosineLawAnglesSideB").value);// Holds the value of side B
+        let sideC = Number(document.getElementById("cosineLawAnglesSideC").value);// Holds the value of side C
+
+        if(document.getElementById("cosineLawAnglesSideA").value === "" || document.getElementById("cosineLawAnglesSideB").value === "" || document.getElementById("cosineLawAnglesSideC").value === ""){ //If these values are left empty by the user 
+            cosineLawAnglesResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
+            cosineLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( sideA < 0 ||sideB < 0 ||sideC < 0) { // if the values are negative or the angles are to big
+            cosineLawAnglesResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            cosineLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(sideA === 0 ||  sideB === 0 ||  sideC === 0) { // if the values are engative or to big(for angle)
+            cosineLawAnglesResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            cosineLawAnglesResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Math.acos((Math.pow(sideB,2)+ Math.pow(sideC, 2) - Math.pow(sideA, 2)) / (2 * sideB * sideC)) * 180 / Math.PI;// this is the the formula for this callculator 
+            cosineLawAnglesResult.textContent = "ANGLE A = " + Result.toFixed(3) + " DEGREES";// this is  the result line for the calculator to displace 
+            cosineLawAnglesResult.style.color = "rgb(11,61,46)";// in green 
+        }
+    }
+
+
+})
 
 
 
@@ -5878,7 +5910,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
                 if (button.value === "SLAA"){//if the selected ratio is sine 
 
-                    if(sideButton.value ==="angleA"){ //  and the side selected is opposite 
+                    if(sideButton.value ==="angleA"){ // solving fo angle a
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawAnglesSideB" >
@@ -5891,7 +5923,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         `;// add all of this
                     }
 
-                    else if (sideButton.value === "angleB") {// solving for hypotenuse
+                    else if (sideButton.value === "angleB") {//solving for angle b
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawAnglesSideB" >
@@ -5907,7 +5939,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
                 else if (button.value === "SLAB"){//if the selected ratio is cosine 
 
-                    if(sideButton.value ==="angleA"){ // and the side selected is adjacent
+                    if(sideButton.value ==="angleA"){ // solving for side a
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
@@ -5920,7 +5952,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         `;// add all of this 
                     }
 
-                    else if (sideButton.value === "angleC") {// and the siide selected is hypotenuse 
+                    else if (sideButton.value === "angleC") {// solving for side c 
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
@@ -5936,7 +5968,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
                 else if (button.value === "SLAC"){//if the selected ratio is cosine 
 
-                    if(sideButton.value ==="angleC"){ // and the side selected is opposine 
+                    if(sideButton.value ==="angleC"){ // solving for anfle c
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
@@ -5949,7 +5981,7 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         `;// add all of this 
                     }
 
-                    else if (sideButton.value === "angleB") {// and the siide selected is adjacent  
+                    else if (sideButton.value === "angleB") {// solving for angle b
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
