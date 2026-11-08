@@ -75,6 +75,9 @@ const cosineLawAnglesPage = document.querySelector(".cosineLawAnglesPage");// th
 const areaUsingTrigPage = document.querySelector(".areaUsingTrigPage");// this is the are using triq calculator page 
 const HeronsFormulaPage = document.querySelector(".HeronsFormulaPage");// this is the herons formula page for the hermons formul calculators
 const forcePage = document.querySelector(".forcePage");// this is the force page for the force calculators 
+const weightPage = document.querySelector(".weightPage");// this is the weght calculator page 
+
+
 
 
 
@@ -142,7 +145,7 @@ const allcosineLawAnglesButton = document.getElementById("allcosineLawAnglesButt
 const allAreaUsingTrigButton = document.getElementById("allAreaUsingTrigButton");// this is the area using tric button on the alll formula page 
 const allHeronsFormulaButton = document.getElementById("allHeronsFormulaButton");// this is the herons formul button on the all formumul page 
 const allforceButton = document.getElementById("allforceButton");// this is the force calculator button on a the all formula page 
-
+const allweightButton = document.getElementByID("allweightButton");// this is the force calculator button on the all formula page 
 
 
 
@@ -168,6 +171,7 @@ const timeIndependentButton = document.getElementById("timeIndependentButton");/
 const averageVelocityDisplacementButton = document.getElementById("averageVelocityDisplacement");// this is the average velocity equation button on the physics  formula page 
 const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// this is the area using tric button on the math formula page 
 const forceButton = document.getElementById("forceButton");// this is the force calculator button on a the all formula page 
+const weightButton = document.getElementByID("weightButton");// this is the force calculator button on the all formula page 
 
 
 
@@ -299,7 +303,7 @@ const cosineLawAnglesBackButton = document.getElementById("cosineLawAnglesBackBu
 const areaUsingTrigBackButton = document.getElementById("areaUsingTrigBackButton");// this is the back button on the area using trig page 
 const heronsFormulaBackButton = document.getElementById("heronsFormulaBackButton");// this is the back button on the herons formula calculator page 
 const forceBackButton = document.getElementById("forceBackButton");// this is the back button on the force formula page 
-
+const WeightBackButton = document.getElementById("WeightBackButton");// this is the back button on the weight page 
 
 
 
@@ -815,6 +819,16 @@ const variableButton12s = document.querySelectorAll(".variableButton12");// vari
 
 
 
+// THESE ARE FOR THE Area Using Trig Calculator 
+const weightPopup = document.getElementById("weightPopup");// this is the popup for displacement final velocity equation  
+const weightSelectedVariable = document.getElementById("weightSelectedVariable");// this holds the selected variaple 
+const weightInputs = document.getElementById("weightInputs");// these are the inputs 
+const calculateWeight = document.getElementById("calculateWeight"); // calulate button 
+calculateWeight.style.display = "none";// hides this intiteall 
+const changeWeightVersion = document.getElementById("changeWeightVersion");// change variable button 
+changeWeightVersion.style.display = "none";// hides this intiteall 
+const weightResult = document.getElementById("weightResult");// resut line 
+const variableButton13s = document.querySelectorAll(".variableButton13");// variable buttons 
 
 
 
@@ -6294,6 +6308,7 @@ changeVelocityTimeVariable.addEventListener("click", function(){// if the change
     velocityTimeEquationResult.textContent = "";// clears the result 
     changeVelocityTimeVariable.style.display = "none";// hides the button 
 });
+
 // kinamatic formula2
 changeDisplacementInitialVariable.addEventListener("click", function(){// if the change variable button is clicked 
     displacementInitialPopup.style.display = "flex";// hide these function
@@ -6303,6 +6318,7 @@ changeDisplacementInitialVariable.addEventListener("click", function(){// if the
     displacementInitialEquationResult.textContent = "";// clears the result 
     changeDisplacementInitialVariable.style.display = "none";// hides the button 
 });
+
 //kinamatic formula3
 changeDisplacementFinalVariable.addEventListener("click", function(){// if the change variable button is clicked 
     displacementFinalPopup.style.display = "flex";// hide these function
@@ -6312,6 +6328,7 @@ changeDisplacementFinalVariable.addEventListener("click", function(){// if the c
     displacementFinalEquationResult.textContent = "";// clears the result 
     changeDisplacementFinalVariable.style.display = "none";// hides the button 
 });
+
 //kinamatic formula4
 changeTimeIndependentVariable.addEventListener("click", function(){// if the change variable button is clicked 
     timeIndependentPopup.style.display = "flex";// hide these function
@@ -6321,6 +6338,7 @@ changeTimeIndependentVariable.addEventListener("click", function(){// if the cha
     timeIndependentResult.textContent = "";// clears the result 
     changeTimeIndependentVariable.style.display = "none";// hides the button 
 });
+
 //kinamatic formula5
 changeAverageVelocityDisplacementVariable.addEventListener("click", function(){// if the change variable button is clicked 
     averageVelocityDisplacementPopup.style.display = "flex";// hide these function
@@ -6331,8 +6349,23 @@ changeAverageVelocityDisplacementVariable.addEventListener("click", function(){/
     changeAverageVelocityDisplacementVariable.style.display = "none";// hides the button 
 });
 
+changeForceVersion.addEventListener("click", function(){// if the change variable button is clicked 
+    forcePopup.style.display = "flex";// hide these function
+    calculateForce.style.display = "none";// this is caluclate button 
+    forceInputs.innerHTML = "";// clears the inputs
+    forceSelectedVariable.textContent = "";// clears the selected variable 
+    forceResult.textContent = "";// clears the result 
+    changeForceVersion.style.display = "none";// hides the button 
+});
 
-
+changeWeightVersion.addEventListener("click", function(){// if the change variable button is clicked 
+    weightPopup.style.display = "flex";// hide these function
+    calculateWeight.style.display = "none";// this is caluclate button 
+    weightInputs.innerHTML = "";// clears the inputs
+    weightSelectedVariable.textContent = "";// clears the selected variable 
+    weightResult.textContent = "";// clears the result 
+    changeWeightVersion.style.display = "none";// hides the button 
+});
 
 
 
@@ -6445,14 +6478,7 @@ changeAreaUsingTrigVersion.addEventListener("click", function(){// if the change
     changeAreaUsingTrigVersion.style.display = "none";// hides the button 
 });
 
-changeForceVersion.addEventListener("click", function(){// if the change variable button is clicked 
-    forcePopup.style.display = "flex";// hide these function
-    calculateForce.style.display = "none";// this is caluclate button 
-    forceInputs.innerHTML = "";// clears the inputs
-    forceSelectedVariable.textContent = "";// clears the selected variable 
-    forceResult.textContent = "";// clears the result 
-    changeForceVersion.style.display = "none";// hides the button 
-});
+
 
 
 
