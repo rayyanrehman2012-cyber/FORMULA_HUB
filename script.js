@@ -800,6 +800,16 @@ const calculateHeronsFormula = document.getElementById("calculateHeronsFormula")
 
 
 
+
+
+
+
+
+
+
+
+
+
 // THESE ARE ALL OF THE FORMULA PAGE BUTTONS AND THEIR FUNCTIONS
 allFormulaButton.addEventListener("click", function(){// all formulas page menu 
     startPage.style.display = "none";// the start page diss apears 
@@ -4658,11 +4668,11 @@ calculateAreaUsingTrig.addEventListener("click", function(){// if the calculate 
 })
 
 calculateHeronsFormula.addEventListener("click", function(){
-    const sideA = Number(document.getElementById("heronsSideA").value); // this is the side a 
-    const sideB = Number(document.getElementById("heronsSideB").value); // this is the side b
-    const sideC = Number(document.getElementById("heronsSideC").value); // this is the side c
+    const sideA = Number(document.getElementById("heronsFormulaSideA").value); // this is the side a 
+    const sideB = Number(document.getElementById("heronsFormulaSideB").value); // this is the side b
+    const sideC = Number(document.getElementById("heronsFormulaSideC").value); // this is the side c
 
-    if(document.getElementById("heronsSideA").value === "" || document.getElementById("heronsSideB").value === "" || document.getElementById("heronsSideC").value === ""){// if any of the 3 values are left blank by th user then \
+    if(document.getElementById("heronsFormulaSideA").value === "" || document.getElementById("heronsFormulaSideB").value === "" || document.getElementById("heronsFormulaSideC").value === ""){// if any of the 3 values are left blank by th user then \
         heronsFormulaResult.textContent = "ERROR: ENTER 3 VALUES" // the error message will tell them to add3 values 
         heronsFormulaResult.style.color = "rgb(102,21,7)";// this is the color for the message (red
     }
@@ -4682,7 +4692,7 @@ calculateHeronsFormula.addEventListener("click", function(){
 
         const result = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC)); // this is the formula 
         
-        heronsFormulaResult.textContent = "AREA = " + result + " UNITS SQUARED"// the aree mewsage for the person 
+        heronsFormulaResult.textContent = "AREA = " + result.toFixed(3) + " UNITS SQUARED"// the aree mewsage for the person 
         heronsFormulaResult.style.color = "rgb(11,61,46)";// this is the color for the message(red)
 
     }
