@@ -1,7 +1,7 @@
 # FORMULA_HUB
 
 ## WHAT WE ARE MAKING
-Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related.In the future we might add formulas from other subjects as weel, like from Calulus. Another possability that we are concidering is adding Some visula affects in the future as well, that could visulaize equations like the kinamatice formula or Vector addition and subtraction. BUT that is Futue planning, right now its a calculator with math and basic physics fromulas including the 5 kinamatic equations. 
+Me and my partner are making a website that has all the commonly used formulas on it. The goal is to make an all in one tool that can help anyone solve formulass that they may encounter. The formulas we are adding in this website are mainly math and Physics related.In the future we might add formulas from other subjects as weel, like from Calulus. Another possability that we are concidering is adding Some visula affects in the future as well, that could visulaize equations like the kinamatice formula or Vector addition and subtraction. BUT that is Futue planning, right now its a calculator hub with math and physics fromula
 
 
 
@@ -12,7 +12,6 @@ Me and my partner are making a website that has all the commonly used formulas o
 The website starts of on the front page. The front page contains a short description and 3 buttons (ALL FORMULAS, MATH FORMULAS, and PHYSICS FORMULAS). Each button takes you to the page you chose( MATH FORMULAS button will take you to the page with only math formulas, etc). Each formula bage has a back button on the tip left, that takes you to the front page again. On the formula pages you can scrol to find the formula you want to use, and click it. Clicking a formula will open the appropreat calculator, example the Rextangle Area formula will open the rectangle area calculator. On the calculator pages, you will be asked to input your values. you may type them or use the arrows in the input boxs to increase or decreas the number. After you finish inputing your numbers, you can hit the calculate button, which will give you the answer. Each calculator page has a back button on the top left that returns you to the starting page. Inputing Balanc values gives you and error, and depending on which calulator your using negatives and zeros can also trigger an error. Some physics formulas have multiple rearranged version, so clicking on them opens a popup that lets you choose which variable you want the equations to solve. 
 
 Since The website has grown over the few weeks, we added a search function on each of the formula pages. You can search the functions, and if there on the page, they will come to the top. Additionally we added filters to the Math and All Formula page because over the week they have grown imensly. Now you can use filters to see different catigories of functions. Some filter options include, 2d, 3d, perimiter, area, surface area, volume and trigonomitry. Although we havent added the filter function on the physics page yet, we may do that in the future (theres no point to add them right now because there arn't tat many formulas for physics on the website yet). 
-
 
 
 
@@ -323,6 +322,7 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
     - Did the calculating function for sine law AC, angle A
     - Did the calculating function for sine law BC, angle C
     - Did the calculating function for sine law BC, angle B
+
 - Designed and did the calculate function for the cosine law for Side calculator  page  
     - opens a popup with 3 different versions of the calculator for sides
         - Side A
@@ -330,6 +330,7 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
         - Side C
     - clicking it takes you to the appropriate  calculator
     - if the calculator needs to be changed you can use the change variable button to change it 
+
 - Designed and did the calculate function for the cosine law for angles calculator  page  
     - opens a popup with 3 different versions of the calculator for sides
         - Angle A
@@ -337,27 +338,30 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
         - Angle C
     - clicking it takes you to the appropriate calculator
     - if the calculator needs to be changed you can use the change variable button to change it  
+
 - Designed and did the calculate funtion for the Area Using Trigonomtry (SAS) Calculator 
     - opens a popup with 3 different versions of the formula
         - SIDE B: ANGLE A: SIDE C
         - SIDE A: ANGLE B: SIDE C
         - SIDE A: ANGLE C: SIDE B
     - clicking these buttons on the popup brings you to the appropriate calculator 
-    - if you want to swithc your formula  version, then click there is a change variable button
+    - if you want to swithc your formula  version, then there is a change variable button
 
-In total, I made 9 calculators today, and finished 3 more ontop of that
+- Designed and did the calculate funtion for AREA USING HERONS FORULA (SSS) Calculator 
 
+- Designed & made the NEWTONS SECOND LAW calculator Page 
+    - opens a popup with 3 different versions of the formula
+        - MASS(KILOGRAMS)
+        - ACCELERATION (METERS/SECOND SQUARED)
+        - FORCE (NEWTONS)
+    - clicking these buttons on the popup brings you to the appropriate calculator 
+    - if you want to swithc the variable your solving for, then there is a change variable button
 
-
-
-
-
-## WHAT WE PLAN ON ADDING (POSSIBLY WEEK 8 or AFTER THIR SPACE ENDS)
-- some more formulas that arnt from math or physics,
-
-- more math and physics formulas like
-    - boyancy formula 
-    - gas formula 
-
-- A visulalizing button, which would make a visula diagram for the physics formulas and some of the math one, I personaly think this could be very usefull for people who might be confused with the aswers porvided by the calulator, or it can be helfull for those who who learn through visuals 
+- Designed & made the Weight calculator Page 
+    - Clicking it opens a popup with 3 different versions of the formula
+        - WEIGHT
+        - MASS 
+        - GRAVITY 
+    - clicking these buttons on the popup brings you to the appropriate calculator 
+    - if you want to swith the variable your solving for, then there is a change variable button
 
