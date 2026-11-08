@@ -4615,10 +4615,8 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
-
             <label for = "vtAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "vtAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4629,8 +4627,6 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-            
-
             <label for "vtTime" >TIME (t)</label>
             <input type="number" id="vtTime">
             `;//add this the the html 
@@ -4640,7 +4636,6 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             velocityTimeInputs.innerHTML = `
             <label for = "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
-
             <label for = "vtFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "vtFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4651,10 +4646,8 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
-
             <label for = "vtAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "vtAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4665,7 +4658,6 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for "vtTime">TIME (t)</label>
             <input type="number" id="vtTime">
             `;//add this the the html
@@ -4675,7 +4667,6 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             velocityTimeInputs.innerHTML = `
             <label for "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
-
             <label for = "vtFinalVelocityDirection"> FINAL VELOCITY DIRECTION</label>   
                 <select id = "vtFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4686,10 +4677,8 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
-
             <label for = "vtInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "vtInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4700,7 +4689,6 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for "vtTime">TIME (t)</label>
             <input type="number" id="vtTime">
             `;//add this the the html
@@ -4710,7 +4698,6 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
             velocityTimeInputs.innerHTML = `
             <label for "vtFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="vtFinalVelocity">
-
             <label for = "vtFinalVelocityDirection"> FINAL VELOCITY DIRECTION</label>   
                 <select id = "vtFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4721,10 +4708,8 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for "vtInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="vtInitialVelocity">
-
             <label for = "vtInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "vtInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4735,10 +4720,8 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for "vtAcceleration">ACCELERATION (a)</label>
             <input type="number" id="vtAcceleration">
-
             <label for = "vtAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "vtAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4749,10 +4732,8 @@ variableButtons.forEach(function(button){// in variable buttons, for each of the
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             `;//add this the the html
         }
-
     });
 });
 
@@ -4784,7 +4765,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
             displacementInitialInputs.innerHTML = ` 
             <label for ="IDInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="IDInitialVelocity">
-
             <label for = "IDInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "IDInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4795,10 +4775,8 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="IDAcceleration">ACCELERATION (a)</label>
             <input type="number" id="IDAcceleration">
-
             <label for = "IDAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "IDAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4809,8 +4787,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-            
-
             <label for ="IDTime" >TIME (t)</label>
             <input type="number" id="IDTime">
             `;//add this the the html 
@@ -4820,7 +4796,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
             displacementInitialInputs.innerHTML = `
             <label for = "IDdisplacement">DISPLACEMENT (d)</label>
             <input type= "number" id="IDdisplacement">
-
             <label for = "IDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "IDdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -4831,10 +4806,8 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "IDAcceleration">ACCELERATION (a)</label>
             <input type="number" id="IDAcceleration">
-
             <label for = "IDAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "IDAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4845,7 +4818,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="IDTime">TIME (t)</label>
             <input type="number" id="IDTime">
             `;//add this the the html
@@ -4855,7 +4827,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
             displacementInitialInputs.innerHTML = `
             <label for ="IDdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="IDdisplacement">
-
             <label for = "IDdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
                 <select id = "IDdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -4866,10 +4837,8 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="IDInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="IDInitialVelocity">
-
             <label for = "IDInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "IDInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4880,7 +4849,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="IDTime">TIME (t)</label>
             <input type="number" id="IDTime">
             `;//add this the the html
@@ -4890,7 +4858,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
             displacementInitialInputs.innerHTML = `
             <label for ="IDdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="IDdisplacement">
-
             <label for = "IDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "IDdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -4901,10 +4868,8 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "IDInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="IDInitialVelocity">
-
             <label for = "IDInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "IDInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4915,10 +4880,8 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="IDAcceleration">ACCELERATION (a)</label>
             <input type="number" id="IDAcceleration">
-
             <label for = "IDAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "IDAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4932,7 +4895,6 @@ variableButton1s.forEach(function(button){// in variable buttons, for each of th
 
             `;//add this the the html
         }
-
     });
 });
 
@@ -4964,7 +4926,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
             displacementFinalInputs.innerHTML = ` 
             <label for ="FDFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="FDFinalVelocity">
-
             <label for = "FDFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "FDFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -4975,10 +4936,8 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="FDAcceleration">ACCELERATION (a)</label>
             <input type="number" id="FDAcceleration">
-
             <label for = "FDAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "FDAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -4989,8 +4948,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-            
-
             <label for ="FDTime" >TIME (t)</label>
             <input type="number" id="FDTime">
             `;//add this the the html 
@@ -5000,7 +4957,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
             displacementFinalInputs.innerHTML = `
             <label for = "FDdisplacement">DISPLACEMENT (d)</label>
             <input type= "number" id="FDdisplacement">
-
             <label for = "FDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "FDdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5011,10 +4967,8 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "FDAcceleration">ACCELERATION (a)</label>
             <input type="number" id="FDAcceleration">
-
             <label for = "FDAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "FDAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -5025,7 +4979,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="FDTime">TIME (t)</label>
             <input type="number" id="FDTime">
             `;//add this the the html
@@ -5035,7 +4988,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
             displacementFinalInputs.innerHTML = `
             <label for ="FDdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="FDdisplacement">
-
             <label for = "FDdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
                 <select id = "FDdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5046,10 +4998,8 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="FDFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="FDFinalVelocity">
-
             <label for = "FDFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "FDFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5060,7 +5010,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="FDTime">TIME (t)</label>
             <input type="number" id="FDTime">
             `;//add this the the html
@@ -5070,7 +5019,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
             displacementFinalInputs.innerHTML = `
             <label for ="FDdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="FDdisplacement">
-
             <label for = "FDdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "FDdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5081,7 +5029,6 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "FDFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="FDFinalVelocity">
 
@@ -5095,10 +5042,8 @@ variableButton2s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="FDAcceleration">ACCELERATION (a)</label>
             <input type="number" id="FDAcceleration">
-
             <label for = "FDAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "FDAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -5143,7 +5088,6 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
             timeIndependentInputs.innerHTML = ` 
             <label for ="ITFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="ITFinalVelocity">
-
             <label for = "ITFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "ITFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5154,10 +5098,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="ITAcceleration">ACCELERATION (a)</label>
             <input type="number" id="ITAcceleration">
-
             <label for = "ITAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "ITAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -5168,10 +5110,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-            
             <label for ="ITInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="ITInitialVelocity">
-
             <label for = "ITInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "ITInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5190,7 +5130,6 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
             timeIndependentInputs.innerHTML = `
             <label for = "ITdisplacement">DISPLACEMENT (d)</label>
             <input type= "number" id="ITdisplacement">
-
             <label for = "ITdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "ITdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5201,10 +5140,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "ITAcceleration">ACCELERATION (a)</label>
             <input type="number" id="ITAcceleration">
-
             <label for = "ITAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "ITAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -5215,10 +5152,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="ITInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="ITInitialVelocity">
-
             <label for = "ITInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "ITInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5229,7 +5164,6 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             `;//add this the the html
         }
 
@@ -5237,7 +5171,6 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
             timeIndependentInputs.innerHTML = `
             <label for ="ITdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="ITdisplacement">
-
             <label for = "ITdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
                 <select id = "ITdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5248,10 +5181,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="ITFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="ITFinalVelocity">
-
             <label for = "ITFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "ITFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5262,10 +5193,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="ITInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="ITInitialVelocity">
-
             <label for = "ITInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "ITInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5283,7 +5212,6 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
             timeIndependentInputs.innerHTML = `
             <label for ="ITdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="ITdisplacement">
-
             <label for = "ITdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "ITdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5294,10 +5222,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "ITFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="ITFinalVelocity">
-
             <label for = "ITFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "ITFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5308,10 +5234,8 @@ variableButton3s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="ITAcceleration">ACCELERATION (a)</label>
             <input type="number" id="ITAcceleration">
-
             <label for = "ITAccelerationDirection">ACCELERATION DIRECTION</label>   
                 <select id = "ITAccelerationDirection">
                     <option value="">SELECT ONE</option>
@@ -5356,7 +5280,6 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
             averageVelocityDisplacementInputs.innerHTML = ` 
             <label for ="VAFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="VAFinalVelocity">
-
             <label for = "VAFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "VAFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5370,10 +5293,8 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
 
             <label for ="VATime">TIME (t)</label>
             <input type="number" id="VATime">
-            
             <label for ="VAInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="VAInitialVelocity">
-
             <label for = "VAInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "VAInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5392,7 +5313,6 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
             averageVelocityDisplacementInputs.innerHTML = `
             <label for = "VAdisplacement">DISPLACEMENT (d)</label>
             <input type= "number" id="VAdisplacement">
-
             <label for = "VAdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "VAdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5403,14 +5323,10 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
            <label for ="VATime">TIME (t)</label>
             <input type="number" id="VATime">
-
-
             <label for ="VAInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="VAInitialVelocity">
-
             <label for = "VAInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "VAInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5429,7 +5345,6 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
             averageVelocityDisplacementInputs.innerHTML = `
             <label for ="VAdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="VAdisplacement">
-
             <label for = "VAdisplacementDirection"> DISPLACEMENT DIRECTION</label>   
                 <select id = "VAdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5440,10 +5355,8 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="VAFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="VAFinalVelocity">
-
             <label for = "VAFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "VAFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5454,10 +5367,8 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="VAInitialVelocity">INITIAL VELOCITY (vi)</label>
             <input type="number" id="VAInitialVelocity">
-
             <label for = "VAInitialVelocityDirection">INITIAL VELOCITY DIRECTION</label>   
                 <select id = "VAInitialVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5475,7 +5386,6 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
             averageVelocityDisplacementInputs.innerHTML = `
             <label for ="VAdisplacement">DISPLACEMENT (d)</label>
             <input type="number" id="VAdisplacement">
-
             <label for = "VAdisplacementDirection">DISPLACEMENT DIRECTION</label>   
                 <select id = "VAdisplacementDirection">
                     <option value="">SELECT ONE</option>
@@ -5486,10 +5396,8 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for = "VAFinalVelocity">FINAL VELOCITY (vf)</label>
             <input type="number" id="VAFinalVelocity">
-
             <label for = "VAFinalVelocityDirection">FINAL VELOCITY DIRECTION</label>   
                 <select id = "VAFinalVelocityDirection">
                     <option value="">SELECT ONE</option>
@@ -5500,7 +5408,6 @@ variableButton4s.forEach(function(button){// in variable buttons, for each of th
                     <option value="FORWARD">FORWARD</option>
                     <option value="BACKWARD">BACKWARD</option>
                 </select>
-
             <label for ="VATime">TIME (t)</label>
             <input type="number" id="VATime">
             `;//add this the the html
@@ -5561,7 +5468,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
                         sohCahToaInputs.innerHTML = ` 
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
-
                             <label for="SCThypotenuse">HYPOTENUSE</label>
                             <input type="number" id="SCThypotenuse">
                         `;// add all of this
@@ -5571,7 +5477,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
-
                             <label for="SCTopposite">OPPOSITE</label>
                             <input type="number" id="SCTopposite">
                         `; // add alll of this 
@@ -5584,7 +5489,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
-
                             <label for="SCThypotenuse">HYPOTENUSE</label>
                             <input type="number" id="SCThypotenuse">
                         `;// add all of this 
@@ -5594,7 +5498,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
-
                             <label for="SCTadjacent">ADJACENT</label>
                             <input type="number" id="SCTadjacent"> 
                         `;//add all of this 
@@ -5607,7 +5510,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
-
                             <label for="SCTadjacent">ADJACENT</label>
                             <input type="number" id="SCTadjacent"> 
                         `;// add all of this 
@@ -5617,7 +5519,6 @@ variableButton5s.forEach(function(button){// in variable buttons for each of the
                         sohCahToaInputs.innerHTML = `
                             <label for="SCTangle">ANGLE (θ) IN DEGREES</label>
                             <input type="number" id="SCTangle">
-
                             <label for="SCTopposite">OPPOSITE</label>
                             <input type="number" id="SCTopposite"> 
                         `;//add all of this 
@@ -5658,7 +5559,6 @@ variableButton6s.forEach(function(button){// in variable buttons for each of th
             InverseSelectedVariable.textContent = "COSINE INVERSE (cos-1)"; // this si what the text will show 
 
             InverseInputs.innerHTML = `
-                
                 <label for="InverseAdjacent">ADJACENT</label>
                 <input type="number" id="InverseAdjacent">
                 <label for="InverseHypotenuse">HYPOTENUSE</label>
@@ -5733,10 +5633,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
                         sinLawSidesInputs.innerHTML = ` 
                             <label for="sinLawSidesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawSidesSideB" >
-
                             <label for="sinLawSidesAngleA">ANGLE A (°)</label>
                             <input type="number" id="sinLawSidesAngleA" >
-
                             <label for="sinLawSidesAngleB">ANGLE B (°)</label>
                             <input type="number" id="sinLawSidesAngleB" >
                         `;// add all of this
@@ -5746,10 +5644,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
                         sinLawSidesInputs.innerHTML = `
                             <label for="sinLawSidesSideA">SIDE A (A)</label>
                             <input type="number" id="sinLawSidesSideA">
-
                             <label for="sinLawSidesAngleA">ANGLE A (°)</label>
                             <input type="number" id="sinLawSidesAngleA" >
-
                             <label for="sinLawSidesAngleB">ANGLE B (°)</label>
                             <input type="number" id="sinLawSidesAngleB">
                         `; // add alll of this 
@@ -5762,10 +5658,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
                         sinLawSidesInputs.innerHTML = `
                             <label for="sinLawSidesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawSidesSideC">
-
                             <label for="sinLawSidesAngleA">ANGLE A (°)</label>
                             <input type="number" id="sinLawSidesAngleA">
-
                             <label for="sinLawSidesAngleC">ANGLE C (°)</label>
                             <input type="number" id="sinLawSidesAngleC" >
                         `;// add all of this 
@@ -5775,10 +5669,8 @@ variableButton7s.forEach(function(button){// in variable buttons for each of the
                         sinLawSidesInputs.innerHTML = `
                             <label for="sinLawSidesSideA">SIDE A (a)</label>
                             <input type="number" id="sinLawSidesSideA">
-
                             <label for="sinLawSidesAngleA">ANGLE A (°)</label>
                             <input type="number" id="sinLawSidesAngleA">
-
                             <label for="sinLawSidesAngleC">ANGLE C (°)</label>
                             <input type="number" id="sinLawSidesAngleC" > 
                         `;//add all of this 
@@ -5836,7 +5728,6 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
         if (button.value === "SLAA"){// if sin law angle a is clciekd 
             sinLawAnglesSelectedVariable.textContent = "ANGLE SINE LAW (A AND B)";
-
             sinLawAnglesAngleButtons.innerHTML = `
                 <button class="sinLawAnglesAngleButton" value="angleA">ANGLE A</button>
                 <button class="sinLawAnglesAngleButton" value="angleB">ANGLE B</button>
@@ -5845,7 +5736,6 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
         else if (button.value === "SLAB"){ // if the sin law angle b is clicked
             sinLawAnglesSelectedVariable.textContent = "ANGLE SINE LAW (A AND C)"; // this is the text content of rhte selected variable 
-
             sinLawAnglesAngleButtons.innerHTML = `
                 <button class="sinLawAnglesAngleButton" value="angleA">ANGLE A</button>
                 <button class="sinLawAnglesAngleButton" value="angleC">ANGLE C</button>
@@ -5854,7 +5744,6 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
 
         else if (button.value === "SLAC"){ // if the sin law angle c is clicked 
             sinLawAnglesSelectedVariable.textContent = "ANGLE SINE LAW (B AND C)";
-
             sinLawAnglesAngleButtons.innerHTML = `
                 <button class="sinLawAnglesAngleButton" value="angleB">ANGLE B</button>
                 <button class="sinLawAnglesAngleButton" value="angleC">ANGLE C</button>
@@ -5862,23 +5751,20 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
         }
 
         let sinLawAnglesAngleButtonElements = document.querySelectorAll(".sinLawAnglesAngleButton");// selects the side buttons
-
         sinLawAnglesAngleButtonElements.forEach(function(sideButton){// for each side button
             sideButton.addEventListener("click", function(){// if the side button is clicked
+
                 sinLawAnglesAnglePopup.style.display = "none";// hides the side popup
                 sinLawAnglesSelectedAngle.textContent = "SOLVING FOR " + sideButton.textContent;// displays the selected side
                 sinLawAnglesInputs.innerHTML = "";
 
                 if (button.value === "SLAA"){//if the selected ratio is sine 
-
                     if(sideButton.value ==="angleA"){ // solving fo angle a
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawAnglesSideB" >
-
                             <label for="sinLawAnglesSideA">SIDE A (a)</label>
                             <input type="number" id="sinLawAnglesSideA" >
-
                             <label for="sinLawAnglesAngleB">ANGLE B (°)</label>
                             <input type="number" id="sinLawAnglesAngleB" >
                         `;// add all of this
@@ -5888,10 +5774,8 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawAnglesSideB" >
-
                             <label for="sinLawAnglesSideA">SIDE A (a)</label>
                             <input type="number" id="sinLawAnglesSideA" >
-
                             <label for="sinLawAnglesAngleA">ANGLE A (°)</label>
                             <input type="number" id="sinLawAnglesAngleA" >
                         `; // add alll of this 
@@ -5904,10 +5788,8 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
-
                             <label for="sinLawAnglesSideA">SIDE A (a)</label>
                             <input type="number" id="sinLawAnglesSideA" >
-
                             <label for="sinLawAnglesAngleC">ANGLE C (°)</label>
                             <input type="number" id="sinLawAnglesAngleC" >
                         `;// add all of this 
@@ -5917,10 +5799,8 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
-
                             <label for="sinLawAnglesSideA">SIDE A (a)</label>
                             <input type="number" id="sinLawAnglesSideA" >
-
                             <label for="sinLawAnglesAngleA">ANGLE A (°)</label>
                             <input type="number" id="sinLawAnglesAngleA" >
                         `;//add all of this 
@@ -5933,10 +5813,8 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
-
                             <label for="sinLawAnglesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawAnglesSideB" >
-
                             <label for="sinLawAnglesAngleB">ANGLE B (°)</label>
                             <input type="number" id="sinLawAnglesAngleB" >
                         `;// add all of this 
@@ -5946,10 +5824,8 @@ variableButton8s.forEach(function(button){// in variable buttons for each of the
                         sinLawAnglesInputs.innerHTML = ` 
                             <label for="sinLawAnglesSideC">SIDE C (c)</label>
                             <input type="number" id="sinLawAnglesSideC" >
-
                             <label for="sinLawAnglesSideB">SIDE B (b)</label>
                             <input type="number" id="sinLawAnglesSideB" >
-
                             <label for="sinLawAnglesAngleC">ANGLE C (°)</label>
                             <input type="number" id="sinLawAnglesAngleC" >
                         `;//add all of this 
@@ -5979,10 +5855,8 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
             cosineLawSidesInputs.innerHTML = ` 
                 <label for="cosineLawSidesSideB">SIDE B (b)</label>
                 <input type="number" id="cosineLawSidesSideB" >
-
                 <label for="cosineLawSidesSideC">SIDE C (c)</label>
                 <input type="number" id="cosineLawSidesSideC" >
-
                 <label for="cosineLawSidesAngleA">ANGLE A (°)</label>
                 <input type="number" id="cosineLawSidesAngleA" >
                 `;// add all of this in the htmls 
@@ -5994,14 +5868,11 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
             cosineLawSidesInputs.innerHTML = ` 
                 <label for="cosineLawSidesSideA">SIDE A (a)</label>
                 <input type="number" id="cosineLawSidesSideA" >
-
                 <label for="cosineLawSidesSideC">SIDE C (c)</label>
                 <input type="number" id="cosineLawSidesSideC" >
-
                 <label for="cosineLawSidesAngleB">ANGLE B (°)</label>
                 <input type="number" id="cosineLawSidesAngleB" >
             `;// add all of this in the htmls 
-
         }
 
         else if (button.value === "CLSC"){// if the cosine law side c is selected
@@ -6009,10 +5880,8 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
             cosineLawSidesInputs.innerHTML = ` 
                 <label for="cosineLawSidesSideA">SIDE A (a)</label>
                 <input type="number" id="cosineLawSidesSideA" >
-
                 <label for="cosineLawSidesSideB">SIDE B (b)</label>
                 <input type="number" id="cosineLawSidesSideB" >
-
                 <label for="cosineLawSidesAngleC">ANGLE C (°)</label>
                 <input type="number" id="cosineLawSidesAngleC" >
             `;// add all of this in the htmls 
@@ -6022,7 +5891,6 @@ variableButton9s.forEach(function(button){// in variable buttons for each of the
         calculateCosineLawSides.style.display = "block";// shows calculate button on the bage 
         changeCosineLawSidesVariable.style.display = "block";// shows change law button
         playButtonClickSound(); // play the sounds when the button is clicked 
-
     });
 })
 
@@ -6039,25 +5907,20 @@ variableButton10s.forEach(function(button){// search all of the variable 10 butt
             cosineLawAnglesInputs.innerHTML = ` 
                 <label for="cosineLawAnglesSideA">SIDE A (a)</label>
                 <input type="number" id="cosineLawAnglesSideA" >
-
                 <label for="cosineLawAnglesSideB">SIDE B (b)</label>
                 <input type="number" id="cosineLawAnglesSideB" >
-
                 <label for="cosineLawAnglesSideC">SIDE C (c)</label>
                 <input type="number" id="cosineLawAnglesSideC" >
             `;// add all of this in the htmls  
         }
-
 
         else if (button.value === "CLAB"){// if the button that was selected is the cosine law for angles, for angle b
             cosineLawAnglesSelectedVariable.textContent = "COSINE LAW (ANGLE B)"; // this is the text context now 
             cosineLawAnglesInputs.innerHTML = ` 
                 <label for="cosineLawAnglesSideA">SIDE A (a)</label>
                 <input type="number" id="cosineLawAnglesSideA" >
-
                 <label for="cosineLawAnglesSideB">SIDE B (b)</label>
                 <input type="number" id="cosineLawAnglesSideB" >
-
                 <label for="cosineLawAnglesSideC">SIDE C (c)</label>
                 <input type="number" id="cosineLawAnglesSideC" >
             `;// add all of this in the htmls 
@@ -6068,10 +5931,8 @@ variableButton10s.forEach(function(button){// search all of the variable 10 butt
             cosineLawAnglesInputs.innerHTML = ` 
                 <label for="cosineLawAnglesSideA">SIDE A (a)</label>
                 <input type="number" id="cosineLawAnglesSideA" >
-
                 <label for="cosineLawAnglesSideB">SIDE B (b)</label>
                 <input type="number" id="cosineLawAnglesSideB" >
-
                 <label for="cosineLawAnglesSideC">SIDE C (c)</label>
                 <input type="number" id="cosineLawAnglesSideC" >
             `;// add all of this in the htmls 
@@ -6081,11 +5942,59 @@ variableButton10s.forEach(function(button){// search all of the variable 10 butt
         calculateCosineLawAnglesSides.style.display = "block";// shows te calculate button 
         changeCosineLawAnglesVariable.style.display = "block";// shows change change law verstio  button
         playButtonClickSound(); // play the sounds when the button is clicked 
-
     });
 })
 
+variableButton11s.forEach(function(button){// search all of the variable 10 buttons 
+    button.addEventListener("click", function(){ // if any of the buttons are clicked 
+        areaUsingTrigPopup.style.display = "none"// hides the popup page 
+        changeAreaUsingTrigVersion.style.display = "none" // hide the change variable button 
+        areaUsingTrigSelectedVersion.textContent = "";// Clear the selected angle variable 
+        areaUsingTrigInputs.innerHTML = "";// clears the input the htmll that was added before 
+        areaUsingTrigResult.textContent = "";// Hides the text content of the result line 
 
+        if (button.value === "TRIG1"){// If the button that was selected is the cosine law for angles, for angle a
+            areaUsingTrigSelectedVersion.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
+            areaUsingTrigInputs.innerHTML = ` 
+                <label for="areaUsingTrigSideB">SIDE B (b)</label>
+                <input type="number" id="areaUsingTrigSideB" >
+                <label for="areaUsingTrigSideC">SIDE C (c)</label>
+                <input type="number" id="areaUsingTrigSideC" >
+                <label for="areaUsingTrigAngleA">ANGLE A (°)</label>
+                <input type="number" id="areaUsingTrigAngleA" >
+            `;// add all of this in the htmls  
+        }
+
+        else if (button.value === "TRIG2"){// If the button that was selected is the cosine law for angles, for angle a
+            areaUsingTrigSelectedVersion.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
+            areaUsingTrigInputs.innerHTML = ` 
+                <label for="areaUsingTrigSideA">SIDE A (a)</label>
+                <input type="number" id="areaUsingTrigSideA" >
+                <label for="areaUsingTrigSideC">SIDE C (c)</label>
+                <input type="number" id="areaUsingTrigSideC" >
+                <label for="areaUsingTrigAngleB">ANGLE B (°)</label>
+                <input type="number" id="areaUsingTrigAngleB" >
+            `;// add all of this in the htmls  
+        }
+
+        else if (button.value === "TRIG3"){// If the button that was selected is the cosine law for angles, for angle a
+            areaUsingTrigSelectedVersion.textContent = "COSINE LAW (ANGLE A)"; // the text content for the selcted veriable will be this  
+            areaUsingTrigInputs.innerHTML = ` 
+                <label for="areaUsingTrigSideA">SIDE A (a)</label>
+                <input type="number" id="areaUsingTrigSideA" >
+                <label for="areaUsingTrigSideA">SIDE B (b)</label>
+                <input type="number" id="areaUsingTrigSideA" >
+                <label for="areaUsingTrigAngleC">ANGLE C (°)</label>
+                <input type="number" id="areaUsingTrigAngleC" >
+            `;// add all of this in the htmls  
+        }
+
+        areaUsingTrigResult.textContent = "";// clears the result
+        calculateAreaUsingTrig.style.display = "block";// shows te calculate button 
+        changeAreaUsingTrigVersion.style.display = "block";// shows change change law verstio  button
+        playButtonClickSound(); // play the sounds when the button is clicked 
+    });
+})
 
 
 
@@ -6253,6 +6162,10 @@ changeAreaUsingTrigVersion.addEventListener("click", function(){// if the change
     areaUsingTrigResult.textContent = "";// clears the result 
     changeAreaUsingTrigVersion.style.display = "none";// hides the button 
 });
+
+
+
+
 
 
 
@@ -6847,6 +6760,9 @@ areaUsingTrigBackButton.addEventListener("click", function(){// this is the time
     areaUsingTrigResult.textContent = "";// clears the result
     changeAreaUsingTrigVersion.style.display = "none";// hides this
 });
+
+
+
 
 
 
@@ -7919,7 +7835,6 @@ allcosineLawSidesButton.addEventListener("click", function (){// the Average vel
     cosineLawSidesPage.style.display = "flex";// shows this page
 });
 
-
 allcosineLawAnglesButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
     startPage.style.display = "none";// hides this page 
     formulaPage.style.display = "none";//hides this page 
@@ -7965,6 +7880,7 @@ allAreaUsingTrigButton.addEventListener("click", function (){// the Average velo
     cubeVolumePage.style.display = "none";// hid this page 
     areaUsingTrigPage.style.display = "flex";// shows this page
 });
+
 
 
 

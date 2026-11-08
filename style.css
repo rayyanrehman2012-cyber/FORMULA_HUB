@@ -6613,7 +6613,6 @@ body {
 }
 
 
-
 .sinLawSidesPage{
     min-height:100vh;
     display:none;
@@ -6835,7 +6834,6 @@ body {
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
 
 
 
@@ -7062,7 +7060,6 @@ body {
 }
 
 
-
 .cosineLawSidesPage{
     min-height:100vh;
     display:none;
@@ -7242,7 +7239,6 @@ body {
     gap: 12px;
 
 }
-
 
 
 #cosineLawSidesPopup h2 {
@@ -7451,7 +7447,6 @@ body {
 }
 
 
-
 #cosineLawAnglesPopup {
     display: flex;
     flex-direction: column;
@@ -7461,7 +7456,6 @@ body {
     gap: 12px;
 
 }
-
 
 
 #cosineLawAnglesPopup h2 {
@@ -7654,7 +7648,7 @@ body {
     font-size:18px;
     font-weight: 800;
     width: 180px;
-    height: 30px;
+    height: 60px;
     box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
     margin-bottom:10px;
     cursor: pointer;
@@ -7670,7 +7664,6 @@ body {
 }
 
 
-
 #areaUsingTrigPopup {
     display: flex;
     flex-direction: column;
@@ -7680,7 +7673,6 @@ body {
     gap: 12px;
 
 }
-
 
 
 #areaUsingTrigPopup h2 {
