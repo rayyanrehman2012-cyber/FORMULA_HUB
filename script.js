@@ -77,7 +77,7 @@ const HeronsFormulaPage = document.querySelector(".HeronsFormulaPage");// this i
 const forcePage = document.querySelector(".forcePage");// this is the force page for the force calculators 
 const weightPage = document.querySelector(".weightPage");// this is the weght calculator page 
 const normalPage = document.querySelector(".normalPage");// this is the normal force calculator page on this website that we made 
-
+const densityPage = document.querySelector(".densityPage");// this is the density calculator pages 
 
 
 
@@ -148,6 +148,7 @@ const allHeronsFormulaButton = document.getElementById("allHeronsFormulaButton")
 const allforceButton = document.getElementById("allforceButton");// this is the force calculator button on a the all formula page 
 const allweightButton = document.getElementById("allweightButton");// this is the weight calculator button on the all formula page 
 const allnormalButton = document.getElementById("allnormalButton");// this is the normal force calculator putton on the all gormula pages 
+const alldensityButton = document.getElementById("alldensityButton");// this is the density calculator button on the all formula page 
 
 
 
@@ -174,6 +175,7 @@ const AreaUsingTrigButton = document.getElementById("AreaUsingTrigButton");// th
 const forceButton = document.getElementById("forceButton");// this is the force calculator button on a the physics  formula page 
 const weightButton = document.getElementById("weightButton");// this is the force calculator button on the physics  formula page 
 const normalButton = document.getElementById("normalButton");// this is the normal force calculator button on the phhysics formula page 
+const densityButton = document.getElementById("densityButton");// this is the density calculator button on the all formula page 
 
 
 
@@ -306,7 +308,7 @@ const heronsFormulaBackButton = document.getElementById("heronsFormulaBackButton
 const forceBackButton = document.getElementById("forceBackButton");// this is the back button on the force formula page 
 const WeightBackButton = document.getElementById("WeightBackButton");// this is the back button on the weight page 
 const normalBackButton = document.getElementById("normalBackButton");// this is the back button on the normal force calculator page 
-
+const densityBackButton = document.getElementById("densityBackButton");// this is the back button on the density calculator page
 
 
 
@@ -845,6 +847,20 @@ changeNormalVersion.style.display = "none";// hides this intiteall
 const normalResult = document.getElementById("normalResult");// resut line 
 const variableButton14s = document.querySelectorAll(".variableButton14");// variable buttons 
 
+
+
+
+
+// THESE ARE FOR THE Area Using Trig Calculator 
+const densityPopup = document.getElementById("densityPopup");// this is the popup for displacement final velocity equation  
+const densitySelectedVariable = document.getElementById("densitySelectedVariable");// this holds the selected variaple 
+const densityInputs = document.getElementById("densityInputs");// these are the inputs 
+const calculateDensity = document.getElementById("calculateDensity"); // calulate button 
+calculateDensity.style.display = "none";// hides this intiteall 
+const changeDensityVersion = document.getElementById("changeDensityVersion");// change variable button 
+changeDensityVersion.style.display = "none";// hides this intiteall 
+const densityResult = document.getElementById("densityResult");// resut line 
+const variableButton15s = document.querySelectorAll(".variableButton15");// variable buttons 
 
 
 
@@ -6662,6 +6678,15 @@ changeNormalVersion.addEventListener("click", function(){// if the change variab
     normalSelectedVariable.textContent = "";// clears the selected variable 
     normalResult.textContent = "";// clears the result 
     changeNormalVersion.style.display = "none";// hides the button 
+});
+
+changeDensityVersion.addEventListener("click", function(){// if the change variable button is clicked 
+    densityPopup.style.display = "flex";// hide these function
+    calculateDensity.style.display = "none";// this is caluclate button 
+    densityInputs.innerHTML = "";// clears the inputs
+    densitySelectedVariable.textContent = "";// clears the selected variable 
+    densityResult.textContent = "";// clears the result 
+    changeDensityVersion.style.display = "none";// hides the button 
 });
 
 
