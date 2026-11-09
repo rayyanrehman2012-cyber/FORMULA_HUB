@@ -5820,12 +5820,10 @@ body {
     margin-bottom: 20px;
 }
 
-
 #averageVelocityDisplacementInputs select,#averageVelocityDisplacementInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeAverageVelocityDisplacementVariable{
     border: none;
@@ -5843,13 +5841,11 @@ body {
     margin-top:5px;
 }
 
-
 #changeAverageVelocityDisplacementVariable:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #averageVelocityDisplacementPopup {
      display: flex;
@@ -5861,7 +5857,6 @@ body {
 
 }
 
-
 #averageVelocityDisplacementPopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -5870,7 +5865,6 @@ body {
     text-align: center;
     margin: 0 0 10px;
 }
-
 
 #averageVelocityDisplacementPopup .variableButton4 {
     display: block;
@@ -5890,7 +5884,6 @@ body {
     transition: 0.5s ease;
 }
 
-
 #averageVelocityDisplacementPopup .variableButton4:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
@@ -5905,7 +5898,6 @@ body {
     position:relative
 }
 
-
 .sohCahToaPage::before{
     content: "";
     position:absolute;
@@ -5916,7 +5908,6 @@ body {
     pointer-events:none;
 }
 
-
 .sohCahToaPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -5926,7 +5917,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #sohCahToaBackButton{
     border:none;
@@ -5946,13 +5936,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #sohCahToaBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #sohCahToaResult {
     color: rgb(11,61,46);
@@ -5960,7 +5948,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateSohCahToa{
     border: none;
@@ -5978,13 +5965,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateSohCahToa:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .sohCahToaPage .calculatorBox {
     top: 10px;
@@ -5993,7 +5978,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sohCahToaInputs {
     display: flex;
     flex-direction: column;
@@ -6001,14 +5985,12 @@ body {
     gap: 5px;
 }
 
-
 #sohCahToaInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #sohCahToaInputs input{
     width:250px;
@@ -6021,7 +6003,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sohCahToaInputs select{
     width:260px;
     height:50px;
@@ -6033,13 +6014,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sohCahToaInputs select,
 #sohCahToaInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeSohCahToaVariable, 
 #changeSohCahToaSide{
@@ -6059,14 +6038,12 @@ body {
     margin-top:5px;
 }
 
-
 #changeSohCahToaVariable:hover,
 #changeSohCahToaSide:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #sohCahToaSidePopup, 
 #sohCahToaPopup {
@@ -6079,7 +6056,6 @@ body {
 
 }
 
-
 #sohCahToaSidePopup h2,#sohCahToaSidePopup h3, 
 #sohCahToaPopup h2 {
     color: rgb(11, 61, 46);
@@ -6089,7 +6065,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #sohCahToaPopup .variableButton5,
 #sohCahToaSidePopup .sohCahToaSideButton{
@@ -6111,14 +6086,12 @@ body {
     transition: 0.5s ease;
 }
 
-
 #sohCahToaPopup .variableButton5:hover,
 #sohCahToaSidePopup .sohCahToaSideButton:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
 
 .InversePage{
     min-height:100vh;
@@ -6127,7 +6100,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .InversePage::before{
     content: "";
@@ -6139,7 +6111,6 @@ body {
     pointer-events:none;
 }
 
-
 .InversePage h1 {
     margin-top:80px;
     font-size:65px;
@@ -6149,7 +6120,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #InverseBackButton{
     border:none;
@@ -6169,13 +6139,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #InverseBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #InverseResult {
     color: rgb(11,61,46);
@@ -6183,7 +6151,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateInverse{
     border: none;
@@ -6201,13 +6168,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateInverse:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .InversePage .calculatorBox {
     top: 10px;
@@ -6216,7 +6181,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #InverseInputs {
     display: flex;
     flex-direction: column;
@@ -6224,14 +6188,12 @@ body {
     gap: 5px;
 }
 
-
 #InverseInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #InverseInputs input{
     width:250px;
@@ -6244,7 +6206,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #InverseInputs select{
     width:260px;
     height:50px;
@@ -6256,12 +6217,10 @@ body {
     margin-bottom: 20px;
 }
 
-
 #InverseInputs select,#InverseInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeSInverseVariable{
     border: none;
@@ -6279,13 +6238,11 @@ body {
     margin-top:5px;
 }
 
-
 #changeSInverseVariable:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #InversePopup {
      display: flex;
@@ -6294,9 +6251,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     gap: 12px;
-
 }
-
 
 #InversePopup h2 {
     color: rgb(11, 61, 46);
@@ -6306,7 +6261,6 @@ body {
     text-align: center;
     margin: 0 0 10px;
 }
-
 
 #InversePopup .variableButton6 {
     display: block;
@@ -6326,20 +6280,17 @@ body {
     transition: 0.5s ease;
 }
 
-
 #InversePopup .variableButton6:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
 
-
 .physicsSearch{
     display: flex;
     justify-content: center;
     margin:4px 0;
 }
-
 
 #physicsSearchInput{
     width:100%;
@@ -6352,13 +6303,11 @@ body {
     text-align: center;
 }
 
-
 .mathSearch{
     display:flex;
     justify-content:center;
     margin:4px 0;
 }
-
 
 #mathSearchInput{
     width:100%;
@@ -6371,13 +6320,11 @@ body {
     text-align:center; 
 }
 
-
 .allSearch{
     display: flex;
     justify-content: center;
     margin:4px 0;
 }
-
 
 #allSearchInput{
     width:100%;
@@ -6390,14 +6337,12 @@ body {
     text-align:center;
 }
 
-
 .allFilterContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-
 
 .allfilterDropdownMenu{
     display:none;
@@ -6415,7 +6360,6 @@ body {
     gap: 10px;
 }
 
-
 .allfilterDropdownMenu label{
     display: flex;
     align-items: center;
@@ -6428,14 +6372,12 @@ body {
 
 }
 
-
 .allfilterDropdownMenu label:hover{
     background-color: rgb(11, 61, 46);
     color: rgb(247, 249, 248);
     border-radius: 8px;
     
 }
-
 
 .allfilterDropdownMenu input[type="checkbox"] {
     accent-color: rgb(11, 61, 46);
@@ -6444,20 +6386,17 @@ body {
     cursor: pointer;
 }
 
-
 @media (max-width: 600px) {
     .allfilterDropdownMenu {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-
 @media (max-width: 400px) {
     .allfilterDropdownMenu {
         grid-template-columns: 1fr;
     }
 }
-
 
 #resetFiltersButton{
     grid-column: 1/-1;
@@ -6473,12 +6412,10 @@ body {
 
 }
 
-
 #resetFiltersButton:hover{
     background-color: rgb(128, 170, 144);
     color: rgb(6,42,31);
 }
-
 
 #allFilterDropdownButton{
     padding: 10px 18px;
@@ -6492,16 +6429,13 @@ body {
     transition: background-color 0.2s, transform 0.2s;
 }
 
-
 #allFilterDropdownButton:hover {
     background-color: rgb(128, 170, 144);
 }
 
-
 #allFilterDropdownButton:active {
     transform: scale(0.97);
 }
-
 
 .mathFilterContainer {
     display: flex;
@@ -6509,7 +6443,6 @@ body {
     align-items: center;
     width: 100%;
 }
-
 
 .mathfilterDropdownMenu{
     display:none;
@@ -6527,7 +6460,6 @@ body {
     gap: 10px;
 }
 
-
 .mathfilterDropdownMenu label{
     display: flex;
     align-items: center;
@@ -6539,14 +6471,12 @@ body {
     transition: 0.7s ease;
 }
 
-
 .mathfilterDropdownMenu label:hover{
     background-color: rgb(11, 61, 46);
     color: rgb(247, 249, 248);
     border-radius: 8px;
  
 }
-
 
 .mathfilterDropdownMenu input[type="checkbox"] {
     accent-color: rgb(11, 61, 46);
@@ -6555,20 +6485,17 @@ body {
     cursor: pointer;
 }
 
-
 @media (max-width: 600px) {
     .mathfilterDropdownMenu {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-
 @media (max-width: 400px) {
     .mathfilterDropdownMenu {
         grid-template-columns: 1fr;
     }
 }
-
 
 #mathresetFiltersButton{
     grid-column: 1/-1;
@@ -6583,12 +6510,10 @@ body {
     cursor:pointer;
 }
 
-
 #mathresetFiltersButton:hover{
     background-color: rgb(128, 170, 144);
     color: rgb(6,42,31);
 }
-
 
 #mathFilterDropdownButton{
     padding: 10px 18px;
@@ -6602,16 +6527,13 @@ body {
     transition: background-color 0.2s, transform 0.2s;
 }
 
-
 #mathFilterDropdownButton:hover {
     background-color: rgb(128, 170, 144);
 }
 
-
 #mathFilterDropdownButton:active {
     transform: scale(0.97);
 }
-
 
 .sinLawSidesPage{
     min-height:100vh;
@@ -6620,7 +6542,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .sinLawSidesPage::before{
     content: "";
@@ -6632,7 +6553,6 @@ body {
     pointer-events:none;
 }
 
-
 .sinLawSidesPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -6642,7 +6562,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #sinLawSidesBackButton{
     border:none;
@@ -6662,13 +6581,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #sinLawSidesBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #sinLawSidesResult {
     color: rgb(11,61,46);
@@ -6676,7 +6593,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateSinLawSides{
     border: none;
@@ -6694,13 +6610,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateSinLawSides:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .sinLawSidesPage .calculatorBox {
     top: 10px;
@@ -6709,7 +6623,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sinLawSidesInputs {
     display: flex;
     flex-direction: column;
@@ -6717,14 +6630,12 @@ body {
     gap: 5px;
 }
 
-
 #sinLawSidesInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #sinLawSidesInputs input{
     width:250px;
@@ -6737,7 +6648,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sinLawSidesInputs select{
     width:260px;
     height:50px;
@@ -6749,13 +6659,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sinLawSidesInputs select,
 #sinLawSidesInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeSinLawSidesVariable, 
 #changeSinLawSidesSide{
@@ -6775,14 +6683,12 @@ body {
     margin-top:5px;
 }
 
-
 #changeSinLawSidesVariable:hover,
 #changeSinLawSidesSide:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #sinLawSidesSidePopup, 
 #sinLawSidesPopup {
@@ -6795,7 +6701,6 @@ body {
 
 }
 
-
 #sinLawSidesSidePopup h2,#sinLawSidesSidePopup h3, 
 #sinLawSidesPopup h2 {
     color: rgb(11, 61, 46);
@@ -6805,7 +6710,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #sinLawSidesPopup .variableButton7,
 #sinLawSidesSidePopup .sinLawSidesSideButton{
@@ -6827,15 +6731,12 @@ body {
     transition: 0.5s ease;
 }
 
-
 #sinLawSidesPopup .variableButton7:hover,
 #sinLawSidesSidePopup .sinLawSidesSideButton:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
-
 
 .sinLawAnglesPage{
     min-height:100vh;
@@ -6844,7 +6745,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .sinLawAnglesPage::before{
     content: "";
@@ -6856,7 +6756,6 @@ body {
     pointer-events:none;
 }
 
-
 .sinLawAnglesPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -6866,7 +6765,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #sinLawAnglesBackButton{
     border:none;
@@ -6886,13 +6784,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #sinLawAnglesBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #sinLawAnglesResult {
     color: rgb(11,61,46);
@@ -6900,7 +6796,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateSinLawAngles{
     border: none;
@@ -6918,13 +6813,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateSinLawAngles:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .sinLawAnglesPage .calculatorBox {
     top: 10px;
@@ -6933,7 +6826,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sinLawAnglesInputs {
     display: flex;
     flex-direction: column;
@@ -6941,14 +6833,12 @@ body {
     gap: 5px;
 }
 
-
 #sinLawAnglesInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #sinLawAnglesInputs input{
     width:250px;
@@ -6961,7 +6851,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sinLawAnglesInputs select{
     width:260px;
     height:50px;
@@ -6973,13 +6862,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #sinLawAnglesInputs select,
 #sinLawAnglesInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeSinLawAnglesVariable, 
 #changeSinLawAnglesAngle{
@@ -6999,14 +6886,12 @@ body {
     margin-top:5px;
 }
 
-
 #changeSinLawAnglesVariable:hover,
 #changeSinLawAnglesAngle:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #sinLawAnglesAnglePopup, 
 #sinLawAnglesPopup {
@@ -7019,7 +6904,6 @@ body {
 
 }
 
-
 #sinLawAnglesAnglePopup h2,#sinLawAnglesAnglePopup h3, 
 #sinLawAnglesPopup h2 {
     color: rgb(11, 61, 46);
@@ -7029,7 +6913,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #sinLawAnglesPopup .variableButton8,
 #sinLawAnglesAnglePopup .sinLawAnglesAngleButton{
@@ -7051,14 +6934,12 @@ body {
     transition: 0.5s ease;
 }
 
-
 #sinLawAnglesPopup .variableButton8:hover,
 #sinLawAnglesAnglePopup .sinLawAnglesAngleButton:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
 
 .cosineLawSidesPage{
     min-height:100vh;
@@ -7067,7 +6948,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .cosineLawSidesPage::before{
     content: "";
@@ -7079,7 +6959,6 @@ body {
     pointer-events:none;
 }
 
-
 .cosineLawSidesPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -7089,7 +6968,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #cosineLawSidesBackButton{
     border:none;
@@ -7109,13 +6987,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #cosineLawSidesBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #cosineLawSidesResult {
     color: rgb(11,61,46);
@@ -7123,7 +6999,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateCosineLawSides{
     border: none;
@@ -7141,13 +7016,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateCosineLawSides:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .cosineLawSidesPage .calculatorBox {
     top: 10px;
@@ -7156,7 +7029,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #cosineLawSidesInputs {
     display: flex;
     flex-direction: column;
@@ -7164,14 +7036,12 @@ body {
     gap: 5px;
 }
 
-
 #cosineLawSidesInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #cosineLawSidesInputs input{
     width:250px;
@@ -7184,7 +7054,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #cosineLawSidesInputs select{
     width:260px;
     height:50px;
@@ -7196,13 +7065,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #cosineLawSidesInputs select,
 #cosineLawSidesInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeCosineLawSidesVariable{
     border: none;
@@ -7221,14 +7088,11 @@ body {
     margin-top:5px;
 }
 
-
 #changeCosineLawSidesVariable:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
-
 
 #cosineLawSidesPopup {
     display: flex;
@@ -7240,7 +7104,6 @@ body {
 
 }
 
-
 #cosineLawSidesPopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -7249,7 +7112,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #cosineLawSidesPopup .variableButton9{
     display: block;
@@ -7270,13 +7132,11 @@ body {
     transition: 0.5s ease;
 }
 
-
 #cosineLawSidesPopup .variableButton9:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
 
 .cosineLawAnglesPage{
     min-height:100vh;
@@ -7285,7 +7145,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .cosineLawAnglesPage::before{
     content: "";
@@ -7297,7 +7156,6 @@ body {
     pointer-events:none;
 }
 
-
 .cosineLawAnglesPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -7307,7 +7165,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #cosineLawAnglesBackButton{
     border:none;
@@ -7327,13 +7184,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #cosineLawAnglesBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #cosineLawAnglesResult {
     color: rgb(11,61,46);
@@ -7341,7 +7196,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateCosineLawAnglesSides{
     border: none;
@@ -7359,13 +7213,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateCosineLawAnglesSides:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .cosineLawAnglesPage .calculatorBox {
     top: 10px;
@@ -7374,7 +7226,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #cosineLawAnglesInputs {
     display: flex;
     flex-direction: column;
@@ -7382,14 +7233,12 @@ body {
     gap: 5px;
 }
 
-
 #cosineLawAnglesInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #cosineLawAnglesInputs input{
     width:250px;
@@ -7402,7 +7251,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #cosineLawAnglesInputs select{
     width:260px;
     height:50px;
@@ -7414,13 +7262,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #cosineLawAnglesInputs select,
 #cosineLawAnglesInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeCosineLawAnglesVariable{
     border: none;
@@ -7439,13 +7285,11 @@ body {
     margin-top:5px;
 }
 
-
 #changeCosineLawAnglesVariable:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #cosineLawAnglesPopup {
     display: flex;
@@ -7457,7 +7301,6 @@ body {
 
 }
 
-
 #cosineLawAnglesPopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -7466,7 +7309,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #cosineLawAnglesPopup .variableButton10{
     display: block;
@@ -7487,13 +7329,11 @@ body {
     transition: 0.5s ease;
 }
 
-
 #cosineLawAnglesPopup .variableButton10:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
 
 .areaUsingTrigPage{
     min-height:100vh;
@@ -7502,7 +7342,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .areaUsingTrigPage::before{
     content: "";
@@ -7514,7 +7353,6 @@ body {
     pointer-events:none;
 }
 
-
 .areaUsingTrigPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -7524,7 +7362,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #areaUsingTrigBackButton{
     border:none;
@@ -7544,13 +7381,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #areaUsingTrigBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #areaUsingTrigResult {
     color: rgb(11,61,46);
@@ -7558,7 +7393,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateAreaUsingTrig{
     border: none;
@@ -7576,13 +7410,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateAreaUsingTrig:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .areaUsingTrigPage .calculatorBox {
     top: 10px;
@@ -7591,7 +7423,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #areaUsingTrigInputs {
     display: flex;
     flex-direction: column;
@@ -7599,14 +7430,12 @@ body {
     gap: 5px;
 }
 
-
 #areaUsingTrigInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #areaUsingTrigInputs input{
     width:250px;
@@ -7619,7 +7448,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #areaUsingTrigInputs select{
     width:260px;
     height:50px;
@@ -7631,13 +7459,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #areaUsingTrigInputs select,
 #areaUsingTrigInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeAreaUsingTrigVersion{
     border: none;
@@ -7656,13 +7482,11 @@ body {
     margin-top:5px;
 }
 
-
 #changeAreaUsingTrigVersion:hover {
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform:scale(1.2);
 }
-
 
 #areaUsingTrigPopup {
     display: flex;
@@ -7674,7 +7498,6 @@ body {
 
 }
 
-
 #areaUsingTrigPopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -7683,7 +7506,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #areaUsingTrigPopup .variableButton11{
     display: block;
@@ -7704,13 +7526,11 @@ body {
     transition: 0.5s ease;
 }
 
-
 #areaUsingTrigPopup .variableButton11:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
 }
-
 
 .HeronsFormulaPage{
     min-height:100vh;
@@ -7719,7 +7539,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .HeronsFormulaPage::before{
     content: "";
@@ -7731,7 +7550,6 @@ body {
     pointer-events:none;
 }
 
-
 .HeronsFormulaPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -7741,7 +7559,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #heronsFormulaBackButton {
     border:none;
@@ -7761,13 +7578,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #heronsFormulaBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #heronsFormulaResult {
     color: rgb(11,61,46);
@@ -7775,7 +7590,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateHeronsFormula{
     border: none;
@@ -7793,13 +7607,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateHeronsFormula:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .HeronsFormulaPage .calculatorBox {
     top: 10px;
@@ -7808,8 +7620,6 @@ body {
     margin-bottom: 20px;
 }
 
-
-
 .forcePage{
     min-height:100vh;
     display:none;
@@ -7817,7 +7627,6 @@ body {
     align-items: center;
     position:relative
 }
-
 
 .forcePage::before{
     content: "";
@@ -7829,7 +7638,6 @@ body {
     pointer-events:none;
 }
 
-
 .forcePage h1 {
     margin-top:80px;
     font-size:65px;
@@ -7839,7 +7647,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #forceBackButton{
     border:none;
@@ -7859,13 +7666,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #forceBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #forceResult {
     color: rgb(11,61,46);
@@ -7873,7 +7678,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateForce{
     border: none;
@@ -7891,13 +7695,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateForce:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .forcePage .calculatorBox {
     top: 10px;
@@ -7906,7 +7708,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #forceInputs {
     display: flex;
     flex-direction: column;
@@ -7914,14 +7715,12 @@ body {
     gap: 5px;
 }
 
-
 #forceInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #forceInputs input{
     width:250px;
@@ -7934,7 +7733,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #forceInputs select{
     width:260px;
     height:50px;
@@ -7946,13 +7744,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #forceInputs select,
 #forceInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeForceVersion{
     border: none;
@@ -7971,14 +7767,12 @@ body {
     margin-top:5px;
 }
 
-
 #changeForceVersion:hover {
     background: rgb(11,61,46);
     color: rgb(247,249,248); 
 
     transform:scale(1.2);
 }
-
 
 #forcePopup {
     display: flex;
@@ -7989,7 +7783,6 @@ body {
     gap: 12px;
 }
 
-
 #forcePopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -7998,7 +7791,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #forcePopup .variableButton12{
     display: block;
@@ -8019,7 +7811,6 @@ body {
     transition: 0.5s ease;
 }
 
-
 #forcePopup .variableButton12:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
@@ -8034,7 +7825,6 @@ body {
     position:relative
 }
 
-
 .weightPage::before{
     content: "";
     position:absolute;
@@ -8045,7 +7835,6 @@ body {
     pointer-events:none;
 }
 
-
 .weightPage h1 {
     margin-top:80px;
     font-size:65px;
@@ -8055,7 +7844,6 @@ body {
     text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
     font-family: 'Baloo 2', sans-serif;
 }
-
 
 #WeightBackButton{
     border:none;
@@ -8075,13 +7863,11 @@ body {
     transition: 0.2s ease;
 }
 
-
 #weightBackButton:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 #weightResult {
     color: rgb(11,61,46);
@@ -8089,7 +7875,6 @@ body {
     font-weight:800;
     margin:15px 0 0;
 }
-
 
 #calculateWeight{
     border: none;
@@ -8107,13 +7892,11 @@ body {
     margin-top:5px;
 }
 
-
 #calculateWeight:hover {
     background: rgb(128, 170, 144);
     color: rgb(6,42,31);
     transform:scale(1.2);
 }
-
 
 .weightPage .calculatorBox {
     top: 10px;
@@ -8122,7 +7905,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #weightInputs {
     display: flex;
     flex-direction: column;
@@ -8130,14 +7912,12 @@ body {
     gap: 5px;
 }
 
-
 #weightInputs label{
     color: rgb(11,61,46);
     font-size:22px;
     font-weight:800;
     margin-bottom:8px;
 }
-
 
 #weightInputs input{
     width:250px;
@@ -8150,7 +7930,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 #weightInputs select{
     width:260px;
     height:50px;
@@ -8162,13 +7941,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 #weightInputs select,
 #weightInputs input:focus {
     outline: none;
     border-color: rgb(128, 170, 144);
 }
-
 
 #changeWeightVersion{
     border: none;
@@ -8187,14 +7964,12 @@ body {
     margin-top:5px;
 }
 
-
 #changeWeightVersion:hover {
     background: rgb(11,61,46);
     color: rgb(247,249,248); 
 
     transform:scale(1.2);
 }
-
 
 #weightPopup {
     display: flex;
@@ -8205,7 +7980,6 @@ body {
     gap: 12px;
 }
 
-
 #weightPopup h2 {
     color: rgb(11, 61, 46);
     font-family: 'Baloo 2', sans-serif;
@@ -8214,7 +7988,6 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
 
 #weightPopup .variableButton13{
     display: block;
@@ -8235,8 +8008,204 @@ body {
     transition: 0.5s ease;
 }
 
-
 #weightPopup .variableButton13:hover{
+    background: rgb(11,61,46);
+    color: rgb(247, 249, 248);
+    transform: scale(1.2);
+}
+
+.normalPage{
+    min-height:100vh;
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    position:relative
+}
+
+.normalPage::before{
+    content: "";
+    position:absolute;
+    inset: 12px;
+    min-height: calc(100% - 24px);
+    border: 8px solid rgb(255,255,255);
+    border-radius: 35px 60px 45px 70px;
+    pointer-events:none;
+}
+
+.normalPage h1 {
+    margin-top:80px;
+    font-size:65px;
+    text-align: center;
+    font-weight:800;
+    letter-spacing:3px;
+    text-shadow: 5px 5px 0px rgba(11, 61, 46, 0.718);
+    font-family: 'Baloo 2', sans-serif;
+}
+
+#normalBackButton{
+    border:none;
+    border-radius:15px;
+    background:rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    width: 80px;
+    height: 35px;
+    position:absolute;
+    top: 35px;
+    left: 35px;
+    box-shadow: 4px 4px 0px rgba(11,61,46,0.718);
+    cursor:pointer;
+    transition: 0.2s ease;
+}
+
+#normalBackButton:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+#normalResult {
+    color: rgb(11,61,46);
+    font-size:24px;
+    font-weight:800;
+    margin:15px 0 0;
+}
+
+#calculateNormal{
+    border: none;
+    border-radius:15px;
+    background: rgb(11,61,46);
+    color: rgb(247,249,248);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 30px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top:5px;
+}
+
+#calculateNormal:hover {
+    background: rgb(128, 170, 144);
+    color: rgb(6,42,31);
+    transform:scale(1.2);
+}
+
+.normalPage .calculatorBox {
+    top: 10px;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#normalInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#normalInputs label{
+    color: rgb(11,61,46);
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+#normalInputs input{
+    width:250px;
+    height:40px;
+    border: 3px solid rgb(11,61,46);
+    border-radius: 10px;
+    font-family:'baloo 2', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#normalInputs select{
+    width:260px;
+    height:50px;
+    border: 3px solid rgb(11,61,46);
+    border-radius: 10px;
+    font-family:'baloo 2', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#normalInputs select,
+#normalInputs input:focus {
+    outline: none;
+    border-color: rgb(128, 170, 144);
+}
+
+#changeNormalVersion{
+    border: none;
+    border-radius:15px;
+    background: rgb(247, 249, 248);
+    color: rgb(11,61,46);
+    font-family: "baloo 2";
+    font-size:18px;
+    font-weight: 800;
+    width: 180px;
+    height: 60px;
+    box-shadow: 4px 4px 0px rgba(11, 61, 46, 0.718);
+    margin-bottom:10px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin-top:5px;
+}
+
+#changeNormalVersion:hover {
+    background: rgb(11,61,46);
+    color: rgb(247,249,248); 
+
+    transform:scale(1.2);
+}
+
+#normalPopup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 12px;
+}
+
+#normalPopup h2 {
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#normalPopup .variableButton13{
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    min-height: 45px;
+    padding: 8px 12px;
+    border: 2px solid rgb(11, 61, 46);
+    border-radius: 12px;
+    background: rgb(247, 249, 248);
+    color: rgb(11, 61, 46);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom:10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#normalPopup .variableButton13:hover{
     background: rgb(11,61,46);
     color: rgb(247, 249, 248);
     transform: scale(1.2);
