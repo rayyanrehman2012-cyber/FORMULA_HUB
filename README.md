@@ -369,7 +369,7 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
     - Clicking it opens a popup with 3 different versions of the formula
         - NORMAL FORCE (Fn)
         - MASS (KG)
-        - GRAVITY (METERS OER SECOND)
+        - GRAVITY (METERS PER SECOND)
     - clicking these buttons on the popup brings you to the appropriate calculator 
     - if you want to swith the variable your solving for, then there is a change variable button
 

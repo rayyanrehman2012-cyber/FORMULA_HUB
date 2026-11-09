@@ -6394,6 +6394,7 @@ variableButton12s.forEach(function(button){// search all of the variable 10 butt
     });
 })
 
+// this is for the weight calculatos 
 variableButton13s.forEach(function(button){// search all of the variable 10 buttons 
     button.addEventListener("click", function(){ // if any of the buttons are clicked 
         weightPopup.style.display = "none"// hides the popup page 
@@ -6438,6 +6439,55 @@ variableButton13s.forEach(function(button){// search all of the variable 10 butt
         weightResult.textContent = "";// clears the result
         calculateWeight.style.display = "block";// shows te calculate button 
         changeWeightVersion.style.display = "block";// shows change change law verstio  button
+        playButtonClickSound(); // play the sounds when the button is clicked 
+    });
+})
+
+// this is for the normal force calculator 
+variableButton14s.forEach(function(button){// search all of the variable 10 buttons 
+    button.addEventListener("click", function(){ // if any of the buttons are clicked 
+        normalPopup.style.display = "none"// hides the popup page 
+        changeNormalVersion.style.display = "none" // hide the change variable button 
+        normalSelectedVariable.textContent = "";// Clear the selected angle variable 
+        normalInputs.innerHTML = "";// clears the input the htmll that was added before 
+        normalResult.textContent = "";// Hides the content of the result line 
+
+        if (button.value === "NFNF"){// If the button that was selected is the cosine law for angles, for angle a
+            normalSelectedVariable.textContent = "NORMAL FORCE (Fn)"; // the text content for the selcted veriable will be this  
+            normalInputs.innerHTML = ` 
+                <label for="normalGravity">GRAVITY (METERS/SECOND SQUARED)</label>
+                <input type="number" id="normalGravity" >
+                <label for=normalMass">MASS (KG)</label>
+                <input type="number" id="normalMass">
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "NFM"){// If the button that was selected is the cosine law for angles, for angle a
+            normalSelectedVariable.textContent = "MASS (KG)"; // the text content for the selcted veriable will be this  
+            normalInputs.innerHTML = ` 
+                <label for="normalGravity">GRAVITY (METERS/SECOND SQUARED)</label>
+                <input type="number" id="normalGravity" >
+                <label for="normalNormal">NORMAL FORCE (Fn)</label>
+                <input type="number" id="normalNormal" >
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "NFG"){// If the button that was selected is the cosine law for angles, for angle a
+            normalSelectedVariable.textContent = "GRAVITY (METERS/SECOND SQUARED)"; // the text content for the selcted veriable will be this  
+            normalInputs.innerHTML = ` 
+                <label for="normalNormal">NORMAL FORCE (Fn)</label>
+                <input type="number" id="normalNormal" >
+                <label for="normalMass">MASS (KG)</label>
+                <input type="number" id="normalMass">
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        normalResult.textContent = "";// clears the result
+        calculateNormal.style.display = "block";// shows te calculate button 
+        changeNormalVersion.style.display = "block";// shows change change law verstio  button
         playButtonClickSound(); // play the sounds when the button is clicked 
     });
 })
