@@ -373,3 +373,12 @@ BASICALLY WE DID THE DISIGN AND STRUCTURE FOR THIS CALCULATOR BUT BECAUSE OF TIM
     - clicking these buttons on the popup brings you to the appropriate calculator 
     - if you want to swith the variable your solving for, then there is a change variable button
 
+- Designed & made the Density  calculator for PERPENDICULAR SURFACE 
+    - Clicking it opens a popup with 3 different versions of the formula
+        - DENSITY (KG/METER)
+        - MASS (KG)
+        - VOLUME (METERS CUBBED)
+    - clicking these buttons on the popup brings you to the appropriate calculator 
+    - if you want to swith the variable your solving for, then there is a change variable button
+
+So all together we finished 6 calculators that were not fully functioning from last week. THen we added atotal of 8 formulas, that consist of a total of 22 more calculator. (some formulas have different variables you can solve for so there are multiple calculators for it). WE ARE OFFICIALLY DONE THIS PROJECT AS WE WILL NOT BE ADDING ANY UPDATES TO THIS FOR THIRDSPACE

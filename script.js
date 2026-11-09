@@ -5064,8 +5064,36 @@ calculateDensity.addEventListener("click", function(){ // this is the calculate 
         }
     }// if you are calculating area with angle a
 
+    else if(densitySelectedVariable.textContent === "VOLUME (METERS CUBED)"){// if these are the selections made by yht user 
+        let Density = Number(document.getElementById("densityDensity").value) // Holds the value of density
+        let Mass = Number(document.getElementById("densityMass").value);// Holds the value of density
+
+        if(document.getElementById("densityDensity").value === "" || document.getElementById("densityMass").value === ""){ //If these values are left empty by the user 
+            densityResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Density < 0 ||Mass < 0) { // if the values are negative or the angles are to big
+            densityResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Density === 0 ||Mass === 0) { // if the values are engative or to big(for angle)
+            densityResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Mass / Density;// this is the the formula for the density calculator
+            densityResult.textContent = " VOLUME = " + Result.toFixed(3) + " METERS CUBED";// this is  the result line for the calculator to display the objects  
+            densityResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
 
 })
+
+
+
 
 
 
