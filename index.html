@@ -172,6 +172,7 @@
                     <button id = "allforceButton" class="formulaButton" data-categories = "mechanics">FORCE</button>
                     <button id = "allweightButton" class="formulaButton" data-categories = "mechanics">WEIGHT</button>
                     <button id = "allnormalButton" class="formulaButton" data-categories = "mechanics">NORMAL FORCE (PERPENDICULAR SURFACE)</button>
+                    <button id = "alldensityButton" class="formulaButton">DENSITY</button>
 
                 </div>
 
@@ -309,7 +310,7 @@
                 <button id = "forceButton" class="formulaButton">FORCE</button>
                 <button id = "weightButton" class="formulaButton">WEIGHT</button>
                 <button id = "normalButton" class="formulaButton">NORMAL FORCE (PERPENDICULAR SURFACE)</button>
-
+                <button id = "densityButton" class="formulaButton">DENSITY</button>
             </div>
 
             <button id="physicsBackButton">BACK</button>
@@ -1652,6 +1653,28 @@
             </div>
 
             <button id="normalBackButton">BACK</button>
+        </main>
+
+        <main class="densityPage">
+            <h1> DENSITY FORMULA</h1>
+            <div class = "calculatorBox">
+                <div id="densityPopup" class = "popupMenu">
+                    <h2>WHICH VARIABLE ARE YOU SOLVING FOR?</h2>
+                    <button class="variableButton14" value="NFNF">DENSITY (KG/METERS CUBED) </button>
+                    <button class="variableButton14" value="NFM"> MASS (KG) </button>
+                    <button class="variableButton14" value="NFG"> VOLUME (METERS CUBED) </button>
+                </div>
+
+                <h2 id="densitySelectedVariable"></h2>
+
+                <div id="densityInputs"></div>
+
+                <button id="calculateDensity">CALCULATE</button>
+
+                <p id="densityResult"></p>
+
+                <button id="changeDensityVersion"> CHANGE SOLVING VERSION</button>
+            </div>
         </main>
         
         <script src="./script.js"></script>
