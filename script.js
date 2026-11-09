@@ -5009,6 +5009,63 @@ calculateNormal.addEventListener("click", function(){ // this is the calculate f
 
 })
 
+calculateDensity.addEventListener("click", function(){ // this is the calculate force button 
+    let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
+
+    if(densitySelectedVariable.textContent === "DENSITY (KG/METERS CUBED)"){// if these are the selections made by yht user 
+        let Mass = Number(document.getElementById("densityMass").value) // Holds the value of density
+        let Volume = Number(document.getElementById("densityVolume").value);// Holds the value of density
+
+        if(document.getElementById("densityMass").value === "" || document.getElementById("densityVolume").value === ""){ //If these values are left empty by the user 
+            densityResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Mass < 0 ||Volume < 0) { // if the values are negative or the angles are to big
+            densityResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Mass === 0 ||Volume === 0) { // if the values are engative or to big(for angle)
+            densityResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Mass / Volume;// this is the the formula for the density calculator
+            densityResult.textContent = " DENSITY = " + Result.toFixed(3) + " KG/METERS CUBED";// this is  the result line for the calculator to display the objects  
+            densityResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+    else if(densitySelectedVariable.textContent === "MASS (KG)"){// if these are the selections made by yht user 
+        let Density = Number(document.getElementById("densityDensity").value) // Holds the value of density
+        let Volume = Number(document.getElementById("densityVolume").value);// Holds the value of density
+
+        if(document.getElementById("densityDensity").value === "" || document.getElementById("densityVolume").value === ""){ //If these values are left empty by the user 
+            densityResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Density < 0 ||Volume < 0) { // if the values are negative or the angles are to big
+            densityResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Density === 0 ||Volume === 0) { // if the values are engative or to big(for angle)
+            densityResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            densityResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Density * Volume;// this is the the formula for the density calculator
+            densityResult.textContent = " MASS = " + Result.toFixed(3) + " KG";// this is  the result line for the calculator to display the objects  
+            densityResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+
+})
 
 
 
@@ -6593,6 +6650,55 @@ variableButton14s.forEach(function(button){// search all of the variable 10 butt
     });
 })
 
+// this is for the denstity calculators 
+variableButton15s.forEach(function(button){// search all of the variable 10 buttons 
+    button.addEventListener("click", function(){ // if any of the buttons are clicked 
+        densityPopup.style.display = "none"// hides the popup page 
+        changeDensityVersion.style.display = "none" // hide the change variable button 
+        densitySelectedVariable.textContent = "";// Clear the selected angle variable 
+        densityInputs.innerHTML = "";// clears the input the htmll that was added before 
+        densityResult.textContent = "";// Hides the content of the result line 
+
+        if (button.value === "DED"){// If the button that was selected is the cosine law for angles, for angle a
+            densitySelectedVariable.textContent = "DENSITY (KG/METERS CUBED)"; // the text content for the selcted veriable will be this  
+            densityInputs.innerHTML = ` 
+                <label for="densityMass">MASS (KG)</label>
+                <input type="number" id="densityMass" >
+                <label for="densityVolume">VOLUME (METERS CUBED)</label>
+                <input type="number" id="densityVolume">
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "DEM"){// If the button that was selected is the cosine law for angles, for angle a
+            densitySelectedVariable.textContent = "MASS (KG)"; // the text content for the selcted veriable will be this  
+            densityInputs.innerHTML = ` 
+                <label for="densityDensity">DENSITY (KG/METERS CUBED)</label>
+                <input type="number" id="densityDensity" >
+                <label for="densityVolume">VOLUME (METERS CUBED)</label>
+                <input type="number" id="densityVolume">
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        else if (button.value === "DEV"){// If the button that was selected is the cosine law for angles, for angle a
+            densitySelectedVariable.textContent = "VOLUME (METERS CUBED)"; // the text content for the selcted veriable will be this  
+            densityInputs.innerHTML = ` 
+                <label for="densityDensity">DENSITY (KG/METERS CUBED)</label>
+                <input type="number" id="densityDensity" >
+                <label for="densityMass">MASS (KG)</label>
+                <input type="number" id="densityMass">
+                
+            `;// add all of this in the htmls (this is what gives the inputs)
+        }
+
+        densityResult.textContent = "";// clears the result
+        calculateDensity.style.display = "block";// shows te calculate button 
+        changeDensityVersion.style.display = "block";// shows change change law verstio  button
+        playButtonClickSound(); // play the sounds when the button is clicked 
+    });
+})
+
 
 
 
@@ -6688,6 +6794,8 @@ changeDensityVersion.addEventListener("click", function(){// if the change varia
     densityResult.textContent = "";// clears the result 
     changeDensityVersion.style.display = "none";// hides the button 
 });
+
+
 
 
 
