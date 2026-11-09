@@ -9952,7 +9952,7 @@ let buttonClickSound = new Audio("click1.mp3"); // declaring the sound
 function playButtonClickSound() {//sound function 
     buttonClickSound.currentTime = 0.3;// start at this time 
     buttonClickSound.play();//play the sound 
-    buttonClickSound.volume(200);// at this volume 
+    buttonClickSound.volume(1);// at this volume 
 }
 document.querySelectorAll("button").forEach(function(button) {// sellect all buttons insdxe the program 
     button.addEventListener("click", function() {/// if any button is clicked then 
