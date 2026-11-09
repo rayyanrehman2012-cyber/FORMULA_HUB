@@ -7439,7 +7439,16 @@ normalBackButton.addEventListener("click", function(){// this is the time indepe
     changeNormalVersion.style.display = "none";// hides this
 });
 
-
+densityBackButton.addEventListener("click", function(){// this is the time independer page back button 
+    startPage.style.display = "flex";// shows the start page again 
+    densityPage.style.display = "none";// hides this page 
+    densityPopup.style.display = "flex";// hides this page 
+    calculateDensity.style.display = "none";// hides the calculate button
+    densityInputs.innerHTML = "";// clears the inputsDensity
+    densitySelectedVariable.textContent = "";// clears the selected ratio
+    densityResult.textContent = "";// clears the result
+    changeDensityVersion.style.display = "none";// hides this
+});
 
 
 
@@ -8648,6 +8657,29 @@ allnormalButton.addEventListener("click", function (){// the Average velocity di
     pythagoreanPageC.style.display = "none";// hide this
     cubeVolumePage.style.display = "none";// hid this page 
     normalPage.style.display = "flex";// shows this page
+});
+
+alldensityButton.addEventListener("click", function (){// the Average velocity displacement equation on the all formjula page 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    mathFormulaPage.style.display = "none";// hides  the math formula page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    densityPage.style.display = "flex";// shows this page
 });
 
 
@@ -9885,8 +9917,28 @@ normalButton.addEventListener("click", function(){// if the time indipendent equ
     normalPage.style.display = "flex"// shows this page
 });
 
-
-
+densityButton.addEventListener("click", function(){// if the time indipendent equation button is clicked 
+    startPage.style.display = "none";// hides this page 
+    formulaPage.style.display = "none";//hides this page 
+    physicsFormulaPage.style.display = "none";// hides this page 
+    squareAreaPage.style.display = "none";// hides this page 
+    rectangleAreaPage.style.display = "none";// hides this page 
+    rectanglePerimeterPage.style.display = "none"// hides this page 
+    squarePerimeterPage.style.display = "none";// hides the perimeter pages 
+    triangleAreaPage.style.display = "none";// hies this age 
+    trianglePerimeterPage.style.display = "none";// hides the triangle perimeter page 
+    circleAreaPage.style.display = "none";// hides the circle are page 
+    circleCircumferencePage.style.display = "none";// hides  the circle are page
+    trapezoidAreaPage.style.display = "none";// hides the  trapizode page
+    quadrilateralPerimeterPage.style.display = "none";//hides this page 
+    parallelogramAreaPage.style.display = "none";// hides  this page 
+    slopePage.style.display = "none"; //hide this pages 
+    distancePage.style.display = "none";// hide this page
+    midpointPage.style.display = "none";// hide rhis page
+    pythagoreanPageC.style.display = "none";// hide this
+    cubeVolumePage.style.display = "none";// hid this page 
+    densityPage.style.display = "flex"// shows this page
+});
 
 
 
