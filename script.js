@@ -4907,6 +4907,91 @@ calculateWeight.addEventListener("click", function(){ // this is the calculate f
 
 })
 
+calculateNormal.addEventListener("click", function(){ // this is the calculate force button 
+    let Result;// this is the Result answer holder for this formu(for all 3 of the calcuators)
+
+    if(normalSelectedVariable.textContent === "NORMAL FORCE (Fn)"){// if these are the selections made by yht user 
+        let Gravity = Number(document.getElementById("normalGravity").value) // Holds the value of side A
+        let Mass = Number(document.getElementById("normalMass").value);// Holds the value of side B
+
+        if(document.getElementById("normalGravity").value === "" || document.getElementById("normalMass").value === ""){ //If these values are left empty by the user 
+            normalResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Mass < 0 ||Gravity < 0) { // if the values are negative or the angles are to big
+            normalResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Mass === 0 ||Gravity === 0) { // if the values are engative or to big(for angle)
+            normalResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Mass * Gravity;// this is the the formula for the weight calculator
+            normalResult.textContent = " NORMAL FORCE ON OBJECT = " + Result.toFixed(3) + " NEWTONS";// this is  the result line for the calculator to display the objects  
+            normalResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+    else if(normalSelectedVariable.textContent === "MASS (KG)"){// if these are the selections made by yht user 
+        let Gravity = Number(document.getElementById("normalGravity").value) // Holds the value of side A
+        let Normal = Number(document.getElementById("normalNormal").value);// Holds the value of side B
+
+        if(document.getElementById("normalGravity").value === "" || document.getElementById("normalNormal").value === ""){ //If these values are left empty by the user 
+            normalResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Normal < 0 ||Gravity < 0) { // if the values are negative or the angles are to big
+            normalResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Normal === 0 ||Gravity === 0) { // if the values are engative or to big(for angle)
+            normalResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Normal/ Gravity;// this is the the formula for the weight calculator
+            normalResult.textContent = " THE MASS OF THE OBJECT = " + Result.toFixed(3) + " KILLOGRAMS";// this is  the result line for the calculator to display the objects  
+            normalResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+    else if(normalSelectedVariable.textContent === "GRAVITY (METERS/SECOND SQUARED)"){// if these are the selections made by yht user 
+        let Normal = Number(document.getElementById("normalNormal").value) // Holds the value of side A
+        let Mass = Number(document.getElementById("normalMass").value);// Holds the value of side B
+
+        if(document.getElementById("normalNormal").value === "" || document.getElementById("normalMass").value === ""){ //If these values are left empty by the user 
+            normalResult.textContent = "ERROR: ENTER 2 VALUES" // the error message will tell them to add3 values 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if( Normal < 0 ||Mass < 0) { // if the values are negative or the angles are to big
+            normalResult.textContent = "ERROR: NOTHING CAN BE NEGATIVE!"; // this is the error message that will be shown 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else if(Normal === 0 ||Mass === 0) { // if the values are engative or to big(for angle)
+            normalResult.textContent = "ERROR: NO ZEROS ALLOWED!"; // this is the error message 
+            normalResult.style.color = "rgb(102,21,7)";// this is the color for the message (red)
+        }
+
+        else{
+            Result = Normal/ Mass;// this is the the formula for the weight calculator
+            normalResult.textContent = " GRAVITY = " + Result.toFixed(3) + " METERS/SECOND";// this is  the result line for the calculator to display the objects  
+            normalResult.style.color = "rgb(11,61,46)";// in green collor
+        }
+    }// if you are calculating area with angle a
+
+
+
+
+})
 
 
 
